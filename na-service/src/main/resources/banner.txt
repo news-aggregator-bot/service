@@ -1,1 +1,0 @@
-${application.title}${application.formatted-version} running on Spring Boot${spring-boot.formatted-version}
