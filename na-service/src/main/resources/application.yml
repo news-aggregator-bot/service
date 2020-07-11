@@ -1,0 +1,35 @@
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+      FAIL_ON_SELF_REFERENCES: false
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST}:3306/${MYSQL_NA_DB}?autoReconnect=true&useSSL=false&serverTimezone=UTC
+    username: ${MYSQL_NA_USER}
+    password: ${MYSQL_NA_PASSWORD}
+    platform: mysql
+    initialization-mode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      javax:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            scripts:
+              action: create
+              create-target: src/main/resources/db/migration/V1__source.sql
+    hibernate:
+      ddl-auto: update
+#  flyway:
+#    enabled: true
+#    baselineOnMigrate: true
+#    locations: classpath:db/migration
+#flyway:
+#  url: jdbc:mysql://${MYSQL_HOST}:3306/${MYSQL_NA_DB}?autoReconnect=true&useSSL=false&serverTimezone=UTC
+#  schemas: USERSERVICE
+#  user: ${MYSQL_NA_USER}
+#  password: ${MYSQL_NA_PASSWORD}

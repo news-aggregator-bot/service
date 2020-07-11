@@ -1,0 +1,14 @@
+version: '3'
+services:
+  na-service:
+    build: na-service
+    ports:
+      - 8090:8090
+    depends_on:
+      - database
+volumes:
+  na-mysql-data:
+networks:
+  default:
+    external:
+      name: "na-network"
