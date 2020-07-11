@@ -7,6 +7,7 @@ import vlad110kg.news.aggregator.entity.Reader;
 import vlad110kg.news.aggregator.repository.ReaderRepository;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,6 +33,16 @@ public class ReaderService implements IReaderService {
     @Override
     public Optional<Reader> find(long chatId) {
         return readerRepository.findByChatId(chatId);
+    }
+
+    @Override
+    public List<Reader> findAll() {
+        return readerRepository.findAll();
+    }
+
+    @Override
+    public List<Reader> findAllEnabled() {
+        return readerRepository.findAllByStatus(Reader.Status.ENABLED);
     }
 
     @Override

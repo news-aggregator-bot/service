@@ -2,6 +2,7 @@ package vlad110kg.news.aggregator.facade;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -34,11 +35,17 @@ public class NewsSynchroniser {
     @Autowired
     private IReaderService readerService;
 
+    @Value("${na.schedule.sync.enabled}")
+    private boolean syncEnabled;
+
     private final Map<Source, AtomicInteger> sources = new HashMap<>();
 
     @Transactional
-    @Scheduled(cron = "*/20 * * * * *")
+    @Scheduled(cron = "${na.schedule.sync.cron:*/20 * * * * *}")
     public void sync() {
+        if (!syncEnabled) {
+            return;
+        }
         if (sources.isEmpty()) {
             sourceService.findAll().forEach(s -> sources.put(s, new AtomicInteger(0)));
         }

@@ -1,0 +1,10 @@
+spring:
+  profiles: prod
+na:
+  schedule:
+    sync:
+      enabled: true
+      cron: '*/20 * * * * *'
+    notify:
+      enabled: true
+      cron: '* * */1 * * *'
