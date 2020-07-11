@@ -4,8 +4,6 @@ services:
     build: na-service
     ports:
       - 8090:8090
-    depends_on:
-      - database
 volumes:
   na-mysql-data:
 networks:
