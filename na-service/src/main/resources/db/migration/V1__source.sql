@@ -7,7 +7,7 @@ create table category_localisation (id bigint not null auto_increment primary ke
 create table tag (id bigint not null auto_increment primary key, name varchar(255) not null unique);
 create table `language` (lang varchar(50) not null primary key, name varchar(255) not null unique, localized varchar(255) not null);
 create table news_note (id bigint not null auto_increment primary key, title varchar(255) not null, url varchar(255) not null unique, description text null, author varchar(255) null, creation_date datetime(6), update_date datetime(6), id_source_page bigint not null);
-create table reader (id bigint not null auto_increment primary key, chat_id bigint not null unique, username varchar(100) not null, first_name varchar(255) not null, last_name varchar(255) not null, status varchar(50) not null, creation_date datetime(6), update_date datetime(6), platform varchar(50) not null, primary_language varchar(50) not null);
+create table reader (id bigint not null auto_increment primary key, chat_id bigint not null unique, username varchar(255) not null, first_name varchar(255) not null, last_name varchar(255) not null, status varchar(50) not null, creation_date datetime(6), update_date datetime(6), platform varchar(50) not null, primary_language varchar(50) not null);
 
 
 create table content_block_tag (id_block bigint not null, id_tag bigint not null);
@@ -39,3 +39,9 @@ alter table category add foreign key (id_parent) references category(id);
 create index NEWS_NOTE_URL on news_note (url);
 create index CONTENT_TAG_VALUE on content_tag (`value`);
 
+create table `system_user` (chat_id bigint not null auto_increment primary key, username varchar(255) not null unique, first_name varchar(255) not null, last_name varchar(255) not null, creation_date datetime(6), update_date datetime(6), platform varchar(50) not null);
+create table `system_role` (id bigint not null auto_increment primary key, value varchar(50) not null unique);
+create table `system_user_role` (id_user bigint not null, id_role bigint not null);
+alter table system_user_role add foreign key (id_user) references system_user(chat_id);
+alter table system_user_role add foreign key (id_role) references system_role(id);
+insert into system_role (value) values ('god'), ('admin');
