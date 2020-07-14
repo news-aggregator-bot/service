@@ -24,6 +24,14 @@
         <spring-cloud-dependecies.version>Hoxton.SR6</spring-cloud-dependecies.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>na</id>
+            <name>news-aggregator-bot</name>
+            <url>https://maven.pkg.github.com/news-aggregator-bot/artifactory</url>
+        </repository>
+    </distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -143,14 +151,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <profiles>
-        <profile>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <id>dev</id>
-        </profile>
-    </profiles>
-
 </project>

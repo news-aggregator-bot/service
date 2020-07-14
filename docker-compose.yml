@@ -1,7 +1,7 @@
 version: '3'
 services:
   na-service:
-    build: na-service
+    image: vlad110kg/na-service
     ports:
       - 8090:8090
 volumes:
