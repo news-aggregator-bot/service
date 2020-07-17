@@ -20,4 +20,9 @@ public class ContentTag extends IdEntity {
 
     @Column(nullable = false)
     private String value;
+
+    @Column(nullable = false, name = "match_strategy")
+    @Enumerated(EnumType.STRING)
+    private ContentTagMatchStrategy matchStrategy;
+
 }

@@ -2,6 +2,7 @@ package vlad110kg.news.aggregator.domain.dto;
 
 import lombok.Data;
 import lombok.ToString;
+import vlad110kg.news.aggregator.entity.ContentTagMatchStrategy;
 import vlad110kg.news.aggregator.entity.ContentTagType;
 
 @Data
@@ -10,4 +11,5 @@ public class ContentTagDto {
 
     private final ContentTagType type;
     private String value;
+    private ContentTagMatchStrategy matchStrategy;
 }

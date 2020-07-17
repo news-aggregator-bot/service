@@ -1,7 +1,7 @@
 create table source (id bigint not null auto_increment primary key, name varchar(255) not null, creation_date datetime(6), update_date datetime(6));
 create table source_page (id bigint not null auto_increment primary key, name varchar(255) not null, url varchar(255) not null, creation_date datetime(6), update_date datetime(6), id_source bigint not null, language varchar(50) not null);
 create table content_block (id bigint not null auto_increment primary key, id_source_page bigint not null);
-create table content_tag (id bigint not null auto_increment primary key, type varchar(20) not null, `value` varchar(255) not null);
+create table content_tag (id bigint not null auto_increment primary key, type varchar(20) not null, `value` varchar(255) not null, `match_strategy` varchar(50) not null);
 create table category (id bigint not null auto_increment primary key, name varchar(255) not null unique, id_parent bigint null);
 create table category_localisation (id bigint not null auto_increment primary key, id_category bigint not null, language varchar(50) not null, value varchar(255) not null);
 create table tag (id bigint not null auto_increment primary key, name varchar(255) not null unique);

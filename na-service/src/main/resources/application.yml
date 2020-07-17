@@ -30,8 +30,3 @@ spring:
     enabled: true
     baselineOnMigrate: true
     locations: classpath:db/migration
-#flyway:
-#  url: jdbc:mysql://${MYSQL_HOST}:3306/${MYSQL_NA_DB}?autoReconnect=true&useSSL=false&serverTimezone=UTC
-#  schemas: USERSERVICE
-#  user: ${MYSQL_NA_USER}
-#  password: ${MYSQL_NA_PASSWORD}

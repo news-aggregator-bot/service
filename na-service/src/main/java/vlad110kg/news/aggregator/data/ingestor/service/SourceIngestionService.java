@@ -1,6 +1,7 @@
 package vlad110kg.news.aggregator.data.ingestor.service;
 
 import com.google.common.collect.ImmutableMap;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -13,6 +14,7 @@ import vlad110kg.news.aggregator.domain.dto.ContentBlockDto;
 import vlad110kg.news.aggregator.domain.dto.ContentTagDto;
 import vlad110kg.news.aggregator.domain.dto.SourceDto;
 import vlad110kg.news.aggregator.domain.dto.SourcePageDto;
+import vlad110kg.news.aggregator.entity.ContentTagMatchStrategy;
 import vlad110kg.news.aggregator.facade.IngestionSourceFacade;
 
 import java.io.InputStream;
@@ -27,7 +29,19 @@ import static vlad110kg.news.aggregator.entity.ContentTagType.MAIN;
 import static vlad110kg.news.aggregator.entity.ContentTagType.TITLE;
 
 @Service("source")
+@Slf4j
 public class SourceIngestionService implements IngestionService {
+
+    private static final IngestionConsumer ingestionConsumer = (v, o) -> {
+        String[] info = v.trim().split(":");
+        if (info.length < 2) {
+            log.error(v + " is not well formatted");
+        }
+        String value = info[0];
+        String matchStrategy = info[1];
+        ((ContentTagDto) o).setValue(value);
+        ((ContentTagDto) o).setMatchStrategy(ContentTagMatchStrategy.valueOf(matchStrategy));
+    };
 
     private final Map<Integer, Supplier<Object>> entityMapping =
         ImmutableMap.<Integer, Supplier<Object>>builder()
@@ -45,11 +59,11 @@ public class SourceIngestionService implements IngestionService {
             .put(1, (v, o) -> ((SourcePageDto) o).setUrl(v.trim()))
             .put(2, (v, o) -> ((SourcePageDto) o).setCategories(Arrays.asList(v.split(","))))
             .put(3, (v, o) -> ((SourcePageDto) o).setLanguage(v.trim()))
-            .put(4, (v, o) -> ((ContentTagDto) o).setValue(v.trim()))
-            .put(5, (v, o) -> ((ContentTagDto) o).setValue(v.trim()))
-            .put(6, (v, o) -> ((ContentTagDto) o).setValue(v.trim()))
-            .put(7, (v, o) -> ((ContentTagDto) o).setValue(v.trim()))
-            .put(8, (v, o) -> ((ContentTagDto) o).setValue(v.trim()))
+            .put(4, ingestionConsumer)
+            .put(5, ingestionConsumer)
+            .put(6, ingestionConsumer)
+            .put(7, ingestionConsumer)
+            .put(8, ingestionConsumer)
             .build();
 
     @Autowired

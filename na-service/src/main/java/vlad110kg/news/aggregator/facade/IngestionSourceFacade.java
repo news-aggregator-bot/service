@@ -104,12 +104,13 @@ public class IngestionSourceFacade {
     private ContentTag findContentTag(ContentTagDto tag) {
         return contentTagService.findByValue(tag.getValue())
             .stream()
-            .filter(t -> t.getType() == tag.getType())
+            .filter(t -> t.getType() == tag.getType() && t.getMatchStrategy() == tag.getMatchStrategy())
             .findFirst()
             .orElseGet(() -> {
                 ContentTag contentTag = new ContentTag();
                 contentTag.setType(tag.getType());
                 contentTag.setValue(tag.getValue());
+                contentTag.setMatchStrategy(tag.getMatchStrategy());
                 return contentTag;
             });
     }
