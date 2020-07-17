@@ -30,12 +30,10 @@ jobs:
           key: na-service-{{ checksum "pom.xml" }}
 
       - run: mvn package # run the actual tests
-      - run: env
 
       - run:
           name: docker-compose
           command: |
-            cat docker-compose.yml
             set -x
             docker network create na
             docker-compose --project-name na -f docker-compose.yml up --build --no-start na-service
@@ -45,10 +43,17 @@ jobs:
           command:
             echo "$GITHUB_TOKEN" | docker login https://docker.pkg.github.com --username $GITHUB_USER --password-stdin
 
+      #      - run:
+      #          name: docker push
+      #          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
       - run:
-          name: docker push
-          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
+          name: docker swarm join
+          command: docker swarm join --token SWMTKN-1-05xsn9gf2caxet28b5od66d8lo3mgmaanu145s3f8lh2culd9s-4275krt3svv21ghysd3plv6f6 $SSH_HOST:2377
 
       - deploy:
-          name: deploy image to remote
-          command: ssh $SSH_USER@$SSH_HOST "cd na && ./update-na-service.sh"
+          name: deploy stack deploy
+          command: docker stack deploy -c docker-compose.yml --with-registry-auth na-service
+#
+#      - deploy:
+#          name: deploy image to remote
+#          command: ssh $SSH_USER@$SSH_HOST "cd na && ./update-na-service.sh"
