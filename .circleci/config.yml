@@ -35,7 +35,7 @@ jobs:
           name: docker-compose
           command: |
             set -x
-            docker network create na-network
+            docker network create na
             docker-compose --project-name na -f docker-compose.yml up --build --no-start na-service
 
       - run:
