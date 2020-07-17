@@ -30,6 +30,7 @@ jobs:
           key: na-service-{{ checksum "pom.xml" }}
 
       - run: mvn package # run the actual tests
+      - run: echo $MYSQL_HOST
 
       - run:
           name: docker-compose
