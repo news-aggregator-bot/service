@@ -9,4 +9,4 @@ volumes:
 networks:
   default:
     external:
-      name: "na-network"
+      name: "na"

@@ -1,0 +1,52 @@
+version: 2.1
+workflows:
+  build:
+    jobs:
+      - build-deploy:
+          context: DEPLOY
+jobs:
+  build-deploy:
+
+    working_directory: ~/na-service
+
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+
+    steps: # a collection of executable commands
+
+      - checkout # check out source code to working directory
+      - add_ssh_keys
+      - setup_remote_docker
+
+      - restore_cache:
+          keys:
+            - na-service-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline # gets the project dependencies
+
+      - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: na-service-{{ checksum "pom.xml" }}
+
+      - run: mvn package # run the actual tests
+
+      - run:
+          name: docker-compose
+          command: |
+            set -x
+            docker network create na-network
+            docker-compose --project-name na -f docker-compose.yml up --build --no-start na-service
+
+      - run:
+          name: docker login
+          command:
+            echo "$GITHUB_TOKEN" | docker login https://docker.pkg.github.com --username $GITHUB_USER --password-stdin
+
+      - run:
+          name: docker push
+          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
+
+      - deploy:
+          name: deploy image to remote
+          command: ssh $SSH_USER@$SSH_HOST "cd na && ./update-na-service.sh"
