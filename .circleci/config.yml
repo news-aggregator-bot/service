@@ -48,11 +48,11 @@ jobs:
           command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
 
       - run:
-          name: grant executive access
-          command: chmod 755 scripts/*
+          name: create ssh config
+          command: |
+            chmod 755 scripts/*
+            ./scripts/send-env-config.sh
 
       - deploy:
           name: deploy image to remote
-          command: |
-            ./scripts/send-env-config.sh
-            ./scripts/deploy.sh
+          command: ./scripts/deploy.sh
