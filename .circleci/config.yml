@@ -37,15 +37,15 @@ jobs:
             echo "$GITHUB_TOKEN" | docker login https://docker.pkg.github.com --username $GITHUB_USER --password-stdin
 
       - run:
-          name: docker push
-          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
-
-      - run:
           name: docker-compose
           command: |
             set -x
             docker network create na
             docker-compose --project-name na -f docker-compose.yml up --build --no-start na-service
+
+      - run:
+          name: docker push
+          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
 
       - deploy:
           name: deploy image to remote
