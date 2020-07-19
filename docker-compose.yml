@@ -1,7 +1,6 @@
 version: '3'
 services:
   na-service:
-    build: na-service
     image: docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service
     environment:
       - MYSQL_HOST=${MYSQL_HOST}
