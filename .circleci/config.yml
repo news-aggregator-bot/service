@@ -49,9 +49,7 @@ jobs:
 
       - run:
           name: create ssh config
-          command: |
-            chmod 755 scripts/*
-            ./scripts/send-env-config.sh
+          command: ./scripts/send-env-config.sh
 
       - deploy:
           name: deploy image to remote

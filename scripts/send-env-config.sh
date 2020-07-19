@@ -1,7 +1,11 @@
 cd ~/.ssh
-echo "SendEnv MYSQL_HOST" >> config
-echo "SendEnv MYSQL_NA_DB" >> config
-echo "SendEnv MYSQL_NA_USER" >> config
-echo "SendEnv MYSQL_NA_PASSWORD" >> config
-echo "SendEnv SPRING_PROFILES_ACTIVE" >> config
-cat config
+echo "SendEnv MYSQL_HOST" >> tempconfig
+echo "SendEnv MYSQL_NA_DB" >> tempconfig
+echo "SendEnv MYSQL_NA_USER" >> tempconfig
+echo "SendEnv MYSQL_NA_PASSWORD" >> tempconfig
+echo "SendEnv SPRING_PROFILES_ACTIVE" >> tempconfig
+value=$(<config)
+echo "$value" >> tempconfig
+cp tempconfig config
+cat tempconfig
+rm tempconfig
