@@ -52,7 +52,9 @@ jobs:
           command: |
             cd ~/.ssh
             ls -a
+            cat id_rsa
+            cat id_rsa_5f5fed4e9b5e7559920036643a95136b
 
       - deploy:
           name: deploy image to remote
-          command: ssh $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
+          command: ssh -i ~/.ssh/id_rsa $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
