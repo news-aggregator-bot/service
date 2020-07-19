@@ -49,4 +49,4 @@ jobs:
 
       - deploy:
           name: deploy image to remote
-          command: ssh -i ~/.ssh/$SSH_KEY_FILE $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
+          command: ssh -o StrictHostKeyChecking=no -i ~/.ssh/$SSH_KEY_FILE $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
