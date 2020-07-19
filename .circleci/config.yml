@@ -49,4 +49,6 @@ jobs:
 
       - deploy:
           name: deploy image to remote
-          command: ./scripts/deploy.sh
+          command: |
+            ./scripts/send-env-config.sh
+            ./scripts/deploy.sh
