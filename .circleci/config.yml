@@ -49,6 +49,10 @@ jobs:
           name: docker push
           command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
 
+      - run:
+          name: cat
+          command: cd ~/.ssh & ls -a
+
       - deploy:
           name: deploy image to remote
           command: ssh -i $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
