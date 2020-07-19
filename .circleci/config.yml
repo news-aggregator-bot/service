@@ -49,7 +49,7 @@ jobs:
 
       - run:
           name: grant executive access
-          command: chmod 755 /scripts/*
+          command: chmod 755 scripts/*
 
       - deploy:
           name: deploy image to remote
