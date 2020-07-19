@@ -49,6 +49,7 @@ jobs:
       - run:
           name: docker swarm join
           command: docker swarm join --token SWMTKN-1-05xsn9gf2caxet28b5od66d8lo3mgmaanu145s3f8lh2culd9s-4275krt3svv21ghysd3plv6f6 $SSH_HOST:2377
+          no_output_timeout: 1m
 
       - deploy:
           name: deploy stack deploy
