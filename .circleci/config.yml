@@ -51,7 +51,9 @@ jobs:
 
       - run:
           name: cat
-          command: cd ~/.ssh & ls -a
+          command: |
+            cd ~/.ssh
+            ls -a
 
       - deploy:
           name: deploy image to remote
