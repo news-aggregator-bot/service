@@ -47,6 +47,10 @@ jobs:
           name: docker push
           command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
 
+      - run:
+          name: grant executive access
+          command: chmod 755 /scripts/*
+
       - deploy:
           name: deploy image to remote
           command: |
