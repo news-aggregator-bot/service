@@ -15,9 +15,7 @@ jobs:
     steps: # a collection of executable commands
 
       - checkout # check out source code to working directory
-      - add_ssh_keys:
-          fingerprints:
-            - "5f:5f:ed:4e:9b:5e:75:59:92:00:36:64:3a:95:13:6b"
+      - add_ssh_keys
       - setup_remote_docker
 
       - restore_cache:
@@ -57,4 +55,4 @@ jobs:
 
       - deploy:
           name: deploy image to remote
-          command: ssh -i $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
+          command: ssh $SSH_USER@$SSH_HOST "/bin/bash --login -s" -- < scripts/swarm-update.sh "https://raw.githubusercontent.com/news-aggregator-bot/service/master/docker-compose.yml"
