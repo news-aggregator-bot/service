@@ -47,6 +47,15 @@ jobs:
       #          name: docker push
       #          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service:latest
       - run:
+          name: open docker ports
+          command: |
+            ufw allow 2376/tcp
+            ufw allow 2377/tcp
+            ufw allow 7946/tcp
+            ufw allow 7946/udp
+            ufw allow 4789/udp
+
+      - run:
           name: docker swarm join
           command: |
             docker swarm init
