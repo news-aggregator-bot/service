@@ -3,6 +3,7 @@ services:
   na-service:
     image: docker.pkg.github.com/news-aggregator-bot/artifactory/vlad110kg.na-service
     environment:
+      - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_NA_DB=${MYSQL_NA_DB}
       - MYSQL_NA_USER=${MYSQL_NA_USER}
       - MYSQL_NA_PASSWORD=${MYSQL_NA_PASSWORD}
