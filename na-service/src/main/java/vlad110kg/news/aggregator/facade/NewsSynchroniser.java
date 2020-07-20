@@ -8,6 +8,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.domain.NewsSyncResult;
+import vlad110kg.news.aggregator.entity.NewsNote;
 import vlad110kg.news.aggregator.entity.Source;
 import vlad110kg.news.aggregator.entity.SourcePage;
 import vlad110kg.news.aggregator.service.INewsService;
@@ -18,6 +19,7 @@ import vlad110kg.news.aggregator.service.ISourceService;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -66,7 +68,9 @@ public class NewsSynchroniser {
                 log.info("synchronisation:started:{}", sourcePage.getUrl());
 
                 NewsSyncResult freshNotes = newsService.sync(sourcePage);
-                log.info("synchronisation:collected:{}:{}", sourcePage.getUrl(), freshNotes.getNewsNotes());
+                log.info("synchronisation:collected:{}:{}", sourcePage.getUrl(),
+                    freshNotes.getNewsNotes().stream().map(NewsNote::getTitle).collect(Collectors.joining(","))
+                );
 
                 sourcePage.getReaders().forEach(r -> r.addQueueNewsNote(freshNotes.getNewsNotes()));
                 readerService.save(sourcePage.getReaders());
