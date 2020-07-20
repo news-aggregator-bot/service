@@ -6,5 +6,5 @@ na:
       enabled: true
       cron: '*/20 * * * * *'
     notify:
-      enabled: true
+      enabled: false
       cron: '* * */1 * * *'
