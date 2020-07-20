@@ -30,7 +30,3 @@ spring:
     enabled: true
     baselineOnMigrate: true
     locations: classpath:db/migration
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://na-registry:8761/eureka/
