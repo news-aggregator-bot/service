@@ -2,6 +2,7 @@ package vlad110kg.news.aggregator.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.domain.dto.ContentBlockDto;
 import vlad110kg.news.aggregator.domain.dto.ContentTagDto;
 import vlad110kg.news.aggregator.domain.dto.SourceDto;
@@ -25,6 +26,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
+@Transactional
 public class IngestionSourceFacade {
 
     @Autowired

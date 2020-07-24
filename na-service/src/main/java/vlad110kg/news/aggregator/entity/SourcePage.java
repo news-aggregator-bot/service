@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,22 +33,24 @@ public class SourcePage extends DatedEntity {
     @Column(nullable = false)
     private String url;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "language")
     private Language language;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_source")
     @JsonIgnore
     @ToString.Exclude
     private Source source;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "source_page_category",
         joinColumns = {@JoinColumn(name = "id_source_page")},
         inverseJoinColumns = {@JoinColumn(name = "id_category")}
     )
+    @Fetch(value = FetchMode.SUBSELECT)
+    @ToString.Exclude
     private List<Category> categories;
 
     @ManyToMany
@@ -55,10 +59,12 @@ public class SourcePage extends DatedEntity {
         joinColumns = {@JoinColumn(name = "id_source_page")},
         inverseJoinColumns = {@JoinColumn(name = "id_reader")}
     )
+    @ToString.Exclude
     private List<Reader> readers;
 
-    @OneToMany(mappedBy = "sourcePage", cascade = ALL)
+    @OneToMany(mappedBy = "sourcePage", cascade = ALL, fetch = FetchType.EAGER)
     @JsonIgnore
+    @ToString.Exclude
     private List<ContentBlock> contentBlocks;
 
 }

@@ -28,6 +28,7 @@ public class Category extends IdEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_parent")
     @JsonIgnore
+    @ToString.Exclude
     private Category parent;
 
     @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)

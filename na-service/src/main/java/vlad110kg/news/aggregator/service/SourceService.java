@@ -3,6 +3,7 @@ package vlad110kg.news.aggregator.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.entity.Source;
 import vlad110kg.news.aggregator.repository.SourceRepository;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
+@Transactional
 public class SourceService implements ISourceService {
 
     @Autowired

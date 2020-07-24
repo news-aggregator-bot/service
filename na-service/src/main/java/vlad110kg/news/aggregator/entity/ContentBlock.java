@@ -31,7 +31,7 @@ public class ContentBlock extends IdEntity {
     @ToString.Exclude
     private SourcePage sourcePage;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "content_block_tag",
         joinColumns = {@JoinColumn(name = "id_block")},
@@ -47,8 +47,12 @@ public class ContentBlock extends IdEntity {
 
     public ContentTag findByType(ContentTagType type) {
         if (typeMap == null) {
-            typeMap = tags.stream()
-                .collect(Collectors.toMap(ContentTag::getType, Function.identity()));
+            try {
+                typeMap = tags.stream()
+                    .collect(Collectors.toMap(ContentTag::getType, Function.identity()));
+            } catch (RuntimeException e) {
+                throw e;
+            }
         }
         return typeMap.get(type);
     }

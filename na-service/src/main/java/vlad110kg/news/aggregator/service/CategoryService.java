@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.entity.Category;
 import vlad110kg.news.aggregator.entity.CategoryLocalisation;
 import vlad110kg.news.aggregator.repository.CategoryLocalisationRepository;
@@ -15,6 +16,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
+@Transactional
 public class CategoryService implements ICategoryService {
 
     @Autowired

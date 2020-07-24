@@ -2,6 +2,7 @@ package vlad110kg.news.aggregator.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.domain.dto.CategoryLocalisationDto;
 import vlad110kg.news.aggregator.entity.Category;
 import vlad110kg.news.aggregator.entity.CategoryLocalisation;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
+@Transactional
 public class IngestionCategoryLocalisationFacade {
 
     @Autowired

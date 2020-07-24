@@ -10,8 +10,6 @@ services:
       - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
     ports:
       - 8080:8080
-volumes:
-  na-mysql-data:
 networks:
   default:
     external:

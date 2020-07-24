@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
+@Transactional
 public class NewsNoteService implements INewsNoteService {
 
     @Autowired
@@ -21,7 +22,7 @@ public class NewsNoteService implements INewsNoteService {
     @Transactional
     public NewsNote save(NewsNote note) {
         log.info("news:save:{}", note);
-        return repository.save(note);
+        return repository.saveAndFlush(note);
     }
 
     @Override

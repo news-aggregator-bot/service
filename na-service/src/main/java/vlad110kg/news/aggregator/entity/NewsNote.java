@@ -3,6 +3,7 @@ package vlad110kg.news.aggregator.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "news_note")
 @EqualsAndHashCode(callSuper = true)
+@ToString
 public class NewsNote extends DatedEntity {
 
     private String title;
@@ -27,5 +29,6 @@ public class NewsNote extends DatedEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_source_page")
     @JsonIgnore
+    @ToString.Exclude
     private SourcePage sourcePage;
 }

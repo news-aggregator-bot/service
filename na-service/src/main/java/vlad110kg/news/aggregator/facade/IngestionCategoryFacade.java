@@ -2,6 +2,7 @@ package vlad110kg.news.aggregator.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import vlad110kg.news.aggregator.domain.dto.CategoryDto;
 import vlad110kg.news.aggregator.entity.Category;
 import vlad110kg.news.aggregator.service.ICategoryService;
@@ -15,6 +16,7 @@ public class IngestionCategoryFacade {
     @Autowired
     private ICategoryService categoryService;
 
+    @Transactional
     public List<Category> ingest(List<CategoryDto> dtos) {
         return dtos.stream()
             .map(this::getCategory)

@@ -41,10 +41,15 @@ public class NewsService implements INewsService {
 
     @Override
     public NewsSyncResult sync(SourcePage sourcePage) {
-        Set<NewsNote> freshNotes = process(sourcePage)
-            .collect(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(NewsNote::getUrl))));
-        Set<NewsNote> savedNotes = new HashSet<>(newsNoteService.saveAll(freshNotes));
+        Set<NewsNote> freshNews = readFreshNews(sourcePage);
+        Set<NewsNote> savedNotes = new HashSet<>(newsNoteService.saveAll(freshNews));
         return NewsSyncResult.builder().newsNotes(savedNotes).build();
+    }
+
+    @Override
+    public Set<NewsNote> readFreshNews(SourcePage sourcePage) {
+        return process(sourcePage)
+            .collect(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(NewsNote::getUrl))));
     }
 
     private Set<NewsNote> syncSource(Source source) {
