@@ -1,10 +1,8 @@
 package vlad110kg.news.aggregator.service.func;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Ignore;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import vlad110kg.news.aggregator.FuncSupport;
 import vlad110kg.news.aggregator.NAService;
 import vlad110kg.news.aggregator.YamlPropertySourceFactory;
 import vlad110kg.news.aggregator.data.ingestor.service.CategoryIngestionService;
@@ -28,9 +27,6 @@ import vlad110kg.news.aggregator.service.ISourcePageService;
 import javax.annotation.PostConstruct;
 import java.util.Set;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static org.junit.Assert.assertFalse;
 
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
@@ -38,7 +34,7 @@ import static org.junit.Assert.assertFalse;
 @ActiveProfiles("it")
 @Slf4j
 @Ignore
-public class NewsApprover {
+public class NewsApprover extends FuncSupport {
 
     @Autowired
     private INewsService newsService;
@@ -57,9 +53,6 @@ public class NewsApprover {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-    @Rule
-    public WireMockRule wireMockRule = new WireMockRule();
 
     private FuncSourceDataIngestor dataIngestor;
 
@@ -94,9 +87,11 @@ public class NewsApprover {
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
         byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getName());
-        wireMockRule.stubFor(get(urlEqualTo(sourcePage.getUrl())).willReturn(aResponse().withBody(pageContent)));
-
+        String path = getPath(sourcePage);
+        stub(path, pageContent);
         Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
+        stubVerify(path);
+
         newsContext.approve(sourcePage.getSource().getName(), sourcePage.getName(), freshNews);
 
         log.info("approve:sourcepage:finish:{}", sourcePage.getName());

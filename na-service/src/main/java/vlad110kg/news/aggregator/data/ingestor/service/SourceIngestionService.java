@@ -17,6 +17,7 @@ import vlad110kg.news.aggregator.domain.dto.SourcePageDto;
 import vlad110kg.news.aggregator.entity.ContentTagMatchStrategy;
 import vlad110kg.news.aggregator.facade.IngestionSourceFacade;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Map;
@@ -84,7 +85,13 @@ public class SourceIngestionService implements IngestionService {
             }
 
         } catch (Exception ioe) {
-            ioe.printStackTrace();
+            log.error("Unable to ingest sources", ioe);
+        } finally {
+            try {
+                data.close();
+            } catch (IOException e) {
+                log.error("Unable to close source stream");
+            }
         }
     }
 

@@ -1,10 +1,8 @@
 package vlad110kg.news.aggregator.service.func;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.util.Pair;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import vlad110kg.news.aggregator.FuncSupport;
 import vlad110kg.news.aggregator.NAService;
 import vlad110kg.news.aggregator.YamlPropertySourceFactory;
 import vlad110kg.news.aggregator.data.ingestor.service.CategoryIngestionService;
@@ -33,9 +32,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 
@@ -43,7 +39,7 @@ import static org.junit.Assert.fail;
 @RunWith(SpringRunner.class)
 @ActiveProfiles("it")
 @Slf4j
-public class NewsServiceFuncTest {
+public class NewsServiceFuncTest extends FuncSupport {
 
     private static final String SOURCE_MISMATCH_PATTERN = "Source: %s\n%s";
     private static final String SOURCEPAGE_MISMATCH_PATTERN = "Source page: %s\n%s";
@@ -65,9 +61,6 @@ public class NewsServiceFuncTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-    @Rule
-    public WireMockRule wireMockRule = new WireMockRule();
 
     private FuncSourceDataIngestor dataIngestor;
 
@@ -146,9 +139,11 @@ public class NewsServiceFuncTest {
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
         byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getName());
-        wireMockRule.stubFor(get(urlEqualTo(sourcePage.getUrl())).willReturn(aResponse().withBody(pageContent)));
-
+        String path = getPath(sourcePage);
+        stub(path, pageContent);
         Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
+        stubVerify(path);
+
         Set<NewsNote> expectedNotes = newsContext.get(source.getName().toLowerCase(), sourcePage.getName());
 
         List<Mismatch> mismatches = mismatchAnalyzer.analyse(expectedNotes, freshNews);

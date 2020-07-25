@@ -1,5 +1,6 @@
 package vlad110kg.news.aggregator.data.ingestor.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -9,11 +10,13 @@ import org.springframework.stereotype.Service;
 import vlad110kg.news.aggregator.domain.dto.LanguageDto;
 import vlad110kg.news.aggregator.facade.IngestionLanguageFacade;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class LanguageIngestionService implements IngestionService {
 
     @Autowired
@@ -38,6 +41,12 @@ public class LanguageIngestionService implements IngestionService {
             facade.ingest(languages);
         } catch (Exception ioe) {
             ioe.printStackTrace();
+        } finally {
+            try {
+                data.close();
+            } catch (IOException e) {
+                log.error("Unable to close language stream");
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 package vlad110kg.news.aggregator.data.ingestor.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -10,11 +11,13 @@ import org.springframework.stereotype.Service;
 import vlad110kg.news.aggregator.domain.dto.CategoryDto;
 import vlad110kg.news.aggregator.facade.IngestionCategoryFacade;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service("category")
+@Slf4j
 public class CategoryIngestionService implements IngestionService {
 
     @Autowired
@@ -37,7 +40,13 @@ public class CategoryIngestionService implements IngestionService {
             }
             facade.ingest(categories);
         } catch (Exception ioe) {
-            ioe.printStackTrace();
+            log.error("Unable to ingest categories", ioe);
+        } finally {
+            try {
+                data.close();
+            } catch (IOException e) {
+                log.error("Unable to close source stream");
+            }
         }
     }
 

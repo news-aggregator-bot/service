@@ -42,10 +42,10 @@ public class ResultMismatchAnalyzer {
             return Collections.emptyList();
         }
 
-        Map<Integer, NewsNote> expectedMap = expected.stream()
-            .collect(Collectors.toMap(n -> n.getTitle().hashCode(), Function.identity()));
-        Map<Integer, NewsNote> actualMap = actual.stream()
-            .collect(Collectors.toMap(n -> n.getTitle().hashCode(), Function.identity()));
+        Map<String, NewsNote> expectedMap = expected.stream()
+            .collect(Collectors.toMap(n -> n.getTitle(), Function.identity()));
+        Map<String, NewsNote> actualMap = actual.stream()
+            .collect(Collectors.toMap(n -> n.getTitle(), Function.identity()));
 
         return expectedMap.entrySet()
             .stream()
