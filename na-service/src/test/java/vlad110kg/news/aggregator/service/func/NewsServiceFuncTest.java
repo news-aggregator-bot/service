@@ -3,6 +3,7 @@ package vlad110kg.news.aggregator.service.func;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.util.Pair;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ import static org.junit.Assert.fail;
 @RunWith(SpringRunner.class)
 @ActiveProfiles("it")
 @Slf4j
+@Ignore
 public class NewsServiceFuncTest extends FuncSupport {
 
     private static final String SOURCE_MISMATCH_PATTERN = "Source: %s\n%s";

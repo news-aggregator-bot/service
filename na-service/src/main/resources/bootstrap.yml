@@ -1,7 +1,9 @@
 eureka:
+  instance:
+    preferIpAddress: false
   client:
     serviceUrl:
-      defaultZone: http://na-registry:8761/eureka/
+      defaultZone: ${EUREKA_SERVER_URL}
 spring:
   application:
     name: na-service

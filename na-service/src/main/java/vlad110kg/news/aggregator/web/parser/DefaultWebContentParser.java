@@ -8,26 +8,24 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.jsoup.select.Evaluator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import vlad110kg.news.aggregator.domain.PageParsedData;
 import vlad110kg.news.aggregator.entity.ContentBlock;
 import vlad110kg.news.aggregator.entity.ContentTag;
 import vlad110kg.news.aggregator.entity.ContentTagType;
 import vlad110kg.news.aggregator.entity.SourcePage;
-import vlad110kg.news.aggregator.web.reader.WebPageReader;
+import vlad110kg.news.aggregator.web.reader.WebPageReaderContext;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.List;
 
-@Component("defaultParser")
-public class JsoupWebContentParser implements WebContentParser {
+@Component
+public class DefaultWebContentParser implements WebContentParser {
 
     @Autowired
-    @Qualifier("jsoupReader")
-    private WebPageReader<Document> pgRdr;
+    private WebPageReaderContext readerContext;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -37,12 +35,7 @@ public class JsoupWebContentParser implements WebContentParser {
 
     @Override
     public List<PageParsedData> parse(SourcePage page, ContentBlock block) {
-        Document doc;
-        try {
-            doc = pgRdr.read(page.getUrl());
-        } catch (RuntimeException e) {
-            return Collections.emptyList();
-        }
+        Document doc = readerContext.read(page.getSource().getName(), page.getUrl());
 
         ContentTag mainTag = block.findByType(ContentTagType.MAIN);
         ContentTag titleTag = block.findByType(ContentTagType.TITLE);

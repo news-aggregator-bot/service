@@ -9,7 +9,7 @@ import vlad110kg.news.aggregator.entity.NewsNote;
 import vlad110kg.news.aggregator.entity.Source;
 import vlad110kg.news.aggregator.entity.SourcePage;
 import vlad110kg.news.aggregator.exception.SourceNotFoundException;
-import vlad110kg.news.aggregator.web.parser.WebPageParserManager;
+import vlad110kg.news.aggregator.web.parser.WebContentParser;
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -30,7 +30,7 @@ public class NewsService implements INewsService {
     private INewsNoteService newsNoteService;
 
     @Autowired
-    private WebPageParserManager webPageParser;
+    private WebContentParser defaultParser;
 
     @Override
     public NewsSyncResult sync(String name) {
@@ -62,7 +62,7 @@ public class NewsService implements INewsService {
     private Stream<NewsNote> process(SourcePage page) {
         return page.getContentBlocks()
             .parallelStream()
-            .map(tag -> webPageParser.parse(page, tag))
+            .map(tag -> defaultParser.parse(page, tag))
             .flatMap(List::stream)
             .filter(d -> !newsNoteService.exists(d.getLink()))
             .map(d -> toNote(page, d));

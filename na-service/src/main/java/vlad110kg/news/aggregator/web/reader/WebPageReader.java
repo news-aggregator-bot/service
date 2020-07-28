@@ -1,6 +1,8 @@
 package vlad110kg.news.aggregator.web.reader;
 
-public interface WebPageReader<T> {
+import org.jsoup.nodes.Document;
 
-    T read(String path);
+public interface WebPageReader {
+
+    Document read(String path);
 }

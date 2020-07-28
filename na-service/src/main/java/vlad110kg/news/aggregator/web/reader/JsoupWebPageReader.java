@@ -1,15 +1,12 @@
 package vlad110kg.news.aggregator.web.reader;
 
-import java.io.IOException;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import vlad110kg.news.aggregator.exception.SourceException;
 
-import org.springframework.stereotype.Service;
+import java.io.IOException;
 
-@Service("jsoupReader")
-public class JsoupWebPageReader implements WebPageReader<Document> {
+public class JsoupWebPageReader implements WebPageReader {
 
     @Override
     public Document read(String path) {
