@@ -1,5 +1,4 @@
 cd ~/.ssh
-echo "SendEnv MYSQL_HOST" >> tempconfig
 echo "SendEnv MYSQL_NA_DB" >> tempconfig
 echo "SendEnv MYSQL_NA_USER" >> tempconfig
 echo "SendEnv MYSQL_NA_PASSWORD" >> tempconfig
