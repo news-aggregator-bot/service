@@ -1,3 +1,5 @@
+database:
+  ddl-file: src/main/resources/db/migration/V1__init.sql
 spring:
   main:
     banner-mode: "off"
@@ -17,15 +19,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-      javax:
-        persistence:
-          schema-generation:
-            create-source: metadata
-            scripts:
-              action: create
-              create-target: src/main/resources/db/migration/V1__source.sql
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
   flyway:
     enabled: true
     baselineOnMigrate: true

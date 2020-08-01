@@ -1,22 +1,28 @@
 package bepicky.service.configuration;
 
-import com.google.common.collect.ImmutableList;
-import org.apache.commons.lang3.SystemUtils;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import bepicky.service.web.reader.BrowserWebPageReader;
 import bepicky.service.web.reader.JsoupWebPageReader;
 import bepicky.service.web.reader.WebPageReader;
 import bepicky.service.web.reader.WebPageReaderContext;
+import com.google.common.collect.ImmutableList;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.SystemUtils;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Configuration
+@Slf4j
 public class WebPageReaderConfiguration {
+
+    @Value("${na.reader.browser:true}")
+    private boolean browserReaderEnabled;
 
     @Bean
     public FirefoxOptions firefoxOptions() {
@@ -38,10 +44,14 @@ public class WebPageReaderConfiguration {
 
     @Bean
     public WebPageReaderContext webPageReaderContext(FirefoxOptions firefoxOptions) {
-        ImmutableList<WebPageReader> readers = ImmutableList.of(
-            new JsoupWebPageReader(),
-            new BrowserWebPageReader(firefoxOptions)
-        );
-        return new WebPageReaderContext(readers);
+        ImmutableList.Builder<WebPageReader> readers = ImmutableList.builder();
+        readers.add(new JsoupWebPageReader());
+
+        if (browserReaderEnabled) {
+            log.info("webpagereader:browser:enabled");
+            readers.add(new BrowserWebPageReader(firefoxOptions));
+        }
+
+        return new WebPageReaderContext(readers.build());
     }
 }
