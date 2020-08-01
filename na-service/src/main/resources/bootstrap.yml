@@ -1,9 +1,3 @@
-eureka:
-  instance:
-    preferIpAddress: false
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER_URL}
 spring:
   application:
     name: na-service
