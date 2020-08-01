@@ -21,7 +21,7 @@ import java.nio.file.Paths;
 @Slf4j
 public class WebPageReaderConfiguration {
 
-    @Value("${na.reader.browser:true}")
+    @Value("${na.webpagereader.browser:true}")
     private boolean browserReaderEnabled;
 
     @Bean
