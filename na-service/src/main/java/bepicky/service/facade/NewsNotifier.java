@@ -1,11 +1,5 @@
 package bepicky.service.facade;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import bepicky.service.ErrorUtil;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.domain.request.NewsNoteRequest;
@@ -16,6 +10,12 @@ import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.IReaderService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -35,7 +35,7 @@ public class NewsNotifier {
     private boolean notifyEnabled;
 
     @Transactional
-    @Scheduled(cron = "${na.schedule.notify.cron:* */2 * * * *}")
+    @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
     public void sync() {
         if (notifyEnabled) {
             log.info("notify:reader:start");

@@ -46,7 +46,7 @@ public class WebPageReaderContext {
         return readers.stream().findFirst().get();
     }
 
-    @Scheduled(cron = "${na.schedule.reader.cron:* * */12 * * *}")
+    @Scheduled(cron = "${na.schedule.webpagereader.cron:0 0 */12 * * *}")
     public void refreshReaders() {
         log.info("webpagereader:refresh");
         sourceReaders = ArrayListMultimap.create();
