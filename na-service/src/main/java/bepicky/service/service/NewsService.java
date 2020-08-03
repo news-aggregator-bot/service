@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -61,10 +60,8 @@ public class NewsService implements INewsService {
     }
 
     private Stream<NewsNote> process(SourcePage page) {
-        return page.getContentBlocks()
-            .parallelStream()
-            .map(tag -> defaultParser.parse(page, tag))
-            .flatMap(List::stream)
+        return defaultParser.parse(page)
+            .stream()
             .filter(d -> !newsNoteService.exists(d.getLink()))
             .map(d -> toNote(page, d));
     }

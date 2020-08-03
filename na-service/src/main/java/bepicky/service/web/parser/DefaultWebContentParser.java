@@ -1,5 +1,11 @@
 package bepicky.service.web.parser;
 
+import bepicky.service.domain.PageParsedData;
+import bepicky.service.entity.ContentBlock;
+import bepicky.service.entity.ContentTag;
+import bepicky.service.entity.ContentTagType;
+import bepicky.service.entity.SourcePage;
+import bepicky.service.web.reader.WebPageReaderContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
@@ -9,17 +15,12 @@ import org.jsoup.select.Elements;
 import org.jsoup.select.Evaluator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import bepicky.service.domain.PageParsedData;
-import bepicky.service.entity.ContentBlock;
-import bepicky.service.entity.ContentTag;
-import bepicky.service.entity.ContentTagType;
-import bepicky.service.entity.SourcePage;
-import bepicky.service.web.reader.WebPageReaderContext;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class DefaultWebContentParser implements WebContentParser {
@@ -34,9 +35,16 @@ public class DefaultWebContentParser implements WebContentParser {
     private JsoupEvaluatorFactory evaluatorFactory;
 
     @Override
-    public List<PageParsedData> parse(SourcePage page, ContentBlock block) {
+    public List<PageParsedData> parse(SourcePage page) {
         Document doc = readerContext.read(page.getSource().getName(), page.getUrl());
+        return page.getContentBlocks()
+            .parallelStream()
+            .map(block -> parseDoc(page, doc, block))
+            .flatMap(List::stream)
+            .collect(Collectors.toList());
+    }
 
+    private List<PageParsedData> parseDoc(SourcePage page, Document doc, ContentBlock block) {
         ContentTag mainTag = block.findByType(ContentTagType.MAIN);
         ContentTag titleTag = block.findByType(ContentTagType.TITLE);
         ContentTag linkTag = block.findByType(ContentTagType.LINK);
