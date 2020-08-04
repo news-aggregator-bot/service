@@ -1,19 +1,20 @@
 package bepicky.service.facade;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Component;
-import bepicky.service.ErrorUtil;
+import bepicky.common.ErrorUtil;
+import bepicky.common.domain.response.LanguageResponse;
+import bepicky.common.domain.response.ListLanguageResponse;
+import bepicky.common.domain.response.PickLanguageResponse;
 import bepicky.service.domain.request.ListLanguageRequest;
 import bepicky.service.domain.request.PickLanguageRequest;
-import bepicky.service.domain.response.LanguageResponse;
-import bepicky.service.domain.response.ListLanguageResponse;
-import bepicky.service.domain.response.PickLanguageResponse;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.List;
@@ -34,37 +35,43 @@ public class LanguageFacade {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:language:reader {} not found", request.getChatId());
-            return ListLanguageResponse.error(ErrorUtil.readerNotFound());
+            return new ListLanguageResponse(ErrorUtil.readerNotFound());
         }
         PageRequest pageReq = PageRequest.of(request.getPage() - 1, request.getSize());
-        List<Language> languages = languageService.listAll(pageReq);
-        long totalAmount = languageService.countAll();
-        return ListLanguageResponse.builder()
-            .languages(languages.stream().map(LanguageResponse::new).collect(Collectors.toList()))
-            .totalAmount(totalAmount)
-            .language(reader.getPrimaryLanguage().getLang())
-            .build();
+        Page<Language> langPage = languageService.listAll(pageReq);
+        List<LanguageResponse> remainingLanguages = langPage.stream()
+            .filter(l -> !reader.getLanguages().contains(l))
+            .map(this::toResponse)
+            .collect(Collectors.toList());
+        return new ListLanguageResponse(remainingLanguages, langPage.isLast(), reader.getPrimaryLanguage().getLang());
     }
 
     public PickLanguageResponse pick(PickLanguageRequest request) {
         Language language = languageService.find(request.getLang()).orElse(null);
         if (language == null) {
             log.warn("pick:language:language {} not found", request.getLang());
-            return PickLanguageResponse.error(ErrorUtil.languageNotFound());
+            return new PickLanguageResponse(ErrorUtil.languageNotFound());
         }
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("pick:language:reader {} not found", request.getChatId());
-            return PickLanguageResponse.error(ErrorUtil.readerNotFound());
+            return new PickLanguageResponse(ErrorUtil.readerNotFound());
         }
         Set<Language> readerLangs = new HashSet<>();
         readerLangs.add(language);
         reader.setLanguages(readerLangs);
         readerService.save(reader);
-        return PickLanguageResponse.builder()
-            .language(new LanguageResponse(language))
-            .lang(reader.getPrimaryLanguage().getLang())
-            .build();
+        return new PickLanguageResponse(
+            reader.getPrimaryLanguage().getLang(),
+            toResponse(language)
+        );
     }
 
+    private LanguageResponse toResponse(Language language) {
+        return new LanguageResponse(
+            language.getLang(),
+            language.getName(),
+            language.getLocalized()
+        );
+    }
 }

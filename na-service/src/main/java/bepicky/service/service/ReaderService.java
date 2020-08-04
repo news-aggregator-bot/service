@@ -1,10 +1,10 @@
 package bepicky.service.service;
 
+import bepicky.service.entity.Reader;
+import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import bepicky.service.entity.Reader;
-import bepicky.service.repository.ReaderRepository;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,7 +20,6 @@ public class ReaderService implements IReaderService {
     @Override
     public Reader save(Reader reader) {
         Reader repoReader = find(reader.getChatId()).orElse(reader);
-        repoReader.setStatus(Reader.Status.ENABLED);
         log.info("reader:save:{}", reader);
         return readerRepository.save(repoReader);
     }

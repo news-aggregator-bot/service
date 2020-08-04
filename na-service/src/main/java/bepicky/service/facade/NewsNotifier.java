@@ -1,11 +1,11 @@
 package bepicky.service.facade;
 
-import bepicky.service.ErrorUtil;
+import bepicky.common.ErrorUtil;
+import bepicky.common.domain.response.ErrorResponse;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.domain.request.NewsNoteRequest;
 import bepicky.service.domain.request.NotifyReaderRequest;
 import bepicky.service.domain.request.SourcePageRequest;
-import bepicky.service.domain.response.ErrorResponse;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;

@@ -1,12 +1,13 @@
 package bepicky.service.service;
 
+import bepicky.service.entity.Language;
+import bepicky.service.repository.LanguageRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import bepicky.service.entity.Language;
-import bepicky.service.repository.LanguageRepository;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,8 +22,8 @@ public class LanguageService implements ILanguageService {
     private LanguageRepository repository;
 
     @Override
-    public List<Language> listAll(Pageable pageable) {
-        return repository.findAll(pageable).toList();
+    public Page<Language> listAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override

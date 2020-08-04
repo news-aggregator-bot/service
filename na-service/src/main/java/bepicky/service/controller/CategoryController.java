@@ -1,5 +1,10 @@
 package bepicky.service.controller;
 
+import bepicky.common.domain.response.ListCategoryResponse;
+import bepicky.common.domain.response.PickCategoryResponse;
+import bepicky.service.domain.request.ListCategoryRequest;
+import bepicky.service.domain.request.PickCategoryRequest;
+import bepicky.service.facade.CategoryFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,11 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import bepicky.service.domain.request.ListCategoryRequest;
-import bepicky.service.domain.request.PickCategoryRequest;
-import bepicky.service.domain.response.ListCategoryResponse;
-import bepicky.service.domain.response.PickCategoryResponse;
-import bepicky.service.facade.CategoryFacade;
 
 import java.util.Map;
 

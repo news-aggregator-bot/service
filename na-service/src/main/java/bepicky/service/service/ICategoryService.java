@@ -1,8 +1,9 @@
 package bepicky.service.service;
 
-import org.springframework.data.domain.Pageable;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,11 +17,11 @@ public interface ICategoryService {
 
     List<Category> findAll(Pageable pageable);
 
-    List<Category> findByParent(Category parent, Pageable pageable);
+    Page<Category> findByParent(Category parent, Pageable pageable);
 
     long countByParent(Category parent);
 
-    List<Category> findTopCategories(Pageable pageable);
+    Page<Category> findTopCategories(Pageable pageable);
 
     long countAll();
 

@@ -1,14 +1,15 @@
 package bepicky.service.service;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
 import bepicky.service.repository.CategoryLocalisationRepository;
 import bepicky.service.repository.CategoryRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.List;
@@ -43,7 +44,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public List<Category> findByParent(Category parent, Pageable pageable) {
+    public Page<Category> findByParent(Category parent, Pageable pageable) {
         return repository.findAllByParent(parent, pageable);
     }
 
@@ -53,7 +54,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public List<Category> findTopCategories(Pageable pageable) {
+    public Page<Category> findTopCategories(Pageable pageable) {
         return repository.findAllByParentIsNull(pageable);
     }
 

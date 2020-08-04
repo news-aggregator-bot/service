@@ -1,11 +1,11 @@
 package bepicky.service.domain.mapper;
 
-import org.springframework.stereotype.Component;
-import bepicky.service.domain.response.CategoryResponse;
+import bepicky.common.domain.response.CategoryResponse;
+import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
 import bepicky.service.entity.Language;
-import bepicky.service.exception.ResourceNotFoundException;
+import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
 

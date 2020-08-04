@@ -1,23 +1,24 @@
 package bepicky.service.facade;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Component;
-import bepicky.service.ErrorUtil;
+import bepicky.common.ErrorUtil;
+import bepicky.common.domain.response.CategoryResponse;
+import bepicky.common.domain.response.ListCategoryResponse;
+import bepicky.common.domain.response.PickCategoryResponse;
+import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.domain.mapper.CategoryResponseMapper;
 import bepicky.service.domain.request.ListCategoryRequest;
 import bepicky.service.domain.request.PickCategoryRequest;
-import bepicky.service.domain.response.CategoryResponse;
-import bepicky.service.domain.response.ListCategoryResponse;
-import bepicky.service.domain.response.PickCategoryResponse;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.Reader;
-import bepicky.service.exception.ResourceNotFoundException;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
 import bepicky.service.service.ISourcePageService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -45,32 +46,27 @@ public class CategoryFacade {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:category:reader {} not found", request.getChatId());
-            return ListCategoryResponse.error(ErrorUtil.readerNotFound());
+            return new ListCategoryResponse(ErrorUtil.readerNotFound());
         }
         PageRequest req = PageRequest.of(request.getPage() - 1, request.getSize());
-        return getListCategoryResponse(
-            reader,
-            categoryService.findTopCategories(req),
-            categoryService.countTopCategories()
-        );
+        return getListCategoryResponse(reader, categoryService.findTopCategories(req));
     }
 
     public ListCategoryResponse listSub(ListCategoryRequest request) {
         Category parent = categoryService.find(request.getParentId()).orElse(null);
         if (parent == null) {
             log.warn("list:subcategory:parent category {} not found", request.getParentId());
-            return ListCategoryResponse.error(ErrorUtil.categoryNotFound());
+            return new ListCategoryResponse(ErrorUtil.categoryNotFound());
         }
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:subcategory:reader {} not found", request.getChatId());
-            return ListCategoryResponse.error(ErrorUtil.readerNotFound());
+            return new ListCategoryResponse(ErrorUtil.readerNotFound());
         }
         PageRequest req = PageRequest.of(request.getPage() - 1, request.getSize());
         return getListCategoryResponse(
             reader,
-            categoryService.findByParent(parent, req),
-            categoryService.countByParent(parent)
+            categoryService.findByParent(parent, req)
         );
     }
 
@@ -78,35 +74,35 @@ public class CategoryFacade {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("pick:category:reader {} not found", request.getChatId());
-            return PickCategoryResponse.error(ErrorUtil.readerNotFound());
+            return new PickCategoryResponse(ErrorUtil.readerNotFound());
         }
         Category category = categoryService.find(request.getCategoryId()).orElse(null);
         if (category == null) {
             log.warn("pick:category:category {} not found", request.getCategoryId());
-            return PickCategoryResponse.error(ErrorUtil.categoryNotFound());
+            return new PickCategoryResponse(ErrorUtil.categoryNotFound());
         }
         reader.addSourcePages(sourcePageService.findByCategory(category));
         readerService.save(reader);
-        return PickCategoryResponse.builder()
-            .category(categoryResponseMapper.toFullResponse(category, reader.getPrimaryLanguage()))
-            .language(reader.getPrimaryLanguage().getLang())
-            .build();
+        return new PickCategoryResponse(
+            reader.getPrimaryLanguage().getLang(),
+            categoryResponseMapper.toFullResponse(category, reader.getPrimaryLanguage())
+        );
     }
 
-    private ListCategoryResponse getListCategoryResponse(Reader reader, List<Category> categories, long totalAmount) {
+    private ListCategoryResponse getListCategoryResponse(Reader reader, Page<Category> categoryPage) {
         try {
-            List<CategoryResponse> responses = categories
+            List<CategoryResponse> responses = categoryPage
                 .stream()
                 .map(c -> categoryResponseMapper.toFullResponse(c, reader.getPrimaryLanguage()))
                 .collect(Collectors.toList());
 
-            return ListCategoryResponse.builder()
-                .categories(responses)
-                .language(reader.getPrimaryLanguage().getLang())
-                .totalAmount(totalAmount)
-                .build();
+            return new ListCategoryResponse(
+                responses,
+                categoryPage.isLast(),
+                reader.getPrimaryLanguage().getLang()
+            );
         } catch (ResourceNotFoundException e) {
-            return ListCategoryResponse.error(ErrorUtil.languageNotFound());
+            return new ListCategoryResponse(ErrorUtil.languageNotFound());
         }
     }
 
