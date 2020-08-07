@@ -1,7 +1,7 @@
 package bepicky.service.controller;
 
+import bepicky.common.domain.request.ReaderRequest;
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.request.RegisterReaderRequest;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
@@ -30,7 +30,7 @@ public class ReaderController {
     private ILanguageService languageService;
 
     @PostMapping("/reader/register")
-    public Reader register(@Valid @RequestBody RegisterReaderRequest dto) {
+    public Reader register(@Valid @RequestBody ReaderRequest dto) {
         Language language = languageService.find(dto.getPrimaryLanguage())
             .orElseThrow(() -> new ResourceNotFoundException(dto.getPrimaryLanguage() + " language not found."));
         Platform platform = Platform.valueOf(dto.getPlatform());

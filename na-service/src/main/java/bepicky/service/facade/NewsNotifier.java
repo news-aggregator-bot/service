@@ -1,16 +1,18 @@
 package bepicky.service.facade;
 
 import bepicky.common.ErrorUtil;
+import bepicky.common.domain.dto.LanguageDto;
+import bepicky.common.domain.request.NewsNoteRequest;
+import bepicky.common.domain.request.NotifyReaderRequest;
+import bepicky.common.domain.request.SourcePageRequest;
 import bepicky.common.domain.response.ErrorResponse;
 import bepicky.service.client.NaBotClient;
-import bepicky.service.domain.request.NewsNoteRequest;
-import bepicky.service.domain.request.NotifyReaderRequest;
-import bepicky.service.domain.request.SourcePageRequest;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -30,6 +32,9 @@ public class NewsNotifier {
 
     @Autowired
     private IReaderService readerService;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
@@ -83,7 +88,7 @@ public class NewsNotifier {
         SourcePage srcPage = n.getSourcePage();
         sourcePageRequest.setUrl(srcPage.getUrl());
         sourcePageRequest.setName(srcPage.getName());
-        sourcePageRequest.setLanguage(srcPage.getLanguage().getLang());
+        sourcePageRequest.setLanguage(modelMapper.map(srcPage.getLanguage(), LanguageDto.class));
         return sourcePageRequest;
     }
 

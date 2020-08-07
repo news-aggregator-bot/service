@@ -1,9 +1,9 @@
 package bepicky.service.controller;
 
+import bepicky.common.domain.request.ListLanguageRequest;
+import bepicky.common.domain.request.PickLanguageRequest;
 import bepicky.common.domain.response.ListLanguageResponse;
 import bepicky.common.domain.response.PickLanguageResponse;
-import bepicky.service.domain.request.ListLanguageRequest;
-import bepicky.service.domain.request.PickLanguageRequest;
 import bepicky.service.facade.LanguageFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

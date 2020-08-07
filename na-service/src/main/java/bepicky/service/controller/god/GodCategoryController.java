@@ -1,7 +1,7 @@
 package bepicky.service.controller.god;
 
+import bepicky.common.domain.request.CategoryRequest;
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.request.CategoryRequest;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
 import bepicky.service.entity.Language;

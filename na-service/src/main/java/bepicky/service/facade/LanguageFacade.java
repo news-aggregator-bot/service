@@ -1,11 +1,11 @@
 package bepicky.service.facade;
 
 import bepicky.common.ErrorUtil;
+import bepicky.common.domain.request.ListLanguageRequest;
+import bepicky.common.domain.request.PickLanguageRequest;
 import bepicky.common.domain.response.LanguageResponse;
 import bepicky.common.domain.response.ListLanguageResponse;
 import bepicky.common.domain.response.PickLanguageResponse;
-import bepicky.service.domain.request.ListLanguageRequest;
-import bepicky.service.domain.request.PickLanguageRequest;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
@@ -43,7 +43,12 @@ public class LanguageFacade {
             .filter(l -> !reader.getLanguages().contains(l))
             .map(this::toResponse)
             .collect(Collectors.toList());
-        return new ListLanguageResponse(remainingLanguages, langPage.isLast(), reader.getPrimaryLanguage().getLang());
+        return new ListLanguageResponse(
+            remainingLanguages,
+            langPage.isFirst(),
+            langPage.isLast(),
+            reader.getPrimaryLanguage().getLang()
+        );
     }
 
     public PickLanguageResponse pick(PickLanguageRequest request) {

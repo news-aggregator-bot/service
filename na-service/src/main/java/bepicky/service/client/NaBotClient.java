@@ -1,11 +1,11 @@
 package bepicky.service.client;
 
+import bepicky.common.domain.request.NotifyReaderRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import bepicky.service.domain.request.NotifyReaderRequest;
 
-@FeignClient(name = "na-bot", configuration = FeignClientConfiguration.class)
+@FeignClient(name = "na-client", configuration = FeignClientConfiguration.class)
 public interface NaBotClient {
 
     @PutMapping("/notify-reader")

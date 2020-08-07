@@ -1,4 +1,4 @@
-package bepicky.service.domain.request;
+package bepicky.common.domain.request;
 
 import lombok.Data;
 import lombok.ToString;

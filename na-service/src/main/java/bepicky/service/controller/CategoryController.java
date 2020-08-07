@@ -1,9 +1,9 @@
 package bepicky.service.controller;
 
+import bepicky.common.domain.request.ListCategoryRequest;
+import bepicky.common.domain.request.PickCategoryRequest;
 import bepicky.common.domain.response.ListCategoryResponse;
 import bepicky.common.domain.response.PickCategoryResponse;
-import bepicky.service.domain.request.ListCategoryRequest;
-import bepicky.service.domain.request.PickCategoryRequest;
 import bepicky.service.facade.CategoryFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

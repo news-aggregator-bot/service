@@ -1,13 +1,13 @@
 package bepicky.service.facade;
 
 import bepicky.common.ErrorUtil;
+import bepicky.common.domain.request.ListCategoryRequest;
+import bepicky.common.domain.request.PickCategoryRequest;
 import bepicky.common.domain.response.CategoryResponse;
 import bepicky.common.domain.response.ListCategoryResponse;
 import bepicky.common.domain.response.PickCategoryResponse;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.domain.mapper.CategoryResponseMapper;
-import bepicky.service.domain.request.ListCategoryRequest;
-import bepicky.service.domain.request.PickCategoryRequest;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ICategoryService;
@@ -98,6 +98,7 @@ public class CategoryFacade {
 
             return new ListCategoryResponse(
                 responses,
+                categoryPage.isFirst(),
                 categoryPage.isLast(),
                 reader.getPrimaryLanguage().getLang()
             );
