@@ -1,5 +1,6 @@
 package bepicky.service.controller;
 
+import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Language;
@@ -7,17 +8,21 @@ import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
+import com.google.common.collect.Sets;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
 @RestController
+@RequestMapping("/reader")
 public class ReaderController {
 
     @Autowired
@@ -29,24 +34,31 @@ public class ReaderController {
     @Autowired
     private ILanguageService languageService;
 
-    @PostMapping("/reader/register")
-    public Reader register(@Valid @RequestBody ReaderRequest dto) {
+    @PostMapping("/register")
+    public ReaderDto register(@Valid @RequestBody ReaderRequest dto) {
         Language language = languageService.find(dto.getPrimaryLanguage())
             .orElseThrow(() -> new ResourceNotFoundException(dto.getPrimaryLanguage() + " language not found."));
         Platform platform = Platform.valueOf(dto.getPlatform());
         Reader reader = modelMapper.map(dto, Reader.class);
         reader.setPlatform(platform);
         reader.setPrimaryLanguage(language);
-        return readerService.save(reader);
+        reader.setLanguages(Sets.newHashSet(language));
+        reader.setStatus(Reader.Status.DISABLED);
+        return modelMapper.map(readerService.save(reader), ReaderDto.class);
     }
 
-    @PutMapping("/reader/{chatId}/enable")
+    @PutMapping("/{chatId}/enable")
     public boolean enable(@PathVariable long chatId) {
         return readerService.enable(chatId);
     }
 
-    @PutMapping("/reader/{chatId}/disable")
+    @PutMapping("/{chatId}/disable")
     public boolean disable(@PathVariable long chatId) {
         return readerService.disable(chatId);
+    }
+
+    @GetMapping("/{chatId}")
+    public ReaderDto find(@PathVariable long chatId) {
+        return readerService.find(chatId).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
     }
 }

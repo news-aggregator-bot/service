@@ -1,4 +1,4 @@
-package bepicky.common.domain.request;
+package bepicky.service.domain.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

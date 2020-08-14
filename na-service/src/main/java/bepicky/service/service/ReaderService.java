@@ -19,7 +19,14 @@ public class ReaderService implements IReaderService {
 
     @Override
     public Reader save(Reader reader) {
-        Reader repoReader = find(reader.getChatId()).orElse(reader);
+        Reader repoReader = find(reader.getChatId()).map(r -> {
+            r.setFirstName(reader.getFirstName());
+            r.setLastName(reader.getLastName());
+            r.setPrimaryLanguage(reader.getPrimaryLanguage());
+            r.setUsername(reader.getUsername());
+            r.setLanguages(reader.getLanguages());
+            return r;
+        }).orElse(reader);
         log.info("reader:save:{}", reader);
         return readerRepository.save(repoReader);
     }

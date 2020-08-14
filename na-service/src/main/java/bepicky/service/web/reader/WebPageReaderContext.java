@@ -24,7 +24,7 @@ public class WebPageReaderContext {
     public Document read(String sourceName, String url) {
         WebPageReader webPageReader = get(sourceName);
         try {
-            log.info("webpagereader:read:{}:{}", url, webPageReader.getClass().getSimpleName());
+            log.info("webpagereader:read:[{}]:{}", url, webPageReader.getClass().getSimpleName());
             return webPageReader.read(url);
         } catch (RuntimeException e) {
             log.warn("read:source:failed:{}:{}:{}", sourceName, url, webPageReader.getClass().getSimpleName());

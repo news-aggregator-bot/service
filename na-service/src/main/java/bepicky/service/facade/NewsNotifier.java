@@ -1,15 +1,12 @@
 package bepicky.service.facade;
 
 import bepicky.common.ErrorUtil;
-import bepicky.common.domain.dto.LanguageDto;
 import bepicky.common.domain.request.NewsNoteRequest;
 import bepicky.common.domain.request.NotifyReaderRequest;
 import bepicky.common.domain.request.SourcePageRequest;
 import bepicky.common.domain.response.ErrorResponse;
 import bepicky.service.client.NaBotClient;
-import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
-import bepicky.service.entity.SourcePage;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -53,21 +50,18 @@ public class NewsNotifier {
 
     private void notify(Reader r) {
         List<NewsNoteRequest> freshNotes = r.getNotifyQueue().stream()
-            .map(n -> {
-                SourcePageRequest sourcePageRequest = buildSourcePageRequest(n);
-                return NewsNoteRequest.builder()
-                    .url(n.getUrl())
-                    .description(n.getDescription())
-                    .author(n.getAuthor())
-                    .title(n.getTitle())
-                    .sourcePage(sourcePageRequest)
-                    .build();
-            }).collect(Collectors.toList());
-        NotifyReaderRequest notifyRequest = NotifyReaderRequest.builder()
-            .chatId(r.getChatId())
-            .lang(r.getPrimaryLanguage().getLang())
-            .notes(freshNotes)
-            .build();
+            .map(n -> new NewsNoteRequest(
+                n.getUrl(),
+                n.getDescription(),
+                n.getAuthor(),
+                n.getTitle(),
+                modelMapper.map(n.getSourcePage(), SourcePageRequest.class)
+            )).collect(Collectors.toList());
+        NotifyReaderRequest notifyRequest = new NotifyReaderRequest(
+            r.getChatId(),
+            r.getPrimaryLanguage().getLang(),
+            freshNotes
+        );
 
         CompletableFuture.runAsync(() -> botClient.notifyReader(notifyRequest))
             .whenComplete((u, e) -> {
@@ -81,15 +75,6 @@ public class NewsNotifier {
                     }
                 }
             });
-    }
-
-    private SourcePageRequest buildSourcePageRequest(NewsNote n) {
-        SourcePageRequest sourcePageRequest = new SourcePageRequest();
-        SourcePage srcPage = n.getSourcePage();
-        sourcePageRequest.setUrl(srcPage.getUrl());
-        sourcePageRequest.setName(srcPage.getName());
-        sourcePageRequest.setLanguage(modelMapper.map(srcPage.getLanguage(), LanguageDto.class));
-        return sourcePageRequest;
     }
 
 }

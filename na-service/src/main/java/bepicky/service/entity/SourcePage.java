@@ -53,15 +53,6 @@ public class SourcePage extends DatedEntity {
     @ToString.Exclude
     private List<Category> categories;
 
-    @ManyToMany
-    @JoinTable(
-        name = "reader_source_page",
-        joinColumns = {@JoinColumn(name = "id_source_page")},
-        inverseJoinColumns = {@JoinColumn(name = "id_reader")}
-    )
-    @ToString.Exclude
-    private List<Reader> readers;
-
     @OneToMany(mappedBy = "sourcePage", cascade = ALL, fetch = FetchType.EAGER)
     @JsonIgnore
     @ToString.Exclude

@@ -1,10 +1,10 @@
 package bepicky.service.controller;
 
-import bepicky.common.domain.request.ListLanguageRequest;
-import bepicky.common.domain.request.PickLanguageRequest;
-import bepicky.common.domain.response.ListLanguageResponse;
-import bepicky.common.domain.response.PickLanguageResponse;
-import bepicky.service.facade.LanguageFacade;
+import bepicky.common.domain.request.LanguageRequest;
+import bepicky.common.domain.response.LanguageListResponse;
+import bepicky.common.domain.response.LanguageResponse;
+import bepicky.service.domain.request.ListLanguageRequest;
+import bepicky.service.facade.functional.ILanguageFunctionalFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,19 +19,24 @@ import java.util.Map;
 public class LanguageController {
 
     @Autowired
-    private LanguageFacade languageFacade;
+    private ILanguageFunctionalFacade languageFacade;
 
     @Autowired
     private ObjectMapper objectMapper;
 
     @GetMapping("/language/list")
-    public ListLanguageResponse findAll(@RequestParam Map<String, Object> params) {
+    public LanguageListResponse findAll(@RequestParam Map<String, Object> params) {
         ListLanguageRequest request = objectMapper.convertValue(params, ListLanguageRequest.class);
         return languageFacade.listAll(request);
     }
 
     @PostMapping("/language/pick")
-    public PickLanguageResponse pick(@RequestBody PickLanguageRequest request) {
+    public LanguageResponse pick(@RequestBody LanguageRequest request) {
         return languageFacade.pick(request);
+    }
+
+    @PostMapping("/language/remove")
+    public LanguageResponse remove(@RequestBody LanguageRequest request) {
+        return languageFacade.remove(request);
     }
 }

@@ -19,13 +19,7 @@ public interface ICategoryService {
 
     Page<Category> findByParent(Category parent, Pageable pageable);
 
-    long countByParent(Category parent);
-
     Page<Category> findTopCategories(Pageable pageable);
-
-    long countAll();
-
-    long countTopCategories();
 
     Optional<Category> find(Long id);
 

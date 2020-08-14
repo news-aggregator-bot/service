@@ -49,23 +49,8 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public long countByParent(Category parent) {
-        return repository.countByParent(parent);
-    }
-
-    @Override
     public Page<Category> findTopCategories(Pageable pageable) {
         return repository.findAllByParentIsNull(pageable);
-    }
-
-    @Override
-    public long countAll() {
-        return repository.count();
-    }
-
-    @Override
-    public long countTopCategories() {
-        return repository.countByParentIsNull();
     }
 
     @Override

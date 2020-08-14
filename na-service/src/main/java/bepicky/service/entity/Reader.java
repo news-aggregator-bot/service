@@ -18,7 +18,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Data
@@ -58,14 +57,14 @@ public class Reader extends DatedEntity {
 
     @ManyToMany
     @JoinTable(
-        name = "reader_source_page",
+        name = "reader_category",
         joinColumns = {@JoinColumn(name = "id_reader")},
-        inverseJoinColumns = {@JoinColumn(name = "id_source_page")}
+        inverseJoinColumns = {@JoinColumn(name = "id_category")}
     )
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @JsonIgnore
-    private List<SourcePage> sourcePages;
+    private Set<Category> categories;
 
     @ManyToMany
     @JoinTable(
@@ -86,11 +85,18 @@ public class Reader extends DatedEntity {
     @EqualsAndHashCode.Exclude
     private Set<NewsNote> notifyQueue;
 
-    public void addSourcePages(List<SourcePage> sourcePages) {
-        if (this.sourcePages == null || this.sourcePages.isEmpty()) {
-            this.sourcePages = sourcePages;
-        } else {
-            this.sourcePages.addAll(sourcePages);
+    public void addCategory(Category category) {
+        if (this.categories == null) {
+            this.categories = new HashSet<>();
+        }
+        categories.add(category);
+        category.getSubcategories().forEach(this::addCategory);
+    }
+
+    public void removeCategory(Category category) {
+        if (this.categories != null) {
+            categories.remove(category);
+            category.getSubcategories().forEach(this::removeCategory);
         }
     }
 
@@ -99,6 +105,19 @@ public class Reader extends DatedEntity {
             notifyQueue = new HashSet<>(newsNote.size());
         }
         notifyQueue.addAll(newsNote);
+    }
+
+    public void addLanguage(Language language) {
+        if (languages == null) {
+            languages = new HashSet<>();
+        }
+        languages.add(language);
+    }
+
+    public void removeLanguage(Language language) {
+        if (languages != null) {
+            languages.remove(language);
+        }
     }
 
     public enum Status {

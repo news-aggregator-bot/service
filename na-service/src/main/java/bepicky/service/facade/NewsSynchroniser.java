@@ -72,8 +72,6 @@ public class NewsSynchroniser {
                     freshNotes.getNewsNotes().stream().map(NewsNote::getTitle).collect(Collectors.joining(","))
                 );
 
-                sourcePage.getReaders().forEach(r -> r.addQueueNewsNote(freshNotes.getNewsNotes()));
-                readerService.save(sourcePage.getReaders());
                 log.info("synchronisation:ended:{}", sourcePage.getUrl());
             }
         });
