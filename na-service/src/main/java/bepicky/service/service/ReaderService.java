@@ -24,7 +24,6 @@ public class ReaderService implements IReaderService {
             r.setLastName(reader.getLastName());
             r.setPrimaryLanguage(reader.getPrimaryLanguage());
             r.setUsername(reader.getUsername());
-            r.setLanguages(reader.getLanguages());
             return r;
         }).orElse(reader);
         log.info("reader:save:{}", reader);
@@ -52,20 +51,20 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public boolean enable(long chatId) {
+    public Reader enable(long chatId) {
         return find(chatId).map(r -> {
             r.setStatus(Reader.Status.ENABLED);
             log.info("reader:enable:{}", r);
             return readerRepository.save(r);
-        }).isPresent();
+        }).orElse(null);
     }
 
     @Override
-    public boolean disable(long chatId) {
+    public Reader disable(long chatId) {
         return find(chatId).map(r -> {
             r.setStatus(Reader.Status.DISABLED);
             log.info("reader:disable:{}", r);
             return readerRepository.save(r);
-        }).isPresent();
+        }).orElse(null);
     }
 }

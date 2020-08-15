@@ -18,7 +18,7 @@ public interface IReaderService {
 
     List<Reader> findAllEnabled();
 
-    boolean enable(long chatId);
+    Reader enable(long chatId);
 
-    boolean disable(long chatId);
+    Reader disable(long chatId);
 }

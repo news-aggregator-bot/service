@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class ListLanguageRequest {
+public class ListRequest {
 
     @JsonProperty("chat_id")
     private long chatId;

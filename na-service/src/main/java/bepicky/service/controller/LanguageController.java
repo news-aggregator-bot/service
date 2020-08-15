@@ -3,7 +3,7 @@ package bepicky.service.controller;
 import bepicky.common.domain.request.LanguageRequest;
 import bepicky.common.domain.response.LanguageListResponse;
 import bepicky.common.domain.response.LanguageResponse;
-import bepicky.service.domain.request.ListLanguageRequest;
+import bepicky.service.domain.request.ListRequest;
 import bepicky.service.facade.functional.ILanguageFunctionalFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class LanguageController {
 
     @GetMapping("/language/list")
     public LanguageListResponse findAll(@RequestParam Map<String, Object> params) {
-        ListLanguageRequest request = objectMapper.convertValue(params, ListLanguageRequest.class);
+        ListRequest request = objectMapper.convertValue(params, ListRequest.class);
         return languageFacade.listAll(request);
     }
 

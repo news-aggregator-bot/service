@@ -2,19 +2,12 @@ package bepicky.service.domain.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class ListCategoryRequest {
-
-    @JsonProperty("chat_id")
-    private long chatId;
+@EqualsAndHashCode(callSuper = true)
+public class ListCategoryRequest extends ListRequest {
 
     @JsonProperty("parent_id")
     private long parentId;
-
-    @JsonProperty("page")
-    private int page;
-
-    @JsonProperty("size")
-    private int size;
 }

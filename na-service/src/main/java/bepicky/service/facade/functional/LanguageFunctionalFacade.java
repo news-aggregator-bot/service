@@ -6,7 +6,7 @@ import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.LanguageRequest;
 import bepicky.common.domain.response.LanguageListResponse;
 import bepicky.common.domain.response.LanguageResponse;
-import bepicky.service.domain.request.ListLanguageRequest;
+import bepicky.service.domain.request.ListRequest;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
@@ -36,7 +36,7 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
     private ModelMapper modelMapper;
 
     @Override
-    public LanguageListResponse listAll(ListLanguageRequest request) {
+    public LanguageListResponse listAll(ListRequest request) {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:language:reader {} not found", request.getChatId());

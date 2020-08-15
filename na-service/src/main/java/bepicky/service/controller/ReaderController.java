@@ -47,14 +47,14 @@ public class ReaderController {
         return modelMapper.map(readerService.save(reader), ReaderDto.class);
     }
 
-    @PutMapping("/{chatId}/enable")
-    public boolean enable(@PathVariable long chatId) {
-        return readerService.enable(chatId);
+    @PutMapping("/enable/{chatId}")
+    public ReaderDto enable(@PathVariable long chatId) {
+        return modelMapper.map(readerService.enable(chatId), ReaderDto.class);
     }
 
-    @PutMapping("/{chatId}/disable")
-    public boolean disable(@PathVariable long chatId) {
-        return readerService.disable(chatId);
+    @PutMapping("/disable/{chatId}")
+    public ReaderDto disable(@PathVariable long chatId) {
+        return modelMapper.map(readerService.disable(chatId), ReaderDto.class);
     }
 
     @GetMapping("/{chatId}")

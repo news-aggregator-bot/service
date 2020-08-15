@@ -4,12 +4,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -42,4 +46,14 @@ public class Category extends IdEntity {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<CategoryLocalisation> localisations;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "source_page_category",
+        joinColumns = {@JoinColumn(name = "id_category")},
+        inverseJoinColumns = {@JoinColumn(name = "id_source_page")}
+    )
+    @Fetch(value = FetchMode.SUBSELECT)
+    @ToString.Exclude
+    private List<SourcePage> sourcePages;
 }
