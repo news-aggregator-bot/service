@@ -16,19 +16,6 @@
 
     <name>na-service</name>
 
-    <distributionManagement>
-        <repository>
-            <id>na</id>
-            <name>news-aggregator-bot</name>
-            <url>https://maven.pkg.github.com/news-aggregator-bot/artifactory</url>
-        </repository>
-        <snapshotRepository>
-            <id>na</id>
-            <name>news-aggregator-bot</name>
-            <url>https://maven.pkg.github.com/news-aggregator-bot/artifactory</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <modules>
         <module>na-service</module>
     </modules>

@@ -21,8 +21,7 @@ jobs:
       - restore_cache:
           keys:
             - na-service-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline # gets the project dependencies
+      - run: mvn -DaltDeploymentRepository=na::default::https://maven.pkg.github.com/news-aggregator-bot/artifactory dependency:go-offline # gets the project dependencies
 
       - save_cache: # saves the project dependencies
           paths:
