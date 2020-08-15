@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "na-client", configuration = FeignClientConfiguration.class)
+@FeignClient(name = "bepicky-client-bot", configuration = FeignClientConfiguration.class)
 public interface NaBotClient {
 
     @PutMapping("/notify-reader")

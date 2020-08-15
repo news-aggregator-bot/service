@@ -19,6 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -56,4 +57,15 @@ public class Category extends IdEntity {
     @Fetch(value = FetchMode.SUBSELECT)
     @ToString.Exclude
     private List<SourcePage> sourcePages;
+
+    @ManyToMany
+    @JoinTable(
+        name = "reader_category",
+        joinColumns = {@JoinColumn(name = "id_category")},
+        inverseJoinColumns = {@JoinColumn(name = "id_reader")}
+    )
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @JsonIgnore
+    private Set<Reader> readers;
 }

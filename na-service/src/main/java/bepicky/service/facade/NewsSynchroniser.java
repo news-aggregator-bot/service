@@ -1,6 +1,7 @@
 package bepicky.service.facade;
 
 import bepicky.service.domain.NewsSyncResult;
+import bepicky.service.entity.Category;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
@@ -18,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -72,7 +74,15 @@ public class NewsSynchroniser {
                     freshNotes.getNewsNotes().stream().map(NewsNote::getTitle).collect(Collectors.joining(","))
                 );
 
-                log.info("synchronisation:ended:{}", sourcePage.getUrl());
+                sourcePage.getCategories().stream().map(Category::getReaders)
+                    .flatMap(Set::stream)
+                    .forEach(r -> {
+                        log.info("synchronisation:reader:{}:queue:add", r.getChatId());
+                        r.addQueueNewsNote(freshNotes.getNewsNotes());
+                        readerService.save(r);
+                    });
+
+                log.info("synchronisation:finished:{}", sourcePage.getUrl());
             }
         });
     }
