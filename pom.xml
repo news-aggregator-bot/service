@@ -16,6 +16,21 @@
 
     <name>na-service</name>
 
+    <repositories>
+        <repository>
+            <id>na</id>
+            <name>bepicky-repo</name>
+            <url>https://maven.pkg.github.com/news-aggregator-bot/artifactory</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <modules>
         <module>na-service</module>
     </modules>
