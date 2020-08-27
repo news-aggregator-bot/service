@@ -46,6 +46,8 @@ public class NewsNotifier {
                 .filter(r -> !r.getNotifyQueue().isEmpty())
                 .forEach(this::notify);
             log.info("notify:reader:complete");
+        } else {
+            log.warn("notify:disabled");
         }
     }
 

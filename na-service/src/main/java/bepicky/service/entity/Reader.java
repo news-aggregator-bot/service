@@ -83,6 +83,7 @@ public class Reader extends DatedEntity {
     )
     @JsonIgnore
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private Set<NewsNote> notifyQueue;
 
     public void addCategory(Category category) {
