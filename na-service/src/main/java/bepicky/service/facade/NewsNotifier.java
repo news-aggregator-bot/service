@@ -1,9 +1,7 @@
 package bepicky.service.facade;
 
-import bepicky.common.ErrorUtil;
 import bepicky.common.domain.request.NewsNoteRequest;
 import bepicky.common.domain.request.NotifyReaderRequest;
-import bepicky.common.domain.response.ErrorResponse;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.IReaderService;
@@ -41,11 +39,9 @@ public class NewsNotifier {
     @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
     public void sync() {
         if (notifyEnabled) {
-            log.info("notify:reader:start");
             readerService.findAllEnabled().stream()
                 .filter(r -> !r.getNotifyQueue().isEmpty())
                 .forEach(this::notify);
-            log.info("notify:reader:complete");
         } else {
             log.warn("notify:disabled");
         }
@@ -66,11 +62,7 @@ public class NewsNotifier {
                 if (e == null) {
                     log.info("notify:reader:success {}", r.getChatId());
                 } else {
-                    ErrorResponse errorResponse = ErrorUtil.parseError(e.getMessage());
                     log.error("notify:reader:fail {} {}", r.getChatId(), e.getMessage());
-                    if (errorResponse.isReaderInactive()) {
-                        readerService.disable(r.getChatId());
-                    }
                 }
             });
     }

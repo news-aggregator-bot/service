@@ -2,7 +2,6 @@ package bepicky.service.facade;
 
 import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Category;
-import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsService;
@@ -22,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -69,12 +67,7 @@ public class NewsSynchroniser {
             SourcePage sourcePage =
                 sourcePageService.findFirstBySource(source, singleElementRequest).orElse(null);
             if (sourcePage != null) {
-                log.info("synchronisation:started:{}", sourcePage.getUrl());
-
                 NewsSyncResult freshNotes = newsService.sync(sourcePage);
-                log.info("synchronisation:collected:{}:{}", sourcePage.getUrl(),
-                    freshNotes.getNewsNotes().stream().map(NewsNote::getTitle).collect(Collectors.joining(","))
-                );
 
                 sourcePage.getCategories().stream().map(Category::getReaders)
                     .flatMap(Set::stream)
