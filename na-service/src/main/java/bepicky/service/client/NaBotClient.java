@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "bepicky-client-bot", url = "na-client-bot:8079", configuration = FeignClientConfiguration.class)
+@FeignClient(name = "bepicky-client-bot", configuration = FeignClientConfiguration.class)
 public interface NaBotClient {
 
     @PutMapping("/notify-reader")
