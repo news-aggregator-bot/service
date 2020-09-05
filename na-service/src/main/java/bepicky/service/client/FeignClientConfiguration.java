@@ -5,10 +5,12 @@ import feign.Request;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.concurrent.TimeUnit;
+
 @Configuration
 public class FeignClientConfiguration {
 
-    private static final int TIMEOUT = 5000;
+    private static final int TIMEOUT = 30000;
 
     @Bean
     public Logger.Level feignLogger() {
@@ -17,6 +19,6 @@ public class FeignClientConfiguration {
 
     @Bean
     public Request.Options options() {
-        return new Request.Options(TIMEOUT, TIMEOUT);
+        return new Request.Options(TIMEOUT, TimeUnit.MILLISECONDS, TIMEOUT, TimeUnit.MILLISECONDS, true);
     }
 }
