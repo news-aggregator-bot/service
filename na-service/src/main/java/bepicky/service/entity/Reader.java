@@ -108,6 +108,10 @@ public class Reader extends DatedEntity {
         notifyQueue.addAll(newsNote);
     }
 
+    public void removeQueueNewsNote(Set<NewsNote> newsNote) {
+        notifyQueue.removeAll(newsNote);
+    }
+
     public void addLanguage(Language language) {
         if (languages == null) {
             languages = new HashSet<>();
