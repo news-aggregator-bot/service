@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Component
@@ -25,7 +24,7 @@ import java.util.stream.Collectors;
 @RefreshScope
 public class NewsNotifier {
 
-    private static final int NOTES_LIMIT = 3;
+    private static final int NOTES_LIMIT = 1;
 
     @Autowired
     private NaBotClient botClient;
@@ -43,7 +42,7 @@ public class NewsNotifier {
     @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
     public void sync() {
         if (notifyEnabled) {
-            readerService.findAllEnabled().stream()
+            readerService.findAllEnabled().parallelStream()
                 .filter(r -> r.getNotifyQueue().size() >= NOTES_LIMIT)
                 .forEach(this::notify);
         } else {
@@ -65,17 +64,15 @@ public class NewsNotifier {
             notesRequests
         );
 
-        CompletableFuture.runAsync(() -> botClient.notifyReader(notifyRequest))
-            .whenComplete((u, e) -> {
-                if (e == null) {
-                    log.info("notify:reader:success {}", r.getChatId());
-                    r.removeQueueNewsNote(freshNotes);
-                    readerService.save(r);
-                    log.info("notify:reader:{}:notes:removed", r.getChatId());
-                } else {
-                    log.error("notify:reader:fail {} {}", r.getChatId(), e.getMessage());
-                }
-            });
+        try {
+            botClient.notifyReader(notifyRequest);
+            log.info("notify:reader:success {}", r.getChatId());
+            r.removeQueueNewsNote(freshNotes);
+            readerService.save(r);
+            log.info("notify:reader:{}:notes:removed", r.getChatId());
+        } catch (Exception e) {
+            log.error("notify:reader:fail {} {}", r.getChatId(), e.getMessage());
+        }
     }
 
 }
