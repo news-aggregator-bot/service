@@ -1,5 +1,11 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.domain.dto.ContentBlockDto;
+import bepicky.service.domain.dto.ContentTagDto;
+import bepicky.service.domain.dto.SourceDto;
+import bepicky.service.domain.dto.SourcePageDto;
+import bepicky.service.entity.ContentTagMatchStrategy;
+import bepicky.service.facade.IngestionSourceFacade;
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -10,12 +16,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import bepicky.service.domain.dto.ContentBlockDto;
-import bepicky.service.domain.dto.ContentTagDto;
-import bepicky.service.domain.dto.SourceDto;
-import bepicky.service.domain.dto.SourcePageDto;
-import bepicky.service.entity.ContentTagMatchStrategy;
-import bepicky.service.facade.IngestionSourceFacade;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import static bepicky.service.entity.ContentTagType.AUTHOR;
-import static bepicky.service.entity.ContentTagType.DESCRIPTION;
 import static bepicky.service.entity.ContentTagType.LINK;
 import static bepicky.service.entity.ContentTagType.MAIN;
 import static bepicky.service.entity.ContentTagType.TITLE;
@@ -50,8 +49,7 @@ public class SourceIngestionService implements IngestionService {
             .put(4, () -> new ContentTagDto(MAIN))
             .put(5, () -> new ContentTagDto(TITLE))
             .put(6, () -> new ContentTagDto(LINK))
-            .put(7, () -> new ContentTagDto(DESCRIPTION))
-            .put(8, () -> new ContentTagDto(AUTHOR))
+            .put(7, () -> new ContentTagDto(AUTHOR))
             .build();
 
     private final Map<Integer, IngestionConsumer> fieldMapping =
@@ -64,7 +62,6 @@ public class SourceIngestionService implements IngestionService {
             .put(5, ingestionConsumer)
             .put(6, ingestionConsumer)
             .put(7, ingestionConsumer)
-            .put(8, ingestionConsumer)
             .build();
 
     @Autowired

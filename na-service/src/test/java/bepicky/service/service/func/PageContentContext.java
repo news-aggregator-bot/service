@@ -23,8 +23,10 @@ public class PageContentContext {
         for (File sourceDir : pageDirFilePath.listFiles()) {
             ImmutableMap.Builder<String, Path> p = ImmutableMap.builder();
             File[] pages = sourceDir.listFiles();
-            for (File page : pages) {
-                p.put(FilenameUtils.getBaseName(page.getName()), page.toPath());
+            if (pages != null) {
+                for (File page : pages) {
+                    p.put(FilenameUtils.getBaseName(page.getName()), page.toPath());
+                }
             }
             s.put(sourceDir.getName(), p.build());
         }

@@ -1,7 +1,7 @@
 package bepicky.service.facade;
 
 import bepicky.common.domain.request.NewsNoteRequest;
-import bepicky.common.domain.request.NotifyReaderRequest;
+import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
@@ -58,14 +58,14 @@ public class NewsNotifier {
             .stream()
             .map(n -> modelMapper.map(n, NewsNoteRequest.class))
             .collect(Collectors.toList());
-        NotifyReaderRequest notifyRequest = new NotifyReaderRequest(
+        NotifyNewsRequest notifyRequest = new NotifyNewsRequest(
             r.getChatId(),
             r.getPrimaryLanguage().getLang(),
             notesRequests
         );
 
         try {
-            botClient.notifyReader(notifyRequest);
+            botClient.notifyNews(notifyRequest);
             log.info("notify:reader:success {}", r.getChatId());
             r.removeQueueNewsNote(freshNotes);
             readerService.save(r);

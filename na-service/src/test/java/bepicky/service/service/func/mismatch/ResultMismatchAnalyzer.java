@@ -1,7 +1,7 @@
 package bepicky.service.service.func.mismatch;
 
-import com.google.common.collect.ImmutableList;
 import bepicky.service.entity.NewsNote;
+import com.google.common.collect.ImmutableList;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -19,7 +19,6 @@ public class ResultMismatchAnalyzer {
         ImmutableList.<ValueAnalyzer>builder()
             .add(new TitleValueAnalyser())
             .add(new UrlValueAnalyser())
-            .add(new DescValueAnalyser())
             .add(new AuthorValueAnalyser())
             .build();
 
@@ -43,9 +42,9 @@ public class ResultMismatchAnalyzer {
         }
 
         Map<String, NewsNote> expectedMap = expected.stream()
-            .collect(Collectors.toMap(n -> n.getTitle(), Function.identity()));
+            .collect(Collectors.toMap(NewsNote::getUrl, Function.identity()));
         Map<String, NewsNote> actualMap = actual.stream()
-            .collect(Collectors.toMap(n -> n.getTitle(), Function.identity()));
+            .collect(Collectors.toMap(NewsNote::getUrl, Function.identity()));
 
         return expectedMap.entrySet()
             .stream()

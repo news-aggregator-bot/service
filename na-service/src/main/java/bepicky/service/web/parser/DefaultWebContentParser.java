@@ -48,7 +48,6 @@ public class DefaultWebContentParser implements WebContentParser {
         ContentTag mainTag = block.findByType(ContentTagType.MAIN);
         ContentTag titleTag = block.findByType(ContentTagType.TITLE);
         ContentTag linkTag = block.findByType(ContentTagType.LINK);
-        ContentTag descriptionTag = block.findByType(ContentTagType.DESCRIPTION);
         ContentTag authorTag = block.findByType(ContentTagType.AUTHOR);
 
         if (mainTag != null) {
@@ -74,8 +73,7 @@ public class DefaultWebContentParser implements WebContentParser {
                     dataBuilder.link(getHref(page.getUrl(), linkEl));
                 }
 
-                dataBuilder.description(getDescription(descriptionTag, wrapper))
-                    .author(getAuthor(authorTag, wrapper));
+                dataBuilder.author(getAuthor(authorTag, wrapper));
 
                 datas.add(dataBuilder.build());
             }
@@ -104,13 +102,6 @@ public class DefaultWebContentParser implements WebContentParser {
         Evaluator.Tag linkTag = new Evaluator.Tag("a");
         Element link = titleEl.selectFirst(linkTag);
         return link == null ? wrapper.selectFirst(linkTag) : link;
-    }
-
-    private String getDescription(ContentTag contentTag, Element wrapper) {
-        if (contentTag != null) {
-            return wrapper.selectFirst(evaluatorFactory.get(contentTag)).text();
-        }
-        return null;
     }
 
     private String getAuthor(ContentTag authorTag, Element wrapper) {

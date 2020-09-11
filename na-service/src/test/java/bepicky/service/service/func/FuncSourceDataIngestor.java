@@ -1,9 +1,9 @@
 package bepicky.service.service.func;
 
-import lombok.Builder;
 import bepicky.service.data.ingestor.service.CategoryIngestionService;
 import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
+import lombok.Builder;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,10 +21,14 @@ public class FuncSourceDataIngestor {
     private boolean languagesIngested;
 
     public void ingestSources() {
+        ingestSources("Sources");
+    }
+
+    public void ingestSources(String sourceName) {
         if (!categoriesIngested) {
             ingestCategories();
         }
-        sourceIS.ingest(openStream("Sources.xlsx"));
+        sourceIS.ingest(openStream(sourceName + ".xlsx"));
     }
 
     public void ingestCategories() {

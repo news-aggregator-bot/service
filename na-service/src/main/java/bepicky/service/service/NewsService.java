@@ -70,7 +70,6 @@ public class NewsService implements INewsService {
         NewsNote note = new NewsNote();
         note.setTitle(data.getTitle());
         note.setUrl(data.getLink());
-        note.setDescription(data.getDescription());
         note.setAuthor(data.getAuthor());
         note.setSourcePage(page);
         return note;

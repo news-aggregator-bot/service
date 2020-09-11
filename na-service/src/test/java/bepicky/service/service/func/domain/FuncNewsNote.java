@@ -7,6 +7,5 @@ public class FuncNewsNote {
 
     private String title;
     private String url;
-    private String description;
     private String author;
 }
