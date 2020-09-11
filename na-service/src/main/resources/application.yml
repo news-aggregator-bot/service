@@ -32,3 +32,6 @@ management:
     web:
       exposure:
         include: '*'
+eureka:
+  instance:
+    hostName: bepicky-service
