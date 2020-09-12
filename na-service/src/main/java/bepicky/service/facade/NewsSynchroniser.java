@@ -68,9 +68,9 @@ public class NewsSynchroniser {
                 sourcePageService.findFirstBySource(source, singleElementRequest).orElse(null);
             if (sourcePage != null) {
                 NewsSyncResult freshNotes = newsService.sync(sourcePage);
-
                 sourcePage.getCategories().stream().map(Category::getReaders)
                     .flatMap(Set::stream)
+                    .filter(r -> r.getLanguages().contains(sourcePage.getLanguage()))
                     .forEach(r -> {
                         log.info("synchronisation:reader:{}:queue:add", r.getChatId());
                         r.addQueueNewsNote(freshNotes.getNewsNotes());
