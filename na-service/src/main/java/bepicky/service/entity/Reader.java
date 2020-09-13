@@ -86,6 +86,17 @@ public class Reader extends DatedEntity {
     @ToString.Exclude
     private Set<NewsNote> notifyQueue;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+        name = "reader_source",
+        joinColumns = {@JoinColumn(name = "id_reader")},
+        inverseJoinColumns = {@JoinColumn(name = "id_source")}
+    )
+    @JsonIgnore
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Set<Source> sources;
+
     public void addCategory(Category category) {
         if (this.categories == null) {
             this.categories = new HashSet<>();
@@ -110,6 +121,17 @@ public class Reader extends DatedEntity {
 
     public void removeQueueNewsNote(Set<NewsNote> newsNote) {
         notifyQueue.removeAll(newsNote);
+    }
+
+    public void addSources(Set<Source> sources) {
+        if (this.sources == null) {
+            this.sources = new HashSet<>(sources.size());
+        }
+        this.sources.addAll(sources);
+    }
+
+    public void removeSources(Set<Source> sources) {
+        this.sources.removeAll(sources);
     }
 
     public void addLanguage(Language language) {
