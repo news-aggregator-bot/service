@@ -123,6 +123,13 @@ public class Reader extends DatedEntity {
         notifyQueue.removeAll(newsNote);
     }
 
+    public void addSource(Source source) {
+        if (this.sources == null) {
+            this.sources = new HashSet<>();
+        }
+        this.sources.add(source);
+    }
+
     public void addSources(Set<Source> sources) {
         if (this.sources == null) {
             this.sources = new HashSet<>(sources.size());
@@ -132,6 +139,10 @@ public class Reader extends DatedEntity {
 
     public void removeSources(Set<Source> sources) {
         this.sources.removeAll(sources);
+    }
+
+    public void removeSource(Source source) {
+        this.sources.remove(source);
     }
 
     public void addLanguage(Language language) {
