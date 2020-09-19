@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Component
@@ -59,7 +60,7 @@ public class IngestionSourceFacade {
             });
 
             srcPage.setSource(source);
-            srcPage.setLanguage(findLanguage(pageDto));
+            srcPage.setLanguages(findLanguages(pageDto));
             srcPage.setCategories(findCategories(pageDto));
             SourcePage savedSrcPage = sourcePageService.save(srcPage);
 
@@ -117,9 +118,12 @@ public class IngestionSourceFacade {
             });
     }
 
-    private Language findLanguage(SourcePageDto pageDto) {
-        return languageService.find(pageDto.getLanguage())
-            .orElseThrow(() -> new ResourceNotFoundException(pageDto.getLanguage() + " language not found."));
+    private Set<Language> findLanguages(SourcePageDto pageDto) {
+        return pageDto.getLanguages().stream().map(this::findLanguage).collect(Collectors.toSet());
+    }
+
+    private Language findLanguage(String l) {
+        return languageService.find(l).orElseThrow(() -> new ResourceNotFoundException(l + " language not found."));
     }
 
     private List<Category> findCategories(SourcePageDto pageDto) {

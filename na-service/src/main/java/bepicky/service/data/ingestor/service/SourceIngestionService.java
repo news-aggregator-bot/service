@@ -22,11 +22,13 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 import static bepicky.service.entity.ContentTagType.AUTHOR;
 import static bepicky.service.entity.ContentTagType.LINK;
 import static bepicky.service.entity.ContentTagType.MAIN;
 import static bepicky.service.entity.ContentTagType.TITLE;
+import static java.util.stream.Collectors.toList;
 
 @Service("source")
 @Slf4j
@@ -57,7 +59,7 @@ public class SourceIngestionService implements IngestionService {
             .put(0, (v, o) -> ((SourcePageDto) o).setName(v.trim()))
             .put(1, (v, o) -> ((SourcePageDto) o).setUrl(v.trim()))
             .put(2, (v, o) -> ((SourcePageDto) o).setCategories(Arrays.asList(v.split(","))))
-            .put(3, (v, o) -> ((SourcePageDto) o).setLanguage(v.trim()))
+            .put(3, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
             .put(4, ingestionConsumer)
             .put(5, ingestionConsumer)
             .put(6, ingestionConsumer)

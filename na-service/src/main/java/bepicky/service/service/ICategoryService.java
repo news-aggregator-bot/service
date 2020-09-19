@@ -2,6 +2,7 @@ package bepicky.service.service;
 
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
+import bepicky.service.entity.CategoryType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -19,7 +20,7 @@ public interface ICategoryService {
 
     Page<Category> findByParent(Category parent, Pageable pageable);
 
-    Page<Category> findTopCategories(Pageable pageable);
+    Page<Category> findTopCategories(CategoryType type, Pageable pageable);
 
     Optional<Category> find(Long id);
 

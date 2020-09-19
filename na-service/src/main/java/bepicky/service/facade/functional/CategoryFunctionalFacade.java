@@ -10,6 +10,7 @@ import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.domain.request.ListCategoryRequest;
 import bepicky.service.entity.Category;
+import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.ICategoryService;
@@ -56,8 +57,9 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
             log.warn("list:category:reader {} not found", request.getChatId());
             return new CategoryListResponse(ErrorUtil.readerNotFound());
         }
+        CategoryType type = CategoryType.valueOf(request.getType());
         PageRequest req = PageRequest.of(request.getPage() - 1, request.getSize());
-        return getListCategoryResponse(reader, categoryService.findTopCategories(req));
+        return getListCategoryResponse(reader, categoryService.findTopCategories(type, req));
     }
 
     @Override
@@ -115,6 +117,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
         try {
             List<CategoryDto> dtos = categoryPage
                 .stream()
+                .filter(c -> matchesReader(reader, c))
                 .map(c -> categoryResponseMapper.toFullDto(c, reader.getPrimaryLanguage()))
                 .collect(Collectors.toList());
 
@@ -127,6 +130,12 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
         } catch (ResourceNotFoundException e) {
             return new CategoryListResponse(ErrorUtil.languageNotFound());
         }
+    }
+
+    private boolean matchesReader(Reader reader, Category c) {
+        return c.getSourcePages()
+            .stream()
+            .anyMatch(sp -> sp.getLanguages().stream().anyMatch(l -> reader.getLanguages().contains(l)));
     }
 
 

@@ -1,6 +1,8 @@
 package bepicky.service.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -16,7 +18,10 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 import static javax.persistence.CascadeType.ALL;
 
@@ -33,9 +38,13 @@ public class SourcePage extends DatedEntity {
     @Column(nullable = false)
     private String url;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "language")
-    private Language language;
+    @ManyToMany
+    @JoinTable(
+        name = "source_page_language",
+        joinColumns = {@JoinColumn(name = "id_source_page")},
+        inverseJoinColumns = {@JoinColumn(name = "language")}
+    )
+    private Set<Language> languages;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_source")
@@ -58,4 +67,22 @@ public class SourcePage extends DatedEntity {
     @ToString.Exclude
     private List<ContentBlock> contentBlocks;
 
+    @Transient
+    private Multimap<CategoryType, Category> typedCategories;
+
+    public Collection<Category> getRegions() {
+        initTypedCategories();
+        return typedCategories.get(CategoryType.REGION);
+    }
+
+    public Collection<Category> getCommon() {
+        initTypedCategories();
+        return typedCategories.get(CategoryType.COMMON);
+    }
+
+    private void initTypedCategories() {
+        if (typedCategories == null || typedCategories.isEmpty()) {
+            typedCategories = Multimaps.index(categories, Category::getType);
+        }
+    }
 }

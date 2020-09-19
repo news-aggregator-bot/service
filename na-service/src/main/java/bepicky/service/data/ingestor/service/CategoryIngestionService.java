@@ -1,5 +1,8 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.domain.dto.CategoryDto;
+import bepicky.service.entity.CategoryType;
+import bepicky.service.facade.IngestionCategoryFacade;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -8,8 +11,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import bepicky.service.domain.dto.CategoryDto;
-import bepicky.service.facade.IngestionCategoryFacade;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,8 +34,12 @@ public class CategoryIngestionService implements IngestionService {
             List<CategoryDto> categories = new ArrayList<>();
             for (int r = 1; r < rows; r++) {
                 Row row = sheet.getRow(r);
+                if (row.getCell(0) == null) {
+                    continue;
+                }
                 categories.add(CategoryDto.builder()
                     .name(row.getCell(0).getStringCellValue())
+                    .type(CategoryType.valueOf(row.getCell(1).getStringCellValue()))
                     .parent(getParent(row))
                     .build());
             }
@@ -51,7 +56,7 @@ public class CategoryIngestionService implements IngestionService {
     }
 
     private String getParent(Row row) {
-        Cell cell = row.getCell(1);
+        Cell cell = row.getCell(2);
         return cell == null ? null : cell.getStringCellValue();
     }
 }

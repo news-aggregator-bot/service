@@ -8,6 +8,8 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class ListCategoryRequest extends ListRequest {
 
+    private String type;
+
     @JsonProperty("parent_id")
     private long parentId;
 }

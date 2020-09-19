@@ -1,11 +1,11 @@
 package bepicky.service.facade;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import bepicky.service.domain.dto.CategoryDto;
 import bepicky.service.entity.Category;
 import bepicky.service.service.ICategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,6 +32,7 @@ public class IngestionCategoryFacade {
         });
         Category parent = categoryService.findByName(c.getParent()).orElse(null);
         cat.setParent(parent);
+        cat.setType(c.getType());
         return cat;
     }
 }

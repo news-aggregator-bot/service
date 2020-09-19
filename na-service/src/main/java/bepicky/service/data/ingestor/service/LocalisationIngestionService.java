@@ -1,5 +1,7 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.domain.dto.CategoryLocalisationDto;
+import bepicky.service.facade.IngestionCategoryLocalisationFacade;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -9,8 +11,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import bepicky.service.domain.dto.CategoryLocalisationDto;
-import bepicky.service.facade.IngestionCategoryLocalisationFacade;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,6 +51,9 @@ public class LocalisationIngestionService implements IngestionService {
             for (int r = 1; r < rows; r++) {
                 Row row = sheet.getRow(r);
                 String category = row.getCell(0).getStringCellValue();
+                if (StringUtils.isBlank(category)) {
+                    continue;
+                }
                 for (int c = 1; c < cellNum; c++) {
                     CategoryLocalisationDto categoryLocalisation = new CategoryLocalisationDto();
                     localisations.add(categoryLocalisation);

@@ -2,6 +2,8 @@ package bepicky.service.facade;
 
 import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Category;
+import bepicky.service.entity.Language;
+import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsService;
@@ -21,6 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 @Component
 @Slf4j
@@ -67,19 +70,33 @@ public class NewsSynchroniser {
             SourcePage sourcePage =
                 sourcePageService.findFirstBySource(source, singleElementRequest).orElse(null);
             if (sourcePage != null) {
+                Stream<Language> sourcePageLangStream = sourcePage.getLanguages().stream();
+                Stream<Category> commonCategoriesStream = sourcePage.getCommon().stream();
                 NewsSyncResult freshNotes = newsService.sync(sourcePage);
-                sourcePage.getCategories().stream().map(Category::getReaders)
-                    .flatMap(Set::stream)
-                    .filter(r -> r.getLanguages().contains(sourcePage.getLanguage()))
-                    .forEach(r -> {
-                        log.info("synchronisation:reader:{}:queue:add", r.getChatId());
-                        r.addQueueNewsNote(freshNotes.getNewsNotes());
-                        readerService.save(r);
-                    });
+                if (sourcePage.getRegions() != null) {
+                    sourcePage.getRegions().stream()
+                        .map(Category::getReaders)
+                        .flatMap(Set::stream)
+                        .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
+                        .filter(r -> commonCategoriesStream.anyMatch(c -> r.getCategories().contains(c)))
+                        .forEach(r -> appendReaderQueue(freshNotes, r));
+                } else {
+                    commonCategoriesStream
+                        .map(Category::getReaders)
+                        .flatMap(Set::stream)
+                        .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
+                        .forEach(r -> appendReaderQueue(freshNotes, r));
+                }
 
                 log.info("synchronisation:finished:{}", sourcePage.getUrl());
             }
         });
+    }
+
+    private void appendReaderQueue(NewsSyncResult freshNotes, Reader r) {
+        log.info("synchronisation:reader:{}:queue:add", r.getChatId());
+        r.addQueueNewsNote(freshNotes.getNewsNotes());
+        readerService.save(r);
     }
 
 }

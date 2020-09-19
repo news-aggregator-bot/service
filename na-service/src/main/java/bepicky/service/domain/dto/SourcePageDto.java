@@ -14,7 +14,7 @@ public class SourcePageDto {
 
     private String url;
 
-    private String language;
+    private List<String> languages;
 
     private List<String> categories;
 

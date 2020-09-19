@@ -2,6 +2,7 @@ package bepicky.service.service;
 
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
+import bepicky.service.entity.CategoryType;
 import bepicky.service.repository.CategoryLocalisationRepository;
 import bepicky.service.repository.CategoryRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -49,8 +50,8 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Page<Category> findTopCategories(Pageable pageable) {
-        return repository.findAllByParentIsNull(pageable);
+    public Page<Category> findTopCategories(CategoryType type, Pageable pageable) {
+        return repository.findAllByTypeAndParentIsNull(type, pageable);
     }
 
     @Override
