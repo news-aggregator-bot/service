@@ -16,10 +16,9 @@ import org.jsoup.select.Evaluator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Component
@@ -34,14 +33,26 @@ public class DefaultWebContentParser implements WebContentParser {
     @Autowired
     private JsoupEvaluatorFactory evaluatorFactory;
 
+    @Autowired
+    private UrlNormalisationContext urlNormalisationContext;
+
     @Override
     public List<PageParsedData> parse(SourcePage page) {
-        Document doc = readerContext.read(page.getSource().getName(), page.getUrl());
-        return page.getContentBlocks()
-            .parallelStream()
-            .map(block -> parseDoc(page, doc, block))
-            .flatMap(List::stream)
-            .collect(Collectors.toList());
+        String srcName = page.getSource().getName();
+        do {
+            Document doc = readerContext.read(srcName, page.getUrl());
+            List<PageParsedData> parsedData = page.getContentBlocks()
+                .stream()
+                .map(block -> parseDoc(page, doc, block))
+                .flatMap(List::stream)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
+            if (!parsedData.isEmpty()) {
+                return parsedData;
+            }
+            readerContext.goNext(srcName);
+        } while (readerContext.hasNext(srcName));
+        return Collections.emptyList();
     }
 
     private List<PageParsedData> parseDoc(SourcePage page, Document doc, ContentBlock block) {
@@ -56,21 +67,29 @@ public class DefaultWebContentParser implements WebContentParser {
             Builder<PageParsedData> datas = ImmutableList.builder();
             for (Element wrapper : mainClassElems) {
 
-                Element titleEl = wrapper.selectFirst(evaluatorFactory.get(titleTag));
-                if (titleEl == null) {
-                    continue;
-                }
                 PageParsedData.PageParsedDataBuilder dataBuilder = PageParsedData.builder();
-                dataBuilder.title(titleEl.text());
-                if (linkTag == null) {
-                    Element a = getLinkEl(titleEl, wrapper);
-                    if (a == null) {
+                if (titleTag == null && linkTag != null) {
+                    Element linkEl = wrapper.selectFirst(evaluatorFactory.get(linkTag));
+                    dataBuilder.title(linkEl.text());
+                    dataBuilder.link(getHref(page, linkEl));
+                } else if (titleTag != null) {
+                    Element titleEl = wrapper.selectFirst(evaluatorFactory.get(titleTag));
+                    if (titleEl == null) {
                         continue;
                     }
-                    dataBuilder.link(getHref(page.getUrl(), a));
+                    dataBuilder.title(titleEl.text());
+                    if (linkTag == null) {
+                        Element a = getLinkEl(titleEl, wrapper);
+                        if (a == null) {
+                            continue;
+                        }
+                        dataBuilder.link(getHref(page, a));
+                    } else {
+                        Element linkEl = wrapper.selectFirst(evaluatorFactory.get(linkTag));
+                        dataBuilder.link(getHref(page, linkEl));
+                    }
                 } else {
-                    Element linkEl = wrapper.selectFirst(evaluatorFactory.get(linkTag));
-                    dataBuilder.link(getHref(page.getUrl(), linkEl));
+                    continue;
                 }
 
                 dataBuilder.author(getAuthor(authorTag, wrapper));
@@ -82,21 +101,10 @@ public class DefaultWebContentParser implements WebContentParser {
         return Collections.emptyList();
     }
 
-    private String getHref(String pageUrl, Element a) {
-        String href = a.attr("href");
-        if (href.contains("?")) {
-            href = new StringBuilder(href).delete(href.indexOf("?"), href.length()).toString();
-        }
-        if (href.startsWith("http")) {
-            return href;
-        }
-        try {
-            URL url = new URL(pageUrl);
-            return pageUrl.replace(url.getPath(), href);
-        } catch (MalformedURLException e) {
-            throw new IllegalArgumentException(e);
-        }
+    private String getHref(SourcePage page, Element a) {
+        return urlNormalisationContext.normaliseUrl(page, a);
     }
+
 
     private Element getLinkEl(Element titleEl, Element wrapper) {
         Evaluator.Tag linkTag = new Evaluator.Tag("a");

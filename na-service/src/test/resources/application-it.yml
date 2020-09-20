@@ -29,7 +29,7 @@ database:
 
 na:
   webpagereader:
-    browser: false
+    browser: true
   schedule:
     sync:
       enabled: false

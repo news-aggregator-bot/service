@@ -11,6 +11,8 @@ import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -37,6 +39,10 @@ public class SourcePage extends DatedEntity {
 
     @Column(nullable = false)
     private String url;
+
+    @Column(nullable = false, name = "url_normalisation")
+    @Enumerated(EnumType.STRING)
+    private UrlNormalisation urlNormalisation;
 
     @ManyToMany
     @JoinTable(

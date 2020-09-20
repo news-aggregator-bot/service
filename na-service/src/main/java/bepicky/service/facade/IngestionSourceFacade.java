@@ -59,6 +59,7 @@ public class IngestionSourceFacade {
                 return srcPg;
             });
 
+            srcPage.setUrlNormalisation(pageDto.getUrlNormalisation());
             srcPage.setSource(source);
             srcPage.setLanguages(findLanguages(pageDto));
             srcPage.setCategories(findCategories(pageDto));

@@ -5,7 +5,9 @@ import bepicky.service.domain.dto.ContentTagDto;
 import bepicky.service.domain.dto.SourceDto;
 import bepicky.service.domain.dto.SourcePageDto;
 import bepicky.service.entity.ContentTagMatchStrategy;
+import bepicky.service.entity.UrlNormalisation;
 import bepicky.service.facade.IngestionSourceFacade;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -20,6 +22,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -60,11 +63,14 @@ public class SourceIngestionService implements IngestionService {
             .put(1, (v, o) -> ((SourcePageDto) o).setUrl(v.trim()))
             .put(2, (v, o) -> ((SourcePageDto) o).setCategories(Arrays.asList(v.split(","))))
             .put(3, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
+            .put(8, (v, o) -> ((SourcePageDto) o).setUrlNormalisation(UrlNormalisation.valueOf(v.trim())))
             .put(4, ingestionConsumer)
             .put(5, ingestionConsumer)
             .put(6, ingestionConsumer)
             .put(7, ingestionConsumer)
             .build();
+
+    private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 3, 8);
 
     @Autowired
     private IngestionSourceFacade sourceFacade;
@@ -98,6 +104,9 @@ public class SourceIngestionService implements IngestionService {
         SourcePageDto srcPage = null;
         for (int r = 1; r < rows; r++) {
             Row row = sheet.getRow(r);
+            if (row == null) {
+                continue;
+            }
             ContentBlockDto block = new ContentBlockDto();
             for (Map.Entry<Integer, IngestionConsumer> e : fieldMapping.entrySet()) {
                 Cell cell = row.getCell(e.getKey());
@@ -118,7 +127,7 @@ public class SourceIngestionService implements IngestionService {
                         }
                     }
 
-                    if (e.getKey() < 4) {
+                    if (sourcePageCols.contains(e.getKey())) {
                         e.getValue().consume(cellValue, srcPage);
                     } else {
                         e.getValue().consume(cellValue, contentTag);

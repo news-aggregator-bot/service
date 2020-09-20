@@ -46,6 +46,18 @@ public class WebPageReaderContext {
         return readers.stream().findFirst().get();
     }
 
+    public boolean hasNext(String sourceName) {
+        Collection<WebPageReader> readers = sourceReaders.get(sourceName);
+        return readers != null && !readers.isEmpty();
+    }
+
+    public void goNext(String sourceName) {
+        Collection<WebPageReader> readers = sourceReaders.get(sourceName);
+        if (readers != null && !readers.isEmpty()) {
+            sourceReaders.remove(sourceName, readers.stream().findFirst().get());
+        }
+    }
+
     @Scheduled(cron = "${na.schedule.webpagereader.cron:0 0 */12 * * *}")
     public void refreshReaders() {
         log.info("webpagereader:refresh");

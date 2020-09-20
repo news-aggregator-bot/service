@@ -1,0 +1,1 @@
+alter table source_page add column url_normalisation varchar(20) not null default 'NO_PARAMS';

@@ -1,5 +1,6 @@
 package bepicky.service.domain.dto;
 
+import bepicky.service.entity.UrlNormalisation;
 import lombok.Data;
 import lombok.ToString;
 
@@ -13,6 +14,8 @@ public class SourcePageDto {
     private String name;
 
     private String url;
+
+    private UrlNormalisation urlNormalisation = UrlNormalisation.NO_PARAMS;
 
     private List<String> languages;
 
