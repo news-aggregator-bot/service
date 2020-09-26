@@ -105,7 +105,6 @@ public class DefaultWebContentParser implements WebContentParser {
         return urlNormalisationContext.normaliseUrl(page, a);
     }
 
-
     private Element getLinkEl(Element titleEl, Element wrapper) {
         Evaluator.Tag linkTag = new Evaluator.Tag("a");
         Element link = titleEl.selectFirst(linkTag);

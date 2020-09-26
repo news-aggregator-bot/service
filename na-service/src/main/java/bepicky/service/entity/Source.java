@@ -27,6 +27,8 @@ public class Source extends DatedEntity {
     @Column(nullable = false)
     private String name;
 
+    private boolean active = true;
+
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
     private List<SourcePage> pages;

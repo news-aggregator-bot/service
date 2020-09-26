@@ -2,6 +2,11 @@ FROM java:8-jre
 
 MAINTAINER Vladyslav Yemelianov <emelyanov.vladyslav@gmail.com>
 
+RUN curl -fL -o /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz \
+  && tar -xjf /tmp/geckodriver.tar.gz -C /tmp/ \
+  && mv /tmp/geckodriver /usr/local/bin/geckodriver \
+  && chmod +x /usr/local/bin/geckodriver
+
 RUN curl -fL -o /tmp/firefox.tar.bz2 \
          https://ftp.mozilla.org/pub/firefox/releases/78.0.1/linux-x86_64/en-GB/firefox-78.0.1.tar.bz2 \
  && tar -xjf /tmp/firefox.tar.bz2 -C /tmp/ \

@@ -50,6 +50,7 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade {
             .flatMap(List::stream)
             .filter(sp -> sp.getLanguages().stream().anyMatch(l -> reader.getLanguages().contains(l)))
             .map(SourcePage::getSource)
+            .filter(Source::isActive)
             .map(s -> {
                 SourceDto dto = modelMapper.map(s, SourceDto.class);
                 if (reader.getSources().contains(s)) {

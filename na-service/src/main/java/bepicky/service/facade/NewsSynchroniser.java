@@ -54,7 +54,7 @@ public class NewsSynchroniser {
             return;
         }
         if (sources.isEmpty()) {
-            sourceService.findAll().forEach(s -> sources.put(s, new AtomicInteger(0)));
+            sourceService.findAllActive().forEach(s -> sources.put(s, new AtomicInteger(0)));
         }
         Map<Source, AtomicInteger> tempSources = new HashMap<>(sources);
         tempSources.forEach((source, sourcePageNum) -> {

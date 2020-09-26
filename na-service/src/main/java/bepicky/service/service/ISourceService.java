@@ -13,7 +13,13 @@ public interface ISourceService {
 
     List<Source> findAll();
 
+    List<Source> findAllActive();
+
     Optional<Source> find(Long id);
 
     Optional<Source> findByName(String name);
+
+    Source enable(Long id);
+
+    Source disable(Long id);
 }

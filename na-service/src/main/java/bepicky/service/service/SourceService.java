@@ -1,5 +1,6 @@
 package bepicky.service.service;
 
+import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
 import bepicky.service.repository.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -37,6 +38,11 @@ public class SourceService implements ISourceService {
     }
 
     @Override
+    public List<Source> findAllActive() {
+        return repository.findByActiveTrue();
+    }
+
+    @Override
     public Optional<Source> find(Long id) {
         return repository.findById(id);
     }
@@ -44,5 +50,24 @@ public class SourceService implements ISourceService {
     @Override
     public Optional<Source> findByName(String name) {
         return repository.findByName(name);
+    }
+
+    @Override
+    public Source enable(Long id) {
+        return update(id, true, "source:{}:enabled");
+    }
+
+    @Override
+    public Source disable(Long id) {
+        return update(id, false, "source:{}:disabled");
+    }
+
+    private Source update(Long id, boolean status, String logMessage) {
+        return find(id).map(s -> {
+            s.setActive(status);
+            repository.save(s);
+            log.info(logMessage, s.getName());
+            return s;
+        }).orElseThrow(() -> new ResourceNotFoundException("Source " + id + " not found."));
     }
 }
