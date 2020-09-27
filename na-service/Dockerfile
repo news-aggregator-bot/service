@@ -3,9 +3,8 @@ FROM java:8-jre
 MAINTAINER Vladyslav Yemelianov <emelyanov.vladyslav@gmail.com>
 RUN useradd -ms /bin/bash admin
 
-RUN curl -fL -o /tmp/geckodriver https://raw.githubusercontent.com/news-aggregator-bot/service/master/na-service/src/main/resources/drivers/geckodriver_linux \
- && mkdir /opt/driver \
- && mv /tmp/geckodriver /opt/driver/geckodriver \
+RUN mkdir /opt/driver \
+ && curl -L https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz | tar xz -C /opt/driver \
  && chown -R admin:admin /opt/driver \
  && chmod +x /opt/driver/geckodriver
 
