@@ -31,7 +31,7 @@ public class WebPageReaderConfiguration {
             System.setProperty("webdriver.gecko.driver", drivers.resolve("geckodriver_mac").toString());
         }
         if (SystemUtils.IS_OS_LINUX) {
-            System.setProperty("webdriver.gecko.driver", "geckodriver");
+            System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
         }
         System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
