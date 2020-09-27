@@ -39,7 +39,6 @@ public class WebPageReaderConfiguration {
         binary.addCommandLineOptions("--headless", "--no-sandbox");
         FirefoxOptions options = new FirefoxOptions();
         options.setBinary(binary);
-        options.setHeadless(true);
         return options;
     }
 
