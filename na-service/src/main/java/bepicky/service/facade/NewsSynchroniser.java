@@ -19,6 +19,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -47,23 +48,24 @@ public class NewsSynchroniser {
 
     private final Map<Source, AtomicInteger> sources = new HashMap<>();
 
+    @PostConstruct
+    public void initSources() {
+        sourceService.findAllActive().forEach(s -> sources.put(s, new AtomicInteger(0)));
+    }
+
     @Transactional
     @Scheduled(cron = "${na.schedule.sync.cron:*/20 * * * * *}")
     public void sync() {
         if (!syncEnabled) {
             return;
         }
-        if (sources.isEmpty()) {
-            sourceService.findAllActive().forEach(s -> sources.put(s, new AtomicInteger(0)));
-        }
         Map<Source, AtomicInteger> tempSources = new HashMap<>(sources);
         tempSources.forEach((source, sourcePageNum) -> {
 
             long sourcePageAmount = sourcePageService.countBySource(source);
             if (sourcePageNum.get() == sourcePageAmount) {
-                sources.remove(source);
+                sources.put(source, new AtomicInteger(0));
                 log.info("synchronisation:source:ended:{}", source.getName());
-                return;
             }
 
             PageRequest singleElementRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
@@ -73,19 +75,21 @@ public class NewsSynchroniser {
                 Stream<Language> sourcePageLangStream = sourcePage.getLanguages().stream();
                 Stream<Category> commonCategoriesStream = sourcePage.getCommon().stream();
                 NewsSyncResult freshNotes = newsService.sync(sourcePage);
-                if (sourcePage.getRegions() != null) {
-                    sourcePage.getRegions().stream()
-                        .map(Category::getReaders)
-                        .flatMap(Set::stream)
-                        .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
-                        .filter(r -> commonCategoriesStream.anyMatch(c -> r.getCategories().contains(c)))
-                        .forEach(r -> appendReaderQueue(freshNotes, r));
-                } else {
-                    commonCategoriesStream
-                        .map(Category::getReaders)
-                        .flatMap(Set::stream)
-                        .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
-                        .forEach(r -> appendReaderQueue(freshNotes, r));
+                if (!freshNotes.getNewsNotes().isEmpty()) {
+                    if (sourcePage.getRegions() != null) {
+                        sourcePage.getRegions().stream()
+                            .map(Category::getReaders)
+                            .flatMap(Set::stream)
+                            .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
+                            .filter(r -> commonCategoriesStream.anyMatch(c -> r.getCategories().contains(c)))
+                            .forEach(r -> appendReaderQueue(freshNotes, r));
+                    } else {
+                        commonCategoriesStream
+                            .map(Category::getReaders)
+                            .flatMap(Set::stream)
+                            .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
+                            .forEach(r -> appendReaderQueue(freshNotes, r));
+                    }
                 }
 
                 log.info("synchronisation:finished:{}", sourcePage.getUrl());
