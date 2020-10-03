@@ -51,6 +51,12 @@ public class DefaultWebContentParser implements WebContentParser {
                     .filter(Objects::nonNull)
                     .collect(Collectors.toList());
                 if (!parsedData.isEmpty()) {
+                    log.info(
+                        "webcontentparser:{} :{}:{}",
+                        page.getUrl(),
+                        webPageReader.getClass().getSimpleName(),
+                        parsedData.size()
+                    );
                     return parsedData;
                 }
             }
