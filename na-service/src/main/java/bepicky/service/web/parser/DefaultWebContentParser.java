@@ -5,10 +5,11 @@ import bepicky.service.entity.ContentBlock;
 import bepicky.service.entity.ContentTag;
 import bepicky.service.entity.ContentTagType;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.web.reader.WebPageReaderContext;
+import bepicky.service.web.reader.WebPageReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -19,13 +20,15 @@ import org.springframework.stereotype.Component;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
+@Slf4j
 public class DefaultWebContentParser implements WebContentParser {
 
     @Autowired
-    private WebPageReaderContext readerContext;
+    private List<WebPageReader> webPageReaders;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -38,21 +41,31 @@ public class DefaultWebContentParser implements WebContentParser {
 
     @Override
     public List<PageParsedData> parse(SourcePage page) {
-        String srcName = page.getSource().getName();
-        do {
-            Document doc = readerContext.read(srcName, page.getUrl());
-            List<PageParsedData> parsedData = page.getContentBlocks()
-                .stream()
-                .map(block -> parseDoc(page, doc, block))
-                .flatMap(List::stream)
-                .filter(Objects::nonNull)
-                .collect(Collectors.toList());
-            if (!parsedData.isEmpty()) {
-                return parsedData;
+        for (WebPageReader webPageReader : webPageReaders) {
+            Optional<Document> doc = readDocument(page, webPageReader);
+            if (doc.isPresent()) {
+                List<PageParsedData> parsedData = page.getContentBlocks()
+                    .stream()
+                    .map(block -> parseDoc(page, doc.get(), block))
+                    .flatMap(List::stream)
+                    .filter(Objects::nonNull)
+                    .collect(Collectors.toList());
+                if (!parsedData.isEmpty()) {
+                    return parsedData;
+                }
             }
-            readerContext.goNext(srcName);
-        } while (readerContext.hasNext(srcName));
+        }
+        log.warn("webpagereader:read:empty:{}", page.getUrl());
         return Collections.emptyList();
+    }
+
+    public Optional<Document> readDocument(SourcePage page, WebPageReader webPageReader) {
+        try {
+            return Optional.of(webPageReader.read(page.getUrl()));
+        } catch (RuntimeException e) {
+            log.error("webpagereader:read:failed:{}:{}", page.getUrl(), e.getMessage(), e);
+            return Optional.empty();
+        }
     }
 
     private List<PageParsedData> parseDoc(SourcePage page, Document doc, ContentBlock block) {

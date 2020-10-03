@@ -3,7 +3,6 @@ package bepicky.service.configuration;
 import bepicky.service.web.reader.BrowserWebPageReader;
 import bepicky.service.web.reader.JsoupWebPageReader;
 import bepicky.service.web.reader.WebPageReader;
-import bepicky.service.web.reader.WebPageReaderContext;
 import com.google.common.collect.ImmutableList;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.SystemUtils;
@@ -16,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 @Configuration
 @Slf4j
@@ -24,8 +24,7 @@ public class WebPageReaderConfiguration {
     @Value("${na.webpagereader.browser:true}")
     private boolean browserReaderEnabled;
 
-    @Bean
-    public FirefoxOptions firefoxOptions() {
+    private FirefoxOptions firefoxOptions() {
         Path drivers = Paths.get(getClass().getResource("/drivers").getPath());
         if (SystemUtils.IS_OS_MAC) {
             System.setProperty("webdriver.gecko.driver", drivers.resolve("geckodriver_mac").toString());
@@ -43,15 +42,15 @@ public class WebPageReaderConfiguration {
     }
 
     @Bean
-    public WebPageReaderContext webPageReaderContext(FirefoxOptions firefoxOptions) {
+    public List<WebPageReader> webPageReaders() {
         ImmutableList.Builder<WebPageReader> readers = ImmutableList.builder();
         readers.add(new JsoupWebPageReader());
 
         if (browserReaderEnabled) {
             log.info("webpagereader:browser:enabled");
-            readers.add(new BrowserWebPageReader(firefoxOptions));
+            readers.add(new BrowserWebPageReader(firefoxOptions()));
         }
 
-        return new WebPageReaderContext(readers.build());
+        return readers.build();
     }
 }

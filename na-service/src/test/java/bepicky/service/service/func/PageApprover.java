@@ -9,7 +9,7 @@ import bepicky.service.data.ingestor.service.SourceIngestionService;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceException;
 import bepicky.service.service.ISourcePageService;
-import bepicky.service.web.reader.WebPageReaderContext;
+import bepicky.service.web.reader.JsoupWebPageReader;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -38,9 +38,6 @@ public class PageApprover {
     private ISourcePageService sourcePageService;
 
     @Autowired
-    private WebPageReaderContext webPageReaderContext;
-
-    @Autowired
     private SourceIngestionService sourceIS;
 
     @Autowired
@@ -52,6 +49,8 @@ public class PageApprover {
     private FuncSourceDataIngestor dataIngestor;
 
     private PageContentContext pageContentContext;
+
+    private final JsoupWebPageReader webPageReader = new JsoupWebPageReader();
 
     @Before
     public void setUpData() {
@@ -93,7 +92,7 @@ public class PageApprover {
 
     private Document readDocument(SourcePage sourcePage) {
         try {
-            return webPageReaderContext.read(sourcePage.getSource().getName(), sourcePage.getUrl());
+            return webPageReader.read(sourcePage.getUrl());
         } catch (SourceException e) {
             log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
             return null;
