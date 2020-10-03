@@ -16,12 +16,17 @@ public class BrowserWebPageReader implements WebPageReader {
 
     @Override
     public Document read(String path) {
-        WebDriver driver = new FirefoxDriver(options);
+        WebDriver driver = null;
         try {
+            driver = new FirefoxDriver(options);
             driver.navigate().to(path);
             return Parser.parse(driver.getPageSource(), path);
+        } catch (RuntimeException ignore) {
+            return null;
         } finally {
-            driver.quit();
+            if (driver != null) {
+                driver.quit();
+            }
         }
     }
 
