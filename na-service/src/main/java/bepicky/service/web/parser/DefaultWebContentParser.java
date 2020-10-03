@@ -67,7 +67,7 @@ public class DefaultWebContentParser implements WebContentParser {
 
     public Optional<Document> readDocument(SourcePage page, WebPageReader webPageReader) {
         try {
-            return Optional.of(webPageReader.read(page.getUrl()));
+            return Optional.ofNullable(webPageReader.read(page.getUrl()));
         } catch (RuntimeException e) {
             log.error("webpagereader:read:failed:{}:{}", page.getUrl(), e.getMessage(), e);
             return Optional.empty();
