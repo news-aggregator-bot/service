@@ -92,6 +92,7 @@ public class NewsSynchroniser {
         }
         NewsSyncResult freshNotes = newsService.sync(sourcePage);
         if (freshNotes.getNewsNotes().isEmpty()) {
+            log.info("synchronisation:finished:empty: {}", sourcePage.getUrl());
             return;
         }
         if (sourcePage.getRegions() != null) {
