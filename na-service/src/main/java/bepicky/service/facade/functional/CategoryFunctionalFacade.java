@@ -135,7 +135,9 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
     private CategoryDto toDto(Reader reader, Category c) {
         CategoryDto dto = categoryResponseMapper.toFullDto(c, reader.getPrimaryLanguage());
         dto.setPicked(reader.getCategories().contains(c));
-        dto.getParent().setPicked(reader.getCategories().contains(c.getParent()));
+        if (dto.getParent() != null) {
+            dto.getParent().setPicked(reader.getCategories().contains(c.getParent()));
+        }
         return dto;
     }
 
