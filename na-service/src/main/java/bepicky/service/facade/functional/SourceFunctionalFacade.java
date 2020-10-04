@@ -53,9 +53,7 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade {
             .filter(Source::isActive)
             .map(s -> {
                 SourceDto dto = modelMapper.map(s, SourceDto.class);
-                if (reader.getSources().contains(s)) {
-                    dto.setPicked(true);
-                }
+                dto.setPicked(reader.getSources().contains(s));
                 return dto;
             })
             .collect(Collectors.toSet());

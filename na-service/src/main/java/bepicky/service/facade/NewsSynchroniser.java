@@ -126,7 +126,7 @@ public class NewsSynchroniser {
 
     private void refreshSourceNumber() {
         if (activeSourcesIds.size() == sourceNumber.get()) {
-            log.warn("synchronisation:source number:refresh");
+            log.debug("synchronisation:source number:refresh");
             sourceNumber.set(0);
         }
     }

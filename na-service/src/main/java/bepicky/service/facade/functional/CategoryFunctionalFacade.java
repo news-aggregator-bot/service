@@ -118,7 +118,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
             List<CategoryDto> dtos = categoryPage
                 .stream()
                 .filter(c -> matchesReader(reader, c))
-                .map(c -> categoryResponseMapper.toFullDto(c, reader.getPrimaryLanguage()))
+                .map(c -> toDto(reader, c))
                 .collect(Collectors.toList());
 
             return new CategoryListResponse(
@@ -128,8 +128,15 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
                 modelMapper.map(reader, ReaderDto.class)
             );
         } catch (ResourceNotFoundException e) {
-            return new CategoryListResponse(ErrorUtil.languageNotFound());
+            return new CategoryListResponse(ErrorUtil.categoryNotFound());
         }
+    }
+
+    private CategoryDto toDto(Reader reader, Category c) {
+        CategoryDto dto = categoryResponseMapper.toFullDto(c, reader.getPrimaryLanguage());
+        dto.setPicked(reader.getCategories().contains(c));
+        dto.getParent().setPicked(reader.getCategories().contains(c.getParent()));
+        return dto;
     }
 
     private boolean matchesReader(Reader reader, Category c) {
@@ -137,6 +144,5 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
             .stream()
             .anyMatch(sp -> sp.getLanguages().stream().anyMatch(l -> reader.getLanguages().contains(l)));
     }
-
 
 }
