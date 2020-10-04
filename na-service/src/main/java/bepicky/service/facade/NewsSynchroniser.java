@@ -81,7 +81,7 @@ public class NewsSynchroniser {
         long sourcePageAmount = sourcePageService.countBySource(source);
         if (sourcePageNum.get() == sourcePageAmount) {
             sources.put(source.getName(), new AtomicInteger(0));
-            log.info("synchronisation:source:ended:{}", source.getName());
+            log.debug("synchronisation:source:ended:{}", source.getName());
         }
 
         PageRequest singlePageRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
@@ -92,7 +92,7 @@ public class NewsSynchroniser {
         }
         NewsSyncResult freshNotes = newsService.sync(sourcePage);
         if (freshNotes.getNewsNotes().isEmpty()) {
-            log.info("synchronisation:finished:empty: {}", sourcePage.getUrl());
+            log.debug("synchronisation:finished:empty: {}", sourcePage.getUrl());
             return;
         }
         if (sourcePage.getRegions() != null) {
@@ -111,7 +111,7 @@ public class NewsSynchroniser {
                 .forEach(r -> appendReaderQueue(freshNotes, r));
         }
 
-        log.info("synchronisation:finished:{}", sourcePage.getUrl());
+        log.debug("synchronisation:finished:{}", sourcePage.getUrl());
     }
 
     private <T> boolean atLeastOneInCommon(Collection<T> c1, Collection<T> c2) {
@@ -121,7 +121,7 @@ public class NewsSynchroniser {
     @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
     public void refreshIds() {
         activeSourcesIds = sourceService.findAllActive().stream().map(Source::getId).collect(Collectors.toList());
-        log.info("synchronisation:refresh-id:{}", activeSourcesIds);
+        log.debug("synchronisation:refresh-id:{}", activeSourcesIds);
     }
 
     private void refreshSourceNumber() {
@@ -132,7 +132,7 @@ public class NewsSynchroniser {
     }
 
     private void appendReaderQueue(NewsSyncResult freshNotes, Reader r) {
-        log.info("synchronisation:reader:{}:queue:add", r.getChatId());
+        log.debug("synchronisation:reader:{}:queue:add", r.getChatId());
         r.addQueueNewsNote(freshNotes.getNewsNotes());
         readerService.save(r);
     }
