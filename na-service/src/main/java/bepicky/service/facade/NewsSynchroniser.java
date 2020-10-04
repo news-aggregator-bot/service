@@ -2,7 +2,6 @@ package bepicky.service.facade;
 
 import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Category;
-import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
@@ -20,11 +19,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -46,55 +48,86 @@ public class NewsSynchroniser {
     @Value("${na.schedule.sync.enabled}")
     private boolean syncEnabled;
 
-    private final Map<Source, AtomicInteger> sources = new HashMap<>();
+    private List<Long> activeSourcesIds;
+
+    private final AtomicInteger sourceNumber = new AtomicInteger(0);
+
+    private final Map<String, AtomicInteger> sources = new HashMap<>();
 
     @PostConstruct
     public void initSources() {
-        sourceService.findAllActive().forEach(s -> sources.put(s, new AtomicInteger(0)));
+        sourceService.findAllActive().forEach(s -> sources.put(s.getName(), new AtomicInteger(0)));
     }
 
     @Transactional
-    @Scheduled(cron = "${na.schedule.sync.cron:*/20 * * * * *}")
+    @Scheduled(cron = "${na.schedule.sync.cron:*/2 * * * * *}")
     public void sync() {
         if (!syncEnabled) {
             return;
         }
-        Map<Source, AtomicInteger> tempSources = new HashMap<>(sources);
-        tempSources.forEach((source, sourcePageNum) -> {
+        if (activeSourcesIds == null) {
+            refreshIds();
+        }
+        refreshSourceNumber();
 
-            long sourcePageAmount = sourcePageService.countBySource(source);
-            if (sourcePageNum.get() == sourcePageAmount) {
-                sources.put(source, new AtomicInteger(0));
-                log.info("synchronisation:source:ended:{}", source.getName());
-            }
+        Long sourceId = activeSourcesIds.get(sourceNumber.getAndIncrement());
+        Source source = sourceService.find(sourceId).orElse(null);
+        if (source == null) {
+            log.warn("synchronisation:source {}:404", sourceId);
+            return;
+        }
+        AtomicInteger sourcePageNum = sources.get(source.getName());
 
-            PageRequest singleElementRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
-            SourcePage sourcePage =
-                sourcePageService.findFirstBySource(source, singleElementRequest).orElse(null);
-            if (sourcePage != null) {
-                Stream<Language> sourcePageLangStream = sourcePage.getLanguages().stream();
-                Stream<Category> commonCategoriesStream = sourcePage.getCommon().stream();
-                NewsSyncResult freshNotes = newsService.sync(sourcePage);
-                if (!freshNotes.getNewsNotes().isEmpty()) {
-                    if (sourcePage.getRegions() != null) {
-                        sourcePage.getRegions().stream()
-                            .map(Category::getReaders)
-                            .flatMap(Set::stream)
-                            .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
-                            .filter(r -> commonCategoriesStream.anyMatch(c -> r.getCategories().contains(c)))
-                            .forEach(r -> appendReaderQueue(freshNotes, r));
-                    } else {
-                        commonCategoriesStream
-                            .map(Category::getReaders)
-                            .flatMap(Set::stream)
-                            .filter(r -> sourcePageLangStream.anyMatch(l -> r.getLanguages().contains(l)))
-                            .forEach(r -> appendReaderQueue(freshNotes, r));
-                    }
-                }
+        long sourcePageAmount = sourcePageService.countBySource(source);
+        if (sourcePageNum.get() == sourcePageAmount) {
+            sources.put(source.getName(), new AtomicInteger(0));
+            log.info("synchronisation:source:ended:{}", source.getName());
+        }
 
-                log.info("synchronisation:finished:{}", sourcePage.getUrl());
-            }
-        });
+        PageRequest singlePageRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
+        SourcePage sourcePage =
+            sourcePageService.findFirstBySource(source, singlePageRequest).orElse(null);
+        if (sourcePage == null) {
+            return;
+        }
+        NewsSyncResult freshNotes = newsService.sync(sourcePage);
+        if (freshNotes.getNewsNotes().isEmpty()) {
+            return;
+        }
+        if (sourcePage.getRegions() != null) {
+            sourcePage.getRegions().stream()
+                .map(Category::getReaders)
+                .flatMap(Set::stream)
+                .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
+                .filter(r -> atLeastOneInCommon(sourcePage.getCategories(), r.getCategories()))
+                .forEach(r -> appendReaderQueue(freshNotes, r));
+        } else {
+            sourcePage.getCategories()
+                .stream()
+                .map(Category::getReaders)
+                .flatMap(Set::stream)
+                .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
+                .forEach(r -> appendReaderQueue(freshNotes, r));
+        }
+
+        log.info("synchronisation:finished:{}", sourcePage.getUrl());
+    }
+
+    private <T> boolean atLeastOneInCommon(Collection<T> c1, Collection<T> c2) {
+        return !Collections.disjoint(c1, c2);
+    }
+
+    @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
+    public void refreshIds() {
+        activeSourcesIds = sourceService.findAllActive().stream().map(Source::getId).collect(Collectors.toList());
+        log.info("synchronisation:refresh-id:{}", activeSourcesIds);
+    }
+
+    private void refreshSourceNumber() {
+        if (activeSourcesIds.size() == sourceNumber.get()) {
+            log.warn("synchronisation:source number:refresh");
+            sourceNumber.set(0);
+        }
     }
 
     private void appendReaderQueue(NewsSyncResult freshNotes, Reader r) {
