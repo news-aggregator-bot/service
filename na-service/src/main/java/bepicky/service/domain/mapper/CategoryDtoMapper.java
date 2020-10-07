@@ -18,6 +18,7 @@ public class CategoryDtoMapper {
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
         categoryDto.setLocalised(localisation.getValue());
+        categoryDto.setType(c.getType().name());
         categoryDto.setParent(toParentResponse(c.getParent(), language));
         categoryDto.setChildren(c.getSubcategories()
             .stream()
@@ -34,6 +35,7 @@ public class CategoryDtoMapper {
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
+        categoryDto.setType(c.getType().name());
         categoryDto.setLocalised(localisation.getValue());
         return categoryDto;
     }
@@ -46,6 +48,7 @@ public class CategoryDtoMapper {
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
+        categoryDto.setType(c.getType().name());
         categoryDto.setParent(toParentResponse(c.getParent(), language));
         categoryDto.setLocalised(localisation.getValue());
         return categoryDto;
