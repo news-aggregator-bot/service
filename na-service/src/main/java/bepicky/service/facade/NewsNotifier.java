@@ -3,11 +3,11 @@ package bepicky.service.facade;
 import bepicky.common.domain.request.NewsNoteRequest;
 import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.client.NaBotClient;
+import bepicky.service.domain.mapper.NewsNoteDtoMapper;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -33,7 +33,7 @@ public class NewsNotifier {
     private IReaderService readerService;
 
     @Autowired
-    private ModelMapper modelMapper;
+    private NewsNoteDtoMapper newsNoteDtoMapper;
 
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
@@ -56,7 +56,7 @@ public class NewsNotifier {
             .collect(Collectors.toSet());
         List<NewsNoteRequest> notesRequests = freshNotes
             .stream()
-            .map(n -> modelMapper.map(n, NewsNoteRequest.class))
+            .map(n -> newsNoteDtoMapper.toDto(n, r.getPrimaryLanguage()))
             .collect(Collectors.toList());
         NotifyNewsRequest notifyRequest = new NotifyNewsRequest(
             r.getChatId(),

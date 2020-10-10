@@ -35,7 +35,7 @@ na:
       enabled: false
       cron: '*/20 * * * * *'
     notify:
-      enabled: false
-      cron: '* * */1 * * *'
+      enabled: true
+      cron: '0 0 0 0 0 */1'
     reader:
       cron: '* * 0 * * *'

@@ -21,7 +21,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -29,7 +28,6 @@ import java.nio.file.Path;
 
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
-@ActiveProfiles("it")
 @Slf4j
 @Ignore
 public class PageApprover {

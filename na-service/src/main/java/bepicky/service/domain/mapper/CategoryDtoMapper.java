@@ -19,15 +19,15 @@ public class CategoryDtoMapper {
         categoryDto.setName(c.getName());
         categoryDto.setLocalised(localisation.getValue());
         categoryDto.setType(c.getType().name());
-        categoryDto.setParent(toParentResponse(c.getParent(), language));
+        categoryDto.setParent(toParentDto(c.getParent(), language));
         categoryDto.setChildren(c.getSubcategories()
             .stream()
-            .map(subC -> toSingleResponse(subC, language))
+            .map(subC -> toSingleDto(subC, language))
             .collect(Collectors.toList()));
         return categoryDto;
     }
 
-    public CategoryDto toSingleResponse(Category c, Language language) {
+    public CategoryDto toSingleDto(Category c, Language language) {
         if (c == null) {
             return null;
         }
@@ -40,7 +40,7 @@ public class CategoryDtoMapper {
         return categoryDto;
     }
 
-    public CategoryDto toParentResponse(Category c, Language language) {
+    public CategoryDto toParentDto(Category c, Language language) {
         if (c == null) {
             return null;
         }
@@ -49,7 +49,7 @@ public class CategoryDtoMapper {
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
         categoryDto.setType(c.getType().name());
-        categoryDto.setParent(toParentResponse(c.getParent(), language));
+        categoryDto.setParent(toParentDto(c.getParent(), language));
         categoryDto.setLocalised(localisation.getValue());
         return categoryDto;
     }

@@ -20,7 +20,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -31,7 +30,6 @@ import static org.junit.Assert.assertFalse;
 
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
 @RunWith(SpringRunner.class)
-@ActiveProfiles("it")
 @Slf4j
 @Ignore
 public class NewsApprover extends FuncSupport {
@@ -98,7 +96,7 @@ public class NewsApprover extends FuncSupport {
     }
 
     @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
     @EnableTransactionManagement
     static class NewsApproverConfiguration {
     }

@@ -66,11 +66,13 @@ public class SourcePage extends DatedEntity {
     )
     @Fetch(value = FetchMode.SUBSELECT)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<Category> categories;
 
     @OneToMany(mappedBy = "sourcePage", cascade = ALL, fetch = FetchType.EAGER)
     @JsonIgnore
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<ContentBlock> contentBlocks;
 
     @Transient

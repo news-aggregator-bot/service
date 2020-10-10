@@ -59,6 +59,7 @@ public class Category extends IdEntity {
         inverseJoinColumns = {@JoinColumn(name = "id_source_page")}
     )
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<SourcePage> sourcePages;
 
     @ManyToMany(fetch = FetchType.LAZY)
