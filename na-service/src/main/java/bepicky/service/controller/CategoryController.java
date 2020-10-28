@@ -27,7 +27,21 @@ public class CategoryController {
     @GetMapping("/category/list")
     public CategoryListResponse findAll(@RequestParam Map<String, Object> params) {
         ListCategoryRequest request = objectMapper.convertValue(params, ListCategoryRequest.class);
-        return request.getParentId() == 0 ? categoryFacade.listAll(request) : categoryFacade.listSub(request);
+        return request.getParentId() == 0 ? categoryFacade.listAll(request) : categoryFacade.sublist(request);
+    }
+
+    @GetMapping("/category/list/picked")
+    public CategoryListResponse findPicked(@RequestParam Map<String, Object> params) {
+        ListCategoryRequest request = objectMapper.convertValue(params, ListCategoryRequest.class);
+        return request.getParentId() == 0 ? categoryFacade.listPicked(request) : categoryFacade.sublistPicked(request);
+    }
+
+    @GetMapping("/category/list/notpicked")
+    public CategoryListResponse findNotPicked(@RequestParam Map<String, Object> params) {
+        ListCategoryRequest request = objectMapper.convertValue(params, ListCategoryRequest.class);
+        return request.getParentId() == 0 ?
+            categoryFacade.listNotPicked(request) :
+            categoryFacade.sublistNotPicked(request);
     }
 
     @PostMapping("/category/pick")

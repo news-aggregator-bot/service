@@ -21,7 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -30,7 +29,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Slf4j
-public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
+public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, CommonFunctionalFacade {
 
     @Autowired
     private ICategoryService categoryService;
@@ -52,33 +51,118 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade {
 
     @Override
     public CategoryListResponse listAll(ListCategoryRequest request) {
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
-        if (reader == null) {
-            log.warn("list:category:reader {} not found", request.getChatId());
-            return new CategoryListResponse(ErrorUtil.readerNotFound());
-        }
-        CategoryType type = CategoryType.valueOf(request.getType());
-        PageRequest req = PageRequest.of(request.getPage() - 1, request.getSize());
-        return getListCategoryResponse(reader, categoryService.findTopCategories(type, req));
+        return readerService.find(request.getChatId())
+            .map(reader -> {
+                CategoryType type = CategoryType.valueOf(request.getType());
+                return getListCategoryResponse(
+                    reader,
+                    categoryService.findTopCategories(type, pageReq(request.getPage(), request.getSize()))
+                );
+            }).orElseGet(() -> {
+                log.warn("list:category:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            });
     }
 
     @Override
-    public CategoryListResponse listSub(ListCategoryRequest request) {
-        Category parent = categoryService.find(request.getParentId()).orElse(null);
-        if (parent == null) {
-            log.warn("list:subcategory:parent category {} not found", request.getParentId());
-            return new CategoryListResponse(ErrorUtil.categoryNotFound());
-        }
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
-        if (reader == null) {
-            log.warn("list:subcategory:reader {} not found", request.getChatId());
-            return new CategoryListResponse(ErrorUtil.readerNotFound());
-        }
-        PageRequest req = PageRequest.of(request.getPage() - 1, request.getSize());
-        return getListCategoryResponse(
-            reader,
-            categoryService.findByParent(parent, req)
-        );
+    public CategoryListResponse sublist(ListCategoryRequest request) {
+        return categoryService.find(request.getParentId())
+            .map(parent -> readerService.find(request.getChatId()).map(reader -> getListCategoryResponse(
+                reader,
+                categoryService.findByParent(parent, pageReq(request.getPage(), request.getSize()))
+            )).orElseGet(() -> {
+                log.warn("list:subcategory:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            })).orElseGet(() -> {
+                log.warn("list:subcategory:parent category {} not found", request.getParentId());
+                return new CategoryListResponse(ErrorUtil.categoryNotFound());
+            });
+    }
+
+    @Override
+    public CategoryListResponse listPicked(ListCategoryRequest request) {
+        return readerService.find(request.getChatId())
+            .map(reader -> {
+                log.debug("list:picked category:reader:{}:type:{}", reader.getId(), request.getType());
+                CategoryType type = CategoryType.valueOf(request.getType());
+
+                return getListCategoryResponse(
+                    reader,
+                    categoryService.findPickedTopCategories(
+                        reader,
+                        type,
+                        pageReq(request.getPage(), request.getSize())
+                    )
+                );
+            })
+            .orElseGet(() -> {
+                log.warn("list:picked category:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            });
+    }
+
+    @Override
+    public CategoryListResponse sublistPicked(ListCategoryRequest request) {
+        return readerService.find(request.getChatId())
+            .map(reader -> categoryService.find(request.getParentId()).map(
+                parent -> getListCategoryResponse(
+                    reader,
+                    categoryService.findPickedCategoriesByParent(
+                        reader,
+                        parent,
+                        pageReq(request.getPage(), request.getSize())
+                    )
+                )
+            ).orElseGet(() -> {
+                log.warn("list:subcategory:parent category {} not found", request.getParentId());
+                return new CategoryListResponse(ErrorUtil.categoryNotFound());
+            })).orElseGet(() -> {
+                log.warn("list:subcategory:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            });
+    }
+
+    @Override
+    public CategoryListResponse listNotPicked(ListCategoryRequest request) {
+        return readerService.find(request.getChatId())
+            .map(reader -> {
+                log.debug("list:not picked category:reader:{}:type:{}", reader.getId(), request.getType());
+                CategoryType type = CategoryType.valueOf(request.getType());
+
+                return getListCategoryResponse(
+                    reader,
+                    categoryService.findNotPickedTopCategories(
+                        reader,
+                        type,
+                        pageReq(request.getPage(), request.getSize())
+                    )
+                );
+            })
+            .orElseGet(() -> {
+                log.warn("list:not picked category:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            });
+    }
+
+    @Override
+    public CategoryListResponse sublistNotPicked(ListCategoryRequest request) {
+        return readerService.find(request.getChatId())
+            .map(reader -> categoryService.find(request.getParentId()).map(
+                parent -> getListCategoryResponse(
+                    reader,
+                    categoryService.findNotPickedCategoriesByParent(
+                        reader,
+                        parent,
+                        pageReq(request.getPage(), request.getSize())
+                    )
+                )
+            ).orElseGet(() -> {
+                log.warn("list:subcategory:parent category {} not found", request.getParentId());
+                return new CategoryListResponse(ErrorUtil.categoryNotFound());
+            })).orElseGet(() -> {
+                log.warn("list:subcategory:reader {} not found", request.getChatId());
+                return new CategoryListResponse(ErrorUtil.readerNotFound());
+            });
     }
 
     @Override

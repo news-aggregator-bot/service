@@ -3,6 +3,7 @@ package bepicky.service.service;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryLocalisation;
 import bepicky.service.entity.CategoryType;
+import bepicky.service.entity.Reader;
 import bepicky.service.repository.CategoryLocalisationRepository;
 import bepicky.service.repository.CategoryRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -47,6 +48,34 @@ public class CategoryService implements ICategoryService {
     @Override
     public Page<Category> findByParent(Category parent, Pageable pageable) {
         return repository.findAllByParent(parent, pageable);
+    }
+
+    @Override
+    public Page<Category> findPickedTopCategories(
+        Reader reader, CategoryType type, Pageable pageable
+    ) {
+        return repository.findPickedTopCategories(reader.getId(), type, pageable);
+    }
+
+    @Override
+    public Page<Category> findPickedCategoriesByParent(
+        Reader reader, Category parent, Pageable pageable
+    ) {
+        return repository.findPickedCategoriesByParent(reader.getId(), parent, pageable);
+    }
+
+    @Override
+    public Page<Category> findNotPickedTopCategories(
+        Reader reader, CategoryType type, Pageable pageable
+    ) {
+        return repository.findNotPickedTopCategories(reader.getId(), type, pageable);
+    }
+
+    @Override
+    public Page<Category> findNotPickedCategoriesByParent(
+        Reader reader, Category parent, Pageable pageable
+    ) {
+        return repository.findNotPickedCategoriesByParent(reader.getId(), parent, pageable);
     }
 
     @Override
