@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -41,41 +43,62 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public List<Category> findAll(Pageable pageable) {
-        return repository.findAll(pageable).toList();
-    }
-
-    @Override
     public Page<Category> findByParent(Category parent, Pageable pageable) {
         return repository.findAllByParent(parent, pageable);
     }
 
     @Override
-    public Page<Category> findPickedTopCategories(
-        Reader reader, CategoryType type, Pageable pageable
-    ) {
-        return repository.findPickedTopCategories(reader.getId(), type, pageable);
+    public Page<Category> findPickedTopCategories(Reader reader, CategoryType type, Pageable pageable) {
+        List<Category> picked = repository.findAllByReaders_IdAndType(reader.getId(), type);
+        if (picked.isEmpty()) {
+            return Page.empty(pageable);
+        }
+
+        Set<Category> pickedParents = picked.stream().map(this::takeParent).collect(Collectors.toSet());
+        if (pickedParents.size() == 1) {
+            return repository.findAllByReaders_IdAndIdIn(
+                reader.getId(),
+                collectSubcategoryIds(pickedParents),
+                pageable
+            );
+        }
+        return findByIds(pageable, pickedParents);
     }
 
     @Override
     public Page<Category> findPickedCategoriesByParent(
         Reader reader, Category parent, Pageable pageable
     ) {
-        return repository.findPickedCategoriesByParent(reader.getId(), parent, pageable);
+        return repository.findAllByReaders_IdAndParent(reader.getId(), parent, pageable);
     }
 
     @Override
-    public Page<Category> findNotPickedTopCategories(
-        Reader reader, CategoryType type, Pageable pageable
-    ) {
-        return repository.findNotPickedTopCategories(reader.getId(), type, pageable);
+    public Page<Category> findNotPickedTopCategories(Reader reader, CategoryType type, Pageable pageable) {
+        List<Category> picked = repository.findAllByReaders_IdAndType(reader.getId(), type);
+        if (picked.isEmpty()) {
+            return Page.empty(pageable);
+        }
+        Set<Long> topCategoriesIds = repository.findAllByTypeAndParentIsNull(type)
+            .stream()
+            .map(Category::getId)
+            .collect(Collectors.toSet());
+        Set<Long> pickedIds = picked.stream().map(Category::getId).collect(Collectors.toSet());
+        return repository.findAllByIdInAndIdNotIn(topCategoriesIds, pickedIds, pageable);
     }
 
     @Override
     public Page<Category> findNotPickedCategoriesByParent(
         Reader reader, Category parent, Pageable pageable
     ) {
-        return repository.findNotPickedCategoriesByParent(reader.getId(), parent, pageable);
+        List<Category> pickedByParent = repository.findAllByReaders_IdAndParent(reader.getId(), parent);
+        if (pickedByParent.isEmpty()) {
+            return repository.findAllByParent(parent, pageable);
+        }
+        Set<Long> parentIds = repository.findAllByParent(parent).stream()
+            .map(Category::getId)
+            .collect(Collectors.toSet());
+        Set<Long> pickedIds = pickedByParent.stream().map(Category::getId).collect(Collectors.toSet());
+        return repository.findAllByIdInAndIdNotIn(parentIds, pickedIds, pageable);
     }
 
     @Override
@@ -107,5 +130,23 @@ public class CategoryService implements ICategoryService {
     @Override
     public List<CategoryLocalisation> findLocalisationByValue(String value) {
         return localisationRepository.findByValue(value);
+    }
+
+    private Set<Long> collectSubcategoryIds(Set<Category> pickedParents) {
+        return pickedParents.stream()
+            .flatMap(c -> c.getSubcategories().stream())
+            .map(Category::getId)
+            .collect(Collectors.toSet());
+    }
+
+    private Page<Category> findByIds(Pageable pageable, Set<Category> categories) {
+        Set<Long> categoryIds = categories.stream()
+            .map(Category::getId)
+            .collect(Collectors.toSet());
+        return repository.findAllByIdIn(categoryIds, pageable);
+    }
+
+    private Category takeParent(Category c) {
+        return c.getParent() == null ? c : takeParent(c.getParent());
     }
 }

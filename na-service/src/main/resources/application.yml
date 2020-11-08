@@ -35,3 +35,11 @@ management:
 eureka:
   instance:
     hostName: na-service
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace
