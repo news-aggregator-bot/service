@@ -47,12 +47,8 @@ public class ContentBlock extends IdEntity {
 
     public ContentTag findByType(ContentTagType type) {
         if (typeMap == null) {
-            try {
-                typeMap = tags.stream()
-                    .collect(Collectors.toMap(ContentTag::getType, Function.identity()));
-            } catch (RuntimeException e) {
-                throw e;
-            }
+            typeMap = tags.stream()
+                .collect(Collectors.toMap(ContentTag::getType, Function.identity()));
         }
         return typeMap.get(type);
     }

@@ -5,6 +5,7 @@ import bepicky.service.entity.ContentBlock;
 import bepicky.service.entity.ContentTag;
 import bepicky.service.entity.ContentTagType;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.web.parser.doc.DocumentTagParser;
 import bepicky.service.web.reader.WebPageReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
@@ -13,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.jsoup.select.Evaluator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +29,9 @@ public class DefaultWebContentParser implements WebContentParser {
 
     @Autowired
     private List<WebPageReader> webPageReaders;
+
+    @Autowired
+    private List<DocumentTagParser> tagParsers;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -76,44 +79,28 @@ public class DefaultWebContentParser implements WebContentParser {
 
     private List<PageParsedData> parseDoc(SourcePage page, Document doc, ContentBlock block) {
         ContentTag mainTag = block.findByType(ContentTagType.MAIN);
-        ContentTag titleTag = block.findByType(ContentTagType.TITLE);
-        ContentTag linkTag = block.findByType(ContentTagType.LINK);
         ContentTag authorTag = block.findByType(ContentTagType.AUTHOR);
 
         if (mainTag != null) {
             Elements mainClassElems = doc.select(evaluatorFactory.get(mainTag));
 
             Builder<PageParsedData> datas = ImmutableList.builder();
-            for (Element wrapper : mainClassElems) {
+            for (Element main : mainClassElems) {
 
                 PageParsedData.PageParsedDataBuilder dataBuilder = PageParsedData.builder();
-                if (titleTag == null && linkTag != null) {
-                    Element linkEl = wrapper.selectFirst(evaluatorFactory.get(linkTag));
-                    dataBuilder.title(linkEl.text());
-                    dataBuilder.link(getHref(page, linkEl));
-                } else if (titleTag != null) {
-                    Element titleEl = wrapper.selectFirst(evaluatorFactory.get(titleTag));
-                    if (titleEl == null) {
-                        continue;
-                    }
-                    dataBuilder.title(titleEl.text());
-                    if (linkTag == null) {
-                        Element a = getLinkEl(titleEl, wrapper);
-                        if (a == null) {
-                            continue;
-                        }
-                        dataBuilder.link(getHref(page, a));
-                    } else {
-                        Element linkEl = wrapper.selectFirst(evaluatorFactory.get(linkTag));
-                        dataBuilder.link(getHref(page, linkEl));
-                    }
-                } else {
-                    continue;
-                }
 
-                dataBuilder.author(getAuthor(authorTag, wrapper));
-
-                datas.add(dataBuilder.build());
+                tagParsers.stream()
+                    .filter(tp -> tp.matches(block))
+                    .map(tp -> tp.parse(main, block, a -> getHref(page, a)))
+                    .filter(Optional::isPresent)
+                    .findFirst()
+                    .orElse(Optional.empty())
+                    .ifPresent(tp -> {
+                        dataBuilder.title(tp.getT1());
+                        dataBuilder.link(tp.getT2());
+                        dataBuilder.author(getAuthor(authorTag, main));
+                        datas.add(dataBuilder.build());
+                    });
             }
             return datas.build();
         }
@@ -122,12 +109,6 @@ public class DefaultWebContentParser implements WebContentParser {
 
     private String getHref(SourcePage page, Element a) {
         return urlNormalisationContext.normaliseUrl(page, a);
-    }
-
-    private Element getLinkEl(Element titleEl, Element wrapper) {
-        Evaluator.Tag linkTag = new Evaluator.Tag("a");
-        Element link = titleEl.selectFirst(linkTag);
-        return link == null ? wrapper.selectFirst(linkTag) : link;
     }
 
     private String getAuthor(ContentTag authorTag, Element wrapper) {

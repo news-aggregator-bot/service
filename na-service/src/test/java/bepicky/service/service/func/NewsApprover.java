@@ -13,7 +13,6 @@ import bepicky.service.service.INewsService;
 import bepicky.service.service.ISourcePageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +30,6 @@ import static org.junit.Assert.assertFalse;
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
 @RunWith(SpringRunner.class)
 @Slf4j
-@Ignore
 public class NewsApprover extends FuncSupport {
 
     @Autowired

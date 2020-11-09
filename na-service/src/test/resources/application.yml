@@ -36,6 +36,6 @@ na:
       cron: '*/20 * * * * *'
     notify:
       enabled: true
-      cron: '0 0 0 0 0 */1'
+      cron: '0 0 0 0/1 * *'
     reader:
       cron: '* * 0 * * *'

@@ -13,7 +13,6 @@ import bepicky.service.web.reader.JsoupWebPageReader;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,6 @@ import java.nio.file.Path;
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
 @Slf4j
-@Ignore
 public class PageApprover {
 
     @Autowired
@@ -98,7 +96,7 @@ public class PageApprover {
     }
 
     @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
     @EnableTransactionManagement
     @Import(WebPageReaderConfiguration.class)
     static class PageApproverConfiguration {

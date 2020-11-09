@@ -3,6 +3,7 @@ package bepicky.service.web.parser;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.UrlNormalisation;
 import com.google.common.collect.ImmutableMap;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +24,7 @@ public class UrlNormalisationContext {
 
     private String cutHref(Element a) {
         String href = getHref(a);
-        if (href.contains("?")) {
+        if (StringUtils.isNotBlank(href) && href.contains("?")) {
             return new StringBuilder(href).delete(href.indexOf("?"), href.length()).toString();
         }
         return href;
