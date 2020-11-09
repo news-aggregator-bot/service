@@ -79,8 +79,10 @@ public class NewsSynchroniser {
         AtomicInteger sourcePageNum = sources.get(source.getName());
 
         long sourcePageAmount = sourcePageService.countBySource(source);
-        if (sourcePageNum.get() == sourcePageAmount) {
-            sources.put(source.getName(), new AtomicInteger(0));
+        if (sourcePageNum == null || sourcePageNum.get() == sourcePageAmount) {
+            AtomicInteger value = new AtomicInteger(0);
+            sources.put(source.getName(), value);
+            sourcePageNum = value;
             log.debug("synchronisation:source:ended:{}", source.getName());
         }
 
