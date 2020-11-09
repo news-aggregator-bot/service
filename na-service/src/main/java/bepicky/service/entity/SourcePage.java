@@ -50,6 +50,7 @@ public class SourcePage extends DatedEntity {
         joinColumns = {@JoinColumn(name = "id_source_page")},
         inverseJoinColumns = {@JoinColumn(name = "language")}
     )
+    @EqualsAndHashCode.Exclude
     private Set<Language> languages;
 
     @ManyToOne(fetch = FetchType.EAGER)
