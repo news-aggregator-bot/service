@@ -8,6 +8,8 @@ import lombok.ToString;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -27,7 +29,9 @@ public class Source extends DatedEntity {
     @Column(nullable = false)
     private String name;
 
-    private boolean active = true;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private SourceStatus status = SourceStatus.DISABLED;
 
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
@@ -43,4 +47,8 @@ public class Source extends DatedEntity {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     private Set<Reader> readers;
+
+    public boolean isActive() {
+        return status != SourceStatus.DISABLED;
+    }
 }

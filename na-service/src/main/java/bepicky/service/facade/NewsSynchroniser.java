@@ -56,7 +56,7 @@ public class NewsSynchroniser {
 
     @PostConstruct
     public void initSources() {
-        sourceService.findAllActive().forEach(s -> sources.put(s.getName(), new AtomicInteger(0)));
+        sourceService.findAllEnabled().forEach(s -> sources.put(s.getName(), new AtomicInteger(0)));
     }
 
     @Transactional
@@ -124,7 +124,7 @@ public class NewsSynchroniser {
 
     @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
     public void refreshIds() {
-        activeSourcesIds = sourceService.findAllActive().stream().map(Source::getId).collect(Collectors.toList());
+        activeSourcesIds = sourceService.findAllEnabled().stream().map(Source::getId).collect(Collectors.toList());
         log.debug("synchronisation:refresh-id:{}", activeSourcesIds);
     }
 
