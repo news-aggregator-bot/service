@@ -102,6 +102,7 @@ public class NewsSynchroniser {
                 .map(Category::getReaders)
                 .flatMap(Set::stream)
                 .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
+                .filter(r -> r.getSources().contains(sourcePage.getSource()))
                 .filter(r -> atLeastOneInCommon(sourcePage.getCategories(), r.getCategories()))
                 .forEach(r -> appendReaderQueue(freshNotes, r));
         } else {
@@ -110,6 +111,7 @@ public class NewsSynchroniser {
                 .map(Category::getReaders)
                 .flatMap(Set::stream)
                 .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
+                .filter(r -> r.getSources().contains(sourcePage.getSource()))
                 .forEach(r -> appendReaderQueue(freshNotes, r));
         }
 
