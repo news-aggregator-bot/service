@@ -35,6 +35,7 @@ public class Source extends DatedEntity {
 
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<SourcePage> pages;
 
     @ManyToMany(cascade = CascadeType.ALL)
