@@ -31,7 +31,7 @@ public class Source extends DatedEntity {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private SourceStatus status = SourceStatus.DISABLED;
+    private Status status = Status.DISABLED;
 
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
@@ -49,6 +49,14 @@ public class Source extends DatedEntity {
     private Set<Reader> readers;
 
     public boolean isActive() {
-        return status != SourceStatus.DISABLED;
+        return status != Status.DISABLED;
+    }
+
+    public boolean isPrimary() {
+        return status == Status.PRIMARY;
+    }
+
+    public enum Status {
+        PRIMARY, SECONDARY, DISABLED
     }
 }

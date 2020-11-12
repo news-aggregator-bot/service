@@ -2,7 +2,6 @@ package bepicky.service.service;
 
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
-import bepicky.service.entity.SourceStatus;
 import bepicky.service.repository.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +39,7 @@ public class SourceService implements ISourceService {
 
     @Override
     public List<Source> findAllEnabled() {
-        return repository.findByStatusNot(SourceStatus.DISABLED);
+        return repository.findByStatusNot(Source.Status.DISABLED);
     }
 
     @Override
@@ -54,16 +53,16 @@ public class SourceService implements ISourceService {
     }
 
     @Override
-    public Source updateStatus(Long id, SourceStatus status) {
+    public Source updateStatus(Long id, Source.Status status) {
         return update(id, status, "source:{}:enabled");
     }
 
     @Override
     public Source disable(Long id) {
-        return update(id, SourceStatus.DISABLED, "source:{}:disabled");
+        return update(id, Source.Status.DISABLED, "source:{}:disabled");
     }
 
-    private Source update(Long id, SourceStatus status, String logMessage) {
+    private Source update(Long id, Source.Status status, String logMessage) {
         return find(id).map(s -> {
             s.setStatus(status);
             repository.save(s);

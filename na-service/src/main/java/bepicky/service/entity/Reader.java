@@ -19,6 +19,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
@@ -161,6 +162,11 @@ public class Reader extends DatedEntity {
             languages = new HashSet<>();
         }
         languages.add(language);
+        Set<Source> langSources = language.getSourcePages().stream()
+            .map(SourcePage::getSource)
+            .filter(Source::isPrimary)
+            .collect(Collectors.toSet());
+        addSources(langSources);
     }
 
     public void removeLanguage(Language language) {

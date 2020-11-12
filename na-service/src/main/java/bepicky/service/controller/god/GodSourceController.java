@@ -1,7 +1,6 @@
 package bepicky.service.controller.god;
 
 import bepicky.service.entity.Source;
-import bepicky.service.entity.SourceStatus;
 import bepicky.service.service.ISourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +22,7 @@ public class GodSourceController {
 
     @PutMapping("/source/{id}")
     public void enableSource(@PathVariable long id, @RequestParam String status) {
-        SourceStatus sourceStatus = SourceStatus.valueOf(status.toUpperCase());
+        Source.Status sourceStatus = Source.Status.valueOf(status.toUpperCase());
         sourceService.updateStatus(id, sourceStatus);
     }
 

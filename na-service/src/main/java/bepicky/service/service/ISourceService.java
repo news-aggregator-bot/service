@@ -1,7 +1,6 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.Source;
-import bepicky.service.entity.SourceStatus;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +19,7 @@ public interface ISourceService {
 
     Optional<Source> findByName(String name);
 
-    Source updateStatus(Long id, SourceStatus status);
+    Source updateStatus(Long id, Source.Status status);
 
     Source disable(Long id);
 }

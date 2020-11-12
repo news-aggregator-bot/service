@@ -12,7 +12,6 @@ import bepicky.service.domain.request.ListCategoryRequest;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Reader;
-import bepicky.service.entity.SourcePage;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
@@ -167,10 +166,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
 
     @Override
     public CategoryResponse pick(CategoryRequest request) {
-        return doAction(request, (r, c) -> {
-            r.addCategory(c);
-            r.addSources(c.getSourcePages().stream().map(SourcePage::getSource).collect(Collectors.toSet()));
-        });
+        return doAction(request, Reader::addCategory);
     }
 
     @Override

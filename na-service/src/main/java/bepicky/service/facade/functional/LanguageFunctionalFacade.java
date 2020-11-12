@@ -11,6 +11,7 @@ import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
+import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Autowired
     private ILanguageService languageService;
+
+    @Autowired
+    private ISourceService sourceService;
 
     @Autowired
     private IReaderService readerService;
