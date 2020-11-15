@@ -1,10 +1,8 @@
 package bepicky.service.facade;
 
-import bepicky.common.domain.request.NewsNoteRequest;
 import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
-import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,16 +13,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 @Component
 @Slf4j
 @RefreshScope
 public class NewsNotifier {
-
-    private static final int NOTES_LIMIT = 1;
 
     @Autowired
     private NaBotClient botClient;
@@ -43,7 +37,7 @@ public class NewsNotifier {
     public void sync() {
         if (notifyEnabled) {
             readerService.findAllEnabled().parallelStream()
-                .filter(r -> r.getNotifyQueue().size() >= NOTES_LIMIT)
+                .filter(r -> !r.getNotifyQueue().isEmpty())
                 .forEach(this::notify);
         } else {
             log.warn("notify:disabled");
@@ -51,28 +45,25 @@ public class NewsNotifier {
     }
 
     private void notify(Reader r) {
-        Set<NewsNote> freshNotes = r.getNotifyQueue().stream()
-            .limit(NOTES_LIMIT)
-            .collect(Collectors.toSet());
-        List<NewsNoteRequest> notesRequests = freshNotes
+        r.getNotifyQueue()
             .stream()
             .map(n -> newsNoteDtoMapper.toDto(n, r.getPrimaryLanguage()))
-            .collect(Collectors.toList());
-        NotifyNewsRequest notifyRequest = new NotifyNewsRequest(
-            r.getChatId(),
-            r.getPrimaryLanguage().getLang(),
-            notesRequests
-        );
-
-        try {
-            botClient.notifyNews(notifyRequest);
-            log.info("notify:reader:success {}", r.getChatId());
-            r.removeQueueNewsNote(freshNotes);
-            readerService.save(r);
-            log.info("notify:reader:{}:notes:removed", r.getChatId());
-        } catch (Exception e) {
-            log.error("notify:reader:fail {} {}", r.getChatId(), e.getMessage());
-        }
+            .map(request -> new NotifyNewsRequest(
+                r.getChatId(),
+                r.getPrimaryLanguage().getLang(),
+                Arrays.asList(request)
+            ))
+            .forEach(notifyNewsRequest -> {
+                try {
+                    botClient.notifyNews(notifyNewsRequest);
+                    log.info("notify:reader:success {}", r.getChatId());
+                    r.removeQueueNewsNote(r.getNotifyQueue());
+                    readerService.save(r);
+                    log.info("notify:reader:{}:notes:removed", r.getChatId());
+                } catch (Exception e) {
+                    log.error("notify:reader:fail {} {}", r.getChatId(), e.getMessage());
+                }
+            });
     }
 
 }
