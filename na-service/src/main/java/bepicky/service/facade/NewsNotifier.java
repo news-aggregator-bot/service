@@ -32,6 +32,9 @@ public class NewsNotifier {
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
 
+    @Value("${na.schedule.notify.limit}")
+    private int notifyLimit;
+
     @Transactional
     @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
     public void sync() {
@@ -45,8 +48,8 @@ public class NewsNotifier {
     }
 
     private void notify(Reader r) {
-        r.getNotifyQueue()
-            .stream()
+        r.getNotifyQueue().stream()
+            .limit(notifyLimit)
             .map(n -> newsNoteDtoMapper.toDto(n, r.getPrimaryLanguage()))
             .map(request -> new NotifyNewsRequest(
                 r.getChatId(),
