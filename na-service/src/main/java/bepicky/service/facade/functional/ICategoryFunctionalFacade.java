@@ -19,6 +19,8 @@ public interface ICategoryFunctionalFacade {
 
     CategoryListResponse sublistNotPicked(ListCategoryRequest request);
 
+    CategoryResponse pickAll(CategoryRequest request);
+
     CategoryResponse pick(CategoryRequest request);
 
     CategoryResponse remove(CategoryRequest request);

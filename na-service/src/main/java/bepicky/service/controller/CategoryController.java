@@ -44,6 +44,11 @@ public class CategoryController {
             categoryFacade.sublistNotPicked(request);
     }
 
+    @PostMapping("/category/pick/all")
+    public CategoryResponse pickAll(@RequestBody CategoryRequest request) {
+        return categoryFacade.pickAll(request);
+    }
+
     @PostMapping("/category/pick")
     public CategoryResponse pick(@RequestBody CategoryRequest request) {
         return categoryFacade.pick(request);

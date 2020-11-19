@@ -165,6 +165,11 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     }
 
     @Override
+    public CategoryResponse pickAll(CategoryRequest request) {
+        return doAction(request, Reader::addAllCategories);
+    }
+
+    @Override
     public CategoryResponse pick(CategoryRequest request) {
         return doAction(request, Reader::addCategory);
     }

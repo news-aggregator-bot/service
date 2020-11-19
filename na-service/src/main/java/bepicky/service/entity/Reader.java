@@ -103,6 +103,13 @@ public class Reader extends DatedEntity {
             this.categories = new HashSet<>();
         }
         categories.add(category);
+    }
+
+    public void addAllCategories(Category category) {
+        if (this.categories == null) {
+            this.categories = new HashSet<>();
+        }
+        categories.add(category);
         category.getSubcategories().forEach(this::addCategory);
     }
 
