@@ -58,6 +58,10 @@ public class CategoryDtoMapper {
         return c.getLocalisations().stream()
             .filter(cl -> cl.getLanguage().equals(language))
             .findFirst()
-            .orElseThrow(ResourceNotFoundException::new);
+            .orElseThrow(() -> new ResourceNotFoundException(String.format(
+                "category:localisation:404:%s:%s",
+                c.getName(),
+                language.getLang()
+            )));
     }
 }

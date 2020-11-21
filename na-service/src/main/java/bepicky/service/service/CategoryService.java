@@ -44,9 +44,39 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public Page<Category> findByParent(Category parent, Pageable pageable) {
-        return repository.findAllByParent(parent, pageable);
+        return repository.findAllByParentOrderByNameAsc(parent, pageable);
     }
 
+    @Override
+    public Page<Category> findTopCategories(CategoryType type, Pageable pageable) {
+        return repository.findAllByTypeAndParentIsNullOrderByNameAsc(
+            type,
+            pageable
+        );
+    }
+
+    @Override
+    public Optional<Category> find(Long id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public Optional<Category> findByName(String name) {
+        return repository.findByName(name);
+    }
+
+    @Override
+    public void delete(long id) {
+        find(id).ifPresent(c -> repository.deleteById(id));
+    }
+
+    @Override
+    public List<CategoryLocalisation> saveAllLocalisations(Collection<CategoryLocalisation> categories) {
+        log.info("categorylocalisation:save:{}", categories);
+        return localisationRepository.saveAll(categories);
+    }
+
+    // NOT USED
     @Override
     public Page<Category> findPickedTopCategories(Reader reader, CategoryType type, Pageable pageable) {
         List<Category> picked = repository.findAllByReaders_IdAndType(reader.getId(), type);
@@ -92,39 +122,13 @@ public class CategoryService implements ICategoryService {
     ) {
         List<Category> pickedByParent = repository.findAllByReaders_IdAndParent(reader.getId(), parent);
         if (pickedByParent.isEmpty()) {
-            return repository.findAllByParent(parent, pageable);
+            return repository.findAllByParentOrderByNameAsc(parent, pageable);
         }
         Set<Long> parentIds = repository.findAllByParent(parent).stream()
             .map(Category::getId)
             .collect(Collectors.toSet());
         Set<Long> pickedIds = pickedByParent.stream().map(Category::getId).collect(Collectors.toSet());
         return repository.findAllByIdInAndIdNotIn(parentIds, pickedIds, pageable);
-    }
-
-    @Override
-    public Page<Category> findTopCategories(CategoryType type, Pageable pageable) {
-        return repository.findAllByTypeAndParentIsNull(type, pageable);
-    }
-
-    @Override
-    public Optional<Category> find(Long id) {
-        return repository.findById(id);
-    }
-
-    @Override
-    public Optional<Category> findByName(String name) {
-        return repository.findByName(name);
-    }
-
-    @Override
-    public void delete(long id) {
-        find(id).ifPresent(c -> repository.deleteById(id));
-    }
-
-    @Override
-    public List<CategoryLocalisation> saveAllLocalisations(Collection<CategoryLocalisation> categories) {
-        log.info("categorylocalisation:save:{}", categories);
-        return localisationRepository.saveAll(categories);
     }
 
     @Override

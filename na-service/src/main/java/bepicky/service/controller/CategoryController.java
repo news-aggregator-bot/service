@@ -58,4 +58,9 @@ public class CategoryController {
     public CategoryResponse remove(@RequestBody CategoryRequest request) {
         return categoryFacade.remove(request);
     }
+
+    @PostMapping("/category/remove/all")
+    public CategoryResponse removeAll(@RequestBody CategoryRequest request) {
+        return categoryFacade.removeAll(request);
+    }
 }

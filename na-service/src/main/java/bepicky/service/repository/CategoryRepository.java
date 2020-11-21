@@ -22,11 +22,11 @@ public interface CategoryRepository extends JpaRepository<Category, Long>, JpaSp
 
     Page<Category> findAllByReaders_IdAndIdIn(long id, Iterable<Long> ids, Pageable pageable);
 
-    Page<Category> findAllByParent(Category parent, Pageable pageable);
+    Page<Category> findAllByParentOrderByNameAsc(Category parent, Pageable pageable);
 
     List<Category> findAllByParent(Category parent);
 
-    Page<Category> findAllByTypeAndParentIsNull(CategoryType type, Pageable pageable);
+    Page<Category> findAllByTypeAndParentIsNullOrderByNameAsc(CategoryType type, Pageable pageable);
 
     List<Category> findAllByTypeAndParentIsNull(CategoryType type);
 

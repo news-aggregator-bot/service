@@ -113,11 +113,17 @@ public class Reader extends DatedEntity {
         category.getSubcategories().forEach(this::addCategory);
     }
 
+    public void removeAllCategory(Category category) {
+        if (this.categories != null) {
+            categories.remove(category);
+            category.getSubcategories().forEach(this::removeAllCategory);
+            removeTopParent(category.getParent());
+        }
+    }
+
     public void removeCategory(Category category) {
         if (this.categories != null) {
             categories.remove(category);
-            category.getSubcategories().forEach(this::removeCategory);
-            removeTopParent(category.getParent());
         }
     }
 

@@ -24,4 +24,6 @@ public interface ICategoryFunctionalFacade {
     CategoryResponse pick(CategoryRequest request);
 
     CategoryResponse remove(CategoryRequest request);
+
+    CategoryResponse removeAll(CategoryRequest request);
 }

@@ -179,6 +179,11 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         return doAction(request, Reader::removeCategory);
     }
 
+    @Override
+    public CategoryResponse removeAll(CategoryRequest request) {
+        return doAction(request, Reader::removeAllCategory);
+    }
+
     private CategoryResponse doAction(CategoryRequest request, BiConsumer<Reader, Category> action) {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
@@ -202,7 +207,6 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         try {
             List<CategoryDto> dtos = categoryPage
                 .stream()
-                .filter(c -> matchesReader(reader, c))
                 .map(c -> toDto(reader, c))
                 .collect(Collectors.toList());
 
@@ -224,12 +228,6 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
             dto.getParent().setPicked(reader.getCategories().contains(c.getParent()));
         }
         return dto;
-    }
-
-    private boolean matchesReader(Reader reader, Category c) {
-        return c.getSourcePages()
-            .stream()
-            .anyMatch(sp -> sp.getLanguages().stream().anyMatch(l -> reader.getLanguages().contains(l)));
     }
 
 }
