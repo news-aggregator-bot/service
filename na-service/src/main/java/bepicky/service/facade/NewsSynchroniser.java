@@ -20,7 +20,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -119,7 +118,7 @@ public class NewsSynchroniser {
     }
 
     private <T> boolean atLeastOneInCommon(Collection<T> c1, Collection<T> c2) {
-        return !Collections.disjoint(c1, c2);
+        return c1.stream().anyMatch(c2::contains);
     }
 
     @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
