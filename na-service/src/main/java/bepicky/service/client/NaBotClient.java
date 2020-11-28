@@ -1,5 +1,6 @@
 package bepicky.service.client;
 
+import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.NotifyNewsRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,4 +15,7 @@ public interface NaBotClient {
 
     @GetMapping("/ping")
     void ping();
+
+    @PutMapping("/refresh/reply-keyboard")
+    void refreshReplyKeyabord(@RequestBody ReaderDto readerDto);
 }

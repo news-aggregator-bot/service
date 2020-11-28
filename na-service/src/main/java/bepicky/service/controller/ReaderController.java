@@ -3,6 +3,7 @@ package bepicky.service.controller;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
 import bepicky.common.exception.ResourceNotFoundException;
+import bepicky.service.client.NaBotClient;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
@@ -33,6 +34,9 @@ public class ReaderController {
 
     @Autowired
     private ILanguageService languageService;
+
+    @Autowired
+    private NaBotClient naBotClient;
 
     @PostMapping("/register")
     public ReaderDto register(@Valid @RequestBody ReaderRequest dto) {
