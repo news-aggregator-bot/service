@@ -1,5 +1,6 @@
 package bepicky.service.facade.functional;
 
+import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.request.CategoryRequest;
 import bepicky.common.domain.response.CategoryListResponse;
 import bepicky.common.domain.response.CategoryResponse;
@@ -26,4 +27,8 @@ public interface ICategoryFunctionalFacade {
     CategoryResponse remove(CategoryRequest request);
 
     CategoryResponse removeAll(CategoryRequest request);
+
+    CategoryDto deleteById(long id);
+
+    CategoryDto deleteByName(String name);
 }

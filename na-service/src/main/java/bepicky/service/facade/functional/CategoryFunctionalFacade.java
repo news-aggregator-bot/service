@@ -184,6 +184,16 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         return doAction(request, Reader::removeAllCategory);
     }
 
+    @Override
+    public CategoryDto deleteById(long id) {
+        return categoryService.delete(id).map(c -> modelMapper.map(c, CategoryDto.class)).orElse(null);
+    }
+
+    @Override
+    public CategoryDto deleteByName(String name) {
+        return categoryService.deleteByName(name).map(c -> modelMapper.map(c, CategoryDto.class)).orElse(null);
+    }
+
     private CategoryResponse doAction(CategoryRequest request, BiConsumer<Reader, Category> action) {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {

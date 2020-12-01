@@ -33,7 +33,9 @@ public interface ICategoryService {
 
     Optional<Category> findByName(String name);
 
-    void delete(long id);
+    Optional<Category> delete(long id);
+
+    Optional<Category> deleteByName(String name);
 
     List<CategoryLocalisation> saveAllLocalisations(Collection<CategoryLocalisation> categories);
 

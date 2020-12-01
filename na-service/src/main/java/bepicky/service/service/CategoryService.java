@@ -66,8 +66,19 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public void delete(long id) {
-        find(id).ifPresent(c -> repository.deleteById(id));
+    public Optional<Category> delete(long id) {
+        return find(id).map(c -> {
+            repository.delete(c);
+            return c;
+        });
+    }
+
+    @Override
+    public Optional<Category> deleteByName(String name) {
+        return findByName(name).map(c -> {
+            repository.delete(c);
+            return c;
+        });
     }
 
     @Override

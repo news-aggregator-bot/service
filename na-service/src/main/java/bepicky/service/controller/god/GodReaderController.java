@@ -16,7 +16,6 @@ public class GodReaderController {
     private IReaderFunctionalFacade readerFacade;
 
     @DeleteMapping("/delete/{id}")
-
     public ReaderDto deleteById(@PathVariable long id) {
         return readerFacade.delete(id);
     }
