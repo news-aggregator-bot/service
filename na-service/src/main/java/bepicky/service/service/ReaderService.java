@@ -38,6 +38,11 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public Optional<Reader> findById(long id) {
+        return readerRepository.findById(id);
+    }
+
+    @Override
     public Optional<Reader> find(long chatId) {
         return readerRepository.findByChatId(chatId);
     }

@@ -5,6 +5,7 @@ import bepicky.service.service.IReaderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
@@ -16,6 +17,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
     private ModelMapper modelMapper;
 
     @Override
+    @Transactional
     public ReaderDto delete(long id) {
         return readerService.delete(id).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
     }

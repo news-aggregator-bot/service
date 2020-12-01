@@ -76,7 +76,7 @@ public class Reader extends DatedEntity {
     @EqualsAndHashCode.Exclude
     private Set<Language> languages;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
         name = "notify_queue",
         joinColumns = {@JoinColumn(name = "id_reader")},
@@ -87,7 +87,7 @@ public class Reader extends DatedEntity {
     @ToString.Exclude
     private Set<NewsNote> notifyQueue;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
         name = "reader_source",
         joinColumns = {@JoinColumn(name = "id_reader")},

@@ -12,6 +12,8 @@ public interface IReaderService {
 
     Collection<Reader> save(Collection<Reader> reader);
 
+    Optional<Reader> findById(long id);
+
     Optional<Reader> find(long chatId);
 
     List<Reader> findAll();
