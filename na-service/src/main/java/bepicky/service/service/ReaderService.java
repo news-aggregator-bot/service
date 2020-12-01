@@ -5,6 +5,7 @@ import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
+@Transactional
 public class ReaderService implements IReaderService {
 
     @Autowired
@@ -66,5 +68,14 @@ public class ReaderService implements IReaderService {
             log.info("reader:disable:{}", r);
             return readerRepository.save(r);
         }).orElse(null);
+    }
+
+    @Override
+    public Optional<Reader> delete(long id) {
+        return readerRepository.findById(id)
+            .map(r -> {
+                readerRepository.delete(r);
+                return r;
+            });
     }
 }

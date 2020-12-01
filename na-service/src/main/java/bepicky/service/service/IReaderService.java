@@ -21,4 +21,6 @@ public interface IReaderService {
     Reader enable(long chatId);
 
     Reader disable(long chatId);
+
+    Optional<Reader> delete(long id);
 }

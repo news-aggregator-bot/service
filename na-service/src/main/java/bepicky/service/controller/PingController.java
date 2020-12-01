@@ -25,7 +25,7 @@ public class PingController {
             botClient.ping();
             log.info("bepicky-client-bot is online");
         } catch (Exception e) {
-            log.error("bepicky-client-bot is offline");
+            log.warn("bepicky-client-bot is offline");
         }
     }
 }
