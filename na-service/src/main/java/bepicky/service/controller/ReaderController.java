@@ -10,6 +10,7 @@ import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/reader")
+@Slf4j
 public class ReaderController {
 
     @Autowired
@@ -40,6 +42,7 @@ public class ReaderController {
 
     @PostMapping("/register")
     public ReaderDto register(@Valid @RequestBody ReaderRequest dto) {
+        log.info("reader:registration:{}", dto.toString());
         Language language = languageService.find(dto.getPrimaryLanguage())
             .orElseThrow(() -> new ResourceNotFoundException(dto.getPrimaryLanguage() + " language not found."));
         Platform platform = Platform.valueOf(dto.getPlatform());
