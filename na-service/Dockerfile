@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM adoptopenjdk/openjdk11
 
 MAINTAINER Vladyslav Yemelianov <emelyanov.vladyslav@gmail.com>
 RUN useradd -ms /bin/bash admin
