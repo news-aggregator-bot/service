@@ -100,9 +100,10 @@ public class NewsSynchroniser {
             sourcePage.getRegions().stream()
                 .map(Category::getReaders)
                 .flatMap(Set::stream)
+                .filter(Reader::isEnabled)
                 .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
                 .filter(r -> r.getSources().contains(sourcePage.getSource()))
-                .filter(r -> atLeastOneInCommon(sourcePage.getCategories(), r.getCategories()))
+                .filter(r -> atLeastOneInCommon(sourcePage.getCommon(), r.getCategories()))
                 .forEach(r -> appendReaderQueue(freshNotes, r));
         } else {
             sourcePage.getCategories()

@@ -188,7 +188,11 @@ public class Reader extends DatedEntity {
         }
     }
 
+    public boolean isEnabled() {
+        return status == Status.ENABLED;
+    }
+
     public enum Status {
-        ENABLED, DISABLED
+        ENABLED, DISABLED, BANNED
     }
 }
