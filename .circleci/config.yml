@@ -10,7 +10,7 @@ jobs:
     working_directory: ~/na-service
 
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: circleci/openjdk:11.0.8
 
     steps: # a collection of executable commands
 
