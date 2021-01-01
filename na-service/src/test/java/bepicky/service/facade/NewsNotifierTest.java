@@ -17,6 +17,7 @@ import bepicky.service.entity.Language;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.schedule.NewsNotifier;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
 import org.junit.Test;

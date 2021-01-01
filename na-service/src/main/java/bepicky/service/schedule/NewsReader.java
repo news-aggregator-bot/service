@@ -1,17 +1,13 @@
-package bepicky.service.facade;
+package bepicky.service.schedule;
 
 import bepicky.service.domain.NewsSyncResult;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsService;
-import bepicky.service.service.IReaderService;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -19,18 +15,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @Component
 @Slf4j
 @RefreshScope
-public class NewsSynchroniser {
+public class NewsReader {
 
     @Autowired
     private INewsService newsService;
@@ -40,12 +34,6 @@ public class NewsSynchroniser {
 
     @Autowired
     private ISourcePageService sourcePageService;
-
-    @Autowired
-    private IReaderService readerService;
-
-    @Value("${na.schedule.sync.enabled}")
-    private boolean syncEnabled;
 
     private List<Long> activeSourcesIds;
 
@@ -59,11 +47,8 @@ public class NewsSynchroniser {
     }
 
     @Transactional
-    @Scheduled(cron = "${na.schedule.sync.cron:*/2 * * * * *}")
-    public void sync() {
-        if (!syncEnabled) {
-            return;
-        }
+    @Scheduled(cron = "${na.schedule.read.cron:*/2 * * * * *}")
+    public void read() {
         if (activeSourcesIds == null) {
             refreshIds();
         }
@@ -91,41 +76,14 @@ public class NewsSynchroniser {
         if (sourcePage == null) {
             return;
         }
-        NewsSyncResult freshNotes = newsService.sync(sourcePage);
-        if (freshNotes.getNewsNotes().isEmpty()) {
-            log.debug("synchronisation:finished:empty: {}", sourcePage.getUrl());
-            return;
-        }
-        if (sourcePage.getRegions() != null) {
-            sourcePage.getRegions().stream()
-                .map(Category::getReaders)
-                .flatMap(Set::stream)
-                .filter(Reader::isEnabled)
-                .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
-                .filter(r -> r.getSources().contains(sourcePage.getSource()))
-                .filter(r -> atLeastOneInCommon(sourcePage.getCommon(), r.getCategories()))
-                .forEach(r -> appendReaderQueue(freshNotes, r));
-        } else {
-            sourcePage.getCategories()
-                .stream()
-                .map(Category::getReaders)
-                .flatMap(Set::stream)
-                .filter(r -> atLeastOneInCommon(sourcePage.getLanguages(), r.getLanguages()))
-                .filter(r -> r.getSources().contains(sourcePage.getSource()))
-                .forEach(r -> appendReaderQueue(freshNotes, r));
-        }
-
-        log.debug("synchronisation:finished:{}", sourcePage.getUrl());
-    }
-
-    private <T> boolean atLeastOneInCommon(Collection<T> c1, Collection<T> c2) {
-        return c1.stream().anyMatch(c2::contains);
+        NewsSyncResult freshNotes = newsService.read(sourcePage);
+        log.debug("news:read:{}", freshNotes.getNewsNotes().size());
     }
 
     @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
     public void refreshIds() {
         activeSourcesIds = sourceService.findAllEnabled().stream().map(Source::getId).collect(Collectors.toList());
-        log.debug("synchronisation:refresh-id:{}", activeSourcesIds);
+        log.debug("news:read:refresh-id:{}", activeSourcesIds);
     }
 
     private void refreshSourceNumber() {
@@ -133,12 +91,6 @@ public class NewsSynchroniser {
             log.debug("synchronisation:source number:refresh");
             sourceNumber.set(0);
         }
-    }
-
-    private void appendReaderQueue(NewsSyncResult freshNotes, Reader r) {
-        log.debug("synchronisation:reader:{}:queue:add", r.getChatId());
-        r.addQueueNewsNote(freshNotes.getNewsNotes());
-        readerService.save(r);
     }
 
 }

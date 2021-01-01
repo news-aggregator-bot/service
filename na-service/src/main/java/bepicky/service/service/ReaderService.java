@@ -33,7 +33,7 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public Collection<Reader> save(Collection<Reader> readers) {
+    public Collection<Reader> saveAll(Collection<Reader> readers) {
         return readerRepository.saveAll(readers);
     }
 

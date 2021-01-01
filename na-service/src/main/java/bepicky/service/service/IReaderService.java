@@ -10,7 +10,7 @@ public interface IReaderService {
 
     Reader save(Reader reader);
 
-    Collection<Reader> save(Collection<Reader> reader);
+    Collection<Reader> saveAll(Collection<Reader> reader);
 
     Optional<Reader> findById(long id);
 

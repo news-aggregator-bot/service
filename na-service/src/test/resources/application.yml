@@ -32,11 +32,11 @@ na:
     browser: false
   schedule:
     sync:
-      enabled: false
-      cron: '*/20 * * * * *'
+      enabled: true
+      cron: '* * 0 * * *'
     notify:
       enabled: true
       limit: 1
       cron: '0 0 0 0/1 * *'
-    reader:
+    read:
       cron: '* * 0 * * *'

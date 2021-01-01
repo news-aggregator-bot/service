@@ -10,7 +10,7 @@ public interface INewsService {
 
     NewsSyncResult sync(String name);
 
-    NewsSyncResult sync(SourcePage sourcePage);
+    NewsSyncResult read(SourcePage sourcePage);
 
     Set<NewsNote> readFreshNews(SourcePage sourcePage);
 }

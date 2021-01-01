@@ -28,10 +28,12 @@ public class Language {
 
     @Column(nullable = false)
     @NotBlank
+    @EqualsAndHashCode.Exclude
     private String name;
 
     @Column(nullable = false)
     @NotBlank
+    @EqualsAndHashCode.Exclude
     private String localized;
 
     @ManyToMany(fetch = FetchType.LAZY)

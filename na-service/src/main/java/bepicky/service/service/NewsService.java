@@ -40,7 +40,7 @@ public class NewsService implements INewsService {
     }
 
     @Override
-    public NewsSyncResult sync(SourcePage sourcePage) {
+    public NewsSyncResult read(SourcePage sourcePage) {
         Set<NewsNote> freshNews = readFreshNews(sourcePage);
         Set<NewsNote> savedNotes = freshNews.isEmpty() ? freshNews : new HashSet<>(newsNoteService.saveAll(freshNews));
         return NewsSyncResult.builder().newsNotes(savedNotes).build();

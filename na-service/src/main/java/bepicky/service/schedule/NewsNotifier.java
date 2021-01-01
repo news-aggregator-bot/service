@@ -1,4 +1,4 @@
-package bepicky.service.facade;
+package bepicky.service.schedule;
 
 import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.client.NaBotClient;
