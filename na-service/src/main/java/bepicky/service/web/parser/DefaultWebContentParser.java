@@ -72,7 +72,9 @@ public class DefaultWebContentParser implements WebContentParser {
         try {
             return Optional.ofNullable(webPageReader.read(page.getUrl()));
         } catch (RuntimeException e) {
-            log.error("webpagereader:read:failed:{}:{}", page.getUrl(), e.getMessage(), e);
+            if (!(e.getCause() instanceof org.jsoup.HttpStatusException)) {
+                log.error("webpagereader:read:failed:{}:{}", page.getUrl(), e.getMessage());
+            }
             return Optional.empty();
         }
     }
