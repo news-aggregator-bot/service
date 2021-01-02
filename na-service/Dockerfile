@@ -25,6 +25,6 @@ RUN wget -q -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com
 
 ADD ./target/na-service.jar /app/
 USER root
-CMD ["java", "-Xmx500m", "-jar", "/app/na-service.jar"]
+CMD ["java", "-Xmx512m", "-jar", "/app/na-service.jar"]
 
 EXPOSE 8080

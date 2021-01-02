@@ -8,12 +8,20 @@ services:
       - MYSQL_NA_PASSWORD=${MYSQL_NA_PASSWORD}
       - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
       interval: 60s
       timeout: 5s
       retries: 3
     ports:
       - 8080:8080
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 512M
+        reservations:
+          cpus: 0.1
+          memory: 128M
 networks:
   default:
     external:
