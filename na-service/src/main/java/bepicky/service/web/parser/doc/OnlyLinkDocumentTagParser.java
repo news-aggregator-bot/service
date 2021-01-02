@@ -28,7 +28,7 @@ public class OnlyLinkDocumentTagParser implements DocumentTagParser {
         }
         ContentTag linkTag = block.findByType(ContentTagType.LINK);
         Element linkEl = main.selectFirst(evaluatorFactory.get(linkTag));
-        return Optional.of(Tuples.of(linkEl.text(), href.apply(linkEl)));
+        return linkEl == null ? Optional.empty() : Optional.of(Tuples.of(linkEl.text(), href.apply(linkEl)));
     }
 
     @Override

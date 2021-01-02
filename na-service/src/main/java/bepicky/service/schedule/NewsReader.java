@@ -87,7 +87,7 @@ public class NewsReader {
     }
 
     private void refreshSourceNumber() {
-        if (activeSourcesIds.size() == sourceNumber.get()) {
+        if (activeSourcesIds.size() <= sourceNumber.get()) {
             log.debug("synchronisation:source number:refresh");
             sourceNumber.set(0);
         }
