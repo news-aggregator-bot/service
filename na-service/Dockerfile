@@ -2,16 +2,27 @@ FROM adoptopenjdk/openjdk11
 
 MAINTAINER Vladyslav Yemelianov <emelyanov.vladyslav@gmail.com>
 
-RUN mkdir /opt/driver \
- && curl -L https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz | tar xz -C /opt/driver \
- && chown -R root:root /opt/driver/ \
- && chmod +x /opt/driver/geckodriver
+RUN apt-get update && apt-get install -y wget xvfb unzip gnupg2
 
-RUN curl -fL -o /tmp/firefox.tar.bz2 https://ftp.mozilla.org/pub/firefox/releases/78.0.1/linux-x86_64/en-GB/firefox-78.0.1.tar.bz2 \
- && tar -xjf /tmp/firefox.tar.bz2 -C /tmp/ \
- && mv /tmp/firefox /opt/firefox
+# Google Chrome
+ARG CHROME_VERSION=87.0.4280.88-1
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+	&& echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
+	&& apt-get update -qqy \
+	&& apt-get -qqy install google-chrome-stable=$CHROME_VERSION \
+	&& rm /etc/apt/sources.list.d/google-chrome.list \
+	&& rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
+	&& sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome
 
-ENV PATH="/opt/firefox/:${PATH}"
+# ChromeDriver
+ARG CHROME_DRIVER_VERSION=87.0.4280.88
+RUN wget -q -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
+	&& unzip /tmp/chromedriver.zip -d /opt \
+	&& rm /tmp/chromedriver.zip \
+	&& mv /opt/chromedriver /opt/chromedriver-$CHROME_DRIVER_VERSION \
+	&& chmod 755 /opt/chromedriver-$CHROME_DRIVER_VERSION \
+	&& ln -s /opt/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver
+
 ADD ./target/na-service.jar /app/
 USER root
 CMD ["java", "-Xmx500m", "-jar", "/app/na-service.jar"]
