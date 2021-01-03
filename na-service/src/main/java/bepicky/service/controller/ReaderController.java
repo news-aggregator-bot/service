@@ -1,17 +1,11 @@
 package bepicky.service.controller;
 
 import bepicky.common.domain.dto.ReaderDto;
+import bepicky.common.domain.dto.StatusReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
-import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.client.NaBotClient;
-import bepicky.service.entity.Language;
-import bepicky.service.entity.Platform;
-import bepicky.service.entity.Reader;
-import bepicky.service.service.ILanguageService;
-import bepicky.service.service.IReaderService;
-import com.google.common.collect.Sets;
+import bepicky.service.facade.functional.IReaderFunctionalFacade;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,43 +23,34 @@ import javax.validation.Valid;
 public class ReaderController {
 
     @Autowired
-    private ModelMapper modelMapper;
-
-    @Autowired
-    private IReaderService readerService;
-
-    @Autowired
-    private ILanguageService languageService;
+    private IReaderFunctionalFacade readerFunctionalFacade;
 
     @Autowired
     private NaBotClient naBotClient;
 
     @PostMapping("/register")
     public ReaderDto register(@Valid @RequestBody ReaderRequest dto) {
-        log.info("reader:registration:{}", dto.toString());
-        Language language = languageService.find(dto.getPrimaryLanguage())
-            .orElseThrow(() -> new ResourceNotFoundException(dto.getPrimaryLanguage() + " language not found."));
-        Platform platform = Platform.valueOf(dto.getPlatform());
-        Reader reader = modelMapper.map(dto, Reader.class);
-        reader.setPlatform(platform);
-        reader.setPrimaryLanguage(language);
-        reader.setLanguages(Sets.newHashSet(language));
-        reader.setStatus(Reader.Status.DISABLED);
-        return modelMapper.map(readerService.save(reader), ReaderDto.class);
+        return readerFunctionalFacade.create(dto);
     }
 
     @PutMapping("/enable/{chatId}")
     public ReaderDto enable(@PathVariable long chatId) {
-        return modelMapper.map(readerService.enable(chatId), ReaderDto.class);
+        return readerFunctionalFacade.enable(chatId);
     }
 
     @PutMapping("/disable/{chatId}")
     public ReaderDto disable(@PathVariable long chatId) {
-        return modelMapper.map(readerService.disable(chatId), ReaderDto.class);
+        return readerFunctionalFacade.disable(chatId);
     }
 
     @GetMapping("/{chatId}")
     public ReaderDto find(@PathVariable long chatId) {
-        return readerService.find(chatId).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
+        return readerFunctionalFacade.find(chatId);
     }
+
+    @GetMapping("/status/{chatId}")
+    public StatusReaderDto status(@PathVariable long chatId) {
+        return readerFunctionalFacade.status(chatId);
+    }
+
 }
