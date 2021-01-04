@@ -71,7 +71,7 @@ public class NewsSynchroniser {
             .stream()
             .map(Category::getReaders)
             .flatMap(Set::stream)
-            .filter(Reader::isEnabled)
+            .filter(Reader::isActive)
             .filter(r -> atLeastOneInCommon(sp.getLanguages(), r.getLanguages()))
             .filter(r -> r.getSources().contains(sp.getSource()));
     }

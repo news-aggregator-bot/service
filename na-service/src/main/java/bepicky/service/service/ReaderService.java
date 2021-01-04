@@ -58,19 +58,10 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public Reader enable(long chatId) {
+    public Reader updateStatus(long chatId, Reader.Status status) {
         return find(chatId).map(r -> {
-            r.setStatus(Reader.Status.ENABLED);
-            log.info("reader:enable:{}", r);
-            return readerRepository.save(r);
-        }).orElse(null);
-    }
-
-    @Override
-    public Reader disable(long chatId) {
-        return find(chatId).map(r -> {
-            r.setStatus(Reader.Status.DISABLED);
-            log.info("reader:disable:{}", r);
+            r.setStatus(status);
+            log.info("reader:{}:update:status:{}", chatId, status);
             return readerRepository.save(r);
         }).orElse(null);
     }

@@ -20,9 +20,7 @@ public interface IReaderService {
 
     List<Reader> findAllEnabled();
 
-    Reader enable(long chatId);
-
-    Reader disable(long chatId);
+    Reader updateStatus(long chatId, Reader.Status status);
 
     Optional<Reader> delete(long id);
 }

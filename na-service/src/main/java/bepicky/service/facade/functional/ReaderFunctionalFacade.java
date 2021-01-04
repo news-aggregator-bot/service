@@ -54,17 +54,27 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
 
     @Override
     public ReaderDto enable(long chatId) {
-        return modelMapper.map(readerService.enable(chatId), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.ENABLED), ReaderDto.class);
     }
 
     @Override
     public ReaderDto disable(long chatId) {
-        return modelMapper.map(readerService.disable(chatId), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.DISABLED), ReaderDto.class);
+    }
+
+    @Override
+    public ReaderDto settings(long chatId) {
+        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.IN_SETTINGS), ReaderDto.class);
+    }
+
+    @Override
+    public ReaderDto block(long chatId) {
+        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.BLOCKED), ReaderDto.class);
     }
 
     @Override
     public ReaderDto pause(long chatId) {
-        return null;
+        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.PAUSED), ReaderDto.class);
     }
 
     @Override

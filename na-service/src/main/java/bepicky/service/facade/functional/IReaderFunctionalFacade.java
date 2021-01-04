@@ -14,6 +14,10 @@ public interface IReaderFunctionalFacade {
 
     ReaderDto disable(long chatId);
 
+    ReaderDto settings(long chatId);
+
+    ReaderDto block(long chatId);
+
     ReaderDto pause(long chatId);
 
     ReaderDto delete(long id);

@@ -23,34 +23,44 @@ import javax.validation.Valid;
 public class ReaderController {
 
     @Autowired
-    private IReaderFunctionalFacade readerFunctionalFacade;
+    private IReaderFunctionalFacade facade;
 
     @Autowired
     private NaBotClient naBotClient;
 
     @PostMapping("/register")
     public ReaderDto register(@Valid @RequestBody ReaderRequest dto) {
-        return readerFunctionalFacade.create(dto);
+        return facade.create(dto);
     }
 
     @PutMapping("/enable/{chatId}")
     public ReaderDto enable(@PathVariable long chatId) {
-        return readerFunctionalFacade.enable(chatId);
+        return facade.enable(chatId);
     }
 
     @PutMapping("/disable/{chatId}")
     public ReaderDto disable(@PathVariable long chatId) {
-        return readerFunctionalFacade.disable(chatId);
+        return facade.disable(chatId);
+    }
+
+    @PutMapping("/pause/{chatId}")
+    public ReaderDto pause(@PathVariable long chatId) {
+        return facade.pause(chatId);
+    }
+
+    @PutMapping("/settings/{chatId}")
+    public ReaderDto settings(@PathVariable long chatId) {
+        return facade.settings(chatId);
     }
 
     @GetMapping("/{chatId}")
     public ReaderDto find(@PathVariable long chatId) {
-        return readerFunctionalFacade.find(chatId);
+        return facade.find(chatId);
     }
 
     @GetMapping("/status/{chatId}")
     public StatusReaderDto status(@PathVariable long chatId) {
-        return readerFunctionalFacade.status(chatId);
+        return facade.status(chatId);
     }
 
 }
