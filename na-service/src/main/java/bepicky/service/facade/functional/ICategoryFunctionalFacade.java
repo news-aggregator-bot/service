@@ -12,14 +12,6 @@ public interface ICategoryFunctionalFacade {
 
     CategoryListResponse sublist(ListCategoryRequest request);
 
-    CategoryListResponse listPicked(ListCategoryRequest request);
-
-    CategoryListResponse sublistPicked(ListCategoryRequest request);
-
-    CategoryListResponse listNotPicked(ListCategoryRequest request);
-
-    CategoryListResponse sublistNotPicked(ListCategoryRequest request);
-
     CategoryResponse pickAll(CategoryRequest request);
 
     CategoryResponse pick(CategoryRequest request);

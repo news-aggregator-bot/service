@@ -30,20 +30,6 @@ public class CategoryController {
         return request.getParentId() == 0 ? categoryFacade.listAll(request) : categoryFacade.sublist(request);
     }
 
-    @GetMapping("/category/list/picked")
-    public CategoryListResponse findPicked(@RequestParam Map<String, Object> params) {
-        ListCategoryRequest request = objectMapper.convertValue(params, ListCategoryRequest.class);
-        return request.getParentId() == 0 ? categoryFacade.listPicked(request) : categoryFacade.sublistPicked(request);
-    }
-
-    @GetMapping("/category/list/notpicked")
-    public CategoryListResponse findNotPicked(@RequestParam Map<String, Object> params) {
-        ListCategoryRequest request = objectMapper.convertValue(params, ListCategoryRequest.class);
-        return request.getParentId() == 0 ?
-            categoryFacade.listNotPicked(request) :
-            categoryFacade.sublistNotPicked(request);
-    }
-
     @PostMapping("/category/pick/all")
     public CategoryResponse pickAll(@RequestBody CategoryRequest request) {
         return categoryFacade.pickAll(request);
