@@ -15,12 +15,12 @@ public class GodCategoryController {
     @Autowired
     private ICategoryFunctionalFacade categoryFacade;
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/id/{id}")
     public CategoryDto deleteById(@PathVariable long id) {
         return categoryFacade.deleteById(id);
     }
 
-    @DeleteMapping("/delete/{name}")
+    @DeleteMapping("/delete/name/{name}")
     public CategoryDto deleteById(@PathVariable String name) {
         return categoryFacade.deleteByName(name);
     }

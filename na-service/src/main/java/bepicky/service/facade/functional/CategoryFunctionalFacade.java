@@ -138,7 +138,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
                 );
             })
             .orElseGet(() -> {
-                log.warn("list:not picked category:reader {} not found", request.getChatId());
+                log.warn("list:not picked category:reader:{} not found", request.getChatId());
                 return new CategoryListResponse(ErrorUtil.readerNotFound());
             });
     }
@@ -156,10 +156,10 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
                     )
                 )
             ).orElseGet(() -> {
-                log.warn("list:subcategory:parent category {} not found", request.getParentId());
+                log.warn("list:subcategory:parent category:{}:404", request.getParentId());
                 return new CategoryListResponse(ErrorUtil.categoryNotFound());
             })).orElseGet(() -> {
-                log.warn("list:subcategory:reader {} not found", request.getChatId());
+                log.warn("list:subcategory:reader:{}:404", request.getChatId());
                 return new CategoryListResponse(ErrorUtil.readerNotFound());
             });
     }
@@ -186,23 +186,31 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
 
     @Override
     public CategoryDto deleteById(long id) {
-        return categoryService.delete(id).map(c -> modelMapper.map(c, CategoryDto.class)).orElse(null);
+        log.info("category:delete:{}", id);
+        return categoryService.delete(id).map(c -> modelMapper.map(c, CategoryDto.class)).orElseGet(() -> {
+            log.warn("category:delete:{}:404", id);
+            return null;
+        });
     }
 
     @Override
     public CategoryDto deleteByName(String name) {
-        return categoryService.deleteByName(name).map(c -> modelMapper.map(c, CategoryDto.class)).orElse(null);
+        log.info("category:delete:{}", name);
+        return categoryService.deleteByName(name).map(c -> modelMapper.map(c, CategoryDto.class)).orElseGet(() -> {
+            log.warn("category:delete:{}:404", name);
+            return null;
+        });
     }
 
     private CategoryResponse doAction(CategoryRequest request, BiConsumer<Reader, Category> action) {
         Reader reader = readerService.find(request.getChatId()).orElse(null);
         if (reader == null) {
-            log.warn("action:category:reader {} not found", request.getChatId());
+            log.warn("action:category:reader:{}:404", request.getChatId());
             return new CategoryResponse(ErrorUtil.readerNotFound());
         }
         Category category = categoryService.find(request.getCategoryId()).orElse(null);
         if (category == null) {
-            log.warn("action:category:category {} not found", request.getCategoryId());
+            log.warn("action:category:{}:404", request.getCategoryId());
             return new CategoryResponse(ErrorUtil.categoryNotFound());
         }
         action.accept(reader, category);
