@@ -5,6 +5,8 @@ import bepicky.service.entity.Source;
 import bepicky.service.repository.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,6 +42,11 @@ public class SourceService implements ISourceService {
     @Override
     public List<Source> findAllEnabled() {
         return repository.findByStatusNot(Source.Status.DISABLED);
+    }
+
+    @Override
+    public Page<Source> findAllEnabled(Pageable pageable) {
+        return repository.findByStatusNotOrderByNameAsc(Source.Status.DISABLED, pageable);
     }
 
     @Override

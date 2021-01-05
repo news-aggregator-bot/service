@@ -18,10 +18,11 @@ public class IngestionCategoryFacade {
 
     @Transactional
     public List<Category> ingest(List<CategoryDto> dtos) {
-        return dtos.stream()
+        List<Category> categories = dtos.stream()
             .map(this::getCategory)
             .map(categoryService::save)
             .collect(Collectors.toList());
+        return categoryService.saveAll(categories);
     }
 
     private Category getCategory(CategoryDto c) {
