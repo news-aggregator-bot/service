@@ -44,6 +44,11 @@ public class LanguageService implements ILanguageService {
     }
 
     @Override
+    public Language getDefault() {
+        return repository.findById("en").get();
+    }
+
+    @Override
     public long countAll() {
         return repository.count();
     }

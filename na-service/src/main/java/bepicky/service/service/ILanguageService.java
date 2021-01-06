@@ -18,5 +18,7 @@ public interface ILanguageService {
 
     Optional<Language> find(String name);
 
+    Language getDefault();
+
     long countAll();
 }
