@@ -1,6 +1,8 @@
 package bepicky.service.repository;
 
 import bepicky.service.entity.NewsNote;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -18,4 +20,6 @@ public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
     Set<NewsNote> findByIdGreaterThan(Long id);
 
     Set<NewsNote> findByCreationDateBetween(Date startDate, Date endDate);
+
+    Page<NewsNote> findByNormalisedTitleContains(String key, Pageable pageable);
 }

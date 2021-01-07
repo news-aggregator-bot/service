@@ -56,7 +56,7 @@ public class NewsNotifier {
             .collect(Collectors.toSet());
         notes
             .stream()
-            .map(n -> newsNoteDtoMapper.toDto(n, r.getPrimaryLanguage()))
+            .map(n -> newsNoteDtoMapper.toFullDto(n, r.getPrimaryLanguage()))
             .map(request -> new NotifyNewsRequest(
                 r.getChatId(),
                 r.getPrimaryLanguage().getLang(),

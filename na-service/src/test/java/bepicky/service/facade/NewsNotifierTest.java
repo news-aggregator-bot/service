@@ -1,9 +1,9 @@
 package bepicky.service.facade;
 
 import bepicky.common.domain.dto.CategoryDto;
-import bepicky.common.domain.request.NewsNoteRequest;
+import bepicky.common.domain.dto.NewsNoteDto;
+import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.common.domain.request.NotifyNewsRequest;
-import bepicky.common.domain.request.SourcePageRequest;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.configuration.WebConfiguration;
@@ -84,12 +84,12 @@ public class NewsNotifierTest {
         assertEquals(language.getLang(), actualRequest.getLang());
 
         assertEquals(1, actualRequest.getNotes().size());
-        NewsNoteRequest actualNewsNoteRequest = actualRequest.getNotes().get(0);
+        NewsNoteDto actualNewsNoteRequest = actualRequest.getNotes().get(0);
         assertEquals(note.getUrl(), actualNewsNoteRequest.getUrl());
         assertEquals(note.getTitle(), actualNewsNoteRequest.getTitle());
         assertEquals(note.getAuthor(), actualNewsNoteRequest.getAuthor());
 
-        SourcePageRequest actualSp = actualNewsNoteRequest.getSourcePage();
+        SourcePageDto actualSp = actualNewsNoteRequest.getSourcePage();
         assertEquals(sourcePage.getUrl(), actualSp.getUrl());
         assertEquals(sourcePage.getName(), actualSp.getName());
 

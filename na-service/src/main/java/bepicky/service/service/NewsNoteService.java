@@ -2,8 +2,13 @@ package bepicky.service.service;
 
 import bepicky.service.entity.NewsNote;
 import bepicky.service.repository.NewsNoteRepository;
+import bepicky.service.service.util.IValueNormalisationService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,17 +27,22 @@ public class NewsNoteService implements INewsNoteService {
     @Autowired
     private NewsNoteRepository repository;
 
+    @Autowired
+    private IValueNormalisationService normalisationService;
+
     @Override
     @Transactional
     public NewsNote save(NewsNote note) {
+        note.setNormalisedTitle(normalisationService.normaliseTitle(note.getTitle()));
         log.info("news:save:{}", note);
         return repository.saveAndFlush(note);
     }
 
     @Override
-    public Collection<NewsNote> saveAll(Collection<NewsNote> note) {
-        log.info("news:save:{}", note);
-        return repository.saveAll(note);
+    public Collection<NewsNote> saveAll(Collection<NewsNote> notes) {
+        notes.forEach(n -> n.setNormalisedTitle(normalisationService.normaliseTitle(n.getTitle())));
+        log.info("news:save:{}", notes);
+        return repository.saveAll(notes);
     }
 
     @Override
@@ -72,5 +82,22 @@ public class NewsNoteService implements INewsNoteService {
     @Override
     public boolean exists(String url) {
         return repository.existsByUrl(url);
+    }
+
+    @Override
+    public Page<NewsNote> searchByTitle(String key, Pageable pageable) {
+        String normalisedKey = normalisationService.normaliseTitle(key);
+        if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
+            return Page.empty();
+        }
+        return repository.findByNormalisedTitleContains(normalisedKey, pageable);
+    }
+
+    @Override
+    public void normaliseTitle() {
+        Page<NewsNote> defaultNotes = repository.findByNormalisedTitleContains("title", PageRequest.of(0, 1000));
+        log.info("news_note:title:normalisation:{}", defaultNotes.getSize());
+        defaultNotes.stream().forEach(n -> n.setNormalisedTitle(normalisationService.normaliseTitle(n.getTitle())));
+        saveAll(defaultNotes.getContent());
     }
 }
