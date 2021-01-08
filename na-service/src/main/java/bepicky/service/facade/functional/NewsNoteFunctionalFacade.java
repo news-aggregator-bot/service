@@ -39,8 +39,4 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
         return response;
     }
 
-    @Override
-    public void normaliseTitle() {
-        newsNoteService.normaliseTitle();
-    }
 }

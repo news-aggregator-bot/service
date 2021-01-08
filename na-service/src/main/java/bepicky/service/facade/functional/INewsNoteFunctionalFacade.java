@@ -7,5 +7,4 @@ public interface INewsNoteFunctionalFacade {
 
     NewsSearchResponse search(NewsSearchRequest request);
 
-    void normaliseTitle();
 }

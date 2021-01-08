@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -93,11 +92,4 @@ public class NewsNoteService implements INewsNoteService {
         return repository.findByNormalisedTitleContains(normalisedKey, pageable);
     }
 
-    @Override
-    public void normaliseTitle() {
-        Page<NewsNote> defaultNotes = repository.findByNormalisedTitleContains("title", PageRequest.of(0, 1000));
-        log.info("news_note:title:normalisation:{}", defaultNotes.getSize());
-        defaultNotes.stream().forEach(n -> n.setNormalisedTitle(normalisationService.normaliseTitle(n.getTitle())));
-        saveAll(defaultNotes.getContent());
-    }
 }

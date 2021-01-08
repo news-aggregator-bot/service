@@ -28,6 +28,4 @@ public interface INewsNoteService {
     boolean exists(String url);
 
     Page<NewsNote> searchByTitle(String key, Pageable pageable);
-
-    void normaliseTitle();
 }
