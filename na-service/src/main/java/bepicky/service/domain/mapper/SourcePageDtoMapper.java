@@ -25,6 +25,7 @@ public class SourcePageDtoMapper {
         SourcePageDto request = new SourcePageDto();
         request.setName(sourcePage.getName());
         request.setUrl(sourcePage.getUrl());
+        request.setSourceName(sourcePage.getSource().getName());
         List<CategoryDto> categoryDtos = sourcePage.getCategories().stream()
             .map(c -> categoryDtoMapper.toSingleDto(c, language))
             .collect(Collectors.toList());

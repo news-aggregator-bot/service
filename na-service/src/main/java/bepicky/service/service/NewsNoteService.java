@@ -89,7 +89,7 @@ public class NewsNoteService implements INewsNoteService {
         if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
             return Page.empty();
         }
-        return repository.findByNormalisedTitleContains(normalisedKey, pageable);
+        return repository.findByNormalisedTitleContainsOrderByCreationDateDesc(normalisedKey, pageable);
     }
 
 }

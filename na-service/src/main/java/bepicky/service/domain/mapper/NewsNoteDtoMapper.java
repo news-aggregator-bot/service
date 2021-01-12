@@ -12,20 +12,14 @@ public class NewsNoteDtoMapper {
     @Autowired
     private SourcePageDtoMapper sourcePageDtoMapper;
 
-    public NewsNoteDto toFullDto(NewsNote note, Language language) {
+    public NewsNoteDto toDto(NewsNote note, Language language) {
         NewsNoteDto request = new NewsNoteDto();
         request.setUrl(note.getUrl());
         request.setTitle(note.getTitle());
         request.setAuthor(note.getAuthor());
+        request.setDate(note.getCreationDate());
         request.setSourcePage(sourcePageDtoMapper.toDto(note.getSourcePage(), language));
         return request;
     }
 
-    public NewsNoteDto toDto(NewsNote note) {
-        NewsNoteDto request = new NewsNoteDto();
-        request.setUrl(note.getUrl());
-        request.setTitle(note.getTitle());
-        request.setAuthor(note.getAuthor());
-        return request;
-    }
 }
