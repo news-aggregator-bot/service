@@ -16,6 +16,7 @@ import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
+import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.schedule.NewsNotifier;
 import bepicky.service.service.IReaderService;
@@ -120,10 +121,13 @@ public class NewsNotifierTest {
     }
 
     private SourcePage sourcePage(Set<Language> languages) {
+        Source src = new Source();
+        src.setName("name");
         SourcePage sourcePage = new SourcePage();
         sourcePage.setUrl(TEST_URL);
         sourcePage.setName(TEST_USA);
         sourcePage.setLanguages(languages);
+        sourcePage.setSource(src);
         return sourcePage;
     }
 
