@@ -24,7 +24,6 @@ public class WebPageReaderConfiguration {
     @Value("${na.webpagereader.browser:true}")
     private boolean browserReaderEnabled;
 
-    @Bean
     public ChromeDriver chromeDriver() {
         if (SystemUtils.IS_OS_MAC) {
             Path drivers = Paths.get(getClass().getResource("/drivers").getPath());
@@ -40,13 +39,13 @@ public class WebPageReaderConfiguration {
     }
 
     @Bean
-    public List<WebPageReader> webPageReaders(ChromeDriver driver) {
+    public List<WebPageReader> webPageReaders() {
         ImmutableList.Builder<WebPageReader> readers = ImmutableList.builder();
         readers.add(new JsoupWebPageReader());
 
         if (browserReaderEnabled) {
             log.info("webpagereader:browser:enabled");
-            readers.add(new BrowserWebPageReader(driver));
+            readers.add(new BrowserWebPageReader(chromeDriver()));
         }
 
         return readers.build();

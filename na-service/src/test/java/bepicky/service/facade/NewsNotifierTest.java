@@ -156,7 +156,7 @@ public class NewsNotifierTest {
 
     @TestConfiguration
     @Import({WebConfiguration.class, SourcePageDtoMapper.class, NewsNoteDtoMapper.class, CategoryDtoMapper.class})
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
     static class NewsNotifierTestConfiguration {
 
         @Bean

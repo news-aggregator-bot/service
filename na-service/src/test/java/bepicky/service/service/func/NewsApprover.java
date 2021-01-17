@@ -98,7 +98,7 @@ public class NewsApprover extends FuncSupport {
     }
 
     @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
     @EnableTransactionManagement
     static class NewsApproverConfiguration {
     }
