@@ -1,5 +1,6 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.data.ingestor.exception.DataIngestionException;
 import bepicky.service.domain.dto.CategoryDto;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.facade.IngestionCategoryFacade;
@@ -39,7 +40,7 @@ public class CategoryIngestionService implements IngestionService {
                         continue;
                     }
                     categories.add(CategoryDto.builder()
-                        .name(row.getCell(0).getStringCellValue())
+                        .name(row.getCell(0).getStringCellValue().toLowerCase())
                         .type(CategoryType.valueOf(wb.getSheetName(sheetNum)))
                         .parent(getParent(row))
                         .build());
@@ -47,7 +48,7 @@ public class CategoryIngestionService implements IngestionService {
                 facade.ingest(categories);
             }
         } catch (Exception ioe) {
-            log.error("Unable to ingest categories", ioe);
+            throw new DataIngestionException("Failed to ingest categories", ioe);
         } finally {
             try {
                 data.close();

@@ -50,7 +50,6 @@ public class IngestionSourceFacade {
 
     public Source ingest(SourceDto srcDto) {
         Source source = getSource(srcDto);
-
         for (SourcePageDto pageDto : srcDto.getPages()) {
             SourcePage srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
                 SourcePage srcPg = new SourcePage();
@@ -128,10 +127,14 @@ public class IngestionSourceFacade {
     }
 
     private List<Category> findCategories(SourcePageDto pageDto) {
-        return pageDto.getCategories()
-            .stream()
-            .map(this::getCategory)
-            .collect(Collectors.toList());
+        try {
+            return pageDto.getCategories()
+                .stream()
+                .map(this::getCategory)
+                .collect(Collectors.toList());
+        } catch (ResourceNotFoundException e) {
+            throw new ResourceNotFoundException(pageDto.getName() + " - " + pageDto.getUrl() + " ingestion failed: " + e.getMessage());
+        }
     }
 
     private Category getCategory(String c) {

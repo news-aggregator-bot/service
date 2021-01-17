@@ -1,5 +1,6 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.data.ingestor.exception.DataIngestionException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -40,7 +41,7 @@ public class LanguageIngestionService implements IngestionService {
             }
             facade.ingest(languages);
         } catch (Exception ioe) {
-            ioe.printStackTrace();
+            throw new DataIngestionException("Failed to ingest languages", ioe);
         } finally {
             try {
                 data.close();

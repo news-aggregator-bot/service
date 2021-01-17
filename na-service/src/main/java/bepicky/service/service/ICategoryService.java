@@ -17,6 +17,8 @@ public interface ICategoryService {
 
     List<Category> saveAll(Collection<Category> categories);
 
+    List<Category> getAll();
+
     Page<Category> findByParent(Category parent, Pageable pageable);
 
     Page<Category> findTopCategories(CategoryType type, Pageable pageable);

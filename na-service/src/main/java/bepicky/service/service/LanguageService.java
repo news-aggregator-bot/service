@@ -27,6 +27,11 @@ public class LanguageService implements ILanguageService {
     }
 
     @Override
+    public List<Language> getAll() {
+        return repository.findAll();
+    }
+
+    @Override
     public Language save(Language language) {
         log.info("language:save:{}", language);
         return repository.save(language);

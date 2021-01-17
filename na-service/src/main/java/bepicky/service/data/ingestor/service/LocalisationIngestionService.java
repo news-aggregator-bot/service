@@ -1,5 +1,6 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.data.ingestor.exception.DataIngestionException;
 import bepicky.service.domain.dto.CategoryLocalisationDto;
 import bepicky.service.facade.IngestionCategoryLocalisationFacade;
 import lombok.extern.slf4j.Slf4j;
@@ -61,7 +62,7 @@ public class LocalisationIngestionService implements IngestionService {
                         String cellValue = row.getCell(c).getStringCellValue();
                         if (StringUtils.isNotBlank(cellValue)) {
                             String lang = languages.get(c);
-                            categoryLocalisation.setCategory(category);
+                            categoryLocalisation.setCategory(category.toLowerCase());
                             categoryLocalisation.setValue(cellValue);
                             categoryLocalisation.setLanguage(lang);
                         }
@@ -70,7 +71,7 @@ public class LocalisationIngestionService implements IngestionService {
                 ingestLocalisations.ingest(localisations);
             }
         } catch (Exception ioe) {
-            log.error("Unable to ingest localisations", ioe);
+            throw new DataIngestionException("Failed to ingest localisations", ioe);
         } finally {
             try {
                 data.close();

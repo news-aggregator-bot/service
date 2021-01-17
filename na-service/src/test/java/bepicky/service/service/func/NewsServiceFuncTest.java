@@ -86,7 +86,7 @@ public class NewsServiceFuncTest extends FuncSupport {
     @Test
     public void funcTest() {
         log.info("ingest:source:start");
-        dataIngestor.ingestSources();
+        dataIngestor.ingestSources("Sources_test");
         log.info("ingest:source:finish");
         List<Source> ingestedSources = sourceService.findAll();
         assertFalse(ingestedSources.isEmpty());

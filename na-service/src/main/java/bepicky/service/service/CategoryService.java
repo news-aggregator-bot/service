@@ -43,6 +43,11 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
+    public List<Category> getAll() {
+        return repository.findAll();
+    }
+
+    @Override
     public Page<Category> findByParent(Category parent, Pageable pageable) {
         return repository.findAllByParentOrderByNameAsc(parent, pageable);
     }

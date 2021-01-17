@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -31,6 +32,7 @@ import static org.junit.Assert.assertFalse;
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
 @RunWith(SpringRunner.class)
 @Slf4j
+@ActiveProfiles("it")
 @Ignore
 public class NewsApprover extends FuncSupport {
 
@@ -73,7 +75,7 @@ public class NewsApprover extends FuncSupport {
     @Test
     public void approveNews() {
         log.info("ingest:source:start");
-        dataIngestor.ingestSources();
+        dataIngestor.ingestSources("Sources_test");
         log.info("ingest:source:finish");
         sourcePageService.findAll().forEach(this::analyseSourcePage);
     }

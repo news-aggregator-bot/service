@@ -12,6 +12,8 @@ public interface ILanguageService {
 
     Page<Language> listAll(Pageable pageable);
 
+    List<Language> getAll();
+
     Language save(Language language);
 
     List<Language> saveAll(Collection<Language> languages);

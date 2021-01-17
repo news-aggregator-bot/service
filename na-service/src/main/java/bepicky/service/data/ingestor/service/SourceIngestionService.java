@@ -1,5 +1,6 @@
 package bepicky.service.data.ingestor.service;
 
+import bepicky.service.data.ingestor.exception.DataIngestionException;
 import bepicky.service.domain.dto.ContentBlockDto;
 import bepicky.service.domain.dto.ContentTagDto;
 import bepicky.service.domain.dto.SourceDto;
@@ -31,6 +32,7 @@ import static bepicky.service.entity.ContentTagType.AUTHOR;
 import static bepicky.service.entity.ContentTagType.LINK;
 import static bepicky.service.entity.ContentTagType.MAIN;
 import static bepicky.service.entity.ContentTagType.TITLE;
+import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toList;
 
 @Service("source")
@@ -61,7 +63,7 @@ public class SourceIngestionService implements IngestionService {
         ImmutableMap.<Integer, IngestionConsumer>builder()
             .put(0, (v, o) -> ((SourcePageDto) o).setName(v.trim()))
             .put(1, (v, o) -> ((SourcePageDto) o).setUrl(v.trim()))
-            .put(2, (v, o) -> ((SourcePageDto) o).setCategories(Arrays.asList(v.split(","))))
+            .put(2, (v, o) -> ((SourcePageDto) o).setCategories(stream(v.split(",")).map(String::toLowerCase).collect(toList())))
             .put(3, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
             .put(8, (v, o) -> ((SourcePageDto) o).setUrlNormalisation(UrlNormalisation.valueOf(v.trim())))
             .put(4, ingestionConsumer)
@@ -90,7 +92,7 @@ public class SourceIngestionService implements IngestionService {
             }
 
         } catch (Exception ioe) {
-            log.error("Unable to ingest sources", ioe);
+            throw new DataIngestionException("Failed to ingest sources", ioe);
         } finally {
             try {
                 data.close();

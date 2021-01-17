@@ -21,6 +21,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -29,6 +30,7 @@ import java.nio.file.Path;
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
 @Slf4j
+@ActiveProfiles("it")
 @Ignore
 public class PageApprover {
 
@@ -98,7 +100,7 @@ public class PageApprover {
     }
 
     @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
     @EnableTransactionManagement
     @Import(WebPageReaderConfiguration.class)
     static class PageApproverConfiguration {
