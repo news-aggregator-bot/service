@@ -30,43 +30,45 @@ public class LocalisationIngestionService implements IngestionService {
     public void ingest(InputStream data) {
         try {
             Workbook wb = WorkbookFactory.create(data);
-            Sheet sheet = wb.getSheetAt(0);
-            int rows = sheet.getPhysicalNumberOfRows();
-            Row initial = sheet.getRow(0);
-            int cellNum = 1;
+            for (int sheetNum = 0; sheetNum < wb.getNumberOfSheets(); sheetNum++) {
+                Sheet sheet = wb.getSheetAt(sheetNum);
+                int rows = sheet.getPhysicalNumberOfRows();
+                Row initial = sheet.getRow(0);
+                int cellNum = 1;
 
-            Map<Integer, String> languages = new HashMap<>();
-            while (true) {
-                Cell cell = initial.getCell(cellNum);
-                if (cell != null) {
-                    String cellValue = cell.getStringCellValue();
-                    languages.put(cellNum, cellValue);
-                    cellNum++;
-                } else {
-                    break;
-                }
-            }
-
-            List<CategoryLocalisationDto> localisations = new ArrayList<>();
-            for (int r = 1; r < rows; r++) {
-                Row row = sheet.getRow(r);
-                String category = row.getCell(0).getStringCellValue();
-                if (StringUtils.isBlank(category)) {
-                    continue;
-                }
-                for (int c = 1; c < cellNum; c++) {
-                    CategoryLocalisationDto categoryLocalisation = new CategoryLocalisationDto();
-                    localisations.add(categoryLocalisation);
-                    String cellValue = row.getCell(c).getStringCellValue();
-                    if (StringUtils.isNotBlank(cellValue)) {
-                        String lang = languages.get(c);
-                        categoryLocalisation.setCategory(category);
-                        categoryLocalisation.setValue(cellValue);
-                        categoryLocalisation.setLanguage(lang);
+                Map<Integer, String> languages = new HashMap<>();
+                while (true) {
+                    Cell cell = initial.getCell(cellNum);
+                    if (cell != null) {
+                        String cellValue = cell.getStringCellValue();
+                        languages.put(cellNum, cellValue);
+                        cellNum++;
+                    } else {
+                        break;
                     }
                 }
+
+                List<CategoryLocalisationDto> localisations = new ArrayList<>();
+                for (int r = 1; r < rows; r++) {
+                    Row row = sheet.getRow(r);
+                    String category = row.getCell(0).getStringCellValue();
+                    if (StringUtils.isBlank(category)) {
+                        continue;
+                    }
+                    for (int c = 1; c < cellNum; c++) {
+                        CategoryLocalisationDto categoryLocalisation = new CategoryLocalisationDto();
+                        localisations.add(categoryLocalisation);
+                        String cellValue = row.getCell(c).getStringCellValue();
+                        if (StringUtils.isNotBlank(cellValue)) {
+                            String lang = languages.get(c);
+                            categoryLocalisation.setCategory(category);
+                            categoryLocalisation.setValue(cellValue);
+                            categoryLocalisation.setLanguage(lang);
+                        }
+                    }
+                }
+                ingestLocalisations.ingest(localisations);
             }
-            ingestLocalisations.ingest(localisations);
         } catch (Exception ioe) {
             log.error("Unable to ingest localisations", ioe);
         } finally {

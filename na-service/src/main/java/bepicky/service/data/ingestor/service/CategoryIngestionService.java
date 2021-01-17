@@ -28,22 +28,24 @@ public class CategoryIngestionService implements IngestionService {
     public void ingest(InputStream data) {
         try {
             Workbook wb = WorkbookFactory.create(data);
-            Sheet sheet = wb.getSheetAt(0);
-            int rows = sheet.getPhysicalNumberOfRows();
+            for (int sheetNum = 0; sheetNum < wb.getNumberOfSheets(); sheetNum++) {
+                Sheet sheet = wb.getSheetAt(sheetNum);
+                int rows = sheet.getPhysicalNumberOfRows();
 
-            List<CategoryDto> categories = new ArrayList<>();
-            for (int r = 1; r < rows; r++) {
-                Row row = sheet.getRow(r);
-                if (row.getCell(0) == null) {
-                    continue;
+                List<CategoryDto> categories = new ArrayList<>();
+                for (int r = 1; r < rows; r++) {
+                    Row row = sheet.getRow(r);
+                    if (row.getCell(0) == null) {
+                        continue;
+                    }
+                    categories.add(CategoryDto.builder()
+                        .name(row.getCell(0).getStringCellValue())
+                        .type(CategoryType.valueOf(wb.getSheetName(sheetNum)))
+                        .parent(getParent(row))
+                        .build());
                 }
-                categories.add(CategoryDto.builder()
-                    .name(row.getCell(0).getStringCellValue())
-                    .type(CategoryType.valueOf(row.getCell(1).getStringCellValue()))
-                    .parent(getParent(row))
-                    .build());
+                facade.ingest(categories);
             }
-            facade.ingest(categories);
         } catch (Exception ioe) {
             log.error("Unable to ingest categories", ioe);
         } finally {
@@ -56,7 +58,7 @@ public class CategoryIngestionService implements IngestionService {
     }
 
     private String getParent(Row row) {
-        Cell cell = row.getCell(2);
+        Cell cell = row.getCell(1);
         return cell == null ? null : cell.getStringCellValue();
     }
 }

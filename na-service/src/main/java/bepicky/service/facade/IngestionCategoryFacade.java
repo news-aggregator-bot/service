@@ -20,20 +20,19 @@ public class IngestionCategoryFacade {
     public List<Category> ingest(List<CategoryDto> dtos) {
         List<Category> categories = dtos.stream()
             .map(this::getCategory)
-            .map(categoryService::save)
             .collect(Collectors.toList());
         return categoryService.saveAll(categories);
     }
 
-    private Category getCategory(CategoryDto c) {
-        Category cat = categoryService.findByName(c.getName()).orElseGet(() -> {
+    private Category getCategory(CategoryDto dto) {
+        Category c = categoryService.findByName(dto.getName()).orElseGet(() -> {
             Category category = new Category();
-            category.setName(c.getName());
+            category.setName(dto.getName());
             return category;
         });
-        Category parent = categoryService.findByName(c.getParent()).orElse(null);
-        cat.setParent(parent);
-        cat.setType(c.getType());
-        return cat;
+        Category parent = categoryService.findByName(dto.getParent()).orElse(null);
+        c.setParent(parent);
+        c.setType(dto.getType());
+        return c;
     }
 }
