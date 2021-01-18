@@ -34,36 +34,20 @@ import java.util.stream.Collectors;
 public class SourceIngestionFuncTest extends FuncSupport {
 
     @Autowired
-    private CategoryIngestionService categoryIS;
-
-    @Autowired
     private SourceIngestionService sourceIS;
-
-    @Autowired
-    private LanguageIngestionService languageIS;
-
-    @Autowired
-    private ICategoryService categoryService;
-
-    @Autowired
-    private ISourceService sourceService;
 
     private FuncSourceDataIngestor dataIngestor;
 
     @PostConstruct
     public void ingest() {
         dataIngestor = FuncSourceDataIngestor.builder()
-            .categoryIS(categoryIS)
             .sourceIS(sourceIS)
-            .languageIS(languageIS)
             .build();
     }
 
     @Test
     public void getAllCategoriesAndLocalisations_EachCategoryShouldHaveAllLanguagesTranslations() {
-        for (String fileName : dataIngestor.listRealSourceFileNames()) {
-            dataIngestor.ingestSources("real/" + fileName);
-        }
+        dataIngestor.ingestSources();
     }
 
 

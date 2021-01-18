@@ -3,7 +3,7 @@ package bepicky.service.domain.dto;
 import lombok.Data;
 
 @Data
-public class CategoryLocalisationDto {
+public class LocalisationDto {
 
     private String category;
 

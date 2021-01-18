@@ -17,6 +17,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -30,7 +31,7 @@ import java.nio.file.Path;
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
 @Slf4j
-@ActiveProfiles("it")
+@ActiveProfiles({"it", "browser"})
 @Ignore
 public class PageApprover {
 
@@ -38,13 +39,8 @@ public class PageApprover {
     private ISourcePageService sourcePageService;
 
     @Autowired
+    @Qualifier("source")
     private SourceIngestionService sourceIS;
-
-    @Autowired
-    private LanguageIngestionService languageIS;
-
-    @Autowired
-    private CategoryIngestionService categoryIS;
 
     private FuncSourceDataIngestor dataIngestor;
 
@@ -56,8 +52,6 @@ public class PageApprover {
     public void setUpData() {
         dataIngestor = FuncSourceDataIngestor.builder()
             .sourceIS(sourceIS)
-            .languageIS(languageIS)
-            .categoryIS(categoryIS)
             .build();
 
         pageContentContext = new PageContentContext();
@@ -67,7 +61,7 @@ public class PageApprover {
     @Test
     public void approvePages() {
         log.info("ingest:source:start");
-        dataIngestor.ingestSources("Sources_approve");
+        dataIngestor.ingestSources();
         log.info("ingest:source:finish");
 
         sourcePageService.findAll()
@@ -100,7 +94,7 @@ public class PageApprover {
     }
 
     @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
+    @PropertySource(factory = YamlPropertySourceFactory.class, value = {"classpath:application-it.yml", "classpath:application-browser.yml"})
     @EnableTransactionManagement
     @Import(WebPageReaderConfiguration.class)
     static class PageApproverConfiguration {

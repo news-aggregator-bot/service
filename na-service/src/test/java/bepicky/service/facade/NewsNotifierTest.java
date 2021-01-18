@@ -11,7 +11,7 @@ import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
 import bepicky.service.domain.mapper.SourcePageDtoMapper;
 import bepicky.service.entity.Category;
-import bepicky.service.entity.CategoryLocalisation;
+import bepicky.service.entity.Localisation;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.NewsNote;
@@ -60,7 +60,7 @@ public class NewsNotifierTest {
     public void sync_FullNewsNote_ShouldSendCorrectNotifyNewsRequest() {
 
         Language language = defaultLanguage();
-        CategoryLocalisation usaLocalisation = defaultLocalisation(language);
+        Localisation usaLocalisation = defaultLocalisation(language);
         Category regionUSA = regionCategory(usaLocalisation);
         SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
 
@@ -131,7 +131,7 @@ public class NewsNotifierTest {
         return sourcePage;
     }
 
-    private Category regionCategory(CategoryLocalisation usaLocalisation) {
+    private Category regionCategory(Localisation usaLocalisation) {
         Category regionUSA = new Category();
         regionUSA.setId(1L);
         regionUSA.setType(CategoryType.REGION);
@@ -140,8 +140,8 @@ public class NewsNotifierTest {
         return regionUSA;
     }
 
-    private CategoryLocalisation defaultLocalisation(Language language) {
-        CategoryLocalisation usaLocalisation = new CategoryLocalisation();
+    private Localisation defaultLocalisation(Language language) {
+        Localisation usaLocalisation = new Localisation();
         usaLocalisation.setValue(TEST_USA);
         usaLocalisation.setLanguage(language);
         return usaLocalisation;

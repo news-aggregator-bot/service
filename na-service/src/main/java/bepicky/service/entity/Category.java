@@ -46,11 +46,16 @@ public class Category extends IdEntity {
     @EqualsAndHashCode.Exclude
     private List<Category> subcategories = new ArrayList<>();
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "category_localisation",
+        joinColumns = {@JoinColumn(name = "id_category")},
+        inverseJoinColumns = {@JoinColumn(name = "id_localisation")}
+    )
     @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private List<CategoryLocalisation> localisations;
+    private List<Localisation> localisations;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(

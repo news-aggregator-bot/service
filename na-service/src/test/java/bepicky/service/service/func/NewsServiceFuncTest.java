@@ -20,7 +20,9 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -48,13 +50,8 @@ public class NewsServiceFuncTest extends FuncSupport {
     private INewsService newsService;
 
     @Autowired
+//    @Qualifier("testSourceIngestionService")
     private SourceIngestionService sourceIS;
-
-    @Autowired
-    private LanguageIngestionService languageIS;
-
-    @Autowired
-    private CategoryIngestionService categoryIS;
 
     @Autowired
     private ISourceService sourceService;
@@ -74,8 +71,6 @@ public class NewsServiceFuncTest extends FuncSupport {
     public void setSourceData() {
         dataIngestor = FuncSourceDataIngestor.builder()
             .sourceIS(sourceIS)
-            .languageIS(languageIS)
-            .categoryIS(categoryIS)
             .build();
 
         pageContentContext = new PageContentContext();
@@ -155,6 +150,11 @@ public class NewsServiceFuncTest extends FuncSupport {
     @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
     @EnableTransactionManagement
     static class FuncTestConfiguration {
+
+//        @Bean("testSourceIngestionService")
+//        public SourceIngestionService sourceIngestionService() {
+//            return new TestSourceIngestionService();
+//        }
     }
 
 }

@@ -18,11 +18,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -39,7 +39,7 @@ import static java.util.stream.Collectors.toList;
 @Slf4j
 public class SourceIngestionService implements IngestionService {
 
-    private static final IngestionConsumer ingestionConsumer = (v, o) -> {
+    private static final IngestionConsumer INGESTION_CONSUMER = (v, o) -> {
         String[] info = v.trim().split(":");
         if (info.length < 2) {
             log.error(v + " is not well formatted");
@@ -62,14 +62,14 @@ public class SourceIngestionService implements IngestionService {
     private final Map<Integer, IngestionConsumer> fieldMapping =
         ImmutableMap.<Integer, IngestionConsumer>builder()
             .put(0, (v, o) -> ((SourcePageDto) o).setName(v.trim()))
-            .put(1, (v, o) -> ((SourcePageDto) o).setUrl(v.trim()))
+            .put(1, (v, o) -> ((SourcePageDto) o).setUrl(normaliseUrl(v.trim())))
             .put(2, (v, o) -> ((SourcePageDto) o).setCategories(stream(v.split(",")).map(String::toLowerCase).collect(toList())))
             .put(3, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
             .put(8, (v, o) -> ((SourcePageDto) o).setUrlNormalisation(UrlNormalisation.valueOf(v.trim())))
-            .put(4, ingestionConsumer)
-            .put(5, ingestionConsumer)
-            .put(6, ingestionConsumer)
-            .put(7, ingestionConsumer)
+            .put(4, INGESTION_CONSUMER)
+            .put(5, INGESTION_CONSUMER)
+            .put(6, INGESTION_CONSUMER)
+            .put(7, INGESTION_CONSUMER)
             .build();
 
     private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 3, 8);
@@ -140,5 +140,9 @@ public class SourceIngestionService implements IngestionService {
                 srcPage.addBlock(block);
             }
         }
+    }
+
+    protected String normaliseUrl(String url) {
+        return url;
     }
 }

@@ -3,7 +3,7 @@ package bepicky.service.domain.mapper;
 import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Category;
-import bepicky.service.entity.CategoryLocalisation;
+import bepicky.service.entity.Localisation;
 import bepicky.service.entity.Language;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class CategoryDtoMapper {
 
     public CategoryDto toFullDto(Category c, Language language) {
-        CategoryLocalisation localisation = getLocalisation(c, language);
+        Localisation localisation = getLocalisation(c, language);
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
@@ -31,7 +31,7 @@ public class CategoryDtoMapper {
         if (c == null) {
             return null;
         }
-        CategoryLocalisation localisation = getLocalisation(c, language);
+        Localisation localisation = getLocalisation(c, language);
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
@@ -44,7 +44,7 @@ public class CategoryDtoMapper {
         if (c == null) {
             return null;
         }
-        CategoryLocalisation localisation = getLocalisation(c, language);
+        Localisation localisation = getLocalisation(c, language);
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(c.getId());
         categoryDto.setName(c.getName());
@@ -54,7 +54,7 @@ public class CategoryDtoMapper {
         return categoryDto;
     }
 
-    private CategoryLocalisation getLocalisation(Category c, Language language) {
+    private Localisation getLocalisation(Category c, Language language) {
         return c.getLocalisations().stream()
             .filter(cl -> cl.getLanguage().equals(language))
             .findFirst()

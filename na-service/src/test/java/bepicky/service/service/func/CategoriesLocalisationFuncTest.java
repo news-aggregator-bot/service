@@ -5,7 +5,6 @@ import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.data.ingestor.service.CategoryIngestionService;
 import bepicky.service.data.ingestor.service.LanguageIngestionService;
-import bepicky.service.data.ingestor.service.LocalisationIngestionService;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.Language;
 import bepicky.service.service.ICategoryService;
@@ -34,32 +33,10 @@ import java.util.stream.Collectors;
 public class CategoriesLocalisationFuncTest extends FuncSupport {
 
     @Autowired
-    private CategoryIngestionService categoryIS;
-
-    @Autowired
-    private LocalisationIngestionService localisationIS;
-
-    @Autowired
-    private LanguageIngestionService languageIS;
-
-    @Autowired
     private ICategoryService categoryService;
 
     @Autowired
     private ILanguageService languageService;
-
-    private FuncSourceDataIngestor dataIngestor;
-
-
-    @PostConstruct
-    public void ingest() {
-        dataIngestor = FuncSourceDataIngestor.builder()
-            .categoryIS(categoryIS)
-            .localisationIS(localisationIS)
-            .languageIS(languageIS)
-            .build();
-        dataIngestor.ingestLocalisations();
-    }
 
     @Test
     @Transactional

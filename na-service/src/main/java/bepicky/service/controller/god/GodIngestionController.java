@@ -1,5 +1,8 @@
 package bepicky.service.controller.god;
 
+import bepicky.service.data.ingestor.service.CategoryIngestionService;
+import bepicky.service.data.ingestor.service.LanguageIngestionService;
+import bepicky.service.data.ingestor.service.SourceIngestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,10 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
-import bepicky.service.data.ingestor.service.LocalisationIngestionService;
-import bepicky.service.data.ingestor.service.SourceIngestionService;
 
 import java.io.IOException;
 
@@ -25,9 +24,6 @@ public class GodIngestionController {
     private LanguageIngestionService langService;
 
     @Autowired
-    private LocalisationIngestionService localisationService;
-
-    @Autowired
     private CategoryIngestionService categoryService;
 
     @PostMapping(path = "/source", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -38,11 +34,6 @@ public class GodIngestionController {
     @PostMapping(path = "/language", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public void ingestLangs(@RequestParam("file") MultipartFile file) throws IOException {
         langService.ingest(file.getInputStream());
-    }
-
-    @PostMapping(path = "/localisation", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public void ingestLocalisations(@RequestParam("file") MultipartFile file) throws IOException {
-        localisationService.ingest(file.getInputStream());
     }
 
     @PostMapping(path = "/category", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)

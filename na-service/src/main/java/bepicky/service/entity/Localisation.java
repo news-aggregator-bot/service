@@ -1,6 +1,5 @@
 package bepicky.service.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,9 +12,9 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "category_localisation")
+@Table(name = "localisation")
 @EqualsAndHashCode(callSuper = true)
-public class CategoryLocalisation extends IdEntity {
+public class Localisation extends IdEntity {
 
     @Column(nullable = false)
     private String value;
@@ -24,8 +23,4 @@ public class CategoryLocalisation extends IdEntity {
     @JoinColumn(name = "language")
     private Language language;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_category")
-    @JsonIgnore
-    private Category category;
 }
