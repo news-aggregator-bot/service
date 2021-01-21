@@ -13,9 +13,11 @@ import java.util.Set;
 @Repository
 public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
 
-    Optional<NewsNote> findByUrl(String url);
+    Optional<NewsNote> findByNormalisedTitle(String normalisedTitle);
 
     boolean existsByUrl(String url);
+
+    boolean existsByNormalisedTitle(String title);
 
     Set<NewsNote> findByIdGreaterThan(Long id);
 

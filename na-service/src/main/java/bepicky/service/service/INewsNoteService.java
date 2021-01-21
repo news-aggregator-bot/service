@@ -17,7 +17,7 @@ public interface INewsNoteService {
 
     Optional<NewsNote> find(Long id);
 
-    Optional<NewsNote> findByUrl(String url);
+    Optional<NewsNote> findByNormalisedTitle(String url);
 
     Set<NewsNote> getAllAfter(Long id);
 
@@ -25,7 +25,9 @@ public interface INewsNoteService {
 
     Set<NewsNote> getTodayNotes();
 
-    boolean exists(String url);
+    boolean existsByUrl(String url);
+
+    boolean existsByNormalisedTitle(String normalisedTitle);
 
     Page<NewsNote> searchByTitle(String key, Pageable pageable);
 }

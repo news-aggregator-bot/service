@@ -63,7 +63,7 @@ public class TestEntityManager {
         NewsNote n = new NewsNote();
         n.setId(System.currentTimeMillis());
         n.setTitle(title);
-        n.setSourcePage(sp);
+        n.addSourcePage(sp);
         return n;
     }
 }

@@ -90,7 +90,7 @@ public class NewsNotifierTest {
         assertEquals(note.getTitle(), actualNewsNoteRequest.getTitle());
         assertEquals(note.getAuthor(), actualNewsNoteRequest.getAuthor());
 
-        SourcePageDto actualSp = actualNewsNoteRequest.getSourcePage();
+        SourcePageDto actualSp = actualNewsNoteRequest.getSourcePages().get(0);
         assertEquals(sourcePage.getUrl(), actualSp.getUrl());
         assertEquals(sourcePage.getName(), actualSp.getName());
 
@@ -116,7 +116,7 @@ public class NewsNotifierTest {
         note.setUrl(url);
         note.setTitle(title);
         note.setAuthor(author);
-        note.setSourcePage(sourcePage);
+        note.addSourcePage(sourcePage);
         return note;
     }
 

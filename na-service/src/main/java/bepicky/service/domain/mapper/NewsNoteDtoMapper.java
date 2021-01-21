@@ -18,7 +18,7 @@ public class NewsNoteDtoMapper {
         request.setTitle(note.getTitle());
         request.setAuthor(note.getAuthor());
         request.setDate(note.getCreationDate());
-        request.setSourcePage(sourcePageDtoMapper.toDto(note.getSourcePage(), language));
+        request.setSourcePages(sourcePageDtoMapper.toDto(note.getSourcePages(), language));
         return request;
     }
 

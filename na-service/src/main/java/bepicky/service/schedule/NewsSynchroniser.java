@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -49,13 +50,20 @@ public class NewsSynchroniser {
         }
         log.info("news:sync:get_fresh:{}", actualNotes.size());
         Set<Reader> updatedReaders = actualNotes.stream()
-            .collect(Collectors.groupingBy(NewsNote::getSourcePage, Collectors.toSet()))
+            .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
             .entrySet()
             .stream()
-            .flatMap(e -> findApplicableReaders(e.getKey()).peek(r -> r.addQueueNewsNote(e.getValue())))
+            .flatMap(e -> unfoldSourcePages(e.getKey()).peek(r -> r.addQueueNewsNote(e.getValue())))
             .collect(Collectors.toSet());
         readerService.saveAll(updatedReaders);
         latestNewsNoteId = actualNotes.stream().mapToLong(NewsNote::getId).max().orElseGet(() -> latestNewsNoteId);
+    }
+
+    private Stream<Reader> unfoldSourcePages(List<SourcePage> sps) {
+        if (sps.size() == 1) {
+            return findApplicableReaders(sps.get(0));
+        }
+        return sps.stream().flatMap(this::findApplicableReaders);
     }
 
     private Stream<Reader> findApplicableReaders(SourcePage sp) {

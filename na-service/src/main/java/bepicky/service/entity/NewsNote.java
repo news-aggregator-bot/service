@@ -9,8 +9,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -30,9 +34,18 @@ public class NewsNote extends DatedEntity {
 
     private String author;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_source_page")
-    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "news_note_source_page",
+        joinColumns = {@JoinColumn(name = "id_news_note")},
+        inverseJoinColumns = {@JoinColumn(name = "id_source_page")}
+    )
+    @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    private SourcePage sourcePage;
+    @JsonIgnore
+    private List<SourcePage> sourcePages = new ArrayList<>();
+
+    public void addSourcePage(SourcePage page) {
+        sourcePages.add(page);
+    }
 }

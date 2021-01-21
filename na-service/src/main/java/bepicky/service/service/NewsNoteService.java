@@ -32,14 +32,12 @@ public class NewsNoteService implements INewsNoteService {
     @Override
     @Transactional
     public NewsNote save(NewsNote note) {
-        note.setNormalisedTitle(normalisationService.normaliseTitle(note.getTitle()));
         log.info("news:save:{}", note);
         return repository.saveAndFlush(note);
     }
 
     @Override
     public Collection<NewsNote> saveAll(Collection<NewsNote> notes) {
-        notes.forEach(n -> n.setNormalisedTitle(normalisationService.normaliseTitle(n.getTitle())));
         log.info("news:save:{}", notes);
         return repository.saveAll(notes);
     }
@@ -50,8 +48,8 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
-    public Optional<NewsNote> findByUrl(String url) {
-        return repository.findByUrl(url);
+    public Optional<NewsNote> findByNormalisedTitle(String title) {
+        return repository.findByNormalisedTitle(title);
     }
 
     @Override
@@ -79,8 +77,13 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
-    public boolean exists(String url) {
+    public boolean existsByUrl(String url) {
         return repository.existsByUrl(url);
+    }
+
+    @Override
+    public boolean existsByNormalisedTitle(String normalisedTitle) {
+        return repository.existsByNormalisedTitle(normalisedTitle);
     }
 
     @Override

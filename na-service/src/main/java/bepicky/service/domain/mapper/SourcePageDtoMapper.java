@@ -21,6 +21,10 @@ public class SourcePageDtoMapper {
     @Autowired
     private ModelMapper modelMapper;
 
+    public List<SourcePageDto> toDto(List<SourcePage> sourcePages, Language language) {
+        return sourcePages.stream().map(d -> toDto(d, language)).collect(Collectors.toList());
+    }
+
     public SourcePageDto toDto(SourcePage sourcePage, Language language) {
         SourcePageDto request = new SourcePageDto();
         request.setName(sourcePage.getName());

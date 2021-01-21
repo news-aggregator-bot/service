@@ -6,6 +6,7 @@ import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceNotFoundException;
+import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,9 @@ public class NewsService implements INewsService {
 
     @Autowired
     private WebContentParser defaultParser;
+
+    @Autowired
+    private IValueNormalisationService normalisationService;
 
     @Override
     public NewsSyncResult sync(String name) {
@@ -62,16 +66,24 @@ public class NewsService implements INewsService {
     private Stream<NewsNote> process(SourcePage page) {
         return defaultParser.parse(page)
             .stream()
-            .filter(d -> !newsNoteService.exists(d.getLink()))
+            .filter(d -> !newsNoteService.existsByUrl(d.getLink()))
             .map(d -> toNote(page, d));
     }
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {
-        NewsNote note = new NewsNote();
-        note.setTitle(data.getTitle());
-        note.setUrl(data.getLink());
-        note.setAuthor(data.getAuthor());
-        note.setSourcePage(page);
-        return note;
+        String normTitle = normalisationService.normaliseTitle(data.getTitle());
+        return newsNoteService.findByNormalisedTitle(normTitle)
+            .map(n -> {
+                n.addSourcePage(page);
+                return n;
+            }).orElseGet(() -> {
+                NewsNote note = new NewsNote();
+                note.setTitle(data.getTitle());
+                note.setNormalisedTitle(normTitle);
+                note.setUrl(data.getLink());
+                note.setAuthor(data.getAuthor());
+                note.addSourcePage(page);
+                return note;
+            });
     }
 }
