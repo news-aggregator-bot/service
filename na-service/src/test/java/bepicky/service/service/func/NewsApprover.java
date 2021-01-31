@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -42,7 +43,6 @@ public class NewsApprover extends FuncSupport {
     private INewsService newsService;
 
     @Autowired
-//    @Qualifier("testSourceIngestionService")
     private SourceIngestionService sourceIS;
 
     @Autowired
@@ -70,7 +70,7 @@ public class NewsApprover extends FuncSupport {
     @Test
     public void approveNews() {
         log.info("ingest:source:start");
-        dataIngestor.ingestSources("Sources_test");
+        dataIngestor.ingestSources();
         log.info("ingest:source:finish");
         sourcePageService.findAll().forEach(this::analyseSourcePage);
     }
@@ -96,9 +96,10 @@ public class NewsApprover extends FuncSupport {
     @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
     @EnableTransactionManagement
     static class NewsApproverConfiguration {
-//        @Bean("testSourceIngestionService")
-//        public SourceIngestionService sourceIngestionService() {
-//            return new TestSourceIngestionService();
-//        }
+        @Bean
+        @Primary
+        public SourceIngestionService sourceIngestionService() {
+            return new TestSourceIngestionService();
+        }
     }
 }

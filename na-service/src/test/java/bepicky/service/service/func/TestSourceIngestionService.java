@@ -11,7 +11,7 @@ public class TestSourceIngestionService extends SourceIngestionService {
     protected String normaliseUrl(String url) {
         try {
             URL u = new URL(url);
-            return url.replace(u.getHost(), "localhost:8080");
+            return url.replace(u.getHost(), "localhost:8080/" + u.getHost()).replace("https", "http");
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException(e);
         }

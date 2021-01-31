@@ -10,6 +10,7 @@ import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceException;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.web.reader.JsoupWebPageReader;
+import bepicky.service.web.reader.WebPageReader;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -27,6 +28,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.nio.file.Path;
+import java.util.List;
 
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
@@ -39,14 +41,15 @@ public class PageApprover {
     private ISourcePageService sourcePageService;
 
     @Autowired
-    @Qualifier("source")
     private SourceIngestionService sourceIS;
+
+    @Autowired
+    private List<WebPageReader> webPageReaders;
 
     private FuncSourceDataIngestor dataIngestor;
 
     private PageContentContext pageContentContext;
 
-    private final JsoupWebPageReader webPageReader = new JsoupWebPageReader();
 
     @Before
     public void setUpData() {
@@ -85,12 +88,14 @@ public class PageApprover {
     }
 
     private Document readDocument(SourcePage sourcePage) {
-        try {
-            return webPageReader.read(sourcePage.getUrl());
-        } catch (SourceException e) {
-            log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
-            return null;
+        for (WebPageReader webPageReader : webPageReaders) {
+            try {
+                return webPageReader.read(sourcePage.getUrl());
+            } catch (SourceException e) {
+                log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
+            }
         }
+        return null;
     }
 
     @Configuration

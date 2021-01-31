@@ -4,8 +4,9 @@ import bepicky.service.domain.PageParsedData;
 import bepicky.service.entity.SourcePage;
 
 import java.util.List;
+import java.util.Set;
 
 public interface WebContentParser {
 
-    List<PageParsedData> parse(SourcePage page);
+    Set<PageParsedData> parse(SourcePage page);
 }

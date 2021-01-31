@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Component
@@ -43,16 +44,16 @@ public class DefaultWebContentParser implements WebContentParser {
     private UrlNormalisationContext urlNormalisationContext;
 
     @Override
-    public List<PageParsedData> parse(SourcePage page) {
+    public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
             Optional<Document> doc = readDocument(page, webPageReader);
             if (doc.isPresent()) {
-                List<PageParsedData> parsedData = page.getContentBlocks()
+                Set<PageParsedData> parsedData = page.getContentBlocks()
                     .stream()
                     .map(block -> parseDoc(page, doc.get(), block))
                     .flatMap(List::stream)
                     .filter(Objects::nonNull)
-                    .collect(Collectors.toList());
+                    .collect(Collectors.toSet());
                 if (!parsedData.isEmpty()) {
                     log.info(
                         "webcontentparser:{} :{}:{}",
@@ -65,7 +66,7 @@ public class DefaultWebContentParser implements WebContentParser {
             }
         }
         log.warn("webpagereader:read:empty:{}", page.getUrl());
-        return Collections.emptyList();
+        return Collections.emptySet();
     }
 
     public Optional<Document> readDocument(SourcePage page, WebPageReader webPageReader) {
@@ -89,7 +90,6 @@ public class DefaultWebContentParser implements WebContentParser {
             Builder<PageParsedData> datas = ImmutableList.builder();
             for (Element main : mainClassElems) {
 
-                PageParsedData.PageParsedDataBuilder dataBuilder = PageParsedData.builder();
 
                 tagParsers.stream()
                     .filter(tp -> tp.matches(block))
@@ -97,12 +97,11 @@ public class DefaultWebContentParser implements WebContentParser {
                     .filter(Optional::isPresent)
                     .findFirst()
                     .orElse(Optional.empty())
-                    .ifPresent(tp -> {
-                        dataBuilder.title(tp.getT1());
-                        dataBuilder.link(tp.getT2());
-                        dataBuilder.author(getAuthor(authorTag, main));
-                        datas.add(dataBuilder.build());
-                    });
+                    .ifPresent(tp -> datas.add(new PageParsedData(
+                        tp.getT1(),
+                        tp.getT2(),
+                        getAuthor(authorTag, main)
+                    )));
             }
             return datas.build();
         }

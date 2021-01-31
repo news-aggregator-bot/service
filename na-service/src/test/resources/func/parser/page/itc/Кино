@@ -1,0 +1,1291 @@
+<!doctype html>
+<html lang="ru-RU" prefix="og: https://ogp.me/ns#">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">WebFontConfig = {
+	google: { families: [ 'Roboto:400,400italic,700:latin,cyrillic-ext' ] }
+};
+(function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+})();</script> 
+  <link rel="stylesheet" href="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/itc-icons/styles.min.css?ver=24.09.2020">
+  <link rel="stylesheet" href="https://itc.ua/wp-content/themes/ITC_5.5/itc-styles.min.css?ver=24.09.2020">
+  <link href="https://itc.ua/wp-content/themes/ITC_5.5/assets/css/mobile-first.min.css?ver=24.09.2020" type="text/css" rel="stylesheet" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.0">
+  <title>ITC.ua</title>
+  <meta name="description" content="ITC.UA – самый популярный в Украине онлайн-ресурс, посвященный IT">
+  <meta name="robots" content="follow, index">
+  <link rel="canonical" href="https://itc.ua/">
+  <link rel="next" href="https://itc.ua/page/2/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ITC.ua">
+  <meta property="og:description" content="%sitedesc%">
+  <meta property="og:url" content="https://itc.ua/">
+  <meta property="og:site_name" content="ITC.ua">
+  <meta property="fb:app_id" content="112515425508447">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ITC.ua">
+  <meta name="twitter:description" content="%sitedesc%">
+  <meta name="twitter:site" content="@ITCUA"> 
+  <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://itc.ua/#organization","name":"ITC.ua","url":"https://itc.ua","logo":{"@type":"ImageObject","url":"https://itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png"}},{"@type":"WebSite","@id":"https://itc.ua/#website","url":"https://itc.ua","name":"ITC.ua","publisher":{"@id":"https://itc.ua/#organization"},"inLanguage":"ru-RU","potentialAction":{"@type":"SearchAction","target":"https://itc.ua/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://itc.ua/#webpage","url":"https://itc.ua/","name":"ITC.ua","about":{"@id":"https://itc.ua/#organization"},"isPartOf":{"@id":"https://itc.ua/#website"},"inLanguage":"ru-RU"}]}</script> 
+  <link rel="dns-prefetch" href="//hotline.ua">
+  <link rel="dns-prefetch" href="//pixel.wp.com">
+  <link rel="dns-prefetch" href="//s0.wp.com">
+  <link rel="dns-prefetch" href="//stats.wp.com">
+  <link rel="dns-prefetch" href="//cdn.onthe.io">
+  <link rel="dns-prefetch" href="//tt.onthe.io">
+  <link rel="dns-prefetch" href="//edp1.adriver.ru">
+  <link rel="dns-prefetch" href="//masterh7.adriver.ru">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//adservice.google.com">
+  <link rel="dns-prefetch" href="//i.bigmir.net">
+  <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="//www.gstatic.com">
+  <link rel="dns-prefetch" href="//c0.wp.com">
+  <link rel="dns-prefetch" href="//i0.wp.com">
+  <link rel="dns-prefetch" href="//i1.wp.com">
+  <link rel="dns-prefetch" href="//i2.wp.com">
+  <link rel="alternate" type="application/rss+xml" title="ITC.ua » Лента" href="https://itc.ua/feed/">
+  <link rel="alternate" type="application/rss+xml" title="ITC.ua » Лента комментариев" href="https://itc.ua/comments/feed/">
+  <style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important}</style>
+  <style type="text/css">.mistape-test,.mistape_mistake_inner{color:#E42029!important}#mistape_dialog h2::before,#mistape_dialog .mistape_action,.mistape-letter-back{background-color:#E42029!important}#mistape_reported_text:before,#mistape_reported_text:after{border-color:#E42029!important}.mistape-letter-front .front-left{border-left-color:#E42029!important}.mistape-letter-front .front-right{border-right-color:#E42029!important}.mistape-letter-front .front-bottom,.mistape-letter-back>.mistape-letter-back-top,.mistape-letter-top{border-bottom-color:#E42029!important}.mistape-logo svg{fill:#E42029!important}</style>
+  <link rel="stylesheet" id="hotline-linker-css" href="https://itc.ua/wp-content/plugins/itc-hotline-linker/css/hl-linker.css?ver=1.5" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.6/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+  <style id="wp-block-library-inline-css" type="text/css">.has-text-align-justify{text-align:justify}</style>
+  <link rel="stylesheet" id="toc-screen-css" href="https://itc.ua/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2002" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-polls-css" href="https://itc.ua/wp-content/plugins/wp-polls/polls-css.css?ver=2.75.5" type="text/css" media="all">
+  <style id="wp-polls-inline-css" type="text/css">.wp-polls .pollbar{margin:1px;font-size:6px;line-height:8px;height:8px;background:#00A5D2;border:1px solid #00A5D2}</style>
+  <link rel="stylesheet" id="mistape-front-css" href="https://itc.ua/wp-content/plugins/mistape/assets/css/mistape-front.css?ver=1.3.8" type="text/css" media="all">
+  <link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/9.0.2/css/jetpack.css" type="text/css" media="all"> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://c0.wp.com/c/5.6/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://c0.wp.com/c/5.6/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/js/itc-scripts.min.js?ver=24.09.2020" id="cehla-js"></script> 
+  <link rel="https://api.w.org/" href="https://itc.ua/wp-json/">
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://itc.ua/xmlrpc.php?rsd">
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://itc.ua/wp-includes/wlwmanifest.xml">
+  <meta name="generator" content="WordPress 5.6"> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/itc-adriver/js/adriver.js"></script> 
+  <link rel="amphtml" href="https://itc.ua/amp/">
+  <style type="text/css">img#wpstats{display:none}</style>
+  <link rel="icon" href="https://i0.wp.com/itc.ua/wp-content/uploads/2016/07/cropped-itc-favicon.png?fit=32%2C32&amp;quality=100&amp;strip=all&amp;ssl=1" sizes="32x32">
+  <link rel="icon" href="https://i0.wp.com/itc.ua/wp-content/uploads/2016/07/cropped-itc-favicon.png?fit=192%2C192&amp;quality=100&amp;strip=all&amp;ssl=1" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://i0.wp.com/itc.ua/wp-content/uploads/2016/07/cropped-itc-favicon.png?fit=180%2C180&amp;quality=100&amp;strip=all&amp;ssl=1">
+  <meta name="msapplication-TileImage" content="https://i0.wp.com/itc.ua/wp-content/uploads/2016/07/cropped-itc-favicon.png?fit=270%2C270&amp;quality=100&amp;strip=all&amp;ssl=1">
+  <meta name="apple-mobile-web-app-title" content="ITC.ua">
+  <meta name="application-name" content="ITC.ua">
+  <meta name="msapplication-TileColor" content="#262626">
+  <meta name="msapplication-TileImage" content="https://itc.ua/wp-content/uploads/2016/07/cropped-itc-favicon-192x192.png">
+  <meta name="theme-color" content="#262626">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="referrer" content="origin"> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T6KH7DT');</script> 
+ </head>
+ <body data-rsssl="1" class="home blog wp-custom-logo itc-body no-js front-page">
+  <div id="container">
+   <div id="grey_back" style="display: none;">
+    &nbsp;
+   </div>
+   <div id="menu-mobile" style="position: absolute; left:-100%;">
+    <ul style="overflow-y:auto;"></ul> 
+    <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">// Вставляємо елементи у мобільне меню
+	jQuery(document).ready(function() {
+		var menu_items = jQuery('#header .menu-main').html();
+		jQuery('#menu-mobile > ul').html(menu_items);				
+	});</script> 
+   </div>
+   <header id="header" class="clearfix">
+    <div class="header-top container clearfix">
+     <div class="pull-left menu_btn visible-xs"> <i class="fa fa-bars icon" aria-hidden="true"></i>
+     </div> <span class="logo pull-left"> <span itemscope itemtype="http://schema.org/Organization"><a href="https://itc.ua/" class="custom-logo-link" title="ITC.ua" rel="home follow" itemprop="url" data-wpel-link="internal" target="_self"> <img src="https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?fit=450%2C123&amp;quality=100&amp;strip=all&amp;ssl=1" srcset="https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?w=800&amp;quality=100&amp;strip=all&amp;ssl=1 800w, https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?resize=450%2C123&amp;quality=100&amp;strip=all&amp;ssl=1 450w, https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?resize=770%2C211&amp;quality=100&amp;strip=all&amp;ssl=1 770w" sizes="(max-width: 770px) 100vw, 770px" alt="ITC.ua" class="img-responsive custom-logo" width="450" height="123" itemprop="logo" loading="lazy"> </a></span> </span>
+     <div class="pull-right search-icon">
+      <div class="search_btn"> <i class="fa fa-search icon glyphicon glyphicon-search" aria-hidden="true"></i> <span class="icon icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+     </div>
+     <ul id="menu-glavnoe-menyu-v-shapke" class="menu-main clearfix text-center text-uppercase hidden-xs">
+      <li id="menu-item-149595" class="news menu-item menu-item-type-custom menu-item-object-custom menu-item-149595"><a href="/news/" data-wpel-link="internal" target="_self" rel="follow">Новости</a></li>
+      <li id="menu-item-148066" class="review_cat menu-item menu-item-type-custom menu-item-object-custom menu-item-148066"><a href="/articles/" data-wpel-link="internal" target="_self" rel="follow">Обзоры</a></li>
+      <li id="menu-item-162228" class="stati menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162228"><a href="https://itc.ua/stati/" data-wpel-link="internal" target="_self" rel="follow">Статьи</a></li>
+      <li id="menu-item-148065" class="video_cat menu-item menu-item-type-custom menu-item-object-custom menu-item-148065"><a href="/video/" data-wpel-link="internal" target="_self" rel="follow">Видео</a></li>
+      <li id="menu-item-149596" class="blogs menu-item menu-item-type-custom menu-item-object-custom menu-item-149596"><a href="/blogs/" data-wpel-link="internal" target="_self" rel="follow">Блоги</a></li>
+     </ul> 
+     <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">jQuery(document).ready(function(){
+	jQuery( ".search_btn" ).click(function() {
+		jQuery( "#black-search" ).slideToggle( "fast", function() {
+			jQuery('body').toggleClass('open-search-form');
+			jQuery('.search_btn').toggleClass('open');
+			jQuery( "#black-search #s" ).focus();
+		});
+	});
+});</script> 
+    </div>
+    <div id="black-search" class="">
+     <form role="search" method="get" class="form-search" id="searchform" action="https://itc.ua/">
+      <div class="input-group"> <span class="input-group-addon hidden-xs">Поиск:</span> 
+       <input type="text" name="s" id="s" class="form-control input-lg" autocomplete="off" spellcheck="false" required placeholder="что вы хотите найти?"> <span class="input-group-btn"> <button class="btn btn-default btn-lg" id="searchsubmit"> <i class="fa fa-search icon glyphicon glyphicon-search" aria-hidden="true"></i> </button> </span>
+      </div>
+     </form>
+    </div>
+    <div class="menu-tags text-center visible-md visible-lg clearfix">
+     <ul id="menu-featured-temyi" class="">
+      <li id="menu-item-115984" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-115984"><a href="https://itc.ua/tag/smartfoni/" data-wpel-link="internal" target="_self" rel="follow">Смартфоны</a></li>
+      <li id="menu-item-115992" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-115992"><a href="https://itc.ua/tag/notebook/" data-wpel-link="internal" target="_self" rel="follow">Ноутбуки</a></li>
+      <li id="menu-item-115987" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-115987"><a href="https://itc.ua/tag/planshety/" data-wpel-link="internal" target="_self" rel="follow">Планшеты</a></li>
+      <li id="menu-item-168272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-168272"><a href="//itc.ua/tag/komplektuyushhie/" data-wpel-link="internal" target="_self" rel="follow">Комплектующие</a></li>
+      <li id="menu-item-302268" class="menu-item menu-item-type-taxonomy menu-item-object-review_cat menu-item-302268"><a href="https://itc.ua/review_cat/technology/" data-wpel-link="internal" target="_self" rel="follow">Технологии</a></li>
+      <li id="menu-item-115999" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-115999"><a href="https://itc.ua/tag/igry/" data-wpel-link="internal" target="_self" rel="follow">Игры</a></li>
+      <li id="menu-item-302267" class="menu-item menu-item-type-taxonomy menu-item-object-review_cat menu-item-302267"><a href="https://itc.ua/review_cat/kino/" data-wpel-link="internal" target="_self" rel="follow">Кино</a></li>
+      <li id="menu-item-337175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-337175"><a href="//itc.ua/tag/avto/" data-wpel-link="internal" target="_self" rel="follow">Авто</a></li>
+      <li id="menu-item-251564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-251564"><a target="_blank" rel="noopener nofollow external" href="https://www.mobua.net/maps" data-wpel-link="external">Карта 4G</a></li>
+     </ul>
+    </div>
+   </header>
+   <div class="hidden-xs- clearfix ad-below-header" style="">
+    <div class="container-fluid text-center">
+     <div class="ad ad-top" style="text-align: center !important;">
+      <div class="ad-banner">
+       <div id="adriver_banner_1"></div> 
+       <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver.Plugin.require("old.adriver").onLoadComplete(function(){
+				                new adriver("adriver_banner_1", {
+				                    sid:86398,
+				                    sz:"main",
+				                    bt:52,
+				                    pz:1,
+				                    bn:1
+				                });
+				            });</script> 
+      </div>
+     </div>
+    </div>
+   </div>
+   <link rel="stylesheet" type="text/css" href="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/slick/slick.css"> 
+   <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/slick/slick.min.js"></script> 
+   <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">jQuery(document).ready(function($){
+    var slickSettings = {
+		arrows:false,
+		dots:true,
+        infinite: false
+    };
+
+    var $slick = $('#featured .featured-in');
+
+    if (!$slick.length) {
+        return;
+    }
+
+    var $savedNode = $slick.clone();
+
+    var slickOrNot = function() {
+        var $windowWidth = $(window).width();
+        if ($windowWidth < 768) {
+            if (!$slick.hasClass("slick-initialized")) {
+                $slick.slick(slickSettings);
+            }
+        } else {
+            if ($slick.hasClass("slick-initialized")) {
+                $slick.slick('unslick');
+                $slick.after($savedNode);
+                $slick.remove();
+                $slick = $savedNode;
+                $savedNode = $slick.clone();
+            }
+        }
+    };
+
+    slickOrNot();
+    $(window).resize(slickOrNot);
+});
+
+
+/*
+jQuery(document).ready(function(){
+	jQuery('#featured .featured-in').slick({
+            responsive: [{
+                breakpoint: 99999,
+                settings: "unslick"
+            },{
+                breakpoint: 768,
+	                settings: {
+					arrows:false,
+					dots:true,
+                    infinite: false
+                }
+            }]
+	});
+});
+*/</script> 
+   <div id="featured" class="block-in-loop clearfix">
+    <div class="featured-in"> <a href="https://itc.ua/articles/reczenziya-na-film-pik-strahu-let-it-snow/" class="post post-642239 articles type-articles status-publish has-post-thumbnail category-review_cat tag-let-it-snow tag-cinema tag-kino tag-pik-straha tag-pik-strahu tag-filmy tag-filmi review_cat-kino" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/oblozhka-4.jpg?fit=770%2C481&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"> <span class="post-in"></span> <span class="title-wrp"> <span class="entry-title h">Рецензія на фільм «Пік страху» / Let It Snow</span> <span class="author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> Анастасия Сохач </span> <span class="comments part hidden-xs"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/articles/reczenziya-na-film-pik-strahu-let-it-snow/"> </span> </span> </span> </a> <a href="https://itc.ua/articles/reczenziya-na-film-the-dig-raskopki/" class="post post-642216 articles type-articles status-publish has-post-thumbnail category-review_cat tag-raskopki tag-the-dig tag-biograficheskaya-drama tag-cinema tag-filmy formats-video review_cat-kino" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/the_dig_i01.jpg?fit=770%2C546&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"> <span class="post-in"></span> <span class="title-wrp"> <span class="entry-title h">Рецензия на фильм The Dig / «Раскопки»</span> <span class="author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> Олег Данилов </span> <span class="comments part hidden-xs"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/articles/reczenziya-na-film-the-dig-raskopki/"> </span> </span> </span> </a> <a href="https://itc.ua/articles/reczenziya-na-film-ohotnik-na-monstrov-monster-hunter/" class="post post-642197 articles type-articles status-publish has-post-thumbnail category-review_cat tag-monster-hunter tag-cinema tag-ohotnik-na-monstrov tag-filmy review_cat-kino" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/oblozhka-3.jpg?fit=770%2C481&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"> <span class="post-in"></span> <span class="title-wrp"> <span class="entry-title h">Рецензия на фильм «Охотник на монстров» / Monster Hunter</span> <span class="author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> Анастасия Сохач </span> <span class="comments part hidden-xs"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/articles/reczenziya-na-film-ohotnik-na-monstrov-monster-hunter/"> </span> </span> </span> </a> <a href="https://itc.ua/articles/samye-interesnye-novye-serialy-fevralya-2021/" class="post post-642079 articles type-articles status-publish has-post-thumbnail category-stati tag-beartown tag-clarice tag-crime-scene-the-vanishing-at-the-cecil-hotel tag-firefly-lane tag-ginny-georgia tag-superman-lois tag-the-equalizer tag-the-investigation tag-tribes-of-europa tag-young-rock tag-serialy tag-serialy-2021 tag-film formats-video review_cat-kino" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/tv_series_feb_2021_i00.jpg?fit=770%2C546&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"> <span class="post-in"></span> <span class="title-wrp"> <span class="entry-title h">Самые интересные новые сериалы февраля 2021</span> <span class="author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> Олег Данилов </span> <span class="comments part hidden-xs"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/articles/samye-interesnye-novye-serialy-fevralya-2021/"> </span> </span> </span> </a> <a href="https://itc.ua/articles/test-drajv-volkswagen-multivan-t6-1-snova-lider-top-5-voprosov-i-otvetov/" class="post post-641978 articles type-articles status-publish has-post-thumbnail category-stati tag-volkswagen tag-volkswagen-multivan tag-volkswagen-multivan-t6-1 tag-avto tag-test-drayv review_cat-avto brand_review-volkswagen" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/foto-zaglav-2.jpg?fit=770%2C519&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"> <span class="post-in"></span> <span class="title-wrp"> <span class="entry-title h">Тест-драйв Volkswagen Multivan T6.1: снова лидер? (ТОП-5 вопросов и ответов)</span> <span class="author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> Роман Мельниченко </span> <span class="comments part hidden-xs"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/articles/test-drajv-volkswagen-multivan-t6-1-snova-lider-top-5-voprosov-i-otvetov/"> </span> </span> </span> </a>
+    </div>
+   </div>
+   <div class="visible-xs text-center clearfix ad-below-header">
+    <div id="adriver_banner_2" style="margin-left: auto; margin-right: auto;"></div> 
+    <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver.Plugin.require("old.adriver").onLoadComplete(function(){
+		new adriver("adriver_banner_2", {
+			sid:86398,
+			sz:"main",
+			bt:52,
+			pz:2,
+			bn:2
+		});
+	});</script> 
+   </div>
+   <section id="wrapper">
+    <div class="container">
+     <div class="row">
+      <main id="content" class="col-md-8 col-content">
+       <div class="post block-in-loop post-642239 articles type-articles status-publish has-post-thumbnail category-review_cat tag-let-it-snow tag-cinema tag-kino tag-pik-straha tag-pik-strahu tag-filmy tag-filmi review_cat-kino">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/review_cat" class="itc-cat review_cat" rel="category follow" data-wpel-link="internal" target="_self">Обзоры</a> </span> <a href="https://itc.ua/articles/reczenziya-na-film-pik-strahu-let-it-snow/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/oblozhka-4.jpg?fit=450%2C281&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/articles/reczenziya-na-film-pik-strahu-let-it-snow/" rel="bookmark follow" data-wpel-link="internal" target="_self">Рецензія на фільм «Пік страху» / Let It Snow</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-31T12:00:32+02:00"> 31.01.2021 в 12:00 </time> <time class="screen-reader-text updated" datetime="2021-01-31T12:05:33+02:00"> Обновлено: 31.01.2021 в 12:05 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/nastyasokhach/" title="Записи Анастасия Сохач" rel="author follow" data-wpel-link="internal" target="_self">Анастасия Сохач</a> <a href="https://itc.ua/author/nastyasokhach/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Анастасия Сохач</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/reczenziya-na-film-pik-strahu-let-it-snow/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642239" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="rating-and-price"> <span class="rating"> <span class="title">Оценка:</span> <span class="stars"> <span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-half-black-48px star"></span><span class="icon icon-ic-star-border-black-48px star"></span> </span> </span>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            «Пік страху» (Let It Snow) – таку назву має український трилер, знятий англійською мовою на території гірськолижного курорту в Грузії. Це перша повнометражна робота українського режисера…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642216 articles type-articles status-publish has-post-thumbnail category-review_cat tag-raskopki tag-the-dig tag-biograficheskaya-drama tag-cinema tag-filmy formats-video review_cat-kino">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/review_cat" class="itc-cat review_cat" rel="category follow" data-wpel-link="internal" target="_self">Обзоры</a> </span> <a href="https://itc.ua/articles/reczenziya-na-film-the-dig-raskopki/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/the_dig_i01.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/articles/reczenziya-na-film-the-dig-raskopki/" rel="bookmark follow" data-wpel-link="internal" target="_self">Рецензия на фильм The Dig / «Раскопки»</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-31T10:00:08+02:00"> 31.01.2021 в 10:00 </time> <time class="screen-reader-text updated" datetime="2021-01-31T10:35:04+02:00"> Обновлено: 31.01.2021 в 10:35 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/daniloff/" title="Записи Олег Данилов" rel="author follow" data-wpel-link="internal" target="_self">Олег Данилов</a> <a href="https://itc.ua/author/daniloff/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Олег Данилов</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/reczenziya-na-film-the-dig-raskopki/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642216" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="rating-and-price"> <span class="rating"> <span class="title">Оценка:</span> <span class="stars"> <span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-border-black-48px star"></span> </span> </span>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Фильм об археологах без восставших из мертвых мумий, трэшового сюжета и раздутого бюджета на спецэффекты? Да, и такое бывает. The Dig / «Раскопки» от Netflix – это несколько драматизированная версия…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642197 articles type-articles status-publish has-post-thumbnail category-review_cat tag-monster-hunter tag-cinema tag-ohotnik-na-monstrov tag-filmy review_cat-kino">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/review_cat" class="itc-cat review_cat" rel="category follow" data-wpel-link="internal" target="_self">Обзоры</a> </span> <a href="https://itc.ua/articles/reczenziya-na-film-ohotnik-na-monstrov-monster-hunter/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/oblozhka-3.jpg?fit=450%2C281&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/articles/reczenziya-na-film-ohotnik-na-monstrov-monster-hunter/" rel="bookmark follow" data-wpel-link="internal" target="_self">Рецензия на фильм «Охотник на монстров» / Monster Hunter</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-30T13:00:37+02:00"> 30.01.2021 в 13:00 </time> <time class="screen-reader-text updated" datetime="2021-01-30T13:09:24+02:00"> Обновлено: 30.01.2021 в 13:09 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/nastyasokhach/" title="Записи Анастасия Сохач" rel="author follow" data-wpel-link="internal" target="_self">Анастасия Сохач</a> <a href="https://itc.ua/author/nastyasokhach/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Анастасия Сохач</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/reczenziya-na-film-ohotnik-na-monstrov-monster-hunter/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642197" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="rating-and-price"> <span class="rating"> <span class="title">Оценка:</span> <span class="stars"> <span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-black-48px star"></span><span class="icon icon-ic-star-half-black-48px star"></span><span class="icon icon-ic-star-border-black-48px star"></span> </span> </span>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            После череды переносов официальной премьеры фильм «Охотник на монстров» (Monster Hunter) все же добрался до украинских кинотеатров, попав на большие экраны в конце января. Это адаптация популярной…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642117 articles type-articles status-publish has-post-thumbnail category-interview tag-cinema tag-pik-straha tag-ukrainskoe-kino tag-filmy review_cat-kino">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/interview" class="itc-cat interview" rel="category follow" data-wpel-link="internal" target="_self">Интервью</a> </span> <a href="https://itc.ua/articles/intervyu-s-rezhisserom-ukrainskogo-trillera-pik-straha-o-semkah-filma-v-ekstremalnyh-usloviyah-i-rabote-s-ivannoj-sahno/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/12-4.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/articles/intervyu-s-rezhisserom-ukrainskogo-trillera-pik-straha-o-semkah-filma-v-ekstremalnyh-usloviyah-i-rabote-s-ivannoj-sahno/" rel="bookmark follow" data-wpel-link="internal" target="_self">Интервью с режиссером украинского триллера «Пик страха»: о съемках фильма в экстремальных условиях и работе с Иванной Сахно</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-30T12:00:40+02:00"> 30.01.2021 в 12:00 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:31:27+02:00"> Обновлено: 29.01.2021 в 16:31 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/nastyasokhach/" title="Записи Анастасия Сохач" rel="author follow" data-wpel-link="internal" target="_self">Анастасия Сохач</a> <a href="https://itc.ua/author/nastyasokhach/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Анастасия Сохач</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/intervyu-s-rezhisserom-ukrainskogo-trillera-pik-straha-o-semkah-filma-v-ekstremalnyh-usloviyah-i-rabote-s-ivannoj-sahno/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642117" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Триллер «Пик страха» (Let It Snow) станет первым украинским фильмом 2021 года, вышедшим в прокат после снятия карантинных ограничений в кинотеатрах. Это кино о паре американских сноубордистов,…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642079 articles type-articles status-publish has-post-thumbnail category-stati tag-beartown tag-clarice tag-crime-scene-the-vanishing-at-the-cecil-hotel tag-firefly-lane tag-ginny-georgia tag-superman-lois tag-the-equalizer tag-the-investigation tag-tribes-of-europa tag-young-rock tag-serialy tag-serialy-2021 tag-film formats-video review_cat-kino">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/stati" class="itc-cat stati" rel="category follow" data-wpel-link="internal" target="_self">Статьи</a> </span> <a href="https://itc.ua/articles/samye-interesnye-novye-serialy-fevralya-2021/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/tv_series_feb_2021_i00.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase bold_title"> <a href="https://itc.ua/articles/samye-interesnye-novye-serialy-fevralya-2021/" rel="bookmark follow" data-wpel-link="internal" target="_self">Самые интересные новые сериалы февраля 2021</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-30T10:00:07+02:00"> 30.01.2021 в 10:00 </time> <time class="screen-reader-text updated" datetime="2021-01-30T10:53:22+02:00"> Обновлено: 30.01.2021 в 10:53 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/daniloff/" title="Записи Олег Данилов" rel="author follow" data-wpel-link="internal" target="_self">Олег Данилов</a> <a href="https://itc.ua/author/daniloff/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Олег Данилов</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/samye-interesnye-novye-serialy-fevralya-2021/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642079" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            На момент публикации материала, посвященного новым сериалам, выходящим в 2021 г., мы знали буквально о двух шоу, премьера которых была запланирована на февраль. За прошедшую неделю появилось…
+          </div>
+         </div>
+        </div>
+       </div> 
+       <style>#content #adriver_banner_11,#content #adriver_banner_11 img{max-width:100%!important;height:auto!important}</style>
+       <div id="adriver_banner_11" style="margin-bottom:25px;"></div> 
+       <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver("adriver_banner_11", {sid:86398, bt:52, bn:11});</script> 
+       <div class="post block-in-loop post-642166 type-post status-publish format-standard has-post-thumbnail category-blogs tag-cell-mate tag-qiui tag-bezopasnost tag-po tag-uyazvimosti tag-hakeryi">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/uyazvimost-v-elektronnom-poyase-vernosti-stoila-postradavshemu-1000-i-bolee-mesyacza-vozderzhaniya/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/cellmate-qiui-hero.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/uyazvimost-v-elektronnom-poyase-vernosti-stoila-postradavshemu-1000-i-bolee-mesyacza-vozderzhaniya/" rel="bookmark follow" data-wpel-link="internal" target="_self">Уязвимость в электронном «поясе верности» стоила пострадавшему $1000 и более месяца воздержания</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T18:59:19+02:00"> 29.01.2021 в 18:59 </time> <time class="screen-reader-text updated" datetime="2021-01-29T18:46:13+02:00"> Обновлено: 29.01.2021 в 18:46 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vadimus/" title="Записи Вадим Карпусь" rel="author follow" data-wpel-link="internal" target="_self">Вадим Карпусь</a> <a href="https://itc.ua/author/vadimus/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Вадим Карпусь</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/uyazvimost-v-elektronnom-poyase-vernosti-stoila-postradavshemu-1000-i-bolee-mesyacza-vozderzhaniya/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642166" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            В прошлом году мы рассказывали, что в электронных «поясах верности» для мужчин Qiui обнаружилась уязвимость, которая позволяла злоумышленникам удалённо брать устройство под контроль и…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642189 type-post status-publish format-standard has-post-thumbnail category-news tag-google tag-honor tag-huawei tag-biznes tag-smartfoni">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/glava-honor-podtverdil-vozvrashhenie-servisov-google/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/honor.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/glava-honor-podtverdil-vozvrashhenie-servisov-google/" rel="bookmark follow" data-wpel-link="internal" target="_self">Глава Honor подтвердил возвращение сервисов Google</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T18:43:47+02:00"> 29.01.2021 в 18:43 </time> <time class="screen-reader-text updated" datetime="2021-01-29T18:43:47+02:00"> Обновлено: 29.01.2021 в 18:43 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/glava-honor-podtverdil-vozvrashhenie-servisov-google/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642189" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Доступность сервисов Google в новых смартфонах Honor подтвердил генеральный директор Honor Джордж Чжао в недавнем интервью SCMP. В прошлом году&nbsp;Huawei продала бренд Honor, чтобы таким образом вывести его…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642100 type-post status-publish format-standard has-post-thumbnail category-news tag-geforce-rtx-3080-ti tag-nvidia tag-nvidia-geforce-rtx-3080-20-gb tag-nvidia-geforce-rtx-3080-ti">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/raskryty-harakteristiki-testy-proizvoditelnosti-i-heshrejt-videokarty-nvidia-geforce-rtx-3080-s-20-gb-pamyati-geforce-rtx-3080-ti/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/geforce-rtx-3090-product-gallery-full-screen-3840-1-2060x1159-1.jpg?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/raskryty-harakteristiki-testy-proizvoditelnosti-i-heshrejt-videokarty-nvidia-geforce-rtx-3080-s-20-gb-pamyati-geforce-rtx-3080-ti/" rel="bookmark follow" data-wpel-link="internal" target="_self">Раскрыты характеристики, тесты производительности и хешрейт видеокарты NVIDIA GeForce RTX 3080 с 20 ГБ памяти (GeForce RTX 3080 Ti)</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T18:17:37+02:00"> 29.01.2021 в 18:17 </time> <time class="screen-reader-text updated" datetime="2021-01-29T18:11:57+02:00"> Обновлено: 29.01.2021 в 18:11 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vadimus/" title="Записи Вадим Карпусь" rel="author follow" data-wpel-link="internal" target="_self">Вадим Карпусь</a> <a href="https://itc.ua/author/vadimus/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Вадим Карпусь</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/raskryty-harakteristiki-testy-proizvoditelnosti-i-heshrejt-videokarty-nvidia-geforce-rtx-3080-s-20-gb-pamyati-geforce-rtx-3080-ti/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642100" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Уже некоторое время в интернете ходят слухи о возможности выхода видеокарт NVIDIA серии GeForce RTX 30 с увеличенным объёмом памяти. И теперь состоялась утечка не только технических характеристик…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="home-themes-wrp">
+        <div id="adriver_banner_1897617554" class="visible-xs text-center clearfix" style="margin-bottom: 15px;"></div> 
+        <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver("adriver_banner_1897617554", {sid:86398, bt:52, sz:'main', bn:9, w:300, h:150});</script> 
+        <div id="home-themes" class="five-posts-block home-themes block-in-loop" data-bg="https://itc.ua/wp-content/uploads/2020/11/sony_playstation5-dual.jpg"> <span class="cat text-uppercase"> <a href="https://itc.ua/tag/playstation-5/" class="itc-cat review_cat" rel="category follow" data-wpel-link="internal" target="_self">Тема</a> </span>
+         <div class="home-themes-in">
+          <div class="post post-1 clearfix">
+           <h2 class="entry-title text-uppercase">PlayStation 5</h2>
+          </div>
+          <div class="tag-posts">
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/obzor-sony-playstation-5/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Обзор Sony PlayStation 5</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/playstation-5-vo-chto-igrat-i-kakih-relizov-zhdat/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">PlayStation 5: во что играть и каких релизов ждать</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/ps5-accessories/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Фирменные аксессуары для Sony PlayStation 5</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/news/sony-nazvala-zapusk-ps5-krupnejshim-v-istorii-playstation-no-konkretnyh-czifr-ne-soobshhila/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Sony назвала запуск PS5 крупнейшим в истории Playstation</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/news/playstation-5-poluchit-podderzhku-variable-refresh-rate-v-budushhem-obnovlenii-proshivki/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">PlayStation 5 получит поддержку Variable Refresh Rate в будущем обновлении прошивки</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/blogs/londonskaya-podzemka-preobrazilas-k-vyhodu-ps5-sony-izyashhno-ukrasila-stanczii-tradiczionnymi-ikonkami-playstation/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Лондонская подземка преобразилась к выходу PS5 — Sony изящно украсила станции традиционными иконками PlayStation</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/news/igra-gran-turismo-7-vyjdet-v-2021-godu-i-stanet-eksklyuzivom-dlya-playstation-5/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Игра Gran Turismo 7 выйдет в 2021 году и станет эксклюзивом для PlayStation 5</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/news/sony-detalno-rasskazala-o-raznyh-aspektah-ps5-v-formate-vopros-otvet/" data-tracking-id="main-2" data-wpel-link="internal" target="_self" rel="follow">Sony детально рассказала о разных аспектах PS5 в формате «вопрос-ответ»</a></h2>
+           </div>
+          </div> <a href="https://itc.ua/tag/playstation-5/" class="more-posts text-uppercase" data-tracking-id="main-1" data-wpel-link="internal" target="_self" rel="follow">Все материалы по теме <span class="icon icon-ic-keyboard-arrow-right-black-48px"></span></a>
+         </div>
+        </div>
+       </div>
+       <div class="visible-sm visible-xs text-center clearfix" style="min-height: 50px; margin-bottom: 15px;"> 
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+        <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-4454916504760604" data-ad-slot="2535491244"></ins> 
+        <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+       </div>
+       <div class="post block-in-loop post-642154 type-post status-publish format-standard has-post-thumbnail category-news tag-telegram tag-messendzheryi tag-obnovlenie tag-pavel-durov tag-po tag-soft">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/telegram-dobavil-perenos-chatov-iz-whatsapp-line-i-kakaotalk/" class="thumb-responsive lazy-load" data-bg="https://itc.ua/wp-content/uploads/2021/01/4c049986f45118c1a6-450x263.jfif" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/telegram-dobavil-perenos-chatov-iz-whatsapp-line-i-kakaotalk/" rel="bookmark follow" data-wpel-link="internal" target="_self">Telegram добавил перенос чатов из WhatsApp, Line и KakaoTalk</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T18:08:37+02:00"> 29.01.2021 в 18:08 </time> <time class="screen-reader-text updated" datetime="2021-01-29T18:08:37+02:00"> Обновлено: 29.01.2021 в 18:08 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/telegram-dobavil-perenos-chatov-iz-whatsapp-line-i-kakaotalk/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642154" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Telegram в очередной раз обновил мессенджер — апдейт добавил перенос переписок из других мессенджеров. В начале 2021 года Telegram стал вторым по числу скачиваний приложением в США: с 6 по 10 января…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642151 type-post status-publish format-standard has-post-thumbnail category-news tag-e1 tag-extreme-e tag-formula-e tag-gmc tag-gmc-hummer-ev tag-odyssey-21 tag-racebirds tag-seabird tag-avto tag-avtogonki tag-avtomobili tag-gonki tag-dzhenson-batton tag-lodki tag-sport tag-elektromobili">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/k-gonochnoj-serii-elektrovnedorozhnikov-extreme-e-prisoedinilsya-byvshij-pilot-f1-dzhenson-batton-i-shoukar-gmc-hummer-ev/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/cgr.jpg?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/k-gonochnoj-serii-elektrovnedorozhnikov-extreme-e-prisoedinilsya-byvshij-pilot-f1-dzhenson-batton-i-shoukar-gmc-hummer-ev/" rel="bookmark follow" data-wpel-link="internal" target="_self">К гоночной серии электровнедорожников Extreme E присоединился бывший пилот F1 Дженсон Баттон и шоу-кар GMC Hummer EV</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T17:35:54+02:00"> 29.01.2021 в 17:35 </time> <time class="screen-reader-text updated" datetime="2021-01-29T17:50:02+02:00"> Обновлено: 29.01.2021 в 17:50 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kulesh/" title="Записи Сергей Кулеш" rel="author follow" data-wpel-link="internal" target="_self">Сергей Кулеш</a> <a href="https://itc.ua/author/kulesh/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Кулеш</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/k-gonochnoj-serii-elektrovnedorozhnikov-extreme-e-prisoedinilsya-byvshij-pilot-f1-dzhenson-batton-i-shoukar-gmc-hummer-ev/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642151" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Новая гоночная серия электровнедорожников Extreme E продолжает набирать обороты, хотя до начала первого этапа остается еще два месяца. На этой неделе организаторы объявили о привлечении к…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642116 type-post status-publish format-standard has-post-thumbnail category-news tag-apple-a14-bionic tag-exynos tag-exynos-2100 tag-galaxy-21-plus tag-galaxy-21-ultra tag-galaxy-s21 tag-samsung tag-snapdragon-888 tag-aksessuary tag-smartfoni">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/rezultaty-exynos-s-gpu-radeon-v-gfxbench-v-etih-testah-soc-samsung-do-dvuh-raz-bystree-apple-a14-bionic/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/exynos-9825-2.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/rezultaty-exynos-s-gpu-radeon-v-gfxbench-v-etih-testah-soc-samsung-do-dvuh-raz-bystree-apple-a14-bionic/" rel="bookmark follow" data-wpel-link="internal" target="_self">Результаты Exynos с GPU Radeon в GFXBench — в этих тестах SoC Samsung до двух раз быстрее Apple A14 Bionic</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T16:51:45+02:00"> 29.01.2021 в 16:51 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:51:45+02:00"> Обновлено: 29.01.2021 в 16:51 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/rezultaty-exynos-s-gpu-radeon-v-gfxbench-v-etih-testah-soc-samsung-do-dvuh-raz-bystree-apple-a14-bionic/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642116" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Результаты тестирования инженерного образца SoC Samsung Exynos со встроенной графикой AMD Radeon в тестовом пакете GFXBench, где платформа показывает до двух раз более высокую производительность, нежели Apple…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642128 type-post status-publish format-standard has-post-thumbnail category-blogs tag-justice-league tag-justice-league-snyder-cut tag-zak-snajder tag-cinema tag-komiksyi tag-liga-spravedlivosti tag-supergeroi tag-filmy">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/18-marta-2021-goda-zak-snajder-nakonecz-obyavil-datu-premery-rezhisserskoj-versii-ligi-spravedlivosti-i-pokazal-tri-svezhih-postera/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/justice-league-snyder-cut.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/18-marta-2021-goda-zak-snajder-nakonecz-obyavil-datu-premery-rezhisserskoj-versii-ligi-spravedlivosti-i-pokazal-tri-svezhih-postera/" rel="bookmark follow" data-wpel-link="internal" target="_self">18 марта 2021 года: Зак Снайдер объявил дату премьеры режиссерской версии «Лиги справедливости» и показал три свежих постера</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T16:42:03+02:00"> 29.01.2021 в 16:42 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:42:03+02:00"> Обновлено: 29.01.2021 в 16:42 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kulesh/" title="Записи Сергей Кулеш" rel="author follow" data-wpel-link="internal" target="_self">Сергей Кулеш</a> <a href="https://itc.ua/author/kulesh/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Кулеш</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/18-marta-2021-goda-zak-snajder-nakonecz-obyavil-datu-premery-rezhisserskoj-versii-ligi-spravedlivosti-i-pokazal-tri-svezhih-postera/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642128" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Режиссер Зак Снайдер наконец поделился с фанатами датой премьеры собственной версии супергеройского фильма Justice League / «Лига справедливости» — картина выйдет в стриминговом сервисе HBO Max…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642112 type-post status-publish format-standard has-post-thumbnail category-blogs tag-netflix tag-the-sandman tag-komiksyi tag-nil-gejman tag-pesochnyj-chelovek tag-serialy tag-striming tag-ekranizatsii">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/glavnye-roli-v-seriale-netflix-po-komiksu-nila-gejmana-pesochnyj-chelovek-the-sandman-sygrayut-tom-starridzh-gvendolin-kristi-roderik-berdzhess-i-dr/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/the-sandman.png?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/glavnye-roli-v-seriale-netflix-po-komiksu-nila-gejmana-pesochnyj-chelovek-the-sandman-sygrayut-tom-starridzh-gvendolin-kristi-roderik-berdzhess-i-dr/" rel="bookmark follow" data-wpel-link="internal" target="_self">Главные роли в сериале Netflix по комиксу Нила Геймана «Песочный человек» (The Sandman) сыграют Том Старридж, Гвендолин Кристи, Родерик Берджесс и др.</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T16:19:12+02:00"> 29.01.2021 в 16:19 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:19:12+02:00"> Обновлено: 29.01.2021 в 16:19 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kulesh/" title="Записи Сергей Кулеш" rel="author follow" data-wpel-link="internal" target="_self">Сергей Кулеш</a> <a href="https://itc.ua/author/kulesh/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Кулеш</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/glavnye-roli-v-seriale-netflix-po-komiksu-nila-gejmana-pesochnyj-chelovek-the-sandman-sygrayut-tom-starridzh-gvendolin-kristi-roderik-berdzhess-i-dr/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642112" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Стриминговый сервис Netflix представил основной актерский состав грядущего сериала «Песочный человек» (The Sandman), который является экранизацией одноименной серии комиксов Нила Геймана. Главную…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641978 articles type-articles status-publish has-post-thumbnail category-stati tag-volkswagen tag-volkswagen-multivan tag-volkswagen-multivan-t6-1 tag-avto tag-test-drayv review_cat-avto brand_review-volkswagen">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/stati" class="itc-cat stati" rel="category follow" data-wpel-link="internal" target="_self">Статьи</a> </span> <a href="https://itc.ua/articles/test-drajv-volkswagen-multivan-t6-1-snova-lider-top-5-voprosov-i-otvetov/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/foto-zaglav-2.jpg?fit=445%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/articles/test-drajv-volkswagen-multivan-t6-1-snova-lider-top-5-voprosov-i-otvetov/" rel="bookmark follow" data-wpel-link="internal" target="_self">Тест-драйв Volkswagen Multivan T6.1: снова лидер? (ТОП-5 вопросов и ответов)</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T15:58:10+02:00"> 29.01.2021 в 15:58 </time> <time class="screen-reader-text updated" datetime="2021-01-29T15:58:10+02:00"> Обновлено: 29.01.2021 в 15:58 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/romanroman/" title="Записи Роман Мельниченко" rel="author follow" data-wpel-link="internal" target="_self">Роман Мельниченко</a> <a href="https://itc.ua/author/romanroman/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Роман Мельниченко</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/articles/test-drajv-volkswagen-multivan-t6-1-snova-lider-top-5-voprosov-i-otvetov/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641978" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Для коммерческого отделения компании Volkswagen вот этот автомобиль – как краеугольный камень несущей стены: огромные продажи, огромное число версий. А еще этот автомобиль – как мерило для всех…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642094 type-post status-publish format-standard has-post-thumbnail category-news tag-huawei tag-soft">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/vyshlo-prilozhenie-huawei-ai-life-dlya-upravleniya-naushnikami-freebuds-pro-i-drugimi-umnymi-ustrojstvami-kompanii/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/123-1.jpg?fit=424%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/vyshlo-prilozhenie-huawei-ai-life-dlya-upravleniya-naushnikami-freebuds-pro-i-drugimi-umnymi-ustrojstvami-kompanii/" rel="bookmark follow" data-wpel-link="internal" target="_self">На iOS вышло приложение Huawei AI Life для управления наушниками FreeBuds Pro и другими умными устройствами компании</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T15:52:07+02:00"> 29.01.2021 в 15:52 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:32:48+02:00"> Обновлено: 29.01.2021 в 16:32 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vadimus/" title="Записи Вадим Карпусь" rel="author follow" data-wpel-link="internal" target="_self">Вадим Карпусь</a> <a href="https://itc.ua/author/vadimus/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Вадим Карпусь</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/vyshlo-prilozhenie-huawei-ai-life-dlya-upravleniya-naushnikami-freebuds-pro-i-drugimi-umnymi-ustrojstvami-kompanii/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642094" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Подразделение Huawei Consumer BG сообщило о запуске приложения Huawei AI Life для мобильной платформы iOS. Оно предназначено для совместного использования с беспроводными наушниками FreeBuds Pro и позволяет…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642106 video type-video status-publish has-post-thumbnail category-video_cat tag-android-tv tag-blaupunkt tag-blaupunkt-b-stream-box tag-media-players formats-video video_cat-media-players brand_video-blaupunkt">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/video_cat" class="itc-cat video_cat" rel="category follow" data-wpel-link="internal" target="_self">Видео</a> </span> <a href="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/blaupunkt-b-stream-box.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/" rel="bookmark follow" data-wpel-link="internal" target="_self">Видеообзор медиаплеера BLAUPUNKT B-Stream Box</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T15:36:23+02:00"> 29.01.2021 в 15:36 </time> <time class="screen-reader-text updated" datetime="2021-01-29T15:36:23+02:00"> Обновлено: 29.01.2021 в 15:36 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/svetlichny/" title="Записи Сергей Светличный" rel="author follow" data-wpel-link="internal" target="_self">Сергей Светличный</a> <a href="https://itc.ua/author/svetlichny/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Светличный</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642106" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            BLAUPUNKT B-Stream Box – 4K-медиаплеер на базе Android TV и достаточно новом чипсете Amlogic S905X2. У него более чем достаточная для своих задач производительность, есть поддержка голосового поиска и трансляции с…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="home-themes-wrp">
+        <div id="home-themes-2" class="five-posts-block home-themes block-in-loop" data-bg="https://itc.ua/wp-content/uploads/2020/08/dsc_0094.jpg"> <span class="cat text-uppercase"> <a href="https://itc.ua/review_cat/smartphones" class="itc-cat review_cat" rel="category follow" data-wpel-link="internal" target="_self">Тема</a> </span>
+         <div class="home-themes-in">
+          <div class="post post-1 clearfix">
+           <h2 class="entry-title text-uppercase">A-серия от Samsung</h2>
+          </div>
+          <div class="tag-posts">
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/samsung-galaxy-a51-protiv-redmi-note-9-pro/" data-tracking-id="main-4" data-wpel-link="internal" target="_self" rel="follow">Samsung Galaxy A51 против Redmi Note 9 Pro</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/obzor-smartfona-samsung-galaxy-a71/" data-tracking-id="main-4" data-wpel-link="internal" target="_self" rel="follow">Обзор смартфона Samsung Galaxy A71</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/obzor-smartfona-samsung-galaxy-a51/" data-tracking-id="main-4" data-wpel-link="internal" target="_self" rel="follow">Обзор смартфона Samsung Galaxy A51</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/samsung-galaxy-a41/" data-tracking-id="main-4" data-wpel-link="internal" target="_self" rel="follow">Обзор смартфона Samsung Galaxy A41</a></h2>
+           </div>
+           <div class="post post-small">
+            <h2 class="entry-title"><a href="https://itc.ua/articles/obzor-smartfona-samsung-galaxy-a31/" data-tracking-id="main-4" data-wpel-link="internal" target="_self" rel="follow">Обзор смартфона Samsung Galaxy A31</a></h2>
+           </div>
+          </div> <a href="https://itc.ua/review_cat/smartphones" class="more-posts text-uppercase" data-tracking-id="main-3" data-wpel-link="internal" target="_self" rel="follow">Все материалы по теме <span class="icon icon-ic-keyboard-arrow-right-black-48px"></span></a>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642097 type-post status-publish format-standard has-post-thumbnail category-news tag-razer tag-razer-viper tag-razer-viper-8khz tag-geymerskie-myishi tag-kibersport tag-mouse">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/razer-predstavil-novuyu-mysh-dlya-kibersportsmenov-razer-viper-8khz-s-tehnologiej-hyperpolling-i-skorostyu-oprosa-8000-gcz/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/viper-8khz-2020-sg-studio-2.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/razer-predstavil-novuyu-mysh-dlya-kibersportsmenov-razer-viper-8khz-s-tehnologiej-hyperpolling-i-skorostyu-oprosa-8000-gcz/" rel="bookmark follow" data-wpel-link="internal" target="_self">Razer представила новую мышь для киберспортсменов Razer Viper 8KHz с технологией HyperPolling и скоростью опроса 8000 Гц</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T15:32:42+02:00"> 29.01.2021 в 15:32 </time> <time class="screen-reader-text updated" datetime="2021-01-29T16:43:37+02:00"> Обновлено: 29.01.2021 в 16:43 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kulesh/" title="Записи Сергей Кулеш" rel="author follow" data-wpel-link="internal" target="_self">Сергей Кулеш</a> <a href="https://itc.ua/author/kulesh/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Кулеш</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/razer-predstavil-novuyu-mysh-dlya-kibersportsmenov-razer-viper-8khz-s-tehnologiej-hyperpolling-i-skorostyu-oprosa-8000-gcz/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642097" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Компания Razer представила новую мышь Razer Viper 8KHz, ориентированную на киберспортсменов. Поддержка фирменной технологии сверхскоростного опроса Razer HyperPolling позволяет получить частоту опроса 8000…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641946 type-post status-publish format-standard has-post-thumbnail category-news tag-microsoft tag-minecraft tag-igry">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/microsoft-prevratila-svoj-otchyot-ob-ekologicheskoj-ustojchivosti-v-obrazovatelnuyu-kartu-minecraft/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/sustainability_city_map_a.0.png?fit=450%2C297&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/microsoft-prevratila-svoj-otchyot-ob-ekologicheskoj-ustojchivosti-v-obrazovatelnuyu-kartu-minecraft/" rel="bookmark follow" data-wpel-link="internal" target="_self">Microsoft превратила свой отчёт об экологической устойчивости в образовательную карту Minecraft</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T15:23:19+02:00"> 29.01.2021 в 15:23 </time> <time class="screen-reader-text updated" datetime="2021-01-29T14:58:49+02:00"> Обновлено: 29.01.2021 в 14:58 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vadimus/" title="Записи Вадим Карпусь" rel="author follow" data-wpel-link="internal" target="_self">Вадим Карпусь</a> <a href="https://itc.ua/author/vadimus/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Вадим Карпусь</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/microsoft-prevratila-svoj-otchyot-ob-ekologicheskoj-ustojchivosti-v-obrazovatelnuyu-kartu-minecraft/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641946" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Корпорация Microsoft подготовила ежегодный отчет об экологической устойчивости. При этом компания Mojang – разработчик игры Minecraft – решила придать отчёту более интерактивную форму. Компания…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642087 type-post status-publish format-standard has-post-thumbnail category-blogs tag-steam tag-valve tag-geymstudii tag-igry tag-letnij-festival-igr-steam tag-osennij-festival-igr tag-razrabotchiki tag-festivali-steam">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/valve-priglasila-na-sleduyushhij-festival-igr-steam-on-projdet-s-3-po-9-fevralya/" class="thumb-responsive lazy-load" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/steam-game-festival_-february-2021-edition-0-0-screenshot.png?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/valve-priglasila-na-sleduyushhij-festival-igr-steam-on-projdet-s-3-po-9-fevralya/" rel="bookmark follow" data-wpel-link="internal" target="_self">Valve пригласила на следующий фестиваль игр Steam — он пройдет с 3 по 9 февраля</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T14:46:58+02:00"> 29.01.2021 в 14:46 </time> <time class="screen-reader-text updated" datetime="2021-01-29T14:46:58+02:00"> Обновлено: 29.01.2021 в 14:46 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/valve-priglasila-na-sleduyushhij-festival-igr-steam-on-projdet-s-3-po-9-fevralya/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642087" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            На официальном канале Steam в YouTube вышел тизер, которые одновременно является приглашением на следующий фестиваль в магазине Valve, где игроки вновь смогут попробовать огромное число демо…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-642084 type-post status-publish format-standard has-post-thumbnail category-blogs tag-disney tag-disney-plus tag-the-mighty-ducks tag-the-mighty-ducks-game-changers tag-moguchie-utyata tag-serialy tag-striming tag-filmy tag-emilio-esteves">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/serial-the-mighty-ducks-game-changers-vyjdet-v-disney-26-marta-k-roli-gordona-bombeya-vernetsya-emilio-esteves-trejler/" class="thumb-responsive lazy-load" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/the-mighty-ducks.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/serial-the-mighty-ducks-game-changers-vyjdet-v-disney-26-marta-k-roli-gordona-bombeya-vernetsya-emilio-esteves-trejler/" rel="bookmark follow" data-wpel-link="internal" target="_self">Сериал «The Mighty Ducks: Game Changers» выйдет в Disney+ 26 марта, к роли Гордона Бомбея вернется Эмилио Эстевес [трейлер]</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T14:32:59+02:00"> 29.01.2021 в 14:32 </time> <time class="screen-reader-text updated" datetime="2021-01-29T14:58:35+02:00"> Обновлено: 29.01.2021 в 14:58 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kulesh/" title="Записи Сергей Кулеш" rel="author follow" data-wpel-link="internal" target="_self">Сергей Кулеш</a> <a href="https://itc.ua/author/kulesh/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Сергей Кулеш</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/serial-the-mighty-ducks-game-changers-vyjdet-v-disney-26-marta-k-roli-gordona-bombeya-vernetsya-emilio-esteves-trejler/#itc-comments" class="disqus-comment-count" data-disqus-identifier="642084" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Компания Disney решила возродить франшизу «Могучие утята» о хоккейной команде подростков-неудачников в формате ТВ-сериала. Идея осталась той же — продемонстрировать, что главное в…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641975 type-post status-publish format-standard has-post-thumbnail category-news tag-diya tag-administrativnyie-uslugi tag-gosudarstvo-v-smartfone tag-gosuslugi tag-didzhitalizatsiya tag-diya-2-0 tag-minczifry tag-servisy tag-ukraina tag-ukrainskie-novosti">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/minczifra-z-1-veresnya-derzhavni-organi-ne-matimut-prava-vimagati-paperovi-dokumenti-dlya-nadannya-poslug-ta-%d1%94-nyuans/" class="thumb-responsive lazy-load" data-bg="https://itc.ua/wp-content/uploads/2021/01/ep20ahgx0aax3-e-450x253.jfif" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/minczifra-z-1-veresnya-derzhavni-organi-ne-matimut-prava-vimagati-paperovi-dokumenti-dlya-nadannya-poslug-ta-%d1%94-nyuans/" rel="bookmark follow" data-wpel-link="internal" target="_self">Мінцифра: З 1 вересня державні органи не матимуть права вимагати паперові документи для надання послуг (та є нюанс)</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T14:09:59+02:00"> 29.01.2021 в 14:09 </time> <time class="screen-reader-text updated" datetime="2021-01-29T14:09:59+02:00"> Обновлено: 29.01.2021 в 14:09 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/minczifra-z-1-veresnya-derzhavni-organi-ne-matimut-prava-vimagati-paperovi-dokumenti-dlya-nadannya-poslug-ta-%d1%94-nyuans/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641975" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            При умові, якщо&nbsp;ця інформація вже є в реєстрі. Зараз Мінцифра спільно з Комітетом цифрової трансформації розробляє рамковий закон, завдяки якому державні органи не матимуть права вимагати…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641924 type-post status-publish format-standard has-post-thumbnail category-news tag-garmin tag-lily tag-smart-chasyi">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/garmin-predstavila-zhenskie-smart-chasy-lily/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/garminlily-01.png?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/garmin-predstavila-zhenskie-smart-chasy-lily/" rel="bookmark follow" data-wpel-link="internal" target="_self">Garmin представила женские смарт-часы Lily</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T13:31:35+02:00"> 29.01.2021 в 13:31 </time> <time class="screen-reader-text updated" datetime="2021-01-29T13:18:00+02:00"> Обновлено: 29.01.2021 в 13:18 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kolomiets/" title="Записи Александр Коломиец" rel="author follow" data-wpel-link="internal" target="_self">Александр Коломиец</a> <a href="https://itc.ua/author/kolomiets/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Александр Коломиец</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/garmin-predstavila-zhenskie-smart-chasy-lily/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641924" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Компания Garmin анонсировала выпуск новой линейки смарт-часов под названием Lily, которая ориентирована на женскую аудиторию. Девайс предлагается в двух версиях: Classic стоимостью $249 и Sport, которая…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641942 type-post status-publish format-standard has-post-thumbnail category-news tag-pleer tag-ipod tag-cap-sofi">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/news" class="itc-cat news" rel="category follow" data-wpel-link="internal" target="_self">Новости</a> </span> <a href="https://itc.ua/news/razrabotchik-dobavil-vozmozhnost-striminga-iz-spotify-pleeru-ipod-2004-goda-vypuska/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/spotify-streaming-on-my-17-year-old-ipod-classic-3-3-screenshot.png?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/news/razrabotchik-dobavil-vozmozhnost-striminga-iz-spotify-pleeru-ipod-2004-goda-vypuska/" rel="bookmark follow" data-wpel-link="internal" target="_self">Разработчик добавил возможность стриминга из Spotify плееру iPod 2004 года выпуска</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T13:17:45+02:00"> 29.01.2021 в 13:17 </time> <time class="screen-reader-text updated" datetime="2021-01-29T13:17:45+02:00"> Обновлено: 29.01.2021 в 13:17 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/kolomiets/" title="Записи Александр Коломиец" rel="author follow" data-wpel-link="internal" target="_self">Александр Коломиец</a> <a href="https://itc.ua/author/kolomiets/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Александр Коломиец</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/news/razrabotchik-dobavil-vozmozhnost-striminga-iz-spotify-pleeru-ipod-2004-goda-vypuska/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641942" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            iPod является одним из культовых девайсов, который во многом предопределил путь развития музыкальных плееров в середине нулевых. Сейчас же спрос на него существенно упал, ведь большинству…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="post block-in-loop post-641955 type-post status-publish format-standard has-post-thumbnail category-blogs tag-bitcoin tag-btcc tag-biznes tag-bitkoin tag-investitsii tag-kriptovalyuta tag-techno">
+        <div class="row">
+         <div class="col-xs-4 col-img">
+          <div class="col-img-in"> <span class="cat part text-uppercase"> <a href="https://itc.ua/category/blogs" class="itc-cat blogs" rel="category follow" data-wpel-link="internal" target="_self">Блоги</a> </span> <a href="https://itc.ua/blogs/ilon-mask-tegnul-bitcoin-kotoryj-vozglavil-trendy-twitter-kurs-kriptovalyuty-rezko-rvanul-vverh-obnovlenie-po-konfliktu-mezhdu-wallstreetbets-i-robinhood/" class="thumb-responsive lazy-load" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/maxresdefault-1-1.jpg?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+          </div>
+         </div>
+         <div class="col-xs-8 col-txt">
+          <h2 class="entry-title text-uppercase "> <a href="https://itc.ua/blogs/ilon-mask-tegnul-bitcoin-kotoryj-vozglavil-trendy-twitter-kurs-kriptovalyuty-rezko-rvanul-vverh-obnovlenie-po-konfliktu-mezhdu-wallstreetbets-i-robinhood/" rel="bookmark follow" data-wpel-link="internal" target="_self">Илон Маск тегнул #bitcoin, который возглавил тренды Twitter — курс криптовалюты резко рванул вверх (+ обновление по конфликту между WallStreetBets и Robinhood)</a></h2>
+          <div class="entry-header">
+           <div class=""> <span class="date part"> <span class="icon icon-ic-schedule-black-48px"></span> <time class="published" datetime="2021-01-29T12:59:32+02:00"> 29.01.2021 в 12:59 </time> <time class="screen-reader-text updated" datetime="2021-01-29T13:22:25+02:00"> Обновлено: 29.01.2021 в 13:22 </time> </span> <span class="vcard author part hidden-xs"> <span class="icon icon-ic-person-black-48px"></span> <a href="https://itc.ua/author/vovchik230589/" title="Записи Владимир Скрипин" rel="author follow" data-wpel-link="internal" target="_self">Владимир Скрипин</a> <a href="https://itc.ua/author/vovchik230589/" class="screen-reader-text fn" data-wpel-link="internal" target="_self" rel="follow">Владимир Скрипин</a> </span> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <a href="https://itc.ua/blogs/ilon-mask-tegnul-bitcoin-kotoryj-vozglavil-trendy-twitter-kurs-kriptovalyuty-rezko-rvanul-vverh-obnovlenie-po-konfliktu-mezhdu-wallstreetbets-i-robinhood/#itc-comments" class="disqus-comment-count" data-disqus-identifier="641955" data-wpel-link="internal" target="_self" rel="follow"></a> </span>
+           </div>
+          </div>
+          <div class="entry-excerpt hidden-xs">
+            Похоже, Илон Маск решил «запустить в космос» биткоин. Утром 29 января в тренды Twitter вышла криптовалюта биткоин (на момент написания заметки она все еще возглавляет список главных тем). Примерно…
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="pagination_block row clearfix"> <span class="col-xs-12 text-uppercase only-one-button"><a href="https://itc.ua/page/2/?fbclid=IwAR1RssUS-zLcbmRyxHN00T_3eKB4nXoWsQjHsVmzSIL1cwuC14AZX8TfB9c" data-wpel-link="internal" target="_self" rel="follow"><span class="next">Далее <span class="icon icon-ic-keyboard-arrow-right-black-48px"></span></span></a></span>
+       </div>
+       <div class="visible-sm visible-xs text-center clearfix"> 
+        <br> 
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+        <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-5310026772622949" data-ad-slot="6917989316"></ins> 
+        <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+       </div>
+      </main>
+      <aside id="sidebar" class="col-sm-4 hidden-sm hidden-xs col-sidebar">
+       <ul class="xoxo">
+        <li id="execphp-358" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <div class="vertical-banner">
+           <div>
+            <div id="adriver_banner_2"></div> 
+            <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver.Plugin.require("old.adriver").onLoadComplete(function(){
+	new adriver("adriver_banner_2", {
+		sid:86398,
+		sz:"main",
+		bt:52,
+		pz:2,
+		bn:2
+	});
+});</script> 
+           </div>
+          </div>
+         </div></li>
+        <li id="execphp-372" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <div class="vertical-banner">
+           <div>
+            <div id="adriver_banner_7"></div>
+            <div id="adriver_banner_1282697598"></div> 
+            <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver.Plugin.require("old.adriver").onLoadComplete(function(){
+	new adriver("adriver_banner_1282697598", {
+		sid:86398,
+		bt:52,
+		sz:'main',
+		bn:7
+		});
+});</script> 
+           </div>
+          </div>
+         </div></li>
+        <li id="execphp-386" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <div id="adriver_banner_1346461352"></div> 
+          <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver("adriver_banner_1346461352", {sid:86398, bt:52, bn:10, w:300, h:250});</script> 
+         </div></li>
+        <li id="execphp-378" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4454916504760604" data-ad-slot="2156299445"></ins> 
+          <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+         </div></li>
+        <li id="video-of-week-2" class="block widget-container video-of-week"><h3 class="widget-title">Видео недели</h3>
+         <div class="post post-1 category-video_cat">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/jabra-evolve2-85.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор гарнитуры Jabra Evolve2 85</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" data-disqus-identifier="640072"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-1 category-video_cat">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/dex-na-galaxy-note20-ultra.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор DeX на Galaxy Note20 Ultra</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" data-disqus-identifier="637324"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-1 category-video_cat">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/mercusys-mr50g.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор роутера Mercusys MR50G</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" data-disqus-identifier="639149"> </span> </span>
+           </div>
+          </div>
+         </div></li>
+        <li id="sn-2" class="block widget-container sn-widget"><h3 class="widget-title">Мы в соцсетях</h3>
+         <div class="sn clearfix"> <a href="https://twitter.com/ITCUA" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-twitter-alt"></span></a> <a href="https://www.facebook.com/ITC.UA" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-facebook"></span></a> <a href="https://www.youtube.com/user/hotlinevideoua" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-youtube-alt"></span></a> <a href="https://itc.ua/feed" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-rss"></span></a>
+         </div></li>
+        <li id="partner-posts-3" class="block widget-container partner-posts"><h3 class="widget-title">Новости партнеров</h3>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/yak-avtomatizuvati-prodazhi-instrukczij-majster-klasiv-vebinariv-ta-inshih-informaczijnih-tovariv/" class="thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/zastavka.png?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-641143" href="https://itc.ua/partner-news/yak-avtomatizuvati-prodazhi-instrukczij-majster-klasiv-vebinariv-ta-inshih-informaczijnih-tovariv/" data-wpel-link="internal" target="_self" rel="follow">Як автоматизувати продажі інструкцій, майстер-класів, вебінарів та інших інформаційних товарів?</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/yak-avtomatizuvati-prodazhi-instrukczij-majster-klasiv-vebinariv-ta-inshih-informaczijnih-tovariv/" data-disqus-identifier="641143"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/gazer-f155-pervyj-registrator-s-oblachnym-hranilishhem-i-distanczionnym-dostupom-k-avtomobilyu-24-7/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/gazer.jpg?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-639861" href="https://itc.ua/partner-news/gazer-f155-pervyj-registrator-s-oblachnym-hranilishhem-i-distanczionnym-dostupom-k-avtomobilyu-24-7/" data-wpel-link="internal" target="_self" rel="follow">Gazer F155 – первый регистратор с облачным хранилищем и дистанционным доступом к автомобилю 24/7</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/gazer-f155-pervyj-registrator-s-oblachnym-hranilishhem-i-distanczionnym-dostupom-k-avtomobilyu-24-7/" data-disqus-identifier="639861"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/novinki-ot-apple-iphone-12-i-iphone-12-pro-uzhe-v-prodazhe-v-magazine-estore-ua/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/iphone-12.jpg?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-637502" href="https://itc.ua/partner-news/novinki-ot-apple-iphone-12-i-iphone-12-pro-uzhe-v-prodazhe-v-magazine-estore-ua/" data-wpel-link="internal" target="_self" rel="follow">Новинки от Apple — iPhone 12 и iPhone 12 Pro уже в продаже в магазине eStore.ua</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/novinki-ot-apple-iphone-12-i-iphone-12-pro-uzhe-v-prodazhe-v-magazine-estore-ua/" data-disqus-identifier="637502"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/gazer-predstavlyaet-dva-novyh-produkta-monitory-gazer-hr100-i-gazer-hr250/" class="thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2020/12/gazer.jpg?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-636628" href="https://itc.ua/partner-news/gazer-predstavlyaet-dva-novyh-produkta-monitory-gazer-hr100-i-gazer-hr250/" data-wpel-link="internal" target="_self" rel="follow">Gazer представляет два новых продукта – мониторы Gazer HR100 и Gazer HR250</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/gazer-predstavlyaet-dva-novyh-produkta-monitory-gazer-hr100-i-gazer-hr250/" data-disqus-identifier="636628"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/kompaniya-artline-predstavlyaet-vam-obnovlennuyu-linejku-korpusov-qube/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2019/12/qube.jpg?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-636268" href="https://itc.ua/partner-news/kompaniya-artline-predstavlyaet-vam-obnovlennuyu-linejku-korpusov-qube/" data-wpel-link="internal" target="_self" rel="follow">Компания Artline представляет вам обновленную линейку корпусов Qube</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/kompaniya-artline-predstavlyaet-vam-obnovlennuyu-linejku-korpusov-qube/" data-disqus-identifier="636268"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/10-idej-novogodnih-podarkov-ot-canyon/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/comfy-watches-1024x433-1.png?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-636455" href="https://itc.ua/partner-news/10-idej-novogodnih-podarkov-ot-canyon/" data-wpel-link="internal" target="_self" rel="follow">10 идей новогодних подарков от Canyon</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/10-idej-novogodnih-podarkov-ot-canyon/" data-disqus-identifier="636455"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/novogodnie-podarki-ot-prestigio/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/prestigio_ny.png?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-636098" href="https://itc.ua/partner-news/novogodnie-podarki-ot-prestigio/" data-wpel-link="internal" target="_self" rel="follow">Новогодние подарки от Prestigio</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/novogodnie-podarki-ot-prestigio/" data-disqus-identifier="636098"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/den-bezlima-analiz-aktivnostej-mgnovennoe-popolnenie-scheta-i-esim-chto-novogo-poyavilos-v-prilozhenii-moj-kievstar/" class="thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2020/12/image11.png?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-636051" href="https://itc.ua/partner-news/den-bezlima-analiz-aktivnostej-mgnovennoe-popolnenie-scheta-i-esim-chto-novogo-poyavilos-v-prilozhenii-moj-kievstar/" data-wpel-link="internal" target="_self" rel="follow">День безлима, анализ активностей, мгновенное пополнение счета и eSIM: что нового появилось в приложении Мой Киевстар</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/den-bezlima-analiz-aktivnostej-mgnovennoe-popolnenie-scheta-i-esim-chto-novogo-poyavilos-v-prilozhenii-moj-kievstar/" data-disqus-identifier="636051"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/inodi-krashhe-telefonuvati-yak-praczyu%d1%94-kol-czentr-servisu-taksi-cab/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/img_3060.jpg?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-635592" href="https://itc.ua/partner-news/inodi-krashhe-telefonuvati-yak-praczyu%d1%94-kol-czentr-servisu-taksi-cab/" data-wpel-link="internal" target="_self" rel="follow">Іноді краще телефонувати: як працює кол-центр сервісу таксі Cab</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/inodi-krashhe-telefonuvati-yak-praczyu%d1%94-kol-czentr-servisu-taksi-cab/" data-disqus-identifier="635592"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/partner-news/karnaval-novogodnih-skidok-ot-realme/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2020/12/christmaskv_1200h800_ru.png?resize=268%2C190&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" id="partner-post-635502" href="https://itc.ua/partner-news/karnaval-novogodnih-skidok-ot-realme/" data-wpel-link="internal" target="_self" rel="follow">Карнавал новогодних скидок от realme</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/partner-news/karnaval-novogodnih-skidok-ot-realme/" data-disqus-identifier="635502"> </span> </span>
+           </div>
+          </div>
+         </div></li>
+        <li id="commented-posts-10" class="block widget-container commented-posts-widget"><h3 class="widget-title">Самое обсуждаемое</h3>
+         <div class="post post-1">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/news/tesla-predstavila-restajlingovuyu-versiyu-model-s-i-novuyu-modifikacziyu-s-zapasom-hoda-v-836-km/" class="thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/modelsrestyle-01.png?fit=450%2C253&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/news/tesla-predstavila-restajlingovuyu-versiyu-model-s-i-novuyu-modifikacziyu-s-zapasom-hoda-v-836-km/" data-wpel-link="internal" target="_self" rel="follow">Tesla представила рестайлинговую версию Model S и новую модификацию с запасом хода в 836 км</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/news/tesla-predstavila-restajlingovuyu-versiyu-model-s-i-novuyu-modifikacziyu-s-zapasom-hoda-v-836-km/"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-2">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/news/v-ukraine-v-10-raz-uvelichili-normy-izlucheniya-dlya-bazovyh-stanczij-svyaz-dolzhna-stat-luchshe/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/uk5gcoronavirus.jpg?fit=450%2C280&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/news/v-ukraine-v-10-raz-uvelichili-normy-izlucheniya-dlya-bazovyh-stanczij-svyaz-dolzhna-stat-luchshe/" data-wpel-link="internal" target="_self" rel="follow">В Украине в 10 раз увеличили нормы излучения для базовых станций, связь должна стать лучше</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/news/v-ukraine-v-10-raz-uvelichili-normy-izlucheniya-dlya-bazovyh-stanczij-svyaz-dolzhna-stat-luchshe/"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-3">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/blogs/%e2%80%8eprosto-duzhe-potribni-groshi-getmanczev-ne-zalisha%d1%94-sprob-zobovyazati-google-microsoft-ta-inshi-it-kompani%d1%97-platiti-podatki-ukra%d1%97ni/" class="thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2021/01/20200124205312-3778.jpg?fit=450%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/blogs/%e2%80%8eprosto-duzhe-potribni-groshi-getmanczev-ne-zalisha%d1%94-sprob-zobovyazati-google-microsoft-ta-inshi-it-kompani%d1%97-platiti-podatki-ukra%d1%97ni/" data-wpel-link="internal" target="_self" rel="follow">Просто дуже потрібні гроші. Гетманцев не залишає спроб зобов’язати Google, Microsoft та інші IТ-компанії платити податки Україні</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/blogs/%e2%80%8eprosto-duzhe-potribni-groshi-getmanczev-ne-zalisha%d1%94-sprob-zobovyazati-google-microsoft-ta-inshi-it-kompani%d1%97-platiti-podatki-ukra%d1%97ni/"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-4">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/blogs/kira-najtli-zareklas-snimatsya-v-seks-sczenah-u-rezhisserov-muzhchin-no-gotova-rabotat-s-rezhisserami-zhenshhinami/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/keira-knightley-atonement.jpg?fit=450%2C243&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/blogs/kira-najtli-zareklas-snimatsya-v-seks-sczenah-u-rezhisserov-muzhchin-no-gotova-rabotat-s-rezhisserami-zhenshhinami/" data-wpel-link="internal" target="_self" rel="follow">Кира Найтли зареклась сниматься в секс-сценах у режиссеров-мужчин, но готова работать с режиссерами-женщинами</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/blogs/kira-najtli-zareklas-snimatsya-v-seks-sczenah-u-rezhisserov-muzhchin-no-gotova-rabotat-s-rezhisserami-zhenshhinami/"> </span> </span>
+           </div>
+          </div>
+         </div>
+         <div class="post post-5">
+          <div class="row">
+           <div class="col-xs-4 col-img"> <a href="https://itc.ua/news/rada-uhvalila-zmini-do-mitnogo-ta-podatkovogo-kodeksiv-povernennya-limitu-150-%d1%94vro-na-bezpodatkove-vvezennya-internet-pokupok-ta-elektronne-deklaruvannya-posilok-2/" class="thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/bf06cb9fd80254a6d194f9c23a055df5.jpg?fit=450%2C275&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-xs-8 col-txt"> <a class="entry-title" href="https://itc.ua/news/rada-uhvalila-zmini-do-mitnogo-ta-podatkovogo-kodeksiv-povernennya-limitu-150-%d1%94vro-na-bezpodatkove-vvezennya-internet-pokupok-ta-elektronne-deklaruvannya-posilok-2/" data-wpel-link="internal" target="_self" rel="follow">Рада ухвалила зміни до митного та податкового кодексів — повернення ліміту 150 євро на безподаткове ввезення інтернет-покупок та електронне декларування посилок</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/news/rada-uhvalila-zmini-do-mitnogo-ta-podatkovogo-kodeksiv-povernennya-limitu-150-%d1%94vro-na-bezpodatkove-vvezennya-internet-pokupok-ta-elektronne-deklaruvannya-posilok-2/"> </span> </span>
+           </div>
+          </div>
+         </div></li>
+        <li id="execphp-385" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4454916504760604" data-ad-slot="4921778177"></ins> 
+          <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+         </div></li>
+        <li id="execphp-375" class="block widget-container widget_execphp">
+         <div class="execphpwidget">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:1050px" data-ad-client="ca-pub-4454916504760604" data-ad-slot="5341741699"></ins> 
+          <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+         </div></li>
+       </ul>
+      </aside>
+     </div>
+    </div>
+   </section>
+   <footer id="footer" class="clearfix">
+    <div class="row-0" style="background: #333;">
+     <div class="container">
+      <link rel="stylesheet" href="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/touchcarousel/touchcarousel.css">
+      <link rel="stylesheet" href="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/touchcarousel/three-d-skin/three-d-skin.css"> 
+      <script src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/touchcarousel/jquery.touchcarousel-1.2.min.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+      <style>#carousel-video{width:100%;height:auto;margin:0 auto}#carousel-video .touchcarousel-item{width:170px;margin-right:15px;position:relative}@media(min-width:768px){#carousel-video .touchcarousel-item{width:229px}}@media(min-width:1024px){#carousel-video .touchcarousel-item{width:220px;margin-right:20px}}@media(min-width:1200px){#carousel-video .touchcarousel-item{width:277px}}#home-video .touchcarousel .arrow-holder{background:#888;font-size:21px;border-radius:50%;color:#fff;display:block;width:35px;height:35px;line-height:39px;text-align:center;top:-45px}#home-video .touchcarousel .arrow-holder.left{right:40px}#home-video .touchcarousel .arrow-holder.right{right:0}</style> 
+      <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">jQuery(function(jQuery) {
+	jQuery("#carousel-video").touchCarousel({			
+		itemsPerMove: 1,
+		pagingNav: true,
+		scrollbar: false,				
+		scrollToLast: true,
+		loopItems: false,
+		
+		pagingNavControls: false,
+		dragUsingMouse: false
+	});
+	
+	// Вставляємо іконки
+	jQuery('.touchcarousel .arrow-holder.left').html('<i class="fa fa-chevron-left"></i>');
+	jQuery('.touchcarousel .arrow-holder.right').html('<i class="fa fa-chevron-right"></i>');
+});</script> 
+      <style>#home-video{margin:20px 0 0 0}#home-video .itc-cat{margin-bottom:15px}#home-video .entry-title{color:#fff;font-size:17px}#home-video .entry-title:hover{color:#00A5D2}#home-video .post-1 .col-txt{display:block;width:100%;float:left;margin-top:10px;padding-left:0}#home-video .post-1 .thumb-responsive{position:relative}#home-video .post-1 .thumb-responsive:after{background-size:22%}#home-video .comments{display:inline-block;color:#fff;font-weight:400;font-size:14px;margin-left:5px}#home-video .comments .icon{position:relative;top:3px;font-size:14px}#home-video .comments a{color:inherit;font-size:.9em}.five-posts-block .post-small .entry-title:hover{color:#027AA2}@media(min-width:767px){#home-video{}}</style>
+      <div id="home-video"> <span class="cat part text-uppercase"> <a href="https://itc.ua/video/" class="itc-cat video_cat" style="border-right: 0 none;" data-wpel-link="internal" target="_self" rel="follow">Видео</a> </span>
+       <div id="carousel-video" class="touchcarousel three-d">
+        <ul class="touchcarousel-container">
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/blaupunkt-b-stream-box.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор медиаплеера BLAUPUNKT B-Stream Box</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-mediapleera-blaupunkt-b-stream-box/" data-disqus-identifier="642106"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-smartfona-poco-m3/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/poco-m3.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-smartfona-poco-m3/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор смартфона Poco M3</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-smartfona-poco-m3/" data-disqus-identifier="640773"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/jabra-evolve2-85.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор гарнитуры Jabra Evolve2 85</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-garnitury-jabra-evolve2-85/" data-disqus-identifier="640072"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2021/01/mercusys-mr50g.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор роутера Mercusys MR50G</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-routera-mercusys-mr50g/" data-disqus-identifier="639149"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m31s/" class="lazy-load thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2021/01/samsung-galaxy-m31s.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m31s/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор смартфона Samsung Galaxy M31s</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m31s/" data-disqus-identifier="638911"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-besprovodnoj-garnitury-logitech-zone-wireless-plus/" class="lazy-load thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2020/12/logitech-zone-wireless-plus.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-besprovodnoj-garnitury-logitech-zone-wireless-plus/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор беспроводной гарнитуры Logitech Zone Wireless Plus</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-besprovodnoj-garnitury-logitech-zone-wireless-plus/" data-disqus-identifier="637512"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" class="lazy-load thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/dex-na-galaxy-note20-ultra.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор DeX на Galaxy Note20 Ultra</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-dex-na-galaxy-note20-ultra/" data-disqus-identifier="637324"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-monitora-philips-439p9h/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2020/12/philips-439p9h.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-monitora-philips-439p9h/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор монитора Philips 439P9H</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-monitora-philips-439p9h/" data-disqus-identifier="637268"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-nakopitelya-samsung-980-pro-1-tb/" class="lazy-load thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/samsung-980-pro-1-tb_video.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-nakopitelya-samsung-980-pro-1-tb/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор накопителя Samsung 980 PRO 1 ТБ</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-nakopitelya-samsung-980-pro-1-tb/" data-disqus-identifier="637093"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-sony-playstation-5/" class="lazy-load thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/sony-playstation-5.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-sony-playstation-5/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор Sony PlayStation 5</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-sony-playstation-5/" data-disqus-identifier="636917"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m51/" class="lazy-load thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/12/samsung-galaxy-m51.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m51/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор смартфона Samsung Galaxy M51</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-smartfona-samsung-galaxy-m51/" data-disqus-identifier="632842"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-routera-mercusys-ac10/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2020/11/mercusys-ac10.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-routera-mercusys-ac10/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор роутера Mercusys AC10</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-routera-mercusys-ac10/" data-disqus-identifier="632557"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-televizora-hisense-55u8qf/" class="lazy-load thumb-responsive" data-bg="https://i1.wp.com/itc.ua/wp-content/uploads/2020/11/hisense-55u8qf.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-televizora-hisense-55u8qf/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор телевизора Hisense 55U8QF</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-televizora-hisense-55u8qf/" data-disqus-identifier="631310"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-nakopitelya-samsung-870-qvo-4-tb/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2020/11/samsung_870_qvo_video.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-nakopitelya-samsung-870-qvo-4-tb/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор накопителя Samsung 870 QVO 4 ТБ</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-nakopitelya-samsung-870-qvo-4-tb/" data-disqus-identifier="631116"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-galaxy-buds-live/" class="lazy-load thumb-responsive" data-bg="https://i0.wp.com/itc.ua/wp-content/uploads/2020/11/galaxy-buds-live.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-galaxy-buds-live/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор Galaxy Buds Live</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-galaxy-buds-live/" data-disqus-identifier="630797"> </span> </span></h2>
+           </div>
+          </div></li>
+         <li class="touchcarousel-item">
+          <div class="post post-1">
+           <div class="col-img"> <a href="https://itc.ua/video/videoobzor-iphone-12-mini/" class="lazy-load thumb-responsive" data-bg="https://i2.wp.com/itc.ua/wp-content/uploads/2020/11/iphone-12-mini-1.jpg?fit=423%2C300&amp;quality=100&amp;strip=all&amp;ssl=1" data-wpel-link="internal" target="_self" rel="follow"></a>
+           </div>
+           <div class="col-txt">
+            <h2 class="entry-title"> <a href="https://itc.ua/video/videoobzor-iphone-12-mini/" data-wpel-link="internal" target="_self" rel="follow">Видеообзор iPhone 12 mini</a> <span class="comments part"> <span class="icon icon-ic-comment-black-48px"></span> <span class="disqus-comment-count" data-disqus-url="https://itc.ua/video/videoobzor-iphone-12-mini/" data-disqus-identifier="630155"> </span> </span></h2>
+           </div>
+          </div></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="clearfix" style="background: #333;">
+     <div class="container text-center hidden-xs">
+      <div class="ad ad-bottom" style="text-align: center !important;">
+       <div class="ad-banner"> 
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="ff8d7a2349d1946ca3ce9d58-text/javascript"></script> 
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454916504760604" data-ad-slot="3665247261" data-ad-format="auto"></ins> 
+        <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+       </div>
+      </div>
+     </div>
+     <div class="container text-center visible-xs">
+      <div class="ad ad-bottom" style="text-align: center !important;">
+       <div class="ad-banner"> 
+        <div id="adriver_banner_259291656"></div> 
+        <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">new adriver("adriver_banner_259291656", {sid:86398, bt:52, bn:8});</script> 
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row-1">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-2 col-logo visible-lg visible-md"> <span itemscope itemtype="http://schema.org/Organization"><a href="https://itc.ua/" class="custom-logo-link" title="ITC.ua" rel="home follow" itemprop="url" data-wpel-link="internal" target="_self"> <img src="https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?fit=450%2C123&amp;quality=100&amp;strip=all&amp;ssl=1" srcset="https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?w=800&amp;quality=100&amp;strip=all&amp;ssl=1 800w, https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?resize=450%2C123&amp;quality=100&amp;strip=all&amp;ssl=1 450w, https://i0.wp.com/itc.ua/wp-content/uploads/2018/07/itc-logo-white-1.png?resize=770%2C211&amp;quality=100&amp;strip=all&amp;ssl=1 770w" sizes="(max-width: 770px) 100vw, 770px" alt="ITC.ua" class="img-responsive custom-logo" width="450" height="123" itemprop="logo" loading="lazy"> </a></span>
+       </div>
+       <div class="col-md-10 col-txt">
+        <ul id="menu-footer-menu" class="menu clearfix">
+         <li id="menu-item-49298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49298"><a href="https://itc.ua/o-proekte-itc-ua/" data-wpel-link="internal" target="_self" rel="follow">О команде</a></li>
+         <li id="menu-item-49297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49297"><a href="https://itc.ua/faq-itc-ua/" data-wpel-link="internal" target="_self" rel="follow">FAQ</a></li>
+         <li id="menu-item-49027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49027"><a href="https://itc.ua/reklama/" data-wpel-link="internal" target="_self" rel="follow">Реклама на сайте</a></li>
+         <li id="menu-item-49028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-49028"><a href="https://itc.ua/user_agreement/" data-wpel-link="internal" target="_self" rel="follow">Пользовательское соглашение</a></li>
+         <li id="menu-item-49029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49029"><a href="https://itc.ua/confidentiality_agreement/" data-wpel-link="internal" target="_self" rel="follow">Соглашение о конфиденциальности</a></li>
+        </ul>
+        <div class="copy clearfix">
+          © 1993–2021 ITC.ua, ООО «ХОТЛАЙН»
+         <br> Все содержание, включая идеи оформления и стиль, являются объектом авторского права. Копирование и размещение материалов на других сайтах 
+         <br> без письменного разрешения ООО «ХОТЛАЙН» не допускается. Материалы, отмеченные знаком P, публикуются на правах рекламы. 
+         <br> Телефоны: редакция – (044) 496-34-63, отдел рекламы – (044) 496-34-69
+        </div>
+        <div class="sn"> <a href="https://twitter.com/ITCUA" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-twitter-alt"></span></a> <a href="https://www.facebook.com/ITC.UA" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-facebook"></span></a> <a href="https://www.youtube.com/user/hotlinevideoua" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-youtube-alt"></span></a> <a href="https://itc.ua/feed" rel="external follow" target="_blank" data-wpel-link="external"><span class="icon icon-rss"></span></a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="row-2 visible-lg visible-md">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-10 col-md-push-2 mistape">
+        <div class="counters"> <a href="//www.bigmir.net/" target="_blank" class="external" rel="nofollow external" data-wpel-link="external"><img src="//c.bigmir.net/?v148&amp;s148&amp;t2" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100"></a> <a href="//orphus.ru" id="orphus" target="_blank" data-wpel-link="external" rel="nofollow external"> <img alt="Система Orphus" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/i/orphus.png" width="257" height="31"> </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">jQuery(document).ready(function(){
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 350) {
+            jQuery('#scroller').fadeIn();
+        } else {
+            jQuery('#scroller').fadeOut();
+        }
+    });
+    jQuery('#scroller').click(function () {
+        jQuery('body,html').animate({scrollTop: 0}, 400);
+        return false;
+    });
+});</script> 
+  <div id="scroller" class="b-top" style="display: none;"> <span class="b-top-but visible-md visible-lg"><span class="icon icon-ic-keyboard-arrow-up-black-48px"></span></span>
+  </div> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={o:1,v:148,s:148,t:0,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
+for(var f=self;f!=f.parent;f=f.parent)bm.w++;
+try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
+else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
+try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
+try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
+r=bmD.referrer.replace(/^w+:\/\//,'');if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r).slice(0,400);bm.v^=r.length}
+bm.v^=window.location.href.length;for(var x in bm) if(/^[ovstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
+bmD.write('<sc'+'ript type="text/javascript" language="javascript" src="//c.bigmir.net/?'+bs.join('&')+'"></sc'+'ript>');</script>
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://c0.wp.com/p/jetpack/9.0.2/_inc/build/photon/photon.min.js" id="jetpack-photon-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" id="disqus_count-js-extra">/* <![CDATA[ */ var countVars = {"disqusShortname":"itcua"}; /* ]]> */</script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17" id="disqus_count-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" id="toc-front-js-extra">/* <![CDATA[ */ var tocplus = {"smooth_scroll":"1","visibility_show":"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c","visibility_hide":"\u0441\u043a\u0440\u044b\u0442\u044c","visibility_hide_by_default":"1","width":"Auto"}; /* ]]> */</script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2002" id="toc-front-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" id="wp-polls-js-extra">/* <![CDATA[ */ var pollsL10n = {"ajax_url":"https:\/\/itc.ua\/wp-admin\/admin-ajax.php","text_wait":"\u0412\u0430\u0448 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0439 \u0437\u0430\u043f\u0440\u043e\u0441 \u0435\u0449\u0435 \u043e\u0431\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0435\u0442\u0441\u044f. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430 \u043f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435 ...","text_valid":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043e\u0442\u0432\u0435\u0442.","text_multiple":"\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u043e\u0435 \u0447\u0438\u0441\u043b\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432:","show_loading":"1","show_fading":"1"}; /* ]]> */</script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/wp-polls/polls-js.js?ver=2.75.5" id="wp-polls-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/mistape/assets/js/modernizr.custom.js?ver=1.3.8" id="modernizr-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" id="mistape-front-js-extra">/* <![CDATA[ */ var decoMistape = {"ajaxurl":"https:\/\/itc.ua\/wp-admin\/admin-ajax.php"}; /* ]]> */</script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/plugins/mistape/assets/js/mistape-front.js?ver=1571176499" id="mistape-front-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/lazy-load-xt/jquery.lazyloadxt.min.js?ver=1.1.0" id="lazyloadxt-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/lazy-load-xt/jquery.lazyloadxt.extra.min.js?ver=1.1.0" id="lazyloadxt-extra-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/lazy-load-xt/jquery.lazyloadxt.bg.min.js?ver=1.1.0" id="lazyloadxt-bg-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://itc.ua/wp-content/themes/ITC_5.5/assets/vendor/lazy-load-xt/jquery.lazyloadxt.srcset.min.js?ver=1.1.0" id="lazyloadxt-srcset-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://c0.wp.com/c/5.6/wp-includes/js/wp-embed.min.js" id="wp-embed-js"></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript" src="https://stats.wp.com/e-202104.js" async defer></script> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.2',blog:'113466071',post:'0',tz:'2',srv:'itc.ua'} ]);
+	_stq.push([ 'clickTrackerInit', '113466071', '0' ]);</script> 
+  <div id="mistape_dialog" data-mode="comment" data-dry-run="0">
+   <div class="dialog__overlay"></div>
+   <div class="dialog__content">
+    <div id="mistape_confirm_dialog" class="mistape_dialog_screen">
+     <div class="dialog-wrap">
+      <div class="dialog-wrap-top">
+       <h2>Сообщить об опечатке</h2>
+       <div class="mistape_dialog_block">
+        <h3>Текст, который будет отправлен нашим редакторам:</h3>
+        <div id="mistape_reported_text"></div>
+       </div>
+      </div>
+      <div class="dialog-wrap-bottom">
+       <div class="mistape_dialog_block comment">
+        <h3><label for="mistape_comment">Ваш комментарий (необязательно):</label></h3><textarea id="mistape_comment" cols="60" rows="3" maxlength="1000"></textarea>
+       </div>
+       <div class="pos-relative"></div>
+      </div>
+     </div>
+     <div class="mistape_dialog_block"> <a class="mistape_action" data-action="send" data-id="642239" role="button">Отправить</a> <a class="mistape_action" data-dialog-close role="button" style="display:none">Отмена</a>
+     </div>
+     <div class="mistape-letter-front letter-part">
+      <div class="front-left"></div>
+      <div class="front-right"></div>
+      <div class="front-bottom"></div>
+     </div>
+     <div class="mistape-letter-back letter-part">
+      <div class="mistape-letter-back-top"></div>
+     </div>
+     <div class="mistape-letter-top letter-part"></div>
+    </div>
+   </div>
+  </div> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KH7DT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script type="ff8d7a2349d1946ca3ce9d58-text/javascript">jQuery(document).ready(function() {
+	jQuery( '.touchcarousel' ).on( "click", ".arrow-holder", function() {
+		jQuery(this).addClass('qaz');
+		jQuery(this).parent().find('.lazy-load').each(function(index, element){
+			var thumb_url = jQuery(element).data('bg');
+			if(thumb_url) {
+				jQuery(element).css('background-image', "url('" + thumb_url + "')")
+	                .removeAttr('data-bg')
+	                .triggerHandler('load');
+			}
+		});
+	});
+});</script> 
+  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="ff8d7a2349d1946ca3ce9d58-|49" defer></script>
+ </body>
+</html>

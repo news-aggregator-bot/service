@@ -1,6 +1,8 @@
 package bepicky.service.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import lombok.Data;
@@ -32,6 +34,7 @@ import static javax.persistence.CascadeType.ALL;
 @Table(name = "source_page")
 @EqualsAndHashCode(callSuper = true)
 @ToString
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SourcePage extends DatedEntity {
 
     @Column(nullable = false)
@@ -42,6 +45,7 @@ public class SourcePage extends DatedEntity {
 
     @Column(nullable = false, name = "url_normalisation")
     @Enumerated(EnumType.STRING)
+    @JsonProperty("url_normalisation")
     private UrlNormalisation urlNormalisation;
 
     @ManyToMany
@@ -74,6 +78,7 @@ public class SourcePage extends DatedEntity {
     @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonProperty("content_blocks")
     private List<ContentBlock> contentBlocks;
 
     @Transient

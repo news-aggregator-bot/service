@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="uk">
+ <head>
+  <meta charset="utf-8" class="next-head">
+  <title class="next-head">Кібербезпека – читайте та дивіться на Громадському | Громадське телебачення</title>
+  <meta name="description" content="«Зливи» даних користувачів соцмереж, хакерські атаки та безпека в мережі, права та безпека у соціальних мережах, кіберполіція та захист персональних даних - Читайте на Громадському" class="next-head">
+  <meta name="keywords" content="" class="next-head">
+  <meta property="fb:app_id" content="247159755985613" class="next-head">
+  <link href="https://hromadske.ua/tekhnolohiyi/kiberbezpeka" rel="canonical" class="next-head">
+  <meta property="og:title" content="Кібербезпека – читайте та дивіться на Громадському | Громадське телебачення" class="next-head">
+  <meta property="og:description" content="«Зливи» даних користувачів соцмереж, хакерські атаки та безпека в мережі, права та безпека у соціальних мережах, кіберполіція та захист персональних даних - Читайте на Громадському" class="next-head">
+  <meta property="og:type" content="website" class="next-head">
+  <meta property="og:url" content="https://hromadske.ua/tekhnolohiyi/kiberbezpeka" class="next-head">
+  <meta property="og:image" content="https://hromadske.ua/static/share-image.png" class="next-head">
+  <meta name="twitter:title" content="Кібербезпека – читайте та дивіться на Громадському | Громадське телебачення" class="next-head">
+  <meta name="twitter:description" content="«Зливи» даних користувачів соцмереж, хакерські атаки та безпека в мережі, права та безпека у соціальних мережах, кіберполіція та захист персональних даних - Читайте на Громадському" class="next-head">
+  <meta name="twitter:site" content="@Hromadskeua" class="next-head">
+  <meta name="twitter:card" content="summary_large_image" class="next-head">
+  <meta name="twitter:image" content="https://hromadske.ua/static/share-image.png" class="next-head">
+  <link rel="next" href="https://hromadske.ua/tekhnolohiyi/kiberbezpeka?page=2" class="next-head">
+  <link rel="preload" href="/_next/static/8Djp6lt4isRt19p75KtS1/pages/subtopic.js" as="script">
+  <link rel="preload" href="/_next/static/8Djp6lt4isRt19p75KtS1/pages/_app.js" as="script">
+  <link rel="preload" href="/_next/static/8Djp6lt4isRt19p75KtS1/pages/_error.js" as="script">
+  <link rel="preload" href="/_next/static/runtime/webpack-89179faa512dd01fbb62.js" as="script">
+  <link rel="preload" href="/_next/static/chunks/commons.bd362c3b89558ba613e3.js" as="script">
+  <link rel="preload" href="/_next/static/runtime/main-292e375321d65bf0ebb9.js" as="script">
+  <link rel="preload" href="/_next/static/chunks/styles.625eb3f697fa316e113b.js" as="script">
+  <link rel="stylesheet" href="/_next/static/css/styles.8ce1ed36.chunk.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="LX_KK6GvYqK4Af0ULvhwIZq8Y9TolQu5mIkbUtpTk34">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Hromadske">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <script defer src="https://www.googleoptimize.com/optimize.js?id=OPT-5KN9L5D" type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script defer type="57fdf978899901eebc82c3a0-text/javascript">
+            [
+              {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "name" : "hromadske.ua",
+                "url": "https://hromadske.ua/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://hromadske.ua/search?q={search_term}",
+                  "query-input": "required name=search_term" }
+              },
+              {
+                "@context" : "http://schema.org",
+                "@type" : "Organization",
+                "name" : "hromadske.ua",
+                "url" : "https://hromadske.ua/",
+                "logo": "../../../static/apple-180x180.png",
+                "sameAs" : [
+                  "https://www.facebook.com/hromadskeua",
+                  "https://www.instagram.com/hromadske.ua/",
+                  "https://t.me/hromadske_ua",
+                  "https://www.youtube.com/user/HromadskeTV",
+                  "https://twitter.com/Hromadskeua"
+                ]
+              }
+            ]</script>
+  <script defer type="57fdf978899901eebc82c3a0-text/javascript">
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MFR6GBK');</script>
+  <link defer rel="preload" as="apple-touch-startup-image" href="/static/favicon.ico">
+  <link defer rel="preload" as="icon" type="image/png" href="/static/android-192x192.png" sizes="192x192">
+  <link defer rel="preload" as="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link defer rel="preload" as="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link defer rel="preload" as="icon" type="image/png" sizes="96x96" href="/static/favicon-96x96.png">
+  <link defer rel="preload" as="apple-touch-icon" sizes="180x180" href="/static/apple-180x180.png">
+  <link defer rel="preload" as="shortcut icon" href="/static/favicon.ico">
+  <link defer rel="preload" as="manifest" href="/static/manifest.json">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-500.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-500.woff">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-500italic.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-500italic.woff">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-600.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-600.woff">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-600italic.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-600italic.woff">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-700.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-700.woff">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-700italic.woff2">
+  <link rel="preload" as="font" href="/static/fonts/montserrat-v13-cyrillic_cyrillic-ext_latin-700italic.woff">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-regular.woff2">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-regular.woff">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-italic.woff2">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-italic.woff">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-700.woff2">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-700.woff">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-700italic.woff2">
+  <link rel="preload" as="font" href="/static/fonts/lora-v13-cyrillic_cyrillic-ext_latin-700italic.woff">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://adservice.google.com">
+  <link rel="preconnect" href="https://adservice.google.com.ua">
+  <link rel="preconnect" href="https://tt.onthe.io">
+  <link rel="preconnect" href="https://partner.googleadservices.com">
+  <link rel="preconnect" href="https://www.facebook.com">
+  <link rel="preconnect" href="https://www.googleoptimize.com">
+ </head>
+ <body class="custom_class">
+  <div id="__next">
+   <div class="Layout">
+    <div class="HeaderMenu">
+     <div class="HeaderMenu-wrapper">
+      <div class="HeaderMenu-main">
+       <div class="HeaderMenu-burgerButton">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill="#191A1E" d="M4 5.25h16v1.5H4zM4 11.25h16v1.5H4zM4 17.25h16v1.5H4z"></path>
+        </svg>
+       </div><a class="HeaderMenu-logo" aria-label="Громадське" href="/">
+        <div class="HeaderMenu-logoWrapper">
+         <svg class="HeaderMenu-logoIcon" width="138" height="31" viewbox="0 0 138 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61.007 14.884c-3.018 0-5.213 2.293-5.213 5.45 0 3.115 2.245 5.468 5.213 5.468 2.977 0 5.222-2.353 5.222-5.467 0-3.106-2.245-5.45-5.222-5.45zm0 8.548c-1.597 0-2.766-1.3-2.766-3.097s1.169-3.098 2.766-3.098c1.606 0 2.775 1.3 2.775 3.098 0 1.796-1.169 3.097-2.775 3.097zM112.232 19.222l-.984-.23c-.672-.138-1.026-.471-1.026-.968 0-.65.48-1.06 1.27-1.06.732 0 1.413.23 2.018.684l.093.077 1.261-1.668-.101-.077c-.967-.736-2.06-1.096-3.338-1.096-2.523 0-3.675 1.626-3.675 3.14 0 1.532.934 2.533 2.783 2.978l1.127.274c.799.197 1.245.607 1.245 1.155 0 .607-.404 1.25-1.539 1.25-.908 0-1.791-.386-2.371-1.028l-.093-.102-1.362 1.625.084.077c.908.976 2.329 1.549 3.801 1.549 2.287 0 3.943-1.412 3.943-3.354 0-1.668-1.051-2.755-3.136-3.226zM126.392 15.141l.067-.068h-3.052l-3.263 3.995h-.622V9.52h-2.43v16.077h2.43v-4.124h.673l3.767 4.107.017.017h3.136l-4.902-5.39 4.179-5.066zM132.042 14.884c-3.001 0-5.095 2.242-5.095 5.45 0 3.218 2.22 5.468 5.407 5.468 1.849 0 3.43-.779 4.448-2.19l.084-.112-1.917-1.18-.068.094c-.622.813-1.471 1.223-2.531 1.223-1.606 0-2.724-.94-2.917-2.464h7.542l.017-.111c.017-.163.042-.496.042-.916 0-3.456-2.523-5.262-5.012-5.262zm-2.522 4.398c.193-1.36 1.211-2.276 2.539-2.276 1.32 0 2.338.933 2.489 2.276h-5.028zM94.549 15.038h-2.447v1.37c-.605-.728-1.715-1.515-3.111-1.524-2.556-.025-4.852 2.353-4.852 5.468 0 3.054 2.186 5.382 4.793 5.45 1.253.034 2.464-.625 3.136-1.514v1.309h2.48V15.038zm-5.138 8.437c-1.589.068-2.825-1.326-2.825-3.14 0-1.806 1.228-3.149 2.825-3.123 1.463.034 2.716 1.283 2.716 3.123 0 1.908-1.177 3.071-2.716 3.14zM106.001 9.52h-2.447v6.887c-.605-.727-1.715-1.514-3.111-1.523-2.556-.025-4.851 2.353-4.851 5.468 0 3.054 2.186 5.382 4.801 5.45 1.244.034 2.455-.625 3.128-1.514v1.309h2.48V9.52zm-5.137 13.955c-1.59.068-2.826-1.326-2.826-3.14 0-1.806 1.237-3.149 2.826-3.123 1.463.034 2.716 1.283 2.716 3.123 0 1.908-1.178 3.071-2.716 3.14zM39.868 20.335c0-1.84.85-3.09 2.313-3.123 1.589-.026 2.304 1.18 2.27 3.123 0 .188-.008 5.082-.017 5.262h2.456c.008-.18.008-5.057.008-5.245 0-3.885-1.74-5.468-4.297-5.468-1.22 0-2.279.745-2.758 1.523V9.52h-2.447v16.077h2.48v-1.31l-.008-3.952zM78.926 14.884c-1.118 0-2.237.402-3.263 1.746-.714-1.215-1.766-1.746-3.254-1.746-1.219 0-2.152.745-2.632 1.523v-1.369h-2.455v10.559h2.489v-1.31l-.008-3.952c0-1.84.723-3.09 2.186-3.123 1.589-.026 2.051 1.18 2.026 3.123-.008.188-.017 5.073-.025 5.262h2.455c.009-.18.017-5.057.017-5.245 0-.12-.008-.24-.008-.36.008-1.617.68-2.755 2.051-2.78 1.59-.026 2.178 1.18 2.153 3.123-.008.188-.008 5.082-.025 5.262h2.455c.009-.18.017-5.057.017-5.245 0-3.885-1.623-5.468-4.18-5.468zM54.768 17.862l1.303-2.19c-.697-.54-1.58-.788-2.59-.788-1.219 0-2.287.745-2.757 1.523v-1.369h-2.456v10.559h2.49v-1.31s-.018-3.713-.018-3.952c0-1.84.858-3.064 2.321-3.123.564-.017 1.152.162 1.707.65zM15.191 3.448a3.402 3.402 0 1 1-6.804 0A3.411 3.411 0 0 1 11.793.034c1.875 0 3.398 1.531 3.398 3.414zM11.802 25.25a3.373 3.373 0 0 1 3.372 3.37A3.38 3.38 0 0 1 11.802 32a3.373 3.373 0 0 1-3.363-3.38 3.365 3.365 0 0 1 3.363-3.37zM23.578 3.448a3.402 3.402 0 1 1-6.804 0c0-1.883 1.524-3.414 3.398-3.414a3.411 3.411 0 0 1 3.406 3.414zM32 3.448c0 1.9-1.54 3.448-3.44 3.448s-3.441-1.548-3.441-3.448A3.442 3.442 0 0 1 28.559 0C30.46 0 32 1.54 32 3.448zM20.18 8.445a3.393 3.393 0 0 1 3.39 3.397 3.395 3.395 0 0 1-3.39 3.405 3.4 3.4 0 0 1-3.388-3.405 3.398 3.398 0 0 1 3.389-3.397zM28.568 8.445a3.398 3.398 0 0 1 3.39 3.397 3.393 3.393 0 0 1-3.39 3.396 3.387 3.387 0 0 1-3.39-3.396 3.393 3.393 0 0 1 3.39-3.397zM20.172 16.838a3.404 3.404 0 0 1 3.406 3.406 3.406 3.406 0 0 1-3.406 3.414 3.404 3.404 0 0 1-3.398-3.414 3.402 3.402 0 0 1 3.398-3.405zM20.18 25.25a3.367 3.367 0 0 1 3.373 3.37A3.374 3.374 0 0 1 20.18 32a3.373 3.373 0 0 1-3.364-3.38 3.365 3.365 0 0 1 3.364-3.37zM11.802 8.445a3.393 3.393 0 0 1 3.39 3.397 3.395 3.395 0 0 1-3.39 3.405 3.395 3.395 0 0 1-3.39-3.405 3.393 3.393 0 0 1 3.39-3.397zM11.793 16.907a3.342 3.342 0 0 1 0 6.682 3.336 3.336 0 0 1-3.329-3.345c0-1.84 1.49-3.337 3.33-3.337zM3.423 8.445a3.393 3.393 0 0 0-3.39 3.397 3.387 3.387 0 0 0 3.39 3.396 3.387 3.387 0 0 0 3.389-3.396 3.393 3.393 0 0 0-3.39-3.397zm0 4.945a1.545 1.545 0 0 1 0-3.089 1.545 1.545 0 0 1 0 3.09zM3.406.034A3.411 3.411 0 0 0 0 3.448a3.411 3.411 0 0 0 3.406 3.414c1.875 0 3.398-1.531 3.398-3.414 0-1.882-1.523-3.414-3.398-3.414zm.017 4.963a1.548 1.548 0 1 1 0-3.097 1.548 1.548 0 0 1 0 3.097z" fill="#FFF"></path>
+         </svg>
+        </div></a>
+       <div class="HeaderMenu-items">
+        <ul class="HeaderMenu-itemsList" role="menubar">
+         <li role="menuitem" class="MenuLink MenuLink_first"><a href="/stream"><span class="LiveButton"><span class="redDot"></span>LIVE</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/news"><span class="MenuLink-title">Новини</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/genre/stattya"><span class="MenuLink-title">Статті</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/genre/dumky"><span class="MenuLink-title">Думки</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/genre/video"><span class="MenuLink-title">Відео</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/programs"><span class="MenuLink-title">Програми</span></a></li>
+         <li role="menuitem" class="MenuLink"><a href="/genre/spetsproekt"><span class="MenuLink-title">Спецпроекти</span></a></li>
+        </ul>
+       </div>
+       <div class="Search">
+        <div class="Search-iconWrapper">
+         <svg class="Search-iconSearch" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10.526" cy="10.447" r="5.075" transform="rotate(-45 10.526 10.447)" stroke="#191A1E" stroke-width="1.5"></circle><path stroke="#191A1E" stroke-width="1.5" d="M14.53 14.214l5 5"></path>
+         </svg>
+        </div>
+       </div>
+       <div class="MenuDropdown LanguageSelector">
+        <span>Укр</span><span class="LanguageSelector-dropdownArrow">
+         <svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 4l4 4 4-4" stroke="#fff" stroke-width="1.5"></path>
+         </svg></span>
+        <div class="MenuDropdown-submenu LanguageSelector-submenu">
+         <ul>
+          <li>
+           <div class="LanguageSelector-option">
+            Рус
+           </div></li>
+          <li>
+           <div class="LanguageSelector-option">
+            Eng
+           </div></li>
+         </ul>
+        </div>
+       </div><button class="ActionButton">Підтримати проект</button>
+      </div>
+     </div>
+    </div>
+    <div class="headroom-wrapper">
+     <div class="headroom headroom--unfixed">
+      <div class="Subheader">
+       <div class="Subheader-contentWrapper">
+        <div class="SubheaderSubtopic">
+         <div class="SubheaderSubtopic-menu">
+          <div class="MenuDropdown DropdownTopics DropdownTopicsGroup">
+           <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#191A1E" d="M6.5 0h3v3h-3zM6.5 6.5h3v3h-3zM6.5 13h3v3h-3z"></path>
+           </svg><span class="DropdownTopics-label">Всі рубрики</span>
+           <div class="MenuDropdown-submenu">
+            <ul>
+             <li><a href="/ekonomika">Економіка</a></li>
+             <li><a href="/viyna">Війна</a></li>
+             <li><a href="/polityka">Політика</a></li>
+             <li><a href="/svit">Світ</a></li>
+             <li><a href="/suspilstvo">Суспільство</a></li>
+             <li><a href="/tekhnolohiyi">Технології</a></li>
+             <li><a href="/lifestyle">Лайфстайл</a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="MenuDropdown DropdownTopics DropdownTopicsGroup DropdownTopicsGroup_tb">
+           <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#191A1E" d="M6.5 0h3v3h-3zM6.5 6.5h3v3h-3zM6.5 13h3v3h-3z"></path>
+           </svg><span class="DropdownTopics-label">Технології</span>
+           <div class="MenuDropdown-submenu">
+            <ul>
+             <li><a href="/tekhnolohiyi/gadzhety">Гаджети</a></li>
+             <li><a href="/tekhnolohiyi/kiberbezpeka">Кібербезпека</a></li>
+             <li><a href="/tekhnolohiyi/nauka">Наука</a></li>
+             <li><a href="/tekhnolohiyi/kosmos">Космос</a></li>
+            </ul>
+           </div>
+          </div><a class="SelectedTopic SelectedTopic_hide_tb" href="/tekhnolohiyi">Технології</a>
+          <svg class="SelectedTopic-arrow SelectedTopic-arrow_hideArrow_mb" width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M1 4l4 4 4-4" stroke="#fff" stroke-width="1.5"></path>
+          </svg>
+          <div class="SubtopicsList">
+           <a class="SubtopicsList-subtopic" href="/tekhnolohiyi/gadzhety">Гаджети</a><a class="SubtopicsList-subtopic SubtopicsList-subtopic_active" href="/tekhnolohiyi/kiberbezpeka">Кібербезпека</a><a class="SubtopicsList-subtopic" href="/tekhnolohiyi/nauka">Наука</a><a class="SubtopicsList-subtopic" href="/tekhnolohiyi/kosmos">Космос</a>
+          </div>
+         </div>
+         <div class="ImportantSwitch">
+          <span class="ImportantSwitch-label ImportantSwitch-label_md">Важливе</span><span class="ImportantSwitch-label ImportantSwitch-label_sm">Важливе</span>
+          <div style="position:relative;display:inline-block;text-align:left;opacity:1;border-radius:11px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s;touch-action:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+           <div class="react-switch-bg" style="height:22px;width:36px;margin:0;position:relative;background:#EFEFEF;border-radius:11px;cursor:pointer;-webkit-transition:background 0.25s;-moz-transition:background 0.25s;transition:background 0.25s"></div>
+           <div class="react-switch-handle" role="checkbox" tabindex="0" style="height:20px;width:20px;background:#ffffff;cursor:pointer;display:inline-block;border-radius:50%;position:absolute;transform:translateX(1px);top:1px;outline:0;box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2), 0px 0px 1px rgba(0, 0, 0, 0.12);border:0;-webkit-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;-moz-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s" aria-checked="false" aria-disabled="false"></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <main class="Layout-container">
+     <div class="SubtopicPostList">
+      <div class="SubtopicPostList-news">
+       <div class="NewsBlock">
+        <div class="NewsBlock-wrapper">
+         <h3 class="NewsBlock-header">Останні новини</h3>
+         <div class="NewsBlock-container">
+          <div class="NewsBlock-news">
+           <a data-vr-contentbox="Побиття українця у Парижі: нападникам висунули обвинувачення, п’ятьох взяли під варту — ЗМІ" data-vr-contentbox-url="/posts/pobittya-ukrayincya-u-parizhi-napadnikam-visunuli-pidozri-pyatoh-vzyali-pid-vartu-franceinform" class="NewsCard" href="/posts/pobittya-ukrayincya-u-parizhi-napadnikam-visunuli-pidozri-pyatoh-vzyali-pid-vartu-franceinform">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title NewsCard-title_important">
+              Побиття українця у Парижі: нападникам висунули обвинувачення, п’ятьох взяли під варту — ЗМІ
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               <svg class="NewsCard-important" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" rx="2" fill="#F8941E"></rect><path fill="#fff" d="M7 11h2v2H7zM7 3h2v6H7z"></path>
+               </svg>31 січня 2021, 09:44
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="У Росії поновилися протести на підтримку Навального. В деяких містах люди виходять на вулиці в 40-градусні морози" data-vr-contentbox-url="/posts/u-rosiyi-ponovilisya-protesti-na-pidtrimku-navalnogo-v-deyakih-mistah-lyudi-vihodyat-na-vulici-v-40-gradusni-morozi" class="NewsCard" href="/posts/u-rosiyi-ponovilisya-protesti-na-pidtrimku-navalnogo-v-deyakih-mistah-lyudi-vihodyat-na-vulici-v-40-gradusni-morozi">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title NewsCard-title_important">
+              У Росії поновилися протести на підтримку Навального. В деяких містах люди виходять на вулиці в 40-градусні морози
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               <svg class="NewsCard-important" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" rx="2" fill="#F8941E"></rect><path fill="#fff" d="M7 11h2v2H7zM7 3h2v6H7z"></path>
+               </svg>31 січня 2021, 08:57
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="Netflix тестує функцію таймера автоматичного вимкнення — поки що лише на Android" data-vr-contentbox-url="/posts/netflix-testuye-funkciyu-tajmeru-avtomatichnogo-vimknennya-poki-sho-lishe-na-android" class="NewsCard" href="/posts/netflix-testuye-funkciyu-tajmeru-avtomatichnogo-vimknennya-poki-sho-lishe-na-android">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              Netflix тестує функцію таймера автоматичного вимкнення — поки що лише на Android
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               31 січня 2021, 08:22
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="Болгарські правоохоронці затримали банду, яка використовувала «паспорт» Сильвестра Сталлоне" data-vr-contentbox-url="/posts/bolgarski-pravoohoronci-zatrimali-bandu-yaka-vikoristovuvala-pasport-silvestra-stallone" class="NewsCard" href="/posts/bolgarski-pravoohoronci-zatrimali-bandu-yaka-vikoristovuvala-pasport-silvestra-stallone">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              Болгарські правоохоронці затримали банду, яка використовувала «паспорт» Сильвестра Сталлоне
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               31 січня 2021, 07:34
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="На Донбасі бойовики п’ять разів порушували тишу. Українські військові відкривали вогонь у відповідь — штаб" data-vr-contentbox-url="/posts/na-donbasi-bojoviki-pyat-raziv-porushuvali-tishu-ukrayinski-vijskovi-vidkrivali-vogon-u-vidpovid-shtab" class="NewsCard" href="/posts/na-donbasi-bojoviki-pyat-raziv-porushuvali-tishu-ukrayinski-vijskovi-vidkrivali-vogon-u-vidpovid-shtab">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              На Донбасі бойовики п’ять разів порушували тишу. Українські військові відкривали вогонь у відповідь — штаб
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               31 січня 2021, 06:56
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="В Україні за добу виявили ще 3,1 тисячі випадків COVID-19. До лікарень потрапили 1 960 людей" data-vr-contentbox-url="/posts/v-ukrayini-viyavili-she-31-tisyachi-vipadkiv-covid-19-do-likaren-potrapili-1-960-lyudej" class="NewsCard" href="/posts/v-ukrayini-viyavili-she-31-tisyachi-vipadkiv-covid-19-do-likaren-potrapili-1-960-lyudej">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title NewsCard-title_important">
+              В Україні за добу виявили ще 3,1 тисячі випадків COVID-19. До лікарень потрапили 1 960 людей
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               <svg class="NewsCard-important" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="16" rx="2" fill="#F8941E"></rect><path fill="#fff" d="M7 11h2v2H7zM7 3h2v6H7z"></path>
+               </svg>31 січня 2021, 06:15
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="І до важливих новин: вчені нарешті зрозуміли, чому фекалії вомбатів мають форму куба" data-vr-contentbox-url="/posts/i-do-vazhlivih-novin-vcheni-nareshti-zrozumili-chomu-fekaliyi-vombativ-mayut-formu-kuba" class="NewsCard" href="/posts/i-do-vazhlivih-novin-vcheni-nareshti-zrozumili-chomu-fekaliyi-vombativ-mayut-formu-kuba">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              І до важливих новин: вчені нарешті зрозуміли, чому фекалії вомбатів мають форму куба
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               30 січня 2021, 23:57
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="Грецькі вчені знайшли затонулі амфори часів Римської імперії. Артефакти розповідають про античний торговий маршрут" data-vr-contentbox-url="/posts/grecki-vcheni-znajshli-zatonuli-amfori-chasiv-rimskoyi-imperiyi-yaki-rozpovili-pro-antichnij-torgovij-marshrut" class="NewsCard" href="/posts/grecki-vcheni-znajshli-zatonuli-amfori-chasiv-rimskoyi-imperiyi-yaki-rozpovili-pro-antichnij-torgovij-marshrut">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              Грецькі вчені знайшли затонулі амфори часів Римської імперії. Артефакти розповідають про античний торговий маршрут
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               30 січня 2021, 22:46
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="У Львові на честь «кіборгів» встановили копію вежі Донецького аеропорту" data-vr-contentbox-url="/posts/u-lvovi-na-chest-kiborgiv-vstanovili-kopiyu-vezhi-doneckogo-aeroportu" class="NewsCard" href="/posts/u-lvovi-na-chest-kiborgiv-vstanovili-kopiyu-vezhi-doneckogo-aeroportu">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              У Львові на честь «кіборгів» встановили копію вежі Донецького аеропорту
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               30 січня 2021, 21:59
+              </div>
+             </div>
+            </div></a><a data-vr-contentbox="Світлану Тіхановську висунули на Нобелівську премію миру — Reuters" data-vr-contentbox-url="/posts/svitlanu-tihanovsku-visunuli-na-nobelivsku-premiyu-miru-reuters" class="NewsCard" href="/posts/svitlanu-tihanovsku-visunuli-na-nobelivsku-premiyu-miru-reuters">
+            <div class="NewsCard-container">
+             <div data-vr-headline="true" class="NewsCard-title">
+              Світлану Тіхановську висунули на Нобелівську премію миру — Reuters
+             </div>
+             <div class="NewsCard-infoWrapper">
+              <div class="NewsCard-date">
+               30 січня 2021, 21:36
+              </div>
+             </div>
+            </div></a>
+          </div>
+         </div>
+        </div>
+        <div class="NewsBlock-showAll">
+         <button class="ActionButton NewsBlock-showAll-button">Показати всі новини</button>
+        </div>
+       </div>
+      </div>
+      <div class="SubtopicPostList-content">
+       <div class="CardsList">
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Кіберполіція викрила міжнародну групу хакерів, яка завдала збитків установам США та країн Європи на $2,5 млрд" data-vr-contentbox-url="/posts/kiberpoliciya-vikrila-mizhnarodnu-grupu-hakeriv-yaka-zavdala-zbitkiv-ustanovam-ssha-ta-krayin-yevropi-na-dollar25-mlrd" class="MediumTextCard" href="/posts/kiberpoliciya-vikrila-mizhnarodnu-grupu-hakeriv-yaka-zavdala-zbitkiv-ustanovam-ssha-ta-krayin-yevropi-na-dollar25-mlrd">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Кіберполіція викрила міжнародну групу хакерів, яка завдала збитків установам США та країн Європи на $2,5 млрд</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Кіберполіція України спільно з правоохоронцями з інших країн викрила та заблокувала діяльність міжнародного хакерського угруповання, яке розповсюджувало шкідливе програмне забезпечення. За його допомогою хакери завдали значних фінансових збитків установам зІ США та країн Європи.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">27 січня 2021, 14:30</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Кібератака на агентство ЄС: хакери розмістили інформацію про вакцини від COVID-19 в інтернеті" data-vr-contentbox-url="/posts/kiberataka-na-agentstvo-yes-hakeri-rozmistili-informaciyu-pro-vakcini-vid-covid-19-v-interneti" class="MediumTextCard" href="/posts/kiberataka-na-agentstvo-yes-hakeri-rozmistili-informaciyu-pro-vakcini-vid-covid-19-v-interneti">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Кібератака на агентство ЄС: хакери розмістили інформацію про вакцини від COVID-19 в інтернеті</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Хакери, які отримали доступ до документів про вакцини проти COVID-19 від Pfizer/BioNTech і Moderna, розмістили дані щодо препаратів в інтернеті. Однак це не вплине на швидкість затвердження вакцин регулятором.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">13 січня 2021, 12:24</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Органи нацбезпеки США вперше офіційно заявили, що Росія, імовірно, відповідальна за наймасштабнішу кібератаку у Штатах" data-vr-contentbox-url="/posts/organi-nacbezpeki-ssha-vpershe-oficijno-zayavili-sho-rosiya-imovirno-vidpovidalna-za-najmasshtabnishu-kiberataku-u-shtatah" class="MediumTextCard" href="/posts/organi-nacbezpeki-ssha-vpershe-oficijno-zayavili-sho-rosiya-imovirno-vidpovidalna-za-najmasshtabnishu-kiberataku-u-shtatah">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Органи нацбезпеки США вперше офіційно заявили, що Росія, імовірно, відповідальна за наймасштабнішу кібератаку у Штатах</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Найвищі органи нацбезпеки Сполучених Штатів у своїй спільній заяві вперше офіційно назвали Росію імовірно причетною до масштабної кібератаки на низку урядових установ США. 
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">06 січня 2021, 05:59</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Під час масштабної кібератаки на США (в якій підозрюють Росію) хакери отримали доступ до внутрішнього коду Microsoft" data-vr-contentbox-url="/posts/pid-chas-masshtabnoyi-kiberataki-na-ssha-v-yakij-pidozryuyut-rosiyu-otrimali-dostup-do-vnutrishnogo-kodu-microsoft" class="MediumImageCard" href="/posts/pid-chas-masshtabnoyi-kiberataki-na-ssha-v-yakij-pidozryuyut-rosiyu-otrimali-dostup-do-vnutrishnogo-kodu-microsoft">
+          <div class="MediumImageCard-filter"></div>
+          <div class="MediumImageCard-teaserContainer PublicationTeaser-container">
+           <div style="height:100%" class="lazyload-placeholder"></div>
+          </div>
+          <div class="MediumImageCard-content MediumImageCard-content_bottom">
+           <div class="MediumImageCard-content-top">
+            <div class="MediumImageCard-labels">
+             <div class="PublicationLabels">
+              <span class="PublicationCard-topic">Технології</span>
+             </div>
+            </div>
+            <h3 data-vr-headline="true" class="MediumImageCard-title">Під час масштабної кібератаки на США (в якій підозрюють Росію) хакери отримали доступ до внутрішнього коду Microsoft</h3>
+           </div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">31 грудня 2020, 19:10</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Microsoft виявила у своїх системах шкідливе програмне забезпечення. Це пов'язано з хакерськими атаками" data-vr-contentbox-url="/posts/u-microsoft-viyavili-u-svoyih-sistemah-shkidlive-programne-zabezpechennya-ce-povyazano-z-hakerskimi-atakami" class="MediumTextCard" href="/posts/u-microsoft-viyavili-u-svoyih-sistemah-shkidlive-programne-zabezpechennya-ce-povyazano-z-hakerskimi-atakami">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Microsoft виявила у своїх системах шкідливе програмне забезпечення. Це пов'язано з хакерськими атаками</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             У компанії Microsoft заявили, що виявили у своїй системі шкідливе програмне забезпечення. Воно пов'язане з масовими хакерськими атаками на Міністерство фінансів США та інші установи.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">18 грудня 2020, 15:32</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Управління ядерною зброєю США могло постраждати від останньої хакерської атаки. У Міноборони це заперечують — Politico" data-vr-contentbox-url="/posts/upravlinnya-yadernoyu-zbroyeyu-ssha-moglo-postrazhdati-vid-ostannoyi-hakerskoyi-ataki-u-minoboroni-ce-zaperechuyut-politico" class="MediumTextCard" href="/posts/upravlinnya-yadernoyu-zbroyeyu-ssha-moglo-postrazhdati-vid-ostannoyi-hakerskoyi-ataki-u-minoboroni-ce-zaperechuyut-politico">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Управління ядерною зброєю США могло постраждати від останньої хакерської атаки. У Міноборони це заперечують — Politico</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Хакери під час останньої масштабної кібератаки могли отримати доступ до мережі Міністерства енергетики та Національного управління з ядерної безпеки США, яке підтримує запаси ядерної зброї у країні. Водночас у Міноборони США запевняють, що зловмисники не зачепили критичні системи оборони, такі як управління з ядерної безпеки.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">18 грудня 2020, 05:41</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Нідерландський кіберексперт вгадав пароль до Twitter-акаунту Трампа. Але його за це не каратимуть, бо він діяв «етично»" data-vr-contentbox-url="/posts/niderlandskij-kiberekspert-vgadav-parol-do-twitter-akauntu-trampa-jogo-za-ce-ne-karatimut-bo-vin-diyav-etichno" class="MediumTextCard" href="/posts/niderlandskij-kiberekspert-vgadav-parol-do-twitter-akauntu-trampa-jogo-za-ce-ne-karatimut-bo-vin-diyav-etichno">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Нідерландський кіберексперт вгадав пароль до Twitter-акаунту Трампа. Але його за це не каратимуть, бо він діяв «етично»</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Нідерландські прокурори підтвердили, що кіберексперт вгадав пароль «MAGA2020!» та успішно увійшов до Twitter-акаунту президента США Дональда Трампа. Карати хакера не планують, бо він діяв «етично».
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">17 грудня 2020, 05:40</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Російські хакери могли зламати системи Мінфіну США. Масштаби операції поки невідомі ㅡ Reuters i WP " data-vr-contentbox-url="/posts/rosijski-hakeri-mogli-zlamati-sistemi-minfinu-ssha-masshtabi-operaciyi-poki-nevidomi-reuters-i-wp" class="MediumTextCard" href="/posts/rosijski-hakeri-mogli-zlamati-sistemi-minfinu-ssha-masshtabi-operaciyi-poki-nevidomi-reuters-i-wp">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Російські хакери могли зламати системи Мінфіну США. Масштаби операції поки невідомі ㅡ Reuters i WP </h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Хакери, яких, ймовірно, контролює Росія, зламали системи Міністерства фінансів і торгівлі США та інших урядових установ країни у межах глобальної шпигунської компанії, що тривала декілька місяців. Наразі невідомі точні масштаби збитків, триває розслідування.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">14 грудня 2020, 07:43</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Компанія з кібербезпеки FireEye заявила про хакерську атаку з боку іноземної держави. Імовірно, це Росія" data-vr-contentbox-url="/posts/kompaniya-z-kiberbezpeki-fireeye-zayavila-pro-hakersku-ataku-z-boku-inozemnoyi-derzhavi-imovirno-ce-rosiya" class="MediumTextCard" href="/posts/kompaniya-z-kiberbezpeki-fireeye-zayavila-pro-hakersku-ataku-z-boku-inozemnoyi-derzhavi-imovirno-ce-rosiya">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Компанія з кібербезпеки FireEye заявила про хакерську атаку з боку іноземної держави. Імовірно, це Росія</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Американська компанія з кібербезпеки FireEye заявила, що постраждала від хакерської атаки, яку підтримувала «держава, що має значні наступальні можливості». 
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">10 грудня 2020, 06:56</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Україна посіла 25 місце серед 160 країн у міжнародному рейтингу кібербезпеки" data-vr-contentbox-url="/posts/ukrayina-posila-25-misce-sered-160-krayin-u-mizhnarodnomu-rejtingu-kiberbezpeki" class="MediumTextCard" href="/posts/ukrayina-posila-25-misce-sered-160-krayin-u-mizhnarodnomu-rejtingu-kiberbezpeki">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Україна посіла 25 місце серед 160 країн у міжнародному рейтингу кібербезпеки</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Україна у 2020 році піднялася на чотири позиції та зайняла 25 місце у Національному індексі кібербезпеки (National Cybersecurity Index 2020). Загалом у ньому 160 країн.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">04 грудня 2020, 18:59</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Хакери збирали дані з компаній, які пов'язані з постачанням вакцин проти COVID-19 при низьких температурах — IBM" data-vr-contentbox-url="/posts/hakeri-zbirali-dani-z-kompanij-yaki-povyazani-z-postachannyam-vakcin-proti-covid-19-pri-nizkih-temperaturah-imb" class="MediumTextCard" href="/posts/hakeri-zbirali-dani-z-kompanij-yaki-povyazani-z-postachannyam-vakcin-proti-covid-19-pri-nizkih-temperaturah-imb">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Хакери збирали дані з компаній, які пов'язані з постачанням вакцин проти COVID-19 при низьких температурах — IBM</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Хакери проводили глобальну фішингову кампанію (виманювання даних) щодо організацій, які пов'язанні з перевезенням вакцини проти COVID-19, яка потребує значного охолодження. Ймовірно, вони збирали інформацію про ланцюг постачання. 
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">04 грудня 2020, 12:15</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+        <div class="CardsList-wrapper CardsList-wrapper_theme_light">
+         <a data-vr-contentbox="Пам’ятаєте білого хакера, який заявив, що зламав Twitter-акаунт Трампа? Його дії тепер розслідує поліція Нідерландів" data-vr-contentbox-url="/posts/pamyatayete-bilogo-hakera-yakij-zayaviv-sho-zlamav-twitter-akaunt-trampa-jogo-diyi-teper-rozsliduye-policiya-niderlandiv" class="MediumTextCard" href="/posts/pamyatayete-bilogo-hakera-yakij-zayaviv-sho-zlamav-twitter-akaunt-trampa-jogo-diyi-teper-rozsliduye-policiya-niderlandiv">
+          <div class="MediumTextCard-contentTop">
+           <div class="MediumTextCard-labels">
+            <div class="PublicationLabels">
+             <span class="PublicationCard-topic">Технології</span>
+            </div>
+           </div>
+           <h3 data-vr-headline="true" class="MediumTextCard-title">Пам’ятаєте білого хакера, який заявив, що зламав Twitter-акаунт Трампа? Його дії тепер розслідує поліція Нідерландів</h3>
+           <div class="MediumTextCard-leadText">
+            <div class="LinesEllipsis  ">
+             Поліція Нідерландів розслідує дії фахівця з кібербезпеки Віктора Геверса, який заявляв про успішний злам Twitter-акаунта президента США Дональда Трампа. Хоча слова Геверса заперечив Білий дім, чоловік заявив про нові докази того, що злам справді мав місце.
+             <wbr>
+            </div>
+           </div>
+          </div>
+          <div>
+           <div class="CardInfo">
+            <div class="CardInfo-left">
+             <span>Новина</span><span class="CardInfo-date CardInfo-date_margin">21 листопада 2020, 19:42</span>
+            </div>
+           </div>
+          </div></a>
+        </div>
+       </div>
+       <div class="SubtopicPostList-showMore">
+        <a href="https://hromadske.ua/tekhnolohiyi/kiberbezpeka?page=2"><button class="ActionButton ActionButton_big">Показати більше</button></a>
+       </div>
+      </div>
+     </div>
+     <div class="Footer">
+      <div class="Footer-wrapper">
+       <div class="Mailing">
+        <h3 class="Mailing-title">Підпишись на розсилку</h3>
+        <div class="Mailing-descriptionWrapper">
+         <p class="Mailing-description">Щонеділі наші редактори відбирають для вас найкращі історії тижня</p>
+        </div>
+        <div class="Mailing-inputContainer">
+         <div class="Mailing-inputWrapper">
+          <div class="FormInput">
+           <label><input type="email" placeholder="Ваш email" value="" aria-label="Ваш email"></label>
+          </div><button class="ActionButton Mailing-button">Підписатись</button>
+         </div>
+        </div>
+       </div>
+       <div class="FooterSocial Footer-hide-sm">
+        <div class="FooterSocial-wrapper">
+         <a href="https://www.facebook.com/hromadskeua" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="FooterSocial-link">
+          <svg class="FooterSocial-facebook" alt="facebook" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M28.345 0H1.655C.741 0 0 .741 0 1.655v26.69C0 29.259.741 30 1.655 30h14.38V18.398h-3.906v-4.541h3.906v-3.341c0-3.875 2.369-5.985 5.824-5.985a33.209 33.209 0 0 1 3.486.176v4.05h-2.38c-1.882 0-2.25.89-2.25 2.203v2.892h4.5l-.584 4.541H20.69V30h7.655c.914 0 1.655-.741 1.655-1.655V1.655C30 .741 29.259 0 28.345 0z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Facebook
+          </div></a><a href="https://www.instagram.com/hromadske.ua" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="FooterSocial-link">
+          <svg class="FooterSocial-instagram" alt="instagram" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0c-4.074 0-4.585.017-6.184.09-1.597.073-2.687.327-3.642.698a7.352 7.352 0 0 0-2.656 1.73 7.352 7.352 0 0 0-1.73 2.656C.417 6.13.163 7.22.09 8.816.017 10.416 0 10.926 0 15s.017 4.585.09 6.184c.073 1.597.327 2.688.698 3.642a7.352 7.352 0 0 0 1.73 2.656 7.354 7.354 0 0 0 2.656 1.73c.955.371 2.045.625 3.642.698 1.6.073 2.11.09 6.184.09s4.585-.017 6.184-.09c1.597-.073 2.688-.327 3.642-.697a7.354 7.354 0 0 0 2.656-1.73 7.352 7.352 0 0 0 1.73-2.657c.371-.954.625-2.045.698-3.642.073-1.6.09-2.11.09-6.184s-.017-4.585-.09-6.184c-.073-1.597-.327-2.687-.698-3.642a7.353 7.353 0 0 0-1.73-2.656 7.352 7.352 0 0 0-2.656-1.73C23.872.417 22.78.163 21.184.09 19.584.017 19.075 0 15 0zm0 2.703c4.005 0 4.48.015 6.061.087 1.463.067 2.257.311 2.786.517.7.272 1.2.597 1.724 1.122.525.525.85 1.024 1.122 1.724.206.53.45 1.323.517 2.786.072 1.582.087 2.056.087 6.061s-.015 4.48-.087 6.061c-.067 1.463-.311 2.257-.517 2.786-.272.7-.597 1.2-1.122 1.724a4.648 4.648 0 0 1-1.724 1.122c-.529.206-1.323.45-2.786.517-1.581.072-2.055.087-6.061.087-4.005 0-4.48-.015-6.061-.087-1.463-.067-2.257-.311-2.786-.517-.7-.272-1.2-.597-1.724-1.122a4.648 4.648 0 0 1-1.122-1.724c-.206-.529-.45-1.323-.517-2.786-.072-1.581-.087-2.056-.087-6.06 0-4.006.015-4.48.087-6.062.067-1.463.311-2.257.517-2.785.272-.7.597-1.2 1.122-1.725a4.647 4.647 0 0 1 1.724-1.122c.529-.206 1.323-.45 2.786-.517 1.581-.072 2.056-.087 6.061-.087z" fill="#C8C8C8"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 20a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-12.703a7.703 7.703 0 1 0 0 15.405 7.703 7.703 0 0 0 0-15.405zM24.807 6.993a1.8 1.8 0 1 1-3.6 0 1.8 1.8 0 0 1 3.6 0z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Instagram
+          </div></a><a href="https://t.me/hromadske_ua" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="FooterSocial-link">
+          <svg class="FooterSocial-telegram" alt="telegram" width="34" height="30" viewbox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 1.76l-5.22 26.304s-.73 1.824-2.736.948l-7.427-5.69-4.764 4.34s-.372.283-.78.106l.963-8.205S26.894 7.561 27.44 7.05c.548-.51.365-.62.365-.62.037-.62-.985 0-.985 0L9.12 17.666l-7.373-2.48s-1.131-.402-1.24-1.277c-.11-.876 1.276-1.35 1.276-1.35L31.091 1.067S33.5.009 33.5 1.76z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Telegram
+          </div></a><a href="https://www.youtube.com/user/HromadskeTV" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="FooterSocial-link">
+          <svg class="FooterSocial-youtube" alt="youtube" width="36" height="26" viewbox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M35.248 4.335a4.509 4.509 0 0 0-3.183-3.183C29.258.4 18 .4 18 .4S6.742.4 3.935 1.152A4.509 4.509 0 0 0 .752 4.335C0 7.142 0 13 0 13s0 5.857.752 8.665a4.508 4.508 0 0 0 3.183 3.182C6.742 25.6 18 25.6 18 25.6s11.258 0 14.065-.753a4.508 4.508 0 0 0 3.183-3.182C36 18.857 36 13 36 13s0-5.858-.752-8.665zM14.4 18.4l9.353-5.4L14.4 7.6v10.8z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           YouTube
+          </div></a><a href="https://twitter.com/Hromadskeua" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="FooterSocial-link">
+          <svg class="FooterSocial-twitter" alt="twitter" width="34" height="28" viewbox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M10.866 27.5c12.453 0 19.267-10.39 19.267-19.386 0-.293 0-.585-.014-.877A13.843 13.843 0 0 0 33.5 3.702a13.657 13.657 0 0 1-3.896 1.077 6.847 6.847 0 0 0 2.985-3.774 13.419 13.419 0 0 1-4.305 1.648A6.74 6.74 0 0 0 23.345.5c-3.737 0-6.774 3.056-6.774 6.816 0 .532.066 1.05.171 1.555C11.117 8.592 6.125 5.868 2.785 1.75a6.847 6.847 0 0 0-.912 3.428 6.843 6.843 0 0 0 3.011 5.674A6.818 6.818 0 0 1 1.821 10v.093c0 3.295 2.337 6.059 5.427 6.683-.568.16-1.162.24-1.783.24a6.62 6.62 0 0 1-1.268-.12c.859 2.71 3.368 4.677 6.326 4.73A13.529 13.529 0 0 1 2.11 24.55c-.541 0-1.083-.026-1.611-.093A19.175 19.175 0 0 0 10.866 27.5z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Twitter
+          </div></a>
+        </div>
+       </div>
+       <div class="FooterLinkList Footer-hide-hd">
+        <a class="FooterLinkList-link" href="/about">Про Громадське</a><a class="FooterLinkList-link" href="/about/contacts">Контакти</a><a class="FooterLinkList-link" href="/privacy_policy">Наші політики</a><a class="FooterLinkList-link" target="_blank" rel="noopener noreferrer" href="https://www.work.ua/jobs/by-company/613159/">Вакансії</a><a class="FooterLinkList-link" href="/finreports">Фінансові звіти</a><a class="FooterLinkList-link" href="/ownership">Структура власності</a><a class="FooterLinkList-link" href="/about/where-to-watch">Де дивитись</a><a class="FooterLinkList-link" href="/tenders">Тендери</a><a class="FooterLinkList-link" href="/advertising">Реклама</a>
+       </div>
+       <div class="FooterSocial Footer-show-sm">
+        <div class="FooterSocial-wrapper">
+         <a href="https://www.facebook.com/hromadskeua" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="FooterSocial-link">
+          <svg class="FooterSocial-facebook" alt="facebook" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M28.345 0H1.655C.741 0 0 .741 0 1.655v26.69C0 29.259.741 30 1.655 30h14.38V18.398h-3.906v-4.541h3.906v-3.341c0-3.875 2.369-5.985 5.824-5.985a33.209 33.209 0 0 1 3.486.176v4.05h-2.38c-1.882 0-2.25.89-2.25 2.203v2.892h4.5l-.584 4.541H20.69V30h7.655c.914 0 1.655-.741 1.655-1.655V1.655C30 .741 29.259 0 28.345 0z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Facebook
+          </div></a><a href="https://www.instagram.com/hromadske.ua" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="FooterSocial-link">
+          <svg class="FooterSocial-instagram" alt="instagram" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0c-4.074 0-4.585.017-6.184.09-1.597.073-2.687.327-3.642.698a7.352 7.352 0 0 0-2.656 1.73 7.352 7.352 0 0 0-1.73 2.656C.417 6.13.163 7.22.09 8.816.017 10.416 0 10.926 0 15s.017 4.585.09 6.184c.073 1.597.327 2.688.698 3.642a7.352 7.352 0 0 0 1.73 2.656 7.354 7.354 0 0 0 2.656 1.73c.955.371 2.045.625 3.642.698 1.6.073 2.11.09 6.184.09s4.585-.017 6.184-.09c1.597-.073 2.688-.327 3.642-.697a7.354 7.354 0 0 0 2.656-1.73 7.352 7.352 0 0 0 1.73-2.657c.371-.954.625-2.045.698-3.642.073-1.6.09-2.11.09-6.184s-.017-4.585-.09-6.184c-.073-1.597-.327-2.687-.698-3.642a7.353 7.353 0 0 0-1.73-2.656 7.352 7.352 0 0 0-2.656-1.73C23.872.417 22.78.163 21.184.09 19.584.017 19.075 0 15 0zm0 2.703c4.005 0 4.48.015 6.061.087 1.463.067 2.257.311 2.786.517.7.272 1.2.597 1.724 1.122.525.525.85 1.024 1.122 1.724.206.53.45 1.323.517 2.786.072 1.582.087 2.056.087 6.061s-.015 4.48-.087 6.061c-.067 1.463-.311 2.257-.517 2.786-.272.7-.597 1.2-1.122 1.724a4.648 4.648 0 0 1-1.724 1.122c-.529.206-1.323.45-2.786.517-1.581.072-2.055.087-6.061.087-4.005 0-4.48-.015-6.061-.087-1.463-.067-2.257-.311-2.786-.517-.7-.272-1.2-.597-1.724-1.122a4.648 4.648 0 0 1-1.122-1.724c-.206-.529-.45-1.323-.517-2.786-.072-1.581-.087-2.056-.087-6.06 0-4.006.015-4.48.087-6.062.067-1.463.311-2.257.517-2.785.272-.7.597-1.2 1.122-1.725a4.647 4.647 0 0 1 1.724-1.122c.529-.206 1.323-.45 2.786-.517 1.581-.072 2.056-.087 6.061-.087z" fill="#C8C8C8"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 20a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-12.703a7.703 7.703 0 1 0 0 15.405 7.703 7.703 0 0 0 0-15.405zM24.807 6.993a1.8 1.8 0 1 1-3.6 0 1.8 1.8 0 0 1 3.6 0z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Instagram
+          </div></a><a href="https://t.me/hromadske_ua" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="FooterSocial-link">
+          <svg class="FooterSocial-telegram" alt="telegram" width="34" height="30" viewbox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 1.76l-5.22 26.304s-.73 1.824-2.736.948l-7.427-5.69-4.764 4.34s-.372.283-.78.106l.963-8.205S26.894 7.561 27.44 7.05c.548-.51.365-.62.365-.62.037-.62-.985 0-.985 0L9.12 17.666l-7.373-2.48s-1.131-.402-1.24-1.277c-.11-.876 1.276-1.35 1.276-1.35L31.091 1.067S33.5.009 33.5 1.76z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Telegram
+          </div></a><a href="https://www.youtube.com/user/HromadskeTV" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="FooterSocial-link">
+          <svg class="FooterSocial-youtube" alt="youtube" width="36" height="26" viewbox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M35.248 4.335a4.509 4.509 0 0 0-3.183-3.183C29.258.4 18 .4 18 .4S6.742.4 3.935 1.152A4.509 4.509 0 0 0 .752 4.335C0 7.142 0 13 0 13s0 5.857.752 8.665a4.508 4.508 0 0 0 3.183 3.182C6.742 25.6 18 25.6 18 25.6s11.258 0 14.065-.753a4.508 4.508 0 0 0 3.183-3.182C36 18.857 36 13 36 13s0-5.858-.752-8.665zM14.4 18.4l9.353-5.4L14.4 7.6v10.8z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           YouTube
+          </div></a><a href="https://twitter.com/Hromadskeua" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="FooterSocial-link">
+          <svg class="FooterSocial-twitter" alt="twitter" width="34" height="28" viewbox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M10.866 27.5c12.453 0 19.267-10.39 19.267-19.386 0-.293 0-.585-.014-.877A13.843 13.843 0 0 0 33.5 3.702a13.657 13.657 0 0 1-3.896 1.077 6.847 6.847 0 0 0 2.985-3.774 13.419 13.419 0 0 1-4.305 1.648A6.74 6.74 0 0 0 23.345.5c-3.737 0-6.774 3.056-6.774 6.816 0 .532.066 1.05.171 1.555C11.117 8.592 6.125 5.868 2.785 1.75a6.847 6.847 0 0 0-.912 3.428 6.843 6.843 0 0 0 3.011 5.674A6.818 6.818 0 0 1 1.821 10v.093c0 3.295 2.337 6.059 5.427 6.683-.568.16-1.162.24-1.783.24a6.62 6.62 0 0 1-1.268-.12c.859 2.71 3.368 4.677 6.326 4.73A13.529 13.529 0 0 1 2.11 24.55c-.541 0-1.083-.026-1.611-.093A19.175 19.175 0 0 0 10.866 27.5z" fill="#C8C8C8"></path>
+          </svg>
+          <div class="FooterSocial-name">
+           Twitter
+          </div></a>
+        </div>
+       </div>
+       <div class="Footer-block">
+        <div class="Footer-copyrightBlock">
+         <span class="Footer-logo"></span>
+         <div class="Footer-copyright">
+          <span class="Footer-year">© <!-- -->2021<!-- --> </span>Громадське Телебачення. Всі права застережено.
+         </div>
+        </div>
+        <div class="FooterLinkList Footer-hide-tb">
+         <a class="FooterLinkList-link" href="/about">Про Громадське</a><a class="FooterLinkList-link" href="/about/contacts">Контакти</a><a class="FooterLinkList-link" href="/privacy_policy">Наші політики</a><a class="FooterLinkList-link" target="_blank" rel="noopener noreferrer" href="https://www.work.ua/jobs/by-company/613159/">Вакансії</a><a class="FooterLinkList-link" href="/finreports">Фінансові звіти</a><a class="FooterLinkList-link" href="/ownership">Структура власності</a><a class="FooterLinkList-link" href="/about/where-to-watch">Де дивитись</a><a class="FooterLinkList-link" href="/tenders">Тендери</a><a class="FooterLinkList-link" href="/advertising">Реклама</a>
+        </div>
+        <div class="Footer-donateBlock">
+         <p class="Footer-donateDescription">Підтримай Громадське. Всі зібрані кошти підуть на заробітну плату та розвиток проекту</p><button class="ActionButton">Підтримати проект</button>
+        </div>
+       </div>
+      </div>
+      <div class="Acknowledgment">
+       <div class="Acknowledgment-wrapper">
+        Made with
+        <svg class="Acknowledgment-love" width="20" height="18" viewbox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <mask id="a" fill="#fff">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.571 0C7.235 0 8.73.742 9.75 1.92A5.517 5.517 0 0 1 13.929 0C17.006 0 19.5 2.538 19.5 5.67c0 3.13-2.646 7.653-9.75 12.33C2.646 13.323 0 8.8 0 5.67 0 2.537 2.494 0 5.571 0z"></path>
+         </mask><path d="M9.75 1.92l-.755.655.755.87.755-.87-.755-.656zm0 16.08l-.55.835.55.362.55-.362L9.75 18zm.755-16.736A6.517 6.517 0 0 0 5.571-1v2c1.36 0 2.582.605 3.424 1.575l1.51-1.31zm0 1.31A4.518 4.518 0 0 1 13.93 1v-2c-1.97 0-3.734.88-4.934 2.264l1.51 1.31zM13.93 1C16.437 1 18.5 3.074 18.5 5.67h2C20.5 2.001 17.574-1 13.929-1v2zM18.5 5.67c0 2.61-2.278 6.871-9.3 11.495l1.1 1.67c7.185-4.73 10.2-9.514 10.2-13.166h-2zm-19.5 0c0 3.65 3.015 8.434 10.2 13.165l1.1-1.67C3.278 12.54 1 8.28 1 5.669h-2zM5.571-1C1.926-1-1 2.002-1 5.67h2C1 3.073 3.063 1 5.571 1v-2z" fill="#F8941E" mask="url(#a)"></path>
+        </svg><a href="https://ralabs.org/" rel="noopener noreferrer nofollow" target="_blank" class="Acknowledgment-link">by Ralabs
+         <svg class="Acknowledgment-ralabs" width="22" height="19" viewbox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3.642L15.788.127c.044-.03.054-.038.101-.061a.664.664 0 0 1 .228-.063l.06-.003c.02 0 .04.002.059.003.08.01.155.027.228.063.047.023.057.032.1.06l5.177 3.8a.632.632 0 0 1 .248.39c.01.052.009.065.011.117v6.334a.63.63 0 0 1-.17.428c-.036.038-.048.045-.089.079l-5.176 3.8-5.177 3.8a.665.665 0 0 1-.777 0l-5.176-3.8-5.176-3.8c-.04-.034-.053-.04-.089-.08a.63.63 0 0 1-.17-.427V4.433c.003-.052.002-.065.011-.117a.632.632 0 0 1 .248-.39l5.177-3.8c.043-.028.053-.037.1-.06a.664.664 0 0 1 .228-.063L5.824 0c.02 0 .04.002.059.003.052.007.066.007.117.021a.732.732 0 0 1 .212.103L11 3.642zm4.098 10.925l-2.193-1.61L11 11.558l-4.098 3.009L11 17.575l4.098-3.008zM20.706 5.7l-3.882 2.85v4.75l3.882-2.85V5.7zm-11.273.675L6.471 8.55v4.75l3.882-2.85V5.7l-.92.675zM1.294 10.45l3.883 2.85V8.55L1.294 5.7v4.75zm10.353 0l2.035 1.494L15.53 13.3V8.55L11.646 5.7v4.75zm.432-6.017l4.098 3.009 4.098-3.009-4.098-3.008-4.098 3.008zm-10.353 0l4.098 3.009 2.833-2.08 1.265-.929-4.098-3.008-4.098 3.008z" fill="#C8C8C8"></path>
+         </svg></a>
+       </div>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+  <script type="57fdf978899901eebc82c3a0-text/javascript">__NEXT_DATA__ = {"props":{"isServer":true,"initialState":{"menu":{"openedOnMobile":false},"posts":{"data":[{"id":207715,"slug":"kiberpoliciya-vikrila-mizhnarodnu-grupu-hakeriv-yaka-zavdala-zbitkiv-ustanovam-ssha-ta-krayin-yevropi-na-dollar25-mlrd","title":"Кіберполіція викрила міжнародну групу хакерів, яка завдала збитків установам США та країн Європи на $2,5 млрд","leadText":"Кіберполіція України спільно з правоохоронцями з інших країн викрила та заблокувала діяльність міжнародного хакерського угруповання, яке розповсюджувало шкідливе програмне забезпечення. За його допомогою хакери завдали значних фінансових збитків установам зІ США та країн Європи.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2021-01-27T14:30:13.275Z","genreId":20,"description":"Кіберполіція України спільно з правоохоронцями з інших країн викрила та заблокувала діяльність міжнародного хакерського угруповання, яке розповсюджувало шкідливе програмне забезпечення. За його допомогою хакери завдали значних фінансових збитків установам зІ США та країн Європи.","supplemented":null,"specialExtUrl":null,"creatorId":1146,"status":2,"createdAt":"2021-01-27T14:23:23.755Z","updatedAt":"2021-01-28T13:09:40.058Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1146,"name":"Остап Крамар","slug":"Ostap-Kramar","avatarFileName":"user/1146/kramar.jpg","about":"Редактор стрічки новин","ruAbout":"Редактор ленты новостей","ruName":"Остап Крамар"}]},{"id":206523,"slug":"kiberataka-na-agentstvo-yes-hakeri-rozmistili-informaciyu-pro-vakcini-vid-covid-19-v-interneti","title":"Кібератака на агентство ЄС: хакери розмістили інформацію про вакцини від COVID-19 в інтернеті","leadText":"Хакери, які отримали доступ до документів про вакцини проти COVID-19 від Pfizer/BioNTech і Moderna, розмістили дані щодо препаратів в інтернеті. Однак це не вплине на швидкість затвердження вакцин регулятором.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":"Кібератака на агентство ЄС: хакери розмістили інформацію про вакцини від COVID-19 в інтернеті","tizerText":"Хакери, які отримали доступ до документів про вакцини проти COVID-19 від Pfizer/BioNTech і Moderna, розмістили дані щодо препаратів в інтернеті. Однак це не вплине на швидкість затвердження вакцин регулятором.","publish":"2021-01-13T12:24:10.505Z","genreId":20,"description":"Хакери, які отримали доступ до документів про вакцини проти COVID-19 від Pfizer/BioNTech і Moderna, розмістили дані щодо препаратів в інтернеті. Однак це не вплине на швидкість затвердження вакцин регулятором.","supplemented":null,"specialExtUrl":null,"creatorId":1146,"status":2,"createdAt":"2021-01-13T12:19:28.999Z","updatedAt":"2021-01-13T15:31:09.315Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1146,"name":"Остап Крамар","slug":"Ostap-Kramar","avatarFileName":"user/1146/kramar.jpg","about":"Редактор стрічки новин","ruAbout":"Редактор ленты новостей","ruName":"Остап Крамар"}]},{"id":205956,"slug":"organi-nacbezpeki-ssha-vpershe-oficijno-zayavili-sho-rosiya-imovirno-vidpovidalna-za-najmasshtabnishu-kiberataku-u-shtatah","title":"Органи нацбезпеки США вперше офіційно заявили, що Росія, імовірно, відповідальна за наймасштабнішу кібератаку у Штатах","leadText":"Найвищі органи нацбезпеки Сполучених Штатів у своїй спільній заяві вперше офіційно назвали Росію імовірно причетною до масштабної кібератаки на низку урядових установ США.\n","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2021-01-06T05:59:07.060Z","genreId":20,"description":"Найвищі органи нацбезпеки Сполучених Штатів у своїй спільній заяві вперше офіційно назвали Росію імовірно причетною до масштабної кібератаки на низку урядових установ США.\n","supplemented":false,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2021-01-06T05:43:35.409Z","updatedAt":"2021-01-06T12:30:04.937Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":205570,"slug":"pid-chas-masshtabnoyi-kiberataki-na-ssha-v-yakij-pidozryuyut-rosiyu-otrimali-dostup-do-vnutrishnogo-kodu-microsoft","title":"Під час масштабної кібератаки на США (в якій підозрюють Росію) хакери отримали доступ до внутрішнього коду Microsoft","leadText":"Хакери, які здійснили масштабну кібератаку на низку урядових установ у США, також отримали доступ і до внутрішнього коду Microsoft. Утім компанія запевняє, що дані користувачів чи сервіси не постраждали.","important":false,"imageTizerFileName":"teaser/205570/microsoftkolnrheinauartofficerheinauhafenkoln-36031jpg","ruId":null,"specialExt":false,"tizerTitle":"Під час масштабної кібератаки на США (в якій підозрюють Росію) хакери отримали доступ до внутрішнього коду Microsoft","tizerText":null,"publish":"2020-12-31T19:10:48.565Z","genreId":20,"description":"Хакери, які здійснили масштабну кібератаку на низку урядових установ у США, також отримали доступ і до внутрішнього коду Microsoft. Утім компанія запевняє, що дані користувачів чи сервіси не постраждали.","supplemented":false,"specialExtUrl":null,"creatorId":1044,"status":2,"createdAt":"2020-12-31T18:59:09.178Z","updatedAt":"2020-12-31T19:31:28.069Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1044,"name":"Олег Павлюк","slug":"Oleg-Pavlyuk","avatarFileName":"user/1044/pavluk.jpg","about":"Редактор сайту hromadske, спеціалізуюсь на міжнародній тематиці. Перекладач із англійської мови","ruAbout":"Редактор сайта hromadske, специализируюсь на международной тематике. Переводчик с английского языка","ruName":"Олег Павлюк"}]},{"id":204530,"slug":"u-microsoft-viyavili-u-svoyih-sistemah-shkidlive-programne-zabezpechennya-ce-povyazano-z-hakerskimi-atakami","title":"Microsoft виявила у своїх системах шкідливе програмне забезпечення. Це пов'язано з хакерськими атаками","leadText":"У компанії Microsoft заявили, що виявили у своїй системі шкідливе програмне забезпечення. Воно пов'язане з масовими хакерськими атаками на Міністерство фінансів США та інші установи.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":"Microsoft виявила у своїх системах шкідливе програмне забезпечення. Це пов'язано з хакерськими атаками","tizerText":"У компанії Microsoft заявили, що виявили у своїй системі шкідливе програмне забезпечення. Воно пов'язане з масовими хакерськими атаками на Міністерство фінансів США та інші установи.","publish":"2020-12-18T15:32:35.193Z","genreId":20,"description":"У компанії Microsoft заявили, що виявили у своїй системі шкідливе програмне забезпечення. Воно пов'язане з масовими хакерськими атаками на Міністерство фінансів США та інші установи.","supplemented":null,"specialExtUrl":null,"creatorId":1060,"status":2,"createdAt":"2020-12-18T15:23:10.539Z","updatedAt":"2020-12-18T17:56:19.480Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[]},{"id":204479,"slug":"upravlinnya-yadernoyu-zbroyeyu-ssha-moglo-postrazhdati-vid-ostannoyi-hakerskoyi-ataki-u-minoboroni-ce-zaperechuyut-politico","title":"Управління ядерною зброєю США могло постраждати від останньої хакерської атаки. У Міноборони це заперечують — Politico","leadText":"Хакери під час останньої масштабної кібератаки могли отримати доступ до мережі Міністерства енергетики та Національного управління з ядерної безпеки США, яке підтримує запаси ядерної зброї у країні. Водночас у Міноборони США запевняють, що зловмисники не зачепили критичні системи оборони, такі як управління з ядерної безпеки.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-18T05:41:07.169Z","genreId":20,"description":"Хакери під час останньої масштабної кібератаки могли отримати доступ до мережі Міністерства енергетики та Національного управління з ядерної безпеки США, яке підтримує запаси ядерної зброї у країні. Водночас у Міноборони США запевняють, що зловмисники не зачепили критичні системи оборони, такі як управління з ядерної безпеки.","supplemented":false,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2020-12-18T05:19:38.846Z","updatedAt":"2020-12-18T12:24:11.281Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":204390,"slug":"niderlandskij-kiberekspert-vgadav-parol-do-twitter-akauntu-trampa-jogo-za-ce-ne-karatimut-bo-vin-diyav-etichno","title":"Нідерландський кіберексперт вгадав пароль до Twitter-акаунту Трампа. Але його за це не каратимуть, бо він діяв «етично»","leadText":"Нідерландські прокурори підтвердили, що кіберексперт вгадав пароль «MAGA2020!» та успішно увійшов до Twitter-акаунту президента США Дональда Трампа. Карати хакера не планують, бо він діяв «етично».","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-17T05:40:13.042Z","genreId":20,"description":"Нідерландські прокурори підтвердили, що кіберексперт вгадав пароль «MAGA2020!» та успішно увійшов до Twitter-акаунту президента США Дональда Трампа. Карати хакера не планують, бо він діяв «етично».","supplemented":null,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2020-12-17T05:06:38.553Z","updatedAt":"2020-12-17T16:38:30.896Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":204129,"slug":"rosijski-hakeri-mogli-zlamati-sistemi-minfinu-ssha-masshtabi-operaciyi-poki-nevidomi-reuters-i-wp","title":"Російські хакери могли зламати системи Мінфіну США. Масштаби операції поки невідомі ㅡ Reuters i WP ","leadText":"Хакери, яких, ймовірно, контролює Росія, зламали системи Міністерства фінансів і торгівлі США та інших урядових установ країни у межах глобальної шпигунської компанії, що тривала декілька місяців. Наразі невідомі точні масштаби збитків, триває розслідування.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-14T07:43:12.470Z","genreId":20,"description":"Хакери, яких, ймовірно, контролює Росія, зламали системи Міністерства фінансів і торгівлі США та інших урядових установ країни у межах глобальної шпигунської компанії, що тривала декілька місяців. Наразі невідомі точні масштаби збитків, триває розслідування.","supplemented":false,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2020-12-14T07:14:18.280Z","updatedAt":"2020-12-14T08:07:31.422Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"},{"id":13,"name":"Світ","slug":"svit","color":"#a156fc"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":203814,"slug":"kompaniya-z-kiberbezpeki-fireeye-zayavila-pro-hakersku-ataku-z-boku-inozemnoyi-derzhavi-imovirno-ce-rosiya","title":"Компанія з кібербезпеки FireEye заявила про хакерську атаку з боку іноземної держави. Імовірно, це Росія","leadText":"Американська компанія з кібербезпеки FireEye заявила, що постраждала від хакерської атаки, яку підтримувала «держава, що має значні наступальні можливості». ","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-10T06:56:38.645Z","genreId":20,"description":"Американська компанія з кібербезпеки FireEye заявила, що постраждала від хакерської атаки, яку підтримувала «держава, що має значні наступальні можливості». ","supplemented":false,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2020-12-10T06:34:55.711Z","updatedAt":"2020-12-10T09:55:44.532Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":203395,"slug":"ukrayina-posila-25-misce-sered-160-krayin-u-mizhnarodnomu-rejtingu-kiberbezpeki","title":"Україна посіла 25 місце серед 160 країн у міжнародному рейтингу кібербезпеки","leadText":"Україна у 2020 році піднялася на чотири позиції та зайняла 25 місце у Національному індексі кібербезпеки (National Cybersecurity Index 2020). Загалом у ньому 160 країн.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-04T18:59:16.561Z","genreId":20,"description":"Україна у 2020 році піднялася на чотири позиції та зайняла 25 місце у Національному індексі кібербезпеки (National Cybersecurity Index 2020). Загалом у ньому 160 країн.","supplemented":null,"specialExtUrl":null,"creatorId":1060,"status":2,"createdAt":"2020-12-04T18:48:33.461Z","updatedAt":"2020-12-04T20:24:27.228Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1060,"name":"Борис Ткачук","slug":"Boris-Tkachuk","avatarFileName":"user/1060/tkachuk.png","about":"Закінчив факультет журналістики ЛНУ ім. Франка, колишній радійник ","ruAbout":"Выпускник факультета журналистики ЛНУ им. Франка, бывший радийщик","ruName":"Борис Ткачук"}]},{"id":203336,"slug":"hakeri-zbirali-dani-z-kompanij-yaki-povyazani-z-postachannyam-vakcin-proti-covid-19-pri-nizkih-temperaturah-imb","title":"Хакери збирали дані з компаній, які пов'язані з постачанням вакцин проти COVID-19 при низьких температурах — IBM","leadText":"Хакери проводили глобальну фішингову кампанію (виманювання даних) щодо організацій, які пов'язанні з перевезенням вакцини проти COVID-19, яка потребує значного охолодження. Ймовірно, вони збирали інформацію про ланцюг постачання. ","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-12-04T12:15:23.450Z","genreId":20,"description":"Хакери проводили глобальну фішингову кампанію (виманювання даних) щодо організацій, які пов'язанні з перевезенням вакцини проти COVID-19, яка потребує значного охолодження. Ймовірно, вони збирали інформацію про ланцюг постачання. ","supplemented":null,"specialExtUrl":null,"creatorId":1024,"status":2,"createdAt":"2020-12-04T10:47:00.840Z","updatedAt":"2020-12-04T15:15:25.432Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1024,"name":"Євгенія Луценко","slug":"Eugenia-Lutsenko","avatarFileName":"user/1024/lucenko.jpg","about":"Редакторка стрічки новин. Закінчила Інститут журналістики КНУ ім. Т. Шевченка. Співпрацювала з виданнями The Village Україна та Studway.","ruAbout":"Редакторка ленты новостей. Окончила Институт журналистики КНУ им. Т. Шевченко, сотрудничала с изданиями The Village Україна и Studway.","ruName":"Евгения Луценко"}]},{"id":202266,"slug":"pamyatayete-bilogo-hakera-yakij-zayaviv-sho-zlamav-twitter-akaunt-trampa-jogo-diyi-teper-rozsliduye-policiya-niderlandiv","title":"Пам’ятаєте білого хакера, який заявив, що зламав Twitter-акаунт Трампа? Його дії тепер розслідує поліція Нідерландів","leadText":"Поліція Нідерландів розслідує дії фахівця з кібербезпеки Віктора Геверса, який заявляв про успішний злам Twitter-акаунта президента США Дональда Трампа. Хоча слова Геверса заперечив Білий дім, чоловік заявив про нові докази того, що злам справді мав місце.","important":false,"imageTizerFileName":null,"ruId":null,"specialExt":false,"tizerTitle":null,"tizerText":null,"publish":"2020-11-21T19:42:03.136Z","genreId":20,"description":"Поліція Нідерландів розслідує дії фахівця з кібербезпеки Віктора Геверса, який заявляв про успішний злам Twitter-акаунта президента США Дональда Трампа. Хоча слова Геверса заперечив Білий дім, чоловік заявив про нові докази того, що злам справді мав місце.","supplemented":false,"specialExtUrl":null,"creatorId":1044,"status":2,"createdAt":"2020-11-21T19:20:41.250Z","updatedAt":"2020-11-21T21:59:10.230Z","mainPage":false,"videoDuration":"0","language":"ua","isGrouped":false,"isPromo":false,"Topics":[{"id":18,"name":"Технології","slug":"tekhnolohiyi","color":"#39a9af"}],"Genre":{"id":20,"name":"Новина","slug":"novyna"},"Author":[{"id":1044,"name":"Олег Павлюк","slug":"Oleg-Pavlyuk","avatarFileName":"user/1044/pavluk.jpg","about":"Редактор сайту hromadske, спеціалізуюсь на міжнародній тематиці. Перекладач із англійської мови","ruAbout":"Редактор сайта hromadske, специализируюсь на международной тематике. Переводчик с английского языка","ruName":"Олег Павлюк"}]}],"topic":{"id":18,"slug":"tekhnolohiyi","name":"Технології","active":true,"kind":0,"color":"#39a9af","createdAt":"2016-08-31T13:13:02.975Z","updatedAt":"2018-10-09T16:11:00.829Z","language":"ua","ruSlug":"tekhnologiji","enSlug":null,"ruId":null,"uaSlug":null,"enId":null},"hasNext":true,"order":"publish.DESC","subtopic":{"id":66,"slug":"kiberbezpeka","name":"Кібербезпека","topicId":18,"createdAt":"2019-03-22T23:05:16.427Z","updatedAt":"2019-03-22T23:05:16.427Z","language":"ua","ruId":null,"enId":null,"uaSlug":null,"ruSlug":"kiberbezopasnost","enSlug":null},"page":1},"post":{"data":[],"related":[],"scrollProgress":0},"donate":{"isDonateModalVisible":false},"questionnaire":{"isQuestionnaireVisible":false},"builder":{"mainPost":[],"mainBlock":[],"contentBlocks":[]},"seo":{"title":"Кібербезпека – читайте та дивіться на Громадському","description":"«Зливи» даних користувачів соцмереж, хакерські атаки та безпека в мережі, права та безпека у соціальних мережах, кіберполіція та захист персональних даних","keywords":"","url":"https://hromadske.ua/tekhnolohiyi/kiberbezpeka","pageType":"default"},"programs":{"data":[]},"news":[{"slug":"pobittya-ukrayincya-u-parizhi-napadnikam-visunuli-pidozri-pyatoh-vzyali-pid-vartu-franceinform","publish":"2021-01-31T09:44:18.385Z","id":208013,"title":"Побиття українця у Парижі: нападникам висунули обвинувачення, п’ятьох взяли під варту — ЗМІ","important":true,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"Побиття українця у Парижі: нападникам висунули обвинувачення, п’ятьох взяли під варту — ЗМІ","language":"ua","supplemented":false},{"slug":"u-rosiyi-ponovilisya-protesti-na-pidtrimku-navalnogo-v-deyakih-mistah-lyudi-vihodyat-na-vulici-v-40-gradusni-morozi","publish":"2021-01-31T08:57:13.446Z","id":208011,"title":"У Росії поновилися протести на підтримку Навального. В деяких містах люди виходять на вулиці в 40-градусні морози","important":true,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"У Росії поновилися протести на підтримку Навального. В деяких містах люди виходять на вулиці в 40-градусні морози","language":"ua","supplemented":false},{"slug":"netflix-testuye-funkciyu-tajmeru-avtomatichnogo-vimknennya-poki-sho-lishe-na-android","publish":"2021-01-31T08:22:03.222Z","id":208008,"title":"Netflix тестує функцію таймера автоматичного вимкнення — поки що лише на Android","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"Netflix тестує функцію таймера автоматичного вимкнення — поки що лише на Android","language":"ua","supplemented":false},{"slug":"bolgarski-pravoohoronci-zatrimali-bandu-yaka-vikoristovuvala-pasport-silvestra-stallone","publish":"2021-01-31T07:34:25.880Z","id":208006,"title":"Болгарські правоохоронці затримали банду, яка використовувала «паспорт» Сильвестра Сталлоне","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"Болгарські правоохоронці затримали банду, яка використовувала «паспорт» Сильвестра Сталлоне","language":"ua","supplemented":false},{"slug":"na-donbasi-bojoviki-pyat-raziv-porushuvali-tishu-ukrayinski-vijskovi-vidkrivali-vogon-u-vidpovid-shtab","publish":"2021-01-31T06:56:49.264Z","id":208004,"title":"На Донбасі бойовики п’ять разів порушували тишу. Українські військові відкривали вогонь у відповідь — штаб","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"На Донбасі бойовики п’ять разів порушували тишу. Українські військові відкривали вогонь у відповідь — штаб","language":"ua","supplemented":false},{"slug":"v-ukrayini-viyavili-she-31-tisyachi-vipadkiv-covid-19-do-likaren-potrapili-1-960-lyudej","publish":"2021-01-31T06:15:06.159Z","id":208002,"title":"В Україні за добу виявили ще 3,1 тисячі випадків COVID-19. До лікарень потрапили 1 960 людей","important":true,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"В Україні за добу виявили ще 3,1 тисячі випадків COVID-19. До лікарень потрапили 1 960 людей","language":"ua","supplemented":false},{"slug":"i-do-vazhlivih-novin-vcheni-nareshti-zrozumili-chomu-fekaliyi-vombativ-mayut-formu-kuba","publish":"2021-01-30T23:57:29.437Z","id":208000,"title":"І до важливих новин: вчені нарешті зрозуміли, чому фекалії вомбатів мають форму куба","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"І до важливих новин: вчені нарешті зрозуміли, чому фекалії вомбатів мають форму куба","language":"ua","supplemented":null},{"slug":"grecki-vcheni-znajshli-zatonuli-amfori-chasiv-rimskoyi-imperiyi-yaki-rozpovili-pro-antichnij-torgovij-marshrut","publish":"2021-01-30T22:46:59.000Z","id":207998,"title":"Грецькі вчені знайшли затонулі амфори часів Римської імперії. Артефакти розповідають про античний торговий маршрут","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"Грецькі вчені знайшли затонулі амфори часів Римської імперії. Артефакти розповідають про античний торговий маршрут","language":"ua","supplemented":null},{"slug":"u-lvovi-na-chest-kiborgiv-vstanovili-kopiyu-vezhi-doneckogo-aeroportu","publish":"2021-01-30T21:59:03.000Z","id":207996,"title":"У Львові на честь «кіборгів» встановили копію вежі Донецького аеропорту","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"У Львові на честь «кіборгів» встановили копію вежі Донецького аеропорту","language":"ua","supplemented":null},{"slug":"svitlanu-tihanovsku-visunuli-na-nobelivsku-premiyu-miru-reuters","publish":"2021-01-30T21:36:07.506Z","id":207994,"title":"Світлану Тіхановську висунули на Нобелівську премію миру — Reuters","important":false,"isPromo":false,"specialExtUrl":null,"specialExt":false,"tizerTitle":"Світлану Тіхановську висунули на Нобелівську премію миру — Reuters","language":"ua","supplemented":null}],"important":{"checked":false,"order":"publish.DESC"},"tenders":[]},"initialProps":{"pageProps":{"page":1,"pageUrl":"https://hromadske.ua/tekhnolohiyi/kiberbezpeka","hasNext":true}}},"page":"/subtopic","query":{"topic":"tekhnolohiyi","subtopic":"kiberbezpeka"},"buildId":"8Djp6lt4isRt19p75KtS1"};__NEXT_LOADED_PAGES__=[];__NEXT_REGISTER_PAGE=function(r,f){__NEXT_LOADED_PAGES__.push([r, f])}</script>
+  <script async id="__NEXT_PAGE__/subtopic" src="/_next/static/8Djp6lt4isRt19p75KtS1/pages/subtopic.js" type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script async id="__NEXT_PAGE__/_app" src="/_next/static/8Djp6lt4isRt19p75KtS1/pages/_app.js" type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script async id="__NEXT_PAGE__/_error" src="/_next/static/8Djp6lt4isRt19p75KtS1/pages/_error.js" type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script src="/_next/static/runtime/webpack-89179faa512dd01fbb62.js" async type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script src="/_next/static/chunks/commons.bd362c3b89558ba613e3.js" async type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script src="/_next/static/runtime/main-292e375321d65bf0ebb9.js" async type="57fdf978899901eebc82c3a0-text/javascript"></script>
+  <script src="/_next/static/chunks/styles.625eb3f697fa316e113b.js" async type="57fdf978899901eebc82c3a0-text/javascript"></script><iframe title="tag-manager" rc="https://www.googletagmanager.com/ns.html?id=GTM-MFR6GBK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <script defer type="57fdf978899901eebc82c3a0-text/javascript">!function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '426537038218832');
+        fbq('track', 'PageView');</script>
+  <noscript>
+   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=426537038218832&amp;ev=PageView&amp;noscript=1" alt="Enable JavaScript">
+  </noscript>
+  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="57fdf978899901eebc82c3a0-|49" defer></script>
+ </body>
+</html>

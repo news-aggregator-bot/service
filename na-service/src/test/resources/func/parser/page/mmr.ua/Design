@@ -1,0 +1,1278 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="ru"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Дизайн — новости и аналитика | MMR</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+  <meta name="msapplication-TileColor" content="#ffffff"> 
+  <meta name="theme-color" content="#ffffff"> <!-- Global site tag (gtag.js) - Google Analytics --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5812255-10"></script> 
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-5812255-10');
+</script> <!-- Hotjar Tracking Code for https://mmr.ua --> 
+  <script>
+	(function(h,o,t,j,a,r){
+		h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		h._hjSettings={hjid:1234533,hjsv:6};
+		a=o.getElementsByTagName('head')[0];
+		r=o.createElement('script');r.async=1;
+		r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		a.appendChild(r);
+	})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script> <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore…
+  })(window,document,'script','dataLayer','GTM-TQ348PS');</script> <!-- End Google Tag Manager --> 
+  <script type="text/javascript">
+                (function() {
+                var w = window,
+                        d = document,
+                        protocol =/https/i.test(w.location.protocol) ? 'https:' : 'http:',
+                        aml = typeof admixerML !== 'undefined' ? admixerML : { };
+                aml.fn = aml.fn || [];
+                aml.invPath = aml.invPath || (protocol + '//inv-nets.admixer.net/');
+                aml.cdnPath = aml.cdnPath || (protocol + '//cdn.admixer.net/');
+                if (!w.admixerML)
+                {
+                    var lodash = document.createElement('script');
+                    lodash.id = 'amlScript';
+                    lodash.async = true;
+                    lodash.type = 'text/javascript';
+                    lodash.src = aml.cdnPath + 'scripts3/loader2.js';
+                    var node = d.getElementsByTagName('script')[0];
+                    node.parentNode.insertBefore(lodash, node);
+                    w.admixerML = aml;
+                }
+            })();
+            </script> 
+  <script type="text/javascript">
+						admixerML.fn.push(function() {
+						admixerML.defineSlot({z: '528f1106-618a-4b69-88d3-63fc3f78a014', ph: 'admixer_528f1106618a4b6988d363fc3f78a014_zone_1063_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+		
+admixerML.defineSlot({z: '5ba7a6d3-f762-49c8-a105-0fdda54c2ed0', ph: 'admixer_5ba7a6d3f76249c8a1050fdda54c2ed0_zone_5921_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: 'c3060ae1-1b28-4a13-9466-ce776e8c4935', ph: 'admixer_c3060ae11b284a139466ce776e8c4935_zone_27363_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: '99751356-ff92-4e1a-b6f0-a9380fd86137', ph: 'admixer_99751356ff924e1ab6f0a9380fd86137_zone_27364_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: '2a6197b1-4f67-486a-9282-f221bdba2349', ph: 'admixer_2a6197b14f67486a9282f221bdba2349_zone_46806_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: 'ebca362f-f108-4ca7-9074-b7711f06a609', ph: 'admixer_ebca362ff1084ca79074b7711f06a609_zone_46807_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: '8938046c-878d-4687-bf9a-84f49489d409', ph: 'admixer_8938046c878d4687bf9a84f49489d409_zone_46808_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+
+admixerML.defineSlot({z: '4758a127-f918-4fcb-8905-0a0e61a24b2a', ph: 'admixer_4758a127f9184fcb89050a0e61a24b2a_zone_46809_sect_821_site_808', i: 'inv-nets', s:'e5565590-8313-42e3-b086-89c8cfc39ead'});
+				admixerML.singleRequest();
+						});
+						</script> 
+  <link rel="alternate" hreflang="uk" href="https://mmr.ua/uk/design"> 
+  <link rel="alternate" hreflang="ru" href="https://mmr.ua/design"> <!-- SEO по Rank Math - https://s.rankmath.com/home --> 
+  <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"> 
+  <link rel="canonical" href="https://mmr.ua/design"> 
+  <link rel="next" href="https://mmr.ua/design/page/2"> 
+  <meta property="og:locale" content="ru_RU"> 
+  <meta property="og:type" content="object"> 
+  <meta property="og:title" content="Дизайн — новости и аналитика | MMR"> 
+  <meta property="og:url" content="https://mmr.ua/design"> 
+  <meta property="og:site_name" content="MMR"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:title" content="Дизайн — новости и аналитика | MMR"> 
+  <script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"CollectionPage","headline":"\u0414\u0438\u0437\u0430\u0439\u043d","description":"","url":"https:\/\/mmr.ua\/design","hasPart":[{"@type":"BlogPosting","headline":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","name":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","url":"https:\/\/mmr.ua\/show\/kak-sozdayutsya-logotipy-dlya-biznesa","mainEntityOfPage":"https:\/\/mmr.ua\/show\/kak-sozdayutsya-logotipy-dlya-biznesa","dateModified":"2021-01-30T10:29:29+02:00","datePublished":"2021-01-30T10:00:00+02:00","author":{"@type":"Person","name":"\u041a\u043e\u0440\u043e\u0441\u0442\u0430\u0448\u043e\u0432\u0435\u0446 \u0410\u043d\u043d\u0430","url":"https:\/\/mmr.ua\/author\/a-korostashovets","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ad516503a11cd5ca435acc9bb6523536?s=96","height":96,"width":96}},"publisher":{"@type":"Organization","name":"mmr.ua","logo":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2020\/01\/mmr_favicon.png"}},"image":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2021\/01\/logotyp.jpg","height":580,"width":1445},"keywords":["\u0414\u0438\u0437\u0430\u0439\u043d"],"commentCount":"0","comment":"","wordCount":1166},{"@type":"BlogPosting","headline":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","name":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","url":"https:\/\/mmr.ua\/show\/coca-cola-razmestila-bukvy-alfavita-na-upakovke-chtoby-kazhdyj-mog-vyrazit-sebya","mainEntityOfPage":"https:\/\/mmr.ua\/show\/coca-cola-razmestila-bukvy-alfavita-na-upakovke-chtoby-kazhdyj-mog-vyrazit-sebya","dateModified":"2021-01-29T16:45:32+02:00","datePublished":"2021-01-29T16:45:27+02:00","author":{"@type":"Person","name":"\u041a\u043e\u0440\u043e\u0441\u0442\u0430\u0448\u043e\u0432\u0435\u0446 \u0410\u043d\u043d\u0430","url":"https:\/\/mmr.ua\/author\/a-korostashovets","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ad516503a11cd5ca435acc9bb6523536?s=96","height":96,"width":96}},"publisher":{"@type":"Organization","name":"mmr.ua","logo":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2020\/01\/mmr_favicon.png"}},"image":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2021\/01\/coca-cola.jpg","height":580,"width":1445},"keywords":["\u0414\u0438\u0437\u0430\u0439\u043d"],"commentCount":"0","comment":"","wordCount":123},{"@type":"BlogPosting","headline":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","name":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","url":"https:\/\/mmr.ua\/show\/v-kampaniyi-dlya-molochnogo-brendu-zrobili-akczent-na-zvorotnij-storoni-upakovki","mainEntityOfPage":"https:\/\/mmr.ua\/show\/v-kampaniyi-dlya-molochnogo-brendu-zrobili-akczent-na-zvorotnij-storoni-upakovki","dateModified":"2021-01-29T14:19:04+02:00","datePublished":"2021-01-29T14:10:15+02:00","author":{"@type":"Person","name":"\u041a\u043e\u0440\u043e\u0441\u0442\u0430\u0448\u043e\u0432\u0435\u0446 \u0410\u043d\u043d\u0430","url":"https:\/\/mmr.ua\/author\/a-korostashovets","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ad516503a11cd5ca435acc9bb6523536?s=96","height":96,"width":96}},"publisher":{"@type":"Organization","name":"mmr.ua","logo":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2020\/01\/mmr_favicon.png"}},"image":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2021\/01\/molokyya-1.jpg","height":580,"width":1445},"keywords":["\u0414\u0438\u0437\u0430\u0439\u043d"],"commentCount":"0","comment":"","wordCount":153},{"@type":"BlogPosting","headline":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","name":" | \u0414\u0438\u0437\u0430\u0439\u043d \u043d\u0430 MMR","url":"https:\/\/mmr.ua\/show\/logotip-belogo-doma-izmenili-na-eto-ushlo-30-popytok","mainEntityOfPage":"https:\/\/mmr.ua\/show\/logotip-belogo-doma-izmenili-na-eto-ushlo-30-popytok","dateModified":"2021-01-29T10:03:00+02:00","datePublished":"2021-01-29T10:02:32+02:00","author":{"@type":"Person","name":"\u041a\u043e\u0440\u043e\u0441\u0442\u0430\u0448\u043e\u0432\u0435\u0446 \u0410\u043d\u043d\u0430","url":"https:\/\/mmr.ua\/author\/a-korostashovets","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ad516503a11cd5ca435acc9bb6523536?s=96","height":96,"width":96}},"publisher":{"@type":"Organization","name":"mmr.ua","logo":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2020\/01\/mmr_favicon.png"}},"image":{"@type":"ImageObject","url":"https:\/\/mmr.ua\/wp-content\/uploads\/2021\/01\/bel\u044bj-dom.jpg","height":580,"width":1445},"keywords":["\u0414\u0438\u0437\u0430\u0439\u043d"],"commentCount":"0","comment":"","wordCount":218}]},{"@type":"Organization","@id":"https:\/\/mmr.ua#organization","name":"mmr.ua","url":"https:\/\/mmr.ua","sameAs":[],"logo":"https:\/\/mmr.ua\/wp-content\/uploads\/2020\/01\/mmr_favicon.png"}]}</script> <!-- /Rank Math WordPress SEO плагин --> 
+  <link rel="dns-prefetch" href="//mmr.ua"> 
+  <link rel="stylesheet" id="wp-block-library-css" href="https://mmr.ua/wp-includes/css/dist/block-library/style.min.css?x79708" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-polls-css" href="https://mmr.ua/wp-content/plugins/wp-polls/polls-css.css?x79708" type="text/css" media="all"> 
+  <style id="wp-polls-inline-css" type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('https://mmr.ua/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style> 
+  <link rel="stylesheet" id="wpml-tm-admin-bar-css" href="https://mmr.ua/wp-content/plugins/wpml-translation-management/res/css/admin-bar-style.css?x79708" type="text/css" media="all"> 
+  <link rel="stylesheet" id="style-css-css" href="https://mmr.ua/wp-content/themes/mmr/assets/css/style.css?x79708" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://mmr.ua/wp-includes/js/jquery/jquery.js?x79708"></script> 
+  <script type="text/javascript" src="https://mmr.ua/wp-includes/js/jquery/jquery-migrate.min.js?x79708"></script> 
+  <link rel="https://api.w.org/" href="https://mmr.ua/wp-json/"> 
+  <meta name="generator" content="WPML ver:4.3.11 stt:45,54;"> <!-- Stream WordPress user activity plugin v3.4.3 --> 
+  <script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script> 
+  <style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style> 
+  <meta name="onesignal" content="wordpress-plugin"> 
+  <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://mmr.ua");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '0e847abe-d97b-407c-80e7-53e42a56429a';
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://mmr.ua/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'inverse';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['displayPredicate'] = function() {
+              return OneSignal.isPushNotificationsEnabled()
+                      .then(function(isPushEnabled) {
+                          return !isPushEnabled;
+                      });
+            };
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+                OneSignal.init(window._oneSignalInitOptions);
+                OneSignal.showSlidedownPrompt();      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script> 
+  <link rel="icon" href="https://mmr.ua/wp-content/uploads/2020/02/cropped-mmr-32x32.png?x79708" sizes="32x32"> 
+  <link rel="icon" href="https://mmr.ua/wp-content/uploads/2020/02/cropped-mmr-192x192.png?x79708" sizes="192x192"> 
+  <link rel="apple-touch-icon" href="https://mmr.ua/wp-content/uploads/2020/02/cropped-mmr-180x180.png?x79708"> 
+  <meta name="msapplication-TileImage" content="https://mmr.ua/wp-content/uploads/2020/02/cropped-mmr-270x270.png"> 
+  <style type="text/css" id="wp-custom-css">
+			.content-rules p {margin-bottom: 30px !important;}		</style> 
+ </head>
+ <body data-id="top" class="archive category category-design category-5354 wp-embed-responsive" style=""> <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe height="0" width="0" style="display:none;visibility:hidden" data-src="https://www.googletagmanager.com/ns.html?id=GTM-TQ348PS" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe>
+  </noscript> <!-- End Google Tag Manager (noscript) --> 
+  <header class="main-header"> 
+   <div class="main-header__top"> 
+    <div class="wrap"> 
+     <div class="main-header__part"> <a href="https://mmr.ua/" class="main-header__logo"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+       <noscript>
+        <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+         <noscript>
+          <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" alt="">
+         </noscript>
+        </noscript>
+       </noscript> </a> 
+      <nav class="main-header__nav"> 
+       <ul> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"> <a href="https://mmr.ua/news">Новости</a> </li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"> <a href="https://mmr.ua/longreads">Лонгриды</a> </li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62188"> <a href="https://mmr.ua/about">О проекте</a> </li> 
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62189"> <a href="https://mmr.ua/mmrlab">MMR Lab</a> </li> 
+       </ul> 
+      </nav> 
+     </div> 
+     <div class="main-header__part"> <button class="main-header__btn icon-search btn-search search_js"></button> <button class="btn-mobile-menu mobile_menu_js"><span></span></button> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="main-header__bottom"> 
+    <div class="wrap"> 
+     <div class="main-header__icons"> <a href="https://mmr.ua/news/ukraine" class="main-header__icon icon-ua"> <span class="main-header__icon-text">В Украине</span> </a> <a href="https://mmr.ua/news/world" class="main-header__icon icon-world"> <span class="main-header__icon-text">В мире</span> </a> 
+     </div> 
+     <div class="main-header__links scroll_js"> 
+      <div class="main-header__links-inner"> 
+       <ul> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62064"> <a href="https://mmr.ua/employment">Назначения</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62058"> <a href="https://mmr.ua/pr">PR</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62061"> <a href="https://mmr.ua/creative">Креатив</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62062"> <a href="https://mmr.ua/marketing">Маркетинг</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62057"> <a href="https://mmr.ua/mobile">Mobile</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62056"> <a href="https://mmr.ua/digital">Digital</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-62060"> <a href="https://mmr.ua/design">Дизайн</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62063"> <a href="https://mmr.ua/media">Медиа</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62059"> <a href="https://mmr.ua/social-media">Social media</a> </li> 
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62065"> <a href="https://mmr.ua/trends">Тренды</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <div class="mob-menu"> 
+   <div class="mob-menu__inner"> 
+    <ul> 
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"> <a href="https://mmr.ua/news">Новости</a> </li> 
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"> <a href="https://mmr.ua/longreads">Лонгриды</a> </li> 
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62188"> <a href="https://mmr.ua/about">О проекте</a> </li> 
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62189"> <a href="https://mmr.ua/mmrlab">MMR Lab</a> </li> 
+    </ul> 
+    <div class="mob-menu__icons"> <a href="https://mmr.ua/news/ukraine" class="main-header__icon icon-ua"> <span class="main-header__icon-text">В Украине</span> </a> <a href="https://mmr.ua/news/world" class="main-header__icon icon-world"> <span class="main-header__icon-text">В мире</span> </a> 
+    </div> 
+    <div class="socials__inner"> <a href="https://www.facebook.com/MMRonline" rel="nofollow" class="icon-fb" target="_blank"></a> <a href="https://telegram.me/mmrua" rel="nofollow" class="icon-tg" target="_blank"></a> 
+    </div> 
+   </div> 
+  </div> 
+  <main class="category-page"> 
+   <section class="line-sect"> 
+    <div class="wrap"> 
+     <div id="admixer_ebca362ff1084ca79074b7711f06a609_zone_46807_sect_821_site_808" data-sender="admixer"></div> 
+     <script type="text/javascript">
+admixerML.fn.push(function () { admixerML.display('admixer_ebca362ff1084ca79074b7711f06a609_zone_46807_sect_821_site_808'); });
+</script> 
+    </div> 
+   </section> 
+   <section class="page-header"> 
+    <div class="wrap"> 
+     <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList"> 
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mmr.ua/"> <span itemprop="name">Главная</span> </a> 
+       <meta itemprop="position" content="1"> </li> 
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mmr.ua/design" class="last-item"> <span itemprop="name">Дизайн</span> </a> 
+       <meta itemprop="position" content="2"> </li> 
+     </ul> 
+     <h1 class="page-header__title">Дизайн</h1> 
+    </div> 
+   </section> 
+   <section class="news"> 
+    <div class="wrap"> 
+     <div class="news__inner"> 
+      <div class="bg-article after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/logotyp-544x440.jpg')" data-color="#39bb9d"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+       <div class="bg-article__inner"> <a href="https://mmr.ua/show/kak-sozdayutsya-logotipy-dlya-biznesa" class="bg-article__title"> Как создаются логотипы для бизнеса? </a> 
+       </div> 
+       <div class="bg-article__img"> 
+        <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+         <noscript>
+          <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <noscript>
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript>
+          </noscript>
+         </noscript>
+        </noscript> 
+       </div> 
+      </div> 
+      <div class="bg-article bg-article--small after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/belыj-dom-300x440.jpg')" data-color="#39bb9d"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+       <div class="bg-article__inner"> <a href="https://mmr.ua/show/logotip-belogo-doma-izmenili-na-eto-ushlo-30-popytok" class="bg-article__title"> Логотип Белого дома изменили. На это ушло 30 попыток </a> 
+       </div> 
+       <div class="bg-article__img"> 
+        <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+         <noscript>
+          <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <noscript>
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript>
+          </noscript>
+         </noscript>
+        </noscript> 
+       </div> 
+      </div> 
+      <div class="bg-article bg-article--small after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/twitter-300x440.jpg')" data-color="#39bb9d"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+       <div class="bg-article__inner"> <a href="https://mmr.ua/show/twitter-obnovil-vizualnuyu-ajdentiku-otrazhaya-slozhnuyu-prirodu-platformy" class="bg-article__title"> Twitter обновил визуальную айдентику, отражая сложную природу платформы </a> 
+       </div> 
+       <div class="bg-article__img"> 
+        <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+         <noscript>
+          <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <noscript>
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript>
+          </noscript>
+         </noscript>
+        </noscript> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="popular-news"> 
+    <div class="wrap"> 
+     <div class="title-block"> 
+      <h2 class="title-block__title icon-pr2"> Новости из категории Дизайн </h2> 
+     </div> 
+     <div class="popular-news__inner"> 
+      <div class="popular-news__items items-category"> 
+       <div class="items-category__items__inner"> 
+        <div class="items-category__items__wrap"> 
+         <div class="bg-article bg-article--uneven after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/logotyp-575x440.jpg')" data-color="#39bb9d"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+          <div class="bg-article__inner"> 
+           <div class="bg-article__time">
+             30 Янв 2021 
+           </div> <a href="https://mmr.ua/show/kak-sozdayutsya-logotipy-dlya-biznesa" class="bg-article__title"> Как создаются логотипы для бизнеса? </a> 
+           <div class="bg-article__tags"> <span>SVZB agency</span> <span>кейс</span> <span>логотип</span> 
+           </div> 
+          </div> 
+          <div class="bg-article__img"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> 
+         </div> 
+         <div class="bg-article bg-article--aside after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/dribbble_05-1-e1610378426951-292x440.png')"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+          <div class="bg-article__inner"> 
+           <div class="bg-article__time">
+             11 Янв 2021 
+           </div> <a href="https://mmr.ua/show/kak-razrabotat-tot-samyj-firmennyj-stil" class="bg-article__title"> N жизней дизайна: как разработать «тот самый» фирменный стиль </a> 
+           <div class="bg-article__tags"> <span>sense it</span> <span>TECHIIA</span> <span>Александр Тараненко</span> <span>ребрендинг</span> <span>фирменный стиль</span> 
+           </div> 
+          </div> 
+          <div class="bg-article__img"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/coca-cola-razmestila-bukvy-alfavita-na-upakovke-chtoby-kazhdyj-mog-vyrazit-sebya" class="def-article__img bg before" style=""> <img alt="Coca-Cola разместила буквы алфавита на упаковке, чтобы каждый мог выразить себя" data-src="https://mmr.ua/wp-content/uploads/2021/01/coca-cola-292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/coca-cola-292x190.jpg?x79708" alt="Coca-Cola разместила буквы алфавита на упаковке, чтобы каждый мог выразить себя">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              29 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/coca-cola-razmestila-bukvy-alfavita-na-upakovke-chtoby-kazhdyj-mog-vyrazit-sebya" class="def-article__title-inner"> Coca-Cola разместила буквы алфавита на упаковке, чтобы каждый мог выразить себя </a> 
+            </div> 
+            <div class="def-article__tags"> <span>Coca-Cola</span> <span>Wunderman Thompson</span> <span>дизайн</span> <span>Латинская Америка</span> <span>рекламная кампания</span> <span>упаковка</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/v-kampaniyi-dlya-molochnogo-brendu-zrobili-akczent-na-zvorotnij-storoni-upakovki" class="def-article__img bg before" style=""> <img alt="В кампанії для молочного бренду зробили акцент на зворотній стороні упаковки" data-src="https://mmr.ua/wp-content/uploads/2021/01/molokyya-1-292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/molokyya-1-292x190.jpg?x79708" alt="В кампанії для молочного бренду зробили акцент на зворотній стороні упаковки">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              29 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/v-kampaniyi-dlya-molochnogo-brendu-zrobili-akczent-na-zvorotnij-storoni-upakovki" class="def-article__title-inner"> В кампанії для молочного бренду зробили акцент на зворотній стороні упаковки </a> 
+            </div> 
+            <div class="def-article__tags"> <span>Banda Agency</span> <span>видео</span> <span>дизайн</span> <span>Молокия</span> <span>упаковка</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/logotip-belogo-doma-izmenili-na-eto-ushlo-30-popytok" class="def-article__img bg before" style=""> <img alt="Логотип Белого дома изменили. На это ушло 30 попыток" data-src="https://mmr.ua/wp-content/uploads/2021/01/belыj-dom-292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/belыj-dom-292x190.jpg?x79708" alt="Логотип Белого дома изменили. На это ушло 30 попыток">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              29 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/logotip-belogo-doma-izmenili-na-eto-ushlo-30-popytok" class="def-article__title-inner"> Логотип Белого дома изменили. На это ушло 30 попыток </a> 
+            </div> 
+            <div class="def-article__tags"> <span>логотип</span> <span>редизайн</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/twitter-obnovil-vizualnuyu-ajdentiku-otrazhaya-slozhnuyu-prirodu-platformy" class="def-article__img bg before" style=""> <img alt="Twitter обновил визуальную айдентику, отражая сложную природу платформы" data-src="https://mmr.ua/wp-content/uploads/2021/01/twitter-292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/twitter-292x190.jpg?x79708" alt="Twitter обновил визуальную айдентику, отражая сложную природу платформы">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              28 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/twitter-obnovil-vizualnuyu-ajdentiku-otrazhaya-slozhnuyu-prirodu-platformy" class="def-article__title-inner"> Twitter обновил визуальную айдентику, отражая сложную природу платформы </a> 
+            </div> 
+            <div class="def-article__tags"> <span>social media</span> <span>twitter</span> <span>айдентика</span> <span>брендинг</span> <span>дизайн</span> <span>редизайн</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/v-obnovlennoj-ikonke-amazon-zaprimetili-uhmylyayushhegosya-gitlera" class="def-article__img bg before" style=""> <img alt="В обновленной иконке Amazon заприметили ухмыляющегося Гитлера" data-src="https://mmr.ua/wp-content/uploads/2021/01/amazon--292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/amazon--292x190.jpg?x79708" alt="В обновленной иконке Amazon заприметили ухмыляющегося Гитлера">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              27 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/v-obnovlennoj-ikonke-amazon-zaprimetili-uhmylyayushhegosya-gitlera" class="def-article__title-inner"> В обновленной иконке Amazon заприметили ухмыляющегося Гитлера </a> 
+            </div> 
+            <div class="def-article__tags"> <span>Amazon</span> <span>web-дизайн</span> <span>редизайн</span> <span>шум в сетях</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="def-article " style="--color:#39bb9d;"> 
+          <div class="def-article__icon"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> <a href="https://mmr.ua/design" class="def-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </a> 
+          <div class="def-article__inner"> <a href="https://mmr.ua/show/post-it-nezametno-predstavil-obnovlennyj-logotip" class="def-article__img bg before" style=""> <img alt="Post-It незаметно представил обновленный логотип" data-src="https://mmr.ua/wp-content/uploads/2021/01/post-it-292x190.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img src="https://mmr.ua/wp-content/uploads/2021/01/post-it-292x190.jpg?x79708" alt="Post-It незаметно представил обновленный логотип">
+            </noscript> </a> 
+           <div class="def-article__content"> 
+            <div class="def-article__date">
+              27 Янв 2021 
+            </div> 
+            <div class="def-article__title"> <a href="https://mmr.ua/show/post-it-nezametno-predstavil-obnovlennyj-logotip" class="def-article__title-inner"> Post-It незаметно представил обновленный логотип </a> 
+            </div> 
+            <div class="def-article__tags"> <span>Post-It</span> <span>дизайн</span> <span>логотип</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="items-category__items__wrap"> 
+         <div class="bg-article bg-article--uneven after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2021/01/dyzajn-bez-nazvanyya-2021-01-03t141118.567-575x440.png')" data-color="#39bb9d"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+          <div class="bg-article__inner"> 
+           <div class="bg-article__time">
+             03 Янв 2021 
+           </div> <a href="https://mmr.ua/show/rejting-samyh-kreativnyh-stran-v-mire-2020-2021" class="bg-article__title"> Рейтинг самых креативных стран в мире 2020-2021 + фотоподборка лучших дизайнов </a> 
+           <div class="bg-article__tags"> <span>The World Design Rankings</span> <span>WDR</span> <span>дизайн</span> <span>креатив</span> <span>креативная индустрия</span> <span>мировой рейтинг дизайна</span> <span>подборка</span> <span>рейтинг</span> 
+           </div> 
+          </div> 
+          <div class="bg-article__img"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> 
+         </div> 
+         <div class="bg-article bg-article--aside after bg" style="background-image: url('https://mmr.ua/wp-content/uploads/2020/12/depositphotos--292x440.jpg')"> <span class="bg-article__hover" style="--color:#39bb9d"></span> <span class="bg-article__tag tag" style="--color:#39bb9d; color: #39bb9d;"> Дизайн </span> 
+          <div class="bg-article__inner"> 
+           <div class="bg-article__time">
+             17 Дек 2020 
+           </div> <a href="https://mmr.ua/show/virtualnaya-empatiya-snek-kontent-i-vozvrashhenie-k-istokam-vizualnye-trendy-depositphotos" class="bg-article__title"> Виртуальная эмпатия, снэк-контент и возвращение к истокам: визуальные тренды Depositphotos </a> 
+           <div class="bg-article__tags"> <span>Depositphotos</span> <span>визуальный сторителлинг</span> <span>тренды</span> 
+           </div> 
+          </div> 
+          <div class="bg-article__img"> 
+           <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+           <noscript>
+            <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <noscript>
+             <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+             <noscript>
+              <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+              <noscript>
+               <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+               <noscript>
+                <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                <noscript>
+                 <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                 <noscript>
+                  <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                  <noscript>
+                   <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                   <noscript>
+                    <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                    <noscript>
+                     <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                     <noscript>
+                      <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                      <noscript>
+                       <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                       <noscript>
+                        <img src="https://mmr.ua/wp-content/uploads/2020/01/design.svg?x79708" alt="">
+                       </noscript>
+                      </noscript>
+                     </noscript>
+                    </noscript>
+                   </noscript>
+                  </noscript>
+                 </noscript>
+                </noscript>
+               </noscript>
+              </noscript>
+             </noscript>
+            </noscript>
+           </noscript> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="js_paginator-block" data-content-block=".blog-loop" data-page="2" data-pages="178" data-no-history="0"> 
+         <div class="pagination"> <a href="" class="pagination__prev icon-arrow disabled"></a> <a class="pagination__page current active">1</a> <a href="https://mmr.ua/design/page/2" class="pagination__page">2</a> <a href="https://mmr.ua/design/page/3" class="pagination__page">3</a> <a href="https://mmr.ua/design/page/91" class="pagination__page page-pagination__dots">…</a> <a href="https://mmr.ua/design/page/178" class="pagination__page">178</a> <a href="https://mmr.ua/design/page/2" class="pagination__next icon-arrow " id="js_paginator-next-page"></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="popular-news__aside"> 
+       <div class="a-block"> 
+        <div class="a-block__inner"> 
+         <div id="admixer_c3060ae11b284a139466ce776e8c4935_zone_27363_sect_821_site_808" data-sender="admixer"></div> 
+         <script type="text/javascript">
+								admixerML.fn.push(function () {
+									admixerML.display('admixer_c3060ae11b284a139466ce776e8c4935_zone_27363_sect_821_site_808');
+								});
+							</script> 
+        </div> 
+       </div> 
+       <div class="aside icon-pr2"> 
+        <div class="aside__date">
+          Популярное 
+        </div> 
+        <ul class="aside__inner"> 
+         <li> <a href="https://mmr.ua/show/retrospektiva-nedeli-ot-kreativnogo-direktora-saga-development"> Ретроспектива недели от креативного директора SAGA Development </a> </li> 
+         <li> <a href="https://mmr.ua/show/pro-smm-z-timi-hto-robit-cze-kruto"> Про SMM з тими, хто робить це круто </a> </li> 
+         <li> <a href="https://mmr.ua/show/kak-sozdayutsya-logotipy-dlya-biznesa"> Как создаются логотипы для бизнеса? </a> </li> 
+         <li> <a href="https://mmr.ua/show/kia-propustit-super-bowl-v-etom-godu"> Kia пропустит Super Bowl в этом году </a> </li> 
+         <li> <a href="https://mmr.ua/show/coca-cola-razmestila-bukvy-alfavita-na-upakovke-chtoby-kazhdyj-mog-vyrazit-sebya"> Coca-Cola разместила буквы алфавита на упаковке, чтобы каждый мог выразить себя </a> </li> 
+        </ul> 
+       </div> 
+       <div class="a-block"> 
+        <div class="a-block__inner"> 
+         <div id="admixer_99751356ff924e1ab6f0a9380fd86137_zone_27364_sect_821_site_808" data-sender="admixer"></div> 
+         <script type="text/javascript">
+								admixerML.fn.push(function () {
+									admixerML.display('admixer_99751356ff924e1ab6f0a9380fd86137_zone_27364_sect_821_site_808');
+								});
+							</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="section-tags"> 
+    <div class="wrap"> 
+     <div class="title-block"> 
+      <h3 class="title-block__title icon-pr2"> Популярные теги </h3> 
+     </div> 
+     <div class="section-tags__inner"> <a href="https://mmr.ua/tags/%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0">Украина</a> <a href="https://mmr.ua/tags/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE">видео</a> <a href="https://mmr.ua/tags/%D0%A1%D0%A8%D0%90">США</a> <a href="https://mmr.ua/tags/%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%B2">креатив</a> <a href="https://mmr.ua/tags/Facebook">Facebook</a> <a href="https://mmr.ua/tags/social+media">social media</a> <a href="https://mmr.ua/tags/%D0%A2%D0%92">ТВ</a> <a href="https://mmr.ua/tags/%D1%82%D0%B2+%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0">тв реклама</a> <a href="https://mmr.ua/tags/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D0%B0%D1%8F+%D0%BA%D0%B0%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">рекламная кампания</a> <a href="https://mmr.ua/tags/%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">исследование</a> <a href="https://mmr.ua/tags/%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0">социальная реклама</a> <a href="https://mmr.ua/tags/digital">digital</a> <a href="https://mmr.ua/tags/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F">Великобритания</a> 
+     </div> 
+    </div> 
+    <div class="section-tags__decoration"> 
+     <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/fingerprints2.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+     <noscript>
+      <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/fingerprints2.svg?x79708" alt="">
+     </noscript> 
+    </div> 
+   </section> 
+   <section class="decorated-sect"> 
+    <div class="wrap"> 
+     <div class="decorated-sect__inner"> <span class="decorated-sect__icon1 icon-pr2"></span> <span class="decorated-sect__icon2 icon-pr3"></span> 
+      <div class="decorated-sect__ad"> 
+       <div id="admixer_8938046c878d4687bf9a84f49489d409_zone_46808_sect_821_site_808" data-sender="admixer"></div> 
+       <script type="text/javascript">
+admixerML.fn.push(function () { admixerML.display('admixer_8938046c878d4687bf9a84f49489d409_zone_46808_sect_821_site_808'); });
+</script> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="section-mmr-events"> 
+    <div class="wrap"> 
+     <div class="section-mmr-events__inner"> 
+      <div class="title-block"> 
+       <h3 class="title-block__title icon-pr2"> MMR Events </h3> 
+      </div> 
+      <div class="section-mmr-events__items"> <a href="https://prmrfn.mmr.ua/" class="mmr-e" target="_blank"> 
+        <div class="mmr-e__img"> 
+         <img alt="" data-src="https://mmr.ua/wp-content/uploads/2020/04/91577821_2956281731061164_1823541293091913728_n.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+         <noscript>
+          <img src="https://mmr.ua/wp-content/uploads/2020/04/91577821_2956281731061164_1823541293091913728_n.jpg?x79708" alt="">
+         </noscript> 
+        </div> 
+        <div class="mmr-e__title">
+          VOPREKI PR марафон (онлайн) 
+        </div> </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="subscribe-section"> 
+    <div class="wrap"> 
+     <form class="subscribe-section__inner validation_js"> 
+      <div class="subscribe-section__top"> 
+       <div class="subscribe-section__text">
+         Подписаться на рассылку по темам 
+       </div> 
+      </div> 
+      <div class="input-block"> 
+       <div class="input-block__input"> 
+        <input type="email" name="email" placeholder="Ваш email" class="email_js"> 
+        <input type="hidden" name="_wpnonce" value="df120160b5"> <button class="btn-default js_send-subscribe-form">Подписаться</button> 
+       </div> 
+      </div> 
+      <div class="subscribe-section__bottom" style="text-align: center;margin-top: 20px;"> 
+       <div class="subscribe-section__text js_response-message" style="font-size: 22px;"> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+    <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr//assets/img/svg/decoration.svg?x79708" class="decoration1 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <noscript>
+     <img class="decoration1" src="https://mmr.ua/wp-content/themes/mmr//assets/img/svg/decoration.svg?x79708" alt="">
+    </noscript> 
+    <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr//assets/img/svg/decoration2.svg?x79708" class="decoration2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <noscript>
+     <img class="decoration2" src="https://mmr.ua/wp-content/themes/mmr//assets/img/svg/decoration2.svg?x79708" alt="">
+    </noscript> 
+   </section> 
+  </main> 
+  <footer class="main-footer"> 
+   <div class="wrap"> 
+    <div class="main-footer__top"> <a href="https://mmr.ua/" class="main-footer__logo"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+       <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+       <noscript>
+        <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" alt="">
+        </noscript>
+       </noscript>
+      </noscript> </a> 
+     <ul class="main-footer__links"> 
+      <li> <a href="https://mmr.ua/news">Новости</a> </li> 
+      <li> <a href="https://mmr.ua/longreads">Лонгриды</a> </li> 
+      <li> <a href="https://mmr.ua/news/marketnews">Новости рынка</a> </li> 
+      <li> <a href="https://mmr.ua/contact">Контакты</a> </li> 
+     </ul> 
+     <div class="socials"> 
+      <div class="socials__title">
+        Мы в соцсетях 
+      </div> 
+      <div class="socials__inner"> <a href="https://www.facebook.com/MMRonline" rel="nofollow" class="icon-fb" target="_blank"></a> <a href="https://telegram.me/mmrua" rel="nofollow" class="icon-tg" target="_blank"></a> <a href="https://twitter.com/MMR_online" rel="nofollow" class="icon-tw" target="_blank"></a> <a href="https://www.youtube.com/channel/UC8an5Y7MzCLRdEBqYLSwNCQ" rel="nofollow" class="icon-yt" target="_blank"></a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="main-footer__imgs"> <a href="https://ekonomika.ua" target="_blank"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/images/1.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+       <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/images/1.jpg?x79708" alt="">
+      </noscript> </a> <a href="https://delo.ua/" target="_blank"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/images/2.jpg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+       <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/images/2.jpg?x79708" alt="">
+      </noscript> </a> <a href="https://mmr.ua/" target="_blank"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+       <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+       <noscript>
+        <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/logo.svg?x79708" alt="">
+        </noscript>
+       </noscript>
+      </noscript> </a> <a href="https://womo.ua/" target="_blank"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/media_womo.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <noscript>
+       <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/media_womo.svg?x79708" alt="">
+      </noscript> </a> 
+    </div> 
+    <div id="admixer_5ba7a6d3f76249c8a1050fdda54c2ed0_zone_5921_sect_821_site_808" data-sender="admixer"></div> 
+    <script type="text/javascript">
+admixerML.fn.push(function () { admixerML.display('admixer_5ba7a6d3f76249c8a1050fdda54c2ed0_zone_5921_sect_821_site_808'); });
+</script> 
+   </div> 
+   <div class="main-footer__bottom"> 
+    <div class="wrap"> 
+     <div class="main-footer__copyright">
+       © MMR. Все права защищены 
+     </div> 
+     <div class="main-footer__part"> 
+     </div> 
+     <div class="main-footer__dev"> 
+      <div class="dev"> 
+       <div class="dev__title">
+         Designed by 
+       </div> <a href="https://vintage.agency/" target="_blank" class="dev__link"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/vintage.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/vintage.svg?x79708" alt="">
+        </noscript> </a> 
+      </div> 
+      <div class="dev"> 
+       <div class="dev__title">
+         Developed by 
+       </div> <a href="https://deco.agency/" target="_blank" class="dev__link deco"> <img alt="" data-src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/deco.svg?x79708" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <noscript>
+         <img src="https://mmr.ua/wp-content/themes/mmr/assets/img/svg/deco.svg?x79708" alt="">
+        </noscript> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="wrap"> <!--bigmir)net TOP 100--> 
+     <script type="text/javascript" language="javascript">
+	function BM_Draw(oBM_STAT){
+		document.write('<table cellpadding="0" cellspacing="0" border="0" style="display:inline;margin:0 auto;"><tr><td><div style="font-family:Tahoma;font-size:10px;padding:0px;margin:0px;"><div style="width:7px;float:left;background:url(\'//i.bigmir.net/cnt/samples/default/b53_left.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div><div style="float:left;background:url(\'//i.bigmir.net/cnt/samples/default/b53_center.gif\');text-align:left;height:17px;padding-top:2px;background-repeat:repeat-x;"><a href="http://www.bigmir.net/" target="_blank" style="color:#0000ab;text-decoration:none;">bigmir<span style="color:#ff0000;">)</span>net</a>  <span style="color:#969696;">хиты</span> <span style="color:#003596;font:10px Tahoma;">'+oBM_STAT.hits+'</span> <span style="color:#969696;">хосты</span> <span style="color:#003596;font:10px Tahoma;">'+oBM_STAT.hosts+'</span></div><div style="width:7px;float: left;background:url(\'//i.bigmir.net/cnt/samples/default/b53_right.gif\');height:17px;padding-top:2px;background-repeat:no-repeat;"></div></div></td></tr></table>');
+	}
+</script> 
+     <script type="text/javascript" language="javascript">
+	bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={o:1,v:153455,s:153455,t:0,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
+	for(var f=self;f!=f.parent;f=f.parent)bm.w++;
+	try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
+	else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
+	try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
+	try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
+	r=bmD.referrer.replace(/^w+:\/\//,'');if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r).slice(0,400);bm.v^=r.length}
+	bm.v^=window.location.href.length;for(var x in bm) if(/^[ovstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
+	bmD.write('<sc'+'ript type="text/javascript" language="javascript" src="//c.bigmir.net/?'+bs.join('&')+'"></sc'+'ript>');
+</script> 
+     <noscript> <a href="http://www.bigmir.net/" target="_blank"><img src="//c.bigmir.net/?v153455&amp;s153455&amp;t2" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100" border="0"></a> 
+     </noscript> <!--bigmir)net TOP 100--> 
+    </div> 
+   </div> 
+  </footer> 
+  <div class="modal-search modal_search_js"> <button class="btn-close close_js __js_close_cool_search"></button> 
+   <div class="modal-search-scroll scroll_y_js"> 
+    <div class="wrap"> 
+     <div class="modal-search__inner"> 
+      <form action="/" method="GET" class="input-block"> 
+       <div class="input-block__input"> 
+        <input type="text" class="" id="modal-search-input" autocomplete="off" tabindex="-1" placeholder="Я ищу …"> <button class="btn-default __js_send_form">Поиск</button> 
+       </div> 
+      </form> 
+      <div class="modal-search__results items search_results_js" id="search-results-drop-in"> 
+      </div> 
+      <div id="cool-search-pagination"></div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="preloader preloader__js"> 
+   <div class="LoaderBalls"> 
+    <div class="LoaderBalls__item"></div> 
+    <div class="LoaderBalls__item"></div> 
+    <div class="LoaderBalls__item"></div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/mmr.ua\/wp-admin\/admin-ajax.php","text_wait":"\u0412\u0430\u0448 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0439 \u0437\u0430\u043f\u0440\u043e\u0441 \u0435\u0449\u0435 \u043e\u0431\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0435\u0442\u0441\u044f. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430 \u043f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435 ...","text_valid":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043e\u0442\u0432\u0435\u0442.","text_multiple":"\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u043e\u0435 \u0447\u0438\u0441\u043b\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432:","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://mmr.ua/wp-content/plugins/wp-polls/polls-js.js?x79708"></script> 
+  <script type="text/javascript" src="https://mmr.ua/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?x79708"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var deco_widget_scripts_args = {"ajaxurl":"https:\/\/mmr.ua\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/widgets/assets/js/deco-widget-scripts.js?x79708"></script> 
+  <script type="text/javascript" src="https://mmr.ua/wp-includes/js/wp-embed.min.js?x79708"></script> 
+  <script type="text/javascript" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.4.4" async></script> 
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/theme-settings/assets/js/script.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/assets/js/scripts.min.js?x79708"></script>
+  <script>var deco_vars = {"ajaxurl":"https://mmr.ua/wp-admin/admin-ajax.php","is_mobile":""};</script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/cool-search/assets/js/cool-search.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/infinite-scroll/assets/js/history.min.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/infinite-scroll/assets/js/history.iegte8.min.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/infinite-scroll/assets/js/instaembeds.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/infinite-scroll/assets/js/script.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/core/modules/paginator/assets/js/history.min.js?x79708" async></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/core/modules/paginator/assets/js/history.iegte8.min.js?x79708" async></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/core/modules/paginator/assets/js/paginator.js?x79708" async></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/newzmate/assets/js/script.js?x79708"></script>
+  <script src="https://mmr.ua/wp-content/themes/mmr/deco-framework/bundles/custom-loadmore/assets/js/script.js?x79708"></script> 
+  <script type="text/javascript">
+	function OpenPopupCenter(pageURL, title, w, h) {
+		var left = (screen.width - w) / 2
+		var top = (screen.height - h) / 4  // for 25% - devide by 4  |  for 33% - devide by 3
+		var targetWin = window.open(pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left)
+	}
+</script> 
+  <script type="text/javascript">
+	var inIframe = function() {
+		try {
+			return window.self !== window.top;
+		} catch (e) {
+			return true;}
+	},
+			img = document.createElement("img"),
+			path = "//nc-ru.redtram.com/px/10800.gif";
+	if (inIframe()) {
+		img.setAttribute("src", path+ "?referrer="+ document.referrer);
+	}else {
+		img.setAttribute("src", path+ "?ref2="+ document.referrer);
+	}
+	img.setAttribute("style", "width:1px!important;height:1px!important;position:fixed!important;top:-100em!important;");
+	document.getElementsByTagName("body")[0].appendChild(img);
+</script>  <!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 0/683 objects using redis
+Page Caching using redis 
+
+Served from: localhost @ 2021-01-31 12:14:46 by W3 Total Cache
+-->
+ </body>
+</html>

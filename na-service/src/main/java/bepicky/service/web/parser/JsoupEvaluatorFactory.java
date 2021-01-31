@@ -23,4 +23,8 @@ public class JsoupEvaluatorFactory {
     public Evaluator get(ContentTag tag) {
         return container.get(tag.getMatchStrategy()).apply(tag.getValue());
     }
+
+    public Evaluator get(ContentTagMatchStrategy strategy, String value) {
+        return container.get(strategy).apply(value);
+    }
 }

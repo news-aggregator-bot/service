@@ -1,16 +1,22 @@
 package bepicky.service.domain;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
-@Builder
-public class PageParsedData {
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
+public class PageParsedData{
 
-    private final String title;
+    private String title;
 
-    private final String link;
+    private String link;
 
-    private final String author;
+    private String author;
 
 }

@@ -46,7 +46,7 @@ public class ValueNormalisationServiceTest {
 
     @ParameterizedTest
     @MethodSource("data")
-    public void go(String title, String expected) {
+    public void normaliseTitle_ShouldReturnExpected(String title, String expected) {
         assertEquals(expected, normalisationService.normaliseTitle(title));
     }
 }

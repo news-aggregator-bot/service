@@ -24,7 +24,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -37,10 +39,10 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 
-@SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
+@SpringBootTest(classes = {NAService.class, NewsServiceFuncTest.FuncTestConfiguration.class})
 @RunWith(SpringRunner.class)
+@ActiveProfiles("it")
 @Slf4j
-@Ignore
 public class NewsServiceFuncTest extends FuncSupport {
 
     private static final String SOURCE_MISMATCH_PATTERN = "Source: %s\n%s";
@@ -50,7 +52,6 @@ public class NewsServiceFuncTest extends FuncSupport {
     private INewsService newsService;
 
     @Autowired
-//    @Qualifier("testSourceIngestionService")
     private SourceIngestionService sourceIS;
 
     @Autowired
@@ -81,7 +82,7 @@ public class NewsServiceFuncTest extends FuncSupport {
     @Test
     public void funcTest() {
         log.info("ingest:source:start");
-        dataIngestor.ingestSources("Sources_test");
+        dataIngestor.ingestSources();
         log.info("ingest:source:finish");
         List<Source> ingestedSources = sourceService.findAll();
         assertFalse(ingestedSources.isEmpty());
@@ -122,6 +123,7 @@ public class NewsServiceFuncTest extends FuncSupport {
         List<Pair<SourcePage, List<Mismatch>>> sourcePagesMismatches = source.getPages()
             .stream()
             .map(this::analyseSourcePage)
+            .filter(Objects::nonNull)
             .filter(p -> !p.getValue().isEmpty())
             .collect(Collectors.toList());
         log.info("func:source:finish:{}", source.getName());
@@ -151,10 +153,11 @@ public class NewsServiceFuncTest extends FuncSupport {
     @EnableTransactionManagement
     static class FuncTestConfiguration {
 
-//        @Bean("testSourceIngestionService")
-//        public SourceIngestionService sourceIngestionService() {
-//            return new TestSourceIngestionService();
-//        }
+        @Bean
+        @Primary
+        public SourceIngestionService sourceIngestionService() {
+            return new TestSourceIngestionService();
+        }
     }
 
 }

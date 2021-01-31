@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en-US"> 
+ <head> 
+  <meta property="fb:pages" content="147232991936"> 
+  <meta charset="UTF-8"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content=""> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta content="INDEX, FOLLOW" name="ROBOTS"> 
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"> 
+  <title>bangkok</title> 
+  <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet"> 
+  <link href="/css/style.css?v=1.6" rel="stylesheet"> 
+  <link href="/plugin/flexslider/flexslider.css" rel="stylesheet"> 
+  <link href="/js/video-js/video-js.min.css" rel="stylesheet"> 
+  <link href="/js/video-js/videojs-vast-vpaid/videojs.vast.vpaid.min.css" rel="stylesheet"> <!-- Facebook Comment --> 
+  <meta property="fb:admins" content="boeaee"> 
+  <meta property="fb:app_id" content="370932954204"> <!-- Facebook Open Graph protocol --> 
+  <meta property="og:title" content="bangkok"> 
+  <meta property="og:site_name" content="https://www.nationthailand.com"> 
+  <meta property="og:description" content=""> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="http://nationthailand/around-thailand/bangkok"> 
+  <meta property="og:site_name" content="The Nation Thailand"> 
+  <meta property="og:image" content=""> 
+  <meta property="og:image:width" content="800"> 
+  <meta property="og:image:height" content="450"> <!-- twitter Cards markup--> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@nationnews"> 
+  <meta name="twitter:creator" content="@nationnews"> 
+  <meta name="twitter:title" content="bangkok"> 
+  <meta name="twitter:description" content="bangkok"> 
+  <meta name="twitter:image" content=""> 
+  <link rel="image_src" href=""> <!-- AdAsia Tag Manager --> <!-- <script  type="text/javascript" src="//adasiatagmanager.appspot.com/js/v1/account/5645459968229376/atm.js"></script> --> <!-- End AdAsia Tag Manager --> 
+  <script type="application/javascript" src="//anymind360.com/js/545/ats.js"></script> 
+  <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script> <!-- <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> --> 
+  <script>
+        window.googletag = window.googletag || {cmd: []};
+
+        // Adomik randomizer for ad call key value targeting
+        window.Adomik = window.Adomik || {};
+        Adomik.randomAdGroup = function() {
+            var rand = Math.random();
+            switch (false) {
+                case !(rand < 0.09): return "ad_ex" + (Math.floor(100 * rand));
+                case !(rand < 0.10): return "ad_bc";
+                default: return "ad_opt";
+            }
+        };
+
+
+        var height=window.innerHeight||document.documentElement.clientHeight;
+        var width=window.innerWidth||document.documentElement.clientWidth;
+
+
+      googletag.cmd.push(function() {
+
+        var mappingA1 = googletag.sizeMapping().
+            addSize([1050, 768], [[970, 90], [970, 250], [800, 450], [728, 90], [1, 1]]).
+            addSize([768, 600], [[728, 90], [1, 1]]).
+            addSize([320, 100], [[320, 100], [320, 250], [1, 1]]).
+            build();
+        googletag.defineSlot('/4246389/NT_A1', [728, 90], 'NT_A1').defineSizeMapping(mappingA1).addService(googletag.pubads());
+        googletag.defineSlot('/4246389/NT_inRead_Travel', [1, 1], 'div-gpt-ad-1579512902031-0').addService(googletag.pubads());
+
+        googletag.defineSlot('/4246389/NT_A2', [300, 250], 'NT_A2').addService(googletag.pubads());
+        googletag.defineSlot('/4246389/NT_A3', [300, 250], 'NT_A3').addService(googletag.pubads());
+        googletag.defineSlot('/4246389/NT_A4', [300, 600], 'NT_A4').addService(googletag.pubads());
+        googletag.defineSlot('/4246389/NT_A5', [300, 250], 'NT_A5').addService(googletag.pubads());
+
+        // in read
+         googletag.defineSlot('/4246389/NT_inRead', [1, 1], 'div-gpt-ad-1562316989910-0').addService(googletag.pubads());
+
+         /* ADOP Video */
+        // googletag.defineSlot('/4246389/adop_VDO', [1, 1], 'div-gpt-ad-1566889793803-0').addService(googletag.pubads());
+
+        // advantisvideo
+        googletag.defineSlot('/4246389/avantisvideo', [1, 1], 'div-gpt-ad-1572250389854-0').addService(googletag.pubads());
+
+        // // adasian
+        // // enable ads asia sticky on 01-01-2020
+        // if (width <= 768 && height >= 800) {
+        // // googletag.defineSlot('/21622890900/TH_nationmultimedia.com_res_article_bottom_sticky_320x100', [320, 100], 'div-gpt-ad-1560428470246-0').setTargeting('ad_group', Adomik.randomAdGroup()).addService(googletag.pubads());
+        //     googletag.defineSlot('/4246389/Sticky', [[300, 50], [320, 50]], 'div-gpt-ad-1576223818669-0').addService(googletag.pubads());
+        // }
+        // else if(width <= 468 && height < 800) {
+        // // googletag.defineSlot('/21622890900/TH_nationmultimedia.com_res_article_bottom_sticky_320x50', [320, 50], 'div-gpt-ad-1560428537338-0').setTargeting('ad_group', Adomik.randomAdGroup()).addService(googletag.pubads());
+        //     googletag.defineSlot('/4246389/Sticky', [[300, 50], [320, 50]], 'div-gpt-ad-1576223818669-0').addService(googletag.pubads());
+        // }
+
+
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+
+        function showDefault (obj) {
+            obj.src="https://www.nationthailand.com/images/default800.jpg"
+        }
+    </script> 
+  <script async src="//cdn.avantisvideo.com/avm/js/video-loader.js?id=8d377563-2fe3-42dc-8061-eba06104a760&amp;tagId=1&amp;subId=&amp;callback=" id="avantisJS"> </script> <!-- auto ads --> 
+  <script type="text/javascript" class="teads" src="//a.teads.tv/page/123358/tag" async="true"></script> 
+ </head> 
+ <body> 
+  <div class="top-bar"> 
+   <div class="inner"> <span class="top-date">Sunday, January 31, 2021</span> 
+    <form id="frm-search" class="right" method="GET" action="/search?utm_source=menu_header&amp;utm_medium=internal_referral"> <i class="fa fa-search" aria-hidden="true"></i> 
+     <input type="text" placeholder="Search.." id="txt-search" name="q"> 
+    </form> 
+    <section class="top-search"> 
+    </section> 
+   </div> 
+  </div> 
+  <section class="top"> 
+   <div class="inner"> <a href="/" id="logo"><img src="/images/logo.svg" alt=""></a> 
+    <div class="menu-mobile">
+     <i class="fas fa-bars"></i>
+    </div> 
+   </div><!-- end .inner --> 
+  </section><!-- end #top --> <a class="close-menu"><i class="fas fa-times"></i></a> 
+  <nav class="menu-top"> 
+   <div class="inner"> 
+    <ul> 
+     <li><a id="menu1" href="/?utm_source=menu_header&amp;utm_medium=internal_referral">Home</a></li> 
+     <li> <a id="menu2" href="/news?utm_source=menu_header&amp;utm_medium=internal_referral">News</a> 
+      <div class="submenu"> <a href="/royal?utm_source=menu_header&amp;utm_medium=internal_referral">Royal</a> <a href="/news/national?utm_source=menu_header&amp;utm_medium=internal_referral">National</a> <a href="/news/international?utm_source=menu_header&amp;utm_medium=internal_referral">International</a> <a href="/news/politics?utm_source=menu_header&amp;utm_medium=internal_referral">Politics</a> 
+      </div> </li> 
+     <li> <a id="menu3" href="/opinion?utm_source=menu_header&amp;utm_medium=internal_referral">Opinion</a> 
+      <div class="submenu"> <a href="/opinion/columns?utm_source=menu_header&amp;utm_medium=internal_referral">Columns</a> <a href="/photogenic?utm_source=menu_header&amp;utm_medium=internal_referral">Photogenic</a> 
+      </div> </li> 
+     <li> <a id="menu4" href="/business?utm_source=menu_header&amp;utm_medium=internal_referral">Business</a> 
+      <div class="submenu"> <a href="/business/econ?utm_source=menu_header&amp;utm_medium=internal_referral">Econ</a> <a href="/business/bizinsights?utm_source=menu_header&amp;utm_medium=internal_referral">Biz insights</a> <a href="/business/corporate?utm_source=menu_header&amp;utm_medium=internal_referral">Corporate</a> 
+      </div> </li> 
+     <li> <a id="menu5" href="/ann?utm_source=menu_header&amp;utm_medium=internal_referral">Asia News Network</a> </li> 
+     <li> <a id="menu6" href="/property?utm_source=menu_header&amp;utm_medium=internal_referral">Property</a> <!-- 					<div class="submenu">
+					<a href="/property/propertynews">Property News</a>
+				<a href="#">Property Guide</a>
+					<a href="#">Property Sales</a>
+				</div>
+				 --> </li> 
+     <li> <a id="menu7" href="/edandtech?utm_source=menu_header&amp;utm_medium=internal_referral">Ed &amp; Tech</a> </li> 
+     <li><a id="menu8" href="/auto?utm_source=menu_header&amp;utm_medium=internal_referral">Auto</a></li> 
+     <li><a id="menu9" href="/sport?utm_source=menu_header&amp;utm_medium=internal_referral">Sport</a></li> 
+     <li> <a id="menu10" href="/lifestyle?utm_source=menu_header&amp;utm_medium=internal_referral">Lifestyle</a> 
+      <div class="submenu"> <a href="/lifestyle/artsandculture?utm_source=menu_header&amp;utm_medium=internal_referral">Art &amp; Culture</a> <a href="/lifestyle/entertainment?utm_source=menu_header&amp;utm_medium=internal_referral">Entertainment</a> <a href="/lifestyle/living?utm_source=menu_header&amp;utm_medium=internal_referral">Living</a> <a href="/lifestyle/shopping?utm_source=menu_header&amp;utm_medium=internal_referral">Shopping</a> <a href="/lifestyle/healthandbeauty?utm_source=menu_header&amp;utm_medium=internal_referral">Health &amp; Beauty</a> <a href="/lifestyle/fashion?utm_source=menu_header&amp;utm_medium=internal_referral">Fashion</a> <a href="/lifestyle/whatison?utm_source=menu_header&amp;utm_medium=internal_referral">What’s on </a> 
+      </div> </li> 
+     <li> <a id="menu11" href="/travel">Travel</a> 
+      <div class="submenu"> <a href="/travel/thailand?utm_source=menu_header&amp;utm_medium=internal_referral">Thailand</a> <a href="/travel/world?utm_source=menu_header&amp;utm_medium=internal_referral">World</a> 
+      </div> </li> 
+     <li><a id="menu12" href="/food?utm_source=menu_header&amp;utm_medium=internal_referral">Food</a></li> 
+     <li> <a id="menu13" href="/around-thailand?utm_source=menu_header&amp;utm_medium=internal_referral">Around Thailand</a> 
+      <div class="submenu"> <a href="/around-thailand/bangkok?utm_source=menu_header&amp;utm_medium=internal_referral">Bangkok</a> <a href="/around-thailand/chiang-mai?utm_source=menu_header&amp;utm_medium=internal_referral">Chiang Mai</a> <a href="/around-thailand/khon-kaen?utm_source=menu_header&amp;utm_medium=internal_referral">Khon Kaen</a> <a href="/around-thailand/phuket?utm_source=menu_header&amp;utm_medium=internal_referral">Phuket</a> <a href="/around-thailand/hua-hin?utm_source=menu_header&amp;utm_medium=internal_referral">Hua Hin</a> <a href="/around-thailand/samui?utm_source=menu_header&amp;utm_medium=internal_referral">Samui</a> <a href="/around-thailand/pattaya?utm_source=menu_header&amp;utm_medium=internal_referral">Pattaya</a> 
+      </div> </li> <!-- 			<li>
+				<a id="menu14" href="#">Classifieds</a>
+				<div class="submenu">
+					<a href="">Job</a>
+					<a href="">Non-Job</a>
+				</div>
+			</li>
+			<li>
+				<a id="menu15" href="article.php">Gallery</a>
+				<div class="submenu">
+					<a href="">Photo gallery</a>
+					<a href="">Video gallery</a>
+				</div>
+			</li>   --> 
+    </ul> 
+   </div> 
+  </nav><!-- end #menu-top --> 
+  <div class="top-banner"> <!-- /4246389/NT_A1 --> 
+   <div id="NT_A1"> 
+    <script>
+		googletag.cmd.push(function() { googletag.display('NT_A1'); });
+	  </script> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div class="inner"> 
+    <div class="box-content-page"> 
+     <div class="col-left"> 
+      <div class="h-page">
+       <span><strong>bangkok</strong></span>
+      </div> 
+      <div class="box-padding p-row"> 
+       <div class="full-slide flexslider index-slide"> 
+        <ul class="slides"> 
+         <li> <a target="_blank" href="https://www.nationthailand.com/news/30402057?utm_source=category&amp;utm_medium=internal_referral"> 
+           <div class="slide-pic"> 
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/31/30402057/800_5e392b984e3265e.jpg?v=1612066465" alt=""> 
+           </div> 
+           <div class="slide-cap left"> 
+            <h2>Bangkok allows many businesses, venues to reopen but bars to remain closed</h2> 
+            <div class="p">
+              Bangkok Governor Aswin Kwanmuang on Saturday evening allowed 37 types of venues in the province to reopen after they had been ordered to close in the aftermath of the second Covid-19 wave. 
+            </div> 
+           </div> </a> </li> 
+         <li> <a target="_blank" href="https://www.nationthailand.com/news/30402028?utm_source=category&amp;utm_medium=internal_referral"> 
+           <div class="slide-pic"> 
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/30/30402028/800_44e3b6a269c068d.jpg?v=1611978638" alt="(File Photo)"> 
+           </div> 
+           <div class="slide-cap left"> 
+            <h2>Bangkok removes Covid-19 checkpoints for travellers from other provinces</h2> 
+            <div class="p">
+              Bangkok Metropolitan Administration (BMA) has removed from 4pm on Friday 14 checkpoints that had been set up for visitors from other provinces entering Bangkok, as the Covid-19 situation in the province is improving. 
+            </div> 
+           </div> </a> </li> 
+         <li> <a target="_blank" href="https://www.nationthailand.com/news/30402023?utm_source=category&amp;utm_medium=internal_referral"> 
+           <div class="slide-pic"> 
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/30/30402023/800_58d7ff2d0836d69.jpg?v=1611976822" alt=""> 
+           </div> 
+           <div class="slide-cap left"> 
+            <h2>Iconsiam finds no infections after testing 238 staff</h2> 
+            <div class="p">
+              Iconsiam shopping complex in Bangkok’s Klong San district tested 238 mall and shop staff and found no cases of Covid-19 infection, Supoj Chaiwatsirikul, the mall's managing director, said on Friday. 
+            </div> 
+           </div> </a> </li> 
+         <li> <a target="_blank" href="https://www.nationthailand.com/news/30401973?utm_source=category&amp;utm_medium=internal_referral"> 
+           <div class="slide-pic"> 
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/29/30401973/800_f1d25114e3f02f2.jpg?v=1611887908" alt=""> 
+           </div> 
+           <div class="slide-cap left"> 
+            <h2>Two pro-democracy protesters arrested over explosion at Bangkok rally</h2> 
+            <div class="p">
+              Two of three suspects wanted for allegedly throwing a "ping pong bomb" that injured four people on January 17 have been arrested. 
+            </div> 
+           </div> </a> </li> 
+         <li> <a target="_blank" href="https://www.nationthailand.com/news/30401934?utm_source=category&amp;utm_medium=internal_referral"> 
+           <div class="slide-pic"> 
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/28/30401934/800_c7c8cfe4b9cabc8.jpg?v=1611817761" alt=""> 
+           </div> 
+           <div class="slide-cap left"> 
+            <h2>School gets a good wash before reopening on Monday</h2> 
+            <div class="p">
+              Staff and teachers of Bangkok’s Ban Bang Kapi School got together to give the school premises a proper clean before students can return to classes on Monday (February 1). 
+            </div> 
+           </div> </a> </li> 
+        </ul> 
+       </div><!-- end .full-slide --> 
+      </div><!-- end .box-padding --> 
+      <div class="row" id="colum-list"> 
+       <div class="two-col"> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30402057?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/31/30402057/500_5e392b984e3265e.jpg?v=1612066465" alt=""> 
+          <div class="news-txt">
+            Bangkok allows many businesses, venues to reopen but bars to remain closed 
+          </div> 
+          <div class="date">
+           Jan 31. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30402028?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/30/30402028/500_44e3b6a269c068d.jpg?v=1611978638" alt="(File Photo)"> 
+          <div class="news-txt">
+            Bangkok removes Covid-19 checkpoints for travellers from other provinces 
+          </div> 
+          <div class="date">
+           Jan 30. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30402023?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/30/30402023/500_58d7ff2d0836d69.jpg?v=1611976822" alt=""> 
+          <div class="news-txt">
+            Iconsiam finds no infections after testing 238 staff 
+          </div> 
+          <div class="date">
+           Jan 30. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401973?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/29/30401973/500_f1d25114e3f02f2.jpg?v=1611887908" alt=""> 
+          <div class="news-txt">
+            Two pro-democracy protesters arrested over explosion at Bangkok rally 
+          </div> 
+          <div class="date">
+           Jan 29. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401934?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/28/30401934/500_c7c8cfe4b9cabc8.jpg?v=1611817761" alt=""> 
+          <div class="news-txt">
+            School gets a good wash before reopening on Monday 
+          </div> 
+          <div class="date">
+           Jan 28. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401928?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/28/30401928/500_df53d130b04b886.jpg?v=1611812683" alt=""> 
+          <div class="news-txt">
+            Three updated timelines reveal more details on movements of infected singer, PR manager, govt official 
+          </div> 
+          <div class="date">
+           Jan 28. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401891?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/27/30401891/500_8b0c2261977f84b.jpg?v=1611748424" alt=""> 
+          <div class="news-txt">
+            3 infected by DJ Matoom ‘super-spreader’ party kept attendance secret 
+          </div> 
+          <div class="date">
+           Jan 27. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401863?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/27/30401863/500_db2ef2a947ce1e4.jpg?v=1611710545" alt=""> 
+          <div class="news-txt">
+            27 Cambodians arrested for illegal entry, disguising themselves as monks 
+          </div> 
+          <div class="date">
+           Jan 27. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401831?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/26/30401831/500_63139f57afa7f96.jpg?v=1611648053" alt=""> 
+          <div class="news-txt">
+            Bangkok Airways to start flying to Trat, Sukhothai from Feb 1 
+          </div> 
+          <div class="date">
+           Jan 26. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401817?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/26/30401817/500_4fa175a9e42947e.jpg?v=1611654144" alt=""> 
+          <div class="news-txt">
+            Active search in Samut Sakhon finds more than 900 Covid-19 cases 
+          </div> 
+          <div class="date">
+           Jan 26. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401764?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/25/30401764/500_59d0e28a283eddc.jpg?v=1611559244" alt=""> 
+          <div class="news-txt">
+            Chiang Mai link emerges in infection of 19 people from three clusters 
+          </div> 
+          <div class="date">
+           Jan 25. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401763?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/25/30401763/500_c1d82ad8af6cdf4.jpg?v=1611559031" alt=""> 
+          <div class="news-txt">
+            Ratchaburi group marches over 100km to demand abolition of lese majeste, PM's resignation 
+          </div> 
+          <div class="date">
+           Jan 25. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401751?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/25/30401751/500_1ce6127fe74b5ff.jpg?v=1611543682" alt=""> 
+          <div class="news-txt">
+            Heated argument becomes bloody as knives pulled out in Bangkok shopping mall 
+          </div> 
+          <div class="date">
+           Jan 25. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401743?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/25/30401743/500_a05383e7da6e3a9.jpg?v=1611541577" alt=""> 
+          <div class="news-txt">
+            Over half a million baht robbed at gunpoint from bank in The Mall Bang Kapi 
+          </div> 
+          <div class="date">
+           Jan 25. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401638?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/22/30401638/500_6f68aa52d6b786c.jpg?v=1611290433" alt=""> 
+          <div class="news-txt">
+            Aswin defends Green Line fare hike, rules out review unless ordered by govt 
+          </div> 
+          <div class="date">
+           Jan 22. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401600?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/21/30401600/500_a164af7cf280ab3.jpg?v=1611222081" alt=""> 
+          <div class="news-txt">
+            13 businesses can reopen as usual in Bangkok 
+          </div> 
+          <div class="date">
+           Jan 21. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401527?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/20/30401527/500_87cd8a0fdd57e2a.jpg?v=1611133343" alt=""> 
+          <div class="news-txt">
+            Protest leaders acknowledge lese majeste charges for speeches delivered last month 
+          </div> 
+          <div class="date">
+           Jan 20. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401524?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/20/30401524/500_952c96175ef2735.jpg?v=1611130638" alt="Sopon Pisuttiwong"> 
+          <div class="news-txt">
+            BMA eyes easing control measures for some businesses 
+          </div> 
+          <div class="date">
+           Jan 20. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401504?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/20/30401504/500_fdbbe8a770d1544.jpg?v=1611107264" alt=""> 
+          <div class="news-txt">
+            Seacon Square organises event to promote ‘Let’s Go Halves’ scheme 
+          </div> 
+          <div class="date">
+           Jan 20. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401462?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/19/30401462/500_cf8a50f4bcfb023.jpg?v=1611041735" alt="(File Photo) Taweesin Visanuyothin, CCSA spokesman"> 
+          <div class="news-txt">
+            West of Bangkok has highest number of infections in new wave 
+          </div> 
+          <div class="date">
+           Jan 19. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401419?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/18/30401419/500_9734c16bbbce264.jpg?v=1610959977" alt=""> 
+          <div class="news-txt">
+            Six arrested at weekend protests released on bail 
+          </div> 
+          <div class="date">
+           Jan 18. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401416?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/18/30401416/500_853a21458d3c688.jpg?v=1610960872" alt=""> 
+          <div class="news-txt">
+            Bangkok market closed for three days after merchant positive for Covid-19 
+          </div> 
+          <div class="date">
+           Jan 18. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401415?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/18/30401415/500_13836f429f77186.jpg?v=1610957374" alt="Mongkol Santimetakul"> 
+          <div class="news-txt">
+            Pro-democracy guard recounts his mysterious kidnapping 
+          </div> 
+          <div class="date">
+           Jan 18. 2021
+          </div> </a> 
+        </section> 
+        <section class="col box-border"> <a target="_blank" href="https://www.nationthailand.com/news/30401411?utm_source=category&amp;utm_medium=internal_referral" class="thumb"> <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/18/30401411/500_f1796d2b834d5b8.jpg?v=1610955401" alt=""> 
+          <div class="news-txt">
+            Bangkok reports 575 infections since Dec 20 
+          </div> 
+          <div class="date">
+           Jan 18. 2021
+          </div> </a> 
+        </section> 
+       </div><!-- end .two-col --> 
+      </div><!-- end .row --> 
+     </div><!-- end .col-left --> 
+     <div class="col-right"> 
+      <div class="ads_300 box-margin"> <!-- /4246389/NT_A2 --> 
+       <div id="NT_A2"> 
+        <script>
+			googletag.cmd.push(function() { googletag.display('NT_A2'); });
+		  </script> 
+       </div> 
+      </div> 
+      <section class="box-right top-news box-border box-margin"> 
+       <div class="h-section2">
+        <span><strong>Top</strong> News</span><a target="_blank" href="https://www.nationthailand.com/top-news?utm_source=slide_topnews&amp;utm_medium=internal_referral"><i class="fas fa-chevron-right"></i></a>
+       </div> 
+       <ul class="news-list"> 
+        <li> 
+         <div class="list-num">
+          1.
+         </div> <a target="_blank" href="https://www.nationthailand.com/news/30402057?utm_source=slide_topnews&amp;utm_medium=internal_referral" class="two-col"> 
+          <div class="news-txt col"> 
+           <div class="txt-title">
+            Bangkok allows many businesses, venues to reopen but bars to remain closed
+           </div> 
+           <div class="date">
+            Jan 31. 2021
+           </div> 
+          </div> 
+          <div class="news-pic col"> 
+           <div class="thumb100">
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/31/30402057/500_5e392b984e3265e.jpg?v=1612066465" alt="">
+           </div> 
+          </div> </a> </li> 
+        <li> 
+         <div class="list-num">
+          2.
+         </div> <a target="_blank" href="https://www.nationthailand.com/news/30402037?utm_source=slide_topnews&amp;utm_medium=internal_referral" class="two-col"> 
+          <div class="news-txt col"> 
+           <div class="txt-title">
+            Ukraine stayed quiet during Trump-era pressures. Now it's sharing some Giuliani tales.
+           </div> 
+           <div class="date">
+            Jan 31. 2021
+           </div> 
+          </div> 
+          <div class="news-pic col"> 
+           <div class="thumb100">
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/30/30402037/500_1caf9da94cc5fcb.jpg?v=1612014679" alt="Rudy Giuliani listens as then-President Trump held a news briefing at the White House on Sept. 27, 2020. MUST CREDIT: Washington Post photo by Salwan Georges.">
+           </div> 
+          </div> </a> </li> 
+        <li> 
+         <div class="list-num">
+          3.
+         </div> <a target="_blank" href="https://www.nationthailand.com/lifestyle/30402053?utm_source=slide_topnews&amp;utm_medium=internal_referral" class="two-col"> 
+          <div class="news-txt col"> 
+           <div class="txt-title">
+            An international exhibition showcases the exquisite art of fabric
+           </div> 
+           <div class="date">
+            Jan 31. 2021
+           </div> 
+          </div> 
+          <div class="news-pic col"> 
+           <div class="thumb100">
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/31/30402053/500_90850881d1c663a.jpg?v=1612063626" alt="OBI-Pegasus">
+           </div> 
+          </div> </a> </li> 
+        <li> 
+         <div class="list-num">
+          4.
+         </div> <a target="_blank" href="https://www.nationthailand.com/news/30402044?utm_source=slide_topnews&amp;utm_medium=internal_referral" class="two-col"> 
+          <div class="news-txt col"> 
+           <div class="txt-title">
+            10 days of struggle in Biden's vaccine push
+           </div> 
+           <div class="date">
+            Jan 31. 2021
+           </div> 
+          </div> 
+          <div class="news-pic col"> 
+           <div class="thumb100">
+            <img onerror="showDefault(this)" src="https://media.nationthailand.com/images/news/2021/01/31/30402044/500_3785e9b7e115c46.jpg?v=1612053975" alt="US President Joe Biden">
+           </div> 
+          </div> </a> </li> 
+       </ul> 
+      </section> <!-- <div class="ads_300 box-margin"> --> <!-- /4246389/NT_A4 --> <!-- <div id='NT_A4'>
+		  <script>
+			googletag.cmd.push(function() { googletag.display('NT_A4'); });
+		  </script>
+		</div> --> <!-- </div> --> 
+      <div style="position: relative; display: inline-block; overflow: hidden;"> 
+       <div id="wmg-vb-2236400235" style="width: 300px; height: 600px; margin: auto; position: relative; transition: all 300ms linear; overflow: hidden"> 
+        <script type="text/javascript" src="//js.spotx.tv/easi/v1/85394.js" data-spotx_channel_id="248053" data-spotx_ad_unit="incontent" data-spotx_content_width="300" data-spotx_content_height="600" data-spotx_ad_done_function="myAdDoneFunction" data-spotx_collapse="1" data-spotx_ad_volume="0" data-spotx_unmute_on_mouse="0" data-spotx_autoplay="1" data-spotx_https="1">
+            </script> 
+        <div id="wmg-ads-11676273667" style="opacity: 1; overflow: hidden; position: absolute; top: 0; left: 0; transition: all 300ms linear; z-index: -1;"> 
+         <div style="position: relative; display: inline-block; overflow: hidden;"> 
+          <div id="div-wmg-id_eqb9wkqg6" style="height:600px; width:300px;"> 
+           <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script> 
+           <script>
+                            var googletag = googletag || {};
+                            googletag.cmd = googletag.cmd || [];
+                            googletag.cmd.push(function() {
+                                googletag.defineSlot('/112081842/PostBid_AdUnit/nationthailand.com_2_300x600_postbid_68z59vx8f',[300, 600], 'div-wmg-id_eqb9wkqg6').addService(googletag.pubads());
+                                googletag.pubads().enableSingleRequest();
+                                googletag.enableServices();
+                                googletag.display('div-wmg-id_eqb9wkqg6');
+                                googletag.display('div-wmg-id_eqb9wkqg6');
+                            });
+                        </script> 
+           <script>
+                            let WMG = document.getElementById('wmg-ads-11676273667'),
+                                WMG = document.getElementById('wmg-vb-2236400235');
+                            setTimeout(() => {
+                                pWMG.style.height = "280px";
+                            }, 700);
+
+                            function myAdDoneFunction(spotx_ad_found) {
+                                if (spotx_ad_found) {
+                                    bWMG.style.opacity = 1;
+                                    bWMG.style.zIndex = 1;
+                                } else {
+                                    bWMG.style.opacity = 1;
+                                    bWMG.style.zIndex = 1;
+                                }
+                            }
+                        </script> 
+          </div> 
+          <style> #wmg-logo-486061482 {transition: all .5s ease-out;}</style><a id="wmg-logo-486061482" title="Programmatic Agency WMG" style="z-index: 2; position: absolute; bottom: 4px; right: 0px; flex-direction: row; line-height: 50%; display: flex; align-items: center; height: 14px; font-size: 11px; transition: all 0.7s ease 0s; color: black; text-decoration: none;" href="http://adwmg.com/" target="_blank"><img src="https://wmgroup.us/img/logo-single.svg" alt="wmg-logo" width="auto" height="12" style="margin: 0px 5px;"></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> <!--ads asia Custom code sidebar disabled--> <!--End-Custom code sidebar--> <!-- <div class="ads_300 box-margin">
+        <img src="/images/300x300_2.jpg" alt="">
+    </div> --> 
+     </div><!-- end .col-right --> 
+    </div><!-- end .box-content-page --> 
+   </div><!-- end .inner --> 
+  </div><!-- end #container --> 
+  <br style="clear: both;"> 
+  <footer> 
+   <div class="inner"> 
+    <section class="foot-list"> 
+     <ul> 
+      <li> <a href="/news?utm_source=menu_footer&amp;utm_medium=internal_referral">News</a> </li> 
+      <li> <a href="/opinion?utm_source=menu_footer&amp;utm_medium=internal_referral">Opinion</a> </li> 
+      <li> <a href="/business?utm_source=menu_footer&amp;utm_medium=internal_referral">Business</a> </li> 
+      <li> <a href="/ann?utm_source=menu_footer&amp;utm_medium=internal_referral">Asia News Network</a> </li> 
+      <li> <a href="/property?utm_source=menu_footer&amp;utm_medium=internal_referral">Property</a> </li> 
+      <li> <a href="/edandtech?utm_source=menu_footer&amp;utm_medium=internal_referral">Ed &amp; Tech</a> </li> 
+      <li> <a href="/auto?utm_source=menu_footer&amp;utm_medium=internal_referral">Auto</a> </li> 
+      <li> <a href="/sport?utm_source=menu_footer&amp;utm_medium=internal_referral">Sport</a> </li> 
+      <li> <a href="/lifestyle?utm_source=menu_footer&amp;utm_medium=internal_referral">Lifestyle</a> </li> 
+      <li> <a href="/travel?utm_source=menu_footer&amp;utm_medium=internal_referral">Travel</a> </li> 
+      <li> <a href="/aroundthailand?utm_source=menu_footer&amp;utm_medium=internal_referral">Around Thailand</a> </li> <!-- 				<li>
+                    <a href="#">Classifieds</a>
+                    <a href="#">Job</a>
+                    <a href="#">Non-Job</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                    <a href="#">Photo  Gallery</a>
+                    <a href="#">Video  Gallery</a>
+                </li> --> 
+     </ul> 
+    </section> 
+    <nav class="social"> <a class="rss" href="#"><i class="fas fa-rss"></i></a> <a class="fb" href="https://www.facebook.com/NationNews/" target="_blank"><i class="fab fa-facebook-f"></i></a> <a class="tw" href="https://twitter.com/nationnews" target="_blank"><i class="fab fa-twitter"></i></a> <a>
+      <div id="truehits_div"></div></a> 
+    </nav> 
+    <section style="display: inline-block; text-align: center; margin: 0 auto; width: 100%;"> 
+     <p>ONLINE ADVERTISING</p> 
+     <p>Please contact :</p> 
+     <p>Nutwara Seangwarin Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a140f0e0c1b081b3a141b0e1315141d08150f0a54191517">[email&nbsp;protected]</a></p> 
+     <p>Chalengpot Boonsue Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a2a9a0ada4afa6b1aeb581afa0b5a8aeafa6b3aeb4b1efa2aeac">[email&nbsp;protected]</a></p> 
+     <p>ฝ่ายขาย: 02-3383333</p> 
+    </section> 
+   </div><!-- end .inner --> 
+   <div class="copyright">
+    Copyright Ⓒ 2019 Nationthailand - All rights reserved.
+   </div> 
+  </footer><!-- end #footer --> 
+  <div id="backtotop">
+   <i class="fas fa-chevron-up"></i>
+  </div> 
+  <div class="shadow"></div> <!-- Global site tag (gtag.js) - Google Analytics --> <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5466260-1"></script> --> 
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-5466260-1', 'auto');
+
+    // ga('create', 'UA-37392135-1', 'auto');
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
+    var current_url = window.location.href;
+    var url_array = current_url.split("?");
+    var count_array = url_array.length;
+    var q_string = '';
+    if(count_array > 1){
+        q_string = url_array[count_array - 1];
+        q_string = '?' + q_string;
+    }
+    ga('set', {
+        page: '/section/news' + q_string,
+        title: 'News'
+    });
+    ga('send', 'pageview');
+
+    // console.log(q_string);
+    // gtag('config', 'UA-5466260-1', {
+    //     'page_title' : 'News',
+    //     'page_path' : '/section/news' + q_string,
+    //     'page_location' : 'https://www.nationthailand.com/news/bangkok'
+    // });
+</script> 
+  <script type="text/javascript"> __th_page = "News";</script> 
+  <script type="text/javascript">
+  (function() {
+    var ga1 = document.createElement('script'); ga1.type = 'text/javascript';
+    ga1.async = true;
+    ga1.src = "//lvs.truehits.in.th/dataa/t0032120.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga1, s);
+  })();
+
+
+</script> <!-- /4246389/adop_VDO --> <!-- <div id='div-gpt-ad-1566889793803-0' style='width: 1px; height: 1px;'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1566889793803-0'); });
+    </script>
+    </div> --> <!-- /4246389/avantisvideo --> 
+  <div id="div-gpt-ad-1572250389854-0" style="width: 1px; height: 1px;"> 
+   <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1572250389854-0'); });
+        </script> 
+  </div> 
+  <script src="/assets/45dc19f6/jquery.js"></script> 
+  <script src="/js/jquery-3.3.1.min.js"></script> 
+  <script src="/js/main.js"></script> 
+  <script src="/plugin/flexslider/jquery.flexslider.js"></script> 
+  <script src="/js/video-js/video.min.js?1527489052"></script> 
+  <script src="/js/video-js/videojs-vast-vpaid/videojs_5.vast.vpaid.min.js"></script> 
+  <script src="/js/video-js/videojs-vast-vpaid/videojs-contrib-hls.min.js"></script> 
+  <script>jQuery(function ($) {
+
+    $(".index-slide").flexslider({
+        animation: "slide",
+        controlNav: false,
+        directionNav : true,
+        prevText: "",
+        nextText: ""
+    });
+    
+});</script> 
+ </body>
+</html>

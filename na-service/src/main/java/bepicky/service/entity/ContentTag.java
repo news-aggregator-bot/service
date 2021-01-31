@@ -1,5 +1,6 @@
 package bepicky.service.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,6 +24,7 @@ public class ContentTag extends IdEntity {
 
     @Column(nullable = false, name = "match_strategy")
     @Enumerated(EnumType.STRING)
+    @JsonProperty("match_strategy")
     private ContentTagMatchStrategy matchStrategy;
 
 }

@@ -42,7 +42,7 @@ public class PageContentContext {
             sourcePageName = normalizeName(sourcePageName);
             Path path = pages.get(sourceName).get(sourcePageName);
             if (path == null) {
-                throw new IllegalArgumentException("sourcepage:notfound:" + sourcePageName);
+                return new byte[0];
             }
             return Files.readAllBytes(path);
         } catch (IOException e) {
