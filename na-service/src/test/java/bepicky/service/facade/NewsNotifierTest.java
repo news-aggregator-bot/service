@@ -112,6 +112,7 @@ public class NewsNotifierTest {
 
     private Reader reader(Long id, Language language) {
         Reader r = new Reader();
+        r.setId(System.currentTimeMillis());
         r.setStatus(Reader.Status.ENABLED);
         r.setChatId(id);
         r.setPrimaryLanguage(language);
@@ -120,6 +121,7 @@ public class NewsNotifierTest {
 
     private NewsNote newsNote(String title, String url, String author, SourcePage sourcePage) {
         NewsNote note = new NewsNote();
+        note.setId(System.currentTimeMillis());
         note.setUrl(url);
         note.setTitle(title);
         note.setAuthor(author);
