@@ -38,6 +38,7 @@ public class TestEntityManager {
 
     public static Reader reader(Language l, Set<Language> languages, Set<Source> sources) {
         Reader r = new Reader();
+        r.setId(System.currentTimeMillis());
         r.setPrimaryLanguage(l);
         r.setLanguages(languages);
         r.setSources(sources);

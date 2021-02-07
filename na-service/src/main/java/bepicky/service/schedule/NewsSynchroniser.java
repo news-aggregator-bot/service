@@ -4,6 +4,7 @@ import bepicky.service.entity.Category;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +28,7 @@ public class NewsSynchroniser {
     private INewsNoteService notesService;
 
     @Autowired
-    private IReaderService readerService;
+    private INewsNoteNotificationService notificationService;
 
     @Value("${na.schedule.sync.enabled}")
     private boolean syncEnabled;
@@ -48,15 +49,15 @@ public class NewsSynchroniser {
             log.debug("news:sync:finished:empty");
             return;
         }
-        log.info("news:sync:get_fresh:{}", actualNotes.size());
-        Set<Reader> updatedReaders = actualNotes.stream()
+        actualNotes.stream()
             .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
-            .entrySet()
-            .stream()
-            .flatMap(e -> unfoldSourcePages(e.getKey()).peek(r -> r.addQueueNewsNote(e.getValue())))
-            .collect(Collectors.toSet());
-        readerService.saveAll(updatedReaders);
-        latestNewsNoteId = actualNotes.stream().mapToLong(NewsNote::getId).max().orElseGet(() -> latestNewsNoteId);
+            .forEach((key, value) -> unfoldSourcePages(key)
+                .forEach(r -> notificationService.saveNew(r, value)));
+
+        latestNewsNoteId = actualNotes.stream()
+            .mapToLong(NewsNote::getId)
+            .max()
+            .orElseGet(() -> latestNewsNoteId);
     }
 
     private Stream<Reader> unfoldSourcePages(List<SourcePage> sps) {

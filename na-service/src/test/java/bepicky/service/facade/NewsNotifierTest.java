@@ -15,10 +15,12 @@ import bepicky.service.entity.Localisation;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.schedule.NewsNotifier;
+import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
 import org.junit.Test;
@@ -36,6 +38,7 @@ import java.util.Arrays;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -56,6 +59,9 @@ public class NewsNotifierTest {
     @MockBean
     private IReaderService readerService;
 
+    @MockBean
+    private INewsNoteNotificationService notificationService;
+
     @Test
     public void sync_FullNewsNote_ShouldSendCorrectNotifyNewsRequest() {
 
@@ -68,11 +74,13 @@ public class NewsNotifierTest {
         regionUSA.setSourcePages(Arrays.asList(sourcePage));
 
         NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
-        Reader r = reader(1L, language, note);
+        Reader r = reader(1L, language);
+        NewsNoteNotification notification = new NewsNoteNotification(r, note);
 
         ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
 
         when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
+        when(notificationService.findNew(eq(r))).thenReturn(Arrays.asList(notification));
 
         newsNotifier.sync();
 
@@ -102,12 +110,11 @@ public class NewsNotifierTest {
         assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
     }
 
-    private Reader reader(Long id, Language language, NewsNote note) {
+    private Reader reader(Long id, Language language) {
         Reader r = new Reader();
         r.setStatus(Reader.Status.ENABLED);
         r.setChatId(id);
         r.setPrimaryLanguage(language);
-        r.setNotifyQueue(Sets.newHashSet(note));
         return r;
     }
 

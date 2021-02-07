@@ -7,10 +7,12 @@ import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
-import bepicky.service.service.IReaderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -31,8 +33,12 @@ import static bepicky.service.entity.TestEntityManager.region;
 import static bepicky.service.entity.TestEntityManager.source;
 import static bepicky.service.entity.TestEntityManager.ua;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anySet;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
@@ -46,10 +52,13 @@ public class NewsSynchroniserTest {
     private INewsNoteService newsNoteService;
 
     @MockBean
-    private IReaderService readerService;
+    private INewsNoteNotificationService notificationService;
+
+    @Captor
+    private ArgumentCaptor<Set<NewsNote>> notificationsAC;
 
     @Test
-    public void sync_NotesApplicable_ShouldFillUserQueueWithNotes() {
+    public void sync_ApplicableNotes_ShouldSaveAllNotes() {
         Source src = source("name");
         Language en = en();
         Reader r1 = reader(en, Set.of(en), Set.of(src));
@@ -67,21 +76,17 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(notes);
 
-        assertNull(r1.getNotifyQueue());
         newsSynchroniser.sync();
 
-        Set<NewsNote> queue = r1.getNotifyQueue();
+        verify(notificationService, times(1)).saveNew(eq(r1), notificationsAC.capture());
+
+        Set<NewsNote> queue = notificationsAC.getValue();
         assertEquals(2, queue.size());
         assertEquals(notes, queue);
     }
 
-    private void mockServiceNotes(Set<NewsNote> notes) {
-        when(newsNoteService.getTodayNotes()).thenReturn(notes);
-        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
-    }
-
     @Test
-    public void sync_NotesNotApplicableByReaderLanguage_ShouldNotFillNotApplicableUsersNewsNoteQueue() {
+    public void sync_NotApplicableNotesByReaderLanguage_ShouldSaveOnlyForApplicableReaders() {
         Source src = source("name");
         Language en = en();
         Language ua = ua();
@@ -103,18 +108,18 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(notes);
 
-        assertNull(applicable.getNotifyQueue());
-        assertNull(notApplicable.getNotifyQueue());
         newsSynchroniser.sync();
 
-        Set<NewsNote> queue = applicable.getNotifyQueue();
+        verify(notificationService, times(1)).saveNew(eq(applicable), notificationsAC.capture());
+        verify(notificationService, never()).saveNew(eq(notApplicable), anySet());
+
+        Set<NewsNote> queue = notificationsAC.getValue();
         assertEquals(2, queue.size());
         assertEquals(notes, queue);
-        assertNull(notApplicable.getNotifyQueue());
     }
 
     @Test
-    public void sync_NotesNotApplicableByReaderRegion_ShouldNotFillNotApplicableUsersNewsNoteQueue() {
+    public void sync_NotApplicableNotesByReaderRegion_ShouldNotSaveAnyNotes() {
         Source src = source("name");
         Language en = en();
         Reader notApplicable = reader(en, Set.of(en), Set.of(src));
@@ -133,14 +138,13 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(notes);
 
-        assertNull(notApplicable.getNotifyQueue());
         newsSynchroniser.sync();
 
-        assertNull(notApplicable.getNotifyQueue());
+        verify(notificationService, never()).saveNew(eq(notApplicable), any());
     }
 
     @Test
-    public void sync_NotesNotApplicableByReaderCategory_ShouldNotFillNotApplicableUsersNewsNoteQueue() {
+    public void sync_NotApplicableNotesByReaderCategory_ShouldNotSaveAnyNotes() {
         Source src = source("name");
         Language en = en();
         Reader notApplicable = reader(en, Set.of(en), Set.of(src));
@@ -159,14 +163,13 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(notes);
 
-        assertNull(notApplicable.getNotifyQueue());
         newsSynchroniser.sync();
 
-        assertNull(notApplicable.getNotifyQueue());
+        verify(notificationService, never()).saveNew(eq(notApplicable), any());
     }
 
     @Test
-    public void sync_EmptyCategoryReaders_ShouldNotFillNotApplicableUsersNewsNoteQueue() {
+    public void sync_EmptyCategoryReaders_ShouldNotSaveNotApplicableNewsNotes() {
         Source src = source("name");
         Language en = en();
         Reader notApplicable = reader(en, Set.of(en), Set.of(src));
@@ -183,14 +186,13 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(notes);
 
-        assertNull(notApplicable.getNotifyQueue());
         newsSynchroniser.sync();
 
-        assertNull(notApplicable.getNotifyQueue());
+        verify(notificationService, never()).saveNew(eq(notApplicable), any());
     }
 
     @Test
-    public void sync_EmptyActualNotes_ShouldNotFillNotApplicableUsersNewsNoteQueue() {
+    public void sync_EmptyActualNotes_ShouldNotSaveNotApplicableNewsNotes() {
         Source src = source("name");
         Language en = en();
         Reader notApplicable = reader(en, Set.of(en), Set.of(src));
@@ -199,10 +201,14 @@ public class NewsSynchroniserTest {
 
         mockServiceNotes(Set.of());
 
-        assertNull(notApplicable.getNotifyQueue());
         newsSynchroniser.sync();
 
-        assertNull(notApplicable.getNotifyQueue());
+        verify(notificationService, never()).saveNew(eq(notApplicable), any());
+    }
+
+    private void mockServiceNotes(Set<NewsNote> notes) {
+        when(newsNoteService.getTodayNotes()).thenReturn(notes);
+        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
     }
 
     @TestConfiguration

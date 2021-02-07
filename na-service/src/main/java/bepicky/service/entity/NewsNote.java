@@ -20,18 +20,19 @@ import java.util.List;
 @Entity
 @Table(name = "news_note")
 @EqualsAndHashCode(callSuper = true)
-@ToString
 public class NewsNote extends DatedEntity {
 
     @Column(nullable = false)
     private String title;
 
+    @ToString.Exclude
     @Column(name = "normalised_title", nullable = false)
     private String normalisedTitle;
 
     @Column(nullable = false)
     private String url;
 
+    @ToString.Exclude
     private String author;
 
     @ManyToMany(fetch = FetchType.LAZY)

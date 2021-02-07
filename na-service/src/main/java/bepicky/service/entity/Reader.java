@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.annotations.BatchSize;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
@@ -78,17 +80,6 @@ public class Reader extends DatedEntity {
 
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
-        name = "notify_queue",
-        joinColumns = {@JoinColumn(name = "id_reader")},
-        inverseJoinColumns = {@JoinColumn(name = "id_news_note")}
-    )
-    @JsonIgnore
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    private Set<NewsNote> notifyQueue;
-
-    @ManyToMany(cascade = CascadeType.PERSIST)
-    @JoinTable(
         name = "reader_source",
         joinColumns = {@JoinColumn(name = "id_reader")},
         inverseJoinColumns = {@JoinColumn(name = "id_source")}
@@ -135,17 +126,6 @@ public class Reader extends DatedEntity {
                 categories.remove(parent);
             }
         }
-    }
-
-    public void addQueueNewsNote(Set<NewsNote> newsNote) {
-        if (notifyQueue == null) {
-            notifyQueue = new HashSet<>(newsNote.size());
-        }
-        notifyQueue.addAll(newsNote);
-    }
-
-    public void removeQueueNewsNote(Set<NewsNote> newsNote) {
-        notifyQueue.removeAll(newsNote);
     }
 
     public void addSource(Source source) {
