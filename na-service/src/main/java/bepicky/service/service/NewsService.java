@@ -8,11 +8,12 @@ import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Comparator;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -53,14 +54,14 @@ public class NewsService implements INewsService {
     @Override
     public Set<NewsNote> readFreshNews(SourcePage sourcePage) {
         return process(sourcePage)
-            .collect(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(NewsNote::getUrl))));
+            .collect(Collectors.toCollection(TreeSet::new));
     }
 
     private Set<NewsNote> syncSource(Source source) {
         return source.getPages()
             .parallelStream()
             .flatMap(this::process)
-            .collect(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(NewsNote::getUrl))));
+            .collect(Collectors.toCollection(TreeSet::new));
     }
 
     private Stream<NewsNote> process(SourcePage page) {
@@ -73,6 +74,7 @@ public class NewsService implements INewsService {
     private NewsNote toNote(SourcePage page, PageParsedData data) {
         String normTitle = normalisationService.normaliseTitle(data.getTitle());
         return newsNoteService.findByNormalisedTitle(normTitle)
+            .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {
                 n.addSourcePage(page);
                 return n;

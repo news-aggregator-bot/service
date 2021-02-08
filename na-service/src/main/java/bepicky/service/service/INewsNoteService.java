@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -17,7 +18,9 @@ public interface INewsNoteService {
 
     Optional<NewsNote> find(Long id);
 
-    Optional<NewsNote> findByNormalisedTitle(String url);
+    List<NewsNote> findAllByNormalisedTitle(String title);
+
+    Optional<NewsNote> findByNormalisedTitle(String title);
 
     Set<NewsNote> getAllAfter(Long id);
 

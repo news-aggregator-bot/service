@@ -20,7 +20,7 @@ import java.util.List;
 @Entity
 @Table(name = "news_note")
 @EqualsAndHashCode(callSuper = true)
-public class NewsNote extends DatedEntity {
+public class NewsNote extends DatedEntity implements Comparable<NewsNote> {
 
     @Column(nullable = false)
     private String title;
@@ -48,5 +48,14 @@ public class NewsNote extends DatedEntity {
 
     public void addSourcePage(SourcePage page) {
         sourcePages.add(page);
+    }
+
+    @Override
+    public int compareTo(NewsNote o) {
+        int result = this.normalisedTitle.compareTo(o.getNormalisedTitle());
+        if (result == 0) {
+            this.sourcePages.addAll(o.sourcePages);
+        }
+        return result;
     }
 }

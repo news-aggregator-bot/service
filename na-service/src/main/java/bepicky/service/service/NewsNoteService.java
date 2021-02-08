@@ -15,6 +15,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -48,8 +49,13 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
+    public List<NewsNote> findAllByNormalisedTitle(String title) {
+        return repository.findAllByNormalisedTitle(title);
+    }
+
+    @Override
     public Optional<NewsNote> findByNormalisedTitle(String title) {
-        return repository.findByNormalisedTitle(title);
+        return repository.findTopByNormalisedTitleOrderByIdDesc(title);
     }
 
     @Override
