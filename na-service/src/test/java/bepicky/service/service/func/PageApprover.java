@@ -28,7 +28,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
+import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @RunWith(SpringRunner.class)
@@ -68,7 +72,7 @@ public class PageApprover {
         log.info("ingest:source:finish");
 
         sourcePageService.findAll()
-            .parallelStream()
+            .stream()
             .filter(s -> !pageContentContext.exists(s.getSource().getName(), s.getName()))
             .forEach(sourcePage -> {
                 log.info("read:sourcepage:start:{}", sourcePage.getName());
@@ -88,14 +92,18 @@ public class PageApprover {
     }
 
     private Document readDocument(SourcePage sourcePage) {
-        for (WebPageReader webPageReader : webPageReaders) {
-            try {
-                return webPageReader.read(sourcePage.getUrl());
-            } catch (SourceException e) {
-                log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
-            }
-        }
-        return null;
+        return webPageReaders.stream()
+            .map(reader -> {
+                try {
+                    return reader.read(sourcePage.getUrl());
+                } catch (SourceException e) {
+                    log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
+                    return null;
+                }
+            })
+            .filter(Objects::nonNull)
+            .max(Comparator.comparingInt(o -> o.html().length()))
+            .orElse(null);
     }
 
     @Configuration

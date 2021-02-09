@@ -49,15 +49,19 @@ public class NewsReader {
     @Transactional
     @Scheduled(cron = "${na.schedule.read.cron:*/2 * * * * *}")
     public void read() {
-        if (activeSourcesIds == null) {
+        if (activeSourcesIds == null || activeSourcesIds.isEmpty()) {
             refreshIds();
         }
         refreshSourceNumber();
+        if (activeSourcesIds.isEmpty()) {
+            log.warn("news:read:no sources");
+            return;
+        }
 
         Long sourceId = activeSourcesIds.get(sourceNumber.getAndIncrement());
         Source source = sourceService.find(sourceId).orElse(null);
         if (source == null) {
-            log.warn("synchronisation:source {}:404", sourceId);
+            log.warn("news:read:source {}:404", sourceId);
             return;
         }
         AtomicInteger sourcePageNum = sources.get(source.getName());
@@ -67,7 +71,7 @@ public class NewsReader {
             AtomicInteger value = new AtomicInteger(0);
             sources.put(source.getName(), value);
             sourcePageNum = value;
-            log.debug("synchronisation:source:ended:{}", source.getName());
+            log.debug("news:read:finish:{}", source.getName());
         }
 
         PageRequest singlePageRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
@@ -80,7 +84,7 @@ public class NewsReader {
         log.debug("news:read:{}", freshNotes.getNewsNotes().size());
     }
 
-    @Scheduled(cron = "${na.schedule.refresh-id.cron:0 0 */1 * * *}")
+    @Scheduled(cron = "${na.schedule.read.refresh-id:0 0 */1 * * *}")
     public void refreshIds() {
         activeSourcesIds = sourceService.findAllEnabled().stream().map(Source::getId).collect(Collectors.toList());
         log.debug("news:read:refresh-id:{}", activeSourcesIds);
@@ -88,7 +92,7 @@ public class NewsReader {
 
     private void refreshSourceNumber() {
         if (activeSourcesIds.size() <= sourceNumber.get()) {
-            log.debug("synchronisation:source number:refresh");
+            log.debug("news:read:refresh-sources");
             sourceNumber.set(0);
         }
     }

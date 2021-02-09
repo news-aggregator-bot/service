@@ -54,7 +54,7 @@ public class DefaultWebContentParser implements WebContentParser {
                     .flatMap(List::stream)
                     .filter(Objects::nonNull)
                     .collect(Collectors.toSet());
-                if (!parsedData.isEmpty()) {
+                if (parsedData.size() > 1) {
                     log.info(
                         "webcontentparser:{} :{}:{}",
                         page.getUrl(),

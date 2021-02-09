@@ -24,6 +24,9 @@ public class WebPageReaderConfiguration {
     @Value("${na.webpagereader.browser:true}")
     private boolean browserReaderEnabled;
 
+    @Value("${na.webpagereader.timeout:20}")
+    private int browserReadTimeout;
+
     public ChromeDriver chromeDriver() {
         if (SystemUtils.IS_OS_MAC) {
             Path drivers = Paths.get(getClass().getResource("/drivers").getPath());
@@ -34,7 +37,7 @@ public class WebPageReaderConfiguration {
         options.setAcceptInsecureCerts(true);
         options.setHeadless(true);
         ChromeDriver chromeDriver = new ChromeDriver(options);
-        chromeDriver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+        chromeDriver.manage().timeouts().pageLoadTimeout(browserReadTimeout, TimeUnit.SECONDS);
         return chromeDriver;
     }
 
