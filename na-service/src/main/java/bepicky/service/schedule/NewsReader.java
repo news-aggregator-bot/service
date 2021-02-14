@@ -4,22 +4,15 @@ import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsService;
-import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.PostConstruct;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -27,74 +20,34 @@ import java.util.stream.Collectors;
 public class NewsReader {
 
     @Autowired
-    private INewsService newsService;
-
-    @Autowired
     private ISourceService sourceService;
 
     @Autowired
-    private ISourcePageService sourcePageService;
+    private INewsService newsService;
 
-    private List<Long> activeSourcesIds;
+    @Value("${na.schedule.read.enabled}")
+    private boolean enabled;
 
-    private final AtomicInteger sourceNumber = new AtomicInteger(0);
-
-    private final Map<String, AtomicInteger> sources = new HashMap<>();
-
-    @PostConstruct
-    public void initSources() {
-        sourceService.findAllEnabled().forEach(s -> sources.put(s.getName(), new AtomicInteger(0)));
+    @Scheduled(initialDelay = 5000, fixedDelay = 10 * 60000)
+    public void readAll() {
+        if (enabled) {
+            log.info("news:read:started");
+            sourceService.findAllEnabled().forEach(this::read);
+        }
     }
 
     @Transactional
-    @Scheduled(cron = "${na.schedule.read.cron:*/2 * * * * *}")
-    public void read() {
-        if (activeSourcesIds == null || activeSourcesIds.isEmpty()) {
-            refreshIds();
-        }
-        refreshSourceNumber();
-        if (activeSourcesIds.isEmpty()) {
-            log.warn("news:read:no sources");
-            return;
-        }
-
-        Long sourceId = activeSourcesIds.get(sourceNumber.getAndIncrement());
-        Source source = sourceService.find(sourceId).orElse(null);
-        if (source == null) {
-            log.warn("news:read:source {}:404", sourceId);
-            return;
-        }
-        AtomicInteger sourcePageNum = sources.get(source.getName());
-
-        long sourcePageAmount = sourcePageService.countBySource(source);
-        if (sourcePageNum == null || sourcePageNum.get() == sourcePageAmount) {
-            AtomicInteger value = new AtomicInteger(0);
-            sources.put(source.getName(), value);
-            sourcePageNum = value;
-            log.debug("news:read:finish:{}", source.getName());
-        }
-
-        PageRequest singlePageRequest = PageRequest.of(sourcePageNum.getAndIncrement(), 1);
-        SourcePage sourcePage =
-            sourcePageService.findFirstBySource(source, singlePageRequest).orElse(null);
-        if (sourcePage == null) {
-            return;
-        }
-        NewsSyncResult freshNotes = newsService.read(sourcePage);
-        log.debug("news:read:{}", freshNotes.getNewsNotes().size());
+    public void read(Source source) {
+        source.getPages().forEach(this::readPage);
     }
 
-    @Scheduled(cron = "${na.schedule.read.refresh-id:0 0 */1 * * *}")
-    public void refreshIds() {
-        activeSourcesIds = sourceService.findAllEnabled().stream().map(Source::getId).collect(Collectors.toList());
-        log.debug("news:read:refresh-id:{}", activeSourcesIds);
-    }
-
-    private void refreshSourceNumber() {
-        if (activeSourcesIds.size() <= sourceNumber.get()) {
-            log.debug("news:read:refresh-sources");
-            sourceNumber.set(0);
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void readPage(SourcePage page) {
+        try {
+            NewsSyncResult freshNotes = newsService.read(page);
+            log.debug("news:read:{}", freshNotes.getNewsNotes().size());
+        } catch (RuntimeException e) {
+            log.warn("news:read:page:{}:failed", page.getUrl(), e);
         }
     }
-
 }

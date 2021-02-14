@@ -23,6 +23,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -42,6 +44,10 @@ public class SourcePage extends DatedEntity {
 
     @Column(nullable = false)
     private String url;
+
+    @Transient
+    @EqualsAndHashCode.Exclude
+    private String host;
 
     @Column(nullable = false, name = "url_normalisation")
     @Enumerated(EnumType.STRING)
@@ -92,6 +98,16 @@ public class SourcePage extends DatedEntity {
     public Collection<Category> getCommon() {
         initTypedCategories();
         return typedCategories.get(CategoryType.COMMON);
+    }
+
+    public String getHost() {
+        if (host == null) {
+            try {
+                host = new URL(this.getUrl()).getHost();
+            } catch (MalformedURLException ignore) {
+            }
+        }
+        return host;
     }
 
     private void initTypedCategories() {

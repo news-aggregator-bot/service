@@ -1,0 +1,1 @@
+alter table news_note drop index `url`

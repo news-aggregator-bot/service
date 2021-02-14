@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,7 @@ public class SourcePageDtoMapper {
     @Autowired
     private ModelMapper modelMapper;
 
-    public List<SourcePageDto> toDto(List<SourcePage> sourcePages, Language language) {
+    public List<SourcePageDto> toDto(Collection<SourcePage> sourcePages, Language language) {
         return sourcePages.stream().map(d -> toDto(d, language)).collect(Collectors.toList());
     }
 

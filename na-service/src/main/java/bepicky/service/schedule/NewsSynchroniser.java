@@ -60,10 +60,7 @@ public class NewsSynchroniser {
             .orElseGet(() -> latestNewsNoteId);
     }
 
-    private Stream<Reader> unfoldSourcePages(List<SourcePage> sps) {
-        if (sps.size() == 1) {
-            return findApplicableReaders(sps.get(0));
-        }
+    private Stream<Reader> unfoldSourcePages(Collection<SourcePage> sps) {
         return sps.stream().flatMap(this::findApplicableReaders);
     }
 

@@ -14,13 +14,15 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
 @Table(name = "news_note")
 @EqualsAndHashCode(callSuper = true)
-public class NewsNote extends DatedEntity implements Comparable<NewsNote> {
+public class NewsNote extends DatedEntity {
 
     @Column(nullable = false)
     private String title;
@@ -44,18 +46,10 @@ public class NewsNote extends DatedEntity implements Comparable<NewsNote> {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @JsonIgnore
-    private List<SourcePage> sourcePages = new ArrayList<>();
+    private Set<SourcePage> sourcePages = new HashSet<>();
 
     public void addSourcePage(SourcePage page) {
         sourcePages.add(page);
     }
 
-    @Override
-    public int compareTo(NewsNote o) {
-        int result = this.normalisedTitle.compareTo(o.getNormalisedTitle());
-        if (result == 0) {
-            this.sourcePages.addAll(o.sourcePages);
-        }
-        return result;
-    }
 }

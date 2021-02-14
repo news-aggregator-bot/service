@@ -16,8 +16,12 @@ public class BrowserWebPageReader implements WebPageReader {
 
     @Override
     public Document read(String path) {
-        driver.navigate().to(path);
-        return Parser.parse(driver.getPageSource(), path);
+        Document doc;
+        synchronized (driver) {
+            driver.navigate().to(path);
+            doc = Parser.parse(driver.getPageSource(), path);
+        }
+        return doc;
     }
 
     @PreDestroy

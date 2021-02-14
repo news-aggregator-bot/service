@@ -17,8 +17,10 @@ import java.util.Date;
 public class DatedEntity extends IdEntity {
 
     @Column(name = "creation_date", nullable = false)
+    @EqualsAndHashCode.Exclude
     private Date creationDate;
     @Column(name = "update_date", nullable = false)
+    @EqualsAndHashCode.Exclude
     private Date updateDate;
 
     @PrePersist

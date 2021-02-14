@@ -8,6 +8,8 @@ import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +24,10 @@ import java.util.stream.Stream;
 
 @Service
 @Transactional
+@Slf4j
 public class NewsService implements INewsService {
+
+    private static final int MAX_LINK_LENGTH = 251;
 
     @Autowired
     private ISourceService sourceService;
@@ -54,21 +59,37 @@ public class NewsService implements INewsService {
     @Override
     public Set<NewsNote> readFreshNews(SourcePage sourcePage) {
         return process(sourcePage)
-            .collect(Collectors.toCollection(TreeSet::new));
+            .collect(Collectors.toSet());
     }
 
     private Set<NewsNote> syncSource(Source source) {
         return source.getPages()
             .parallelStream()
             .flatMap(this::process)
-            .collect(Collectors.toCollection(TreeSet::new));
+            .collect(Collectors.toSet());
     }
 
     private Stream<NewsNote> process(SourcePage page) {
         return defaultParser.parse(page)
             .stream()
-            .filter(d -> !newsNoteService.existsByUrl(d.getLink()))
+            .filter(d -> validLink(page, d))
             .map(d -> toNote(page, d));
+    }
+
+    private boolean validLink(SourcePage page, PageParsedData d) {
+        if (StringUtils.isBlank(d.getLink())) {
+            log.debug("news:skip:empty link:" + d.getLink());
+            return false;
+        }
+        if (d.getLink().length() > MAX_LINK_LENGTH) {
+            log.debug("news:skip:long link:" + d.getLink());
+            return false;
+        }
+        if (!d.getLink().contains(page.getHost())) {
+            log.debug("news:skip:wrong host:" + d.getLink());
+            return false;
+        }
+        return !newsNoteService.existsByUrl(d.getLink());
     }
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {

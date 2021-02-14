@@ -39,4 +39,5 @@ na:
       limit: 1
       cron: '0 0 0 0/1 * *'
     read:
+      enabled: false
       cron: '* * * 0/1 * *'
