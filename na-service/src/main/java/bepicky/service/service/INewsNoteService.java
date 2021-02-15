@@ -33,4 +33,6 @@ public interface INewsNoteService {
     boolean existsByNormalisedTitle(String normalisedTitle);
 
     Page<NewsNote> searchByTitle(String key, Pageable pageable);
+
+    List<NewsNote> refresh(long from, long to);
 }

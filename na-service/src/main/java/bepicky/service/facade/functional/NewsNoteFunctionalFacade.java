@@ -1,10 +1,12 @@
 package bepicky.service.facade.functional;
 
+import bepicky.common.domain.dto.NewsNoteDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.NewsSearchRequest;
 import bepicky.common.domain.response.NewsSearchResponse;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
+import bepicky.service.dto.Ids;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.INewsNoteService;
@@ -14,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
@@ -51,6 +54,14 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
         response.setTotalElements(notes.getTotalElements());
         response.setTotalPages(notes.getTotalPages());
         return response;
+    }
+
+    @Override
+    public List<NewsNoteDto> refresh(Ids ids) {
+        return newsNoteService.refresh(ids.getFrom(), ids.getTo())
+            .stream()
+            .map(newsNoteDtoMapper::toDto)
+            .collect(Collectors.toList());
     }
 
 }

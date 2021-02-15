@@ -19,6 +19,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 
 @Service
 @Slf4j
@@ -32,7 +34,6 @@ public class NewsNoteService implements INewsNoteService {
     private IValueNormalisationService normalisationService;
 
     @Override
-    @Transactional
     public NewsNote save(NewsNote note) {
         log.info("news:save:{}", note);
         return repository.saveAndFlush(note);
@@ -100,6 +101,13 @@ public class NewsNoteService implements INewsNoteService {
             return Page.empty();
         }
         return repository.findByNormalisedTitleContainsOrderByCreationDateDesc(normalisedKey, pageable);
+    }
+
+    @Override
+    public List<NewsNote> refresh(long from, long to) {
+        List<Long> ids = LongStream.rangeClosed(from, to).boxed().collect(Collectors.toList());
+        log.info("news_note:refresh:id from {} to {}", from, to);
+        return repository.saveAll(repository.findAllByIdIn(ids));
     }
 
 }

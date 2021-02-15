@@ -13,13 +13,22 @@ public class NewsNoteDtoMapper {
     private SourcePageDtoMapper sourcePageDtoMapper;
 
     public NewsNoteDto toDto(NewsNote note, Language language) {
-        NewsNoteDto request = new NewsNoteDto();
-        request.setUrl(note.getUrl());
-        request.setTitle(note.getTitle());
-        request.setAuthor(note.getAuthor());
-        request.setDate(note.getCreationDate());
-        request.setSourcePages(sourcePageDtoMapper.toDto(note.getSourcePages(), language));
-        return request;
+        NewsNoteDto dto = new NewsNoteDto();
+        dto.setUrl(note.getUrl());
+        dto.setTitle(note.getTitle());
+        dto.setAuthor(note.getAuthor());
+        dto.setDate(note.getCreationDate());
+        dto.setSourcePages(sourcePageDtoMapper.toDto(note.getSourcePages(), language));
+        return dto;
+    }
+
+    public NewsNoteDto toDto(NewsNote note) {
+        NewsNoteDto dto = new NewsNoteDto();
+        dto.setUrl(note.getUrl());
+        dto.setTitle(note.getTitle());
+        dto.setAuthor(note.getAuthor());
+        dto.setDate(note.getCreationDate());
+        return dto;
     }
 
 }
