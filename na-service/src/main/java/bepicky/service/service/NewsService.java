@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,6 +41,9 @@ public class NewsService implements INewsService {
 
     @Autowired
     private IValueNormalisationService normalisationService;
+
+    @Value("${na.news.domain-check:true}")
+    private boolean checkDomain;
 
     @Override
     public NewsSyncResult sync(String name) {
@@ -85,7 +89,7 @@ public class NewsService implements INewsService {
             log.debug("news:skip:long link:" + d.getLink());
             return false;
         }
-        if (!page.getHost().contains("localhost") && !d.getLink().contains(page.getHost())) {
+        if (checkDomain && !d.getLink().contains(page.getHost())) {
             log.debug("news:skip:wrong host:" + d.getLink());
             return false;
         }

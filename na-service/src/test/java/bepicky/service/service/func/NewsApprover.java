@@ -36,7 +36,7 @@ import static org.junit.Assert.assertFalse;
 @RunWith(SpringRunner.class)
 @Slf4j
 @ActiveProfiles("it")
-//@Ignore
+@Ignore
 public class NewsApprover extends FuncSupport {
 
     @Autowired

@@ -28,6 +28,8 @@ database:
   ddl-file: src/main/resources/db/migration/V1__source.sql
 
 na:
+  news:
+    domain-check: false
   webpagereader:
     browser: false
   schedule:
