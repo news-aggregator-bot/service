@@ -1,6 +1,5 @@
 package bepicky.service.facade.functional;
 
-import bepicky.common.domain.dto.NewsNoteDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.NewsSearchRequest;
 import bepicky.common.domain.response.NewsSearchResponse;
@@ -16,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
@@ -57,11 +55,8 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
     }
 
     @Override
-    public List<NewsNoteDto> refresh(Ids ids) {
-        return newsNoteService.refresh(ids.getFrom(), ids.getTo())
-            .stream()
-            .map(newsNoteDtoMapper::toDto)
-            .collect(Collectors.toList());
+    public void refresh(Ids ids) {
+        newsNoteService.refresh(ids.getFrom(), ids.getTo());
     }
 
 }

@@ -1,6 +1,5 @@
 package bepicky.service.controller;
 
-import bepicky.common.domain.dto.NewsNoteDto;
 import bepicky.common.domain.request.NewsSearchRequest;
 import bepicky.common.domain.response.NewsSearchResponse;
 import bepicky.service.dto.Ids;
@@ -11,8 +10,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/news")
@@ -27,8 +24,8 @@ public class NewsController {
     }
 
     @PutMapping("/refresh")
-    public List<NewsNoteDto> refresh(@RequestBody Ids ids) {
-        return newsFacade.refresh(ids);
+    public void refresh(@RequestBody Ids ids) {
+        newsFacade.refresh(ids);
     }
 
 }
