@@ -47,7 +47,7 @@ public class ContentTagService implements IContentTagService {
 
     @Override
     @Transactional
-    public List<ContentTag> saveAll(List<ContentTag> tags) {
+    public List<ContentTag> saveAll(Collection<ContentTag> tags) {
         return repository.saveAll(tags);
     }
 

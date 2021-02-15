@@ -85,7 +85,7 @@ public class NewsService implements INewsService {
             log.debug("news:skip:long link:" + d.getLink());
             return false;
         }
-        if (!d.getLink().contains(page.getHost())) {
+        if (!page.getHost().contains("localhost") && !d.getLink().contains(page.getHost())) {
             log.debug("news:skip:wrong host:" + d.getLink());
             return false;
         }
@@ -93,7 +93,8 @@ public class NewsService implements INewsService {
     }
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {
-        String normTitle = normalisationService.normaliseTitle(data.getTitle());
+        String title = data.getTitle().trim();
+        String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
             .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {
@@ -101,7 +102,7 @@ public class NewsService implements INewsService {
                 return n;
             }).orElseGet(() -> {
                 NewsNote note = new NewsNote();
-                note.setTitle(data.getTitle());
+                note.setTitle(title);
                 note.setNormalisedTitle(normTitle);
                 note.setUrl(data.getLink());
                 note.setAuthor(data.getAuthor());

@@ -36,7 +36,7 @@ import static org.junit.Assert.assertFalse;
 @RunWith(SpringRunner.class)
 @Slf4j
 @ActiveProfiles("it")
-@Ignore
+//@Ignore
 public class NewsApprover extends FuncSupport {
 
     @Autowired
@@ -86,7 +86,7 @@ public class NewsApprover extends FuncSupport {
         stub(path, pageContent);
         Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
         stubVerify(path);
-        if (freshNews.size() == 1) {
+        if (freshNews.size() <= 1) {
             throw new IllegalStateException("Single note on the whole page? " + sourcePage.getUrl());
         }
 

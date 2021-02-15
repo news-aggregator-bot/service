@@ -42,7 +42,7 @@ public class ContentBlockService implements IContentBlockService {
     }
 
     @Override
-    public List<ContentBlock> saveAll(List<ContentBlock> blocks) {
+    public List<ContentBlock> saveAll(Collection<ContentBlock> blocks) {
         log.info("contentblock:save:{}", blocks);
         return repository.saveAll(blocks);
     }

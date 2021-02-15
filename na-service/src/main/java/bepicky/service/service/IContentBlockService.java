@@ -17,7 +17,7 @@ public interface IContentBlockService {
 
     ContentBlock save(ContentBlock block);
 
-    List<ContentBlock> saveAll(List<ContentBlock> blocks);
+    List<ContentBlock> saveAll(Collection<ContentBlock> blocks);
 
     void delete(Long id);
 

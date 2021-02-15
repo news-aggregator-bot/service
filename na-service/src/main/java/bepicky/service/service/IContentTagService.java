@@ -5,6 +5,7 @@ import bepicky.service.entity.ContentTag;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface IContentTagService {
 
@@ -18,7 +19,7 @@ public interface IContentTagService {
 
     ContentTag save(ContentTag tag);
 
-    List<ContentTag> saveAll(List<ContentTag> tags);
+    List<ContentTag> saveAll(Collection<ContentTag> tags);
 
     void delete(Long id);
 }

@@ -13,8 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -37,8 +37,7 @@ public class ContentBlock extends IdEntity {
         joinColumns = {@JoinColumn(name = "id_block")},
         inverseJoinColumns = {@JoinColumn(name = "id_tag")}
     )
-    @EqualsAndHashCode.Exclude
-    private List<ContentTag> tags;
+    private Set<ContentTag> tags;
 
     @Transient
     @JsonIgnore

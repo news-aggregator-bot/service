@@ -85,7 +85,7 @@ public class SourcePage extends DatedEntity {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @JsonProperty("content_blocks")
-    private List<ContentBlock> contentBlocks;
+    private Set<ContentBlock> contentBlocks;
 
     @Transient
     private Multimap<CategoryType, Category> typedCategories;

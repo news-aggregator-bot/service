@@ -8,9 +8,9 @@
   <script async src="//cdn.adsafeprotected.com/iasPET.1.js"></script>
   <script type="text/javascript" async src="https://cdn.cnn.com/ads/adfuel/modules/keypress.js"></script>
   <script async src="//c.amazon-adsystem.com/aax2/apstag.js"></script>
-  <script id="GPTScript" type="text/javascript" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script src="https://rules.quantcount.com/rules-p-D1yc5zQgjmqr5.js" async></script>
   <script type="text/javascript" async src="https://cdn.segment.com/analytics.js/v1/mXFw59FFEpUNOu3aeVJChKAsqAlZ4NEf/analytics.min.js"></script>
+  <script id="GPTScript" type="text/javascript" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script type="text/javascript" async src="https://sb.scorecardresearch.com/beacon.js"></script>
   <script type="text/javascript" async src="//s.cdn.turner.com/analytics/comscore/streamsense.5.2.0.160629.min.js"></script>
   <script type="text/javascript" async src="//www.i.cdn.cnn.com/zion/zion-mb.min.js"></script>
@@ -103,6 +103,7 @@
                         </script>
   <script src="//i.cdn.turner.com/ads/adfuel/ais/2.1/cnn-ais.js"></script>
   <script src="//i.cdn.turner.com/ads/adfuel/adfuel-2.1.js" async></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/6.12.0/otBannerSdk.js" async type="text/javascript"></script>
   <style type="text/css" id="s301-0">/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -441,7 +442,6 @@ body > img[style*="height:0"] {
 </style>
   <style>.str-adunit{cursor:pointer;position:relative}
 </style>
-  <script src="https://cdn.cookielaw.org/scripttemplates/6.12.0/otBannerSdk.js" async type="text/javascript"></script>
   <script src="https://lightning.cnn.com/launch/7be62238e4c3/97fa00444124/875094651284/EX2305e3de972b4f50822ce5e19050fdf0-libraryCode_source.min.js" async></script>
   <style data-styled="" data-styled-version="4.4.1"></style>
   <style type="text/css" id="s993-0">.Topic__component {
@@ -1320,6 +1320,9 @@ body > img[style*="height:0"] {
   <script id="null" type="application/ld+json" data-rh="true">{"@context":"http://schema.org/","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https://google.com/article"},"description":"Outstanding photography, sculpture, digital art and more from the world's best artists.","publisher":{"@type":"Organization","name":"CNN","logo":{"@type":"ImageObject","url":"https://dynaimage.cdn.cnn.com/cnn/q_auto,h_60/https%3A%2F%2Fi2.cdn.turner.com%2Fcnn%2F2017%2Fimages%2F09%2F14%2Flogo-cnnstyle.png"}},"url":"https://www.cnn.com/style/arts"}</script>
   <script src="//native.sharethrough.com/assets/sfp.js" defer="true" data-rh="true"></script>
   <script src="//lightning.cnn.com/launch/7be62238e4c3/97fa00444124/launch-2878c87af5e3.min.js" defer="true" data-rh="true"></script>
+  <meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021021001.js?31060132" async></script>
   <style>._19_ff9lYbpT9kOPGhy3mQS{height:13px;width:13px;background-size:13px 13px;background-repeat:no-repeat;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABGdBTUEAALGPC/xhBQAAAghJREFUKBV9kU1oE0EUx9+bmd1kszVNithEi9qiFox4KhERhFjU4kVED+pFKfYkCOJB0Etv3jxYkJ5UFERarBokN6EgAamp1g8QqmIU0w9NSD/S3WR3Zp5bDxKK+i7vY/6/P4832JV9db/oyiPrDDactPhwIrzwfTyTkfCfQGO0UGMIttYEtsB5i8MtU8LQ1+M9s//imCSKdFlibHvE3L/g6dxsnQbKRPm2scnrHY8Le/4GMgJCRnqGA76Hk+n+3TEzHdRvl6U+M+9RLvGocGNL9k1nM8wYIiwqsKqC48Wpjymnoc62cz64MYQnYgZ7sCzp3IzTmEpmJ69uHZlIrMKs2WHO0YoIwzYDOx21XtqxpUtRgx22DTb6o6EGK8iepXKvBwQRgYkMvIAuN5wwCtZSU0r8DPpiJlMP0vPOJ++moyi7v9W8fSUXrgkKppaBYAX5yxJtLvp+JvAZr9Rdvi33Ikqe0bsoG6dWNKRbEPIpWwyJQAtaAzEOEEamOWhqNY31ES2PVVxx0FH6dPBU7ggbF0yybuf7Ut5vSCC5IBV5DAJDUFXPv1kFguCKpWQILlsh+96Hvp1//k0YDP0VRbvqqn4oLoQbFzjtK3IEsGxUwcjnoz2fVrdpDgw9LFR9olaQGvduiFyJk3n3aW93qVm0tmZtHCeEptKmCD/f7vE71oEdc2tFa/tfdMfbvTEpKWgAAAAASUVORK5CYII=");margin:1px 2px 1px 4px}._3hK_KnZ5Ea1czHOAb0XjRp{cursor:pointer;position:absolute;right:0;bottom:0;border-radius:8px 0px 0px 0px;background-color:rgba(255,255,255,0.7);z-index:10;display:flex;flex-direction:row-reverse}._3hK_KnZ5Ea1czHOAb0XjRp:hover ._1iU6QyDEUwEXo1W-5nEg60{display:block}._1iU6QyDEUwEXo1W-5nEg60{margin-left:9px;font-size:11px;font-family:arial;font-weight:regular;line-height:14px;display:none}
 </style>
   <style>.R2N_WVm_zTEHEI7X9DGMf{font-size:10px;line-height:12px;background-color:white;overflow-y:scroll;height:82px;width:100%}._2WH97blvkdK07rIgKWx1KO{width:100%;line-height:18px;font-size:14px;font-weight:bold;text-transform:uppercase}._1TepfEsDUrYMM83A6YvQ4v{height:100px;bottom:0px;position:absolute}.str-adunit.str-isi{padding-bottom:100px}
@@ -1481,16 +1484,13 @@ body > img[style*="height:0"] {
                         }
                     
             </style>
-  <meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-  <meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021020401.js" async></script>
   <script src="https://v8-emea.sdk.beemray.com/content/websdk/39a34d8d-dd1d-4fbf-aa96-fdc5f0329451"></script>
   <script type="text/javascript" async src="https://cdn.krxd.net/controltag?confid=teff71jyu"></script>
   <link rel="preload" href="https://adservice.google.co.th/adsid/integrator.js?domain=edition.cnn.com" as="script">
   <script type="text/javascript" src="https://adservice.google.co.th/adsid/integrator.js?domain=edition.cnn.com"></script>
   <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=edition.cnn.com" as="script">
   <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=edition.cnn.com"></script>
-  <link rel="prefetch" href="https://6e37c8098492e3fce897dd03ea2dcced.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html">
+  <link rel="prefetch" href="https://47ad58a205e27048b6032949c14e1bfc.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html">
   <link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html">
  </head>
  <body>
@@ -1500,7 +1500,7 @@ body > img[style*="height:0"] {
     <div class="">
      <div class="StickyTop__ad" style="transition:max-height 0.6s cubic-bezier(0.52, 0.005, 0, 1.005);max-height:none">
       <div class="Ad__component">
-       <div id="ad_bnr_atf_01" class="Ad__tag adfuel-rendered" data-google-query-id="CPK31dil3e4CFSnEcwEdnC4CPg" style="display: none;">
+       <div id="ad_bnr_atf_01" class="Ad__tag adfuel-rendered" data-google-query-id="CJq7lI-n6-4CFTUStwAdSVsB_A" style="display: none;">
         <div id="google_ads_iframe_/8663477/CNNi/style/arts/landing_0__container__" style="border: 0pt none; width: 1px; height: 1px;"></div>
        </div>
       </div>
@@ -1532,14 +1532,14 @@ body > img[style*="height:0"] {
           <div class="LayoutHeroAndSmall__lead">
            <div class="CardHero__component">
             <div class="CardHero__thumb">
-             <a class="" href="/style/article/blue-beads-alaska-history-scli-intl-scn/index.html" target="_self">
+             <a class="" href="/style/article/friends-robin-dunbar-culture-queue-wellness/index.html" target="_self">
               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-               <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_736,c_fill,g_auto,h_414,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210208103241-alaska-beads-discovery.jpg">
+               <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_721,c_fill,g_auto,h_406,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210208182455-thelma-and-louise-restricted.jpg">
                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                 <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                 <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                   <div style="position: absolute; left: 0px; top: 0px; width: 747px; height: 425px;"></div>
+                   <div style="position: absolute; left: 0px; top: 0px; width: 762px; height: 447px;"></div>
                   </div>
                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                    <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1552,7 +1552,7 @@ body > img[style*="height:0"] {
             <div class="CardHero__details">
              <a class="CardHero__section undefined" href="/style/arts" target="_self">arts</a>
              <div>
-              <a class="CardHero__title" href="/style/article/blue-beads-alaska-history-scli-intl-scn/index.html" target="_self">These blue beads found in Alaska may be the first European items in North America</a>
+              <a class="CardHero__title" href="/style/article/friends-robin-dunbar-culture-queue-wellness/index.html" target="_self">Forget your valentine -- friends are your most important relationships</a>
              </div>
             </div>
            </div>
@@ -1561,14 +1561,14 @@ body > img[style*="height:0"] {
            <div class="LayoutGrid__card">
             <div class="CardBasic__component">
              <div class="CardBasic__thumb">
-              <a class="" href="/style/article/suzanne-valadon-nudes-art-history/index.html" target="_self">
+              <a class="" href="/style/article/cambodia-khmer-artifacts-douglas-latchford/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210128121600-03-suzanne-valadon-art-history-restricted.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210207221530-01-latchford-art-cambodia-card.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1582,7 +1582,7 @@ body > img[style*="height:0"] {
               <div>
                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
                <div>
-                <a class="CardBasic__title" href="/style/article/suzanne-valadon-nudes-art-history/index.html" target="_self">This rebellious female painter of bold nude portraits has been overlooked for a century</a>
+                <a class="CardBasic__title" href="/style/article/cambodia-khmer-artifacts-douglas-latchford/index.html" target="_self">Controversial art dealer's daughter will return over 100 antiquities to Cambodia</a>
                </div>
               </div>
              </div>
@@ -1591,14 +1591,193 @@ body > img[style*="height:0"] {
            <div class="LayoutGrid__card">
             <div class="CardBasic__component">
              <div class="CardBasic__thumb">
-              <a class="" href="/style/article/amanda-gorman-super-bowl-poets/index.html" target="_self">
+              <a class="" href="/style/article/oldest-wind-instrument-scli-intl-scn/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210204115850-04-super-bowl-youth-poet-laureates.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210210140610-03-oldest-wind-instrument-card-restricted.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
+                   </div>
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; width: 200%; height: 200%;"></div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div></a>
+             </div>
+             <div class="CardBasic__details">
+              <div>
+               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+               <div>
+                <a class="CardBasic__title" href="/style/article/oldest-wind-instrument-scli-intl-scn/index.html" target="_self">Listen to the sound of an 18,000-year-old musical instrument </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="LayoutGrid__card">
+            <div class="CardBasic__component">
+             <div class="CardBasic__thumb">
+              <a class="" href="/style/article/portrait-of-humanity-award-intl-scli/index.html" target="_self">
+               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210210115742-14b-portrait-of-humanity-award-photos-2021-restricted.jpg">
+                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
+                   </div>
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; width: 200%; height: 200%;"></div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div></a>
+             </div>
+             <div class="CardBasic__details">
+              <div>
+               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+               <div>
+                <a class="CardBasic__title" href="/style/article/portrait-of-humanity-award-intl-scli/index.html" target="_self">Portrait of Humanity photo awards capture hope and courage in a year of struggle</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="LayoutGrid__card">
+            <div class="CardBasic__component">
+             <div class="CardBasic__thumb">
+              <a class="" href="/style/article/gray-malin-the-essential-collection-book/index.html" target="_self">
+               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210209125723-02b-gray-malin-photos-restricted.jpg">
+                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
+                   </div>
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; width: 200%; height: 200%;"></div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div></a>
+             </div>
+             <div class="CardBasic__details">
+              <div>
+               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+               <div>
+                <a class="CardBasic__title" href="/style/article/gray-malin-the-essential-collection-book/index.html" target="_self">Dreamy photos from around the world offer the chance to escape without leaving home </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="Zone__component">
+        <div class="Zone__wrapper">
+         <div class="LayoutLargeAndSmall__component">
+          <div class="LayoutLargeAndSmall__lead">
+           <div class="LayoutGrid__component LayoutGrid__isLead">
+            <div class="LayoutGrid__card">
+             <div class="Ad__component">
+              <div id="ad_nat_btf_02" class="Ad__tag adfuel-rendered" data-google-query-id="CJu7lI-n6-4CFTUStwAdSVsB_A" style="">
+               <div id="google_ads_iframe_/8663477/CNNi/style/arts/landing_1__container__" style="border: 0pt none;" class="str-landing-parent">
+                <iframe id="google_ads_iframe_/8663477/CNNi/style/arts/landing_1" title="advertisement" name="google_ads_iframe_/8663477/CNNi/style/arts/landing_1" width="1" height="2" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" style="border: 0px; vertical-align: bottom; display: none;" data-google-container-id="2" data-load-complete="true" data-str-iframe-visited="true" data-integralas-id-d7b036da-d506-740f-2dc3-8a0a5aba70c6=""></iframe>
+                <div id="" data-str-native-key="9CfBBxU8bxfeigvKPKyaJZnP" data-str-visited-flag="true" data-str-arid="d-f5d2cff5-cb1f-4822-8510-b3e8b780dc73" data-str-rendered="1613372016871" data-tracking-key="_dqfx514w4">
+                 <div>
+                  <div>
+                   <div id="moatPxDiv509908" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
+                    <div style="position: absolute; width: 7.88px; height: 8.16px; z-index: -9999; border-style: none; left: 16px; top: 0px;" id="MoatPxIOPT0_76603476"></div>
+                   </div>
+                   <div id="moatPxDiv973091" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
+                    <div style="position: absolute; width: 7.88px; height: 8.16px; z-index: -9999; border-style: none; left: 352px; top: 0px;" id="MoatPxIOPT0_55358116"></div>
+                   </div>
+                   <div id="moatPxDiv354347" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
+                    <div style="position: absolute; width: 7.88px; height: 8.16px; z-index: -9999; border-style: none; left: 16px; top: 350px;" id="MoatPxIOPT0_51800808"></div>
+                   </div>
+                   <div id="moatPxDiv119833" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
+                    <div style="position: absolute; width: 7.88px; height: 8.16px; z-index: -9999; border-style: none; left: 352px; top: 350px;" id="MoatPxIOPT0_52770168"></div>
+                   </div>
+                   <div id="str-1613372016872" class="str-adunit str-adunit-style-landing str-card-exp str-collapsed str-clickout CardBasic__component CardBasic__isLead str-featured-content" style="text-align:left"> 
+                    <div class="CardBasic__thumb"> <a> 
+                      <div class="Image__component Image__hasAspectRatio" style="position:relative"> 
+                       <div class="thumbnail-wrapper">
+                        <div class="str-thumbnail" style="height:300px;width:100%;background-image:url(https://cdn.cnn.com/cnnnext/dam/assets/180904095442-chen-man-tease-2-super-169.jpg);background-size:cover;background-position:50%;background-repeat:no-repeat;background-color:#eee"></div>
+                       </div> 
+                       <div class="CardBasic__videoIcon" style="background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwQzBDMEMiIGQ9Ik0wIDBoNTB2NTBIMHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTggMTd2MTZsMTQtOHoiLz48L2c+PC9zdmc+);background-size:contain;bottom:0;height:50px;left:0;position:absolute;width:50px"></div> 
+                      </div> </a> 
+                    </div> 
+                    <div class="CardBasic__details"> <a class="str-fc-title CardBasic__section" style="display:none">arts</a> 
+                     <div class="CardBasic__byline" style="color:#b5924a;margin:0;font-weight:400"> 
+                      <div class="str-diamond"></div> Sponsor content by <b style="font-weight:500;text-transform:uppercase">CNN</b> 
+                     </div> 
+                     <div class="str-title" style="margin-top:18px"> <a class="CardBasic__title str-title-text" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">What -- and who -- will define beauty in the year 2050?</a> 
+                     </div> 
+                    </div> 
+                    <script>!function(){var e=location.pathname.split("/style/"),t="Design";1<e.length&&(t=e[1]);var n=document.getElementById("str-1613372016872");n.querySelector(".str-fc-title").textContent=t;var a=n.parentElement.parentElement.parentElement.parentElement;a&&(a.classList.add("str-landing-parent"),a.nextElementSibling&&a.nextElementSibling.classList.add("str-landing-next-element"));-1<["DSk7MovTbTWfZGk7SASuTgJcKG","DSaqZMyVw3MDRB1oRNqLgxzvCm","DSsTdViAps5c9XsNhZkjeZsFZA","DSZtTheRMfNE7CgYwJa76jnubw","DSvpJiYfXLSAFAr1seRePYvA4Y","DSwtXk6e3t72KYrGKJuF5xDWNT","DS9Dtj7rkTBzfeazVUphH7fhYm","DSczV2EvPFLqEz6hvcvZJypRpP","DSiC5x1dSYdWzBDBDsakJ4ABTc"].indexOf("DSZtTheRMfNE7CgYwJa76jnubw")&&n.classList.add("str-featured-content")}()</script>
+                    <style>.str-adunit-style-landing .CardBasic__byline:before{display:none!important}@media (max-width:1023px) and (min-width:768px){.str-landing-parent{border-width:0;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%;padding:0 0 32px 16px!important;border-width:0 0 0 1px;margin-bottom:32px}.str-landing-next-element{border-width:0;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%;padding:0 16px 32px 0!important}.str-adunit-style-landing .str-title-text{padding-right:0!important;-webkit-line-clamp:5!important}}.str-adunit-style-landing.str-featured-content .str-fc-title{display:block!important;text-transform:capitalize!important}.str-adunit-style-landing.str-featured-content .CardBasic__byline{display:none!important}.str-adunit-style-landing.str-featured-content .CardBasic__details{margin-top:24px!important}.str-adunit-style-landing.str-featured-content .str-title{margin-top:0!important}.str-adunit-style-landing .thumbnail-wrapper{width:100%!important;height:auto!important}.str-adunit-style-landing .str-thumbnail{width:100%!important;height:0!important;padding-bottom:56.25%!important}.str-adunit-style-landing .CardBasic__videoIcon,.str-adunit-style-landing .icon-wrapper{display:none}.str-adunit-style-landing.str-hosted-video .CardBasic__videoIcon,.str-adunit-style-landing.str-video .CardBasic__videoIcon{display:inline-block!important}.str-adunit-style-landing .str-diamond{float:left;width:0;height:0;border:6px solid transparent;border-bottom-color:#b5924a;position:relative;top:-6px;margin-right:6px}.str-adunit-style-landing .str-diamond:after{content:'';position:absolute;left:-6px;top:6px;width:0;height:0;border:6px solid transparent;border-top-color:#b5924a}.str-adunit-style-landing .str-opt-out{margin:0!important}</style>
+                    <div></div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="LayoutGrid__card">
+             <div class="CardBasic__component CardBasic__isLead">
+              <div class="CardBasic__thumb">
+               <a class="" href="/style/article/suzanne-valadon-nudes-art-history/index.html" target="_self">
+                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_721,c_fill,g_auto,h_406,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210128121600-03-suzanne-valadon-art-history-restricted.jpg">
+                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                     <div style="position: absolute; left: 0px; top: 0px; width: 762px; height: 447px;"></div>
+                    </div>
+                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                     <div style="position: absolute; width: 200%; height: 200%;"></div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div></a>
+              </div>
+              <div class="CardBasic__details">
+               <div>
+                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+                <div>
+                 <a class="CardBasic__title" href="/style/article/suzanne-valadon-nudes-art-history/index.html" target="_self">This rebellious female painter of bold nude portraits has been overlooked for a century</a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="LayoutGrid__component LayoutGrid__isSmall">
+           <div class="LayoutGrid__card">
+            <div class="CardBasic__component">
+             <div class="CardBasic__thumb">
+              <a class="" href="/style/article/amanda-gorman-super-bowl-poets/index.html" target="_self">
+               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210204115850-04-super-bowl-youth-poet-laureates.jpg">
+                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1623,12 +1802,12 @@ body > img[style*="height:0"] {
              <div class="CardBasic__thumb">
               <a class="" href="/style/article/tomas-karmelo-amaya-sweetheart-dancers-swing/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210121115927-05-tomas-karmelo-amaya-sweetheart-dancers-photos-restricted.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210121115927-05-tomas-karmelo-amaya-sweetheart-dancers-photos-restricted.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1653,12 +1832,12 @@ body > img[style*="height:0"] {
              <div class="CardBasic__thumb">
               <a class="" href="/style/article/angelina-jolie-winston-churchill-painting-scli-intl/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200426142552-angelina-jolie-file-2019.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200426142552-angelina-jolie-file-2019.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1678,6 +1857,45 @@ body > img[style*="height:0"] {
              </div>
             </div>
            </div>
+           <div class="LayoutGrid__card">
+            <div class="CardBasic__component">
+             <div class="CardBasic__thumb">
+              <a class="" href="/style/article/kennedi-carter-black-cowboys-swing/index.html" target="_self">
+               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210118122418-01-kennedi-carter-ridin-sucka-free-photos-restricted.jpg">
+                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
+                   </div>
+                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                    <div style="position: absolute; width: 200%; height: 200%;"></div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div></a>
+             </div>
+             <div class="CardBasic__details">
+              <div>
+               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+               <div>
+                <a class="CardBasic__title" href="/style/article/kennedi-carter-black-cowboys-swing/index.html" target="_self">The Black cowboys and cowgirls of American cities -- in photos</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="Zone__component Zone__isBleed">
+        <div class="Zone__wrapper">
+         <div class="Ad__component">
+          <div id="ad_bnr_btf_01" class="Ad__tag adfuel-rendered" data-google-query-id="CJy7lI-n6-4CFTUStwAdSVsB_A" style="display: none;">
+           <div id="google_ads_iframe_/8663477/CNNi/style/arts/landing_2__container__" style="border: 0pt none; width: 1px; height: 1px;"></div>
           </div>
          </div>
         </div>
@@ -1688,63 +1906,16 @@ body > img[style*="height:0"] {
           <div class="LayoutLargeAndSmall__lead">
            <div class="LayoutGrid__component LayoutGrid__isLead">
             <div class="LayoutGrid__card">
-             <div class="Ad__component">
-              <div id="ad_nat_btf_02" class="Ad__tag adfuel-rendered" data-google-query-id="CPS31dil3e4CFSnEcwEdnC4CPg" style="">
-               <div id="google_ads_iframe_/8663477/CNNi/style/arts/landing_2__container__" style="border: 0pt none;" class="str-landing-parent">
-                <iframe id="google_ads_iframe_/8663477/CNNi/style/arts/landing_2" title="advertisement" name="google_ads_iframe_/8663477/CNNi/style/arts/landing_2" width="1" height="2" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" srcdoc="" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-presentation" style="border: 0px; vertical-align: bottom; display: none;" data-google-container-id="3" data-load-complete="true" data-str-iframe-visited="true" data-integralas-id-5b6662a0-3b60-1496-6f46-5581d9614b4b=""></iframe>
-                <div id="" data-str-native-key="9CfBBxU8bxfeigvKPKyaJZnP" data-str-visited-flag="true" data-str-arid="d-ee9c8e41-63d4-4203-be36-9bb62c4fa9a8" data-str-rendered="1612890597554" data-tracking-key="_v7gr8hgek">
-                 <div>
-                  <div>
-                   <div id="moatPxDiv543021" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
-                    <div style="position: absolute; width: 8.04px; height: 8.26px; z-index: -9999; border-style: none; left: 16px; top: 0px;" id="MoatPxIOPT0_40312038"></div>
-                   </div>
-                   <div id="moatPxDiv122794" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
-                    <div style="position: absolute; width: 8.04px; height: 8.26px; z-index: -9999; border-style: none; left: 359px; top: 0px;" id="MoatPxIOPT0_68561508"></div>
-                   </div>
-                   <div id="moatPxDiv556307" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
-                    <div style="position: absolute; width: 8.04px; height: 8.26px; z-index: -9999; border-style: none; left: 16px; top: 354px;" id="MoatPxIOPT0_24714648"></div>
-                   </div>
-                   <div id="moatPxDiv349700" style="width: 0px; height: 0px; position: absolute; top: 0px; left: 0px;">
-                    <div style="position: absolute; width: 8.04px; height: 8.26px; z-index: -9999; border-style: none; left: 359px; top: 354px;" id="MoatPxIOPT0_93613499"></div>
-                   </div>
-                   <div id="str-1612890597555" class="str-adunit str-adunit-style-landing str-card-exp str-collapsed str-clickout CardBasic__component CardBasic__isLead str-featured-content" style="text-align:left"> 
-                    <div class="CardBasic__thumb"> <a> 
-                      <div class="Image__component Image__hasAspectRatio" style="position:relative"> 
-                       <div class="thumbnail-wrapper">
-                        <div class="str-thumbnail" style="height:300px;width:100%;background-image:url(https://cdn.cnn.com/cnnnext/dam/assets/180904095442-chen-man-tease-2-super-169.jpg);background-size:cover;background-position:50%;background-repeat:no-repeat;background-color:#eee"></div>
-                       </div> 
-                       <div class="CardBasic__videoIcon" style="background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwQzBDMEMiIGQ9Ik0wIDBoNTB2NTBIMHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTggMTd2MTZsMTQtOHoiLz48L2c+PC9zdmc+);background-size:contain;bottom:0;height:50px;left:0;position:absolute;width:50px"></div> 
-                      </div> </a> 
-                    </div> 
-                    <div class="CardBasic__details"> <a class="str-fc-title CardBasic__section" style="display:none">arts</a> 
-                     <div class="CardBasic__byline" style="color:#b5924a;margin:0;font-weight:400"> 
-                      <div class="str-diamond"></div> Sponsor content by <b style="font-weight:500;text-transform:uppercase">CNN</b> 
-                     </div> 
-                     <div class="str-title" style="margin-top:18px"> <a class="CardBasic__title str-title-text" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">What -- and who -- will define beauty in the year 2050?</a> 
-                     </div> 
-                    </div> 
-                    <script>!function(){var e=location.pathname.split("/style/"),t="Design";1<e.length&&(t=e[1]);var n=document.getElementById("str-1612890597555");n.querySelector(".str-fc-title").textContent=t;var a=n.parentElement.parentElement.parentElement.parentElement;a&&(a.classList.add("str-landing-parent"),a.nextElementSibling&&a.nextElementSibling.classList.add("str-landing-next-element"));-1<["DSk7MovTbTWfZGk7SASuTgJcKG","DSaqZMyVw3MDRB1oRNqLgxzvCm","DSsTdViAps5c9XsNhZkjeZsFZA","DSZtTheRMfNE7CgYwJa76jnubw","DSvpJiYfXLSAFAr1seRePYvA4Y","DSwtXk6e3t72KYrGKJuF5xDWNT","DS9Dtj7rkTBzfeazVUphH7fhYm","DSczV2EvPFLqEz6hvcvZJypRpP","DSiC5x1dSYdWzBDBDsakJ4ABTc"].indexOf("DSZtTheRMfNE7CgYwJa76jnubw")&&n.classList.add("str-featured-content")}()</script>
-                    <style>.str-adunit-style-landing .CardBasic__byline:before{display:none!important}@media (max-width:1023px) and (min-width:768px){.str-landing-parent{border-width:0;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%;padding:0 0 32px 16px!important;border-width:0 0 0 1px;margin-bottom:32px}.str-landing-next-element{border-width:0;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%;padding:0 16px 32px 0!important}.str-adunit-style-landing .str-title-text{padding-right:0!important;-webkit-line-clamp:5!important}}.str-adunit-style-landing.str-featured-content .str-fc-title{display:block!important;text-transform:capitalize!important}.str-adunit-style-landing.str-featured-content .CardBasic__byline{display:none!important}.str-adunit-style-landing.str-featured-content .CardBasic__details{margin-top:24px!important}.str-adunit-style-landing.str-featured-content .str-title{margin-top:0!important}.str-adunit-style-landing .thumbnail-wrapper{width:100%!important;height:auto!important}.str-adunit-style-landing .str-thumbnail{width:100%!important;height:0!important;padding-bottom:56.25%!important}.str-adunit-style-landing .CardBasic__videoIcon,.str-adunit-style-landing .icon-wrapper{display:none}.str-adunit-style-landing.str-hosted-video .CardBasic__videoIcon,.str-adunit-style-landing.str-video .CardBasic__videoIcon{display:inline-block!important}.str-adunit-style-landing .str-diamond{float:left;width:0;height:0;border:6px solid transparent;border-bottom-color:#b5924a;position:relative;top:-6px;margin-right:6px}.str-adunit-style-landing .str-diamond:after{content:'';position:absolute;left:-6px;top:6px;width:0;height:0;border:6px solid transparent;border-top-color:#b5924a}.str-adunit-style-landing .str-opt-out{margin:0!important}</style>
-                    <div></div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
-            <div class="LayoutGrid__card">
              <div class="CardBasic__component CardBasic__isLead">
               <div class="CardBasic__thumb">
-               <a class="" href="/style/article/botticelli-sothebys-auction-portrait/index.html" target="_self">
+               <a class="" href="/style/article/corky-lee-photographer-obit-intl-hnk/index.html" target="_self">
                 <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_736,c_fill,g_auto,h_414,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200924125249-botticelli-young-man-roundel-crop.jpg">
+                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_721,c_fill,g_auto,h_406,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210128012110-corky-lee-file-2014-169.jpg">
                  <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                   <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                     <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                     <div style="position: absolute; left: 0px; top: 0px; width: 747px; height: 425px;"></div>
+                     <div style="position: absolute; left: 0px; top: 0px; width: 762px; height: 447px;"></div>
                     </div>
                     <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                      <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1758,7 +1929,37 @@ body > img[style*="height:0"] {
                <div>
                 <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
                 <div>
-                 <a class="CardBasic__title" href="/style/article/botticelli-sothebys-auction-portrait/index.html" target="_self">One of the last privately owned Botticelli portraits has sold for over $92 million</a>
+                 <a class="CardBasic__title" href="/style/article/corky-lee-photographer-obit-intl-hnk/index.html" target="_self">Corky Lee, legendary Asian American photographer, dies at 73</a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="LayoutGrid__card">
+             <div class="CardBasic__component CardBasic__isLead">
+              <div class="CardBasic__thumb">
+               <a class="" href="/style/article/centre-pompidou-renovations-scli-intl/index.html" target="_self">
+                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
+                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_721,c_fill,g_auto,h_406,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F180625153140-centre-pompidou.jpg">
+                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
+                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
+                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
+                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                     <div style="position: absolute; left: 0px; top: 0px; width: 762px; height: 447px;"></div>
+                    </div>
+                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
+                     <div style="position: absolute; width: 200%; height: 200%;"></div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div></a>
+              </div>
+              <div class="CardBasic__details">
+               <div>
+                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
+                <div>
+                 <a class="CardBasic__title" href="/style/article/centre-pompidou-renovations-scli-intl/index.html" target="_self">Centre Pompidou to shut for three years for renovations</a>
                 </div>
                </div>
               </div>
@@ -1770,74 +1971,14 @@ body > img[style*="height:0"] {
            <div class="LayoutGrid__card">
             <div class="CardBasic__component">
              <div class="CardBasic__thumb">
-              <a class="" href="/style/article/corky-lee-photographer-obit-intl-hnk/index.html" target="_self">
-               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210128012110-corky-lee-file-2014-169.jpg">
-                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
-                   </div>
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; width: 200%; height: 200%;"></div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div></a>
-             </div>
-             <div class="CardBasic__details">
-              <div>
-               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-               <div>
-                <a class="CardBasic__title" href="/style/article/corky-lee-photographer-obit-intl-hnk/index.html" target="_self">Corky Lee, legendary Asian American photographer, dies at 73</a>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-           <div class="LayoutGrid__card">
-            <div class="CardBasic__component">
-             <div class="CardBasic__thumb">
-              <a class="" href="/style/article/centre-pompidou-renovations-scli-intl/index.html" target="_self">
-               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F180625153140-centre-pompidou.jpg">
-                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
-                   </div>
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; width: 200%; height: 200%;"></div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div></a>
-             </div>
-             <div class="CardBasic__details">
-              <div>
-               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-               <div>
-                <a class="CardBasic__title" href="/style/article/centre-pompidou-renovations-scli-intl/index.html" target="_self">Centre Pompidou to shut for three years for renovations</a>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-           <div class="LayoutGrid__card">
-            <div class="CardBasic__component">
-             <div class="CardBasic__thumb">
               <a class="" href="/style/article/girls-cant-skate-jordana-bermudez-photography/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201124164047-01-jordana-bermudez-nyc-skateboarders.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201124164047-01-jordana-bermudez-nyc-skateboarders.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1862,12 +2003,12 @@ body > img[style*="height:0"] {
              <div class="CardBasic__thumb">
               <a class="" href="/style/article/trauma-free-blackness-culture-queue/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201125194156-20201125-20202511-trauma-free-blackness-hp.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201125194156-20201125-20202511-trauma-free-blackness-hp.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1887,98 +2028,17 @@ body > img[style*="height:0"] {
              </div>
             </div>
            </div>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div class="Zone__component Zone__isBleed">
-        <div class="Zone__wrapper">
-         <div class="Ad__component">
-          <div id="ad_bnr_btf_01" class="Ad__tag adfuel-rendered" data-google-query-id="CPO31dil3e4CFSnEcwEdnC4CPg" style="display: none;">
-           <div id="google_ads_iframe_/8663477/CNNi/style/arts/landing_1__container__" style="border: 0pt none; width: 1px; height: 1px;"></div>
-          </div>
-         </div>
-        </div>
-       </div>
-       <div class="Zone__component">
-        <div class="Zone__wrapper">
-         <div class="LayoutLargeAndSmall__component">
-          <div class="LayoutLargeAndSmall__lead">
-           <div class="LayoutGrid__component LayoutGrid__isLead">
-            <div class="LayoutGrid__card">
-             <div class="CardBasic__component CardBasic__isLead">
-              <div class="CardBasic__thumb">
-               <a class="" href="/style/article/rich-joseph-facun-black-diamonds-swing/index.html" target="_self">
-                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_736,c_fill,g_auto,h_414,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210118123308-05-rich-joseph-facun-black-diamonds-photos-restricted.jpg">
-                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                     <div style="position: absolute; left: 0px; top: 0px; width: 747px; height: 425px;"></div>
-                    </div>
-                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                     <div style="position: absolute; width: 200%; height: 200%;"></div>
-                    </div>
-                   </div>
-                  </div>
-                 </div>
-                </div></a>
-              </div>
-              <div class="CardBasic__details">
-               <div>
-                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-                <div>
-                 <a class="CardBasic__title" href="/style/article/rich-joseph-facun-black-diamonds-swing/index.html" target="_self">Challenging reductive stereotypes of rural Appalachian life -- in photos</a>
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
-            <div class="LayoutGrid__card">
-             <div class="CardBasic__component CardBasic__isLead">
-              <div class="CardBasic__thumb">
-               <a class="" href="/style/article/salvator-mundi-leonardo-da-vinci-copy-found/index.html" target="_self">
-                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                 <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_736,c_fill,g_auto,h_414,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210118222812-01-salvator-mundi.jpg">
-                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                   <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                     <div style="position: absolute; left: 0px; top: 0px; width: 747px; height: 425px;"></div>
-                    </div>
-                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                     <div style="position: absolute; width: 200%; height: 200%;"></div>
-                    </div>
-                   </div>
-                  </div>
-                 </div>
-                </div></a>
-              </div>
-              <div class="CardBasic__details">
-               <div>
-                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-                <div>
-                 <a class="CardBasic__title" href="/style/article/salvator-mundi-leonardo-da-vinci-copy-found/index.html" target="_self">Police recover 500-year-old stolen copy of Leonardo da Vinci's 'Salvator Mundi' </a>
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="LayoutGrid__component LayoutGrid__isSmall">
            <div class="LayoutGrid__card">
             <div class="CardBasic__component">
              <div class="CardBasic__thumb">
-              <a class="" href="/style/article/trump-baby-blimp-museum-scli-gbr-intl/index.html" target="_self">
+              <a class="" href="/style/article/the-dig-netflix-culture-queue/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190702170740-trump-baby-balloon-washington-permit-july-fourth-lead-vpx-00000529.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210111153315-01-netflix-the-dig.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -1992,7 +2052,7 @@ body > img[style*="height:0"] {
               <div>
                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
                <div>
-                <a class="CardBasic__title" href="/style/article/trump-baby-blimp-museum-scli-gbr-intl/index.html" target="_self">The 'Trump Baby' blimp that dogged the President for years will live on in a museum</a>
+                <a class="CardBasic__title" href="/style/article/the-dig-netflix-culture-queue/index.html" target="_self">'The Dig' and five other culture recommendations if you love ancient discoveries </a>
                </div>
               </div>
              </div>
@@ -2001,14 +2061,14 @@ body > img[style*="height:0"] {
            <div class="LayoutGrid__card">
             <div class="CardBasic__component">
              <div class="CardBasic__thumb">
-              <a class="" href="/style/article/san-francisco-supervisors-diego-rivera-mural-trnd/index.html" target="_self">
+              <a class="" href="/style/article/rich-joseph-facun-black-diamonds-swing/index.html" target="_self">
                <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210115163814-diego-rivera-mural-crop.jpg">
+                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_344,c_fill,g_auto,h_193,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210118123308-05-rich-joseph-facun-black-diamonds-photos-restricted.jpg">
                 <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
                  <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
+                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -16px -15px -15px -16px;">
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
+                    <div style="position: absolute; left: 0px; top: 0px; width: 385px; height: 234px;"></div>
                    </div>
                    <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
                     <div style="position: absolute; width: 200%; height: 200%;"></div>
@@ -2022,67 +2082,7 @@ body > img[style*="height:0"] {
               <div>
                <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
                <div>
-                <a class="CardBasic__title" href="/style/article/san-francisco-supervisors-diego-rivera-mural-trnd/index.html" target="_self">San Francisco officials move to block potential sale of historic Diego Rivera mural</a>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-           <div class="LayoutGrid__card">
-            <div class="CardBasic__component">
-             <div class="CardBasic__thumb">
-              <a class="" href="/style/article/the-real-cleopatra/index.html" target="_self">
-               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F201202150217-01-beyond-beauty-cleopatra-history-restricted.jpg">
-                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
-                   </div>
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; width: 200%; height: 200%;"></div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div></a>
-             </div>
-             <div class="CardBasic__details">
-              <div>
-               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-               <div>
-                <a class="CardBasic__title" href="/style/article/the-real-cleopatra/index.html" target="_self">Who was the real Cleopatra?</a>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-           <div class="LayoutGrid__card">
-            <div class="CardBasic__component">
-             <div class="CardBasic__thumb">
-              <a class="" href="/style/article/cave-art-indonesia-oldest-figurative-art-animal-image-scn-trnd/index.html" target="_self">
-               <div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top: 56.25%;">
-                <img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_351,c_fill,g_auto,h_197,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210112162937-01-indonesia-cave-art-leang-tedongnge.jpg">
-                <div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;">
-                 <div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;">
-                  <div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;">
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 362px; height: 208px;"></div>
-                   </div>
-                   <div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;">
-                    <div style="position: absolute; width: 200%; height: 200%;"></div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div></a>
-             </div>
-             <div class="CardBasic__details">
-              <div>
-               <a class="CardBasic__section undefined" href="/style/arts" target="_self">arts</a>
-               <div>
-                <a class="CardBasic__title" href="/style/article/cave-art-indonesia-oldest-figurative-art-animal-image-scn-trnd/index.html" target="_self">A warty pig painted on a cave wall 45,500 years ago is the world's oldest depiction of an animal </a>
+                <a class="CardBasic__title" href="/style/article/rich-joseph-facun-black-diamonds-swing/index.html" target="_self">Challenging reductive stereotypes of rural Appalachian life -- in photos</a>
                </div>
               </div>
              </div>
@@ -2328,16 +2328,16 @@ body > img[style*="height:0"] {
      </footer>
     </div>
    </div>
-  </div>
+  </div><iframe src="https://a125375509.cdn.optimizely.com/client_storage/a125375509.html" hidden tabindex="-1" title="Optimizely Internal Frame" height="0" width="0" style="display: none;"></iframe>
   <script>
-                            window.__INITIAL_STATE__ = {"/style/arts/index.html":{"ads":{"type":"json","json":{"yieldMoAboveComments":false,"isInterZoneEnabled":true,"appia":{"id":"ad_mod_53de639f4","script":"//cdn.cnn.com/ads/cnni-appia/singles/cnni_appia_default.js"},"yieldMoID":"1201340860028270633","epic":{"options":{"registryFile":"cnni_style_arts_landing","registryString":"CNNI/style/arts/landing","entitlementSingletons":[{"id":"ad_mod_85a882a72","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_01.js"},{"id":"ad_mod_e74dbd68d","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_02.js"},{"id":"ad_mod_596291844","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_03.js"},{"id":"ad_mod_9a979d11","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_04.js"},{"id":"ad_mod_2b3ba0432","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_05.js"}]}},"freewheel":{"options":{"desktop_ssid":"","mobile_ssid":"edition.cnn.com_mobile_mobileweb_ros"}},"above-page":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_atf_02","refreshTimer":"adbody"},"ads":{"size":"all"}}}}],"top":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_atf_01","refreshTimer":"adbanner"},"ads":{"size":"all"},"theme":"dark"}}}],"bottom":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_btf_04","refreshTimer":"adbody"},"ads":{"size":"all"},"theme":"dark"}}},{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_btf_01","position":"list-bottom","initial":false,"refreshTimer":"adbody","note":"Only for list pages. When on the list pages the other positions for this ID should be inactive."},"ads":{"size":"all-list"},"theme":"dark"}}}],"oneByOne":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_float_01","refreshTimer":"adbody"},"ads":{"size":"all"}}}},{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_float_02","refreshTimer":"adbody"},"ads":{"size":"all"}}}}],"background":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_skin_01","refreshTimer":"adbanner"},"ads":{"size":"all-skin"}}}}]}},"analytics":{"type":"json","json":{"pageTop":{},"headline":"","author":"","showName":"","subSectionName":"","isArticleVideoCollection":false,"publishDate":"2013-12-13T16:06:53Z","lastUpdatedDate":"2018-02-01T12:57:08Z","pageBranding":"default","cep_topics":{"brsf":[],"buzz":[],"iabt":[],"sent":["16B6"],"tags":[],"shortSource":"se_arts","source":"section_arts"},"chartbeat":{"sections":""},"branding_content_page":"default","branding_content_zone":["default"],"branding_content_container":["default"],"branding_content_card":[""]}},"canonicalUrl":"https://www.cnn.com/style/arts","description":"Outstanding photography, sculpture, digital art and more from the world's best artists.","metaImage":"","metaImageHeight":0,"metaImageWidth":0,"metaKeywords":"art, fine arts, visual arts, photography, paintings, artists","ogType":"website","sectionName":"arts","sourceId":"section_arts","title":"Art news, features and art events around the world - CNN","status":200,"uri":"/style/arts/index.html","surrogateKeys":{"type":"json","json":["coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","section_arts"]},"ogTitle":"Art news, features and art events around the world - CNN","branding":{"type":"json","json":{"backgroundLightness":"","headerText":"","name":"default","titleText":""}},"headerLabel":"Arts","background":{"type":"json","json":{}},"regions({\"index\":0})":{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0})","generated":true},"__typename":"PALResponse"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.0.zones.0":{"zoneContentsCount":1,"zoneContents({\"index\":null,\"limit\":3})":[{"type":"id","id":"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","generated":false}],"__typename":"PALZone"},"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E":{"id":"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","title":"Style Topic Arts","url":"","containerContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents","generated":true},"__typename":"PALContainer"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents":{"cardsCount":100,"cards({\"offset\":null,\"limit\":18})":[{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17","generated":true}],"__typename":"PALContainerContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"These blue beads found in Alaska may be the first European items in North America","url":"/style/article/blue-beads-alaska-history-scli-intl-scn/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210208103241-alaska-beads-discovery.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"This rebellious female painter of bold nude portraits has been overlooked for a century","url":"/style/article/suzanne-valadon-nudes-art-history/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210128121600-03-suzanne-valadon-art-history-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Amanda Gorman's fellow laureates are tuning in for Super Bowl LV -- but for poetry over pigskin","url":"/style/article/amanda-gorman-super-bowl-poets/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210204115850-04-super-bowl-youth-poet-laureates.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"The Native American couple redefining cultural norms -- in photos","url":"/style/article/tomas-karmelo-amaya-sweetheart-dancers-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210121115927-05-tomas-karmelo-amaya-sweetheart-dancers-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Angelina Jolie is selling Winston Churchill's only wartime painting, gifted to her by Brad Pitt","url":"/style/article/angelina-jolie-winston-churchill-painting-scli-intl/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/200426142552-angelina-jolie-file-2019.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"The Black cowboys and cowgirls of American cities -- in photos","url":"/style/article/kennedi-carter-black-cowboys-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210118122418-01-kennedi-carter-ridin-sucka-free-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"One of the last privately owned Botticelli portraits has sold for over $92 million","url":"/style/article/botticelli-sothebys-auction-portrait/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/200924125249-botticelli-young-man-roundel-crop.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Corky Lee, legendary Asian American photographer, dies at 73","url":"/style/article/corky-lee-photographer-obit-intl-hnk/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210128012110-corky-lee-file-2014-169.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Centre Pompidou to shut for three years for renovations","url":"/style/article/centre-pompidou-renovations-scli-intl/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/180625153140-centre-pompidou.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"New York's radical female and non-binary skateboarders -- in photos","url":"/style/article/girls-cant-skate-jordana-bermudez-photography/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/201124164047-01-jordana-bermudez-nyc-skateboarders.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"We need more 'trauma-free Blackness.' Here's a start ","url":"/style/article/trauma-free-blackness-culture-queue/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/201125194156-20201125-20202511-trauma-free-blackness-hp.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"'The Dig' and five other culture recommendations if you love ancient discoveries  ","url":"/style/article/the-dig-netflix-culture-queue/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210111153315-01-netflix-the-dig.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Challenging reductive stereotypes of rural Appalachian life -- in photos","url":"/style/article/rich-joseph-facun-black-diamonds-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210118123308-05-rich-joseph-facun-black-diamonds-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Police recover 500-year-old stolen copy of Leonardo da Vinci's 'Salvator Mundi' ","url":"/style/article/salvator-mundi-leonardo-da-vinci-copy-found/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210118222812-01-salvator-mundi.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"The 'Trump Baby' blimp that dogged the President for years will live on in a museum","url":"/style/article/trump-baby-blimp-museum-scli-gbr-intl/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/190702170740-trump-baby-balloon-washington-permit-july-fourth-lead-vpx-00000529.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"San Francisco officials move to block potential sale of historic Diego Rivera mural","url":"/style/article/san-francisco-supervisors-diego-rivera-mural-trnd/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210115163814-diego-rivera-mural-crop.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Who was the real Cleopatra?","url":"/style/article/the-real-cleopatra/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/201202150217-01-beyond-beauty-cleopatra-history-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"A warty pig painted on a cave wall 45,500 years ago is the world's oldest depiction of an animal ","url":"/style/article/cave-art-indonesia-oldest-figurative-art-animal-image-scn-trnd/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210112162937-01-indonesia-cave-art-leang-tedongnge.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.0":{"zones":[{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.0.zones.0","generated":true}],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.1":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.2":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.3":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.4":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0})":{"regionContents":[{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.0","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.1","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.2","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.3","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.4","generated":true}],"__typename":"PALRegionsContents"},"ROOT_QUERY":{"PAL({\"pageType\":\"section\",\"edition\":\"international\",\"url\":\"/style/arts/index.html\",\"previewWorkspace\":null})":{"type":"id","id":"/style/arts/index.html","generated":false}}};
+                            window.__INITIAL_STATE__ = {"/style/arts/index.html":{"ads":{"type":"json","json":{"yieldMoAboveComments":false,"isInterZoneEnabled":true,"appia":{"id":"ad_mod_53de639f4","script":"//cdn.cnn.com/ads/cnni-appia/singles/cnni_appia_default.js"},"yieldMoID":"1201340860028270633","epic":{"options":{"registryFile":"cnni_style_arts_landing","registryString":"CNNI/style/arts/landing","entitlementSingletons":[{"id":"ad_mod_85a882a72","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_01.js"},{"id":"ad_mod_e74dbd68d","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_02.js"},{"id":"ad_mod_596291844","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_03.js"},{"id":"ad_mod_9a979d11","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_04.js"},{"id":"ad_mod_2b3ba0432","scriptName":"//cdn.cnn.com/ads/cnni/singles/cnni_entitlement_05.js"}]}},"freewheel":{"options":{"desktop_ssid":"","mobile_ssid":"edition.cnn.com_mobile_mobileweb_ros"}},"above-page":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_atf_02","refreshTimer":"adbody"},"ads":{"size":"all"}}}}],"top":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_atf_01","refreshTimer":"adbanner"},"ads":{"size":"all"},"theme":"dark"}}}],"bottom":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_btf_04","refreshTimer":"adbody"},"ads":{"size":"all"},"theme":"dark"}}},{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_bnr_btf_01","position":"list-bottom","initial":false,"refreshTimer":"adbody","note":"Only for list pages. When on the list pages the other positions for this ID should be inactive."},"ads":{"size":"all-list"},"theme":"dark"}}}],"oneByOne":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_float_01","refreshTimer":"adbody"},"ads":{"size":"all"}}}},{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_float_02","refreshTimer":"adbody"},"ads":{"size":"all"}}}}],"background":[{"type":"tool","contentType":"ad-epic","cardContents":{"element":{"contentType":"ad-epic","type":"element","elementContents":{"id":"ad_oop_skin_01","refreshTimer":"adbanner"},"ads":{"size":"all-skin"}}}}]}},"analytics":{"type":"json","json":{"pageTop":{},"headline":"","author":"","showName":"","subSectionName":"","isArticleVideoCollection":false,"publishDate":"2013-12-13T16:06:53Z","lastUpdatedDate":"2018-02-01T12:57:08Z","pageBranding":"default","cep_topics":{"brsf":[],"buzz":[],"iabt":[],"sent":["16B6"],"tags":[],"shortSource":"se_arts","source":"section_arts"},"chartbeat":{"sections":""},"branding_content_page":"default","branding_content_zone":["default"],"branding_content_container":["default"],"branding_content_card":[""]}},"canonicalUrl":"https://www.cnn.com/style/arts","description":"Outstanding photography, sculpture, digital art and more from the world's best artists.","metaImage":"","metaImageHeight":0,"metaImageWidth":0,"metaKeywords":"art, fine arts, visual arts, photography, paintings, artists","ogType":"website","sectionName":"arts","sourceId":"section_arts","title":"Art news, features and art events around the world - CNN","status":200,"uri":"/style/arts/index.html","surrogateKeys":{"type":"json","json":["coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","section_arts"]},"ogTitle":"Art news, features and art events around the world - CNN","branding":{"type":"json","json":{"backgroundLightness":"","headerText":"","name":"default","titleText":""}},"headerLabel":"Arts","background":{"type":"json","json":{}},"regions({\"index\":0})":{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0})","generated":true},"__typename":"PALResponse"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.0.zones.0":{"zoneContentsCount":1,"zoneContents({\"index\":null,\"limit\":3})":[{"type":"id","id":"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","generated":false}],"__typename":"PALZone"},"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E":{"id":"coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E","title":"Style Topic Arts","url":"","containerContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents","generated":true},"__typename":"PALContainer"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents":{"cardsCount":100,"cards({\"offset\":null,\"limit\":18})":[{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16","generated":true},{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17","generated":true}],"__typename":"PALContainerContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Forget your valentine -- friends are your most important relationships","url":"/style/article/friends-robin-dunbar-culture-queue-wellness/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210208182455-thelma-and-louise-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).0.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Controversial art dealer's daughter will return over 100 antiquities to Cambodia","url":"/style/article/cambodia-khmer-artifacts-douglas-latchford/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210207221530-01-latchford-art-cambodia-card.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).1.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Listen to the sound of an 18,000-year-old musical instrument ","url":"/style/article/oldest-wind-instrument-scli-intl-scn/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210210140610-03-oldest-wind-instrument-card-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).2.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Portrait of Humanity photo awards capture hope and courage in a year of struggle","url":"/style/article/portrait-of-humanity-award-intl-scli/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210210115742-14b-portrait-of-humanity-award-photos-2021-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).3.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Dreamy photos from around the world offer the chance to escape without leaving home ","url":"/style/article/gray-malin-the-essential-collection-book/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210209125723-02b-gray-malin-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).4.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"These blue beads found in Alaska may be the first European items in North America","url":"/style/article/blue-beads-alaska-history-scli-intl-scn/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210208103241-alaska-beads-discovery.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).5.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"This rebellious female painter of bold nude portraits has been overlooked for a century","url":"/style/article/suzanne-valadon-nudes-art-history/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210128121600-03-suzanne-valadon-art-history-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).6.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Amanda Gorman's fellow laureates are tuning in for Super Bowl LV -- but for poetry over pigskin","url":"/style/article/amanda-gorman-super-bowl-poets/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210204115850-04-super-bowl-youth-poet-laureates.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).7.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"The Native American couple redefining cultural norms -- in photos","url":"/style/article/tomas-karmelo-amaya-sweetheart-dancers-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210121115927-05-tomas-karmelo-amaya-sweetheart-dancers-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).8.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Angelina Jolie is selling Winston Churchill's only wartime painting, gifted to her by Brad Pitt","url":"/style/article/angelina-jolie-winston-churchill-painting-scli-intl/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/200426142552-angelina-jolie-file-2019.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).9.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"The Black cowboys and cowgirls of American cities -- in photos","url":"/style/article/kennedi-carter-black-cowboys-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210118122418-01-kennedi-carter-ridin-sucka-free-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).10.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"One of the last privately owned Botticelli portraits has sold for over $92 million","url":"/style/article/botticelli-sothebys-auction-portrait/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/200924125249-botticelli-young-man-roundel-crop.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).11.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Corky Lee, legendary Asian American photographer, dies at 73","url":"/style/article/corky-lee-photographer-obit-intl-hnk/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210128012110-corky-lee-file-2014-169.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).12.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Centre Pompidou to shut for three years for renovations","url":"/style/article/centre-pompidou-renovations-scli-intl/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/180625153140-centre-pompidou.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).13.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"New York's radical female and non-binary skateboarders -- in photos","url":"/style/article/girls-cant-skate-jordana-bermudez-photography/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/201124164047-01-jordana-bermudez-nyc-skateboarders.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).14.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"We need more 'trauma-free Blackness.' Here's a start ","url":"/style/article/trauma-free-blackness-culture-queue/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/201125194156-20201125-20202511-trauma-free-blackness-hp.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).15.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"'The Dig' and five other culture recommendations if you love ancient discoveries  ","url":"/style/article/the-dig-netflix-culture-queue/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210111153315-01-netflix-the-dig.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).16.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17":{"contentType":"article","cardContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents","generated":true},"__typename":"PALCard"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents":{"auxiliaryText":"","cardSectionName":"arts","headlinePlainText":"Challenging reductive stereotypes of rural Appalachian life -- in photos","url":"/style/article/rich-joseph-facun-black-diamonds-swing/index.html","videoId":null,"media":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media","generated":true},"__typename":"PALCardContent"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media.elementContents":{"originalImageUrl":"//cdn.cnn.com/cnnnext/dam/assets/210118123308-05-rich-joseph-facun-black-diamonds-photos-restricted.jpg","__typename":"PALCardMediaElementContents"},"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media":{"elementContents":{"type":"id","id":"$coverageContainer_4FD67E14-A587-4754-8367-FEA5FB69F31E.containerContents.cards({\"offset\":null,\"limit\":18}).17.cardContents.media.elementContents","generated":true},"__typename":"PALCardMedia"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.0":{"zones":[{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.0.zones.0","generated":true}],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.1":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.2":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.3":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0}).regionContents.4":{"zones":[],"__typename":"PALRegion"},"$/style/arts/index.html.regions({\"index\":0})":{"regionContents":[{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.0","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.1","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.2","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.3","generated":true},{"type":"id","id":"$/style/arts/index.html.regions({\"index\":0}).regionContents.4","generated":true}],"__typename":"PALRegionsContents"},"ROOT_QUERY":{"PAL({\"pageType\":\"section\",\"edition\":\"international\",\"url\":\"/style/arts/index.html\",\"previewWorkspace\":null})":{"type":"id","id":"/style/arts/index.html","generated":false}}};
                             window.__ASYNC_COMPONENTS_STATE__ = {"resolved":{"1":true}};
                             window.__PREVIEW__ = null;
                             window.__EDITION__ = true;
                             window.__GRAPHQL_SERVER_URI__ = 'https://graphql.verticals.api.cnn.io/graphql';
                             window.__ENVIRONMENT__ = 'prod';
                         </script>
-  <script src="https://verticals-static.cnn.com/style/assets/common.a38148e6929366359f96.js"></script><iframe name="__uspapiLocator" style="display: none;"></iframe><iframe name="_usrConWM" style="display: none;"></iframe><iframe src="https://a125375509.cdn.optimizely.com/client_storage/a125375509.html" hidden tabindex="-1" title="Optimizely Internal Frame" height="0" width="0" style="display: none;"></iframe>
+  <script src="https://verticals-static.cnn.com/style/assets/common.a38148e6929366359f96.js"></script><iframe name="__uspapiLocator" style="display: none;"></iframe><iframe name="_usrConWM" style="display: none;"></iframe>
   <script src="https://verticals-static.cnn.com/style/assets/app.701f73923cd7bcd9f4ad.js"></script>
   <script>_satellite["__runScript1"](function(event, target) {
 window.wminst = window.wminst || {};
@@ -9059,7 +9059,7 @@ wminst.videoCommonFunction = function() {
     };
 }();
 
-});</script><iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_turner2_0" name="destination_publishing_iframe_turner2_0_name" src="https://turner2.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fedition.cnn.com" style="display: none; width: 0px; height: 0px;" class="aamIframeLoaded"></iframe>
+});</script>
   <div id="onetrust-consent-sdk">
    <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
    <div id="onetrust-pc-sdk" class="ot-sdk-container otPcCenter ot-hide ot-fade-in ot-accordions-pc" aria-modal="true" role="dialog" aria-labelledby="pc-title" lang="en">
@@ -9196,9 +9196,8 @@ wminst.videoCommonFunction = function() {
     </section><iframe class="ot-text-resize" title="onetrust-text-resize" style="position:absolute;top:-50000px;width:100em;" aria-hidden="true"></iframe>
    </div>
   </div>
-  <script type="text/javascript" src="https://geo.moatads.com/n.js?e=35&amp;qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wx%22%3Ca%24%3D!IvY%5EWi3MH%3Cy%5D6WAJN3NZ_h)G%3E3%5D*lTr1W*d%5B4kf%2FLyUoRdByZ%3CPnKMV%25%3C%2Cbq.%22oDtX%3EAVE&amp;th=875860220&amp;tf=Id8O-DxRgoC-xFQTS-CSa7H--j7VIQD-xFQTS-nMzjG-&amp;vi=111111&amp;rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2Cprobably%2Cprobably&amp;rb=1-71g1Tm%2FTfLRd1AlMZ0SLG0D32f%2FM0IEN6ypOGLOPg%2Fj24vqluabr2V04&amp;os=&amp;qp=00000&amp;is=BBBBB2BBEYBvGl2BBCkqtUTBBRmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBSqj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BMCBQmIoRBBCzBz1BBCTClBBrcGBC4ehueB57P19aJfR0BqEKiuwBBBB&amp;iv=8&amp;qt=0&amp;gz=0&amp;hh=0&amp;hn=0&amp;tw=T%25fEgXwo2Tv4I_PNTz)%2C6kVB%7D%252%5E8MLUoA&amp;qc=0&amp;qd=0&amp;qf=800&amp;qe=600&amp;qh=800&amp;qg=6131&amp;qm=-420&amp;qa=1680&amp;qb=1050&amp;qi=1680&amp;qj=962&amp;to=000&amp;po=1-0020002000002120&amp;vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&amp;ql=&amp;qo=0&amp;qr=0&amp;i=TURNERDFP1&amp;hp=1&amp;wf=0&amp;pxm=1&amp;vb=3&amp;cm=11&amp;kq=2&amp;hq=0&amp;hs=0&amp;hu=0&amp;hr=0&amp;ht=0&amp;dnt=0&amp;bq=0&amp;f=0&amp;j=&amp;t=1612890596903&amp;de=379331467003&amp;m=0&amp;ar=593b367-clean&amp;iw=5b2e603&amp;q=2&amp;cb=0&amp;ym=0&amp;cu=1612890596903&amp;ll=10&amp;lm=0&amp;ln=1&amp;r=0&amp;em=0&amp;en=0&amp;d=87291157%3A429945157%3A4418346136%3A138287286098&amp;zMoatMGV_MAX=na&amp;zMoatMMV_MAX=na&amp;zMoatPS=nat_btf_02&amp;zMoatHT=2&amp;zMoatWD=1&amp;zMoatCURL=edition.cnn.com%2Fstyle%2Farts&amp;zMoatDev=Desktop&amp;zMoatPLATFORM=desktop&amp;zMoatPSB=nat_btf_02&amp;zMoatOrigSlicer1=%2F8663477%2FCNNi%2Fstyle%2Farts%2Flanding&amp;zMoatOrigSlicer2=57466717&amp;zMoatGSR=1&amp;ph=&amp;pj=standard&amp;zGSRC=1&amp;gu=https%3A%2F%2Fedition.cnn.com%2Fstyle%2Farts&amp;id=1&amp;ii=4&amp;bo=%2F8663477%2FCNNi%2Fstyle%2Farts%2Flanding&amp;bp=57466717&amp;bd=nat_btf_02&amp;zMoatAltSL=zMoatAdUnit1%3AzMoatAdUnit2%3AzMoatPS&amp;dfp=0%2C4&amp;la=57466717&amp;gw=turner763610601596&amp;fd=1&amp;ac=1&amp;it=500&amp;ti=0&amp;ih=1&amp;pe=1%3A504%3A504%3A0%3A557&amp;fs=188449&amp;na=1705195517&amp;cs=0&amp;callback=DOMlessLLDcallback_63132784"></script><iframe id="google_osd_static_frame_6315245101112" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe>
+  <script type="text/javascript" src="https://geo.moatads.com/n.js?e=35&amp;ol=3711985559&amp;qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo81C%24k%25zrI81V5.NO)Wx%22%3Ca%24%3D!IvY%5EWi3M~ez%5D6WAJN3NZ_h)G%3E3%5D*lTr1W*d%5B4kf%2FLyUoRdByZ%3CPnKMV%25%3C%2Cbq.%22oDtX%3EAVE&amp;th=875860220&amp;tf=Id8O-DxRgoC-xFQTS-CSa7H--j7VIQD-xFQTS-nMzjG-&amp;vi=111111&amp;rc=0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2Cprobably%2Cprobably&amp;rb=1-uRolZAwprWLiKpTYeeKRbm%2Bf0PCrau3hNTBJf6raYEJYmkCpSqbr2V04&amp;sc=1&amp;os=&amp;qp=00000&amp;is=BBBBB2BBEYBvGl2BBCkqtUTBBRmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MxOtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBSqj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNBBBBBBBBBBBBBhcjG6BBJM2L4Bk8BMCBQmIoRBBCzBz1BBCTClBBrcGBC4ehueB57P19aJeRzBqEKiuwBBBB&amp;iv=8&amp;qt=0&amp;gz=0&amp;hh=0&amp;hn=0&amp;tw=T%25fEgXwo2Tv4I_PNTz)%2C6kVB%7D%252%5E8MLUoA&amp;qc=0&amp;qd=0&amp;qf=800&amp;qe=600&amp;qh=785&amp;qg=6096&amp;qm=-420&amp;qa=1680&amp;qb=1050&amp;qi=1680&amp;qj=962&amp;to=000&amp;po=1-0020002000002120&amp;vy=ot%24b%5Bh%40%22oD%7BMx5%3C1%3B(8.%7CLK2_v%5Eq%2BGs1%7B%2CyB%3AU!%2FoD%7BMx5%3C1%3B(Oy%2CUy%3CD&amp;ql=&amp;qo=0&amp;qr=0&amp;i=TURNERDFP1&amp;hp=1&amp;wf=0&amp;pxm=1&amp;vb=3&amp;cm=10&amp;kq=2&amp;hq=0&amp;hs=0&amp;hu=0&amp;hr=0&amp;ht=0&amp;dnt=0&amp;bq=0&amp;f=0&amp;j=&amp;t=1613372016227&amp;de=445502178818&amp;m=0&amp;ar=79d2229-clean&amp;iw=16c203b&amp;q=2&amp;cb=0&amp;ym=0&amp;cu=1613372016227&amp;ll=14&amp;lm=0&amp;ln=1&amp;r=0&amp;em=0&amp;en=0&amp;d=87291157%3A429945157%3A4418346136%3A138287286098&amp;zMoatMGV_MAX=na&amp;zMoatMMV_MAX=na&amp;zMoatPS=nat_btf_02&amp;zMoatHT=2&amp;zMoatWD=1&amp;zMoatCURL=edition.cnn.com%2Fstyle%2Farts&amp;zMoatDev=Desktop&amp;zMoatPLATFORM=desktop&amp;zMoatPSB=nat_btf_02&amp;zMoatOrigSlicer1=%2F8663477%2FCNNi%2Fstyle%2Farts%2Flanding&amp;zMoatOrigSlicer2=57466717&amp;zMoatGSR=1&amp;ph=&amp;pj=standard&amp;zGSRC=1&amp;gu=https%3A%2F%2Fedition.cnn.com%2Fstyle%2Farts&amp;id=1&amp;ii=4&amp;bo=%2F8663477%2FCNNi%2Fstyle%2Farts%2Flanding&amp;bp=57466717&amp;bd=nat_btf_02&amp;zMoatAltSL=zMoatAdUnit1%3AzMoatAdUnit2%3AzMoatPS&amp;dfp=0%2C4&amp;la=57466717&amp;gw=turner763610601596&amp;fd=1&amp;ac=1&amp;it=500&amp;ti=0&amp;ih=1&amp;pe=1%3A536%3A536%3A0%3A668&amp;fs=188996&amp;na=592771974&amp;cs=0&amp;callback=DOMlessLLDcallback_57129750"></script><iframe id="google_osd_static_frame_5338336144142" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe>
   <div></div>
-  <img class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links" style="width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;">
   <div class="kxhead" data-id="teff71jyu" style="display:none !important;">
    <span class="kxtag kxinvisible" data-id="40069"><script>
 // BEGIN Salesforce DMP JavaScript Consent Tag for "Turner International"

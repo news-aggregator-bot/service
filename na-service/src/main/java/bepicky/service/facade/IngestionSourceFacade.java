@@ -68,12 +68,13 @@ public class IngestionSourceFacade {
                 .stream()
                 .map(cb -> buildContentBlock(savedSrcPage, cb))
                 .collect(Collectors.toList());
+            Set<ContentBlock> set = contentBlocks.stream().collect(Collectors.toSet());
             if (savedSrcPage.getContentBlocks() != null) {
-                List<ContentBlock> srcPageContentBlocks = savedSrcPage.getContentBlocks();
+                Set<ContentBlock> srcPageContentBlocks = savedSrcPage.getContentBlocks();
                 savedSrcPage.setContentBlocks(null);
                 contentBlockService.deleteAll(srcPageContentBlocks);
             }
-            savedSrcPage.setContentBlocks(contentBlocks);
+            savedSrcPage.setContentBlocks(set);
 
             contentBlockService.saveAll(contentBlocks);
         }
@@ -92,10 +93,10 @@ public class IngestionSourceFacade {
     }
 
     private ContentBlock buildContentBlock(SourcePage page, ContentBlockDto dto) {
-        List<ContentTag> contentTags = dto.getContentTags()
+        Set<ContentTag> contentTags = dto.getContentTags()
             .stream()
             .map(this::findContentTag)
-            .collect(Collectors.toList());
+            .collect(Collectors.toSet());
         contentTagService.saveAll(contentTags);
 
         ContentBlock block = new ContentBlock();
