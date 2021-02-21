@@ -1,5 +1,6 @@
 package bepicky.service.service;
 
+import bepicky.common.exception.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -74,5 +75,15 @@ public class SourcePageService implements ISourcePageService {
     @Override
     public void delete(long id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public SourcePage changeSource(Source source, long id) {
+        return repository.findById(id)
+            .map(sp -> {
+                sp.setSource(source);
+                return repository.save(sp);
+            })
+            .orElseThrow(() -> new ResourceNotFoundException("Source page not found."));
     }
 }

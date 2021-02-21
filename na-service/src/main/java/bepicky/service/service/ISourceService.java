@@ -23,6 +23,8 @@ public interface ISourceService {
 
     Optional<Source> findByName(String name);
 
+    Optional<Source> findById(long id);
+
     Source updateStatus(Long id, Source.Status status);
 
     Source disable(Long id);

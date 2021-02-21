@@ -30,4 +30,6 @@ public interface ISourcePageService {
     long countBySource(Source source);
 
     void delete(long id);
+
+    SourcePage changeSource(Source source, long sourcePage);
 }

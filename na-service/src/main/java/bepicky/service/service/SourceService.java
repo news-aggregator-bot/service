@@ -60,6 +60,11 @@ public class SourceService implements ISourceService {
     }
 
     @Override
+    public Optional<Source> findById(long id) {
+        return repository.findById(id);
+    }
+
+    @Override
     public Source updateStatus(Long id, Source.Status status) {
         return update(id, status, "source:{}:enabled");
     }

@@ -1,5 +1,6 @@
 package bepicky.service.facade.functional;
 
+import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.common.domain.request.SourceRequest;
 import bepicky.common.domain.response.SourceListResponse;
 import bepicky.common.domain.response.SourceResponse;
@@ -12,4 +13,6 @@ public interface ISourceFunctionalFacade {
     SourceResponse pick(SourceRequest request);
 
     SourceResponse remove(SourceRequest request);
+
+    SourcePageDto changeSource(long sourceId, long sourcePageId);
 }

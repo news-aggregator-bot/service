@@ -3,13 +3,17 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.SourceDto;
+import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.common.domain.request.SourceRequest;
 import bepicky.common.domain.response.SourceListResponse;
 import bepicky.common.domain.response.SourceResponse;
+import bepicky.common.exception.ResourceNotFoundException;
+import bepicky.service.domain.mapper.SourcePageDtoMapper;
 import bepicky.service.domain.request.ListRequest;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
 import bepicky.service.service.IReaderService;
+import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -31,7 +35,13 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
     private ISourceService sourceService;
 
     @Autowired
+    private ISourcePageService sourcePageService;
+
+    @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    private SourcePageDtoMapper sourcePageDtoMapper;
 
     @Override
     public SourceListResponse listAll(ListRequest request) {
@@ -62,6 +72,14 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
     @Override
     public SourceResponse remove(SourceRequest request) {
         return doAction(request, Reader::removeSource);
+    }
+
+    @Override
+    public SourcePageDto changeSource(long sourceId, long sourcePageId) {
+        return sourceService.findById(sourceId)
+            .map(s -> sourcePageService.changeSource(s, sourcePageId))
+            .map(sourcePageDtoMapper::toDto)
+            .orElseThrow(() -> new ResourceNotFoundException("Change source failed."));
     }
 
     private SourceResponse doAction(SourceRequest request, BiConsumer<Reader, Source> action) {

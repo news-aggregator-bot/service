@@ -1,6 +1,8 @@
 package bepicky.service.controller.god;
 
+import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.service.entity.Source;
+import bepicky.service.facade.functional.ISourceFunctionalFacade;
 import bepicky.service.service.ISourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,9 @@ public class GodSourceController {
     @Autowired
     private ISourceService sourceService;
 
+    @Autowired
+    private ISourceFunctionalFacade sourceFunctionalFacade;
+
     @PutMapping("/source/{id}")
     public void enableSource(@PathVariable long id, @RequestParam String status) {
         Source.Status sourceStatus = Source.Status.valueOf(status.toUpperCase());
@@ -34,5 +39,10 @@ public class GodSourceController {
     @GetMapping("/source/list")
     public List<Source> listSources() {
         return sourceService.findAll();
+    }
+
+    @PutMapping("/source/{sourceId}/sourcepage/{spId}/change")
+    public SourcePageDto changeSourcePageSource(@PathVariable long sourceId, @PathVariable long spId) {
+        return sourceFunctionalFacade.changeSource(sourceId, spId);
     }
 }

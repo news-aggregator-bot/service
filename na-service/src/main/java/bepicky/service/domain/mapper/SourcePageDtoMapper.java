@@ -41,4 +41,16 @@ public class SourcePageDtoMapper {
         request.setLanguages(languageDtos);
         return request;
     }
+
+    public SourcePageDto toDto(SourcePage sourcePage) {
+        SourcePageDto request = new SourcePageDto();
+        request.setName(sourcePage.getName());
+        request.setUrl(sourcePage.getUrl());
+        request.setSourceName(sourcePage.getSource().getName());
+        List<LanguageDto> languageDtos = sourcePage.getLanguages().stream()
+            .map(l -> modelMapper.map(l, LanguageDto.class))
+            .collect(Collectors.toList());
+        request.setLanguages(languageDtos);
+        return request;
+    }
 }
