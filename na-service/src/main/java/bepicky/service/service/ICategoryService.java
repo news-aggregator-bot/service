@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface ICategoryService {
 
@@ -17,6 +18,8 @@ public interface ICategoryService {
     List<Category> saveAll(Collection<Category> categories);
 
     List<Category> getAll();
+
+    Set<Category> getAllByType(CategoryType type);
 
     Page<Category> findByParent(Category parent, Pageable pageable);
 

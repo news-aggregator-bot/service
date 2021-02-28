@@ -58,6 +58,6 @@ public class Source extends DatedEntity {
     }
 
     public enum Status {
-        PRIMARY, SECONDARY, DISABLED
+        PRIMARY, DISABLED
     }
 }

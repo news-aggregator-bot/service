@@ -8,6 +8,8 @@ import bepicky.service.domain.request.ListCategoryRequest;
 
 public interface ICategoryFunctionalFacade {
 
+    CategoryListResponse listApplicable(Long chatId, String type);
+
     CategoryListResponse listAll(ListCategoryRequest request);
 
     CategoryListResponse sublist(ListCategoryRequest request);

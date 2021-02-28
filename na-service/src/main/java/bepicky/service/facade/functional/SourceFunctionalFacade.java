@@ -3,12 +3,10 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.SourceDto;
-import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.common.domain.request.SourceRequest;
 import bepicky.common.domain.response.SourceListResponse;
 import bepicky.common.domain.response.SourceResponse;
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.mapper.SourcePageDtoMapper;
 import bepicky.service.domain.request.ListRequest;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
@@ -39,9 +37,6 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
 
     @Autowired
     private ModelMapper modelMapper;
-
-    @Autowired
-    private SourcePageDtoMapper sourcePageDtoMapper;
 
     @Override
     public SourceListResponse listAll(ListRequest request) {
@@ -75,10 +70,9 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
     }
 
     @Override
-    public SourcePageDto changeSource(long sourceId, long sourcePageId) {
-        return sourceService.findById(sourceId)
+    public void changeSource(long sourceId, long sourcePageId) {
+        sourceService.findById(sourceId)
             .map(s -> sourcePageService.changeSource(s, sourcePageId))
-            .map(sourcePageDtoMapper::toDto)
             .orElseThrow(() -> new ResourceNotFoundException("Change source failed."));
     }
 

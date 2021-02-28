@@ -16,21 +16,15 @@ public interface CategoryRepository extends JpaRepository<Category, Long>, JpaSp
 
     Optional<Category> findByName(String name);
 
-    Page<Category> findAllByIdIn(Iterable<Long> id, Pageable pageable);
+    List<Category> findAllByType(CategoryType type);
 
     Page<Category> findAllByIdInAndIdNotIn(Iterable<Long> id, Iterable<Long> notInId, Pageable pageable);
-
-    Page<Category> findAllByReaders_IdAndIdIn(long id, Iterable<Long> ids, Pageable pageable);
 
     Page<Category> findAllByParentOrderByNameAsc(Category parent, Pageable pageable);
 
     List<Category> findAllByParent(Category parent);
 
     Page<Category> findAllByTypeAndParentIsNullOrderByNameAsc(CategoryType type, Pageable pageable);
-
-    List<Category> findAllByTypeAndParentIsNull(CategoryType type);
-
-    List<Category> findAllByReaders_IdAndType(long id, CategoryType type);
 
     List<Category> findAllByReaders_IdAndParent(long id, Category parent);
 

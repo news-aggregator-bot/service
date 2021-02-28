@@ -12,8 +12,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @Slf4j
@@ -38,6 +40,11 @@ public class CategoryService implements ICategoryService {
     @Override
     public List<Category> getAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public Set<Category> getAllByType(CategoryType type) {
+        return new HashSet<>(repository.findAllByType(type));
     }
 
     @Override

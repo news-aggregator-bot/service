@@ -1,6 +1,5 @@
 package bepicky.service.controller.god;
 
-import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.service.entity.Source;
 import bepicky.service.facade.functional.ISourceFunctionalFacade;
 import bepicky.service.service.ISourceService;
@@ -42,7 +41,7 @@ public class GodSourceController {
     }
 
     @PutMapping("/source/{sourceId}/sourcepage/{spId}/change")
-    public SourcePageDto changeSourcePageSource(@PathVariable long sourceId, @PathVariable long spId) {
-        return sourceFunctionalFacade.changeSource(sourceId, spId);
+    public void changeSourcePageSource(@PathVariable long sourceId, @PathVariable long spId) {
+        sourceFunctionalFacade.changeSource(sourceId, spId);
     }
 }

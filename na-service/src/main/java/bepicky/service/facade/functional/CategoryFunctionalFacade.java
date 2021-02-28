@@ -13,9 +13,7 @@ import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ICategoryService;
-import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
-import bepicky.service.service.ISourcePageService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +21,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
@@ -37,16 +36,36 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     private IReaderService readerService;
 
     @Autowired
-    private ILanguageService languageService;
-
-    @Autowired
-    private ISourcePageService sourcePageService;
-
-    @Autowired
     private CategoryDtoMapper categoryResponseMapper;
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Override
+    public CategoryListResponse listApplicable(Long chatId, String type) {
+        return readerService.find(chatId).map(r -> {
+            CategoryType cType = CategoryType.valueOf(type);
+            Set<Category> applicableReadersCategories = getApplicable(r, cType);
+            return new CategoryListResponse(
+                applicableReadersCategories.stream().map(c -> toDto(r, c)).collect(Collectors.toList()),
+                true,
+                true,
+                modelMapper.map(r, ReaderDto.class)
+            );
+        }).orElseGet(() -> {
+            log.warn("list:category:reader {} not found", chatId);
+            return new CategoryListResponse(ErrorUtil.readerNotFound());
+        });
+    }
+
+    private Set<Category> getApplicable(Reader r, CategoryType cType) {
+        Set<Category> applicableReadersCategories = r.getSources().stream()
+            .flatMap(s -> s.getPages().stream())
+            .flatMap(sp -> sp.getCategories().stream())
+            .filter(c -> c.getType().equals(cType))
+            .collect(Collectors.toSet());
+        return applicableReadersCategories.isEmpty() ? categoryService.getAllByType(cType) : applicableReadersCategories;
+    }
 
     @Override
     public CategoryListResponse listAll(ListCategoryRequest request) {
