@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface INewsNoteNotificationService {
 
-    NewsNoteNotification save(Reader reader, NewsNote note);
+    NewsNoteNotification saveNew(Reader reader, NewsNote note);
 
     List<NewsNoteNotification> saveNew(Reader reader, Collection<NewsNote> notes);
 

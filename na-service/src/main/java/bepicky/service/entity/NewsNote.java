@@ -48,6 +48,16 @@ public class NewsNote extends DatedEntity {
     @JsonIgnore
     private Set<SourcePage> sourcePages = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "news_note_tag",
+        joinColumns = {@JoinColumn(name = "id_news_note")},
+        inverseJoinColumns = {@JoinColumn(name = "id_tag")}
+    )
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Set<Tag> tags = new HashSet<>();
+
     public void addSourcePage(SourcePage page) {
         sourcePages.add(page);
     }

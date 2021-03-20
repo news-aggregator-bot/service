@@ -53,6 +53,8 @@ public class NewsSynchroniser {
             .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
             .forEach((key, value) -> unfoldSourcePages(key)
                 .forEach(r -> notificationService.saveNew(r, value)));
+        actualNotes
+            .forEach(n -> n.getTags().forEach(t -> t.getReaders().forEach(r -> notificationService.saveNew(r, n))));
 
         latestNewsNoteId = actualNotes.stream()
             .mapToLong(NewsNote::getId)
