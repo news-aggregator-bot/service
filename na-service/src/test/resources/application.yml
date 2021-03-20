@@ -34,10 +34,10 @@ na:
     browser: false
   schedule:
     sync:
-      enabled: true
+      enabled: false
       cron: '* * 0 * * *'
     notify:
-      enabled: true
+      enabled: false
       limit: 1
       cron: '0 0 0 0/1 * *'
     read:

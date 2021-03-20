@@ -85,6 +85,16 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
+    public Set<NewsNote> archiveEarlierThan(int months) {
+        Calendar fewMonthsAgo = new GregorianCalendar();
+        fewMonthsAgo.add(Calendar.MONTH, -months);
+        Set<NewsNote> oldNews = repository.findByCreationDateBefore(fewMonthsAgo.getTime());
+        log.info("news_note:archive:{}", oldNews.size());
+        repository.deleteAll(oldNews);
+        return oldNews;
+    }
+
+    @Override
     public boolean existsByUrl(String url) {
         return repository.existsByUrl(url);
     }

@@ -27,6 +27,8 @@ public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
 
     Set<NewsNote> findByCreationDateBetween(Date startDate, Date endDate);
 
+    Set<NewsNote> findByCreationDateBefore(Date limit);
+
     Page<NewsNote> findByNormalisedTitleContainsOrderByCreationDateDesc(String key, Pageable pageable);
 
     List<NewsNote> findAllByIdIn(Collection<Long> ids);

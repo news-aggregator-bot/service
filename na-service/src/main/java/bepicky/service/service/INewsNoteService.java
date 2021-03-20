@@ -28,6 +28,8 @@ public interface INewsNoteService {
 
     Set<NewsNote> getTodayNotes();
 
+    Set<NewsNote> archiveEarlierThan(int months);
+
     boolean existsByUrl(String url);
 
     boolean existsByNormalisedTitle(String normalisedTitle);
