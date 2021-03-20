@@ -2,5 +2,5 @@ package bepicky.service.service.util;
 
 public interface IValueNormalisationService {
 
-    String normaliseTitle(String title);
+    String normaliseValue(String val);
 }

@@ -2,9 +2,12 @@ package bepicky.service.service;
 
 import bepicky.service.entity.Tag;
 
+import java.util.Optional;
+
 public interface ITagService {
 
-    Tag save(Tag tag);
+    Tag save(String value);
 
-    Tag delete(Long id);
+    Optional<Tag> findByValue(String value);
+
 }

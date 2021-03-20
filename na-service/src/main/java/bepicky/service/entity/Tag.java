@@ -11,8 +11,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tag")
 @EqualsAndHashCode(callSuper = true)
-public class Tag extends IdEntity {
+public class Tag extends DatedEntity {
 
-    @Column(nullable = false)
-    private String name;
+    @Column(nullable = false, unique = true, length = 50)
+    private String value;
+
+    @Column(nullable = false, length = 50)
+    private String normalisedValue;
 }

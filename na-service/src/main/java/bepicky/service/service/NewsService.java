@@ -19,7 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -98,7 +97,7 @@ public class NewsService implements INewsService {
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {
         String title = data.getTitle().trim();
-        String normTitle = normalisationService.normaliseTitle(title);
+        String normTitle = normalisationService.normaliseValue(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
             .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {

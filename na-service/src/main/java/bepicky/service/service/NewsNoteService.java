@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -106,7 +105,7 @@ public class NewsNoteService implements INewsNoteService {
 
     @Override
     public Page<NewsNote> searchByTitle(String key, Pageable pageable) {
-        String normalisedKey = normalisationService.normaliseTitle(key);
+        String normalisedKey = normalisationService.normaliseValue(key);
         if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
             return Page.empty();
         }
