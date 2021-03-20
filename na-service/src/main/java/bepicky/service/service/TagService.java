@@ -19,13 +19,19 @@ public class TagService implements ITagService {
     private IValueNormalisationService valueNormalisationService;
 
     @Override
-    public Tag save(String value) {
-        String normalised = valueNormalisationService.normaliseValue(value);
+    public Tag create(String value) {
+        String normalised = valueNormalisationService.lettersAndDigits(value);
         Tag tag = new Tag();
         tag.setValue(value);
         tag.setNormalisedValue(normalised);
         log.info("tag:new:{}", tag);
         return repository.save(tag);
+    }
+
+    @Override
+    public Tag get(String value) {
+        return repository.findByNormalisedValue(valueNormalisationService.normaliseTitle(value))
+            .orElse(create(value));
     }
 
     @Override

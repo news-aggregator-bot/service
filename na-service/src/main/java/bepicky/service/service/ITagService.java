@@ -6,7 +6,11 @@ import java.util.Optional;
 
 public interface ITagService {
 
-    Tag save(String value);
+    Tag create(String value);
+
+    Tag save(Tag tag);
+
+    Tag get(String value);
 
     Optional<Tag> findByValue(String value);
 

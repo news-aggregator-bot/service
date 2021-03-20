@@ -97,7 +97,7 @@ public class NewsService implements INewsService {
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {
         String title = data.getTitle().trim();
-        String normTitle = normalisationService.normaliseValue(title);
+        String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
             .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {

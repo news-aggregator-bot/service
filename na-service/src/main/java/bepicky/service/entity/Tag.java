@@ -37,4 +37,8 @@ public class Tag extends DatedEntity {
     @ToString.Exclude
     @JsonIgnore
     private Set<Reader> readers = new HashSet<>();
+
+    public void addReader(Reader r) {
+        readers.add(r);
+    }
 }

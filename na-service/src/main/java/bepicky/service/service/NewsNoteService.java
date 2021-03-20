@@ -105,7 +105,7 @@ public class NewsNoteService implements INewsNoteService {
 
     @Override
     public Page<NewsNote> searchByTitle(String key, Pageable pageable) {
-        String normalisedKey = normalisationService.normaliseValue(key);
+        String normalisedKey = normalisationService.normaliseTitle(key);
         if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
             return Page.empty();
         }
