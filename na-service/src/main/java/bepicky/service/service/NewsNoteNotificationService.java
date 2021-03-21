@@ -25,7 +25,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     private NewsNoteNotificationRepository notificationRepository;
 
     @Override
-    public NewsNoteNotification saveNew(Reader reader, NewsNote note) {
+    public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note) {
         NewsNoteNotification notification = new NewsNoteNotification(reader, note);
         if (notificationRepository.existsById(notification.getId())) {
             return null;

@@ -29,6 +29,12 @@ public class TagService implements ITagService {
     }
 
     @Override
+    public Tag save(Tag tag) {
+        log.info("tag:save:{}", tag);
+        return repository.save(tag);
+    }
+
+    @Override
     public Tag get(String value) {
         return repository.findByNormalisedValue(valueNormalisationService.normaliseTitle(value))
             .orElse(create(value));

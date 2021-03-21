@@ -6,7 +6,6 @@ import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
-import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -54,7 +52,7 @@ public class NewsSynchroniser {
             .forEach((key, value) -> unfoldSourcePages(key)
                 .forEach(r -> notificationService.saveNew(r, value)));
         actualNotes
-            .forEach(n -> n.getTags().forEach(t -> t.getReaders().forEach(r -> notificationService.saveNew(r, n))));
+            .forEach(n -> n.getTags().forEach(t -> t.getReaders().forEach(r -> notificationService.saveSingleNew(r, n))));
 
         latestNewsNoteId = actualNotes.stream()
             .mapToLong(NewsNote::getId)
