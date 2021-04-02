@@ -7,7 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -20,7 +23,7 @@ public class TagService implements ITagService {
 
     @Override
     public Tag create(String value) {
-        String normalised = valueNormalisationService.lettersAndDigits(value);
+        String normalised = valueNormalisationService.normaliseTag(value);
         Tag tag = new Tag();
         tag.setValue(value);
         tag.setNormalisedValue(normalised);
@@ -43,6 +46,16 @@ public class TagService implements ITagService {
     @Override
     public Optional<Tag> findByValue(String value) {
         return Optional.empty();
+    }
+
+    @Override
+    public Set<Tag> findByTitle(String title) {
+        return Arrays.stream(title.split("\\s+"))
+            .map(valueNormalisationService::normaliseTag)
+            .map(repository::findByNormalisedValue)
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .collect(Collectors.toSet());
     }
 
 }

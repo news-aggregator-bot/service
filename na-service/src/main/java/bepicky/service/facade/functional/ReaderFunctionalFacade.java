@@ -85,12 +85,12 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
 
     @Override
     public ReaderDto find(long chatId) {
-        return readerService.find(chatId).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
+        return readerService.findByChatId(chatId).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
     }
 
     @Override
     public StatusReaderDto status(long chatId) {
-        return readerService.find(chatId).map(r -> {
+        return readerService.findByChatId(chatId).map(r -> {
             Set<CategoryDto> categories = r.getCategories()
                 .stream()
                 .map(c -> categoryDtoMapper.toFullDto(c, r.getPrimaryLanguage()))

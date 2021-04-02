@@ -14,7 +14,7 @@ public interface IReaderService {
 
     Optional<Reader> findById(long id);
 
-    Optional<Reader> find(long chatId);
+    Optional<Reader> findByChatId(long chatId);
 
     List<Reader> findAll();
 

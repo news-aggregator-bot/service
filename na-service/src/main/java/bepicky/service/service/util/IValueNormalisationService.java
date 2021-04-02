@@ -2,7 +2,7 @@ package bepicky.service.service.util;
 
 public interface IValueNormalisationService {
 
-    String lettersAndDigits(String val);
+    String normaliseTag(String val);
 
     String normaliseTitle(String title);
 }

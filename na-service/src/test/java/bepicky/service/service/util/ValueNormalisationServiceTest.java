@@ -12,7 +12,7 @@ public class ValueNormalisationServiceTest {
 
     private final IValueNormalisationService normalisationService = new ValueNormalisationService();
 
-    private static Stream<Arguments> data() {
+    private static Stream<Arguments> titles() {
         return Stream.of(
             Arguments.of(
                 "Соціопат і невдаха, якого зруйнував батько. Що про Дональда Трампа написала його племінниця?",
@@ -45,8 +45,14 @@ public class ValueNormalisationServiceTest {
     }
 
     @ParameterizedTest
-    @MethodSource("data")
+    @MethodSource("titles")
     public void normaliseTitle_ShouldReturnExpected(String title, String expected) {
+        assertEquals(expected, normalisationService.normaliseTitle(title));
+    }
+
+    @ParameterizedTest
+    @MethodSource("titles")
+    public void letters_ShouldReturnExpected(String title, String expected) {
         assertEquals(expected, normalisationService.normaliseTitle(title));
     }
 }

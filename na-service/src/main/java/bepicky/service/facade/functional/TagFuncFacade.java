@@ -28,7 +28,7 @@ public class TagFuncFacade implements ITagFuncFacade {
 
     @Override
     public SubscribeTagResponse subscribe(Long chatId, String value) {
-        Reader r = readerService.findById(chatId).orElse(null);
+        Reader r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
             log.error("tag:subscribe:failed:reader:404");
             return new SubscribeTagResponse(ErrorUtil.readerNotFound());

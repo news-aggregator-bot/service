@@ -43,7 +43,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
 
     @Override
     public CategoryListResponse listApplicable(Long chatId, String type) {
-        return readerService.find(chatId).map(r -> {
+        return readerService.findByChatId(chatId).map(r -> {
             CategoryType cType = CategoryType.valueOf(type);
             Set<Category> applicableReadersCategories = getApplicable(r, cType);
             return new CategoryListResponse(
@@ -69,7 +69,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
 
     @Override
     public CategoryListResponse listAll(ListCategoryRequest request) {
-        return readerService.find(request.getChatId())
+        return readerService.findByChatId(request.getChatId())
             .map(reader -> {
                 CategoryType type = CategoryType.valueOf(request.getType());
                 return getListCategoryResponse(
@@ -85,7 +85,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     @Override
     public CategoryListResponse sublist(ListCategoryRequest request) {
         return categoryService.find(request.getParentId())
-            .map(parent -> readerService.find(request.getChatId()).map(reader -> getListCategoryResponse(
+            .map(parent -> readerService.findByChatId(request.getChatId()).map(reader -> getListCategoryResponse(
                 reader,
                 categoryService.findByParent(parent, pageReq(request.getPage(), request.getSize()))
             )).orElseGet(() -> {
@@ -136,7 +136,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     }
 
     private CategoryResponse doAction(CategoryRequest request, BiConsumer<Reader, Category> action) {
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
+        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("action:category:reader:{}:404", request.getChatId());
             return new CategoryResponse(ErrorUtil.readerNotFound());

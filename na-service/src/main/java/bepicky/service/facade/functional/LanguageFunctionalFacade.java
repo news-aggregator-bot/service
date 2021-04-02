@@ -41,7 +41,7 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Override
     public LanguageListResponse listAll(ListRequest request) {
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
+        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:language:reader {} not found", request.getChatId());
             return new LanguageListResponse(ErrorUtil.readerNotFound());
@@ -75,7 +75,7 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
             log.warn("update:language:language {} not found", request.getLang());
             return new LanguageResponse(ErrorUtil.languageNotFound());
         }
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
+        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("update:language:reader {} not found", request.getChatId());
             return new LanguageResponse(ErrorUtil.readerNotFound());

@@ -40,7 +40,7 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
 
     @Override
     public SourceListResponse listAll(ListRequest request) {
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
+        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:source:reader {} not found", request.getChatId());
             return new SourceListResponse(ErrorUtil.readerNotFound());
@@ -77,7 +77,7 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
     }
 
     private SourceResponse doAction(SourceRequest request, BiConsumer<Reader, Source> action) {
-        Reader reader = readerService.find(request.getChatId()).orElse(null);
+        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("update:source:reader {} not found", request.getChatId());
             return new SourceResponse(ErrorUtil.readerNotFound());

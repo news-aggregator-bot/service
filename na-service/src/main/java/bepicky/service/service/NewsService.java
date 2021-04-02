@@ -41,6 +41,9 @@ public class NewsService implements INewsService {
     @Autowired
     private IValueNormalisationService normalisationService;
 
+    @Autowired
+    private ITagService tagService;
+
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
 
@@ -110,6 +113,7 @@ public class NewsService implements INewsService {
                 note.setUrl(data.getLink());
                 note.setAuthor(data.getAuthor());
                 note.addSourcePage(page);
+                note.setTags(tagService.findByTitle(title));
                 return note;
             });
     }

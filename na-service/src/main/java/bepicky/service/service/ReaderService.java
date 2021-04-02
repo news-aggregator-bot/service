@@ -21,7 +21,7 @@ public class ReaderService implements IReaderService {
 
     @Override
     public Reader save(Reader reader) {
-        Reader repoReader = find(reader.getChatId()).map(r -> {
+        Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
             r.setFirstName(reader.getFirstName());
             r.setLastName(reader.getLastName());
             r.setPrimaryLanguage(reader.getPrimaryLanguage());
@@ -43,7 +43,7 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public Optional<Reader> find(long chatId) {
+    public Optional<Reader> findByChatId(long chatId) {
         return readerRepository.findByChatId(chatId);
     }
 
@@ -59,7 +59,7 @@ public class ReaderService implements IReaderService {
 
     @Override
     public Reader updateStatus(long chatId, Reader.Status status) {
-        return find(chatId).map(r -> {
+        return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
             return readerRepository.save(r);

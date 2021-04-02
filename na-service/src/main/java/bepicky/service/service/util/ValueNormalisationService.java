@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 public class ValueNormalisationService implements IValueNormalisationService {
 
     @Override
-    public String lettersAndDigits(String val) {
+    public String normaliseTag(String val) {
         if (StringUtils.isBlank(val)) {
             return "";
         }
-        return val.chars().filter(c -> Character.isAlphabetic(c) || Character.isDigit(c))
+        return val.chars().filter(c -> Character.isAlphabetic(c) || Character.isDigit(c) || c == '-')
             .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
             .toString();
     }

@@ -39,7 +39,7 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
             request.getKey(),
             pageReq(request.getPage(), request.getPageSize())
         );
-        Reader reader = readerService.find(request.getChatId())
+        Reader reader = readerService.findByChatId(request.getChatId())
             .orElseThrow(() -> new ResourceNotFoundException("news_note:search:reader:" + request.getChatId()));
         NewsSearchResponse response = new NewsSearchResponse();
         response.setList(notes.stream()
