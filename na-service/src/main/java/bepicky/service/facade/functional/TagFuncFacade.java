@@ -2,7 +2,10 @@ package bepicky.service.facade.functional;
 
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.ReaderDto;
+import bepicky.common.domain.dto.SourceDto;
 import bepicky.common.domain.dto.TagDto;
+import bepicky.common.domain.response.SourceListResponse;
+import bepicky.common.domain.response.TagListResponse;
 import bepicky.common.domain.response.TagResponse;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Tag;
@@ -12,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -58,5 +63,12 @@ public class TagFuncFacade implements ITagFuncFacade {
         Tag saved = tagService.save(tag);
         return new TagResponse(modelMapper.map(r, ReaderDto.class), modelMapper.map(saved, TagDto.class));
 
+    }
+
+    @Override
+    public TagListResponse search(String value) {
+        return new TagListResponse(
+            tagService.findByValue(value).stream().map(t -> modelMapper.map(t, TagDto.class)).collect(Collectors.toList())
+        );
     }
 }

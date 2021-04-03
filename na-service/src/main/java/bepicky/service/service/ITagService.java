@@ -2,6 +2,7 @@ package bepicky.service.service;
 
 import bepicky.service.entity.Tag;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ public interface ITagService {
 
     Tag get(String value);
 
-    Optional<Tag> findByValue(String value);
+    List<Tag> findByValue(String value);
 
     Set<Tag> findByTitle(String title);
 

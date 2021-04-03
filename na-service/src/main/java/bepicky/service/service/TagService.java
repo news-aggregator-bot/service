@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -44,8 +45,9 @@ public class TagService implements ITagService {
     }
 
     @Override
-    public Optional<Tag> findByValue(String value) {
-        return Optional.empty();
+    public List<Tag> findByValue(String value) {
+        String normalisedVal = valueNormalisationService.normaliseTag(value);
+        return repository.findByNormalisedValueContains(normalisedVal);
     }
 
     @Override
@@ -56,6 +58,11 @@ public class TagService implements ITagService {
             .filter(Optional::isPresent)
             .map(Optional::get)
             .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Optional<Tag> findById(Long id) {
+        return repository.findById(id);
     }
 
 }
