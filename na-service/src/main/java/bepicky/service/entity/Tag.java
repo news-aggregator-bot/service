@@ -41,4 +41,8 @@ public class Tag extends DatedEntity {
     public void addReader(Reader r) {
         readers.add(r);
     }
+
+    public void rmReader(Reader r) {
+        readers.remove(r);
+    }
 }

@@ -1,7 +1,8 @@
 package bepicky.service.controller;
 
 import bepicky.common.domain.request.SubscribeTagRequest;
-import bepicky.common.domain.response.SubscribeTagResponse;
+import bepicky.common.domain.request.UnsubscribeTagRequest;
+import bepicky.common.domain.response.TagResponse;
 import bepicky.service.facade.functional.ITagFuncFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,12 @@ public class TagController {
     private ITagFuncFacade tagFacade;
 
     @PostMapping("/subscribe")
-    public SubscribeTagResponse create(@Valid @RequestBody SubscribeTagRequest tagRequest) {
+    public TagResponse subscribe(@Valid @RequestBody SubscribeTagRequest tagRequest) {
         return tagFacade.subscribe(tagRequest.getChatId(), tagRequest.getValue());
+    }
+
+    @PostMapping("/unsubscribe")
+    public TagResponse unsubscribe(@Valid @RequestBody UnsubscribeTagRequest tagRequest) {
+        return tagFacade.unsubscribe(tagRequest.getChatId(), tagRequest.getTagId());
     }
 }

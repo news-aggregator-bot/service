@@ -1,7 +1,9 @@
 package bepicky.service.facade.functional;
 
-import bepicky.common.domain.response.SubscribeTagResponse;
+import bepicky.common.domain.response.TagResponse;
 
 public interface ITagFuncFacade {
-    SubscribeTagResponse subscribe(Long chatId, String value);
+    TagResponse subscribe(Long chatId, String value);
+
+    TagResponse unsubscribe(Long chatId, Long tagId);
 }

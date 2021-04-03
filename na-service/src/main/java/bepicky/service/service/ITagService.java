@@ -17,4 +17,6 @@ public interface ITagService {
 
     Set<Tag> findByTitle(String title);
 
+    Optional<Tag> findById(Long id);
+
 }

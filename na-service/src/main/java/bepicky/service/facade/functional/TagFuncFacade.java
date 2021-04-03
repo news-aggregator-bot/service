@@ -3,7 +3,7 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.TagDto;
-import bepicky.common.domain.response.SubscribeTagResponse;
+import bepicky.common.domain.response.TagResponse;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Tag;
 import bepicky.service.service.IReaderService;
@@ -27,16 +27,36 @@ public class TagFuncFacade implements ITagFuncFacade {
     private ModelMapper modelMapper;
 
     @Override
-    public SubscribeTagResponse subscribe(Long chatId, String value) {
+    public TagResponse subscribe(Long chatId, String value) {
         Reader r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
             log.error("tag:subscribe:failed:reader:404");
-            return new SubscribeTagResponse(ErrorUtil.readerNotFound());
+            return new TagResponse(ErrorUtil.readerNotFound());
         }
         Tag tag = tagService.get(value);
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
         Tag saved = tagService.save(tag);
-        return new SubscribeTagResponse(modelMapper.map(r, ReaderDto.class), modelMapper.map(saved, TagDto.class));
+        return new TagResponse(modelMapper.map(r, ReaderDto.class), modelMapper.map(saved, TagDto.class));
+    }
+
+    @Override
+    public TagResponse unsubscribe(Long chatId, Long tagId) {
+        Reader r = readerService.findByChatId(chatId).orElse(null);
+        if (r == null) {
+            log.error("tag:unsubscribe:failed:reader:404:{}", chatId);
+            return new TagResponse(ErrorUtil.readerNotFound());
+        }
+        Tag tag = tagService.findById(tagId).orElse(null);
+        if (tag == null) {
+            log.error("tag:unsubscribe:failed:tag:404:{}", tagId);
+            return new TagResponse(ErrorUtil.tagNotFound());
+        }
+
+        tag.rmReader(r);
+        log.info("tag:unsubscribe:{}:reader:{}", tag, r.getChatId());
+        Tag saved = tagService.save(tag);
+        return new TagResponse(modelMapper.map(r, ReaderDto.class), modelMapper.map(saved, TagDto.class));
+
     }
 }
