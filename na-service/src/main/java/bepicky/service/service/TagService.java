@@ -40,8 +40,8 @@ public class TagService implements ITagService {
 
     @Override
     public Tag get(String value) {
-        return repository.findByNormalisedValue(valueNormalisationService.normaliseTitle(value))
-            .orElse(create(value));
+        return repository.findByNormalisedValue(valueNormalisationService.normaliseTag(value))
+            .orElseGet(() -> create(value));
     }
 
     @Override
