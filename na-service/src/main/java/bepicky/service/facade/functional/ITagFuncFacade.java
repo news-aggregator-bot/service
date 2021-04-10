@@ -6,7 +6,7 @@ import bepicky.common.domain.response.TagResponse;
 public interface ITagFuncFacade {
     TagResponse subscribe(Long chatId, String value);
 
-    TagResponse unsubscribe(Long chatId, Long tagId);
+    TagResponse unsubscribe(Long chatId, String value);
 
     TagListResponse search(String value);
 }

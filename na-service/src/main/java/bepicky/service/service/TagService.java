@@ -45,9 +45,14 @@ public class TagService implements ITagService {
     }
 
     @Override
-    public List<Tag> findByValue(String value) {
+    public List<Tag> findAllByValue(String value) {
         String normalisedVal = valueNormalisationService.normaliseTag(value);
         return repository.findByNormalisedValueContains(normalisedVal);
+    }
+
+    @Override
+    public Optional<Tag> findByValue(String value) {
+        return repository.findByNormalisedValue(value);
     }
 
     @Override

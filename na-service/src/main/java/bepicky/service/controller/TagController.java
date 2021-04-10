@@ -1,7 +1,6 @@
 package bepicky.service.controller;
 
-import bepicky.common.domain.request.SubscribeTagRequest;
-import bepicky.common.domain.request.UnsubscribeTagRequest;
+import bepicky.common.domain.request.TagRequest;
 import bepicky.common.domain.response.TagListResponse;
 import bepicky.common.domain.response.TagResponse;
 import bepicky.service.facade.functional.ITagFuncFacade;
@@ -23,13 +22,13 @@ public class TagController {
     private ITagFuncFacade tagFacade;
 
     @PostMapping("/subscribe")
-    public TagResponse subscribe(@Valid @RequestBody SubscribeTagRequest tagRequest) {
+    public TagResponse subscribe(@Valid @RequestBody TagRequest tagRequest) {
         return tagFacade.subscribe(tagRequest.getChatId(), tagRequest.getValue());
     }
 
     @PostMapping("/unsubscribe")
-    public TagResponse unsubscribe(@Valid @RequestBody UnsubscribeTagRequest tagRequest) {
-        return tagFacade.unsubscribe(tagRequest.getChatId(), tagRequest.getTagId());
+    public TagResponse unsubscribe(@Valid @RequestBody TagRequest tagRequest) {
+        return tagFacade.unsubscribe(tagRequest.getChatId(), tagRequest.getValue());
     }
 
     @GetMapping("/search/{value}")

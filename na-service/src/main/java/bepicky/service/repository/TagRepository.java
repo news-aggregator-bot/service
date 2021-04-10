@@ -13,4 +13,5 @@ public interface TagRepository extends JpaRepository<Tag, Long> {
     Optional<Tag> findByNormalisedValue(String value);
 
     List<Tag> findByNormalisedValueContains(String value);
+
 }

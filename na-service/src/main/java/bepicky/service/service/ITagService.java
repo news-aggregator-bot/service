@@ -14,7 +14,9 @@ public interface ITagService {
 
     Tag get(String value);
 
-    List<Tag> findByValue(String value);
+    List<Tag> findAllByValue(String value);
+
+    Optional<Tag> findByValue(String value);
 
     Set<Tag> findByTitle(String title);
 
