@@ -35,4 +35,9 @@ public class TagController {
     public TagListResponse search(@PathVariable String value) {
         return tagFacade.search(value);
     }
+
+    @GetMapping("/reader/{chatId}")
+    public TagListResponse getAllByReader(@PathVariable Long chatId) {
+        return tagFacade.getAll(chatId);
+    }
 }

@@ -40,7 +40,10 @@ public class TagFuncFacade implements ITagFuncFacade {
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
         Tag saved = tagService.save(tag);
-        return new TagResponse(modelMapper.map(r, ReaderDto.class), modelMapper.map(saved, TagDto.class));
+        return new TagResponse(
+            modelMapper.map(r, ReaderDto.class),
+            modelMapper.map(saved, TagDto.class)
+        );
     }
 
     @Override
@@ -67,7 +70,27 @@ public class TagFuncFacade implements ITagFuncFacade {
     @Override
     public TagListResponse search(String value) {
         return new TagListResponse(
-            tagService.findAllByValue(value).stream().map(t -> modelMapper.map(t, TagDto.class)).collect(Collectors.toList())
+            tagService.findAllByValue(value)
+                .stream()
+                .map(t -> modelMapper.map(t, TagDto.class))
+                .collect(Collectors.toList())
+        );
+    }
+
+    @Override
+    public TagListResponse getAll(Long chatId) {
+        Reader r = readerService.findByChatId(chatId).orElse(null);
+        if (r == null) {
+            log.error("tag:list:reader:failed:reader:404:{}", chatId);
+            return new TagListResponse(ErrorUtil.readerNotFound());
+        }
+        log.debug("tag:list:reader {}", chatId);
+        return new TagListResponse(
+            modelMapper.map(r, ReaderDto.class),
+            r.getTags()
+                .stream()
+                .map(t -> modelMapper.map(t, TagDto.class))
+                .collect(Collectors.toList())
         );
     }
 }

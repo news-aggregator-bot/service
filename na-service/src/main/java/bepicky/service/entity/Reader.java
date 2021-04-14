@@ -89,6 +89,15 @@ public class Reader extends DatedEntity {
     @ToString.Exclude
     private Set<Source> sources;
 
+    @ManyToMany
+    @JoinTable(
+        name = "reader_tag",
+        joinColumns = {@JoinColumn(name = "id_reader")},
+        inverseJoinColumns = {@JoinColumn(name = "id_tag")}
+    )
+    @EqualsAndHashCode.Exclude
+    private Set<Tag> tags;
+
     public void addCategory(Category category) {
         if (this.categories == null) {
             this.categories = new HashSet<>();

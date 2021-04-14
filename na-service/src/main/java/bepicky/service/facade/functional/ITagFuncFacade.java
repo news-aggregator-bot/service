@@ -9,4 +9,6 @@ public interface ITagFuncFacade {
     TagResponse unsubscribe(Long chatId, String value);
 
     TagListResponse search(String value);
+
+    TagListResponse getAll(Long chatId);
 }
