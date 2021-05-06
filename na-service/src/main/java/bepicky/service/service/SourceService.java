@@ -40,8 +40,8 @@ public class SourceService implements ISourceService {
     }
 
     @Override
-    public List<Source> findAllEnabled() {
-        return repository.findByStatusNot(Source.Status.DISABLED);
+    public List<Source> findAllEnabledByFetchPeriod(Source.FetchPeriod fetchPeriod) {
+        return repository.findByStatusNotAndFetchPeriod(Source.Status.DISABLED, fetchPeriod);
     }
 
     @Override
@@ -66,20 +66,31 @@ public class SourceService implements ISourceService {
 
     @Override
     public Source updateStatus(Long id, Source.Status status) {
-        return update(id, status, "source:{}:enabled");
+        return internalUpdateStatus(id, status);
     }
 
     @Override
     public Source disable(Long id) {
-        return update(id, Source.Status.DISABLED, "source:{}:disabled");
+        return internalUpdateStatus(id, Source.Status.DISABLED);
     }
 
-    private Source update(Long id, Source.Status status, String logMessage) {
+    @Override
+    public Source updateFetchPeriod(Long id, Source.FetchPeriod fetchPeriod) {
         return find(id).map(s -> {
-            s.setStatus(status);
+            s.setFetchPeriod(fetchPeriod);
             repository.save(s);
-            log.info(logMessage, s.getName());
+            log.info("source:{}:fetch period update {}", s.getName(), fetchPeriod);
             return s;
         }).orElseThrow(() -> new ResourceNotFoundException("Source " + id + " not found."));
     }
+
+    private Source internalUpdateStatus(Long id, Source.Status status) {
+        return find(id).map(s -> {
+            s.setStatus(status);
+            repository.save(s);
+            log.info("source:{}:status update {}", s.getName(), status);
+            return s;
+        }).orElseThrow(() -> new ResourceNotFoundException("Source " + id + " not found."));
+    }
+
 }

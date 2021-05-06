@@ -1,4 +1,4 @@
-package bepicky.service.schedule;
+package bepicky.service.schedule.reader;
 
 import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Source;
@@ -8,19 +8,16 @@ import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-@Component
+import java.util.Collection;
+
 @Slf4j
-@RefreshScope
-public class NewsReader {
+public abstract class AbstractNewsReader {
 
     @Autowired
-    private ISourceService sourceService;
+    protected ISourceService sourceService;
 
     @Autowired
     private INewsService newsService;
@@ -28,11 +25,12 @@ public class NewsReader {
     @Value("${na.schedule.read.enabled}")
     private boolean enabled;
 
-    @Scheduled(initialDelay = 5000, fixedDelay = 10 * 60000)
-    public void readAll() {
+    public abstract void read();
+
+    protected void readSources(Collection<Source> sources) {
         if (enabled) {
             log.info("news:read:started");
-            sourceService.findAllEnabled().forEach(this::read);
+            sources.forEach(this::read);
         }
     }
 

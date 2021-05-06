@@ -15,7 +15,7 @@ public interface ISourceService {
 
     List<Source> findAll();
 
-    List<Source> findAllEnabled();
+    List<Source> findAllEnabledByFetchPeriod(Source.FetchPeriod fetchPeriod);
 
     Page<Source> findAllEnabled(Pageable pageable);
 
@@ -28,4 +28,6 @@ public interface ISourceService {
     Source updateStatus(Long id, Source.Status status);
 
     Source disable(Long id);
+
+    Source updateFetchPeriod(Long id, Source.FetchPeriod fetchPeriod);
 }

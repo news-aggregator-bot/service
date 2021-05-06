@@ -44,4 +44,10 @@ public class GodSourceController {
     public void changeSourcePageSource(@PathVariable long sourceId, @PathVariable long spId) {
         sourceFunctionalFacade.changeSource(sourceId, spId);
     }
+
+    @PostMapping("/source/{id}/fetch-period/{fetchPeriod}")
+    public void disableSource(@PathVariable long id, @PathVariable String fetchPeriod) {
+        Source.FetchPeriod sFetchPeriod = Source.FetchPeriod.valueOf(fetchPeriod);
+        sourceService.updateFetchPeriod(id, sFetchPeriod);
+    }
 }

@@ -33,6 +33,10 @@ public class Source extends DatedEntity {
     @Enumerated(EnumType.STRING)
     private Status status = Status.DISABLED;
 
+    @Column(name = "fetch_period", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private FetchPeriod fetchPeriod = FetchPeriod.FOREVER;
+
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
     @JsonIgnore
@@ -59,5 +63,9 @@ public class Source extends DatedEntity {
 
     public enum Status {
         PRIMARY, DISABLED
+    }
+
+    public enum FetchPeriod {
+        FOREVER, HOURLY, FOURLY, EIGHTLY, DAILY
     }
 }

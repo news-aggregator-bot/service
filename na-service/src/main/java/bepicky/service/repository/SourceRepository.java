@@ -14,7 +14,7 @@ public interface SourceRepository extends JpaRepository<Source, Long> {
 
     Optional<Source> findByName(String name);
 
-    List<Source> findByStatusNot(Source.Status status);
+    List<Source> findByStatusNotAndFetchPeriod(Source.Status status, Source.FetchPeriod fetchPeriod);
 
     Page<Source> findByStatusNotOrderByNameAsc(Source.Status status, Pageable pageable);
 }
