@@ -1,5 +1,6 @@
 package bepicky.service.controller.god;
 
+import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
 import bepicky.service.facade.functional.ISourceFunctionalFacade;
 import bepicky.service.service.ISourceService;
@@ -40,12 +41,18 @@ public class GodSourceController {
         return sourceService.findAll();
     }
 
+    @GetMapping("/source/{id}")
+    public Source getSource(@PathVariable long id) {
+        return sourceService.find(id)
+            .orElseThrow(() -> new ResourceNotFoundException("source not found"));
+    }
+
     @PutMapping("/source/{sourceId}/sourcepage/{spId}/change")
     public void changeSourcePageSource(@PathVariable long sourceId, @PathVariable long spId) {
         sourceFunctionalFacade.changeSource(sourceId, spId);
     }
 
-    @PostMapping("/source/{id}/fetch-period/{fetchPeriod}")
+    @PutMapping("/source/{id}/fetch-period/{fetchPeriod}")
     public void disableSource(@PathVariable long id, @PathVariable String fetchPeriod) {
         Source.FetchPeriod sFetchPeriod = Source.FetchPeriod.valueOf(fetchPeriod);
         sourceService.updateFetchPeriod(id, sFetchPeriod);
