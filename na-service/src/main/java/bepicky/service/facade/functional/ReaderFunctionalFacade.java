@@ -9,6 +9,7 @@ import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
+import bepicky.service.entity.Tag;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
@@ -94,10 +95,14 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
             Set<CategoryDto> categories = r.getCategories()
                 .stream()
                 .map(c -> categoryDtoMapper.toFullDto(c, r.getPrimaryLanguage()))
-                .collect(
-                    Collectors.toSet());
+                .collect(Collectors.toSet());
+            Set<String> tags = r.getTags()
+                .stream()
+                .map(Tag::getValue)
+                .collect(Collectors.toSet());
             StatusReaderDto status = modelMapper.map(r, StatusReaderDto.class);
             status.setCategories(categories);
+            status.setTags(tags);
             return status;
         }).orElse(null);
     }
