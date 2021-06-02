@@ -62,7 +62,7 @@ public class Source extends DatedEntity {
     }
 
     public enum Status {
-        PRIMARY, DISABLED
+        PRIMARY, SECONDARY, DISABLED
     }
 
     public enum FetchPeriod {

@@ -46,7 +46,7 @@ public class SourceService implements ISourceService {
 
     @Override
     public Page<Source> findAllEnabled(Pageable pageable) {
-        return repository.findByStatusNotOrderByNameAsc(Source.Status.DISABLED, pageable);
+        return repository.findByStatusOrderByNameAsc(Source.Status.PRIMARY, pageable);
     }
 
     @Override
