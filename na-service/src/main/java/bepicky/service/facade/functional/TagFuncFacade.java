@@ -1,19 +1,27 @@
 package bepicky.service.facade.functional;
 
 import bepicky.common.ErrorUtil;
+import bepicky.common.domain.dto.NewsNoteDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.TagDto;
+import bepicky.common.domain.request.NewsSearchRequest;
+import bepicky.common.domain.response.NewsSearchResponse;
 import bepicky.common.domain.response.TagListResponse;
 import bepicky.common.domain.response.TagResponse;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Tag;
+import bepicky.service.service.INewsNoteService;
 import bepicky.service.service.IReaderService;
 import bepicky.service.service.ITagService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
@@ -25,6 +33,9 @@ public class TagFuncFacade implements ITagFuncFacade {
 
     @Autowired
     private IReaderService readerService;
+
+    @Autowired
+    private INewsNoteFunctionalFacade newsNoteService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -40,9 +51,16 @@ public class TagFuncFacade implements ITagFuncFacade {
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
         Tag saved = tagService.save(tag);
+        List<NewsNoteDto> news = newsNoteService.search(new NewsSearchRequest(
+            chatId,
+            saved.getValue(),
+            1,
+            5
+        )).getList();
         return new TagResponse(
             modelMapper.map(r, ReaderDto.class),
-            modelMapper.map(saved, TagDto.class)
+            modelMapper.map(saved, TagDto.class),
+            news
         );
     }
 
