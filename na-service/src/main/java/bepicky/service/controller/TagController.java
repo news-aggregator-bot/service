@@ -31,11 +31,6 @@ public class TagController {
         return tagFacade.unsubscribe(tagRequest.getChatId(), tagRequest.getValue());
     }
 
-    @GetMapping("/search/{value}")
-    public TagListResponse search(@PathVariable String value) {
-        return tagFacade.search(value);
-    }
-
     @GetMapping("/reader/{chatId}")
     public TagListResponse getAllByReader(@PathVariable Long chatId) {
         return tagFacade.getAll(chatId);
