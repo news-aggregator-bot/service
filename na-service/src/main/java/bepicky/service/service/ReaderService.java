@@ -1,5 +1,6 @@
 package bepicky.service.service;
 
+import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -55,6 +56,11 @@ public class ReaderService implements IReaderService {
     @Override
     public List<Reader> findAllEnabled() {
         return readerRepository.findAllByStatus(Reader.Status.ENABLED);
+    }
+
+    @Override
+    public List<Reader> findAllByPrimaryLanguage(Language language) {
+        return readerRepository.findAllByPrimaryLanguageAndStatus(language, Reader.Status.ENABLED);
     }
 
     @Override

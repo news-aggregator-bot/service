@@ -1,5 +1,6 @@
 package bepicky.service.service;
 
+import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 
 import java.util.Collection;
@@ -19,6 +20,8 @@ public interface IReaderService {
     List<Reader> findAll();
 
     List<Reader> findAllEnabled();
+
+    List<Reader> findAllByPrimaryLanguage(Language language);
 
     Reader updateStatus(long chatId, Reader.Status status);
 
