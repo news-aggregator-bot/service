@@ -1,0 +1,1 @@
+alter table reader add column `tags_limit` bigint not null default -1;

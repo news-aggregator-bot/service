@@ -58,6 +58,10 @@ public class Reader extends DatedEntity {
     @JsonProperty("primary_language")
     private Language primaryLanguage;
 
+    @JsonProperty("tags_limit")
+    @Column(name = "tags_limit", nullable = false)
+    private Long tagsLimit;
+
     @ManyToMany
     @JoinTable(
         name = "reader_category",

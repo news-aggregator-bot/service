@@ -44,10 +44,14 @@ public class TagFuncFacade implements ITagFuncFacade {
     public TagResponse subscribe(Long chatId, String value) {
         Reader r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
-            log.error("tag:subscribe:failed:reader:404");
+            log.error("tag:subscribe:failed:reader:404:" + chatId);
             return new TagResponse(ErrorUtil.readerNotFound());
         }
         Tag tag = tagService.get(value);
+        if (r.getTagsLimit() != -1 && r.getTags().size() >= r.getTagsLimit()) {
+            log.warn("tag:subscribe:failed:reader:tag limit:" + chatId);
+            return new TagResponse(ErrorUtil.tagLimit());
+        }
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
         Tag saved = tagService.save(tag);
