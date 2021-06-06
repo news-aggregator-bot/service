@@ -27,9 +27,6 @@ public class CommunicationService implements ICommunicationService {
     private ILanguageService languageService;
 
     @Autowired
-    private IReaderService readerService;
-
-    @Autowired
     private NaBotClient naBotClient;
 
     public void communicate(InputStream data) {
@@ -38,11 +35,14 @@ public class CommunicationService implements ICommunicationService {
         messages.forEach((l, v) -> {
             Language language = languageService.find(l)
                 .orElseThrow(() -> new IllegalArgumentException(l + " language doesn't exist"));
-            Set<Long> readersChatIds = readerService.findAllByPrimaryLanguage(language)
+            Set<Long> readersChatIds = language.getReaders()
                 .stream()
+                .filter(Reader::isActive)
                 .map(Reader::getChatId)
                 .collect(Collectors.toSet());
-            naBotClient.notifyMessage(new NotifyMessageRequest(readersChatIds, v));
+            if (!readersChatIds.isEmpty()) {
+                naBotClient.notifyMessage(new NotifyMessageRequest(readersChatIds, v));
+            }
         });
     }
 

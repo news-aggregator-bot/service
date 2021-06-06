@@ -59,11 +59,6 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public List<Reader> findAllByPrimaryLanguage(Language language) {
-        return readerRepository.findAllByPrimaryLanguageAndStatus(language, Reader.Status.ENABLED);
-    }
-
-    @Override
     public Reader updateStatus(long chatId, Reader.Status status) {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
