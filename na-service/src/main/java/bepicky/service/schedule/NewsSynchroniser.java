@@ -65,8 +65,11 @@ public class NewsSynchroniser {
     }
 
     private Stream<Reader> findApplicableReaders(SourcePage sp) {
-        if (sp.getRegions() == null) {
+        if (sp.getRegions() == null || sp.getRegions().isEmpty()) {
             return filterReaders(sp, sp.getCategories());
+        }
+        if (sp.getCategories().size() == 1 && sp.getRegions().size() == 1) {
+            return filterReaders(sp, sp.getRegions());
         }
         return filterReaders(sp, sp.getRegions())
             .filter(r -> atLeastOneInCommon(sp.getCommon(), r.getCategories()));
