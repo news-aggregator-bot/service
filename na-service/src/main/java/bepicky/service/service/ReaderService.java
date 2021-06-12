@@ -1,10 +1,10 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +20,9 @@ public class ReaderService implements IReaderService {
     @Autowired
     private ReaderRepository readerRepository;
 
+    @Value("${na.reader.tag.limit}")
+    private Long tagLimit;
+
     @Override
     public Reader save(Reader reader) {
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
@@ -27,6 +30,7 @@ public class ReaderService implements IReaderService {
             r.setLastName(reader.getLastName());
             r.setPrimaryLanguage(reader.getPrimaryLanguage());
             r.setUsername(reader.getUsername());
+            r.setTagsLimit(tagLimit);
             return r;
         }).orElse(reader);
         log.info("reader:save:{}", reader);
