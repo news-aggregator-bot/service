@@ -48,9 +48,10 @@ public class TagFuncFacade implements ITagFuncFacade {
             return new TagResponse(ErrorUtil.readerNotFound());
         }
         Tag tag = tagService.get(value);
+        ReaderDto rdto = modelMapper.map(r, ReaderDto.class);
         if (r.getTagsLimit() != -1 && r.getTags().size() >= r.getTagsLimit()) {
             log.warn("tag:subscribe:failed:reader:tag limit:" + chatId);
-            return new TagResponse(ErrorUtil.tagLimit());
+            return new TagResponse(ErrorUtil.tagLimit(), rdto);
         }
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
@@ -62,7 +63,7 @@ public class TagFuncFacade implements ITagFuncFacade {
             5
         )).getList();
         return new TagResponse(
-            modelMapper.map(r, ReaderDto.class),
+            rdto,
             modelMapper.map(saved, TagDto.class),
             news
         );
