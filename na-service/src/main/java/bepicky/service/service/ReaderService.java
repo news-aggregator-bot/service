@@ -25,14 +25,20 @@ public class ReaderService implements IReaderService {
 
     @Override
     public Reader save(Reader reader) {
+        if (reader.getChatId() == null) {
+            throw new IllegalArgumentException(reader.toString() + " no chat id");
+        }
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
             r.setFirstName(reader.getFirstName());
             r.setLastName(reader.getLastName());
             r.setPrimaryLanguage(reader.getPrimaryLanguage());
             r.setUsername(reader.getUsername());
-            r.setTagsLimit(tagLimit);
             return r;
-        }).orElse(reader);
+        }).orElseGet(() -> {
+            reader.setTagsLimit(tagLimit);
+            reader.setStatus(Reader.Status.DISABLED);
+            return reader;
+        });
         log.info("reader:save:{}", reader);
         return readerRepository.save(repoReader);
     }

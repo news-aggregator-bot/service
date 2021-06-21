@@ -49,7 +49,6 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
         reader.setPlatform(platform);
         reader.setPrimaryLanguage(language);
         reader.setLanguages(Sets.newHashSet(language));
-        reader.setStatus(Reader.Status.DISABLED);
         return modelMapper.map(readerService.save(reader), ReaderDto.class);
     }
 
