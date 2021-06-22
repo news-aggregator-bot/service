@@ -20,6 +20,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -42,8 +43,9 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
     @Override
     public ReaderDto create(ReaderRequest request) {
         log.info("reader:registration:{}", request.toString());
-        Language language = languageService.find(request.getPrimaryLanguage())
-            .orElseThrow(() -> new ResourceNotFoundException(request.getPrimaryLanguage() + " language not found."));
+        Language language = Optional.ofNullable(request.getPrimaryLanguage())
+            .flatMap(languageService::find)
+            .orElse(languageService.getDefault());
         Platform platform = Platform.valueOf(request.getPlatform());
         Reader reader = modelMapper.map(request, Reader.class);
         reader.setPlatform(platform);

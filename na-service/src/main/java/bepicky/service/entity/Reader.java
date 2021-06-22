@@ -73,7 +73,7 @@ public class Reader extends DatedEntity {
     @JsonIgnore
     private Set<Category> categories;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "reader_lang",
         joinColumns = {@JoinColumn(name = "id_reader")},

@@ -67,6 +67,24 @@ public class ReaderFunctionalFacadeTest {
         assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
     }
 
+    @Test
+    public void create_NullLanguageReaderRequest_ShouldCreateEmptyReader() {
+        ReaderRequest rr = new ReaderRequest();
+        rr.setChatId(101L);
+        rr.setPlatform(Platform.TELEGRAM.name());
+        rr.setPrimaryLanguage(null);
+
+        ReaderDto readerDto = functionalFacade.create(rr);
+
+        assertNotNull(readerDto.getId());
+        assertNull(readerDto.getFirstName());
+        assertNull(readerDto.getLastName());
+        assertNull(readerDto.getUsername());
+        assertEquals(readerDto.getChatId(), rr.getChatId());
+        assertEquals(readerDto.getPrimaryLanguage().getLang(), "en");
+        assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void create_NoChatIdReaderRequest_ShouldThrowAnException() {
         ReaderRequest rr = new ReaderRequest();
