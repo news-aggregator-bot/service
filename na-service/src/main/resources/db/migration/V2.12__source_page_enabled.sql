@@ -1,0 +1,1 @@
+alter table source_page add column `enabled` tinyint(1) not null default 1;

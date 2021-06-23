@@ -71,11 +71,10 @@ public class NewsNotifier {
         );
         try {
             botClient.notifyNews(request);
-            log.info("notify:reader:success {}", request.getChatId());
             notifications.forEach(notificationService::sent);
-            log.info("notify:reader:{}:notes:removed", request.getChatId());
+            log.info("notify:reader:{}:success", request.getChatId());
         } catch (Exception e) {
-            log.error("notify:reader:fail {} {}", request.getChatId(), e.getMessage());
+            log.error("notify:reader:{}:fail {}", request.getChatId(), e.getMessage());
         }
     }
 }

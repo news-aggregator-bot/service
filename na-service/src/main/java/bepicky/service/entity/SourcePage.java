@@ -54,6 +54,9 @@ public class SourcePage extends DatedEntity {
     @JsonProperty("url_normalisation")
     private UrlNormalisation urlNormalisation;
 
+    @Column(nullable = false, name = "enabled")
+    private boolean enabled;
+
     @ManyToMany
     @JoinTable(
         name = "source_page_language",
