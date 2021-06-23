@@ -18,6 +18,7 @@ import bepicky.service.service.ILanguageService;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,7 +53,7 @@ public class IngestionSourceFacade {
 
     public Source ingest(SourceDto srcDto) {
         Source source = getSource(srcDto);
-        ImmutableList.Builder<SourcePage> pages = ImmutableList.builder();
+        Set<String> pages = new HashSet<>();
         for (SourcePageDto pageDto : srcDto.getPages()) {
             SourcePage srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
                 SourcePage srcPg = new SourcePage();
@@ -78,11 +79,12 @@ public class IngestionSourceFacade {
                 contentBlockService.deleteAll(srcPageContentBlocks);
             }
             savedSrcPage.setContentBlocks(set);
-            pages.add(srcPage);
+            pages.add(srcPage.getUrl());
             contentBlockService.saveAll(contentBlocks);
         }
-//        source.setPages(pages.build());
-//        return sourceService.save(source);
+        source.getPages().stream()
+            .filter(sp -> !pages.contains(sp.getUrl()))
+            .forEach(sp -> sourcePageService.disable(sp.getId()));
         return source;
     }
 

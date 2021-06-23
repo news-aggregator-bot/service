@@ -143,6 +143,9 @@ public class SourceIngestionService implements IngestionService {
     }
 
     protected String normaliseUrl(String url) {
+        if (url.endsWith("/")) {
+            return url.substring(0, url.length() - 1);
+        }
         return url;
     }
 }

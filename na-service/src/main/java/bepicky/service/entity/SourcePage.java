@@ -55,7 +55,7 @@ public class SourcePage extends DatedEntity {
     private UrlNormalisation urlNormalisation;
 
     @Column(nullable = false, name = "enabled")
-    private boolean enabled;
+    private boolean enabled = true;
 
     @ManyToMany
     @JoinTable(
