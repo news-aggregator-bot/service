@@ -3,6 +3,7 @@ package bepicky.service.controller.god;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
 import bepicky.service.facade.functional.ISourceFunctionalFacade;
+import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,9 @@ public class GodSourceController {
 
     @Autowired
     private ISourceFunctionalFacade sourceFunctionalFacade;
+
+    @Autowired
+    private ISourcePageService sourcePageService;
 
     @PutMapping("/source/{id}")
     public void enableSource(@PathVariable long id, @RequestParam String status) {
@@ -56,5 +60,15 @@ public class GodSourceController {
     public void disableSource(@PathVariable long id, @PathVariable String fetchPeriod) {
         Source.FetchPeriod sFetchPeriod = Source.FetchPeriod.valueOf(fetchPeriod);
         sourceService.updateFetchPeriod(id, sFetchPeriod);
+    }
+
+    @PutMapping("/source/page/{pageId}/enable")
+    public void enablePage(@PathVariable("pageId") Long pageId) {
+        sourcePageService.enable(pageId);
+    }
+
+    @PutMapping("/source/page/{pageId}/disable")
+    public void disablePage(@PathVariable("pageId") Long pageId) {
+        sourcePageService.disable(pageId);
     }
 }

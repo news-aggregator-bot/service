@@ -18,7 +18,6 @@ public class LocalisationService implements ILocalisationService{
 
     @Override
     public List<Localisation> saveAll(Collection<Localisation> categories) {
-        log.info("localisation:save:{}", categories);
         return localisationRepository.saveAll(categories);
     }
 

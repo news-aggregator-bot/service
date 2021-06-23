@@ -23,6 +23,7 @@ public class SourcePageService implements ISourcePageService {
     @Autowired
     private SourcePageRepository repository;
 
+
     @Override
     public List<SourcePage> findAll() {
         return repository.findAll();
@@ -85,5 +86,25 @@ public class SourcePageService implements ISourcePageService {
                 return repository.save(sp);
             })
             .orElseThrow(() -> new ResourceNotFoundException("Source page not found."));
+    }
+
+    @Override
+    public void enable(long pageId) {
+        repository.findById(pageId)
+            .ifPresent(sp -> {
+                sp.setEnabled(true);
+                repository.save(sp);
+                log.info("sourcepage:enable:" + pageId);
+            });
+    }
+
+    @Override
+    public void disable(long pageId) {
+        repository.findById(pageId)
+            .ifPresent(sp -> {
+                sp.setEnabled(false);
+                repository.save(sp);
+                log.info("sourcepage:disable:" + pageId);
+            });
     }
 }

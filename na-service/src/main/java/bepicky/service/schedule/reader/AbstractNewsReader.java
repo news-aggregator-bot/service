@@ -36,7 +36,7 @@ public abstract class AbstractNewsReader {
 
     @Transactional
     public void read(Source source) {
-        source.getPages().forEach(this::readPage);
+        source.getPages().stream().filter(SourcePage::isEnabled).forEach(this::readPage);
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)

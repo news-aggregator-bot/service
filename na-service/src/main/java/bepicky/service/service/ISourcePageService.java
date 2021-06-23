@@ -32,4 +32,8 @@ public interface ISourcePageService {
     void delete(long id);
 
     SourcePage changeSource(Source source, long sourcePage);
+
+    void enable(long pageId);
+
+    void disable(long pageId);
 }
