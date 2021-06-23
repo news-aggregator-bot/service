@@ -24,7 +24,7 @@ public class WebPageReaderConfiguration {
     @Value("${na.webpagereader.browser:true}")
     private boolean browserReaderEnabled;
 
-    @Value("${na.webpagereader.timeout:60}")
+    @Value("${na.webpagereader.timeout:10}")
     private int browserReadTimeout;
 
     public ChromeDriver chromeDriver() {
