@@ -82,9 +82,11 @@ public class IngestionSourceFacade {
             pages.add(srcPage.getUrl());
             contentBlockService.saveAll(contentBlocks);
         }
-        source.getPages().stream()
-            .filter(sp -> !pages.contains(sp.getUrl()))
-            .forEach(sp -> sourcePageService.disable(sp.getId()));
+        if (source.getPages() != null) {
+            source.getPages().stream()
+                .filter(sp -> !pages.contains(sp.getUrl()))
+                .forEach(sp -> sourcePageService.disable(sp.getId()));
+        }
         return source;
     }
 
