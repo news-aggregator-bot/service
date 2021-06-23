@@ -81,8 +81,9 @@ public class IngestionSourceFacade {
             pages.add(srcPage);
             contentBlockService.saveAll(contentBlocks);
         }
-        source.setPages(pages.build());
-        return sourceService.save(source);
+//        source.setPages(pages.build());
+//        return sourceService.save(source);
+        return source;
     }
 
     private Source getSource(SourceDto srcDto) {
