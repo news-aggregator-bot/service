@@ -13,6 +13,7 @@ public class JsoupWebPageReader implements WebPageReader {
         try {
             return Jsoup.connect(path)
                 .header("Content-Type", "*/*")
+                .timeout(5000)
                 .ignoreContentType(true)
                 .get();
         } catch (IOException e) {

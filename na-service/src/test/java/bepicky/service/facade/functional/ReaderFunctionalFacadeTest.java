@@ -81,7 +81,7 @@ public class ReaderFunctionalFacadeTest {
         assertNull(readerDto.getLastName());
         assertNull(readerDto.getUsername());
         assertEquals(readerDto.getChatId(), rr.getChatId());
-        assertEquals(readerDto.getPrimaryLanguage().getLang(), "en");
+        assertEquals(readerDto.getPrimaryLanguage().getLang(), "ukr");
         assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
     }
 

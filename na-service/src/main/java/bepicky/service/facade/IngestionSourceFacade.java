@@ -17,10 +17,12 @@ import bepicky.service.service.IContentTagService;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
+import com.google.common.collect.ImmutableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -50,6 +52,7 @@ public class IngestionSourceFacade {
 
     public Source ingest(SourceDto srcDto) {
         Source source = getSource(srcDto);
+        ImmutableList.Builder<SourcePage> pages = ImmutableList.builder();
         for (SourcePageDto pageDto : srcDto.getPages()) {
             SourcePage srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
                 SourcePage srcPg = new SourcePage();
@@ -68,18 +71,18 @@ public class IngestionSourceFacade {
                 .stream()
                 .map(cb -> buildContentBlock(savedSrcPage, cb))
                 .collect(Collectors.toList());
-            Set<ContentBlock> set = contentBlocks.stream().collect(Collectors.toSet());
+            Set<ContentBlock> set = new HashSet<>(contentBlocks);
             if (savedSrcPage.getContentBlocks() != null) {
                 Set<ContentBlock> srcPageContentBlocks = savedSrcPage.getContentBlocks();
                 savedSrcPage.setContentBlocks(null);
                 contentBlockService.deleteAll(srcPageContentBlocks);
             }
             savedSrcPage.setContentBlocks(set);
-
+            pages.add(srcPage);
             contentBlockService.saveAll(contentBlocks);
         }
-
-        return source;
+        source.setPages(pages.build());
+        return sourceService.save(source);
     }
 
     private Source getSource(SourceDto srcDto) {

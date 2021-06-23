@@ -5,4 +5,6 @@ public interface IValueNormalisationService {
     String normaliseTag(String val);
 
     String normaliseTitle(String title);
+
+    String trimTitle(String title);
 }

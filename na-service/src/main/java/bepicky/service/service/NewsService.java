@@ -5,6 +5,7 @@ import bepicky.service.domain.PageParsedData;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.Tag;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
@@ -99,7 +100,7 @@ public class NewsService implements INewsService {
     }
 
     private NewsNote toNote(SourcePage page, PageParsedData data) {
-        String title = data.getTitle().trim();
+        String title = normalisationService.trimTitle(data.getTitle());
         String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
             .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
@@ -108,12 +109,13 @@ public class NewsService implements INewsService {
                 return n;
             }).orElseGet(() -> {
                 NewsNote note = new NewsNote();
+                Set<Tag> tagsTitle = tagService.findByTitle(title);
                 note.setTitle(title);
                 note.setNormalisedTitle(normTitle);
                 note.setUrl(data.getLink());
                 note.setAuthor(data.getAuthor());
                 note.addSourcePage(page);
-                note.setTags(tagService.findByTitle(title));
+                note.setTags(tagsTitle);
                 return note;
             });
     }

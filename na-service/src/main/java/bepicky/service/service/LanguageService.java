@@ -50,7 +50,7 @@ public class LanguageService implements ILanguageService {
 
     @Override
     public Language getDefault() {
-        return repository.findById("en").get();
+        return repository.findById("ukr").get();
     }
 
     @Override

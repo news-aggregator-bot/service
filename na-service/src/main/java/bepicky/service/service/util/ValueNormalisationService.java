@@ -26,4 +26,15 @@ public class ValueNormalisationService implements IValueNormalisationService {
             .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
             .toString();
     }
+
+    @Override
+    public String trimTitle(String title) {
+        if (StringUtils.isBlank(title)) {
+            return "";
+        }
+        if (title.length() < 255) {
+            return title.trim();
+        }
+        return title.substring(0, 250).trim();
+    }
 }

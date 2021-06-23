@@ -35,9 +35,6 @@ public class DefaultWebContentParser implements WebContentParser {
     private List<DocumentTagParser> tagParsers;
 
     @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
     private JsoupEvaluatorFactory evaluatorFactory;
 
     @Autowired
@@ -46,6 +43,11 @@ public class DefaultWebContentParser implements WebContentParser {
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
+            log.info(
+                "webcontentparser:{} :{}",
+                page.getUrl(),
+                webPageReader.getClass().getSimpleName()
+            );
             Optional<Document> doc = readDocument(page, webPageReader);
             if (doc.isPresent()) {
                 Set<PageParsedData> parsedData = page.getContentBlocks()
@@ -55,12 +57,6 @@ public class DefaultWebContentParser implements WebContentParser {
                     .filter(Objects::nonNull)
                     .collect(Collectors.toSet());
                 if (parsedData.size() > 1) {
-                    log.info(
-                        "webcontentparser:{} :{}:{}",
-                        page.getUrl(),
-                        webPageReader.getClass().getSimpleName(),
-                        parsedData.size()
-                    );
                     return parsedData;
                 }
             }

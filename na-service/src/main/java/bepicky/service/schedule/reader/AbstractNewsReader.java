@@ -45,7 +45,7 @@ public abstract class AbstractNewsReader {
             NewsSyncResult freshNotes = newsService.read(page);
             log.debug("news:read:{}", freshNotes.getNewsNotes().size());
         } catch (RuntimeException e) {
-            log.warn("news:read:page:{}:failed", page.getUrl(), e);
+            log.warn("news:read:page:failed:{}", page.getUrl(), e);
         }
     }
 }
