@@ -91,8 +91,8 @@ public class SourceIngestionService implements IngestionService {
                 sourceFacade.ingest(source);
             }
 
-        } catch (Exception ioe) {
-            throw new DataIngestionException("Failed to ingest sources", ioe);
+        } catch (Exception e) {
+            throw new DataIngestionException("Failed to ingest sources", e);
         } finally {
             try {
                 data.close();

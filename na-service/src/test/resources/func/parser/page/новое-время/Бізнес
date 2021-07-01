@@ -1,0 +1,2460 @@
+<html lang="uk">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+  <meta name="csrf-token" content="X0wzmwdzDwXrGmhGk7FrZXSddKfX8qXWTq5YtDYa"> 
+  <meta property="fb:pages" content="1741295452780208"> 
+  <meta name="apple-itunes-app" content="app-id=1194455118, affiliate-data=ct=smartbannernv"> 
+  <link rel="preconnect" href="https://images.weserv.nl"> 
+  <link rel="preconnect" href="https://securepubads.g.doubleclick.net"> 
+  <link rel="preconnect" href="//cm.g.doubleclick.net"> 
+  <link rel="preconnect" href="//gaua.hit.gemius.pl"> 
+  <link rel="preconnect" href="//ls.hit.gemius.pl"> 
+  <link rel="dns-prefetch" href="https://images.weserv.nl"> 
+  <link rel="dns-prefetch" href="https://bid.g.doubleclick.net"> 
+  <link rel="dns-prefetch" href="https://adservice.google.com"> 
+  <link rel="dns-prefetch" href="https://www.google.com"> 
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com"> 
+  <link rel="dns-prefetch" href="https://securepubads.g.doubleclick.net"> 
+  <link rel="dns-prefetch" href="https://www.googletagservices.com"> 
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com"> 
+  <link rel="dns-prefetch" href="https://www.googleadservices.com"> 
+  <link rel="dns-prefetch" href="https://www.google-analytics.com"> 
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net"> 
+  <link rel="dns-prefetch" href="https://www.google-analytics.com"> 
+  <link rel="dns-prefetch" href="https://connect.facebook.net"> 
+  <link rel="dns-prefetch" href="https://www.facebook.com"> 
+  <link rel="dns-prefetch" href="https://stats.g.doubleclick.net"> 
+  <link rel="dns-prefetch" href="//cm.g.doubleclick.net"> 
+  <link rel="dns-prefetch" href="https://ls.hit.gemius.pl"> 
+  <link rel="dns-prefetch" href="https://gaua.hit.gemius.pl"> 
+  <link rel="dns-prefetch" href="https://counter.yadro.ru"> 
+  <link rel="preload" as="font" href="https://biz.nv.ua/fonts/nvua-icons.woff2?02836d3970fb4d607aad597e0eff230e" crossorigin=""> 
+  <link rel="apple-touch-icon" href="https://biz.nv.ua/apple-touch-icon.png"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="https://biz.nv.ua/apple-icon-57x57.png"> 
+  <link rel="pple-touch-icon" sizes="60x60" href="https://biz.nv.ua/apple-icon-60x60.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="https://biz.nv.ua/apple-icon-72x72.png"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="https://biz.nv.ua/apple-icon-76x76.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="https://biz.nv.ua/apple-icon-114x114.png"> 
+  <link rel="apple-touch-icon" sizes="120x120" href="https://biz.nv.ua/apple-icon-120x120.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="https://biz.nv.ua/apple-icon-144x144.png"> 
+  <link rel="apple-touch-icon" sizes="152x152" href="https://biz.nv.ua/apple-icon-152x152.png"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="https://biz.nv.ua/apple-icon-180x180.png"> 
+  <link rel="apple-touch-icon-precomposed" href="https://biz.nv.ua/apple-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://biz.nv.ua/apple-icon-114x114.png"> 
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://biz.nv.ua/apple-icon-72x72.png"> 
+  <link rel="apple-touch-icon-precomposed" href="https://biz.nv.ua/apple-icon-57x57.png"> 
+  <link rel="icon" type="image/png" sizes="36x36" href="https://biz.nv.ua/favicon/android-icon-36x36.png"> 
+  <link rel="icon" type="image/png" sizes="48x48" href="https://biz.nv.ua/favicon/android-icon-48x48.png"> 
+  <link rel="icon" type="image/png" sizes="72x72" href="https://biz.nv.ua/favicon/android-icon-72x72.png"> 
+  <link rel="icon" type="image/png" sizes="96x96" href="https://biz.nv.ua/favicon/android-icon-96x96.png"> 
+  <link rel="icon" type="image/png" sizes="144x144" href="https://biz.nv.ua/favicon/android-icon-144x144.png"> 
+  <link rel="icon" type="image/png" sizes="192x192" href="https://biz.nv.ua/favicon/android-icon-192x192.png"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="https://biz.nv.ua/favicon/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="96x96" href="https://biz.nv.ua/favicon/favicon-96x96.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="https://biz.nv.ua/favicon/favicon-16x16.png"> 
+  <link rel="manifest" href="https://biz.nv.ua/favicon/manifest.json"> 
+  <meta name="msapplication-TileColor" content="#ffffff"> 
+  <meta name="msapplication-TileImage" content="https://biz.nv.ua/favicon/ms-icon-144x144.png"> 
+  <meta name="theme-color" content="#ffffff"> 
+  <link rel="alternate" href="https://biz.nv.ua/ukr" hreflang="uk-UA"> 
+  <link rel="alternate" href="https://biz.nv.ua" hreflang="ru-UA"> 
+  <link rel="canonical" href="https://biz.nv.ua/ukr"> 
+  <script async src="https://www.clarity.ms/eus2/s/0.6.15/clarity.js"></script>
+  <script async src="https://www.clarity.ms/tag/59bikxsf9x"></script>
+  <script type="text/javascript" async src="https://l.getsitecontrol.com/5wvmg32w.js"></script>
+  <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async defer src="https://gaua.hit.gemius.pl/xgemius.js"></script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WKM63L"></script>
+  <script>
+    var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Lighthouse)";
+    var re = new RegExp(botPattern, 'i');
+    var userAgent = navigator.userAgent;
+
+    var realAgent = true;
+
+    if (re.test(userAgent)) {
+        var realAgent = false;
+    }
+
+    var device_type = 'desktop';
+        var globalLang = 'ukr';
+        var show_paywall_attention = false;
+    var globalDomain = 'https://biz.nv.ua';
+    var NvMain = 'https://nv.ua';
+    var NvMainDomainCookie = 'nv.ua';
+
+
+            if(NvMain != 'https://nv.ua'){
+            window.stop();
+        }
+        var iww = window.innerWidth;
+
+    var article_id = false;
+        var user_shared_code = false;
+    function readCookie(n){for(var r=n+"=",t=document.cookie.split(";"),e=0;e<t.length;e++){for(var i=t[e];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(r))return i.substring(r.length,i.length)}return null}
+    function addParam(url, param, value = null) {
+        if (url.indexOf('?') !== -1) {
+            var url = url + "&" + param + "=" + value;
+        } else {
+            var url = url + "?" + param + "=" + value;
+        }
+
+        return url;
+    }
+    function loadBlock(url, id) {
+
+        var xhr = new XMLHttpRequest();
+        var element = document.getElementById(id);
+
+        url = addParam(url, "browser_id", readCookie("browser_id"));
+
+        xhr.open("GET", url, true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    element.innerHTML = xhr.responseText;
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+    function loadBlockTest( ) {
+                
+        var xhr = new XMLHttpRequest();
+        let getAdditionalBlockRoute = "https://biz.nv.ua/ukr/get_additional_blocks/2292.html";
+        if ((window.location.hostname).indexOf('podcasts') != -1) {
+
+            getAdditionalBlockRoute = getAdditionalBlockRoute.replace(
+                (new URL(getAdditionalBlockRoute)).hostname,
+                window.location.hostname
+            );
+        }
+
+        xhr.open("GET", getAdditionalBlockRoute, true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(xhr.responseText, "text/html");
+
+                    try{
+                        var async_header_block = document.getElementById('async_header_block');
+                        if (async_header_block && doc.getElementById('async_header_block').innerHTML){
+                            async_header_block.innerHTML = doc.getElementById('async_header_block').innerHTML;
+                        }
+                    }catch{
+                        console.log('cant load header');
+                    }
+
+                    try{
+                        var async__head_opinions = document.getElementById('async__head_opinions');
+                        if (async__head_opinions && doc.getElementById('async__head_opinions').innerHTML){
+                            async__head_opinions.innerHTML = doc.getElementById('async__head_opinions').innerHTML;
+                        }
+                    }catch{
+                        console.log('cant load async_head_opinions');
+                    }
+
+                    try{
+                        var async__spec_covid = document.getElementById('async__spec_covid');
+                        if (async__spec_covid && doc.getElementById('async__spec_covid').innerHTML){
+                            async__spec_covid.innerHTML = doc.getElementById('async__spec_covid').innerHTML;
+                        }
+                    }catch{
+                        console.log('cant load async__spec_covid');
+                    }
+                    try{
+                        var async__spec_projects = document.getElementById('async__spec_projects');
+                        if (async__spec_projects && doc.getElementById('async__spec_projects').innerHTML){
+                            async__spec_projects.innerHTML = doc.getElementById('async__spec_projects').innerHTML;
+                        }
+                    }catch{
+                        console.log('cant load async__spec_projects');
+                    }
+                    //async_spec_202171_projects
+                    var spec_date = new Date();
+                    var spec_projects_name = 'async_spec_'+spec_date.getFullYear()+(spec_date.getMonth()+1)+spec_date.getDate()+'_projects';
+                    try{
+                        var async__specprojects = document.getElementById(spec_projects_name);
+                        if (async__specprojects && doc.getElementById(spec_projects_name).innerHTML){
+                            async__specprojects.innerHTML = doc.getElementById(spec_projects_name).innerHTML;
+                        }
+                    }catch{
+                        console.log('cant load '.spec_projects_name);
+                    }
+
+                    try{
+                        var menu__popUp = document.getElementById('menu__popUp');
+                        if(menu__popUp && doc.getElementById('menu__popUp').innerHTML){
+                            menu__popUp.innerHTML = doc.getElementById('menu__popUp').innerHTML;
+                        }
+
+                    }catch{
+                        console.log('cant load menu');
+                    }
+
+
+                    try{
+                        var footer = document.getElementById('load_footer');
+                        if(footer && doc.getElementById('load_footer').innerHTML){
+                            footer.innerHTML = doc.getElementById('load_footer').innerHTML;
+                            footer.style.display = 'block';
+                        }
+                    }catch{
+                        console.error('cant load footer');
+                    }
+
+
+                    if(typeof initPodcastsLink === 'function'){
+                        initPodcastsLink();
+                    }
+
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+    document.addEventListener("DOMContentLoaded", loadBlockTest);
+
+    </script> 
+  <script>
+            var lazy_ad = false;
+
+    
+        data_layer_top_category_id = false;
+    
+                      data_layer_top_category_id = 2292; 
+    
+    var paywall_subscription_test = 'false';
+
+        dataLayer = [];    var googletag = googletag || {};    googletag.cmd = googletag.cmd || [];
+            dataLayer.push({
+            'top_category_id': data_layer_top_category_id,
+            'paywall_user_id': 0,
+            'paywall_subscription': 'none',
+    });
+    </script> <!-- Google Tag Manager --> 
+  <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({userStatus:'new_site', 'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WKM63L');
+    </script> <!-- End Google Tag Manager --> 
+  <script>
+    var js_script_list = [];
+    function loadScript(src, cb) {
+
+        var i = js_script_list.length, load_check = false;
+        while (i--) {
+            if (js_script_list[i] === src) {
+                load_check = true;
+                break;
+            }
+        }
+        if(!load_check){
+            js_script_list.push(src); var s = document.createElement('script'); s.src = src; chead.appendChild(s); s.onload = cb; s.onerror = cb; return s;
+        }else{
+            if (cb !== undefined && typeof(cb) === "function") {
+                cb();
+            }
+        }
+    }
+    function loadScriptAmp(src, ce) {var s = document.createElement('script');s.src = src + '?'+cb;s.setAttribute('custom-element', ce);chead.appendChild(s); /*s.onload = cb; s.onerror = cb;*/ return s; }
+
+    
+        var dayMs = 36e5, cb = parseInt(Date.now() / dayMs), vpbSrc = '//player.adtelligent.com/prebidlink/' + cb + '/wrapper_hb_285119_882.js', gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', chead = document.head || document.body || document.documentElement;
+
+        if(lazy_ad === false){
+            if(typeof realAgent !== 'undefined' && realAgent == true){
+                                    loadScript(vpbSrc, function() { loadScript(gptSrc); });
+                            }else{
+                loadScript(gptSrc, function () {});
+            }
+        }
+
+    </script>
+  <script src="//player.adtelligent.com/prebidlink/451436/wrapper_hb_285119_882.js"></script> 
+  <title>Новини бізнесу, економіки, фінансів, ринків і компаній&nbsp;— НВ Бізнес</title> 
+  <meta name="description" content="Останні новини бізнесу, економіки та фінансів. Дізнайтеся зведення ринків і новини провідних компаній, читайте про бізнес в&nbsp;Україні і в&nbsp;світі."> 
+  <meta property="og:title" content="Новини бізнесу, економіки, фінансів, ринків і компаній&nbsp;— НВ Бізнес"> 
+  <meta property="og:description" content="Останні новини бізнесу, економіки та фінансів. Дізнайтеся зведення ринків і новини провідних компаній, читайте про бізнес в&nbsp;Україні і в&nbsp;світі."> 
+  <link rel="amphtml" href="https://biz.nv.ua/ukr/amp"> 
+  <link rel="stylesheet" type="text/css" href="https://biz.nv.ua/css/non-main-page.css?3.397"> 
+  <style> body.business .sub_menu .sub_menu_nav .current_category a,body.business .sub_menu .sub_menu_nav .down-arrow:before,body.business .sub_menu .sub_menu_nav .sub_category.active a,body.business section.article .article__content__block_other_opinion--info_name,body.business section.article .article__content__footer--link_to_origin>a{color:#497755}body.business .sub_menu .sub_menu_nav .sub_category.active a:before{background-color:#497755}body.business .one__opinion .opinion__author_name{color:#497755}body.business .one__opinion .opinion__content .opinion__content_wrapper{border-left:1px solid #497755}body.business .one__opinion .opinion__content .opinion__content_wrapper:before{content:"";border:5px solid #497755;border-left:5px solid transparent;border-top:5px solid transparent}body.business .atom__additional_pubDate,body.business .main_show-more,body.business .tabs li.active a,body.business [data-type=top3_opinions] .one__opinion .atom__additional_views,body.business section.article .article__content__head .article__head__additional_published{color:#497755}body.business section.article .article__content__head .article__head__additional_switch-lang a{color:#497755!important}body.business .spec-label--newtime_label{background-image:url(/images/label_business.png)}body.business [data-type=opinions]{border-bottom:2px solid #497755;border-top:2px solid #497755}body.business [data-type=opinions] .slider{border-bottom:2px solid #497755}body.business section.article .article__content__body .content_wrapper a:not(.bn){color:#497755;border-color:rgba(60,151,91,.3)}body.business section.article .article__content__body .content_wrapper a:not(.bn):hover{border-color:#3c975b}body.business .atom__text__main_sub.red{color:#3c975b}body.business .atom__additional_category.red{color:#497755}body.business [data-unit_type=unit_top10] .atom__additional_views,body.business [data-unit_type=unit_top10] .top_list_5 li:before,body.business [data-unit_type=unit_top10] .top_list_10 li:before,body.business section.article .article__content__body .content_wrapper .opinion_author .author_text .opinion_author_name{color:#3ba457}body.business section.article .article__content__body .content_wrapper .media__also__cards__first_line__sides{border-bottom:1px solid #497755}body.business section.article .article__content__body .content_wrapper .media__also__cards__first_line__middle{color:#497755;border-top:1px solid #497755;border-left:1px solid #497755;border-right:1px solid #497755}body.business section.article .article__content__body .content_wrapper .media__also__news__prefix,body.business section.article .article__content__body .content_wrapper .media__also__news_links__list,body.business section.article .article__content__body .content_wrapper .media__also__opinions .one__opinion a .opinion__author_name,body.business section.article .article__content__body .content_wrapper .media__also__opinions__prefix{color:#497755}body.business section.article .article__content__body .content_wrapper .media__also__news_links__list li a{border-bottom:1px solid #497755} </style> 
+  <script src="//securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <meta http-equiv="origin-trial" content="A+b/H0b8RPXNaJgaNFpO0YOFuGK6myDQXlwnJB3SwzvNMfcndat4DZYMrP4ClJIzYWo3/yP2S+8FTZ/lpqbPAAEAAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+  <meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AxL6oBxcpn5rQDPKSAs+d0oxNyJYq2/4esBUh3Yx5z8QfcLu+AU8iFCXYRcr/CEEfDnkxxLTsvXPJFQBxHfvkgMAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="A9KPtG5kl3oLTk21xqynDPGQ5t18bSOpwt0w6kGa6dEWbuwjpffmdUpR3W+faZDubGT+KIk2do0BX2ca16x8qAcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AookgM0K6zABiuRTZwpn+R95G2CKmUH/2+zf2kS/QpMlVZ6HTI6QekeLkrJyxeIi62p2ejcQTF464pkdlx0Nwg0AAABmeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJUcnVzdFRva2VucyIsImV4cGlyeSI6MTYzNDA4MzE5OSwiaXNTdWJkb21haW4iOnRydWV9">
+  <meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  <meta http-equiv="origin-trial" content="A0OysezhLoCRYomumeYlubLurZTCmsjTb087OvtCy95jNM65cfEsbajrJnhaGwiTxhz38ZZbm+UhUwQuXfVPTg0AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  <meta http-equiv="origin-trial" content="AxoOxdZQmIoA1WeAPDixRAeWDdgs7ZtVFfH2y19ziTgD1iaHE5ZGz2UdSjubkWvob9C5PrjUfkWi4ZSLgWk3Xg8AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  <meta http-equiv="origin-trial" content="A7+rMYR5onPnACrz+niKSeFdH3xw1IyHo2AZSHmxrofRk9w4HcQPMYcpBUKu6OQ6zsdxf4m/vqa6tG6Na4OLpAQAAAB4eyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021062409.js?31061734" async></script>
+  <link rel="preload" href="https://adservice.google.com.ua/adsid/integrator.js?domain=biz.nv.ua" as="script">
+  <script type="text/javascript" src="https://adservice.google.com.ua/adsid/integrator.js?domain=biz.nv.ua"></script>
+  <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=biz.nv.ua" as="script">
+  <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=biz.nv.ua"></script>
+ </head> 
+ <body class="formular business"> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKM63L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> <!--LiveInternet counter--> 
+  <script type="text/javascript">
+    new Image().src = "//counter.yadro.ru/hit?r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+            ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";h"+escape(document.title.substring(0,150))+
+        ";"+Math.random();
+</script> <!--/LiveInternet--> 
+  <div class="background-branding"> 
+   <div id="div-gpt-ad-1536827933373-0" style="height: 1080px; width: 1920px; display: none;" data-google-query-id="CLCS0fDcwvECFXnREQgdA7oGlw">
+    <div id="google_ads_iframe_/271925883/new_nv_brending_0__container__" style="border: 0pt none; width: 1920px; height: 60px;"></div>
+   </div> 
+  </div> 
+  <div id="home_page"> 
+   <div class="top_banner_wrapper hidden-xs" style="text-align: center; display: none"> 
+    <div class="ad_wrapper" style="text-align: center"> 
+     <div id="div-gpt-ad-1536826412405-0"></div> 
+    </div> 
+   </div> 
+   <header id="header" class="main_header business_header"> 
+    <div class="container"> 
+     <div class="navigation"> 
+      <div class="logo-area"> <a href="https://nv.ua/ukr" class="to_main"> <i class="icon-arr-bottom left"></i><span class=" inline-block desktop">НВ</span> </a> <a href="https://biz.nv.ua/ukr" class="logo logo-novoe"> 
+        <picture> 
+         <source media="(max-width: 1200px)" srcset="https://biz.nv.ua/upload/novoe-logo-business-min.svg"> 
+         <source media="(min-width: 1201px)" srcset="https://biz.nv.ua/images/novoe-logo-business-ukr.svg"> 
+         <img src="https://biz.nv.ua/images/novoe-logo-business-ukr.svg" alt="logo"> 
+        </picture> </a> 
+      </div> 
+      <ul> 
+       <li> <a href="https://nv.ua/ukr/allnews.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="allnews"> <span class="text">Новини</span> </a> </li> 
+       <li> <a href="https://nv.ua/ukr/opinion.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="opinions"> <span class="text">Погляди</span> </a> </li> 
+       <li> <a href="https://nv.ua/ukr/specials/evro-2020.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="techno"> <span class="text">Євро-2020</span> </a> </li> 
+       <li> <a href="https://life.nv.ua/ukr?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="life"> <span class="text">Life</span> </a> </li> 
+       <li> <a href="https://radio.nv.ua?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="radio"> <span class="text">Радіо</span> </a> </li> 
+       <li> <a href="https://nv.ua/ukr/magazine.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_top" data-ga-menu="" data-category_id="magazine"> <span class="text">Журнал</span> </a> </li> 
+       <li> <a href="https://nv.ua/ukr/premium.html" data-utm_source="site" data-utm_medium="buttonnvpremium" data-utm_campaign="psubscription" class="premium "> <span class="text">НВ Преміум</span> </a> </li> 
+      </ul> 
+      <div class="menu-btn_dots inline-block" data-state="closed" data-hover="#menu__popUp"> 
+       <div class="menu-display"> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> 
+       </div> 
+       <div id="menu__popUp" class="header-submenu"> 
+        <style> .header-submenu{background-color:#fff;box-shadow:0 4px 7px rgba(0,0,0,.15);z-index:10;text-align:left;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;top:100%;left:0;font-family:var(--font-sans);right:0;position:absolute;max-height:calc(100vh - 60px);overflow:hidden;overflow-y:auto;display:none}@media only screen and (min-width:1025px){.header-submenu{max-height:calc(100vh - 60px)}}.header-submenu>.container{padding:var(--base-p-x2) 0 0}@media only screen and (min-width:1025px){.header-submenu>.container{padding:var(--base-p-x4) var(--base-p-x2) var(--base-p-x2)}}@media only screen and (max-width:1024px){.header-submenu>.container{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-flow:column-reverse;flex-flow:column-reverse}}.header-submenu li,.header-submenu ul{padding-left:0;list-style:none;margin:0}.header-submenu a{transition:all .23s linear;color:#333}.header-submenu a.active{color:var(--main-color)}@media only screen and (max-width:1024px){.header-submenu a.active{color:#fff}}.header-submenu a:hover{color:var(--main-color)}@media only screen and (min-width:1025px){.header-submenu-wrapper{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:start;align-items:flex-start}}.header-submenu-wrapper-social{margin-bottom:25px}.header-submenu-wrapper-social a{width:30px;height:30px;color:#fff;background:#828282;border-radius:50%;font-size:13px;margin-right:20px;position:relative;transition:all .23s linear;text-align:center;line-height:30px}.header-submenu-wrapper-social a i{vertical-align:middle}.header-submenu-wrapper-social a>:before{color:inherit!important}.header-submenu-wrapper-social a:hover{color:#fff;background-color:var(--main-color)}@media only screen and (max-width:1024px){.header-submenu-wrapper-social{display:none}}.header-submenu-item{-ms-flex:0 1 100%;flex:0 1 100%;font-weight:300;min-width:1px;font-size:14px}@media only screen and (min-width:1025px){.header-submenu-item-list:not(:last-child){margin-bottom:20px}}.header-submenu-item-list.has-child .header-submenu-item-list a{display:block;line-height:1.7em}@media only screen and (max-width:1024px){.header-submenu-item-list.has-child .header-submenu-item-list{border:none;display:none}.header-submenu-item-list.has-child .header-submenu-item-list a{line-height:1;padding:17px 15px 17px 50px;color:rgba(51,51,51,.8);font-weight:700}.header-submenu-item-list.has-child .header-submenu-item-list li:not(:last-child){border-bottom:1px solid #eaeaea}}@media only screen and (max-width:1024px){.header-submenu-item-list{border-bottom:1px solid #e5e5e5}}.header-submenu-item-category{font-size:16px;line-height:1.7em;font-weight:600;text-transform:uppercase;position:relative}.header-submenu-item-category .down-arrow{background-color:hsla(0,0%,82%,.2);position:absolute;color:#393939;display:block;width:50px;z-index:1;bottom:0;right:0;top:0;transition:all .3s ease}@media only screen and (min-width:1025px){.header-submenu-item-category .down-arrow{display:none}}.header-submenu-item-category .down-arrow .icon-arr-bottom{display:block;line-height:1;position:absolute;top:50%;left:50%;transition:transform .3s linear;transform:translate3d(-50%,-50%,0);font-size:11px}.header-submenu-item-category .down-arrow.expanded{background-color:var(--main-color);color:#fff}.header-submenu-item-category .down-arrow.expanded .icon-arr-bottom{transform:translate3d(-50%,-50%,0) rotateX(180deg)}.header-submenu-item-category-title,.header-submenu-item-category a{display:block}@media only screen and (max-width:1024px){.header-submenu-item-category-title,.header-submenu-item-category a{background-color:#f2f2f2;padding:17px 35px;line-height:1}.header-submenu-item-category-title.active,.header-submenu-item-category a.active{background-color:var(--main-color)}.header-submenu-item-category-title.active .down-arrow,.header-submenu-item-category a.active .down-arrow{color:#fff;background-color:var(--main-color)}}.header-submenu .search-row{padding-bottom:15px;clear:both}@media only screen and (max-width:1024px){.header-submenu .search-row{padding-left:15px;padding-right:15px}}.header-submenu .search-row label{display:block;position:relative}.header-submenu .search-row label i{position:absolute;font-size:19px;left:18px;top:50%;pointer-events:none;-ms-transform:translateY(-50%);transform:translateY(-50%);color:#707485}.header-submenu .search-row label input:not([type=submit]){-webkit-appearance:none;appearance:none;display:block;line-height:40px;padding-left:56px;color:currentColor;width:100%;border:none;background:#f5f6f9;border-radius:4px;font-size:16px} </style> 
+        <div class="container"> 
+         <div class="header-submenu-wrapper"> 
+          <div class="header-submenu-item"> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/ukraine.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2283" class="">Україна</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2285" href="https://nv.ua/ukr/ukraine/events.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Події </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2284" href="https://nv.ua/ukr/ukraine/politics.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Політика </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/world.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2318" class="">Світ</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2319" href="https://nv.ua/ukr/world/geopolitics.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Геополітика </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2320" href="https://nv.ua/ukr/world/countries.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Країни </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/opinion.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2671" class="">Погляди</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2345" href="https://nv.ua/ukr/opinion/recommends.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Ми рекомендуємо </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/kyiv.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="108" class="">Київ</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/art.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="52" class="">Арт</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="header-submenu-item"> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://biz.nv.ua/ukr?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2292" class=" active ">Бізнес</a> <span class="down-arrow  expanded " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list" style="display: block;"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2293" href="https://biz.nv.ua/ukr/economics.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Економіка </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2294" href="https://biz.nv.ua/ukr/finance.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Фінанси </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2295" href="https://biz.nv.ua/ukr/markets.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Компанії / Ринки </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2297" href="https://biz.nv.ua/ukr/tech.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Телеком / IT / Медіа </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="110" href="https://biz.nv.ua/ukr/top-100-bogatyh.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Профайли ТОП 100 </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2298" href="https://biz.nv.ua/ukr/publications.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Статті </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2303" href="https://biz.nv.ua/ukr/bizinterview.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Інтерв'ю </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2762" href="https://biz.nv.ua/ukr/experts.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Експерти </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/project.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2790" class="">Лонгріди</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/spec.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="48" class="">Картки</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list"> 
+            <div class="header-submenu-item-category"> <a href="/video/all/" data-ga-submenu="" class=" ">Відео</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="header-submenu-item"> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/techno.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2346" class="">Техно</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2347" href="https://nv.ua/ukr/techno/it-industry.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> IT-індустрія </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2348" href="https://nv.ua/ukr/techno/gadgets.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Гаджети </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2350" href="https://nv.ua/ukr/techno/innovations.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Інновації </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="3145" href="https://nv.ua/ukr/techno/popscience.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Наукпоп </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2813" href="https://nv.ua/ukr/techno/games2.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Ігри </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/auto.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="154" class="">Авто</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="155" href="https://nv.ua/ukr/auto/news.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Новини </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="157" href="https://nv.ua/ukr/auto/test-drive.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Тест-драйв </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="156" href="https://nv.ua/ukr/auto/articles.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Статті </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="158" href="https://nv.ua/ukr/auto/cars.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Вибір авто </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="159" href="https://nv.ua/ukr/auto/market.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Авторинок </a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+          <div class="header-submenu-item"> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://life.nv.ua/ukr?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2325" class="">Life</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="50" href="https://life.nv.ua/ukr/krasota-i-moda.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Краса та мода </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="51" href="https://life.nv.ua/ukr/lifestyle.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Lifestyle </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2333" href="https://life.nv.ua/ukr/blogs.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Блоги </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="174" href="https://life.nv.ua/ukr/health.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Health </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="53" href="https://life.nv.ua/ukr/lyudi.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Люди </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="95" href="https://life.nv.ua/ukr/kids.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Діти </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="54" href="https://life.nv.ua/ukr/travel.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Travel </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="55" href="https://life.nv.ua/ukr/food-drink.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Food&amp;Drink </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="56" href="https://life.nv.ua/ukr/znamenitosti.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Знаменитості </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="113" href="https://life.nv.ua/ukr/horoscopes.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Гороскопи </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://health.nv.ua/ukr?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="90" class="">Здоров'я</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="91" href="https://health.nv.ua/ukr/medicine.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Медицина </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="92" href="https://health.nv.ua/ukr/nutrition.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Харчування </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="93" href="https://health.nv.ua/ukr/fitness.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Фітнес </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="94" href="https://health.nv.ua/ukr/happiness.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Щастя </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="96" href="https://health.nv.ua/ukr/sex.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Секс </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="97" href="https://health.nv.ua/ukr/lifehacks.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Лайфхаки </a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+          <div class="header-submenu-item"> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/sport.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2371" class="">Спорт</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a href="https://nv.ua/ukr/specials/evro-2020.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Євро-2020 </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2372" href="https://nv.ua/ukr/sport/football.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Футбол </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2373" href="https://nv.ua/ukr/sport/boxing.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Бокс </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2375" href="https://nv.ua/ukr/sport/tennis.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Теніс </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2374" href="https://nv.ua/ukr/sport/hockey.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Хокей </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="2376" href="https://nv.ua/ukr/sport/other-sport.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Інше </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://azart.nv.ua/ukr?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="178" class="">Азарт</a> <span class="down-arrow " data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+            </div> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="179" href="https://azart.nv.ua/ukr/news.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Новини </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="180" href="https://azart.nv.ua/ukr/articles.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Статтi </a> </li> 
+             <li> <a class=" " data-ga-submenu="" data-category_id="181" href="https://azart.nv.ua/ukr/reviews.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop"> Огляди </a> </li> 
+            </ul> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <div class="header-submenu-item-category"> <a href="https://nv.ua/ukr/lifestyle.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop" data-ga-submenu="" data-category_id="2365" class="">LOL</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list"> 
+            <div class="header-submenu-item-category"> <a href="https://shopping.nv.ua/ukr" data-ga-submenu="" class=" ">Шопінг</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list"> 
+            <div class="header-submenu-item-category"> <a href="https://promokodi.nv.ua/" data-ga-submenu="" class=" ">Промокоди</a> 
+            </div> 
+           </div> 
+           <div class="header-submenu-item-list"> 
+            <div class="header-submenu-item-category"> <a href="https://podcasts.nv.ua/ukr" data-ga-submenu="" class=" ">Подкасти</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="header-submenu-item" style="min-width: 260px"> 
+           <div class="header-submenu-wrapper-social"> <a href="https://www.facebook.com/media.NV" target="_blank"><i class="icon-facebook"></i></a> <a href="https://instagram.com/nv.ua" target="_blank"><i class="icon-instagram"></i></a> <a href="https://www.youtube.com/user/novoyevremyaua" target="_blank"><i class="icon-youtube"></i></a> <a href="https://t.me/novoe_vremya" target="_blank" rel="nofollow noreferrer noopener"><i class="icon-telegram"></i></a> 
+           </div> 
+           <div class="header-submenu-item-category"> <span class="header-submenu-item-category-title" style="color: #0045A2">Спецпроекти</span> <span class="down-arrow" data-action="expand" data-state="collapsed"><i class="icon-arr-bottom"></i></span> 
+           </div> 
+           <div class="header-submenu-item-list has-child"> 
+            <ul class="header-submenu-item-list"> 
+             <li> <a href="https://nv.ua/ukr/sport/football/yevro-2020-v-detalyah-hto-tviy-favorit-50165321.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Будь всередині гри</a> </li> 
+             <li> <a href="https://nv.ua/ukr/project/damo-dzhazu-50151068.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Дамо джазу!</a> </li> 
+             <li> <a href="https://nv.ua/ukr/project/somewhereukraine-fantastichna-ukrajina-i-de-jiji-shukati-50153602.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">SomewhereUkraine. Фантастична Україна і де її шукати</a> </li> 
+             <li> <a href="https://biz.nv.ua/ukr/ustoychivoe-razvitie-sustainability.html?utm_content=set_lang?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Сталий розвиток/Sustainability</a> </li> 
+             <li> <a href="https://nv.ua/ukr/project/huawei-central-50159753.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Huawei Central</a> </li> 
+             <li> <a href="https://nv.ua/ukr/project/promisloviy-eksport-z-ukrajini-50132992.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Промисловий експорт з України</a> </li> 
+             <li> <a href="https://nv.ua/ukr/biz/investiciji-cherez-privatizaciyu.html?utm_content=set_lang?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Інвестиції через приватизацію</a> </li> 
+             <li> <a href="https://nv.ua/ukr/ukraine/4-rasskaza-pro-lyubov-k-zhivotnym.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Формула любові до домашніх тварин</a> </li> 
+             <li> <a href="https://nv.ua/ukr/ukraine/sovremennaya-arhitektura-chastnogo-doma.html?utm_content=set_lang?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Сучасна архітектура приватного будинку</a> </li> 
+             <li> <a href="https://nv.ua/ukr/ukraine/zhenskie-istorii-s-nv.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Жіночі історії з НВ</a> </li> 
+             <li> <a href="https://nv.ua/ukr/ukraine/zn.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Здоров'я нації</a> </li> 
+             <li> <a href="https://nv.ua/ukr/ukraine/svidome-zhittya.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Свідоме життя</a> </li> 
+             <li> <a href="https://nv.ua/health/tvoe-zdorove-fundament-tvoego-budushchego.html?utm_source=site&amp;utm_medium=menu&amp;utm_campaign=menu_sub_desktop">Здоров'я - фундамент майбутнього!</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <script>
+    
+</script> 
+      </div> <a class="search-btn" href="https://nv.ua/ukr/search.html"><i class="icon-search"></i></a> 
+      <div class="lang-block"> 
+       <div class="lang"> <a rel="alternate" hreflang="ru-UA" href="https://biz.nv.ua?utm_content=set_lang" class="lang ">Рус</a> <a rel="alternate" hreflang="uk-UA" href="https://biz.nv.ua/ukr?utm_content=set_lang" class="lang active">Укр</a> <i class="icon-arr-bottom"></i> 
+       </div> 
+      </div> 
+      <div class="login-btn"> <a href="#" class="user-icon-wrapper open-auth-popup" data-open-auth-popup=""> <span class="user-icon"> 
+         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewbox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"> <g class="body"> 
+           <path class="body-path" d="M12,2C9.2,2,7,4.2,7,7s2.2,5,5,5c2.8,0,5-2.2,5-5S14.8,2,12,2z"></path> 
+           <path class="body-path" d="M8,14c-1.3,0-2.6,0.5-3.5,1.5C3.5,16.4,3,17.7,3,19v2c0,0.6,0.4,1,1,1h16c0.6,0,1-0.4,1-1v-2 c0-1.3-0.5-2.6-1.5-3.5C18.6,14.5,17.3,14,16,14H8z"></path> 
+           <path class="border" d="M21,20.8v0.3c0,0.5-0.4,0.9-0.9,0.9H3.9C3.4,22,3,21.6,3,21.1v-0.3c0-0.5,0.4-0.9,0.9-0.9h16.2 C20.6,19.9,21,20.3,21,20.8z"></path> 
+          </g> <g class="body-border"> 
+           <path class="border" d="M20,22c-0.6,0-1-0.4-1-1v-2c0-0.8-0.3-1.6-0.9-2.1S16.8,16,16,16H8 c-0.8,0-1.6,0.3-2.1,0.9C5.3,17.4,5,18.2,5,19v2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2c0-1.3,0.5-2.6,1.5-3.5C5.4,14.5,6.7,14,8,14h8 c1.3,0,2.6,0.5,3.5,1.5S21,17.7,21,19v2C21,21.6,20.6,22,20,22z"></path> 
+           <path class="border" d="M12,12c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S14.8,12,12,12z M12,4c-1.7,0-3,1.3-3,3 s1.3,3,3,3s3-1.3,3-3S13.7,4,12,4z"></path> 
+          </g> 
+         </svg> </span> <span class="hidden" hidden>Войти в личный кабинет</span> </a> 
+      </div> <a href="https://nv.ua/ukr/new_landings/variant_1.html" data-utm_source="site" data-utm_medium="buttondesk" data-utm_campaign="psubscription" class="bn bn-primary bn-subscribe">Передплата</a> 
+     </div> 
+    </div> 
+   </header> 
+   <div class="sub_menu"> 
+    <div class="container"> 
+     <ul class="sub_menu_nav"> 
+      <li class="current_category"><a href="https://biz.nv.ua/ukr">Бізнес</a></li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/economics.html" data-ga-submenu="" data-category_id="2293">Економіка</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/finance.html" data-ga-submenu="" data-category_id="2294">Фінанси</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/markets.html" data-ga-submenu="" data-category_id="2295">Компанії / Ринки</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/tech.html" data-ga-submenu="" data-category_id="2297">Телеком / IT / Медіа</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/top-100-bogatyh.html" data-ga-submenu="" data-category_id="110">Профайли ТОП 100</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/publications.html" data-ga-submenu="" data-category_id="2298">Статті</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/bizinterview.html" data-ga-submenu="" data-category_id="2303">Інтерв'ю</a> </li> 
+      <li class="sub_category "> <a href="https://biz.nv.ua/ukr/experts.html" data-ga-submenu="" data-category_id="2762">Експерти</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="main-wrapper"> 
+    <style> @media (max-width: 1370px){ .sponsors_left_fixed{ display: none !important; } } </style> 
+    <div class="sponsors_left_fixed" id="sponsors_left_fixed" data-type="advertising_left" style="display: block;"> <a href="https://estore.ua/ua/" target="_blank"> 
+      <picture> 
+       <source type="image/webp" srcset="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/016/original/b7c5df067a106b9dfe1950dbb8748c0b.png&amp;q=85&amp;output=webp"> 
+       <source srcset="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/016/original/b7c5df067a106b9dfe1950dbb8748c0b.png&amp;q=85"> 
+       <img src="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/016/original/b7c5df067a106b9dfe1950dbb8748c0b.png&amp;q=85" alt="promo"> 
+      </picture> </a> 
+    </div> 
+    <div id="async__head_opinions" style="min-height: 120px"> 
+     <section data-type="opinions"> 
+      <div class="container" data-vr-zone="ТОП мнения под шапкой"> 
+       <div class="header-opinion-slider"> 
+        <div class="header-opinion-item"> 
+         <div class="opinion-item  default with_arrow "> <a href="https://biz.nv.ua/ukr/experts/feyki-ta-manipulyaciji-resursnogo-zakonoproektu-novini-ukrajini-50168778.html" class="opinion-item-row" data-vr-contentbox="Позиция #1" data-vr-contentbox-url="https://biz.nv.ua/id50168778" data-edit-article="50168778"> 
+           <div class="opinion-author"> <picture> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/014/529/original/c83ef08d288411b8c0b4cd5ab7a18f41.png?stamp=1" width="115" height="90" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/014/529/original/c83ef08d288411b8c0b4cd5ab7a18f41.png?stamp=1" width="115" height="90" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="opinion-content"> 
+            <div class="opinion-author-name">
+              Юрій Гайдай 
+            </div> 
+            <div class="opinion-author-description">
+              Чи&nbsp;правда все, що&nbsp;говорять про «ресурсний» законопроєкт 5600? 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="header-opinion-item"> 
+         <div class="opinion-item  default with_arrow "> <a href="https://biz.nv.ua/ukr/experts/konflikti-na-roboti-ta-v-zhitti-yak-pravilno-sperechatisya-poradi-ostanni-novini-50168664.html" class="opinion-item-row" data-vr-contentbox="Позиция #2" data-vr-contentbox-url="https://biz.nv.ua/id50168664" data-edit-article="50168664"> 
+           <div class="opinion-author"> <picture> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/956/original/990c47427dfc36917c9b4684ec3ad984.png?stamp=1" width="115" height="90" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/956/original/990c47427dfc36917c9b4684ec3ad984.png?stamp=1" width="115" height="90" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="opinion-content"> 
+            <div class="opinion-author-name">
+              Маргарита Котелевець 
+            </div> 
+            <div class="opinion-author-description">
+              Конфлікт здорової людини. Як&nbsp;сваритися і домовлятися на&nbsp;роботі й&nbsp;не тільки 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="header-opinion-item"> 
+         <div class="opinion-item  default with_arrow "> <a href="https://biz.nv.ua/ukr/experts/vibuhi-na-nelegalnih-azs-hto-za-ce-vidpovidaye-i-yak-ne-dopustiti-katastrofi-novini-ukrajini-50168742.html" class="opinion-item-row" data-vr-contentbox="Позиция #3" data-vr-contentbox-url="https://biz.nv.ua/id50168742" data-edit-article="50168742"> 
+           <div class="opinion-author"> <picture> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/825/original/9ee46b44e6acf3d1d468af8238090ead.png?stamp=1" width="115" height="90" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/825/original/9ee46b44e6acf3d1d468af8238090ead.png?stamp=1" width="115" height="90" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="opinion-content"> 
+            <div class="opinion-author-name">
+              Сергій Федоренко 
+            </div> 
+            <div class="opinion-author-description">
+              Чи&nbsp;варто чекати, коли в&nbsp;Україні вибухне чергова нелегальна АЗС? 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="header-opinion-item"> 
+         <div class="opinion-item  default with_arrow "> <a href="https://biz.nv.ua/ukr/experts/pravila-biznesu-praktika-i-teoriya-libkin-ostanni-novini-50168716.html" class="opinion-item-row" data-vr-contentbox="Позиция #4" data-vr-contentbox-url="https://biz.nv.ua/id50168716" data-edit-article="50168716"> 
+           <div class="opinion-author"> <picture> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/015/962/original/fa4c445dca106e9f6eeb43477b29e348.png?stamp=1" width="115" height="90" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;w=115&amp;url=https://biz.nv.ua/system/opinion_authors/avatars/000/015/962/original/fa4c445dca106e9f6eeb43477b29e348.png?stamp=1" width="115" height="90" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="opinion-content"> 
+            <div class="opinion-author-name">
+              Савелій Лібкін 
+            </div> 
+            <div class="opinion-author-description">
+              Якби я&nbsp;вирішив відкривати бізнес сьогодні 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+    </div> 
+    <div id="async_spec_202171_projects"> 
+     <section class="home_page" data-type="advertising"> 
+      <div class="container"> 
+       <div class="top-images" style="min-height: 60px"> 
+        <div class="top-image" data-place=""> <a href="https://nv.ua/ukr/project/buti-tatom-5-vidkrittiv-yaki-ya-zrobiv-perebuvayuchi-u-dekretniy-vidpustci-50167927.html?utm_source=nv.ua&amp;utm_medium=2292&amp;utm_campaign=ukrprojectbuti-tatom-5-vidkrittiv-yaki-ya-zrobiv-perebuvayuchi-u-dekretniy-vidpustci-50167927"> 
+          <picture> 
+           <source srcset="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/010/original/9c508241d8356998876f3fb15063e9bb.png&amp;q=75"> 
+           <img src="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/010/original/9c508241d8356998876f3fb15063e9bb.png&amp;q=75" width="400" height="50" alt="promo" loading="lazy"> 
+          </picture> </a> 
+        </div> 
+        <div class="top-image" data-place=""> <a href="https://biz.nv.ua/ukr/finance/vse-shcho-potribno-znati-pro-ipoteku-v-ukrajini-50164866.html?utm_source=nv.ua&amp;utm_medium=2292&amp;utm_campaign=ukrfinancevse-shcho-potribno-znati-pro-ipoteku-v-ukrajini-50164866"> 
+          <picture> 
+           <source srcset="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/012/original/38f273d5ad166008e044b8f2cc2a99bc.png&amp;q=75"> 
+           <img src="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/012/original/38f273d5ad166008e044b8f2cc2a99bc.png&amp;q=75" width="400" height="50" alt="promo" loading="lazy"> 
+          </picture> </a> 
+        </div> 
+        <div class="top-image" data-place=""> <a href="https://azart.nv.ua/ukr?utm_source=nv.ua&amp;utm_medium=2292&amp;utm_campaign=ukr"> 
+          <picture> 
+           <source srcset="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/014/original/9c01ef32f3c4483332ca2e1a4b9a3b25.png&amp;q=75"> 
+           <img src="https://images.weserv.nl/?url=https://nv.ua/system/top_images/images/000/000/014/original/9c01ef32f3c4483332ca2e1a4b9a3b25.png&amp;q=75" width="400" height="50" alt="promo" loading="lazy"> 
+          </picture> </a> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+    </div> 
+    <div class="content-grid"> 
+     <section class="unit-wrapper" data-type="unit" data-vr-zone="Юнит 5"> 
+      <div class="container" data-unit_type="unit5"> 
+       <div class="row atom-list"> 
+        <div class="col-lg-6 atom"> 
+         <div class="atom-wrapper full-photo" data-atom_type="article_6_cell"> <a href="https://biz.nv.ua/ukr/markets/interv-yu-z-seo-up-igorem-smilyanskim-pro-bank-prodazh-golovposhtamtu-zarplati-i-doruchennya-prezidenta-50168713.html" data-edit-article="50168713" class="atom-wrapper-body" data-atom_type="article_6_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/004/600x300/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="600" height="300" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/004/600x300/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="600" height="300" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/004/600x300/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="600" height="300" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div> 
+             <div class="atom-text-sub green">
+              Велике інтерв'ю з Ігорем Смілянським /
+             </div> Я ціную можливість послати. СЕО Укрпошти про покупку банку, зарплати і державних монстрів 
+            </div> 
+            <div class="atom-additional mobile"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 20:01
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/economics/rinok-zemli-zapracyuvav-yak-ta-za-skilki-mozhna-prodati-dilyanku-novini-ukrajini-50168426.html" data-edit-article="50168426" data-article_id="50168426" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              Інтерв'ю&nbsp;НВ /
+             </div> Ринок землі нарешті відкрився. Тепер всі кинуться її продавати? Пояснює міністр агрополітики 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 15:30
+             </div> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="ad-wrapper col-sm-6 col-md-4 col-lg-3"> 
+         <div class="reklama" data-type="reklama"> 
+          <div id="div-gpt-ad-1536739319652-0" style="display: none"></div> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/economics/ukrajinci-zmozhut-prodavati-zemlyu-pravila-novini-ukrajini-50168642.html" data-edit-article="50168642" data-article_id="50168642" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/351/862/300x150/076ada07da91d4167735e9efbddb6e54.jpg?stamp=20210630184424" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/862/300x150/076ada07da91d4167735e9efbddb6e54.jpg?stamp=20210630184424" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/862/300x150/076ada07da91d4167735e9efbddb6e54.jpg?stamp=20210630184424" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              П’ять карток /
+             </div> Ринок, якого чекали 30 років&nbsp;— кому і за&nbsp;скільки можна продавати землю з&nbsp;1 липня 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 11:01
+             </div> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/markets/konflikt-navkolo-vitrenka-naftogaz-oskarzhit-u-sudi-pripis-nazk-rozirvati-kontrakt-z-nim-50168880.html" data-edit-article="50168880" data-article_id="50168880" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/338/300x150/99d650f0c5b64a9e00f15fe8794983f7.jpg?stamp=20210701201220" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/338/300x150/99d650f0c5b64a9e00f15fe8794983f7.jpg?stamp=20210701201220" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/338/300x150/99d650f0c5b64a9e00f15fe8794983f7.jpg?stamp=20210701201220" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              «Грається в&nbsp;політику» /
+             </div> Вітренко оскаржить в&nbsp;суді припис НАЗК про розірвання свого контракту 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 20:18
+             </div> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/economics/zakonoproyekt-pro-oligarhiv-zelenskiy-podyakuvav-radi-za-pidtrimku-dokumenta-novini-ukrajini-50168867.html" data-edit-article="50168867" data-article_id="50168867" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/312/300x150/9b3c187745674d12e0ab78d3fcef7bd5.jpg?stamp=20210701185840" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/312/300x150/9b3c187745674d12e0ab78d3fcef7bd5.jpg?stamp=20210701185840" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/312/300x150/9b3c187745674d12e0ab78d3fcef7bd5.jpg?stamp=20210701185840" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              «Олігархи&nbsp;— це&nbsp;минуле» /
+             </div> Зеленський подякував Раді за підтримку законопроєкту про деолігархізацію 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 19:11
+             </div> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/finance/zvilnennya-z-nbu-timoti-esh-nazvav-situaciyu-rozcharuvannyam-novini-ukrajini-50168856.html" data-edit-article="50168856" data-article_id="50168856" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/290/300x150/78915ea10ebd8ae6e0927f330fe4c4a6.jpg?stamp=20210701175648" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/290/300x150/78915ea10ebd8ae6e0927f330fe4c4a6.jpg?stamp=20210701175648" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/290/300x150/78915ea10ebd8ae6e0927f330fe4c4a6.jpg?stamp=20210701175648" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              «Розчарування» /
+             </div> Тімоті Еш&nbsp;прокоментував масові звільнення з&nbsp;НБУ 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 18:47
+             </div> 
+             <div class="atom-additional-category green">
+              Фінанси
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-4 col-lg-3 atom"> 
+         <div class="atom-wrapper"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/economics/resursniy-zakonoproekt-rada-pidtrimala-zakon-proti-yakogo-kategorichno-vistupav-biznes-50168863.html" data-edit-article="50168863" data-article_id="50168863" data-block="unit_5" data-atom_type="article_3_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/304/300x150/c5c0b5997d2c9f8f8634193de8f65c8a.jpg?stamp=20210701190346" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/304/300x150/c5c0b5997d2c9f8f8634193de8f65c8a.jpg?stamp=20210701190346" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/304/300x150/c5c0b5997d2c9f8f8634193de8f65c8a.jpg?stamp=20210701190346" width="300" height="150" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub green">
+              Бізнес був категорично проти /
+             </div> Рада прийняла за&nbsp;основу «ресурсний законопроект», що підвищує податки 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 18:34
+             </div> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section>
+     <div class="ad_wrapper hidden-xs" style="text-align: center"> <!-- /271925883/new_nv_pod_.unitom --> 
+      <div id="div-gpt-ad-1536828174543-0" style="display: none;"> 
+      </div> 
+     </div> 
+     <div id="div-gpt-ad-1536739319652-0-mob" style="display: none"> 
+     </div> 
+     <div class="special_places--mobile"></div> 
+     <section class="unit-wrapper" data-type="unit" data-vr-zone="Юнит 12"> 
+      <div class="container" data-unit_type="unit12_half"> 
+       <div class="row atom-list"> 
+        <div class="col-sm-6 col-lg-4 atom"> 
+         <div class="atom-wrapper" data-vr-contentbox="Позиция #1" data-vr-contentbox-url="https://nv.ua/id50168895"> <a class="atom-wrapper-body" href="https://nv.ua/ukr/ukraine/events/vakcini-ukrajina-otrimaye-vid-ssha-2-mln-doz-preparatu-moderna-moz-50168895.html" data-edit-article="50168895"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/368/500x250/8a42e836201d2ac2566cf05a2dc40c51.jpg?stamp=20210701232423" width="500" height="250" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/368/500x250/8a42e836201d2ac2566cf05a2dc40c51.jpg?stamp=20210701232423" width="500" height="250" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/368/500x250/8a42e836201d2ac2566cf05a2dc40c51.jpg?stamp=20210701232423" width="500" height="250" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub">
+              У&nbsp;липні /
+             </div> МОЗ очікує отримати від США два мільйони доз вакцини Moderna 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 23:26
+             </div> 
+             <div class="atom-additional-category ">
+              Події
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-lg-4 atom"> 
+         <div class="atom-wrapper" data-vr-contentbox="Позиция #2" data-vr-contentbox-url="https://nv.ua/id50168882"> <a class="atom-wrapper-body" href="https://nv.ua/ukr/ukraine/politics/zakon-pro-oligarhiv-timoshenko-v-radi-rozkritikuvala-zakonoproyekt-ale-deputati-ne-ocinili-50168882.html" data-edit-article="50168882"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/352/342/500x250/b67201567c583d1dca39b2da1cf66953.jpg?stamp=20210701204044" width="500" height="250" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/342/500x250/b67201567c583d1dca39b2da1cf66953.jpg?stamp=20210701204044" width="500" height="250" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/352/342/500x250/b67201567c583d1dca39b2da1cf66953.jpg?stamp=20210701204044" width="500" height="250" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text"> 
+             <div class="atom-text-sub">
+              Парламент розреготався /
+             </div> Тимошенко заявила, що її важко звинуватити в&nbsp;роботі з&nbsp;олігархами 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 20:47
+             </div> 
+             <div class="atom-additional-category ">
+              Політика
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-lg-4 atom"> 
+         <div class="atom-wrapper" data-vr-contentbox="Позиция #3" data-vr-contentbox-url="https://nv.ua/id50167364"> <a class="atom-wrapper-body" href="https://biz.nv.ua/ukr/consmarket/shcho-krashche-novobudova-abo-vtorinka-kupiti-kvartiru-kijiv-zhk-great-50167364.html" data-edit-article="50167364"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/349/306/500x250/1ed4cb2e1e127529fe6f987ec1333007.jpg?stamp=20210623141206" width="500" height="250" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/349/306/500x250/1ed4cb2e1e127529fe6f987ec1333007.jpg?stamp=20210623141206" width="500" height="250" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/349/306/500x250/1ed4cb2e1e127529fe6f987ec1333007.jpg?stamp=20210623141206" width="500" height="250" loading="lazy"> 
+            </picture> 
+            <div class="spec-label spec-label--blue">
+             Новини компаній
+            </div> 
+           </div> 
+           <div class="atom-text"> 
+            <div class="text">
+              Новобудова чи&nbsp;вторинка. Розбираємо плюси та мінуси разом з&nbsp;ЖК Great 
+            </div> 
+            <div class="atom-additional"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 18:18
+             </div> 
+             <div class="atom-additional-category green">
+              Ритейл/Нерухомість
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section>
+     <section class="unit-wrapper" data-type="unit" data-vr-zone="Не пропустіть"> 
+      <div class="unit-header"> 
+       <div class="unit-header-bg"></div> 
+       <div class="container"> 
+        <div class="unit-header-body"> 
+         <h2>Не пропустіть</h2> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="container" data-unit_type="unit7"> 
+       <div class="row atom-list"> 
+        <div class="col-md-6 atom"> 
+         <div class="atom-wrapper full-photo" data-atom_type="article_6_cell"> <a href="https://biz.nv.ua/ukr/finance/kurs-dolara-prognoz-kursu-grivni-na-lipen-novini-ukrajini-50168449.html" data-edit-article="50168449" class="atom-wrapper-body" data-atom_type="article_6_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/351/476/600x300/98f017bb0f0668a1cd4f09cf06952211.jpg?stamp=20210629201240" width="600" height="300" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/476/600x300/98f017bb0f0668a1cd4f09cf06952211.jpg?stamp=20210629201240" width="600" height="300" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/351/476/600x300/98f017bb0f0668a1cd4f09cf06952211.jpg?stamp=20210629201240" width="600" height="300" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div> 
+             <div class="atom-text-sub green">
+              Прогноз /
+             </div> Курс гривні і долара в&nbsp;липні — чи&nbsp;буде спекотно на&nbsp;валютному ринку 
+            </div> 
+            <div class="atom-additional mobile"> 
+             <div class="atom-additional-pub-date">
+              1 липня, 11:00
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-md-6 atom"> 
+         <div class="atom-wrapper full-photo" data-atom_type="article_6_cell"> <a href="https://biz.nv.ua/ukr/economics/oleg-vishnyakov-vidkrivaye-merezhu-ultramarket-novini-kiyeva-50168095.html" data-edit-article="50168095" class="atom-wrapper-body" data-atom_type="article_6_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/350/768/600x300/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="600" height="300" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/350/768/600x300/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="600" height="300" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/350/768/600x300/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="600" height="300" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div> 
+             <div class="atom-text-sub green">
+              Київ, по&nbsp;два магазини щороку /
+             </div> Я&nbsp;не&nbsp;продаю свої активи&nbsp;— бліц-інтерв'ю з&nbsp;власником Ultramarket Олегом Вишняковим 
+            </div> 
+            <div class="atom-additional mobile"> 
+             <div class="atom-additional-pub-date">
+              30 червня, 09:03
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+       </div> 
+      </div> 
+     </section>
+     <section class="unit-wrapper" data-type="unit" data-vr-zone="Юнит 7"> 
+      <div class="container" data-unit_type="unit7"> 
+       <div class="row atom-list"> 
+        <div class="col-md-6 atom"> 
+         <div class="atom-wrapper full-photo" data-atom_type="article_6_cell"> <a href="https://biz.nv.ua/ukr/economics/epicentr-vidkrivaye-merezhu-magaziniv-sporttovariv-novini-ukrajini-50167678.html" data-edit-article="50167678" class="atom-wrapper-body" data-atom_type="article_6_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/349/934/600x300/1986094ffdf91b77c781ebf650f73ba4.jpg?stamp=20210624174739" width="600" height="300" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/349/934/600x300/1986094ffdf91b77c781ebf650f73ba4.jpg?stamp=20210624174739" width="600" height="300" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/349/934/600x300/1986094ffdf91b77c781ebf650f73ba4.jpg?stamp=20210624174739" width="600" height="300" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div> 
+             <div class="atom-text-sub green">
+              Бліцінтерв'ю з&nbsp;Олександром Герегою /
+             </div> Епіцентр виводить на&nbsp;український ринок польський бренд 
+            </div> 
+            <div class="atom-additional mobile"> 
+             <div class="atom-additional-pub-date">
+              29 червня, 09:30
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-md-6 atom"> 
+         <div class="atom-wrapper full-photo" data-atom_type="article_6_cell"> <a href="https://biz.nv.ua/ukr/economics/turi-po-vakcini-kudi-pojihati-novini-ukrajini-50168181.html" data-edit-article="50168181" class="atom-wrapper-body" data-atom_type="article_6_cell"> 
+           <div class="atom-image" data-img="container"> <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://nv.ua/system/Article/posters/002/350/940/600x300/49cfe391d4c92a53571b6cf81a47d8f6.jpg?stamp=20210628125807" width="600" height="300" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/350/940/600x300/49cfe391d4c92a53571b6cf81a47d8f6.jpg?stamp=20210628125807" width="600" height="300" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://nv.ua/system/Article/posters/002/350/940/600x300/49cfe391d4c92a53571b6cf81a47d8f6.jpg?stamp=20210628125807" width="600" height="300" loading="lazy"> 
+            </picture> 
+           </div> 
+           <div class="atom-text"> 
+            <div> 
+             <div class="atom-text-sub green">
+              Вакцини для туристів /
+             </div> У&nbsp;яких країнах українці можуть отримати щеплення від Covid-19 
+            </div> 
+            <div class="atom-additional mobile"> 
+             <div class="atom-additional-pub-date">
+              29 червня, 09:04
+             </div> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+        <div class="col-sm-6 col-md-3 atom"> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <div class="container" data-type="custom_page"> 
+      <div class="row"> 
+       <div class="col-md-9"> 
+        <div data-vr-zone="Лента бизнеса main"> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/economics/zakonoproekt-pro-oligarhiv-rada-pidtrimala-iniciativu-v-pershomu-chitanni-nvoosti-ukrajini-50168860.html" data-edit-article="50168860"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+            <div class="title ">
+              Рада проголосувала за&nbsp;законопроєкт про олігархів в&nbsp;першому читанні 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 18:05 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/consmarket/h-m-vidkriye-pershiy-magazin-v-odesi-shcho-pro-ce-vidomo-50168857.html" data-edit-article="50168857"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Ритейл/Нерухомість
+             </div> 
+            </div> 
+            <div class="title ">
+              І сьомий в&nbsp;Україні. H&amp;M відкриє перший магазин в&nbsp;Одесі 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 18:00 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://nv.ua/ukr/ukraine/events/bogdan-gubskiy-i-yogo-fond-ukrajini-xxi-stolittya-vidznachaye-21-rik-roboti-kultura-ukrajini-50168810.html" data-edit-article="50168810"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category ">
+              Події
+             </div> 
+             <div class="spec-label spec-label--blue">
+              Позиція
+             </div> 
+            </div> 
+            <div class="title ">
+              Фонд Богдана Губського «Україна XXI століття» підсумував 21 рік роботи 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:54 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/liki-24-zapustivsya-v-rumuniji-ostanni-novini-50168816.html" data-edit-article="50168816"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Сервіс Liki24 запустився в&nbsp;Румунії і планує вихід ще&nbsp;в&nbsp;одну країну 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:50 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/economics/rnbo-vvede-sankciji-proti-prichetnih-do-rozkradannya-5-mln-ga-zemli-v-ukrajini-novini-ukrajini-50168678.html" data-edit-article="50168678"> 
+           <div class="row-result-body-image"> 
+            <img src="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/351/934/300x150/fc3a964c961f0ebaa535fe219a028bf3.jpg?stamp=20210701121233" alt=""> 
+           </div> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+            <div class="title ">
+              «Цинізм і маніпуляції». Міністр агрополітики анонсував санкції проти причетних до&nbsp;розкрадання 5 млн га&nbsp;землі в&nbsp;Україні 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:40 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://nv.ua/ukr/ukraine/politics/ukrajina-i-franciya-rada-ratifikuvala-investiciyni-ugodi-mizh-krajinami-50168833.html" data-edit-article="50168833"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category ">
+              Політика
+             </div> 
+            </div> 
+            <div class="title ">
+              Рада ратифікувала інвестиційні угоди між Україною і Францією: що&nbsp;вони передбачають 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:35 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/finance/z-nbu-zvilnivsya-shche-odin-top-menedzher-novini-ukrajini-50168827.html" data-edit-article="50168827"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Фінанси
+             </div> 
+            </div> 
+            <div class="title ">
+              Ще&nbsp;один керівник департаменту йде з&nbsp;НБУ. Він заявив про відновлення «совкових» практик 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:27 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/economics/yaki-novi-shemi-porodit-vidkrittya-rinku-zemli-v-ukrajini-novini-ukrajini-50168680.html" data-edit-article="50168680"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+            <div class="title ">
+              «Геніальність наших людей не&nbsp;має меж». Які нові схеми можуть з’явитися в&nbsp;Україні з відкриттям ринку землі 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:20 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/vitrenko-ta-naftogaz-nazk-vimagaye-vid-naglyadovoji-radi-kompaniji-pripiniti-kontrakt-iz-vitrenkom-50168818.html" data-edit-article="50168818"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Запобігання корупції. НАЗК вимагає від наглядової ради Нафтогазу припинити контракт із Вітренком 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:05 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/experts/feyki-ta-manipulyaciji-resursnogo-zakonoproektu-novini-ukrajini-50168778.html" data-edit-article="50168778"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Експерти
+             </div> 
+            </div> 
+            <div class="title ">
+              Чи&nbsp;правда все, що&nbsp;говорять про «ресурсний» законопроєкт 5600,&nbsp;— Юрій Гайдай 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 16:00 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/economics/vidmina-moratoriyu-yakoyu-bude-vartist-gektara-zemli-v-ukrajini-i-chi-varto-prodavati-novini-ukrajini-50168676.html" data-edit-article="50168676"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+            <div class="title ">
+              «Недооцінена в&nbsp;рази». Міністр агрополітики спрогнозував вартість гектара землі в&nbsp;Україні після відміни мораторію 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 15:50 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/finance/glava-derzhmitnici-kabmin-ogolosiv-konkurs-na-posadu-novini-ukrajini-50168807.html" data-edit-article="50168807"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Фінанси
+             </div> 
+            </div> 
+            <div class="title ">
+              Кабмін оголосив конкурс на&nbsp;посаду голови Держмитниці 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 15:42 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://nv.ua/ukr/ukraine/events/v-ukrajini-zapustili-dodatok-dlya-neverbalnogo-spilkuvannya-cifrova-inklyuziya-v-ukrajini-50167856.html" data-edit-article="50167856"> 
+           <div class="row-result-body-image"> 
+            <img src="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/350/290/300x150/c4b36511fe80cd750d59e2fee998b28a.jpg?stamp=20210629093738" alt=""> 
+           </div> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category ">
+              Події
+             </div> 
+             <div class="spec-label spec-label--blue">
+              Новини компаній
+             </div> 
+            </div> 
+            <div class="title ">
+              Завантажте додаток Digital Inclusion для вільного спілкування та&nbsp;творчості 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 15:15 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/agrariyam-znovu-pidvishchili-pdv-rada-vidkotila-priynyatiy-ranishe-zakon-pro-znizhennya-stavki-podatku-50168788.html" data-edit-article="50168788"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Експеримент провалився. Рада знову підвищила ПДВ на&nbsp;аграрну продукцію&nbsp;— але не&nbsp;всю 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 14:21 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/truba-medvedchuka-ukrtransnafta-otrimala-v-upravlinnya-naftoproduktoprovid-novini-ukrajini-50168782.html" data-edit-article="50168782"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Укртранснафта отримала в&nbsp;управління «трубу Медведчука» 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 14:20 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/experts/konflikti-na-roboti-ta-v-zhitti-yak-pravilno-sperechatisya-poradi-ostanni-novini-50168664.html" data-edit-article="50168664"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Експерти
+             </div> 
+            </div> 
+            <div class="title ">
+              Конфлікт здорової людини. Як&nbsp;сваритися і домовлятися на&nbsp;роботі й&nbsp;не тільки,&nbsp;— точка зору 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 14:00 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/kriminalizaciya-kontrabandi-90-ukrajinciv-pidtrimuye-iniciativu-novini-ukrajini-50168757.html" data-edit-article="50168757"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Кримінальну відповідальність за&nbsp;контрабанду підакцизних товарів підтримує 90% українців&nbsp;— опитування 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 13:45 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/aeroport-odesa-nazvana-data-vidkrittya-novoji-zlitno-posadkovoji-smugi-novini-ukrajini-50168774.html" data-edit-article="50168774"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              В&nbsp;аеропорту Одеса відкриють нову злітно-посадкову смугу і півдня не&nbsp;будуть приймати і відправляти рейси 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 13:10 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/ukrajinskiy-fond-startapiv-vidiliv-granti-na-475-tisyach-dolariv-novini-ukrajini-50168764.html" data-edit-article="50168764"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Український фонд стартапів назвав проекти, які отримають гранти на пів мільйона доларів 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 12:50 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/merezha-azk-wog-zaohochuye-ukrajinskiy-biznes-stavati-prozorim-ta-splachuvati-podatki-50167321.html" data-edit-article="50167321"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+             <div class="spec-label spec-label--blue">
+              Позиція
+             </div> 
+            </div> 
+            <div class="title ">
+              Прозора сплата податків: за&nbsp;4 місяці 2021 року компанія WOG сплатила понад 3,8 млрд грн податків та&nbsp;обов’язкових платежів 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 12:46 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/experts/vibuhi-na-nelegalnih-azs-hto-za-ce-vidpovidaye-i-yak-ne-dopustiti-katastrofi-novini-ukrajini-50168742.html" data-edit-article="50168742"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Експерти
+             </div> 
+            </div> 
+            <div class="title ">
+              Небезпека поруч. Чи&nbsp;варто чекати, коли в&nbsp;Україні вибухне чергова нелегальна АЗС,&nbsp;— точка зору 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 12:15 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/consmarket/ikea-priznachila-novogo-gendirektora-v-pivdenno-shidniy-yevropi-ostanni-novini-50168748.html" data-edit-article="50168748"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Ритейл/Нерухомість
+             </div> 
+            </div> 
+            <div class="title ">
+              IKEA змінила гендиректора в Південно-Східній Європі 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 12:04 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/u-kiyevi-zapustivsya-darkstor-bazar-novini-kiyeva-50168733.html" data-edit-article="50168733"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              У&nbsp;Києві запустився білоруський даркстор Bazar 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 11:30 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/finance/kupivlya-ta-prodazh-valyuti-privatbank-zapustiv-cilodoboviy-rezhim-dlya-fop-novini-ukrajini-50168740.html" data-edit-article="50168740"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Фінанси
+             </div> 
+            </div> 
+            <div class="title ">
+              Подарунок для фрілансерів. ПриватБанк запустив цілодобову покупку валюти для ФОП 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 11:16 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/economics/berdyansk-populyarnishiy-vid-odesi-v-google-rozpovili-de-cogo-roku-vidpochivayut-ukrajinci-50168723.html" data-edit-article="50168723"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Економіка
+             </div> 
+            </div> 
+            <div class="title ">
+              Бердянськ популярніший від Одеси. В&nbsp;Google розповіли, де&nbsp;цього року відпочивають українці 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:59 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/cini-na-gaz-v-yevropi-dosyagli-maksimumu-gazprom-vidmovlyayetsya-zbilshuvati-postavki-50168729.html" data-edit-article="50168729"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+            </div> 
+            <div class="title ">
+              Газпром грає на підвищення. Рекордні ціни і порожні сховища: газ у Європі за місяць подорожчав на&nbsp;третину 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:57 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/experts/pravila-biznesu-praktika-i-teoriya-libkin-ostanni-novini-50168716.html" data-edit-article="50168716"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Експерти
+             </div> 
+            </div> 
+            <div class="title ">
+              Савелій Лібкін: Якби я&nbsp;вирішив відкривати бізнес сьогодні 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:51 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/tech/ilon-mask-investiciji-v-stralink-mozhut-sklasti-do-30-mlrd-dolariv-ostanni-novini-50168721.html" data-edit-article="50168721"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Телеком / IT / Медіа
+             </div> 
+            </div> 
+            <div class="title ">
+              Маск заявив, що&nbsp;загальні інвестиції в&nbsp;Starlink можуть скласти до $30 млрд 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:39 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/tech/murayev-ne-bude-keruvati-telekanalom-nash-novini-ukrajini-50168712.html" data-edit-article="50168712"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Телеком / IT / Медіа
+             </div> 
+            </div> 
+            <div class="title ">
+              «Ми&nbsp;на&nbsp;порозі неприємних подій». Мураєв заявив, що&nbsp;передає управління каналом НАШ співробітникам 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:07 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+         <div class="row-result"> <a class="row-result-body" href="https://biz.nv.ua/ukr/markets/noviy-direktor-aeroportu-borispil-shcho-pro-nogo-vidomo-novini-ukrajini-50168705.html" data-edit-article="50168705"> 
+           <div class="row-result-body-text"> 
+            <div class="info"> 
+             <div class="atom-additional-category green">
+              Компанії / Ринки
+             </div> 
+             <div class="spec-label spec-label--red">
+              Профайл
+             </div> 
+            </div> 
+            <div class="title ">
+              Мінінфраструктури назвало нового директора аеропорту Бориспіль: що&nbsp;про нього відомо 
+            </div> 
+            <div class="additional"> <span class="additional-pub-date"> 1 липня, 10:06 </span> 
+            </div> 
+           </div> </a> 
+         </div> 
+        </div> 
+        <style> .page_pagination ul li a, .page_pagination ul li span{ min-width: 25px; padding: 0; } </style> 
+        <div class="page_pagination"> 
+         <ul class="pagination"> 
+          <li class="page-item disabled"><span class="page-link">«</span></li> 
+          <li class="page-item active"><span class="page-link">1</span></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=2">2</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=3">3</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=4">4</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=5">5</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=6">6</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=7">7</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=8">8</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=9">9</a></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=10">10</a></li> 
+          <li class="page-item disabled"><span class="page-link">...</span></li> 
+          <li class="page-item"><a class="page-link" href="https://biz.nv.ua/ukr?page=2" rel="next">»</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="col-md-3"> <!-- /271925883/new_nv_premium --> 
+        <div id="div-gpt-ad-1536739319652-0" style="min-height: 600px"> 
+        </div> 
+        <div class="widget top_opinions top_opinions--green" data-vr-zone="ТОП-3 блога"> 
+         <h3 class="">ТОП-3 блога</h3> 
+         <ul class="tabs"> 
+          <li class="active"><a data-toggle="tab" href="#top_ops_day" data-tab-to="top_ops_day">3 дні</a></li> 
+          <li class=""><a data-toggle="tab" href="#top_ops_week" data-tab-to="top_ops_week">Тиждень</a></li> 
+          <li class=""><a data-toggle="tab" href="#top_ops_month" data-tab-to="top_ops_month">Місяць</a></li> 
+         </ul> 
+         <div class="tabs-container"> 
+          <div class="tab  active " data-tab-id="top_ops_day"> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/tehnologichniy-rozvitok-i-ukrajina-shcho-potribno-shchob-stati-liderom-ostanni-novini-50168135.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #1" data-vr-contentbox-url="https://biz.nv.ua/id50168135" data-edit-article="50168135"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/950/original/43d272e20aa895f9ce5e12374e720f9c.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Анатолій Бойко 
+              </div> 
+              <div class="opinion-author-description">
+                Місце України в&nbsp;Четвертій промисловій революції 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>4011</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/turisti-z-saudovskoji-araviji-chomu-voni-v-prioriteti-ta-yak-vtrimati-interes-do-ukrajini-50168295.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #2" data-vr-contentbox-url="https://biz.nv.ua/id50168295" data-edit-article="50168295"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/016/539/original/1e5a147115f1ab69c4377966bdb5d0e4.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Антон Тараненко 
+              </div> 
+              <div class="opinion-author-description">
+                Як&nbsp;Україні не&nbsp;втратити туристів з&nbsp;Саудівської Аравії? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>1590</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/chi-potribno-investuvati-v-zeleni-ofisi-ostanni-novini-50168590.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #3" data-vr-contentbox-url="https://biz.nv.ua/id50168590" data-edit-article="50168590"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/014/409/original/d12d7ee811254d16cbb9e9cfbbfde9b5.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Назар Бенч 
+              </div> 
+              <div class="opinion-author-description">
+                Що&nbsp;таке екоофіси та&nbsp;чи&nbsp;варто в&nbsp;них інвестувати? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>1099</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+          </div> 
+          <div class="tab " data-tab-id="top_ops_week"> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/cini-na-neruhomist-chi-varto-kupuvati-zhitlo-zaraz-i-yake-same-novini-ukrajini-50167267.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #1" data-vr-contentbox-url="https://biz.nv.ua/id50167267" data-edit-article="50167267"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/553/original/b0db0e21e3931e24e3a212d85f46a38c.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Юрій Піта 
+              </div> 
+              <div class="opinion-author-description">
+                Вартість житла: +7% вторинка, +15% первинка. Що&nbsp;далі? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>12469</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/tehnologichniy-rozvitok-i-ukrajina-shcho-potribno-shchob-stati-liderom-ostanni-novini-50168135.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #2" data-vr-contentbox-url="https://biz.nv.ua/id50168135" data-edit-article="50168135"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/950/original/43d272e20aa895f9ce5e12374e720f9c.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Анатолій Бойко 
+              </div> 
+              <div class="opinion-author-description">
+                Місце України в&nbsp;Четвертій промисловій революції 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>4011</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/shcho-zminilosya-v-osviti-za-ostanniy-rik-koronakriza-i-navchannya-ostanni-novini-50167981.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #3" data-vr-contentbox-url="https://biz.nv.ua/id50167981" data-edit-article="50167981"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/015/988/original/636128a04193d87a3bf05cafa17618a0.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Лідія Білас 
+              </div> 
+              <div class="opinion-author-description">
+                Рік турбулентності в&nbsp;освіті. Які висновки можемо зробити? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>3347</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+          </div> 
+          <div class="tab " data-tab-id="top_ops_month"> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/koli-obvalitsya-rinok-zhitla-v-kiyevi-prognoz-novini-ukrajini-50166263.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #1" data-vr-contentbox-url="https://biz.nv.ua/id50166263" data-edit-article="50166263"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/015/982/original/347e912b255ee477d4ad45ba7bb3a1e8.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Ігор Кушнір 
+              </div> 
+              <div class="opinion-author-description">
+                Чи&nbsp;перегрітий ринок житла Києва і коли очікувати його падіння? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>18810</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/pidrobleniy-benzin-yak-viznachiti-siri-zapravki-ta-ne-kupiti-bodyagu-novini-ukrajini-50163310.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #2" data-vr-contentbox-url="https://biz.nv.ua/id50163310" data-edit-article="50163310"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/811/original/4f56a1c034f7056b7964881537755e0d.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Неля Привалова 
+              </div> 
+              <div class="opinion-author-description">
+                Чотири підказки. Як&nbsp;визначити бодягу і не&nbsp;заправити нею машину 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>13022</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="opinion-item  default white-bg "> <a href="https://biz.nv.ua/ukr/experts/cini-na-neruhomist-chi-varto-kupuvati-zhitlo-zaraz-i-yake-same-novini-ukrajini-50167267.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=top_3_biz_blogs" class="opinion-item-row" data-vr-contentbox="Позиция #3" data-vr-contentbox-url="https://biz.nv.ua/id50167267" data-edit-article="50167267"> 
+             <div class="opinion-author"> 
+              <img data-img="original" data-source="https://images.weserv.nl/?url=https://biz.nv.ua/system/opinion_authors/avatars/000/017/553/original/b0db0e21e3931e24e3a212d85f46a38c.png&amp;q=75&amp;stamp=3.397&amp;w=115"> 
+             </div> 
+             <div class="opinion-content"> 
+              <div class="opinion-author-name">
+                Юрій Піта 
+              </div> 
+              <div class="opinion-author-description">
+                Вартість житла: +7% вторинка, +15% первинка. Що&nbsp;далі? 
+              </div> 
+              <div class="atom-additional"> 
+               <div class="atom-additional-views inherit">
+                <i class="icon-views"></i><span>12469</span>
+               </div> 
+              </div> 
+             </div> </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> <!-- /271925883/new_nv_informer --> 
+        <div id="div-gpt-ad-1536828443963-0" style="display: none;"> 
+        </div> 
+        <div id="div-gpt-ad-1536828443963-0-mob" style="display: none;"> 
+        </div> 
+        <div class="widget" data-widget-type="editors_choice_business" data-vr-zone="Вибір редакції"> 
+         <h3 class="widget-title"><i class="icon-tick"></i>Вибір редакції</h3> 
+         <div class="widget-grid"> 
+          <div class="widget-article"> 
+           <div class="widget-article-additional"> <a class="category" href="https://biz.nv.ua/ukr/markets.html">Компанії / Ринки</a> <span class="pub-date">1 липня, 20:01</span> 
+           </div> <a class="widget-article-image" href="https://biz.nv.ua/ukr/markets/interv-yu-z-seo-up-igorem-smilyanskim-pro-bank-prodazh-golovposhtamtu-zarplati-i-doruchennya-prezidenta-50168713.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://biz.nv.ua/system/Article/posters/002/352/004/300x150/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/352/004/300x150/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/352/004/300x150/40bc0432c2ea95bebe939b77d93b2986.jpg?stamp=20210701095550" width="300" height="150" loading="lazy"> 
+            </picture> </a> <a href="https://biz.nv.ua/ukr/markets/interv-yu-z-seo-up-igorem-smilyanskim-pro-bank-prodazh-golovposhtamtu-zarplati-i-doruchennya-prezidenta-50168713.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business" class="widget-article-title"> «Я ціную можливість послати». СЕО Укрпошти Ігор Смілянський про покупку банку, зарплати і чайові, Офіс президента і конкурента&nbsp;— інтерв'ю </a> 
+          </div> 
+          <div class="widget-article"> 
+           <div class="widget-article-additional"> <a class="category" href="https://biz.nv.ua/ukr/economics.html">Економіка</a> <span class="pub-date">1 липня, 15:30</span> 
+           </div> <a class="widget-article-image" href="https://biz.nv.ua/ukr/economics/rinok-zemli-zapracyuvav-yak-ta-za-skilki-mozhna-prodati-dilyanku-novini-ukrajini-50168426.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://biz.nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/351/430/300x150/397d13058e3ecefd80be1edc8a0b3f42.jpg?stamp=20210701110756" width="300" height="150" loading="lazy"> 
+            </picture> </a> <a href="https://biz.nv.ua/ukr/economics/rinok-zemli-zapracyuvav-yak-ta-za-skilki-mozhna-prodati-dilyanku-novini-ukrajini-50168426.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business" class="widget-article-title"> Ринок землі в&nbsp;Україні нарешті відкрився. Тепер всі кинуться її продавати? Пояснює міністр агрополітики </a> 
+          </div> 
+          <div class="widget-article"> 
+           <div class="widget-article-additional"> <a class="category" href="https://biz.nv.ua/ukr/economics.html">Економіка</a> <span class="pub-date">30 червня, 09:03</span> 
+           </div> <a class="widget-article-image" href="https://biz.nv.ua/ukr/economics/oleg-vishnyakov-vidkrivaye-merezhu-ultramarket-novini-kiyeva-50168095.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?q=85&amp;output=webp&amp;bg=white&amp;url=https://biz.nv.ua/system/Article/posters/002/350/768/300x150/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="300" height="150" loading="lazy"> 
+             <source srcset="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/350/768/300x150/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="300" height="150" loading="lazy"> 
+             <img src="https://images.weserv.nl/?q=85&amp;url=https://biz.nv.ua/system/Article/posters/002/350/768/300x150/67998e17a86bb33e7e736d0216cf6216.jpg?stamp=20210627151221" width="300" height="150" loading="lazy"> 
+            </picture> </a> <a href="https://biz.nv.ua/ukr/economics/oleg-vishnyakov-vidkrivaye-merezhu-ultramarket-novini-kiyeva-50168095.html?utm_source=site&amp;utm_medium=widget&amp;utm_campaign=editors_choice_business" class="widget-article-title"> Я&nbsp;не&nbsp;продаю свої активи&nbsp;— бліц-інтерв'ю з&nbsp;власником Ultramarket Олегом Вишняковим </a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="widget become_author green"> 
+         <h3><i class="icon-pen"></i>Стань автором</h3> 
+         <p>Якщо Ви хочете публікувати свої колонки на НВ Бізнес, напишіть листа на адресу:</p> <a href="mailto:kolonka@nv.ua">kolonka@nv.ua</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <section class="unit-wrapper " data-type="" data-unit_type="unit_top10" data-vr-zone="ТОП 10"> 
+      <div class="container"> 
+       <div class="row top-10"> 
+        <div class="col-md-3"> 
+         <div class="top-10-header"> <span class="top-10-header-t1">Топ</span> <span class="top-10-header-t2">10</span> <span class="top-10-header-t3">за три дні</span> 
+         </div> 
+        </div> 
+        <div class="col-md-9"> 
+         <ol class="top-10-list"> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/markets/tarifi-na-elektroenergiyu-2021-koli-virostut-skilki-platiti-novini-ukrajini-50168372.html"> 
+             <div class="text">
+               Підвищення цін на&nbsp;електроенергію з&nbsp;1 серпня: яким буде найвищий тариф 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>48262</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/finance/pensiya-v-ukrajini-na-pidvishchennya-z-1-lipnya-groshey-vistachit-ne-vsim-novini-ukrajini-50168330.html"> 
+             <div class="text">
+               Грошей не&nbsp;вистачило. Хто не&nbsp;отримає підвищення пенсій з&nbsp;1 липня 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>41709</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/markets/nigeriya-kinula-viklik-gazpromu-buduye-gazoprovid-do-yevropi-novini-svitu-50168455.html"> 
+             <div class="text">
+               Несподіваний суперник. Нігерія кидає виклик Газпрому в&nbsp;поставках газу до Європи 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>39283</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/economics/epicentr-vidkrivaye-merezhu-magaziniv-sporttovariv-novini-ukrajini-50167678.html"> 
+             <div class="text">
+               Епіцентр виводить на&nbsp;український ринок польський бренд&nbsp;— бліцінтерв'ю з&nbsp;Олександром Герегою 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>27428</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/finance/kerivnictvo-departamentu-nbu-ogolosiv-pro-zvilnennya-v-povnomu-skladi-novini-ukrajini-50168559.html"> 
+             <div class="text">
+               «Нацбанк відходить від стандартів». З&nbsp;НБУ в&nbsp;повному складі звільнилося керівництво одного з&nbsp;департаментів 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>15527</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/markets/cina-gazu-v-yevropi-zrosla-cherez-vidmovu-gazpromu-zbilshiti-prokachku-cherez-ukrajinu-50168358.html"> 
+             <div class="text">
+               Перевалила за $400. Ціна газу в Європі підскочила після відмови Газпрому прокачувати додаткові обсяги через Україну 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>12984</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://nv.ua/ukr/kyiv/sestra-mikoli-tishchenka-otrimuvala-milyoni-na-budivnictvo-podilskogo-mosta-v-kiyevi-novini-kiyeva-50168326.html"> 
+             <div class="text">
+               Родина Миколи Тищенка отримувала гроші на&nbsp;будівництво Подільсько-Воскресенського мосту в&nbsp;Києві - Bihus.Info 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>11449</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/finance/nbu-z-nacbanku-pishov-drugiy-top-menedzher-za-dobu-novini-ukrajini-50168668.html"> 
+             <div class="text">
+               Заявив про згортання реформ. З&nbsp;Нацбанку звільняється другий топ-менеджер за&nbsp;добу 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>7043</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/economics/turi-po-vakcini-kudi-pojihati-novini-ukrajini-50168181.html"> 
+             <div class="text">
+               Вакцини для туристів. У&nbsp;яких країнах українці можуть отримати щеплення від Covid-19 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>6677</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+          <li> 
+           <div class="atom-text"> <a href="https://biz.nv.ua/ukr/markets/u-kiyevi-zapustivsya-darkstor-bazar-novini-kiyeva-50168733.html"> 
+             <div class="text">
+               У&nbsp;Києві запустився білоруський даркстор Bazar 
+             </div> 
+             <div class="atom-additional"> 
+              <div class="atom-additional-views"> <i class="icon-views"></i><span>5675</span> 
+              </div> 
+             </div> </a> 
+           </div> </li> 
+         </ol> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <div class="ad_wrapper hidden-xs" style="text-align: center"> <!-- /271925883/new_nv_giant1 --> 
+      <div id="div-gpt-ad-1536825748278-0"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="page-info"> 
+      <h2>Бізнес</h2> 
+      <div class="description  col-8 "> 
+       <p>Бізнес новини України та&nbsp;світу. Ексклюзивні аналітичні статті, економічні та фінансові зведення новин, звістки з&nbsp;усіх ринків, курси валют та інша бізнес інформація.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <footer class="main"> 
+    <div class="copyright" style="position: relative; padding: 0"> 
+     <div class="container"> 
+      <div class="copyright-links" style="border: none;"> 
+       <ul> 
+        <li> <a href="/sitemap.html">Карта сайту</a> </li> 
+        <li><a href="https://nv.ua/ukr/authors.html">Всі колумністи НВ</a></li> 
+        <li><a href="https://nv.ua/ukr/opinion_authors.html">Всі Лідери думок</a></li> 
+        <li><a href="https://nv.ua/ukr/techno_bloggers.html">Всі техноблогери</a></li> 
+        <li><a href="https://biz.nv.ua/ukr/expert_authors.html">Всі експерти НВ Бізнес</a></li> 
+        <li><a href="https://nv.ua/ukr/korrespondents.html">Автори та редактори сайту</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="load_footer" style="display: block;"> 
+     <div class="body" style="position: relative"> 
+      <div class="container"> 
+       <div class="site-info"> 
+        <div class="row"> 
+         <div class="col-lg-1 site-info-logo"> <a href="/"> 
+           <picture> 
+            <img src="https://biz.nv.ua/images/new-markup-images/gray-logo.svg" alt="logo" width="75" height="75" loading="lazy"> 
+           </picture> </a> <a href="https://nv.ua/ukr/new_landings/variant_1.html" class="bn bn-primary site-subscribe-button">Передплата</a> 
+         </div> 
+         <div class="col-lg-11"> 
+          <div class="site-info-links"> 
+           <div class="site-info-links-main"> 
+            <ul> 
+             <li><a href="https://nv.ua/ukr/page/contacts.html">Контакти</a></li> 
+             <li><a href="https://nv.ua/ukr/page/advert.html">Реклама</a></li> 
+             <li><a href="https://nv.ua/ukr/page/rules.html">Правила використання</a></li> 
+             <li><a href="https://nv.ua/ukr/page/agreement.html">Договір користування</a></li> 
+             <li><a href="https://nv.ua/ukr/page/vacancies.html">Вакансії</a></li> 
+            </ul> 
+           </div> 
+           <div class="site-info-links-media"> 
+            <div class="row full-pads"> 
+             <div class="col-lg-6  border-right "> 
+              <div class="social-block2"> <span class="d-none d-md-inline-block">Соцмережі НВ</span> <a href="https://twitter.com/tweetsNV" target="_blank" class="social-link"> <i class="icon-twitter"></i> </a> <a href="https://www.instagram.com/nv.ua/" target="_blank" class="social-link"> <i class="icon-instagram"></i> </a> <a href="https://t.me/novoe_vremya" target="_blank"> <i class="icon-telegram"></i> </a> <a href="https://www.youtube.com/user/novoyevremyaua" target="_blank" class="social-link"> <i class="icon-youtube"></i> </a> <a href="https://www.facebook.com/media.NV" target="_blank" class="social-link"> <i class="icon-facebook"></i> </a> 
+              </div> 
+             </div> 
+             <div class="col-lg-6"> 
+              <div class="app-block"> <span>Додаток НВ</span> <a href="https://play.google.com/store/apps/details?id=ua.nv.app" target="_blank"> 
+                <picture> 
+                 <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+                 <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+                 <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="145" height="42" loading="lazy"> 
+                </picture> </a> <a href="https://itunes.apple.com/ua/app/%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%8B/id1194455118" target="_blank"> 
+                <picture> 
+                 <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+                 <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+                 <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="128" height="42" loading="lazy"> 
+                </picture> </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="site-menu d-none d-md-block"> 
+        <div class="row"> 
+         <div class="col-lg-5"> 
+          <div class="row full-pads"> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li><a href="https://nv.ua/ukr/ukraine.html">Україна</a></li> 
+             <li><a href="https://nv.ua/ukr/kyiv.html">Київ</a></li> 
+             <li><a href="https://nv.ua/ukr/world.html">Світ</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3" style="padding-left: 0"> 
+            <ul> 
+             <li> <a href="https://biz.nv.ua/ukr">Бізнес</a> <a href="https://www.facebook.com/biz.nv.ua/" class="social-link-circle" target="_blank"> <i class="icon-facebook"></i> </a> </li> 
+             <li> <a href="https://nv.ua/ukr/opinion.html">Погляди</a> <a href="https://t.me/nv_opinion" class="social-link-circle" target="_blank"> <i class="icon-telegram"></i> </a> </li> 
+             <li><a href="/video/all/">Відео</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li> <a href="https://nv.ua/ukr/techno.html">Техно</a> <a href="https://t.me/nv_tech" class="social-link-circle" target="_blank"> <i class="icon-telegram"></i> </a> </li> 
+             <li><a href="https://nv.ua/ukr/auto.html">Авто</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li><a href="https://nv.ua/ukr/sport.html">Спорт</a></li> 
+             <li><a href="https://nv.ua/ukr/specials/evro-2020.html">Євро-2020</a></li> 
+             <li><a href="https://azart.nv.ua/ukr">Азарт</a></li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="col-lg-7"> 
+          <div class="row full-pads"> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li> <a href="https://life.nv.ua/ukr">LIFE</a> <a href="https://www.instagram.com/nvmedia_life/" class="social-link-circle" target="_blank"> <i class="icon-instagram"></i> </a> <a href="https://www.facebook.com/NV.LifeStyle/" class="social-link-circle" target="_blank"> <i class="icon-facebook"></i> </a> </li> 
+             <li><a href="https://health.nv.ua/ukr">Здоров'я</a></li> 
+             <li><a href="https://nv.ua/ukr/art.html">Арт</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li> <a href="https://shopping.nv.ua/ukr">Шопінг</a> <a href="https://t.me/nv_shopping" class="social-link-circle" target="_blank"> <i class="icon-telegram"></i> </a> </li> 
+             <li><a href="https://promokodi.nv.ua" target="_blank">Промокоди</a></li> 
+             <li><a href="https://nv.ua/ukr/lifestyle.html">LOL</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3"> 
+            <ul> 
+             <li><a href="https://nv.ua/ukr/project.html">Лонгріди</a></li> 
+             <li><a href="https://nv.ua/ukr/spec.html">Картки</a></li> 
+             <li><a href="https://nv.ua/ukr/magazine.html">Журнал</a></li> 
+            </ul> 
+           </div> 
+           <div class="col-sm-6 col-md-3" style="padding-left: 0"> 
+            <ul> 
+             <li> <a href="https://podcasts.nv.ua/ukr">НВ Подкасти</a> <a href="https://facebook.com/nvpodcasts" class="social-link-circle" target="_blank"> <i class="icon-facebook"></i> </a> <a href="https://twitter.com/nvpodcasts" target="_blank" class="social-link-circle"> <i class="icon-twitter"></i> </a> </li> 
+             <li> <a href="https://radio.nv.ua" target="_blank">Радіо</a> <a href="https://www.youtube.com/channel/UCVoPOHZYyNUr1GiVnRVm2ig" class="social-link-circle" target="_blank"> <i class="icon-youtube"></i> </a> <a href="https://www.instagram.com/radio_nv/" class="social-link-circle" target="_blank"> <i class="icon-instagram"></i> </a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="site-info-links-media"> 
+        <div class="row full-pads"> 
+         <div class="col-lg-6 border-right d-none d-md-block"> 
+          <div class="social-block2"> <span>Слухайте нас</span> <a href="https://podcasts.apple.com/ua/podcast/радіо-нв/id1394491455?mt=2" title="Apple Podcasts " target="_blank"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/apple-podcasts.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+             <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/apple-podcasts.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+             <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/apple-podcasts.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="75" height="30" loading="lazy"> 
+            </picture> </a> <a href="https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzL3NvdW5kY2xvdWQ6dXNlcnM6NDUwNTQ0NDQ2L3NvdW5kcy5yc3M=" title="Google Podcasts" target="_blank"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/google-podcasts.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+             <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/google-podcasts.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+             <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/podcasts/google-podcasts.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="75" height="30" loading="lazy"> 
+            </picture> </a> <a href="https://soundcloud.com/radio-nv/sets" title="Soundcloud" target="_blank"> <i class="icon-soundcloud"></i> </a> <a href="https://spoti.fi/39x63HF" title="Spotify" target="_blank"> <i class="icon-spotify"></i> </a> <a href="https://www.youtube.com/channel/UCVoPOHZYyNUr1GiVnRVm2ig" title="Youtube" target="_blank"> <i class="icon-youtube"></i> </a> <a href="https://www.mixcloud.com/Radio_NV/" title="Mixcloud" target="_blank"> <i class="icon-mixcloud"></i> </a> 
+          </div> 
+         </div> 
+         <div class="col-lg-6"> 
+          <div class="app-block"> <span>НВ Подкасти</span> <a href="https://play.google.com/store/apps/details?id=ua.nv.podcast&amp;gl=RU" target="_blank"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+             <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+             <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/google-play.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="145" height="42" loading="lazy"> 
+            </picture> </a> <a href="https://apps.apple.com/app/apple-store/id1540571606?pt=118513922&amp;ct=Podcasts-AppBlock&amp;mt=8" target="_blank"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+             <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+             <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/app-store.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="128" height="42" loading="lazy"> 
+            </picture> </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="contact-info"> 
+        <div class="row full-pads"> 
+         <div class="col-lg-12 d-none d-md-block"> 
+          <div class="contact-info-links"> 
+           <div> 
+            <p>Е-mail редакції</p> <a href="mailto:news@nv.ua">news@nv.ua</a> 
+           </div> 
+           <div> 
+            <p>Відділ реклами</p> <a href="mailto:sales@nv.ua">sales@nv.ua</a> 
+           </div> 
+           <div> 
+            <p>Радіо</p> <a href="mailto:radionv@nv.ua ">radionv@nv.ua</a> 
+           </div> 
+           <div> 
+            <p>E-mail журналу</p> <a href="mailto:letters@nv.ua">letters@nv.ua</a> 
+           </div> 
+           <div> 
+            <p>Подкасти</p> <a href="mailto:podcasts@nv.ua">podcasts@nv.ua</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="rights-info"> 
+        <div class="row full-pads"> 
+         <div class="col-md-12 col-lg-6  border-right "> 
+          <div class="rights-info-text"> 
+           <div> 
+            <p> Політична реклама: </p> 
+            <div> <span class="spec-label green">Позиція</span> 
+            </div> 
+           </div> 
+           <div> 
+            <p> Матеріали, відмічені значками публікуются на правах реклами: </p> 
+            <div> <span class="spec-label blue">Новини компаній</span> <span class="spec-label blue">PR</span> <span class="spec-label blue">Партнерський проєкт</span> <span class="spec-label blue">Позиція</span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="col-md-6 col-lg-3  border-right "> 
+          <div class="rights-info-photos"> 
+           <p> Стокові фото </p> <a href="https://ua.depositphotos.com/?utm_source=NV&amp;utm_medium=footer&amp;utm_campaign=UA-brand" rel="nofollow noreferrer noopener" target="_blank"> 
+            <picture> 
+             <source type="image/webp" srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/depositphotos.png&amp;q=75&amp;output=webp&amp;stamp=3.397"> 
+             <source srcset="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/depositphotos.png&amp;q=75&amp;output=jpg&amp;stamp=3.397"> 
+             <img src="https://images.weserv.nl/?url=https://biz.nv.ua/images/new-markup-images/depositphotos.png&amp;q=75&amp;output=jpg&amp;stamp=3.397" alt="poster" width="168" height="28" loading="lazy"> 
+            </picture> </a> 
+          </div> 
+         </div> 
+         <div class="col-md-6 col-lg-3"> 
+          <div class="rights-info-typo"> 
+           <p> Якщо ви знайшли помилку в тексті, виділіть її мишкою і натисніть Ctrl + Enter </p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="copyright" style="position: relative"> 
+      <div class="container"> 
+       <div class="copyright-text"> 
+        <p> Використання матеріалів сайту можливе за умови дотримання Правил користування сайтом і правил використання матеріалів сайту. Усі матеріали, які розміщені на цьому сайті із посиланням на агентство <a rel="nofollow" href="https://interfax.com.ua/" target="_blank" style="    color: #fff;">"Інтерфакс-Україна"</a>, не підлягають подальшому відтворенню та/чи розповсюдженню в будь-якій формі, інакше як з письмового дозволу агентства "Інтерфакс-Україна". Передрук, копіювання або відтворення інформації, яка містить посилання на агентство <a rel="nofollow" href="https://ukranews.com/" target="_blank" style="    color: #fff;">ИнА “Українські Новини”</a>, в будь-якому вигляді суворо заборонено, гіперпосилання на логотип «Українські Новини» обов’язкове. Цей ресурс — для користувачів віком від 18 років і старших. Матеріали, в тексті (після тексту) яких міститься заборона на повне републікування (передрук, копіювання, відтворення або інше використання), або матеріали, доступ до яких є платним, дозволяється використовувати частково. Обсяг використання не може перевищувати 25% від загального обсягу тексту. Таке часткове використання дозволяється виключно за наявності гіперпосилання в кінці текстових матеріалів з підписом: «Повну версію читайте на nv.ua». </p> 
+       </div> 
+       <div class="copyright-rights"> 
+        <p>© 2014 - 2021, ТОВ «ВИДАВНИЧИЙ ДІМ «МЕДІА-ДК». Всі права захищені.</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <script src="https://player.adtelligent.com/prebidlink/ex18810/hb_285119_882.js" async></script>
+  <script>
+    window.addEventListener('scroll', load_paywall_css, false);
+    function load_paywall_css() {
+        var head = document.getElementsByTagName('HEAD')[0];
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/css/styles-ajax.css?'+'3.397';
+        head.appendChild(link);
+        window.removeEventListener('scroll', load_paywall_css, false);
+    }
+</script> <!-- (C)2000-2014 Gemius SA - gemiusAudience / nvua.net / NV_All --> 
+  <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        var pp_gemius_identifier = 'bP1LyUd8vEolEOrZhSdqarRHfcBKuIeKw9GC.6Mtx33.67';
+        var pp_gemius_identifier_infinite = 'bP1LyUd8vEolEOrZhSdqarRHfcBKuIeKw9GC.6Mtx33.67';
+        // lines below shouldn't be edited
+        function gemius_pending(i) {
+            window[i] = window[i] || function () {
+                var x = window[i + '_pdata'] = window[i + '_pdata'] || [];
+                x[x.length] = arguments;
+            };
+        }
+        gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+        (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0]; gt.setAttribute('async','async');
+            gt.setAttribute('defer','defer'); gt.src='https://gaua.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+        //--><!]]>
+    </script> 
+  <script src="https://biz.nv.ua/scripts/main_scripts.min.js?3.397" defer></script> 
+  <script src="https://biz.nv.ua/scripts/after_scripts.min.js?3.397" defer></script> 
+  <script>
+    (function(win, doc) {
+        function mock(i){return function(){this._.push([i,arguments])}}function load(i){var c=doc.createElement("script");c.type="text/javascript",c.async=!0,c.src=i,doc.getElementsByTagName("head")[0].appendChild(c)}win.remplib=win.remplib||{};var mockFuncs={campaign:"init",tracker:"init trackEvent trackPageview trackCommerce trackPaymentWithSource trackPurchaseWithSource",iota:"init"};Object.keys(mockFuncs).forEach(function(i){if(!win.remplib[i]){var c,e,n=mockFuncs[i].split(" ");for(win.remplib[i]={_:[]},e=0;e<n.length;e++)c=n[e],win.remplib[i][c]=mock(c)}});
+
+
+    })(window, document);
+    
+            var load_campaign_js = true;
+        // configuration
+    var rempConfig = {
+        token: "74e8abe7-e4c5-3423-a0fa-6675a84b4699",
+                    userId: String,
+                            userSubscribed: false,
+                browserId: String,
+        usingAdblock: Boolean,
+                        campaign: {
+            url: "https://campaign.remp.nv.ua",
+            bannerUrlParams:  {
+                "foo": function() { return "bar" },
+                "baz": function() { return "XXX" }
+            },
+            usingAdblock: Boolean,
+            variables: { email: {value: function() {return "foo@example.com"}},}
+        }
+            };
+    
+</script> 
+  <script type="application/ld+json">
+        {"organization":{"@context":"http://schema.org","@type":"Organization","name":"НВ","alternateName":"Новое Время","legalName":"ООО Издательский дом Медиа-ДК","url":"https://nv.ua","logo":"https://nv.ua/user/img/logo_mag.png","sameAs":["https://www.facebook.com/novoyevremya","https://twitter.com/tweetsNV","https://plus.google.com/102484952323308369763","https://vk.com/novoyevremya","https://coub.com/novoyevremya","https://www.youtube.com/user/novoyevremyaua","https://instagram.com/nv.ua","https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5_%D0%92%D1%80%D0%B5%D0%BC%D1%8F_(%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB_%D0%B8_%D1%81%D0%B0%D0%B9%D1%82)"],"foundingDate":"2014","address":{"@type":"PostalAddress","streetAddress":"ул. Нахимова, 12, г.Киев, Украина","addressLocality":"Киев","postalCode":"04080","addressCountry":"UA"},"contactPoint":[{"@type":"ContactPoint","email":"subscription@nv.ua","telephone":"+380-44-237-08-64","contactType":"billing support","areaServed":"UA","availableLanguage":["ru-UA","uk-UA","en-UA"]},{"@type":"ContactPoint","email":"sales@nv.ua","telephone":"+380-44-237-08-64","contactType":"sales","areaServed":"UA","availableLanguage":["ru-UA","uk-UA","en-UA"]},{"@type":"ContactPoint","email":"letters@nv.ua","telephone":"+380-44-237-08-60","contactType":"customer support","areaServed":"UA","availableLanguage":["ru-UA","uk-UA","en-UA"]},{"@type":"ContactPoint","email":"news@nv.ua","telephone":"+380-44-237-08-60","contactType":"customer support","areaServed":"UA","availableLanguage":["ru-UA","uk-UA","en-UA"]}]},"website":{"@context":"http://schema.org","@type":"WebSite","url":"https://nv.ua/","name":"НВ","alternateName":"Новое Время","potentialAction":{"@type":"SearchAction","target":"https://nv.ua/search.html?query={search_term_string}","query-input":"required name=search_term_string"}},"webpage":{"@type":"WebPage","url":"https://biz.nv.ua/ukr"},"publisher":{"@type":"Organization","name":"НВ","alternateName":"Новое Время","logo":{"@type":"imageObject","url":"https://nv.ua/user/img/logo_mag.png"}},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://biz.nv.ua/ukr/markets/interv-yu-z-seo-up-igorem-smilyanskim-pro-bank-prodazh-golovposhtamtu-zarplati-i-doruchennya-prezidenta-50168713.html"},{"@type":"ListItem","position":2,"url":"https://biz.nv.ua/ukr/economics/rinok-zemli-zapracyuvav-yak-ta-za-skilki-mozhna-prodati-dilyanku-novini-ukrajini-50168426.html"},{"@type":"ListItem","position":3,"url":"https://biz.nv.ua/ukr/economics/ukrajinci-zmozhut-prodavati-zemlyu-pravila-novini-ukrajini-50168642.html"},{"@type":"ListItem","position":4,"url":"https://biz.nv.ua/ukr/markets/konflikt-navkolo-vitrenka-naftogaz-oskarzhit-u-sudi-pripis-nazk-rozirvati-kontrakt-z-nim-50168880.html"},{"@type":"ListItem","position":5,"url":"https://biz.nv.ua/ukr/economics/zakonoproyekt-pro-oligarhiv-zelenskiy-podyakuvav-radi-za-pidtrimku-dokumenta-novini-ukrajini-50168867.html"},{"@type":"ListItem","position":6,"url":"https://biz.nv.ua/ukr/finance/zvilnennya-z-nbu-timoti-esh-nazvav-situaciyu-rozcharuvannyam-novini-ukrajini-50168856.html"},{"@type":"ListItem","position":7,"url":"https://biz.nv.ua/ukr/economics/resursniy-zakonoproekt-rada-pidtrimala-zakon-proti-yakogo-kategorichno-vistupav-biznes-50168863.html"},{"@type":"ListItem","position":8,"url":"https://nv.ua/ukr/ukraine/events/vakcini-ukrajina-otrimaye-vid-ssha-2-mln-doz-preparatu-moderna-moz-50168895.html"},{"@type":"ListItem","position":9,"url":"https://nv.ua/ukr/ukraine/politics/zakon-pro-oligarhiv-timoshenko-v-radi-rozkritikuvala-zakonoproyekt-ale-deputati-ne-ocinili-50168882.html"},{"@type":"ListItem","position":10,"url":"https://biz.nv.ua/ukr/consmarket/shcho-krashche-novobudova-abo-vtorinka-kupiti-kvartiru-kijiv-zhk-great-50167364.html"},{"@type":"ListItem","position":11,"url":"https://biz.nv.ua/ukr/finance/kurs-dolara-prognoz-kursu-grivni-na-lipen-novini-ukrajini-50168449.html"},{"@type":"ListItem","position":12,"url":"https://biz.nv.ua/ukr/economics/oleg-vishnyakov-vidkrivaye-merezhu-ultramarket-novini-kiyeva-50168095.html"},{"@type":"ListItem","position":13,"url":"https://biz.nv.ua/ukr/economics/epicentr-vidkrivaye-merezhu-magaziniv-sporttovariv-novini-ukrajini-50167678.html"},{"@type":"ListItem","position":14,"url":"https://biz.nv.ua/ukr/economics/turi-po-vakcini-kudi-pojihati-novini-ukrajini-50168181.html"},{"@type":"ListItem","position":15,"url":"https://biz.nv.ua/ukr/economics/zakonoproekt-pro-oligarhiv-rada-pidtrimala-iniciativu-v-pershomu-chitanni-nvoosti-ukrajini-50168860.html"},{"@type":"ListItem","position":16,"url":"https://biz.nv.ua/ukr/consmarket/h-m-vidkriye-pershiy-magazin-v-odesi-shcho-pro-ce-vidomo-50168857.html"},{"@type":"ListItem","position":17,"url":"https://nv.ua/ukr/ukraine/events/bogdan-gubskiy-i-yogo-fond-ukrajini-xxi-stolittya-vidznachaye-21-rik-roboti-kultura-ukrajini-50168810.html"},{"@type":"ListItem","position":18,"url":"https://biz.nv.ua/ukr/markets/liki-24-zapustivsya-v-rumuniji-ostanni-novini-50168816.html"},{"@type":"ListItem","position":19,"url":"https://biz.nv.ua/ukr/economics/rnbo-vvede-sankciji-proti-prichetnih-do-rozkradannya-5-mln-ga-zemli-v-ukrajini-novini-ukrajini-50168678.html"},{"@type":"ListItem","position":20,"url":"https://nv.ua/ukr/ukraine/politics/ukrajina-i-franciya-rada-ratifikuvala-investiciyni-ugodi-mizh-krajinami-50168833.html"},{"@type":"ListItem","position":21,"url":"https://biz.nv.ua/ukr/finance/z-nbu-zvilnivsya-shche-odin-top-menedzher-novini-ukrajini-50168827.html"},{"@type":"ListItem","position":22,"url":"https://biz.nv.ua/ukr/economics/yaki-novi-shemi-porodit-vidkrittya-rinku-zemli-v-ukrajini-novini-ukrajini-50168680.html"},{"@type":"ListItem","position":23,"url":"https://biz.nv.ua/ukr/markets/vitrenko-ta-naftogaz-nazk-vimagaye-vid-naglyadovoji-radi-kompaniji-pripiniti-kontrakt-iz-vitrenkom-50168818.html"},{"@type":"ListItem","position":24,"url":"https://biz.nv.ua/ukr/experts/feyki-ta-manipulyaciji-resursnogo-zakonoproektu-novini-ukrajini-50168778.html"},{"@type":"ListItem","position":25,"url":"https://biz.nv.ua/ukr/economics/vidmina-moratoriyu-yakoyu-bude-vartist-gektara-zemli-v-ukrajini-i-chi-varto-prodavati-novini-ukrajini-50168676.html"},{"@type":"ListItem","position":26,"url":"https://biz.nv.ua/ukr/finance/glava-derzhmitnici-kabmin-ogolosiv-konkurs-na-posadu-novini-ukrajini-50168807.html"},{"@type":"ListItem","position":27,"url":"https://nv.ua/ukr/ukraine/events/v-ukrajini-zapustili-dodatok-dlya-neverbalnogo-spilkuvannya-cifrova-inklyuziya-v-ukrajini-50167856.html"},{"@type":"ListItem","position":28,"url":"https://biz.nv.ua/ukr/markets/agrariyam-znovu-pidvishchili-pdv-rada-vidkotila-priynyatiy-ranishe-zakon-pro-znizhennya-stavki-podatku-50168788.html"},{"@type":"ListItem","position":29,"url":"https://biz.nv.ua/ukr/markets/truba-medvedchuka-ukrtransnafta-otrimala-v-upravlinnya-naftoproduktoprovid-novini-ukrajini-50168782.html"},{"@type":"ListItem","position":30,"url":"https://biz.nv.ua/ukr/experts/konflikti-na-roboti-ta-v-zhitti-yak-pravilno-sperechatisya-poradi-ostanni-novini-50168664.html"},{"@type":"ListItem","position":31,"url":"https://biz.nv.ua/ukr/markets/kriminalizaciya-kontrabandi-90-ukrajinciv-pidtrimuye-iniciativu-novini-ukrajini-50168757.html"},{"@type":"ListItem","position":32,"url":"https://biz.nv.ua/ukr/markets/aeroport-odesa-nazvana-data-vidkrittya-novoji-zlitno-posadkovoji-smugi-novini-ukrajini-50168774.html"},{"@type":"ListItem","position":33,"url":"https://biz.nv.ua/ukr/markets/ukrajinskiy-fond-startapiv-vidiliv-granti-na-475-tisyach-dolariv-novini-ukrajini-50168764.html"},{"@type":"ListItem","position":34,"url":"https://biz.nv.ua/ukr/markets/merezha-azk-wog-zaohochuye-ukrajinskiy-biznes-stavati-prozorim-ta-splachuvati-podatki-50167321.html"},{"@type":"ListItem","position":35,"url":"https://biz.nv.ua/ukr/experts/vibuhi-na-nelegalnih-azs-hto-za-ce-vidpovidaye-i-yak-ne-dopustiti-katastrofi-novini-ukrajini-50168742.html"},{"@type":"ListItem","position":36,"url":"https://biz.nv.ua/ukr/consmarket/ikea-priznachila-novogo-gendirektora-v-pivdenno-shidniy-yevropi-ostanni-novini-50168748.html"},{"@type":"ListItem","position":37,"url":"https://biz.nv.ua/ukr/markets/u-kiyevi-zapustivsya-darkstor-bazar-novini-kiyeva-50168733.html"},{"@type":"ListItem","position":38,"url":"https://biz.nv.ua/ukr/finance/kupivlya-ta-prodazh-valyuti-privatbank-zapustiv-cilodoboviy-rezhim-dlya-fop-novini-ukrajini-50168740.html"},{"@type":"ListItem","position":39,"url":"https://biz.nv.ua/ukr/economics/berdyansk-populyarnishiy-vid-odesi-v-google-rozpovili-de-cogo-roku-vidpochivayut-ukrajinci-50168723.html"},{"@type":"ListItem","position":40,"url":"https://biz.nv.ua/ukr/markets/cini-na-gaz-v-yevropi-dosyagli-maksimumu-gazprom-vidmovlyayetsya-zbilshuvati-postavki-50168729.html"},{"@type":"ListItem","position":41,"url":"https://biz.nv.ua/ukr/experts/pravila-biznesu-praktika-i-teoriya-libkin-ostanni-novini-50168716.html"},{"@type":"ListItem","position":42,"url":"https://biz.nv.ua/ukr/tech/ilon-mask-investiciji-v-stralink-mozhut-sklasti-do-30-mlrd-dolariv-ostanni-novini-50168721.html"},{"@type":"ListItem","position":43,"url":"https://biz.nv.ua/ukr/tech/murayev-ne-bude-keruvati-telekanalom-nash-novini-ukrajini-50168712.html"},{"@type":"ListItem","position":44,"url":"https://biz.nv.ua/ukr/markets/noviy-direktor-aeroportu-borispil-shcho-pro-nogo-vidomo-novini-ukrajini-50168705.html"}]},"breadcrumb":{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://biz.nv.ua/ukr","name":"Новости Бізнес"}}]}}
+    </script> 
+  <div class="paywall-area"> 
+   <div class="authentication-popup-template" id="login-popup" data-login-popup="" style="display: none"> 
+    <div class="authentication-popup-wrapper"> 
+     <div class="authentication-popup-from-views"> <i class="icon-close close-popup"></i> 
+      <div class="swiper-container swiper-no-swiping authentication-popup-container"> 
+       <div class="swiper-wrapper"> 
+        <div class="swiper-slide"> 
+         <div class="alert alert-success" role="alert" id="success-change-user-password-alert" style="display: none">
+          Ви вийшли з системи
+         </div> 
+         <h2>Увійти</h2> 
+         <br> 
+         <form method="post" class="login-form"> 
+          <input type="hidden" name="_token" value="X0wzmwdzDwXrGmhGk7FrZXSddKfX8qXWTq5YtDYa"> 
+          <div class="alert alert-danger" id="error-login-auth" role="alert" style="display: none">
+           Email та/або пароль введено невірно
+          </div> 
+          <div class="alert alert-danger" id="error-login-oops" role="alert" style="display: none">
+           СТАЛАСЯ НЕПЕРЕДБАЧУВАНА ПОМИЛКА, СПРОБУЙТЕ ЩЕ РАЗ АБО ЗВЕРНІТЬСЯ ДО СЛУЖБИ ПІДТРИМКИ
+          </div> <label class="form-group"> <input type="email" class="form-control" id="email" name="email" placeholder="Введіть e-mail" required> </label> <label class="form-group"> <input type="password" class="form-control" id="password" name="password" placeholder="Пароль" required> </label> 
+          <div class="form-footer row align-items-center"> 
+           <div class="col-6"> <button type="submit" class="bn bn-primary" id="login-btn" data-tooltip="" title="Натисніть увійти"> Увійти </button> 
+           </div> 
+           <div class="col-6 text-right"> <a href="https://nv.ua/ukr/reset_password.html" class="forgot-pas">Забули пароль?</a> 
+           </div> 
+          </div> 
+          <hr> 
+          <div class="row align-items-center"> 
+           <div class="col-5 light-text">
+             Увійти через соцмережі 
+           </div> 
+           <div class="col-7 text-right"> 
+            <div class="social-block"> 
+             <div data-href="https://nv.ua/login_social_new/facebook?redirect=https://biz.nv.ua/ukr" class="fb"> <i class="icon-facebook"></i> 
+             </div> 
+             <div data-href="https://nv.ua/login_social_new/twitter?redirect=https://biz.nv.ua/ukr" class="tw"> <i class="icon-twitter"></i> 
+             </div> 
+             <div data-href="https://nv.ua/login_social_new/google?redirect=https://biz.nv.ua/ukr" class="gl"> <i class="icon-gl"></i> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </form> 
+        </div> 
+        <div class="swiper-slide"> 
+         <div style="padding: 10vh 0"> 
+          <h2>Відновлення пароля</h2> 
+          <br> 
+          <form class="reset-password-form"> 
+           <div class="alert alert-success" role="alert" style="display: none">
+            Посилання на зміну пароля було відправлено на ваш email
+           </div> 
+           <div class="alert alert-danger" role="alert" style="display: none">
+            СТАЛАСЯ НЕПЕРЕДБАЧУВАНА ПОМИЛКА, СПРОБУЙТЕ ЩЕ РАЗ АБО ЗВЕРНІТЬСЯ ДО СЛУЖБИ ПІДТРИМКИ
+           </div> 
+           <input type="hidden" name="_token" value="X0wzmwdzDwXrGmhGk7FrZXSddKfX8qXWTq5YtDYa"> 
+           <div class="form-group"> 
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введіть e-mail" required> 
+           </div> <button type="submit" class="bn bn-primary bn-block">відновити пароль</button> 
+          </form> 
+         </div> 
+         <p class="text-center"> <a href="#" class="overlay-text back-to-login">назад до входу</a> </p> 
+        </div> 
+        <div class="swiper-slide success-slide hide-create-subscription"> 
+         <h2>Лист<br> відправлено</h2> 
+         <br> 
+         <p> Ми відправили вам лист з посиланням на створення нового пароля </p> 
+         <br> <a href="#" class="bn bn-primary close-popup"> Готово </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="authentication-popup-create-subscription"> 
+      <div class="row align-items-center"> 
+       <div class="col-6">
+         Якщо ще немає передплати 
+       </div> 
+       <div class="col-6 text-right"> <a href="https://nv.ua/ukr/new_landings/variant_1.html" data-utm_source="site" data-utm_medium="auth_popup" data-utm_campaign="psubscription" class="bn bn-white">Передплатити</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="radio-button"> 
+   <div class="radio-button-container"> <a class="radio_extender_image" target="_blank"></a> 
+    <div class="radio-button-icon" onclick="window.open('https://radio.nv.ua')"> <i class="icon-microphone"></i> <i class="icon-play"></i> 
+    </div> 
+    <div class="radio-button-title">
+     Радіо НВ
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" id="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g;d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","59bikxsf9x");</script><iframe src="https://sync2.adtelligent.com/ks" sandbox="allow-scripts allow-same-origin" style="display: none;"></iframe>
+  <script src="https://s2.getsitecontrol.com/widgets/es6/runtime.db4ef3c.js"></script>
+  <script>
+        var iww = window.innerWidth;
+        var dfpSlots = {
+                            'div-gpt-ad-1536739319652-0': ['/271925883/new_nv_premium', [[240, 400], [240, 350], [300, 600], [240, 600], [300, 250]],  [0, 10000], 1],
+                            'div-gpt-ad-1536828443963-0': ['/271925883/new_nv_informer', [[300, 600], [300, 250]],  [0, 10000], 1],
+                            'div-gpt-ad-1536828443963-health5': ['/271925883/new_nv_informer', [[300, 600], [300, 250]],  [768, 10000], 0],
+                            'div-gpt-ad-1536828443963-health15': ['/271925883/new_nv_informer', [[300, 600], [300, 250]],  [768, 10000], 0],
+                            'div-gpt-ad-1536828443963-health25': ['/271925883/new_nv_informer', [[300, 600], [300, 250]],  [768, 10000], 0],
+                            'div-gpt-ad-1536825748278-0': ['/271925883/new_nv_giant1', [[728,90],[970,90],[970,250],[970,400],[980,90],[980,120],[1140,60],[1140,90],[1140,160],[1140,180],[1170,110],[1200,180]],  [768, 10000], 0],
+                            'div-gpt-ad-1536826412405-0': ['/271925883/new_nv_top', [[970, 90], [728, 90]],  [768, 10000], 0],
+                            'div-gpt-ad-1536826412405-article_content-0': ['/271925883/new_nv_top', [[728,90],[750,100],[750,200],[810,30],[810,60]],  [768, 10000], 0],
+                            'div-gpt-ad-1536826412405-article_content-sport': ['/271925883/new_nv_top', [[728,90],[750,100],[750,200],[810,30],[810,60],[970,90]],  [768, 10000], 0],
+                            'div-gpt-ad-1536827933373-0': ['/271925883/new_nv_brending', [[1920, 1080], [810, 60]],  [0, 10000], 0],
+                            'div-gpt-ad-1536827815107-0': ['/271925883/new_nv_v_lente', [320, 50],  [768, 10000], 0],
+                            'div-gpt-ad-1536828174543-0': ['/271925883/new_nv_pod_.unitom', [[728, 90], [970, 90]],  [768, 10000], 0],
+                            'div-gpt-ad-desktop_catfish': ['/271925883/catfish_desktop', [[1200, 180]],  [768, 10000], 0],
+                            'div-gpt-ad-1542284557157-0': ['/271925883/new_nv_sticky', [[300, 600], [300, 250]],  [768, 10000], 1],
+                            'div-gpt-ad-1542284557157-1': ['/271925883/new_nv_sticky', [[300, 600], [300, 250]],  [0, 768], 1],
+                            'div-gpt-ad-1553161776790-0': ['/271925883/new_nv_text1', [[300, 250]],  [768, 10000], 0],
+                            'div-gpt-ad-1553162476584-0': ['/271925883/new_nv_text2', [[300, 250]],  [768, 10000], 0],
+                            'div-gpt-ad-1553180830480-0': ['/271925883/v_lente2', [[728, 90]],  [768, 10000], 0],
+                            'div-gpt-ad-1553181043143-0': ['/271925883/v_lente2', [[728, 90]],  [768, 10000], 0],
+                            'div-gpt-ad-1564399246752-0': ['/271925883/new_nv_under_article',  [[300,250], [336,280], [468,60], [480,320], [600,300], [600,350], [728,90], [728,480]],  [768, 10000], 0],
+                            'div-gpt-ad-1564399246752-1': ['/271925883/new_nv_under_article',  [[300, 250], [336, 280]],  [0, 768], 1],
+                            'div-gpt-ad-1564147235034-0': ['/271925883/new_nv_catfish_mob', [[320,100],[320,50]],  [0, 768], 1],
+                            'div-gpt-ad-1569414816944-0': ['/271925883/top_mob', [[320,50], [320,100]],  [0, 768], 1],
+                            'div-gpt-ad-1569414816944-main-page': ['/271925883/top_mob_main_page', [[320,50], [320,100]],  [0, 768], 1],
+                            'div-gpt-ad-promo-1': ['/271925883/promo_1', [728,90],  [768, 10000], 0],
+                            'div-gpt-ad-promo-1-mob': ['/271925883/promo_1', [320,100],  [0,768], 1],
+                    };
+
+        var mobSlots = [];
+        var issetSlots = [];
+        var rendered_slots = 0;
+        function runCatfish(){
+            console.log('runCatfish');
+            if (iww <= 768) {//mobile
+                if(document.getElementById('div-gpt-ad-1564147235034-0-mob') !== null){
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/271925883/new_nv_catfish_mob', [[320,100],[320,50]], 'div-gpt-ad-1564147235034-0-mob')
+                            .addService(googletag.pubads())
+                        .setTargeting("article", "")
+.setTargeting("lang", "ukr")
+.setTargeting("razdel", "2292")
+.setTargeting("section", "2292")
+.setTargeting("url", "https://biz.nv.ua/ukr")
+.setTargeting("newnv", "1")
+.setTargeting("only_selfpromo", "0");
+                        googletag.display('div-gpt-ad-1564147235034-0-mob');
+                    });
+                }
+
+            }else{
+                if(document.getElementById('div-gpt-ad-desktop_catfish') !== null){
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/271925883/catfish_desktop', [[1200, 180]], 'div-gpt-ad-desktop_catfish')
+                            .addService(googletag.pubads())
+                        .setTargeting("article", "")
+.setTargeting("lang", "ukr")
+.setTargeting("razdel", "2292")
+.setTargeting("section", "2292")
+.setTargeting("url", "https://biz.nv.ua/ukr")
+.setTargeting("newnv", "1")
+.setTargeting("only_selfpromo", "0");
+                        googletag.display('div-gpt-ad-desktop_catfish');
+                    });
+                }
+
+            }
+
+
+        }
+        function renderFirstBanners() {
+            console.log('renderFirstBanners');
+            googletag.cmd.push(function() {
+
+                for (var i = 0 in dfpSlots) {
+                    if (iww >= dfpSlots[i][2][0] && iww < dfpSlots[i][2][1]) {
+                        var elemId = i;
+                        if (dfpSlots[i][2][0] <= 768 && iww <= 768) {
+                            elemId = dfpSlots[i][3] ? i + '-mob' : i;
+                            mobSlots.push(elemId);
+                        }
+                        if (document.getElementById(elemId) !== null && !issetSlots.includes(elemId)) {
+                            if(elemId != 'div-gpt-ad-desktop_catfish' && elemId != 'div-gpt-ad-1564147235034-0-mob'){
+                                issetSlots.push(elemId);
+                                googletag.defineSlot(dfpSlots[i][0], dfpSlots[i][1], ''+elemId+'')
+                                    .addService(googletag.pubads())
+                                    /*.setCollapseEmptyDiv(true)*/
+                                .setTargeting("article", "")
+.setTargeting("lang", "ukr")
+.setTargeting("razdel", "2292")
+.setTargeting("section", "2292")
+.setTargeting("url", "https://biz.nv.ua/ukr")
+.setTargeting("newnv", "1")
+.setTargeting("only_selfpromo", "0");
+                             }
+                        }else{
+                        }
+                    }
+                }
+                googletag.pubads().enableSingleRequest();
+                // googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+
+                if (document.getElementById("div-gpt-ad-1536827933373-0") !== null) {
+                    googletag.display('div-gpt-ad-1536827933373-0');
+                }else{
+                    googletag.display(issetSlots[0]);
+                }
+
+                googletag.pubads().addEventListener('slotRenderEnded', function(e) {
+                    var slotElementId = e.slot.getSlotElementId();
+                    iframe_for_links = $('#'+slotElementId+" iframe");
+                    iframe_for_links.contents().find('a').each(function () {
+                        if($(this).attr('target') != '_blank'){
+                            $(this).attr('target', '_blank');
+                        }
+                    });
+
+                                            "reklama"==$("#"+slotElementId).parent().attr("data-type")&&(_parent=$("#"+slotElementId).parent(),console.log("slot - "+slotElementId,e.size),$(_parent).height()<10?$(_parent).hide():(e.size&&e.size[0]&&e.size[1]&&(slot_width=e.size[0],slot_height=e.size[1],console.log(slotElementId,slot_width,slot_height)),_parent.attr("data-type","reklama-rendered"),iframe=$("#"+slotElementId).find("iframe"),iframe.on("load",function(e,t){}),slot_height>350?($(_parent).parents("[data-unit_type]").addClass("big_adv"),$(_parent).parent().css({height:"300px",margin:"5px auto"}),"unit17"===$(_parent).parents("[data-unit_type]").attr("data-unit_type")?($(_parent).parent().prevAll().addClass("big_adv"),$(_parent).parent().nextAll(":lt(2)").addClass("big_adv"),$(_parent).parent().next().next().after('<div class="atom_opinion col-md-3 col-sm-4 col-xs-12" data-atom_type="3"><div class="atom__wrapper atom__wrapper--transparent"></div></div>')):$(_parent).parent().siblings().addClass("big_adv"),$(_parent).parents(".row").find(".atom").last().remove(),$(_parent).parents(".row").find(".atom").last().remove(),$(_parent).parents(".container").find("[data-facebook-promo-for-remove]").first().remove(),$(_parent).parents(".container").find("[data-youtube-promo-for-remove]").css({opacity:0})):($(_parent).parents("[data-unit_type]").addClass("small_adv"),$(_parent).parent().prevAll().addClass("big_adv"),$(_parent).parent().css({height:"300px",margin:"5px auto"}),$(_parent).parents(".row").find(".atom").last().remove(),$(_parent).parents(".container").find("[data-facebook-promo-for-remove]").first().remove())));
+                    
+                    //Branding
+                    if(slotElementId == "div-gpt-ad-1536827933373-0" ) {
+                        if(!e.isEmpty){
+                            var body = document.getElementsByTagName('body');
+                            body[0].classList.add('branding');
+                            body[0].classList.remove('fixed-scrolled-header');
+                            fix_branding();
+                        }else{
+                            $('.sponsors_left_fixed').show();
+                        }
+
+                    }
+                    rendered_slots++;
+                });
+            });
+        }
+
+        function init_google_tag(){
+            if (dclhandler) { document.removeEventListener('DOMContentLoaded', init_google_tag); }
+
+
+
+            renderFirstBanners();
+
+            for (var i = 0 in mobSlots) {
+                googletag.cmd.push(function() { googletag.display(mobSlots[i]); });
+            }
+            $(window).on('resize', function () {
+                fix_branding();
+            })
+        }
+
+                    if(lazy_ad === false){
+                var dclhandler=!1,
+                    testURL="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+                    myInit={method:"HEAD",mode:"no-cors"},
+                    myRequest=new Request(testURL,myInit);fetch(myRequest).then(function(e){return e}).then(function(e){"loading"!==document.readyState?init_google_tag():(dclhandler=!0,document.addEventListener("DOMContentLoaded",init_google_tag))}).catch(function(e){/*var t=new Request("/images/not_start.jpg",{method:"HEAD",mode:"no-cors"});fetch(t),window.onload=function(){var e=document.createElement("img");e.src="/images/dis_blocker_big.jpg",document.getElementsByClassName("active_adv")[0].prepend(e)}*/});
+            }
+        
+        function fix_branding(){iww=window.innerWidth;var n=$('#div-gpt-ad-1536827933373-0 iframe');if(n.length>0){n.contents().find("#google_image_div").length>0&&n.contents().find("#google_image_div").css("width","100%");var i=n.contents().find(".img_ad").attr("src");0==n.contents().find(".b_img_wrap").length&&(n.contents().find(".img_ad").css({opacity:0}),n.contents().find(".img_ad").wrap('<div class="b_img_wrap"></div>')),iww>=1700?n.contents().find(".b_img_wrap").css({backgroundImage:"url("+i+")",backgroundPosition:" center top",backgroundSize:"100%",width:"100%",textAlign:"center"}):iww>=1201?n.contents().find(".b_img_wrap").css({backgroundImage:"url("+i+")",backgroundPosition:" center -10px",backgroundSize:"112%",width:"100%",textAlign:"center"}):iww>=1024?n.contents().find(".b_img_wrap").css({backgroundImage:"url("+i+")",backgroundPosition:" center top",backgroundSize:"100%",width:"100%",textAlign:"center"}):iww>=768?n.contents().find(".b_img_wrap").css({backgroundImage:"url("+i+")",backgroundPosition:" center top",backgroundSize:"83%",width:"100%",textAlign:"center"}):iww>=320&&n.contents().find(".b_img_wrap").css({backgroundImage:"url("+i+")",backgroundPosition:" center top",backgroundSize:"contain",height:"60px",width:"100%",textAlign:"center"})}}
+    </script><iframe src="https://002c5b8e99f360e94ee4ad9301c094d1.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html" style="visibility: hidden; display: none;"></iframe> <iframe id="gemius_hcconn_1625171837328_44093781" name="lsgetframe" width="0" height="0" scrolling="no" sandbox="allow-scripts allow-same-origin" style="display: none; visibility: hidden;" src="https://ls.hit.gemius.pl/lsget.html"></iframe><iframe src="javascript:void(0)" style="display:none!important"></iframe>
+  <div></div>
+ </body>
+</html>
