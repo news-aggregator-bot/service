@@ -25,12 +25,14 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     private NewsNoteNotificationRepository notificationRepository;
 
     @Override
-    public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note) {
+    public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key) {
         NewsNoteNotification notification = new NewsNoteNotification(reader, note);
         if (notificationRepository.existsById(notification.getId())) {
             return null;
         }
         log.info("news_note_notification:save_new:{}", notification);
+        notification.setLink(link);
+        notification.setLinkKey(key);
         return notificationRepository.save(notification);
     }
 
@@ -44,6 +46,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
                 if (notificationRepository.existsById(notification.getId())) {
                     return null;
                 }
+                notification.setLink(NewsNoteNotification.Link.CATEGORY);
                 return notification;
             })
             .filter(Objects::nonNull)
@@ -52,7 +55,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     }
 
     @Override
-    public List<NewsNoteNotification> findNew(Reader reader) {
+    public List<NewsNoteNotification> findAllNew(Reader reader) {
         return notificationRepository.findAllByIdReaderIdAndState(reader.getId(), NewsNoteNotification.State.NEW);
     }
 

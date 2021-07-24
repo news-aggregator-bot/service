@@ -1,6 +1,7 @@
 package bepicky.service.schedule;
 
 import bepicky.common.domain.dto.NewsNoteDto;
+import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
@@ -40,15 +41,12 @@ public class NewsNotifier {
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
 
-    @Value("${na.schedule.notify.limit}")
-    private int notifyLimit;
-
     @Transactional
     @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
     public void sync() {
         if (notifyEnabled) {
             readerService.findAllEnabled().stream()
-                .map(notificationService::findNew)
+                .map(notificationService::findAllNew)
                 .filter(notifications -> !notifications.isEmpty())
                 .forEach(this::notify);
         } else {
@@ -57,12 +55,9 @@ public class NewsNotifier {
     }
 
     private void notify(List<NewsNoteNotification> allNotifications) {
-        List<NewsNoteNotification> notifications = allNotifications.stream()
-            .limit(notifyLimit)
-            .collect(Collectors.toList());
-        Reader r = notifications.get(0).getReader();
-        List<NewsNoteDto> dtos = notifications.stream()
-            .map(n -> newsNoteDtoMapper.toDto(n.getNote(), r.getPrimaryLanguage()))
+        Reader r = allNotifications.get(0).getReader();
+        List<NewsNoteNotificationDto> dtos = allNotifications.stream()
+            .map(n -> newsNoteDtoMapper.toNotificationDto(n))
             .collect(Collectors.toList());
         NotifyNewsRequest request = new NotifyNewsRequest(
             r.getChatId(),
@@ -71,7 +66,7 @@ public class NewsNotifier {
         );
         try {
             botClient.notifyNews(request);
-            notifications.forEach(notificationService::sent);
+            allNotifications.forEach(notificationService::sent);
             log.info("notify:reader:{}:success", request.getChatId());
         } catch (Exception e) {
             log.error("notify:reader:{}:fail {}", request.getChatId(), e.getMessage());

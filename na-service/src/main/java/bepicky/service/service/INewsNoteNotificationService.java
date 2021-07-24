@@ -10,11 +10,11 @@ import java.util.Optional;
 
 public interface INewsNoteNotificationService {
 
-    NewsNoteNotification saveSingleNew(Reader reader, NewsNote note);
+    NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key);
 
     List<NewsNoteNotification> saveNew(Reader reader, Collection<NewsNote> notes);
 
-    List<NewsNoteNotification> findNew(Reader reader);
+    List<NewsNoteNotification> findAllNew(Reader reader);
 
     Optional<NewsNoteNotification> find(Reader reader, NewsNote note);
 

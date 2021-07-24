@@ -2,6 +2,7 @@ package bepicky.service.schedule;
 
 import bepicky.service.entity.Category;
 import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsNoteNotificationService;
@@ -17,6 +18,9 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static bepicky.service.entity.NewsNoteNotification.Link.CATEGORY;
+import static bepicky.service.entity.NewsNoteNotification.Link.TAG;
 
 @Component
 @Slf4j
@@ -52,7 +56,9 @@ public class NewsSynchroniser {
             .forEach((key, value) -> unfoldSourcePages(key)
                 .forEach(r -> notificationService.saveNew(r, value)));
         actualNotes
-            .forEach(n -> n.getTags().forEach(t -> t.getReaders().forEach(r -> notificationService.saveSingleNew(r, n))));
+            .forEach(n -> n.getTags()
+                .forEach(t -> t.getReaders()
+                    .forEach(r -> notificationService.saveSingleNew(r, n, TAG, t.getValue()))));
 
         latestNewsNoteId = actualNotes.stream()
             .mapToLong(NewsNote::getId)

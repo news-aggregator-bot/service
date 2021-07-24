@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -30,6 +31,13 @@ public class NewsNoteNotification {
     @Enumerated(EnumType.STRING)
     private State state;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Link link;
+
+    @Column(name = "link_key")
+    private String linkKey;
+
     @MapsId("readerId")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_reader", referencedColumnName = "id")
@@ -53,6 +61,10 @@ public class NewsNoteNotification {
 
     public enum State {
         NEW, SENT
+    }
+
+    public enum Link {
+        CATEGORY, TAG
     }
 
 }

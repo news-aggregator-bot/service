@@ -80,7 +80,7 @@ public class NewsNotifierTest {
         ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
 
         when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
-        when(notificationService.findNew(eq(r))).thenReturn(Arrays.asList(notification));
+        when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
 
         newsNotifier.sync();
 
