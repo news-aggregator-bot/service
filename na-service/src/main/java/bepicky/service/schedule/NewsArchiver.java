@@ -28,7 +28,6 @@ public class NewsArchiver {
     @Scheduled(cron = "${na.schedule.archive.cron:0 0 0 */1 * *}")
     public void archive() {
         log.info("news_note:archive:started");
-        newsNoteNotificationService.archiveOld();
         newsNoteService.archiveEarlierThan(months);
         log.info("news_note:archive:completed");
     }
