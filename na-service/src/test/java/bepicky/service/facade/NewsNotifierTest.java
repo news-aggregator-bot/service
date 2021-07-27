@@ -1,7 +1,7 @@
 package bepicky.service.facade;
 
 import bepicky.common.domain.dto.CategoryDto;
-import bepicky.common.domain.dto.NewsNoteDto;
+import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.common.domain.request.NotifyNewsRequest;
 import bepicky.service.YamlPropertySourceFactory;
@@ -38,6 +38,7 @@ import java.util.Arrays;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -75,7 +76,7 @@ public class NewsNotifierTest {
 
         NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
         Reader r = reader(1L, language);
-        NewsNoteNotification notification = new NewsNoteNotification(r, note);
+        NewsNoteNotification notification = newNoteNotification(note, r);
 
         ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
 
@@ -92,13 +93,15 @@ public class NewsNotifierTest {
         assertEquals(1L, actualRequest.getChatId());
         assertEquals(language.getLang(), actualRequest.getLang());
 
-        assertEquals(1, actualRequest.getNotes().size());
-        NewsNoteDto actualNewsNoteRequest = actualRequest.getNotes().get(0);
-        assertEquals(note.getUrl(), actualNewsNoteRequest.getUrl());
-        assertEquals(note.getTitle(), actualNewsNoteRequest.getTitle());
-        assertEquals(note.getAuthor(), actualNewsNoteRequest.getAuthor());
+        assertEquals(1, actualRequest.getNotifications().size());
+        NewsNoteNotificationDto actualNotification = actualRequest.getNotifications().get(0);
+        assertEquals(note.getUrl(), actualNotification.getUrl());
+        assertEquals(note.getTitle(), actualNotification.getTitle());
+        assertEquals(note.getAuthor(), actualNotification.getAuthor());
+        assertEquals(NewsNoteNotificationDto.LinkDto.CATEGORY, actualNotification.getLink());
+        assertNull(actualNotification.getLinkKey());
 
-        SourcePageDto actualSp = actualNewsNoteRequest.getSourcePages().get(0);
+        SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
         assertEquals(sourcePage.getUrl(), actualSp.getUrl());
         assertEquals(sourcePage.getName(), actualSp.getName());
 
@@ -108,6 +111,69 @@ public class NewsNotifierTest {
         assertEquals(regionUSA.getName(), actualSpCategory.getName());
         assertEquals(regionUSA.getType().name(), actualSpCategory.getType());
         assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
+    }
+
+    @Test
+    public void sync_TagNewsNoteNotification_ShouldSendCorrectNotifyNewsRequest() {
+
+        Language language = defaultLanguage();
+        Localisation usaLocalisation = defaultLocalisation(language);
+        Category regionUSA = regionCategory(usaLocalisation);
+        SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
+
+        sourcePage.setCategories(Arrays.asList(regionUSA));
+        regionUSA.setSourcePages(Arrays.asList(sourcePage));
+
+        NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
+        Reader r = reader(1L, language);
+        NewsNoteNotification notification = newNoteNotification(note, r, NewsNoteNotification.Link.TAG, "key");
+
+        ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
+
+        when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
+        when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
+
+        newsNotifier.sync();
+
+
+        verify(botClient).notifyNews(notifyNewsAc.capture());
+
+        NotifyNewsRequest actualRequest = notifyNewsAc.getValue();
+
+        assertEquals(1L, actualRequest.getChatId());
+        assertEquals(language.getLang(), actualRequest.getLang());
+
+        assertEquals(1, actualRequest.getNotifications().size());
+        NewsNoteNotificationDto actualNotification = actualRequest.getNotifications().get(0);
+        assertEquals(note.getUrl(), actualNotification.getUrl());
+        assertEquals(note.getTitle(), actualNotification.getTitle());
+        assertEquals(note.getAuthor(), actualNotification.getAuthor());
+        assertEquals(NewsNoteNotificationDto.LinkDto.TAG, actualNotification.getLink());
+        assertEquals("key", actualNotification.getLinkKey());
+
+        SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
+        assertEquals(sourcePage.getUrl(), actualSp.getUrl());
+        assertEquals(sourcePage.getName(), actualSp.getName());
+
+        assertEquals(1, actualSp.getCategories().size());
+        CategoryDto actualSpCategory = actualSp.getCategories().get(0);
+
+        assertEquals(regionUSA.getName(), actualSpCategory.getName());
+        assertEquals(regionUSA.getType().name(), actualSpCategory.getType());
+        assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
+    }
+
+    private NewsNoteNotification newNoteNotification(NewsNote note, Reader r) {
+        NewsNoteNotification nnn = new NewsNoteNotification(r, note);
+        nnn.setLink(NewsNoteNotification.Link.CATEGORY);
+        return nnn;
+    }
+
+    private NewsNoteNotification newNoteNotification(NewsNote note, Reader r, NewsNoteNotification.Link link, String key) {
+        NewsNoteNotification nnn = new NewsNoteNotification(r, note);
+        nnn.setLink(link);
+        nnn.setLinkKey(key);
+        return nnn;
     }
 
     private Reader reader(Long id, Language language) {
