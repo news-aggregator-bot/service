@@ -2,6 +2,7 @@ package bepicky.service.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -15,7 +16,10 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
+
+import java.util.Date;
 
 import static bepicky.service.entity.NewsNoteNotification.State.NEW;
 
@@ -52,6 +56,10 @@ public class NewsNoteNotification {
     @ToString.Exclude
     private NewsNote note;
 
+    @Column(name = "creation_date", nullable = false)
+    @EqualsAndHashCode.Exclude
+    private Date creationDate;
+
     public NewsNoteNotification(Reader reader, NewsNote note) {
         this.id = new NewsNoteNotificationId(reader.getId(), note.getId());
         this.reader = reader;
@@ -67,4 +75,10 @@ public class NewsNoteNotification {
         CATEGORY, TAG
     }
 
+    @PrePersist
+    protected void onCreate() {
+        if (this.creationDate == null) {
+            this.creationDate = new Date();
+        }
+    }
 }

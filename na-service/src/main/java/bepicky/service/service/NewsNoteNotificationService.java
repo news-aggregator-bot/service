@@ -10,10 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,18 +25,18 @@ import java.util.stream.Collectors;
 public class NewsNoteNotificationService implements INewsNoteNotificationService {
 
     @Autowired
-    private NewsNoteNotificationRepository notificationRepository;
+    private NewsNoteNotificationRepository repository;
 
     @Override
     public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key) {
         NewsNoteNotification notification = new NewsNoteNotification(reader, note);
-        if (notificationRepository.existsById(notification.getId())) {
+        if (repository.existsById(notification.getId())) {
             return null;
         }
         log.info("news_note_notification:save_new:{}", notification);
         notification.setLink(link);
         notification.setLinkKey(key);
-        return notificationRepository.save(notification);
+        return repository.save(notification);
     }
 
     @Override
@@ -43,7 +46,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
         List<NewsNoteNotification> newNoteNotifications = notes.stream()
             .map(n -> {
                 NewsNoteNotification notification = new NewsNoteNotification(reader, n);
-                if (notificationRepository.existsById(notification.getId())) {
+                if (repository.existsById(notification.getId())) {
                     return null;
                 }
                 notification.setLink(NewsNoteNotification.Link.CATEGORY);
@@ -51,12 +54,12 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
             })
             .filter(Objects::nonNull)
             .collect(Collectors.toList());
-        return notificationRepository.saveAll(newNoteNotifications);
+        return repository.saveAll(newNoteNotifications);
     }
 
     @Override
     public List<NewsNoteNotification> findAllNew(Reader reader) {
-        return notificationRepository.findAllByIdReaderIdAndState(reader.getId(), NewsNoteNotification.State.NEW);
+        return repository.findAllByIdReaderIdAndState(reader.getId(), NewsNoteNotification.State.NEW);
     }
 
     @Override
@@ -64,7 +67,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
         Reader reader, NewsNote note
     ) {
         NewsNoteNotificationId id = id(reader, note);
-        return notificationRepository.findById(id);
+        return repository.findById(id);
     }
 
     private NewsNoteNotificationId id(Reader reader, NewsNote note) {
@@ -73,12 +76,21 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
 
     @Override
     public boolean exists(Reader reader, NewsNote note) {
-        return notificationRepository.existsById(id(reader, note));
+        return repository.existsById(id(reader, note));
     }
 
     @Override
     public NewsNoteNotification sent(NewsNoteNotification notification) {
         notification.setState(NewsNoteNotification.State.SENT);
-        return notificationRepository.save(notification);
+        return repository.save(notification);
+    }
+
+    @Override
+    public void archiveOld() {
+        Calendar twoDaysAgo = new GregorianCalendar();
+        twoDaysAgo.add(Calendar.DAY_OF_MONTH, -2);
+        Set<NewsNoteNotification> oldNotifications = repository.findByCreationDateBefore(twoDaysAgo.getTime());
+        log.info("news_note_notification:archive:{}", oldNotifications.size());
+        repository.deleteAll(oldNotifications);
     }
 }

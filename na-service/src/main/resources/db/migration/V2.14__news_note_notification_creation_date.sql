@@ -1,0 +1,1 @@
+alter table news_note_notification add column `creation_date` TIMESTAMP not null default CURRENT_TIMESTAMP;

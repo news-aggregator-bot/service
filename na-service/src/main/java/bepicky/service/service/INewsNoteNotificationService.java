@@ -22,4 +22,6 @@ public interface INewsNoteNotificationService {
 
     NewsNoteNotification sent(NewsNoteNotification notification);
 
+    void archiveOld();
+
 }
