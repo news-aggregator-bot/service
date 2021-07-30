@@ -21,7 +21,7 @@ public class ValueNormalisationService implements IValueNormalisationService {
         if (StringUtils.isBlank(val)) {
             return "";
         }
-        return val.chars().filter(c -> Character.isAlphabetic(c) || Character.isDigit(c))
+        return val.chars().filter(c -> Character.isAlphabetic(c) || Character.isDigit(c) || Character.isWhitespace(c))
             .map(Character::toLowerCase)
             .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
             .toString();

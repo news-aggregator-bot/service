@@ -16,27 +16,27 @@ public class ValueNormalisationServiceTest {
         return Stream.of(
             Arguments.of(
                 "Соціопат і невдаха, якого зруйнував батько. Що про Дональда Трампа написала його племінниця?",
-                "соціопатіневдахаякогозруйнувавбатькощопродональдатрампанаписалайогоплемінниця"
+                "соціопат і невдаха якого зруйнував батько що про дональда трампа написала його племінниця"
             ),
             Arguments.of(
                 "Про Зеленського, олігархів та коронавірус: інтерв'ю з президенткою Швейцарії Симонеттою Сомаругою",
-                "прозеленськогоолігархівтакоронавірусінтервюзпрезиденткоюшвейцаріїсимонеттоюсомаругою"
+                "про зеленського олігархів та коронавірус інтервю з президенткою швейцарії симонеттою сомаругою"
             ),
             Arguments.of(
                 "Report: MLB season not in jeopardy yet",
-                "reportmlbseasonnotinjeopardyyet"
+                "report mlb season not in jeopardy yet"
             ),
             Arguments.of(
                 "Mortgages are wild. Tame yours with rates as low as 2.47% APR (15yr)",
-                "mortgagesarewildtameyourswithratesaslowas247apr15yr"
+                "mortgages are wild tame yours with rates as low as 247 apr 15yr"
             ),
             Arguments.of(
                 "3rd Lockdown In France? Bars Restaurants Fear The Worst Amid Vaccination Controversy",
-                "3rdlockdowninfrancebarsrestaurantsfeartheworstamidvaccinationcontroversy"
+                "3rd lockdown in france bars restaurants fear the worst amid vaccination controversy"
             ),
             Arguments.of(
                 "How To Avoid Seeing The Business World Through 'Tulip-Colored Glasses'",
-                "howtoavoidseeingthebusinessworldthroughtulipcoloredglasses"
+                "how to avoid seeing the business world through tulipcolored glasses"
             ),
             Arguments.of(null, ""),
             Arguments.of("''''''''''", ""),
