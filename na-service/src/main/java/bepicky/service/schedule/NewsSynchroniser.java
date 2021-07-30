@@ -2,7 +2,6 @@ package bepicky.service.schedule;
 
 import bepicky.service.entity.Category;
 import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsNoteNotificationService;
@@ -19,7 +18,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static bepicky.service.entity.NewsNoteNotification.Link.CATEGORY;
 import static bepicky.service.entity.NewsNoteNotification.Link.TAG;
 
 @Component
@@ -27,10 +25,10 @@ import static bepicky.service.entity.NewsNoteNotification.Link.TAG;
 public class NewsSynchroniser {
 
     @Autowired
-    private INewsNoteService notesService;
+    private INewsNoteService notes;
 
     @Autowired
-    private INewsNoteNotificationService notificationService;
+    private INewsNoteNotificationService notifications;
 
     @Value("${na.schedule.sync.enabled}")
     private boolean syncEnabled;
@@ -44,8 +42,8 @@ public class NewsSynchroniser {
             return;
         }
         Set<NewsNote> actualNotes = latestNewsNoteId != 0 ?
-            notesService.getAllAfter(latestNewsNoteId) :
-            notesService.getTodayNotes();
+            notes.getAllAfter(latestNewsNoteId) :
+            notes.getTodayNotes();
 
         if (actualNotes.isEmpty()) {
             log.debug("news:sync:finished:empty");
@@ -54,11 +52,13 @@ public class NewsSynchroniser {
         actualNotes.stream()
             .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
             .forEach((key, value) -> unfoldSourcePages(key)
-                .forEach(r -> notificationService.saveNew(r, value)));
+                .forEach(r -> notifications.saveNew(r, value)));
         actualNotes
             .forEach(n -> n.getTags()
                 .forEach(t -> t.getReaders()
-                    .forEach(r -> notificationService.saveSingleNew(r, n, TAG, t.getValue()))));
+                    .stream()
+                    .filter(r -> atLeastOneInCommon(n.getLanguages(), r.getLanguages()))
+                    .forEach(r -> notifications.saveSingleNew(r, n, TAG, t.getValue()))));
 
         latestNewsNoteId = actualNotes.stream()
             .mapToLong(NewsNote::getId)

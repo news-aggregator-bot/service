@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
@@ -60,6 +61,12 @@ public class NewsNote extends DatedEntity {
 
     public void addSourcePage(SourcePage page) {
         sourcePages.add(page);
+    }
+
+    public Set<Language> getLanguages() {
+        return sourcePages.stream()
+            .flatMap(sp -> sp.getLanguages().stream())
+            .collect(Collectors.toSet());
     }
 
 }
