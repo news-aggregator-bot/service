@@ -121,6 +121,10 @@ public class NewsNoteService implements INewsNoteService {
             return repository.findByNormalisedTitleContainsOrderByCreationDateDesc(normalisedKey, pageable);
         }
         List<Long> noteIds = newsNoteNativeRepository.find(keys);
+        if (noteIds.isEmpty()) {
+            return Page.empty();
+        }
+
         List<Long> pagedNoteIds = Lists.partition(noteIds, pageable.getPageSize())
             .get(pageable.getPageNumber());
         List<NewsNote> notes = repository.findAllById(pagedNoteIds);
