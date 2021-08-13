@@ -1,6 +1,5 @@
 package bepicky.service.schedule;
 
-import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,6 @@ public class NewsArchiver {
 
     @Autowired
     private INewsNoteService newsNoteService;
-
-    @Autowired
-    private INewsNoteNotificationService newsNoteNotificationService;
 
     @Value("${na.schedule.archive.months}")
     private int months;

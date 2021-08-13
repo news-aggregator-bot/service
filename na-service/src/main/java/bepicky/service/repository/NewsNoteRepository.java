@@ -31,5 +31,7 @@ public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
 
     Page<NewsNote> findByNormalisedTitleContainsOrderByCreationDateDesc(String key, Pageable pageable);
 
+    Page<NewsNote> findByNormalisedTitleInOrderByCreationDateDesc(Collection<String> keys, Pageable pageable);
+
     List<NewsNote> findAllByIdIn(Collection<Long> ids);
 }

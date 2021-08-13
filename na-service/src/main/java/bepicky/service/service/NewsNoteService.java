@@ -1,16 +1,20 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.NewsNote;
+import bepicky.service.repository.NewsNoteNativeRepository;
 import bepicky.service.repository.NewsNoteRepository;
 import bepicky.service.service.util.IValueNormalisationService;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
@@ -28,6 +32,9 @@ public class NewsNoteService implements INewsNoteService {
 
     @Autowired
     private NewsNoteRepository repository;
+
+    @Autowired
+    private NewsNoteNativeRepository newsNoteNativeRepository;
 
     @Autowired
     private IValueNormalisationService normalisationService;
@@ -109,7 +116,15 @@ public class NewsNoteService implements INewsNoteService {
         if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
             return Page.empty();
         }
-        return repository.findByNormalisedTitleContainsOrderByCreationDateDesc(normalisedKey, pageable);
+        Set<String> keys = Set.of(normalisedKey.split(" "));
+        if (keys.size() < 2) {
+            return repository.findByNormalisedTitleContainsOrderByCreationDateDesc(normalisedKey, pageable);
+        }
+        List<Long> noteIds = newsNoteNativeRepository.find(keys);
+        List<Long> pagedNoteIds = Lists.partition(noteIds, pageable.getPageSize())
+            .get(pageable.getPageNumber());
+        List<NewsNote> notes = repository.findAllById(pagedNoteIds);
+        return new PageImpl<>(notes, pageable, noteIds.size());
     }
 
     @Override
