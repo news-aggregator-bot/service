@@ -26,6 +26,5 @@
 
     <modules>
         <module>na-service</module>
-        <module>source-service</module>
     </modules>
 </project>
