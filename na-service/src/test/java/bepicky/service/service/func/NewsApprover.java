@@ -13,9 +13,7 @@ import bepicky.service.service.INewsService;
 import bepicky.service.service.ISourcePageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,10 +28,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.annotation.PostConstruct;
 import java.util.Set;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
-@RunWith(SpringRunner.class)
 @Slf4j
 @ActiveProfiles("it")
 //@Ignore

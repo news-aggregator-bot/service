@@ -9,8 +9,7 @@ import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 import java.util.Set;
@@ -32,7 +30,7 @@ import static bepicky.service.entity.TestEntityManager.reader;
 import static bepicky.service.entity.TestEntityManager.region;
 import static bepicky.service.entity.TestEntityManager.source;
 import static bepicky.service.entity.TestEntityManager.ua;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anySet;
 import static org.mockito.ArgumentMatchers.eq;
@@ -41,7 +39,6 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(SpringRunner.class)
 @ActiveProfiles("it")
 public class NewsSynchroniserTest {
 

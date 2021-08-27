@@ -1,7 +1,5 @@
 package bepicky.service.service.func;
 
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
 import lombok.Builder;
 import org.apache.commons.io.FilenameUtils;

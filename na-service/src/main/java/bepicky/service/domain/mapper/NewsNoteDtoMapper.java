@@ -36,6 +36,7 @@ public class NewsNoteDtoMapper {
     public NewsNoteNotificationDto toNotificationDto(NewsNoteNotification notification) {
         NewsNoteNotificationDto dto = new NewsNoteNotificationDto();
         NewsNote note = notification.getNote();
+        dto.setNoteId(note.getId());
         dto.setUrl(note.getUrl());
         dto.setTitle(note.getTitle());
         dto.setAuthor(note.getAuthor());

@@ -7,22 +7,20 @@ import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @SpringBootTest(classes = {NAService.class, ReaderFunctionalFacadeTest.FacadeTestConfiguration.class})
-@RunWith(SpringRunner.class)
 @ActiveProfiles("it")
 @Slf4j
 public class ReaderFunctionalFacadeTest {
@@ -85,12 +83,15 @@ public class ReaderFunctionalFacadeTest {
         assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void create_NoChatIdReaderRequest_ShouldThrowAnException() {
         ReaderRequest rr = new ReaderRequest();
         rr.setPlatform(Platform.TELEGRAM.name());
 
-        functionalFacade.create(rr);
+        Assertions.assertThrows(
+            IllegalArgumentException.class,
+            () -> functionalFacade.create(rr)
+        );
     }
 
     @Configuration

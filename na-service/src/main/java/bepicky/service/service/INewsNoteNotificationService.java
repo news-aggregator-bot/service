@@ -20,7 +20,7 @@ public interface INewsNoteNotificationService {
 
     boolean exists(Reader reader, NewsNote note);
 
-    NewsNoteNotification sent(NewsNoteNotification notification);
+    NewsNoteNotification sent(Long chatId, Long noteId);
 
     void archiveOld();
 

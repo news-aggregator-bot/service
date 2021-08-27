@@ -3,8 +3,8 @@ package bepicky.service;
 import bepicky.service.entity.SourcePage;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,14 +19,14 @@ public abstract class FuncSupport {
 
     protected static WireMockServer wireMockServer = new WireMockServer();
 
-    @BeforeClass
+    @BeforeAll
     public static void startWireMock() {
         wireMockServer.start();
         WireMock.configureFor("localhost", 8080);
     }
 
 
-    @AfterClass
+    @AfterAll
     public static void stopWireMock() {
         wireMockServer.stop();
     }

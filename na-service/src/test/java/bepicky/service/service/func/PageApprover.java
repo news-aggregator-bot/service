@@ -3,42 +3,33 @@ package bepicky.service.service.func;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.configuration.WebPageReaderConfiguration;
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceException;
 import bepicky.service.service.ISourcePageService;
-import bepicky.service.web.reader.JsoupWebPageReader;
 import bepicky.service.web.reader.WebPageReader;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Function;
-import java.util.function.ToIntFunction;
 
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
-@RunWith(SpringRunner.class)
 @Slf4j
 @ActiveProfiles({"it", "browser"})
-@Ignore
+@Disabled
 public class PageApprover {
 
     @Autowired
@@ -55,7 +46,7 @@ public class PageApprover {
     private PageContentContext pageContentContext;
 
 
-    @Before
+    @BeforeEach
     public void setUpData() {
         dataIngestor = FuncSourceDataIngestor.builder()
             .sourceIS(sourceIS)

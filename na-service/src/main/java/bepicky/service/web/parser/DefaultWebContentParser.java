@@ -94,8 +94,8 @@ public class DefaultWebContentParser implements WebContentParser {
                     .findFirst()
                     .orElse(Optional.empty())
                     .ifPresent(tp -> datas.add(new PageParsedData(
-                        tp.getT1(),
-                        tp.getT2(),
+                        tp.getKey(),
+                        tp.getValue(),
                         getAuthor(authorTag, main)
                     )));
             }

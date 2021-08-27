@@ -7,9 +7,8 @@ import bepicky.service.web.parser.JsoupEvaluatorFactory;
 import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import reactor.util.function.Tuple2;
-import reactor.util.function.Tuples;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -20,7 +19,7 @@ public class OnlyLinkDocumentTagParser implements DocumentTagParser {
     private JsoupEvaluatorFactory evaluatorFactory;
 
     @Override
-    public Optional<Tuple2<String, String>> parse(
+    public Optional<Map.Entry<String, String>> parse(
         Element main, ContentBlock block, Function<Element, String> href
     ) {
         if (!matches(block)) {
@@ -28,7 +27,7 @@ public class OnlyLinkDocumentTagParser implements DocumentTagParser {
         }
         ContentTag linkTag = block.findByType(ContentTagType.LINK);
         Element linkEl = main.selectFirst(evaluatorFactory.get(linkTag));
-        return linkEl == null ? Optional.empty() : Optional.of(Tuples.of(linkEl.text(), href.apply(linkEl)));
+        return linkEl == null ? Optional.empty() : Optional.of(Map.entry(linkEl.text(), href.apply(linkEl)));
     }
 
     @Override

@@ -16,9 +16,7 @@ import bepicky.service.service.func.mismatch.ResultMismatchAnalyzer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.util.Pair;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,11 +34,10 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.fail;
 
 @SpringBootTest(classes = {NAService.class, NewsServiceFuncTest.FuncTestConfiguration.class})
-@RunWith(SpringRunner.class)
 @ActiveProfiles("it")
 @Slf4j
 public class NewsServiceFuncTest extends FuncSupport {

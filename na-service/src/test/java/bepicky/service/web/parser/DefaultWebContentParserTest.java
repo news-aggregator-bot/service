@@ -9,8 +9,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.jsoup.nodes.Document;
 import org.jsoup.parser.Parser;
-import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
 @SpringJUnitConfig
 @TestInstance(PER_CLASS)
-@Ignore
+@Disabled
 public class DefaultWebContentParserTest {
 
     @Autowired

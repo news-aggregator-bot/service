@@ -9,9 +9,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Evaluator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import reactor.util.function.Tuple2;
-import reactor.util.function.Tuples;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -22,7 +21,7 @@ public class TitleLinkNextToTagDocumentTagParser implements DocumentTagParser {
     private JsoupEvaluatorFactory evaluatorFactory;
 
     @Override
-    public Optional<Tuple2<String, String>> parse(
+    public Optional<Map.Entry<String, String>> parse(
         Element main, ContentBlock block, Function<Element, String> href
     ) {
         if (!matches(block)) {
@@ -43,7 +42,7 @@ public class TitleLinkNextToTagDocumentTagParser implements DocumentTagParser {
         if (StringUtils.isBlank(link)) {
             return Optional.empty();
         }
-        return Optional.of(Tuples.of(titleEl.text(), link));
+        return Optional.of(Map.entry(titleEl.text(), link));
     }
 
     @Override

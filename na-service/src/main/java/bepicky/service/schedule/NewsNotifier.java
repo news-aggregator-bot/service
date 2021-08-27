@@ -1,12 +1,9 @@
 package bepicky.service.schedule;
 
-import bepicky.common.domain.dto.NewsNoteDto;
-import bepicky.common.domain.dto.NewsNoteNotificationDto;
-import bepicky.common.domain.request.NotifyNewsRequest;
-import bepicky.service.client.NaBotClient;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
 import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
+import bepicky.service.message.nats.NatsNewsNotificationRequestProducer;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +15,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -27,7 +23,7 @@ import java.util.stream.Collectors;
 public class NewsNotifier {
 
     @Autowired
-    private NaBotClient botClient;
+    private NatsNewsNotificationRequestProducer requestProducer;
 
     @Autowired
     private IReaderService readerService;
@@ -56,20 +52,9 @@ public class NewsNotifier {
 
     private void notify(List<NewsNoteNotification> allNotifications) {
         Reader r = allNotifications.get(0).getReader();
-        List<NewsNoteNotificationDto> dtos = allNotifications.stream()
+        allNotifications.stream()
+            .limit(5)
             .map(n -> newsNoteDtoMapper.toNotificationDto(n))
-            .collect(Collectors.toList());
-        NotifyNewsRequest request = new NotifyNewsRequest(
-            r.getChatId(),
-            r.getPrimaryLanguage().getLang(),
-            dtos
-        );
-        try {
-            botClient.notifyNews(request);
-            allNotifications.forEach(notificationService::sent);
-            log.info("notify:reader:{}:success", request.getChatId());
-        } catch (Exception e) {
-            log.error("notify:reader:{}:fail {}", request.getChatId(), e.getMessage());
-        }
+            .forEach(dto -> requestProducer.sendNotification(r.getChatId(), r.getPrimaryLanguage().getLang(), dto));
     }
 }

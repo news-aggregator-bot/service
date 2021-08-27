@@ -3,7 +3,7 @@ package bepicky.service.facade;
 import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.dto.SourcePageDto;
-import bepicky.common.domain.request.NotifyNewsRequest;
+import bepicky.common.domain.request.NewsNotificationRequest;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.client.NaBotClient;
 import bepicky.service.configuration.WebConfiguration;
@@ -23,8 +23,7 @@ import bepicky.service.schedule.NewsNotifier;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -32,18 +31,16 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(SpringRunner.class)
 public class NewsNotifierTest {
 
     private static final String TEST_URL = "url";
@@ -78,7 +75,8 @@ public class NewsNotifierTest {
         Reader r = reader(1L, language);
         NewsNoteNotification notification = newNoteNotification(note, r);
 
-        ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
+        ArgumentCaptor<NewsNotificationRequest> notifyNewsAc = ArgumentCaptor.forClass(
+            NewsNotificationRequest.class);
 
         when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
         when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
@@ -88,13 +86,13 @@ public class NewsNotifierTest {
 
         verify(botClient).notifyNews(notifyNewsAc.capture());
 
-        NotifyNewsRequest actualRequest = notifyNewsAc.getValue();
+        NewsNotificationRequest actualRequest = notifyNewsAc.getValue();
 
-        assertEquals(1L, actualRequest.getChatId());
+        Long chatId = 1L;
+        assertEquals(chatId, actualRequest.getChatId());
         assertEquals(language.getLang(), actualRequest.getLang());
 
-        assertEquals(1, actualRequest.getNotifications().size());
-        NewsNoteNotificationDto actualNotification = actualRequest.getNotifications().get(0);
+        NewsNoteNotificationDto actualNotification = actualRequest.getNotification();
         assertEquals(note.getUrl(), actualNotification.getUrl());
         assertEquals(note.getTitle(), actualNotification.getTitle());
         assertEquals(note.getAuthor(), actualNotification.getAuthor());
@@ -128,7 +126,8 @@ public class NewsNotifierTest {
         Reader r = reader(1L, language);
         NewsNoteNotification notification = newNoteNotification(note, r, NewsNoteNotification.Link.TAG, "key");
 
-        ArgumentCaptor<NotifyNewsRequest> notifyNewsAc = ArgumentCaptor.forClass(NotifyNewsRequest.class);
+        ArgumentCaptor<NewsNotificationRequest> notifyNewsAc = ArgumentCaptor.forClass(
+            NewsNotificationRequest.class);
 
         when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
         when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
@@ -138,13 +137,13 @@ public class NewsNotifierTest {
 
         verify(botClient).notifyNews(notifyNewsAc.capture());
 
-        NotifyNewsRequest actualRequest = notifyNewsAc.getValue();
+        NewsNotificationRequest actualRequest = notifyNewsAc.getValue();
 
-        assertEquals(1L, actualRequest.getChatId());
+        Long chatId = 1L;
+        assertEquals(chatId, actualRequest.getChatId());
         assertEquals(language.getLang(), actualRequest.getLang());
 
-        assertEquals(1, actualRequest.getNotifications().size());
-        NewsNoteNotificationDto actualNotification = actualRequest.getNotifications().get(0);
+        NewsNoteNotificationDto actualNotification = actualRequest.getNotification();
         assertEquals(note.getUrl(), actualNotification.getUrl());
         assertEquals(note.getTitle(), actualNotification.getTitle());
         assertEquals(note.getAuthor(), actualNotification.getAuthor());

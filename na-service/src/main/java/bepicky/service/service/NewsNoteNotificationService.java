@@ -27,6 +27,12 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     @Autowired
     private NewsNoteNotificationRepository repository;
 
+    @Autowired
+    private IReaderService readerService;
+
+    @Autowired
+    private INewsNoteService noteService;
+
     @Override
     public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key) {
         NewsNoteNotification notification = new NewsNoteNotification(reader, note);
@@ -80,7 +86,15 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     }
 
     @Override
-    public NewsNoteNotification sent(NewsNoteNotification notification) {
+    public NewsNoteNotification sent(Long chatId, Long noteId) {
+        Reader r = readerService.findByChatId(chatId)
+            .orElseThrow(() -> new IllegalArgumentException("reader:404:" + chatId));
+        NewsNote n = noteService.find(noteId)
+            .orElseThrow(() -> new IllegalArgumentException("newnote:404:" + noteId));
+
+        NewsNoteNotification notification = find(r, n)
+            .orElseThrow(() -> new IllegalArgumentException("newnote:notification:404: reader id " + r.getId() + ": note id " + n
+            .getId()));
         notification.setState(NewsNoteNotification.State.SENT);
         return repository.save(notification);
     }
