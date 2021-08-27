@@ -43,11 +43,11 @@ public class DefaultWebContentParser implements WebContentParser {
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
-            log.info(
-                "webcontentparser:{} :{}",
-                page.getUrl(),
-                webPageReader.getClass().getSimpleName()
-            );
+//            log.info(
+//                "webcontentparser:{} :{}",
+//                page.getUrl(),
+//                webPageReader.getClass().getSimpleName()
+//            );
             Optional<Document> doc = readDocument(page, webPageReader);
             if (doc.isPresent()) {
                 Set<PageParsedData> parsedData = page.getContentBlocks()

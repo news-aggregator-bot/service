@@ -38,13 +38,15 @@ public class NewsNotifier {
     private boolean notifyEnabled;
 
     @Transactional
-    @Scheduled(cron = "${na.schedule.notify.cron:0 */2 * * * *}")
+    @Scheduled(initialDelay = 5000, fixedDelay = 60000)
     public void sync() {
         if (notifyEnabled) {
+            log.info("notify:started");
             readerService.findAllEnabled().stream()
                 .map(notificationService::findAllNew)
                 .filter(notifications -> !notifications.isEmpty())
                 .forEach(this::notify);
+            log.info("notify:completed");
         } else {
             log.warn("notify:disabled");
         }
