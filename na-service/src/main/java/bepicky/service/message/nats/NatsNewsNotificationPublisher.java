@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 @Slf4j
-public class NatsNewsNotificationRequestProducer {
+public class NatsNewsNotificationPublisher {
 
     @Autowired
     private Connection natsConnection;
@@ -35,11 +35,12 @@ public class NatsNewsNotificationRequestProducer {
         );
         try {
 //            JetStream js = natsConnection.jetStream();
+            String body = om.writeValueAsString(request);
             natsConnection.publish(
                 newsNotificationTopic,
-                om.writeValueAsString(request)
-                    .getBytes(StandardCharsets.UTF_8)
+                body.getBytes(StandardCharsets.UTF_8)
             );
+            log.info("newsnote:notification:{}", body);
         } catch (IOException e) {
             log.error("newsnote:notification:failed " + e.getMessage());
         }
