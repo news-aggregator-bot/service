@@ -1,6 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.Reader;
+import bepicky.service.message.nats.TextMessagePublisher;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,16 @@ public class ReaderService implements IReaderService {
     @Autowired
     private ReaderRepository readerRepository;
 
+    @Autowired
+    private TextMessagePublisher textMessagePublisher;
+
     @Value("${na.reader.tag.limit}")
     private Long tagLimit;
 
     @Override
     public Reader save(Reader reader) {
         if (reader.getChatId() == null) {
+            textMessagePublisher.publish("FAILED:reader:save:no chat id " + reader.toString());
             throw new IllegalArgumentException(reader.toString() + " no chat id");
         }
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {

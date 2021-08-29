@@ -3,7 +3,7 @@ package bepicky.service.schedule;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
 import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
-import bepicky.service.message.nats.NatsNewsNotificationPublisher;
+import bepicky.service.message.nats.NewsNotificationPublisher;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ import java.util.List;
 public class NewsNotifier {
 
     @Autowired
-    private NatsNewsNotificationPublisher requestProducer;
+    private NewsNotificationPublisher requestProducer;
 
     @Autowired
     private IReaderService readerService;

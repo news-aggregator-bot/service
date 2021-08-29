@@ -1,6 +1,6 @@
 package bepicky.service.message.nats;
 
-import bepicky.common.domain.request.NewsNotificationSuccessMessage;
+import bepicky.common.msg.NewsNotificationSuccessMessage;
 import bepicky.service.service.INewsNoteNotificationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.nats.client.Connection;

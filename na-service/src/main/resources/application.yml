@@ -59,6 +59,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 10000
 topics:
+  message:
+    text: msg.txt
   news:
     notification:
       new: newsnote.notification

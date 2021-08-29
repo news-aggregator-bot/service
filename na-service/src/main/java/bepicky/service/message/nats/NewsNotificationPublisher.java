@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 @Slf4j
-public class NatsNewsNotificationPublisher {
+public class NewsNotificationPublisher {
 
     @Autowired
     private Connection natsConnection;
@@ -40,7 +40,7 @@ public class NatsNewsNotificationPublisher {
                 newsNotificationTopic,
                 body.getBytes(StandardCharsets.UTF_8)
             );
-            log.info("newsnote:notification:{}", body);
+            log.debug("newsnote:notification:{}", body);
         } catch (IOException e) {
             log.error("newsnote:notification:failed " + e.getMessage());
         }
