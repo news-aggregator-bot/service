@@ -30,7 +30,7 @@ public class ReaderService implements IReaderService {
     @Override
     public Reader save(Reader reader) {
         if (reader.getChatId() == null) {
-            textMessagePublisher.publish("FAILED:reader:save:no chat id " + reader.toString());
+            textMessagePublisher.publish("FAILED REGISTRATION:reader:no chat id " + reader.toString());
             throw new IllegalArgumentException(reader.toString() + " no chat id");
         }
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
@@ -45,12 +45,16 @@ public class ReaderService implements IReaderService {
             return reader;
         });
         log.info("reader:save:{}", reader);
-        return readerRepository.save(repoReader);
-    }
-
-    @Override
-    public Collection<Reader> saveAll(Collection<Reader> readers) {
-        return readerRepository.saveAll(readers);
+        try {
+            Reader saved = readerRepository.save(repoReader);
+            textMessagePublisher.publish("SUCCESS REGISTRATION:reader" + saved.toString());
+            return saved;
+        } catch (Exception e) {
+            textMessagePublisher.publish("FAILED REGISTRATION:reader:" + reader.toString() + ":" + e
+                .getMessage());
+            log.error("reader:{}:registration failed", reader, e);
+            throw new IllegalStateException(e);
+        }
     }
 
     @Override
@@ -78,6 +82,7 @@ public class ReaderService implements IReaderService {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
+            textMessagePublisher.publish("UPDATE STATUS:reader:" + r.toString());
             return readerRepository.save(r);
         }).orElse(null);
     }

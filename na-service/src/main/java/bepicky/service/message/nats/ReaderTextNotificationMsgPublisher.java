@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;
 
 @Component
-public class ReaderTextNotificationMessagePublisher {
+public class ReaderTextNotificationMsgPublisher {
 
     @Autowired
     private Connection connection;

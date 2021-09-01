@@ -2,7 +2,7 @@ package bepicky.service.service;
 
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
-import bepicky.service.message.nats.ReaderTextNotificationMessagePublisher;
+import bepicky.service.message.nats.ReaderTextNotificationMsgPublisher;
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Row;
@@ -24,7 +24,7 @@ public class CommunicationService implements ICommunicationService {
     private ILanguageService languageService;
 
     @Autowired
-    private ReaderTextNotificationMessagePublisher readerMsgPublisher;
+    private ReaderTextNotificationMsgPublisher readerMsgPublisher;
 
     public void communicate(InputStream data) {
         Map<String, String> messages = parseMessages(data);
