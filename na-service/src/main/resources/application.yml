@@ -61,6 +61,8 @@ hystrix:
 topics:
   message:
     text: msg.txt
+  reader:
+    notification: reader.notification
   news:
     notification:
       new: newsnote.notification
