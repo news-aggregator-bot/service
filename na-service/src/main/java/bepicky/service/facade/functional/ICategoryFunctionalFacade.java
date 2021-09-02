@@ -1,26 +1,26 @@
 package bepicky.service.facade.functional;
 
 import bepicky.common.domain.dto.CategoryDto;
-import bepicky.common.domain.request.CategoryRequest;
 import bepicky.common.domain.response.CategoryListResponse;
 import bepicky.common.domain.response.CategoryResponse;
-import bepicky.service.domain.request.ListCategoryRequest;
+import bepicky.common.msg.CategoryCommandMsg;
+import bepicky.common.msg.CategoryListMsg;
 
 public interface ICategoryFunctionalFacade {
 
-    CategoryListResponse listApplicable(Long chatId, String type);
+    CategoryListResponse listApplicable(CategoryListMsg m);
 
-    CategoryListResponse listAll(ListCategoryRequest request);
+    CategoryListResponse listAll(CategoryListMsg m);
 
-    CategoryListResponse sublist(ListCategoryRequest request);
+    CategoryListResponse sublist(CategoryListMsg m);
 
-    CategoryResponse pickAll(CategoryRequest request);
+    CategoryResponse pickAll(CategoryCommandMsg m);
 
-    CategoryResponse pick(CategoryRequest request);
+    CategoryResponse pick(CategoryCommandMsg m);
 
-    CategoryResponse remove(CategoryRequest request);
+    CategoryResponse remove(CategoryCommandMsg m);
 
-    CategoryResponse removeAll(CategoryRequest request);
+    CategoryResponse removeAll(CategoryCommandMsg m);
 
     CategoryDto deleteById(long id);
 

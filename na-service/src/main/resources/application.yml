@@ -59,6 +59,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 10000
 topics:
+  category:
+    cmd: category.cmd
   message:
     text: msg.txt
   reader:

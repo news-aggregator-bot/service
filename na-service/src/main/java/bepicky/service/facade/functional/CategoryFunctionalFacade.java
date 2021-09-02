@@ -3,12 +3,12 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.ReaderDto;
-import bepicky.common.domain.request.CategoryRequest;
 import bepicky.common.domain.response.CategoryListResponse;
 import bepicky.common.domain.response.CategoryResponse;
 import bepicky.common.exception.ResourceNotFoundException;
+import bepicky.common.msg.CategoryCommandMsg;
+import bepicky.common.msg.CategoryListMsg;
 import bepicky.service.domain.mapper.CategoryDtoMapper;
-import bepicky.service.domain.request.ListCategoryRequest;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Reader;
@@ -42,9 +42,9 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     private ModelMapper modelMapper;
 
     @Override
-    public CategoryListResponse listApplicable(Long chatId, String type) {
-        return readerService.findByChatId(chatId).map(r -> {
-            CategoryType cType = CategoryType.valueOf(type);
+    public CategoryListResponse listApplicable(CategoryListMsg m) {
+        return readerService.findByChatId(m.getId()).map(r -> {
+            CategoryType cType = CategoryType.valueOf(m.getType());
             Set<Category> applicableReadersCategories = getApplicable(r, cType);
             return new CategoryListResponse(
                 applicableReadersCategories.stream().map(c -> toDto(r, c)).collect(Collectors.toList()),
@@ -53,68 +53,59 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
                 modelMapper.map(r, ReaderDto.class)
             );
         }).orElseGet(() -> {
-            log.warn("list:category:reader {} not found", chatId);
+            log.warn("list:category:reader {} not found", m.getId());
             return new CategoryListResponse(ErrorUtil.readerNotFound());
         });
     }
 
-    private Set<Category> getApplicable(Reader r, CategoryType cType) {
-        Set<Category> applicableReadersCategories = r.getSources().stream()
-            .flatMap(s -> s.getPages().stream())
-            .flatMap(sp -> sp.getCategories().stream())
-            .filter(c -> c.getType().equals(cType))
-            .collect(Collectors.toSet());
-        return applicableReadersCategories.isEmpty() ? categoryService.getAllByType(cType) : applicableReadersCategories;
-    }
-
     @Override
-    public CategoryListResponse listAll(ListCategoryRequest request) {
-        return readerService.findByChatId(request.getChatId())
+    public CategoryListResponse listAll(CategoryListMsg m) {
+        return readerService.findByChatId(m.getChatId())
             .map(reader -> {
-                CategoryType type = CategoryType.valueOf(request.getType());
+                CategoryType type = CategoryType.valueOf(m.getType());
                 return getListCategoryResponse(
                     reader,
-                    categoryService.findTopCategories(type, pageReq(request.getPage(), request.getSize()))
+                    categoryService.findTopCategories(type, pageReq(m.getPage(), m.getSize()))
                 );
             }).orElseGet(() -> {
-                log.warn("list:category:reader {} not found", request.getChatId());
+                log.warn("list:category:reader {} not found", m.getChatId());
                 return new CategoryListResponse(ErrorUtil.readerNotFound());
             });
     }
 
     @Override
-    public CategoryListResponse sublist(ListCategoryRequest request) {
-        return categoryService.find(request.getParentId())
-            .map(parent -> readerService.findByChatId(request.getChatId()).map(reader -> getListCategoryResponse(
+    public CategoryListResponse sublist(CategoryListMsg m) {
+        return categoryService.find(m.getId())
+            .map(parent -> readerService.findByChatId(m.getChatId()).map(reader -> getListCategoryResponse(
                 reader,
-                categoryService.findByParent(parent, pageReq(request.getPage(), request.getSize()))
+                categoryService.findByParent(parent, pageReq(m.getPage(), m.getSize()))
             )).orElseGet(() -> {
-                log.warn("list:subcategory:reader {} not found", request.getChatId());
+                log.warn("list:subcategory:reader {} not found", m.getChatId());
                 return new CategoryListResponse(ErrorUtil.readerNotFound());
             })).orElseGet(() -> {
-                log.warn("list:subcategory:parent category {} not found", request.getParentId());
+                log.warn("list:subcategory:parent category {} not found", m.getId());
                 return new CategoryListResponse(ErrorUtil.categoryNotFound());
             });
     }
 
     @Override
-    public CategoryResponse pickAll(CategoryRequest request) {
-        return doAction(request, Reader::addAllCategories);
+    public CategoryResponse pickAll(CategoryCommandMsg m) {
+        return doAction(m, Reader::addAllCategories);
     }
 
     @Override
-    public CategoryResponse pick(CategoryRequest request) {
-        return doAction(request, Reader::addCategory);
+    public CategoryResponse pick(CategoryCommandMsg m) {
+        return doAction(m, Reader::addCategory);
     }
 
     @Override
-    public CategoryResponse remove(CategoryRequest request) {
-        return doAction(request, Reader::removeCategory);
+    public CategoryResponse remove(CategoryCommandMsg m) {
+        return doAction(m, Reader::removeCategory);
     }
 
     @Override
-    public CategoryResponse removeAll(CategoryRequest request) {
-        return doAction(request, Reader::removeAllCategory);
+    public CategoryResponse removeAll(CategoryCommandMsg m) {
+        return doAction(m, Reader::removeAllCategory);
     }
 
     @Override
@@ -135,15 +126,15 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         });
     }
 
-    private CategoryResponse doAction(CategoryRequest request, BiConsumer<Reader, Category> action) {
-        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
+    private CategoryResponse doAction(CategoryCommandMsg m, BiConsumer<Reader, Category> action) {
+        Reader reader = readerService.findByChatId(m.getChatId()).orElse(null);
         if (reader == null) {
-            log.warn("action:category:reader:{}:404", request.getChatId());
+            log.warn("category:{}:reader:{}:404", m.getCommand(), m.getChatId());
             return new CategoryResponse(ErrorUtil.readerNotFound());
         }
-        Category category = categoryService.find(request.getCategoryId()).orElse(null);
+        Category category = categoryService.find(m.getCategoryId()).orElse(null);
         if (category == null) {
-            log.warn("action:category:{}:404", request.getCategoryId());
+            log.warn("category:{}:{}:404", m.getCommand(), m.getCategoryId());
             return new CategoryResponse(ErrorUtil.categoryNotFound());
         }
         action.accept(reader, category);
@@ -170,6 +161,15 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         } catch (ResourceNotFoundException e) {
             return new CategoryListResponse(ErrorUtil.categoryNotFound());
         }
+    }
+
+    private Set<Category> getApplicable(Reader r, CategoryType cType) {
+        Set<Category> applicableReadersCategories = r.getSources().stream()
+            .flatMap(s -> s.getPages().stream())
+            .flatMap(sp -> sp.getCategories().stream())
+            .filter(c -> c.getType().equals(cType))
+            .collect(Collectors.toSet());
+        return applicableReadersCategories.isEmpty() ? categoryService.getAllByType(cType) : applicableReadersCategories;
     }
 
     private CategoryDto toDto(Reader reader, Category c) {
