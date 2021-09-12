@@ -3,15 +3,14 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.LanguageDto;
 import bepicky.common.domain.dto.ReaderDto;
-import bepicky.common.domain.request.LanguageRequest;
 import bepicky.common.domain.response.LanguageListResponse;
 import bepicky.common.domain.response.LanguageResponse;
+import bepicky.common.msg.LanguageCommandMsg;
 import bepicky.service.domain.request.ListRequest;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Reader;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
-import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,6 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Autowired
     private ILanguageService languageService;
-
-    @Autowired
-    private ISourceService sourceService;
 
     @Autowired
     private IReaderService readerService;
@@ -60,16 +56,16 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
     }
 
     @Override
-    public LanguageResponse pick(LanguageRequest request) {
-        return handleLangAction(request, Reader::addLanguage);
+    public LanguageResponse pick(LanguageCommandMsg msg) {
+        return handleLangAction(msg, Reader::addLanguage);
     }
 
     @Override
-    public LanguageResponse remove(LanguageRequest request) {
+    public LanguageResponse remove(LanguageCommandMsg request) {
         return handleLangAction(request, Reader::removeLanguage);
     }
 
-    private LanguageResponse handleLangAction(LanguageRequest request, BiConsumer<Reader, Language> langAction) {
+    private LanguageResponse handleLangAction(LanguageCommandMsg request, BiConsumer<Reader, Language> langAction) {
         Language language = languageService.find(request.getLang()).orElse(null);
         if (language == null) {
             log.warn("update:language:language {} not found", request.getLang());

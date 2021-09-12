@@ -62,6 +62,8 @@ topics:
   category:
     cmd: category.cmd.start
     list: category.list.start
+  lang:
+    cmd: lang.cmd.start
   message:
     text: msg.txt
   reader:
