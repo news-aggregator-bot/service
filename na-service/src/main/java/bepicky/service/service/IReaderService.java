@@ -10,8 +10,6 @@ public interface IReaderService {
 
     Reader save(Reader reader);
 
-    Collection<Reader> saveAll(Collection<Reader> reader);
-
     Optional<Reader> findById(long id);
 
     Optional<Reader> findByChatId(long chatId);

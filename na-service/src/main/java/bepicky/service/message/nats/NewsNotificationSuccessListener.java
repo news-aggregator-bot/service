@@ -35,7 +35,7 @@ public class NewsNotificationSuccessListener {
                 NewsNotificationSuccessMessage ids = om.readValue(msg.getData(), NewsNotificationSuccessMessage.class);
                 handle(ids);
             } catch (IOException e) {
-                log.error("newnote:notificaton:success:failed: {}", msg.getData(), e);
+                log.error("newsnote:notification:success:failed: {}", msg.getData(), e);
             }
         });
         dispatcher.subscribe(newsNotificationSuccess);

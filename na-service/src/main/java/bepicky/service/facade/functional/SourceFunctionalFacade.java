@@ -3,10 +3,10 @@ package bepicky.service.facade.functional;
 import bepicky.common.ErrorUtil;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.SourceDto;
-import bepicky.common.domain.request.SourceRequest;
 import bepicky.common.domain.response.SourceListResponse;
 import bepicky.common.domain.response.SourceResponse;
 import bepicky.common.exception.ResourceNotFoundException;
+import bepicky.common.msg.SourceCommandMsg;
 import bepicky.service.domain.request.ListRequest;
 import bepicky.service.entity.Reader;
 import bepicky.service.entity.Source;
@@ -18,12 +18,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
 @Component
 @Slf4j
+@Transactional
 public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFunctionalFacade {
 
     @Autowired
@@ -60,13 +62,13 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
     }
 
     @Override
-    public SourceResponse pick(SourceRequest request) {
-        return doAction(request, Reader::addSource);
+    public SourceResponse pick(SourceCommandMsg msg) {
+        return doAction(msg, Reader::addSource);
     }
 
     @Override
-    public SourceResponse remove(SourceRequest request) {
-        return doAction(request, Reader::removeSource);
+    public SourceResponse remove(SourceCommandMsg msg) {
+        return doAction(msg, Reader::removeSource);
     }
 
     @Override
@@ -76,15 +78,15 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
             .orElseThrow(() -> new ResourceNotFoundException("Change source failed."));
     }
 
-    private SourceResponse doAction(SourceRequest request, BiConsumer<Reader, Source> action) {
-        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
+    private SourceResponse doAction(SourceCommandMsg msg, BiConsumer<Reader, Source> action) {
+        Reader reader = readerService.findByChatId(msg.getChatId()).orElse(null);
         if (reader == null) {
-            log.warn("update:source:reader {} not found", request.getChatId());
+            log.warn("update:source:reader {} not found", msg.getChatId());
             return new SourceResponse(ErrorUtil.readerNotFound());
         }
-        Source source = sourceService.find(request.getSourceId()).orElse(null);
+        Source source = sourceService.find(msg.getSourceId()).orElse(null);
         if (source == null) {
-            log.error("update:source:{} not found:reader:{}", request.getSourceId(), request.getChatId());
+            log.error("update:source:{} not found:reader:{}", msg.getSourceId(), msg.getChatId());
             return new SourceResponse(ErrorUtil.sourceNotFound());
         }
         action.accept(reader, source);

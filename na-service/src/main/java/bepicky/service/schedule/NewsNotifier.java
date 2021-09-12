@@ -19,11 +19,10 @@ import java.util.List;
 @Component
 @Slf4j
 @RefreshScope
-
 public class NewsNotifier {
 
     @Autowired
-    private NewsNotificationPublisher requestProducer;
+    private NewsNotificationPublisher publisher;
 
     @Autowired
     private IReaderService readerService;
@@ -57,6 +56,6 @@ public class NewsNotifier {
         allNotifications.stream()
             .limit(5)
             .map(n -> newsNoteDtoMapper.toNotificationDto(n))
-            .forEach(dto -> requestProducer.sendNotification(r.getChatId(), r.getPrimaryLanguage().getLang(), dto));
+            .forEach(dto -> publisher.sendNotification(r.getChatId(), r.getPrimaryLanguage().getLang(), dto));
     }
 }
