@@ -8,7 +8,9 @@ import bepicky.common.domain.response.CategoryResponse;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.common.msg.CategoryCommandMsg;
 import bepicky.common.msg.CategoryListMsg;
+import bepicky.common.msg.ListCommand;
 import bepicky.service.domain.mapper.CategoryDtoMapper;
+import bepicky.service.domain.request.ListCategoryRequest;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Reader;
@@ -19,6 +21,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Set;
@@ -27,6 +30,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Slf4j
+@Transactional
 public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, CommonFunctionalFacade {
 
     @Autowired
@@ -42,9 +46,9 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     private ModelMapper modelMapper;
 
     @Override
-    public CategoryListResponse listApplicable(CategoryListMsg m) {
-        return readerService.findByChatId(m.getId()).map(r -> {
-            CategoryType cType = CategoryType.valueOf(m.getType());
+    public CategoryListResponse listApplicable(Long chatId, String type) {
+        return readerService.findByChatId(chatId).map(r -> {
+            CategoryType cType = CategoryType.valueOf(type);
             Set<Category> applicableReadersCategories = getApplicable(r, cType);
             return new CategoryListResponse(
                 applicableReadersCategories.stream().map(c -> toDto(r, c)).collect(Collectors.toList()),
@@ -53,9 +57,27 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
                 modelMapper.map(r, ReaderDto.class)
             );
         }).orElseGet(() -> {
-            log.warn("list:category:reader {} not found", m.getId());
+            log.warn("list:category:reader {} not found", chatId);
             return new CategoryListResponse(ErrorUtil.readerNotFound());
         });
+
+    }
+
+    @Override
+    public CategoryListResponse listApplicable(CategoryListMsg m) {
+        return listApplicable(m.getChatId(), m.getType());
+    }
+
+    @Override
+    public CategoryListResponse listAll(ListCategoryRequest request) {
+        CategoryListMsg m = new CategoryListMsg();
+        m.setSize(request.getSize());
+        m.setPage(request.getPage());
+        m.setId(request.getParentId());
+        m.setChatId(request.getChatId());
+        m.setType(request.getType());
+        m.setCommand(ListCommand.LIST);
+        return listAll(m);
     }
 
     @Override
@@ -71,6 +93,18 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
                 log.warn("list:category:reader {} not found", m.getChatId());
                 return new CategoryListResponse(ErrorUtil.readerNotFound());
             });
+    }
+
+    @Override
+    public CategoryListResponse sublist(ListCategoryRequest request) {
+        CategoryListMsg m = new CategoryListMsg();
+        m.setSize(request.getSize());
+        m.setPage(request.getPage());
+        m.setId(request.getParentId());
+        m.setChatId(request.getChatId());
+        m.setType(request.getType());
+        m.setCommand(ListCommand.SUBLIST);
+        return sublist(m);
     }
 
     @Override
