@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Slf4j
+@Transactional
 public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Autowired
