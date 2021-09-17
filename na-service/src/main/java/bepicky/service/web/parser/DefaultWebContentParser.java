@@ -5,6 +5,7 @@ import bepicky.service.entity.ContentBlock;
 import bepicky.service.entity.ContentTag;
 import bepicky.service.entity.ContentTagType;
 import bepicky.service.entity.SourcePage;
+import bepicky.service.nats.publisher.TextMessagePublisher;
 import bepicky.service.web.parser.doc.DocumentTagParser;
 import bepicky.service.web.reader.WebPageReader;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -40,6 +41,9 @@ public class DefaultWebContentParser implements WebContentParser {
     @Autowired
     private UrlNormalisationContext urlNormalisationContext;
 
+    @Autowired
+    private TextMessagePublisher messagePublisher;
+
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
@@ -62,6 +66,7 @@ public class DefaultWebContentParser implements WebContentParser {
             }
         }
         log.warn("webpagereader:read:empty:{}", page.getUrl());
+        messagePublisher.publish("empty page " + page.getUrl());
         return Collections.emptySet();
     }
 

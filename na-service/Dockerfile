@@ -24,6 +24,6 @@ RUN apt-get update && \
 
 ADD ./target/na-service.jar /app/
 USER root
-CMD ["java", "-Xmx512m", "-jar", "/app/na-service.jar"]
+CMD ["java", "-Xmx1024m", "-jar", "/app/na-service.jar"]
 
 EXPOSE 8080
