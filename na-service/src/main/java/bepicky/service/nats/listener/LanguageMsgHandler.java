@@ -1,9 +1,9 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.listener;
 
-import bepicky.common.domain.response.SourceResponse;
+import bepicky.common.domain.response.LanguageResponse;
+import bepicky.common.msg.LanguageCommandMsg;
 import bepicky.common.msg.MsgCommand;
-import bepicky.common.msg.SourceCommandMsg;
-import bepicky.service.facade.functional.ISourceFunctionalFacade;
+import bepicky.service.facade.functional.ILanguageFunctionalFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 import io.nats.client.Connection;
@@ -21,7 +21,7 @@ import java.util.function.Function;
 
 @Component
 @Slf4j
-public class SourceMsgHandler {
+public class LanguageMsgHandler {
 
     @Autowired
     private Connection natsConnection;
@@ -30,15 +30,15 @@ public class SourceMsgHandler {
     private ObjectMapper om;
 
     @Autowired
-    private ISourceFunctionalFacade srcFacade;
+    private ILanguageFunctionalFacade languageFacade;
 
-    @Value("${topics.src.cmd}")
-    private String srcCommandSubject;
+    @Value("${topics.lang.cmd}")
+    private String langCommandSubject;
 
-    private Map<MsgCommand, Function<SourceCommandMsg, SourceResponse>> commandMapper =
-        ImmutableMap.<MsgCommand, Function<SourceCommandMsg, SourceResponse>>builder()
-        .put(MsgCommand.PICK, r -> srcFacade.pick(r))
-        .put(MsgCommand.REMOVE, r -> srcFacade.remove(r))
+    private Map<MsgCommand, Function<LanguageCommandMsg, LanguageResponse>> commandMapper =
+        ImmutableMap.<MsgCommand, Function<LanguageCommandMsg, LanguageResponse>>builder()
+        .put(MsgCommand.PICK, r -> languageFacade.pick(r))
+        .put(MsgCommand.REMOVE, r -> languageFacade.remove(r))
         .build();
 
 
@@ -47,19 +47,19 @@ public class SourceMsgHandler {
         Dispatcher dispatcher = natsConnection.createDispatcher(msg -> {
             long start = System.currentTimeMillis();
             try {
-                SourceCommandMsg cmdMsg = om.readValue(msg.getData(), SourceCommandMsg.class);
-                SourceResponse response = commandMapper.get(cmdMsg.getCommand()).apply(cmdMsg);
+                LanguageCommandMsg cmdMsg = om.readValue(msg.getData(), LanguageCommandMsg.class);
+                LanguageResponse response = commandMapper.get(cmdMsg.getCommand()).apply(cmdMsg);
                 natsConnection.publish(
                     msg.getReplyTo(),
                     om.writeValueAsString(response).getBytes(StandardCharsets.UTF_8)
                 );
                 long total = System.currentTimeMillis() - start;
-                log.info("source:{}:{}:execution_time:{}", cmdMsg.getSourceId(), cmdMsg.getCommand(), total);
+                log.info("lang:{}:{}:execution_time:{}", cmdMsg.getLang(), cmdMsg.getCommand(), total);
             } catch (IOException e) {
-                log.error("source:failed: {}", msg.getData(), e);
+                log.error("lang:failed: {}", msg.getData(), e);
             }
         });
-        dispatcher.subscribe(srcCommandSubject);
+        dispatcher.subscribe(langCommandSubject);
     }
 
 

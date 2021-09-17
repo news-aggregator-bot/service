@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.Reader;
-import bepicky.service.message.nats.TextMessagePublisher;
+import bepicky.service.nats.publisher.TextMessagePublisher;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 

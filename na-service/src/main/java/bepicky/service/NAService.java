@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication(scanBasePackages = "bepicky.service")
-@EnableFeignClients(basePackages = {"bepicky.service.client"})
 @EnableTransactionManagement(proxyTargetClass = true)
 @EnableScheduling
 @EnableJpaRepositories

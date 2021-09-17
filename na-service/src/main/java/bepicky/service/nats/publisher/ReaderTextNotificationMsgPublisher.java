@@ -1,4 +1,4 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.publisher;
 
 import bepicky.common.msg.TextMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;

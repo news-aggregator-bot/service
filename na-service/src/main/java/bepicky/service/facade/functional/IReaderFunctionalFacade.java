@@ -28,4 +28,6 @@ public interface IReaderFunctionalFacade {
 
     List<ReaderDto> findAll();
 
+    ReaderDto changeLanguage(long chatId, String lang);
+
 }

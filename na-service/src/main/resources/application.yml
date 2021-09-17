@@ -70,6 +70,7 @@ topics:
     text: msg.txt
   reader:
     notification: reader.notification
+    language: reader.primary.lang
   news:
     notification:
       new: newsnote.notification

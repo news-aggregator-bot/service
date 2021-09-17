@@ -1,4 +1,4 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.publisher;
 
 import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.request.NewsNotificationRequest;

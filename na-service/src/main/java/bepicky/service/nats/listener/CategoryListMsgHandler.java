@@ -1,8 +1,8 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.listener;
 
-import bepicky.common.domain.response.CategoryResponse;
-import bepicky.common.msg.CategoryCommandMsg;
-import bepicky.common.msg.MsgCommand;
+import bepicky.common.domain.response.CategoryListResponse;
+import bepicky.common.msg.CategoryListMsg;
+import bepicky.common.msg.ListCommand;
 import bepicky.service.facade.functional.ICategoryFunctionalFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
@@ -21,7 +21,7 @@ import java.util.function.Function;
 
 @Component
 @Slf4j
-public class CategoryMsgHandler {
+public class CategoryListMsgHandler {
 
     @Autowired
     private Connection natsConnection;
@@ -32,36 +32,35 @@ public class CategoryMsgHandler {
     @Autowired
     private ICategoryFunctionalFacade categoryFacade;
 
-    @Value("${topics.category.cmd}")
-    private String categoryCommandSubject;
+    @Value("${topics.category.list}")
+    private String categoryListSubject;
 
-    private Map<MsgCommand, Function<CategoryCommandMsg, CategoryResponse>> commandMapper =
-        ImmutableMap.<MsgCommand, Function<CategoryCommandMsg, CategoryResponse>>builder()
-        .put(MsgCommand.PICK, r -> categoryFacade.pick(r))
-        .put(MsgCommand.PICK_ALL, r -> categoryFacade.pickAll(r))
-        .put(MsgCommand.REMOVE, r -> categoryFacade.remove(r))
-        .put(MsgCommand.REMOVE_ALL, r -> categoryFacade.removeAll(r))
+    private Map<ListCommand, Function<CategoryListMsg, CategoryListResponse>> listMapper =
+        ImmutableMap.<ListCommand, Function<CategoryListMsg, CategoryListResponse>>builder()
+        .put(ListCommand.LIST, r -> categoryFacade.listAll(r))
+        .put(ListCommand.SUBLIST, r -> categoryFacade.sublist(r))
+        .put(ListCommand.LIST_APPLICABLE, r -> categoryFacade.listApplicable(r))
         .build();
 
 
     @PostConstruct
-    public void createDispatcher() {
+    public void manageSubscription() {
         Dispatcher dispatcher = natsConnection.createDispatcher(msg -> {
             long start = System.currentTimeMillis();
             try {
-                CategoryCommandMsg cmdMsg = om.readValue(msg.getData(), CategoryCommandMsg.class);
-                CategoryResponse response = commandMapper.get(cmdMsg.getCommand()).apply(cmdMsg);
+                CategoryListMsg listMsg = om.readValue(msg.getData(), CategoryListMsg.class);
+                CategoryListResponse response = listMapper.get(listMsg.getCommand()).apply(listMsg);
                 natsConnection.publish(
                     msg.getReplyTo(),
                     om.writeValueAsString(response).getBytes(StandardCharsets.UTF_8)
                 );
                 long total = System.currentTimeMillis() - start;
-                log.info("category:{}:{}:execution_time:{}", cmdMsg.getCategoryId(), cmdMsg.getCommand(), total);
+                log.info("category:{}:{}:execution_time:{}", listMsg.getId(), listMsg.getCommand(), total);
             } catch (IOException e) {
                 log.error("category:failed: {}", msg.getData(), e);
             }
         });
-        dispatcher.subscribe(categoryCommandSubject);
+        dispatcher.subscribe(categoryListSubject);
     }
 
 

@@ -39,7 +39,6 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
         if (repository.existsById(notification.getId())) {
             return null;
         }
-        log.info("news_note_notification:save_new:{}", notification);
         notification.setLink(link);
         notification.setLinkKey(key);
         return repository.save(notification);

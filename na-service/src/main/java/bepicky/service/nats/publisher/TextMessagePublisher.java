@@ -1,4 +1,4 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.publisher;
 
 import io.nats.client.Connection;
 import org.springframework.beans.factory.annotation.Autowired;

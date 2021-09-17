@@ -4,7 +4,6 @@ import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.StatusReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
-import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.Platform;
@@ -26,6 +25,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Slf4j
+@Transactional
 public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
 
     @Autowired
@@ -114,5 +114,24 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
             .stream()
             .map(r -> modelMapper.map(r, ReaderDto.class))
             .collect(Collectors.toList());
+    }
+
+    @Override
+    public ReaderDto changeLanguage(long chatId, String lang) {
+        return languageService.find(lang)
+            .map(l -> readerService.findByChatId(chatId)
+                .map(r -> {
+                    r.setPrimaryLanguage(l);
+                    readerService.save(r);
+                    log.info("reader:primary lang:" + lang);
+                    return modelMapper.map(r, ReaderDto.class);
+                }).orElseGet(() -> {
+                    log.warn("reader:{}:404", chatId);
+                    return null;
+                }))
+            .orElseGet(() -> {
+                log.warn("reader:{}:primary lang:{}:404", chatId, lang);
+                return null;
+            });
     }
 }

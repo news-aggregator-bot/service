@@ -1,4 +1,4 @@
-package bepicky.service.message.nats;
+package bepicky.service.nats.listener;
 
 import bepicky.common.msg.NewsNotificationSuccessMessage;
 import bepicky.service.service.INewsNoteNotificationService;
