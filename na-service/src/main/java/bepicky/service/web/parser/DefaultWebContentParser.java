@@ -65,7 +65,7 @@ public class DefaultWebContentParser implements WebContentParser {
             }
         }
         log.warn("webpagereader:read:empty:{}", page.getUrl());
-        adminPublisher.publish("empty page " + page.getUrl());
+        adminPublisher.publish("PAGE EMPTY", String.valueOf(page.getId()), page.getUrl());
         return Collections.emptySet();
     }
 

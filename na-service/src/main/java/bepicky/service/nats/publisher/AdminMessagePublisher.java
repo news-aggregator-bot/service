@@ -16,7 +16,7 @@ public class AdminMessagePublisher {
     @Value("${topics.message.admin}")
     private String adminSubject;
 
-    public void publish(String text) {
-        natsConnection.publish(adminSubject, text.getBytes(StandardCharsets.UTF_8));
+    public void publish(String... text) {
+        natsConnection.publish(adminSubject, String.join(" ", text).getBytes(StandardCharsets.UTF_8));
     }
 }

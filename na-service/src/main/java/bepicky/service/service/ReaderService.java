@@ -32,7 +32,10 @@ public class ReaderService implements IReaderService {
     @Override
     public Reader register(Reader reader) {
         if (reader.getChatId() == null) {
-            adminMessagePublisher.publish("FAILED REGISTRATION:reader:no chat id " + reader.toString());
+            adminMessagePublisher.publish(
+                "FAILED REGISTRATION:reader:no chat id ",
+                reader.toString()
+            );
             throw new IllegalArgumentException(reader.toString() + " no chat id");
         }
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
@@ -49,11 +52,14 @@ public class ReaderService implements IReaderService {
         log.info("reader:save:{}", reader);
         try {
             Reader saved = readerRepository.save(repoReader);
-            adminMessagePublisher.publish("SUCCESS REGISTRATION:reader" + saved.toString());
+            adminMessagePublisher.publish("SUCCESS REGISTRATION:reader", saved.toString());
             return saved;
         } catch (Exception e) {
-            adminMessagePublisher.publish("FAILED REGISTRATION:reader:" + reader.toString() + ":" + e
-                .getMessage());
+            adminMessagePublisher.publish(
+                "FAILED REGISTRATION:reader:",
+                reader.toString(),
+                e.getMessage()
+            );
             log.error("reader:{}:registration failed", reader, e);
             throw new IllegalStateException(e);
         }
@@ -105,7 +111,11 @@ public class ReaderService implements IReaderService {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
-            adminMessagePublisher.publish("UPDATE STATUS:reader:" + r.getChatId() + ":" + r.getStatus());
+            adminMessagePublisher.publish(
+                "UPDATE STATUS:reader:",
+                String.valueOf(r.getChatId()),
+                r.getStatus().toString()
+            );
             return readerRepository.save(r);
         }).orElse(null);
     }
