@@ -9,8 +9,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -27,7 +30,7 @@ public class ReaderService implements IReaderService {
     private Long tagLimit;
 
     @Override
-    public Reader save(Reader reader) {
+    public Reader register(Reader reader) {
         if (reader.getChatId() == null) {
             adminMessagePublisher.publish("FAILED REGISTRATION:reader:no chat id " + reader.toString());
             throw new IllegalArgumentException(reader.toString() + " no chat id");
@@ -57,6 +60,11 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public Reader update(Reader reader) {
+        return readerRepository.save(reader);
+    }
+
+    @Override
     public Optional<Reader> findById(long id) {
         return readerRepository.findById(id);
     }
@@ -77,11 +85,27 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public void enableSleeping() {
+        Date now = new Date(System.currentTimeMillis());
+        Calendar oneHourBefore = Calendar.getInstance();
+        oneHourBefore.setTime(now);
+        oneHourBefore.add(Calendar.HOUR, -1);
+        List<Reader> enabledSleepers = readerRepository.findAllByStatus(Reader.Status.IN_SETTINGS)
+            .stream()
+            .filter(r -> r.getUpdateDate().before(oneHourBefore.getTime()))
+            .map(r -> {
+                r.setStatus(Reader.Status.ENABLED);
+                return readerRepository.save(r);
+            }).collect(Collectors.toList());
+        log.info("reader:sleepers enabled " + enabledSleepers.size());
+    }
+
+    @Override
     public Reader updateStatus(long chatId, Reader.Status status) {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
-            adminMessagePublisher.publish("UPDATE STATUS:reader:" + r.toString());
+            adminMessagePublisher.publish("UPDATE STATUS:reader:" + r.getChatId() + ":" + r.getStatus());
             return readerRepository.save(r);
         }).orElse(null);
     }

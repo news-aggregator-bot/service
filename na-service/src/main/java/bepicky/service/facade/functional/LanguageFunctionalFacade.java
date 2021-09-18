@@ -79,7 +79,7 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
             return new LanguageResponse(ErrorUtil.readerNotFound());
         }
         langAction.accept(reader, language);
-        readerService.save(reader);
+        readerService.update(reader);
         return new LanguageResponse(
             modelMapper.map(reader, ReaderDto.class),
             modelMapper.map(language, LanguageDto.class)

@@ -51,7 +51,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
         reader.setPlatform(platform);
         reader.setPrimaryLanguage(language);
         reader.setLanguages(Sets.newHashSet(language));
-        return modelMapper.map(readerService.save(reader), ReaderDto.class);
+        return modelMapper.map(readerService.register(reader), ReaderDto.class);
     }
 
     @Override
@@ -122,7 +122,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
             .map(l -> readerService.findByChatId(chatId)
                 .map(r -> {
                     r.setPrimaryLanguage(l);
-                    readerService.save(r);
+                    readerService.update(r);
                     log.info("reader:primary lang:" + lang);
                     return modelMapper.map(r, ReaderDto.class);
                 }).orElseGet(() -> {

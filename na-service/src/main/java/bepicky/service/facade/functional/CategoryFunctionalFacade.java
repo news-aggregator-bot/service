@@ -172,7 +172,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
             return new CategoryResponse(ErrorUtil.categoryNotFound());
         }
         action.accept(reader, category);
-        readerService.save(reader);
+        readerService.update(reader);
         return new CategoryResponse(
             modelMapper.map(reader, ReaderDto.class),
             categoryResponseMapper.toFullDto(category, reader.getPrimaryLanguage())

@@ -8,7 +8,9 @@ import java.util.Optional;
 
 public interface IReaderService {
 
-    Reader save(Reader reader);
+    Reader register(Reader reader);
+
+    Reader update(Reader reader);
 
     Optional<Reader> findById(long id);
 
@@ -17,6 +19,8 @@ public interface IReaderService {
     List<Reader> findAll();
 
     List<Reader> findAllEnabled();
+
+    void enableSleeping();
 
     Reader updateStatus(long chatId, Reader.Status status);
 

@@ -90,7 +90,7 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
             return new SourceResponse(ErrorUtil.sourceNotFound());
         }
         action.accept(reader, source);
-        readerService.save(reader);
+        readerService.update(reader);
 
         return new SourceResponse(modelMapper.map(reader, ReaderDto.class), modelMapper.map(source, SourceDto.class));
     }
