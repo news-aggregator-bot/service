@@ -5,10 +5,9 @@ import bepicky.service.entity.ContentBlock;
 import bepicky.service.entity.ContentTag;
 import bepicky.service.entity.ContentTagType;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.nats.publisher.TextMessagePublisher;
+import bepicky.service.nats.publisher.AdminTextMessagePublisher;
 import bepicky.service.web.parser.doc.DocumentTagParser;
 import bepicky.service.web.reader.WebPageReader;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
 import lombok.extern.slf4j.Slf4j;
@@ -42,7 +41,7 @@ public class DefaultWebContentParser implements WebContentParser {
     private UrlNormalisationContext urlNormalisationContext;
 
     @Autowired
-    private TextMessagePublisher messagePublisher;
+    private AdminTextMessagePublisher messagePublisher;
 
     @Override
     public Set<PageParsedData> parse(SourcePage page) {

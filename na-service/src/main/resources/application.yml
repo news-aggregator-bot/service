@@ -67,7 +67,7 @@ topics:
   src:
     cmd: src.cmd.start
   message:
-    text: msg.txt
+    admin: msg.admin
   reader:
     notification: reader.notification
     language: reader.primary.lang

@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.Reader;
-import bepicky.service.nats.publisher.TextMessagePublisher;
+import bepicky.service.nats.publisher.AdminTextMessagePublisher;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ReaderService implements IReaderService {
     private ReaderRepository readerRepository;
 
     @Autowired
-    private TextMessagePublisher textMessagePublisher;
+    private AdminTextMessagePublisher textMessagePublisher;
 
     @Value("${na.reader.tag.limit}")
     private Long tagLimit;

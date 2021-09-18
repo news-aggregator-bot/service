@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;
 
 @Component
-public class TextMessagePublisher {
+public class AdminTextMessagePublisher {
 
     @Autowired
     private Connection natsConnection;
 
-    @Value("${topics.message.text}")
+    @Value("${topics.message.admin}")
     private String textMessageSubject;
 
     public void publish(String text) {
