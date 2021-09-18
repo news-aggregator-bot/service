@@ -8,15 +8,15 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;
 
 @Component
-public class AdminTextMessagePublisher {
+public class AdminMessagePublisher {
 
     @Autowired
     private Connection natsConnection;
 
     @Value("${topics.message.admin}")
-    private String textMessageSubject;
+    private String adminSubject;
 
     public void publish(String text) {
-        natsConnection.publish(textMessageSubject, text.getBytes(StandardCharsets.UTF_8));
+        natsConnection.publish(adminSubject, text.getBytes(StandardCharsets.UTF_8));
     }
 }

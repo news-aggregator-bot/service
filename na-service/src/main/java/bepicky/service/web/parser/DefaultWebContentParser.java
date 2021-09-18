@@ -5,7 +5,7 @@ import bepicky.service.entity.ContentBlock;
 import bepicky.service.entity.ContentTag;
 import bepicky.service.entity.ContentTagType;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.nats.publisher.AdminTextMessagePublisher;
+import bepicky.service.nats.publisher.AdminMessagePublisher;
 import bepicky.service.web.parser.doc.DocumentTagParser;
 import bepicky.service.web.reader.WebPageReader;
 import com.google.common.collect.ImmutableList;
@@ -41,7 +41,7 @@ public class DefaultWebContentParser implements WebContentParser {
     private UrlNormalisationContext urlNormalisationContext;
 
     @Autowired
-    private AdminTextMessagePublisher messagePublisher;
+    private AdminMessagePublisher adminPublisher;
 
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
@@ -65,7 +65,7 @@ public class DefaultWebContentParser implements WebContentParser {
             }
         }
         log.warn("webpagereader:read:empty:{}", page.getUrl());
-        messagePublisher.publish("empty page " + page.getUrl());
+        adminPublisher.publish("empty page " + page.getUrl());
         return Collections.emptySet();
     }
 

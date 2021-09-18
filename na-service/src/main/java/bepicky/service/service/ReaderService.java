@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.service.entity.Reader;
-import bepicky.service.nats.publisher.AdminTextMessagePublisher;
+import bepicky.service.nats.publisher.AdminMessagePublisher;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ReaderService implements IReaderService {
     private ReaderRepository readerRepository;
 
     @Autowired
-    private AdminTextMessagePublisher textMessagePublisher;
+    private AdminMessagePublisher adminMessagePublisher;
 
     @Value("${na.reader.tag.limit}")
     private Long tagLimit;
@@ -29,7 +29,7 @@ public class ReaderService implements IReaderService {
     @Override
     public Reader save(Reader reader) {
         if (reader.getChatId() == null) {
-            textMessagePublisher.publish("FAILED REGISTRATION:reader:no chat id " + reader.toString());
+            adminMessagePublisher.publish("FAILED REGISTRATION:reader:no chat id " + reader.toString());
             throw new IllegalArgumentException(reader.toString() + " no chat id");
         }
         Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
@@ -46,10 +46,10 @@ public class ReaderService implements IReaderService {
         log.info("reader:save:{}", reader);
         try {
             Reader saved = readerRepository.save(repoReader);
-            textMessagePublisher.publish("SUCCESS REGISTRATION:reader" + saved.toString());
+            adminMessagePublisher.publish("SUCCESS REGISTRATION:reader" + saved.toString());
             return saved;
         } catch (Exception e) {
-            textMessagePublisher.publish("FAILED REGISTRATION:reader:" + reader.toString() + ":" + e
+            adminMessagePublisher.publish("FAILED REGISTRATION:reader:" + reader.toString() + ":" + e
                 .getMessage());
             log.error("reader:{}:registration failed", reader, e);
             throw new IllegalStateException(e);
@@ -81,7 +81,7 @@ public class ReaderService implements IReaderService {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
-            textMessagePublisher.publish("UPDATE STATUS:reader:" + r.toString());
+            adminMessagePublisher.publish("UPDATE STATUS:reader:" + r.toString());
             return readerRepository.save(r);
         }).orElse(null);
     }
