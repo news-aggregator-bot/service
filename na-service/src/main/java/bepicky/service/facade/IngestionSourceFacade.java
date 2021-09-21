@@ -58,7 +58,6 @@ public class IngestionSourceFacade {
             SourcePage srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
                 SourcePage srcPg = new SourcePage();
                 srcPg.setUrl(pageDto.getUrl());
-                srcPg.setName(pageDto.getName());
                 return srcPg;
             });
 

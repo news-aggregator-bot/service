@@ -25,7 +25,7 @@ import java.util.Set;
 @Entity
 @Table(name = "category")
 @EqualsAndHashCode(callSuper = true)
-@ToString
+@ToString(includeFieldNames = false)
 public class Category extends IdEntity {
 
     @Column(nullable = false)

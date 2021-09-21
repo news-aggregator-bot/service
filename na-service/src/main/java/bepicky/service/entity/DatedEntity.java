@@ -3,6 +3,7 @@ package bepicky.service.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -14,6 +15,7 @@ import java.util.Date;
 @MappedSuperclass
 @Data
 @EqualsAndHashCode(callSuper = true)
+@ToString(includeFieldNames = false)
 public class DatedEntity extends IdEntity {
 
     @Column(name = "creation_date", nullable = false)

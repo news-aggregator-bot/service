@@ -28,7 +28,6 @@ public class SourcePageDtoMapper {
 
     public SourcePageDto toDto(SourcePage sourcePage, Language language) {
         SourcePageDto request = new SourcePageDto();
-        request.setName(sourcePage.getName());
         request.setUrl(sourcePage.getUrl());
         request.setSourceName(sourcePage.getSource().getName());
         List<CategoryDto> categoryDtos = sourcePage.getCategories().stream()
@@ -44,7 +43,6 @@ public class SourcePageDtoMapper {
 
     public SourcePageDto toDto(SourcePage sourcePage) {
         SourcePageDto request = new SourcePageDto();
-        request.setName(sourcePage.getName());
         request.setUrl(sourcePage.getUrl());
         request.setSourceName(sourcePage.getSource().getName());
         List<LanguageDto> languageDtos = sourcePage.getLanguages().stream()

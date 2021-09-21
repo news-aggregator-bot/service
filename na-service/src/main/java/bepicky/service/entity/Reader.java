@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 @Entity
 @Table(name = "reader")
 @EqualsAndHashCode(callSuper = true)
-@ToString
+@ToString(includeFieldNames = false)
 public class Reader extends DatedEntity {
 
     @JsonProperty("chat_id")

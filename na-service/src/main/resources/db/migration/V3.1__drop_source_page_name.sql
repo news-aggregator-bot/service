@@ -1,0 +1,1 @@
+alter table source_page drop column `name`;

@@ -64,18 +64,18 @@ public class PageApprover {
 
         sourcePageService.findAll()
             .stream()
-            .filter(s -> !pageContentContext.exists(s.getSource().getName(), s.getName()))
+            .filter(s -> !pageContentContext.exists(s.getSource().getName(), s.getUrl()))
             .forEach(sourcePage -> {
-                log.info("read:sourcepage:start:{}", sourcePage.getName());
+                log.info("read:sourcepage:start:{}", sourcePage.getUrl());
                 Document pageData = readDocument(sourcePage);
                 if (pageData == null) {
                     return;
                 }
-                log.info("read:sourcepage:complete:{}", sourcePage.getName());
+                log.info("read:sourcepage:complete:{}", sourcePage.getUrl());
                 log.info("sync:sourcepage:start");
                 Path syncResult = pageContentContext.approve(
                     sourcePage.getSource().getName(),
-                    sourcePage.getName(),
+                    sourcePage.getUrl(),
                     pageData.html()
                 );
                 log.info("sync:sourcepage:complete:{}", syncResult.getFileName());

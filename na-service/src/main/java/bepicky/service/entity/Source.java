@@ -23,7 +23,7 @@ import java.util.Set;
 @Entity
 @Table(name = "source")
 @EqualsAndHashCode(callSuper = true)
-@ToString
+@ToString(includeFieldNames = false)
 public class Source extends DatedEntity {
 
     @Column(nullable = false)

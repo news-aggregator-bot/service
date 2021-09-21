@@ -92,7 +92,6 @@ public class NewsNotifierTest {
 
         SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
         assertEquals(sourcePage.getUrl(), actualSp.getUrl());
-        assertEquals(sourcePage.getName(), actualSp.getName());
 
         assertEquals(1, actualSp.getCategories().size());
         CategoryDto actualSpCategory = actualSp.getCategories().get(0);
@@ -136,7 +135,6 @@ public class NewsNotifierTest {
 
         SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
         assertEquals(sourcePage.getUrl(), actualSp.getUrl());
-        assertEquals(sourcePage.getName(), actualSp.getName());
 
         assertEquals(1, actualSp.getCategories().size());
         CategoryDto actualSpCategory = actualSp.getCategories().get(0);
@@ -183,7 +181,6 @@ public class NewsNotifierTest {
         src.setName("name");
         SourcePage sourcePage = new SourcePage();
         sourcePage.setUrl(TEST_URL);
-        sourcePage.setName(TEST_USA);
         sourcePage.setLanguages(languages);
         sourcePage.setSource(src);
         return sourcePage;

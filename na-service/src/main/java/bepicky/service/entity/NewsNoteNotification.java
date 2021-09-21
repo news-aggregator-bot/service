@@ -27,6 +27,7 @@ import static bepicky.service.entity.NewsNoteNotification.State.NEW;
 @Entity
 @Table(name = "news_note_notification")
 @NoArgsConstructor
+@ToString(includeFieldNames = false)
 public class NewsNoteNotification {
 
     @EmbeddedId

@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 @Entity
 @Table(name = "news_note")
 @EqualsAndHashCode(callSuper = true)
+@ToString(includeFieldNames = false)
 public class NewsNote extends DatedEntity {
 
     @Column(nullable = false)

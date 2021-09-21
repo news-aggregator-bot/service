@@ -53,26 +53,25 @@ public class SourceIngestionService implements IngestionService {
     private final Map<Integer, Supplier<Object>> entityMapping =
         ImmutableMap.<Integer, Supplier<Object>>builder()
             .put(0, SourcePageDto::new)
-            .put(4, () -> new ContentTagDto(MAIN))
-            .put(5, () -> new ContentTagDto(TITLE))
-            .put(6, () -> new ContentTagDto(LINK))
-            .put(7, () -> new ContentTagDto(AUTHOR))
+            .put(3, () -> new ContentTagDto(MAIN))
+            .put(4, () -> new ContentTagDto(TITLE))
+            .put(5, () -> new ContentTagDto(LINK))
+            .put(6, () -> new ContentTagDto(AUTHOR))
             .build();
 
     private final Map<Integer, IngestionConsumer> fieldMapping =
         ImmutableMap.<Integer, IngestionConsumer>builder()
-            .put(0, (v, o) -> ((SourcePageDto) o).setName(v.trim()))
-            .put(1, (v, o) -> ((SourcePageDto) o).setUrl(normaliseUrl(v.trim())))
-            .put(2, (v, o) -> ((SourcePageDto) o).setCategories(stream(v.split(",")).map(String::toLowerCase).collect(toList())))
-            .put(3, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
-            .put(8, (v, o) -> ((SourcePageDto) o).setUrlNormalisation(UrlNormalisation.valueOf(v.trim())))
+            .put(0, (v, o) -> ((SourcePageDto) o).setUrl(normaliseUrl(v.trim())))
+            .put(1, (v, o) -> ((SourcePageDto) o).setCategories(stream(v.split(",")).map(String::toLowerCase).collect(toList())))
+            .put(2, (v, o) -> ((SourcePageDto) o).setLanguages(Stream.of(v.trim().split(",")).collect(toList())))
+            .put(7, (v, o) -> ((SourcePageDto) o).setUrlNormalisation(UrlNormalisation.valueOf(v.trim())))
+            .put(3, INGESTION_CONSUMER)
             .put(4, INGESTION_CONSUMER)
             .put(5, INGESTION_CONSUMER)
             .put(6, INGESTION_CONSUMER)
-            .put(7, INGESTION_CONSUMER)
             .build();
 
-    private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 3, 8);
+    private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 8);
 
     @Autowired
     private IngestionSourceFacade sourceFacade;

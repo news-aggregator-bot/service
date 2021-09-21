@@ -3,6 +3,7 @@ package bepicky.service.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "content_tag")
 @EqualsAndHashCode(callSuper = true)
+@ToString(includeFieldNames = false)
 public class ContentTag extends IdEntity {
 
     @Enumerated(EnumType.STRING)

@@ -76,10 +76,10 @@ public class NewsApprover extends FuncSupport {
 
     private void analyseSourcePage(SourcePage sourcePage) {
         Source source = sourcePage.getSource();
-        log.info("approve:sourcepage:start:{}", sourcePage.getName());
+        log.info("approve:sourcepage:start:{}", sourcePage.getUrl());
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
-        byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getName());
+        byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
         String path = getPath(sourcePage);
         stub(path, pageContent);
         Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
@@ -88,9 +88,9 @@ public class NewsApprover extends FuncSupport {
             throw new IllegalStateException("Single note on the whole page? " + sourcePage.getUrl());
         }
 
-        newsContext.approve(sourcePage.getSource().getName(), sourcePage.getName(), freshNews);
+        newsContext.approve(sourcePage.getSource().getName(), sourcePage.getUrl(), freshNews);
 
-        log.info("approve:sourcepage:finish:{}", sourcePage.getName());
+        log.info("approve:sourcepage:finish:{}", sourcePage.getUrl());
     }
 
     @Configuration

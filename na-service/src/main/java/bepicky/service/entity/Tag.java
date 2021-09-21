@@ -19,6 +19,7 @@ import java.util.Set;
 @Entity
 @Table(name = "tag")
 @EqualsAndHashCode(callSuper = true)
+@ToString(includeFieldNames = false)
 public class Tag extends DatedEntity {
 
     @Column(nullable = false, unique = true, length = 50)

@@ -40,9 +40,6 @@ import static javax.persistence.CascadeType.ALL;
 public class SourcePage extends DatedEntity {
 
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
     private String url;
 
     @Transient

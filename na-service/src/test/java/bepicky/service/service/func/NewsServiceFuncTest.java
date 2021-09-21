@@ -129,19 +129,19 @@ public class NewsServiceFuncTest extends FuncSupport {
 
     private Pair<SourcePage, List<Mismatch>> analyseSourcePage(SourcePage sourcePage) {
         Source source = sourcePage.getSource();
-        log.info("func:sourcepage:start:{}", sourcePage.getName());
+        log.info("func:sourcepage:start:{}", sourcePage.getUrl());
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
-        byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getName());
+        byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
         String path = getPath(sourcePage);
         stub(path, pageContent);
         Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
         stubVerify(path);
 
-        Set<NewsNote> expectedNotes = newsContext.get(source.getName().toLowerCase(), sourcePage.getName());
+        Set<NewsNote> expectedNotes = newsContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
 
         List<Mismatch> mismatches = mismatchAnalyzer.analyse(expectedNotes, freshNews);
-        log.info("func:sourcepage:finish:{}", sourcePage.getName());
+        log.info("func:sourcepage:finish:{}", sourcePage.getUrl());
         return Pair.create(sourcePage, mismatches);
     }
 

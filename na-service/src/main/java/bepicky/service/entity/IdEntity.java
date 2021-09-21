@@ -8,11 +8,13 @@ import javax.persistence.MappedSuperclass;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @MappedSuperclass
 @Data
 @EqualsAndHashCode
+@ToString(includeFieldNames = false)
 public class IdEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

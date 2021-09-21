@@ -23,6 +23,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "language")
+@ToString(includeFieldNames = false)
 public class Language {
 
     @Id

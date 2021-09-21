@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Entity
 @Table(name = "content_block")
 @EqualsAndHashCode(callSuper = true)
-@ToString
+@ToString(includeFieldNames = false)
 public class ContentBlock extends IdEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
