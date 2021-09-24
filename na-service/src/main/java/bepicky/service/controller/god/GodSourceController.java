@@ -1,7 +1,7 @@
 package bepicky.service.controller.god;
 
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.entity.Source;
+import bepicky.service.entity.SourceEntity;
 import bepicky.service.facade.functional.ISourceFunctionalFacade;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
@@ -31,7 +31,7 @@ public class GodSourceController {
 
     @PutMapping("/source/{id}")
     public void enableSource(@PathVariable long id, @RequestParam String status) {
-        Source.Status sourceStatus = Source.Status.valueOf(status.toUpperCase());
+        SourceEntity.Status sourceStatus = SourceEntity.Status.valueOf(status.toUpperCase());
         sourceService.updateStatus(id, sourceStatus);
     }
 
@@ -41,12 +41,12 @@ public class GodSourceController {
     }
 
     @GetMapping("/source/list")
-    public List<Source> listSources() {
+    public List<SourceEntity> listSources() {
         return sourceService.findAll();
     }
 
     @GetMapping("/source/{id}")
-    public Source getSource(@PathVariable long id) {
+    public SourceEntity getSource(@PathVariable long id) {
         return sourceService.find(id)
             .orElseThrow(() -> new ResourceNotFoundException("source not found"));
     }
@@ -58,7 +58,7 @@ public class GodSourceController {
 
     @PutMapping("/source/{id}/fetch-period/{fetchPeriod}")
     public void disableSource(@PathVariable long id, @PathVariable String fetchPeriod) {
-        Source.FetchPeriod sFetchPeriod = Source.FetchPeriod.valueOf(fetchPeriod);
+        SourceEntity.FetchPeriod sFetchPeriod = SourceEntity.FetchPeriod.valueOf(fetchPeriod);
         sourceService.updateFetchPeriod(id, sFetchPeriod);
     }
 

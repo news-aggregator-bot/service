@@ -165,6 +165,11 @@
             <artifactId>common-communication</artifactId>
             <version>1.2-29-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>bepicky</groupId>
+            <artifactId>data-reader-communication</artifactId>
+            <version>0.0-data-reader-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

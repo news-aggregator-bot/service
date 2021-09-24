@@ -1,6 +1,6 @@
 package bepicky.service;
 
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.SourcePageEntity;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import org.junit.jupiter.api.AfterAll;
@@ -41,7 +41,7 @@ public abstract class FuncSupport {
         wireMockServer.verify(getRequestedFor(urlEqualTo(path)));
     }
 
-    protected String getPath(SourcePage sourcePage) {
+    protected String getPath(SourcePageEntity sourcePage) {
         try {
             return new URL(sourcePage.getUrl()).getPath();
         } catch (MalformedURLException e) {

@@ -1,6 +1,6 @@
 package bepicky.service.repository;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,25 +13,25 @@ import java.util.Optional;
 import java.util.Set;
 
 @Repository
-public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
+public interface NewsNoteRepository extends JpaRepository<NewsNoteEntity, Long> {
 
-    List<NewsNote> findAllByNormalisedTitle(String normalisedTitle);
+    List<NewsNoteEntity> findAllByNormalisedTitle(String normalisedTitle);
 
-    Optional<NewsNote> findTopByNormalisedTitleOrderByIdDesc(String normalisedTitle);
+    Optional<NewsNoteEntity> findTopByNormalisedTitleOrderByIdDesc(String normalisedTitle);
 
     boolean existsByUrl(String url);
 
     boolean existsByNormalisedTitle(String title);
 
-    Set<NewsNote> findByIdGreaterThan(Long id);
+    Set<NewsNoteEntity> findByIdGreaterThan(Long id);
 
-    Set<NewsNote> findByCreationDateBetween(Date startDate, Date endDate);
+    Set<NewsNoteEntity> findByCreationDateBetween(Date startDate, Date endDate);
 
-    Set<NewsNote> findByCreationDateBefore(Date limit);
+    Set<NewsNoteEntity> findByCreationDateBefore(Date limit);
 
-    Page<NewsNote> findByNormalisedTitleContainsOrderByCreationDateDesc(String key, Pageable pageable);
+    Page<NewsNoteEntity> findByNormalisedTitleContainsOrderByCreationDateDesc(String key, Pageable pageable);
 
-    Page<NewsNote> findByNormalisedTitleInOrderByCreationDateDesc(Collection<String> keys, Pageable pageable);
+    Page<NewsNoteEntity> findByNormalisedTitleInOrderByCreationDateDesc(Collection<String> keys, Pageable pageable);
 
-    List<NewsNote> findAllByIdIn(Collection<Long> ids);
+    List<NewsNoteEntity> findAllByIdIn(Collection<Long> ids);
 }

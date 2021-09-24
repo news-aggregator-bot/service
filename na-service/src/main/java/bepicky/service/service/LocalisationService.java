@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Localisation;
+import bepicky.service.entity.LocalisationEntity;
 import bepicky.service.repository.LocalisationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,27 +17,27 @@ public class LocalisationService implements ILocalisationService{
     private LocalisationRepository localisationRepository;
 
     @Override
-    public List<Localisation> saveAll(Collection<Localisation> categories) {
+    public List<LocalisationEntity> saveAll(Collection<LocalisationEntity> categories) {
         return localisationRepository.saveAll(categories);
     }
 
     @Override
-    public List<Localisation> findByValue(String value) {
+    public List<LocalisationEntity> findByValue(String value) {
         return localisationRepository.findByValue(value);
     }
 
     @Override
-    public List<Localisation> getAll() {
+    public List<LocalisationEntity> getAll() {
         return localisationRepository.findAll();
     }
 
     @Override
-    public void deleteAll(Collection<Localisation> localisations) {
+    public void deleteAll(Collection<LocalisationEntity> localisations) {
         localisationRepository.deleteAll(localisations);
     }
 
     @Override
-    public void delete(Localisation categoryLocalisation) {
+    public void delete(LocalisationEntity categoryLocalisation) {
         log.info("localisation:delete:{}", categoryLocalisation);
         localisationRepository.delete(categoryLocalisation);
     }

@@ -1,6 +1,6 @@
 package bepicky.service.repository;
 
-import bepicky.service.entity.Category;
+import bepicky.service.entity.CategoryEntity;
 import bepicky.service.entity.CategoryType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,22 +12,22 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Long>, JpaSpecificationExecutor<Category> {
+public interface CategoryRepository extends JpaRepository<CategoryEntity, Long>, JpaSpecificationExecutor<CategoryEntity> {
 
-    Optional<Category> findByName(String name);
+    Optional<CategoryEntity> findByName(String name);
 
-    List<Category> findAllByType(CategoryType type);
+    List<CategoryEntity> findAllByType(CategoryType type);
 
-    Page<Category> findAllByIdInAndIdNotIn(Iterable<Long> id, Iterable<Long> notInId, Pageable pageable);
+    Page<CategoryEntity> findAllByIdInAndIdNotIn(Iterable<Long> id, Iterable<Long> notInId, Pageable pageable);
 
-    Page<Category> findAllByParentOrderByNameAsc(Category parent, Pageable pageable);
+    Page<CategoryEntity> findAllByParentOrderByNameAsc(CategoryEntity parent, Pageable pageable);
 
-    List<Category> findAllByParent(Category parent);
+    List<CategoryEntity> findAllByParent(CategoryEntity parent);
 
-    Page<Category> findAllByTypeAndParentIsNullOrderByNameAsc(CategoryType type, Pageable pageable);
+    Page<CategoryEntity> findAllByTypeAndParentIsNullOrderByNameAsc(CategoryType type, Pageable pageable);
 
-    List<Category> findAllByReaders_IdAndParent(long id, Category parent);
+    List<CategoryEntity> findAllByReaders_IdAndParent(long id, CategoryEntity parent);
 
-    Page<Category> findAllByReaders_IdAndParent(long id, Category parent, Pageable pageable);
+    Page<CategoryEntity> findAllByReaders_IdAndParent(long id, CategoryEntity parent, Pageable pageable);
 
 }

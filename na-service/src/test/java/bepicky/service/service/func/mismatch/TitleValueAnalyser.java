@@ -1,12 +1,12 @@
 package bepicky.service.service.func.mismatch;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 public class TitleValueAnalyser implements ValueAnalyzer {
 
     @Override
     public String analyse(
-        NewsNote expected, NewsNote actual
+        NewsNoteEntity expected, NewsNoteEntity actual
     ) {
         return expected.getTitle().equals(actual.getTitle()) ?
             null :

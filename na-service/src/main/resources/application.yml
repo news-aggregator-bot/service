@@ -75,6 +75,9 @@ topics:
     notification:
       new: newsnote.notification
       success: newsnote.notification.success
+    read:
+      start: reader.parse
+      finish: reader.parse.finish
 #logging:
 #  level:
 #    org:

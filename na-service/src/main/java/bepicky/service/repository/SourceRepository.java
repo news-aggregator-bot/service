@@ -1,6 +1,6 @@
 package bepicky.service.repository;
 
-import bepicky.service.entity.Source;
+import bepicky.service.entity.SourceEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface SourceRepository extends JpaRepository<Source, Long> {
+public interface SourceRepository extends JpaRepository<SourceEntity, Long> {
 
-    Optional<Source> findByName(String name);
+    Optional<SourceEntity> findByName(String name);
 
-    List<Source> findByStatusNotAndFetchPeriod(Source.Status status, Source.FetchPeriod fetchPeriod);
+    List<SourceEntity> findByStatusNotAndFetchPeriod(SourceEntity.Status status, SourceEntity.FetchPeriod fetchPeriod);
 
-    Page<Source> findByStatusOrderByNameAsc(Source.Status status, Pageable pageable);
+    Page<SourceEntity> findByStatusOrderByNameAsc(SourceEntity.Status status, Pageable pageable);
 }

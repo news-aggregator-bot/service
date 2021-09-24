@@ -1,8 +1,7 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Category;
+import bepicky.service.entity.CategoryEntity;
 import bepicky.service.entity.CategoryType;
-import bepicky.service.repository.LocalisationRepository;
 import bepicky.service.repository.CategoryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,34 +25,34 @@ public class CategoryService implements ICategoryService {
     private CategoryRepository repository;
 
     @Override
-    public Category save(Category category) {
+    public CategoryEntity save(CategoryEntity category) {
         log.info("category:save:{}", category);
         return repository.save(category);
     }
 
     @Override
-    public List<Category> saveAll(Collection<Category> categories) {
+    public List<CategoryEntity> saveAll(Collection<CategoryEntity> categories) {
         log.info("category:save:{}", categories);
         return repository.saveAll(categories);
     }
 
     @Override
-    public List<Category> getAll() {
+    public List<CategoryEntity> getAll() {
         return repository.findAll();
     }
 
     @Override
-    public Set<Category> getAllByType(CategoryType type) {
+    public Set<CategoryEntity> getAllByType(CategoryType type) {
         return new HashSet<>(repository.findAllByType(type));
     }
 
     @Override
-    public Page<Category> findByParent(Category parent, Pageable pageable) {
+    public Page<CategoryEntity> findByParent(CategoryEntity parent, Pageable pageable) {
         return repository.findAllByParentOrderByNameAsc(parent, pageable);
     }
 
     @Override
-    public Page<Category> findTopCategories(CategoryType type, Pageable pageable) {
+    public Page<CategoryEntity> findTopCategories(CategoryType type, Pageable pageable) {
         return repository.findAllByTypeAndParentIsNullOrderByNameAsc(
             type,
             pageable
@@ -61,17 +60,17 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Optional<Category> find(Long id) {
+    public Optional<CategoryEntity> find(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public Optional<Category> findByName(String name) {
+    public Optional<CategoryEntity> findByName(String name) {
         return repository.findByName(name);
     }
 
     @Override
-    public Optional<Category> delete(long id) {
+    public Optional<CategoryEntity> delete(long id) {
         return find(id).map(c -> {
             repository.delete(c);
             return c;
@@ -79,7 +78,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Optional<Category> deleteByName(String name) {
+    public Optional<CategoryEntity> deleteByName(String name) {
         return findByName(name).map(c -> {
             repository.delete(c);
             return c;

@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -12,29 +12,29 @@ import java.util.Set;
 
 public interface INewsNoteService {
 
-    NewsNote save(NewsNote note);
+    NewsNoteEntity save(NewsNoteEntity note);
 
-    Collection<NewsNote> saveAll(Collection<NewsNote> notes);
+    Collection<NewsNoteEntity> saveAll(Collection<NewsNoteEntity> notes);
 
-    Optional<NewsNote> find(Long id);
+    Optional<NewsNoteEntity> find(Long id);
 
-    List<NewsNote> findAllByNormalisedTitle(String title);
+    List<NewsNoteEntity> findAllByNormalisedTitle(String title);
 
-    Optional<NewsNote> findByNormalisedTitle(String title);
+    Optional<NewsNoteEntity> findByNormalisedTitle(String title);
 
-    Set<NewsNote> getAllAfter(Long id);
+    Set<NewsNoteEntity> getAllAfter(Long id);
 
-    Set<NewsNote> getNotesBetween(Date from, Date to);
+    Set<NewsNoteEntity> getNotesBetween(Date from, Date to);
 
-    Set<NewsNote> getTodayNotes();
+    Set<NewsNoteEntity> getTodayNotes();
 
-    Set<NewsNote> archiveEarlierThan(int months);
+    Set<NewsNoteEntity> archiveEarlierThan(int months);
 
     boolean existsByUrl(String url);
 
     boolean existsByNormalisedTitle(String normalisedTitle);
 
-    Page<NewsNote> searchByTitle(String key, Pageable pageable);
+    Page<NewsNoteEntity> searchByTitle(String key, Pageable pageable);
 
-    List<NewsNote> refresh(long from, long to);
+    List<NewsNoteEntity> refresh(long from, long to);
 }

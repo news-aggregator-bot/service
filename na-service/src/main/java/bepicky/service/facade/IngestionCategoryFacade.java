@@ -1,11 +1,12 @@
 package bepicky.service.facade;
 
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.dto.CategoryDto;
-import bepicky.service.domain.dto.LocalisationDto;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Localisation;
-import bepicky.service.entity.Language;
+import bepicky.service.dto.CategoryDto;
+import bepicky.service.dto.Ids;
+import bepicky.service.dto.LocalisationDto;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.LocalisationEntity;
+import bepicky.service.entity.LanguageEntity;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.ILocalisationService;
@@ -29,38 +30,38 @@ public class IngestionCategoryFacade {
     private ILocalisationService localisationService;
 
     @Transactional
-    public List<Category> ingest(List<CategoryDto> dtos) {
-        List<Category> categories = dtos.stream()
+    public List<CategoryEntity> ingest(List<CategoryDto> dtos) {
+        List<CategoryEntity> categories = dtos.stream()
             .map(this::getCategory)
             .collect(Collectors.toList());
         return categoryService.saveAll(categories);
     }
 
-    private Category getCategory(CategoryDto dto) {
-        Category c = categoryService.findByName(dto.getName()).orElseGet(() -> {
-            Category category = new Category();
+    private CategoryEntity getCategory(CategoryDto dto) {
+        CategoryEntity c = categoryService.findByName(dto.getName()).orElseGet(() -> {
+            CategoryEntity category = new CategoryEntity();
             category.setName(dto.getName());
             return category;
         });
-        Category parent = categoryService.findByName(dto.getParent()).orElse(null);
+        CategoryEntity parent = categoryService.findByName(dto.getParent()).orElse(null);
         c.setParent(parent);
         c.setType(dto.getType());
-        List<Localisation> localisations = convertTo(dto.getLocalisations());
+        List<LocalisationEntity> localisations = convertTo(dto.getLocalisations());
         localisationService.saveAll(localisations);
         c.setLocalisations(localisations);
         return c;
     }
 
-    public List<Localisation> convertTo(List<LocalisationDto> dtos) {
+    public List<LocalisationEntity> convertTo(List<LocalisationDto> dtos) {
         return dtos.stream().map(cl -> {
-                Language language = languageService.find(cl.getLanguage())
+                LanguageEntity language = languageService.find(cl.getLanguage())
                     .orElseThrow(() -> new ResourceNotFoundException(cl.getLanguage() + " language not found."));
                 return localisationService.findByValue(cl.getValue())
                     .stream()
                     .filter(value -> value.getLanguage().equals(language))
                     .findFirst()
                     .orElseGet(() -> {
-                        Localisation localisation = new Localisation();
+                        LocalisationEntity localisation = new LocalisationEntity();
                         localisation.setValue(cl.getValue());
                         localisation.setLanguage(language);
                         return localisation;

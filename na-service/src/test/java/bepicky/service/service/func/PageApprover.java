@@ -2,12 +2,9 @@ package bepicky.service.service.func;
 
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.configuration.WebPageReaderConfiguration;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
-import bepicky.service.entity.SourcePage;
-import bepicky.service.exception.SourceException;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.service.ISourcePageService;
-import bepicky.service.web.reader.WebPageReader;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,15 +13,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.nio.file.Path;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
 
 @SpringBootTest(classes = {NAService.class, PageApprover.PageApproverConfiguration.class})
 @Slf4j
@@ -37,9 +30,6 @@ public class PageApprover {
 
     @Autowired
     private SourceIngestionService sourceIS;
-
-    @Autowired
-    private List<WebPageReader> webPageReaders;
 
     private FuncSourceDataIngestor dataIngestor;
 
@@ -82,25 +72,25 @@ public class PageApprover {
             });
     }
 
-    private Document readDocument(SourcePage sourcePage) {
-        return webPageReaders.stream()
-            .map(reader -> {
-                try {
-                    return reader.read(sourcePage.getUrl());
-                } catch (SourceException e) {
-                    log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
-                    return null;
-                }
-            })
-            .filter(Objects::nonNull)
-            .max(Comparator.comparingInt(o -> o.html().length()))
-            .orElse(null);
+    private Document readDocument(SourcePageEntity sourcePage) {
+        return null;
+//            webPageReaders.stream()
+//            .map(reader -> {
+//                try {
+//                    return reader.read(sourcePage.getUrl());
+//                } catch (SourceException e) {
+//                    log.error("read:sourcepage:failed:{}", sourcePage.getUrl());
+//                    return null;
+//                }
+//            })
+//            .filter(Objects::nonNull)
+//            .max(Comparator.comparingInt(o -> o.html().length()))
+//            .orElse(null);
     }
 
     @Configuration
     @PropertySource(factory = YamlPropertySourceFactory.class, value = {"classpath:application-it.yml", "classpath:application-browser.yml"})
     @EnableTransactionManagement
-    @Import(WebPageReaderConfiguration.class)
     static class PageApproverConfiguration {
     }
 

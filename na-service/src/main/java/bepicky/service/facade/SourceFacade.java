@@ -1,7 +1,7 @@
 package bepicky.service.facade;
 
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.IContentTagService;
@@ -31,12 +31,12 @@ public class SourceFacade {
     @Autowired
     private ICategoryService categoryService;
 
-    public List<Source> getAllSources() {
+    public List<SourceEntity> getAllSources() {
         return sourceService.findAll();
     }
 
-    public List<SourcePage> getAllSourcePages(Long sourceId) {
-        Source source = sourceService.find(sourceId).orElseThrow(SourceNotFoundException::new);
+    public List<SourcePageEntity> getAllSourcePages(Long sourceId) {
+        SourceEntity source = sourceService.find(sourceId).orElseThrow(SourceNotFoundException::new);
         return sourcePageService.findBySource(source);
     }
 }

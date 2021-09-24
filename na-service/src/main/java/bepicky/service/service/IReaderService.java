@@ -1,28 +1,27 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.ReaderEntity;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 public interface IReaderService {
 
-    Reader register(Reader reader);
+    ReaderEntity register(ReaderEntity reader);
 
-    Reader update(Reader reader);
+    ReaderEntity update(ReaderEntity reader);
 
-    Optional<Reader> findById(long id);
+    Optional<ReaderEntity> findById(long id);
 
-    Optional<Reader> findByChatId(long chatId);
+    Optional<ReaderEntity> findByChatId(long chatId);
 
-    List<Reader> findAll();
+    List<ReaderEntity> findAll();
 
-    List<Reader> findAllEnabled();
+    List<ReaderEntity> findAllEnabled();
 
     void enableSleeping();
 
-    Reader updateStatus(long chatId, Reader.Status status);
+    ReaderEntity updateStatus(long chatId, ReaderEntity.Status status);
 
-    Optional<Reader> delete(long id);
+    Optional<ReaderEntity> delete(long id);
 }

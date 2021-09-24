@@ -3,29 +3,26 @@ package bepicky.service.service.func;
 import bepicky.service.FuncSupport;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.service.INewsService;
 import bepicky.service.service.ISourcePageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
+import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -74,15 +71,16 @@ public class NewsApprover extends FuncSupport {
     }
 
 
-    private void analyseSourcePage(SourcePage sourcePage) {
-        Source source = sourcePage.getSource();
+    private void analyseSourcePage(SourcePageEntity sourcePage) {
+        SourceEntity source = sourcePage.getSource();
         log.info("approve:sourcepage:start:{}", sourcePage.getUrl());
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
         byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
         String path = getPath(sourcePage);
         stub(path, pageContent);
-        Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
+        Set<NewsNoteEntity> freshNews = new HashSet<>();
+//            newsService.readFreshNews(sourcePage);
         stubVerify(path);
         if (freshNews.size() <= 1) {
             throw new IllegalStateException("Single note on the whole page? " + sourcePage.getUrl());

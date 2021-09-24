@@ -1,11 +1,11 @@
 package bepicky.service.service.func.mismatch;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 public class AuthorValueAnalyser implements ValueAnalyzer {
 
     @Override
-    public String analyse(NewsNote expected, NewsNote actual) {
+    public String analyse(NewsNoteEntity expected, NewsNoteEntity actual) {
         if (expected.getAuthor() != null && actual.getAuthor() != null) {
             return expected.getAuthor().equals(actual.getAuthor()) ?
                 null :

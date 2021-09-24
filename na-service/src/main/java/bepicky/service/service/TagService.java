@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Tag;
+import bepicky.service.entity.TagEntity;
 import bepicky.service.repository.TagRepository;
 import bepicky.service.service.util.IValueNormalisationService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,9 +23,9 @@ public class TagService implements ITagService {
     private IValueNormalisationService valueNormalisationService;
 
     @Override
-    public Tag create(String value) {
+    public TagEntity create(String value) {
         String normalised = valueNormalisationService.normaliseTag(value);
-        Tag tag = new Tag();
+        TagEntity tag = new TagEntity();
         tag.setValue(value);
         tag.setNormalisedValue(normalised);
         log.info("tag:new:{}", tag);
@@ -33,30 +33,30 @@ public class TagService implements ITagService {
     }
 
     @Override
-    public Tag save(Tag tag) {
+    public TagEntity save(TagEntity tag) {
         log.info("tag:save:{}", tag);
         return repository.save(tag);
     }
 
     @Override
-    public Tag get(String value) {
+    public TagEntity get(String value) {
         return repository.findByNormalisedValue(valueNormalisationService.normaliseTag(value))
             .orElseGet(() -> create(value));
     }
 
     @Override
-    public List<Tag> findAllByValue(String value) {
+    public List<TagEntity> findAllByValue(String value) {
         String normalisedVal = valueNormalisationService.normaliseTag(value);
         return repository.findByNormalisedValueContains(normalisedVal);
     }
 
     @Override
-    public Optional<Tag> findByValue(String value) {
+    public Optional<TagEntity> findByValue(String value) {
         return repository.findByNormalisedValue(value);
     }
 
     @Override
-    public Set<Tag> findByTitle(String title) {
+    public Set<TagEntity> findByTitle(String title) {
         return Arrays.stream(title.split("\\s+"))
             .map(valueNormalisationService::normaliseTag)
             .map(repository::findByNormalisedValue)
@@ -66,7 +66,7 @@ public class TagService implements ITagService {
     }
 
     @Override
-    public Optional<Tag> findById(Long id) {
+    public Optional<TagEntity> findById(Long id) {
         return repository.findById(id);
     }
 

@@ -4,23 +4,23 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface SourcePageRepository extends JpaRepository<SourcePage, Long>, JpaSpecificationExecutor<SourcePage> {
+public interface SourcePageRepository extends JpaRepository<SourcePageEntity, Long>, JpaSpecificationExecutor<SourcePageEntity> {
 
-    List<SourcePage> findAllBySource(Source source);
+    List<SourcePageEntity> findAllBySource(SourceEntity source);
 
-    List<SourcePage> findAllBySource(Source source, Pageable pageable);
+    List<SourcePageEntity> findAllBySource(SourceEntity source, Pageable pageable);
 
-    List<SourcePage> findAllByCategories(Category category);
+    List<SourcePageEntity> findAllByCategories(CategoryEntity category);
 
-    Optional<SourcePage> findByUrl(String url);
+    Optional<SourcePageEntity> findByUrl(String url);
 
-    long countBySource(Source source);
+    long countBySource(SourceEntity source);
 }

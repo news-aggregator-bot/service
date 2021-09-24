@@ -1,25 +1,24 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.ContentTag;
+import bepicky.service.entity.ContentTagEntity;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 public interface IContentTagService {
 
-    List<ContentTag> findAll();
+    List<ContentTagEntity> findAll();
 
-    List<ContentTag> findByIds(Collection<Long> ids);
+    List<ContentTagEntity> findByIds(Collection<Long> ids);
 
-    List<ContentTag> findByValue(String value);
+    List<ContentTagEntity> findByValue(String value);
 
-    Optional<ContentTag> findById(Long id);
+    Optional<ContentTagEntity> findById(Long id);
 
-    ContentTag save(ContentTag tag);
+    ContentTagEntity save(ContentTagEntity tag);
 
-    List<ContentTag> saveAll(Collection<ContentTag> tags);
+    List<ContentTagEntity> saveAll(Collection<ContentTagEntity> tags);
 
     void delete(Long id);
 }

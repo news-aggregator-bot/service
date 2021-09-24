@@ -1,10 +1,11 @@
 package bepicky.service.data.ingestor.service;
 
 import bepicky.service.data.ingestor.exception.DataIngestionException;
-import bepicky.service.domain.dto.ContentBlockDto;
-import bepicky.service.domain.dto.ContentTagDto;
-import bepicky.service.domain.dto.SourceDto;
-import bepicky.service.domain.dto.SourcePageDto;
+import bepicky.service.dto.ContentBlockDto;
+import bepicky.service.dto.ContentTagDto;
+import bepicky.service.dto.Ids;
+import bepicky.service.dto.SourceDto;
+import bepicky.service.dto.SourcePageDto;
 import bepicky.service.entity.ContentTagMatchStrategy;
 import bepicky.service.entity.UrlNormalisation;
 import bepicky.service.facade.IngestionSourceFacade;

@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.repository.SourcePageRepository;
 
 import java.util.Collection;
@@ -20,45 +20,50 @@ import java.util.Optional;
 @Transactional
 public class SourcePageService implements ISourcePageService {
 
-    @Autowired
-    private SourcePageRepository repository;
+    private final SourcePageRepository repository;
 
+    public SourcePageService(SourcePageRepository repository) {this.repository = repository;}
 
     @Override
-    public List<SourcePage> findAll() {
+    public Optional<SourcePageEntity> findById(Long id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public List<SourcePageEntity> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public List<SourcePage> findBySource(Source source) {
+    public List<SourcePageEntity> findBySource(SourceEntity source) {
         return repository.findAllBySource(source);
     }
 
     @Override
-    public List<SourcePage> findByCategory(Category category) {
+    public List<SourcePageEntity> findByCategory(CategoryEntity category) {
         return repository.findAllByCategories(category);
     }
 
     @Override
-    public Optional<SourcePage> findFirstBySource(Source source, Pageable pageable) {
+    public Optional<SourcePageEntity> findFirstBySource(SourceEntity source, Pageable pageable) {
         return repository.findAllBySource(source, pageable)
             .stream()
             .findFirst();
     }
 
     @Override
-    public Optional<SourcePage> findByUrl(String url) {
+    public Optional<SourcePageEntity> findByUrl(String url) {
         return repository.findByUrl(url);
     }
 
     @Override
-    public SourcePage save(SourcePage page) {
+    public SourcePageEntity save(SourcePageEntity page) {
         log.info("sourcepage:save:{}", page);
         return repository.save(page);
     }
 
     @Override
-    public Collection<SourcePage> save(Collection<SourcePage> pages) {
+    public Collection<SourcePageEntity> save(Collection<SourcePageEntity> pages) {
         log.info("sourcepage:save:{}", pages);
         return repository.saveAll(pages);
     }
@@ -69,7 +74,7 @@ public class SourcePageService implements ISourcePageService {
     }
 
     @Override
-    public long countBySource(Source source) {
+    public long countBySource(SourceEntity source) {
         return repository.countBySource(source);
     }
 
@@ -79,7 +84,7 @@ public class SourcePageService implements ISourcePageService {
     }
 
     @Override
-    public SourcePage changeSource(Source source, long id) {
+    public SourcePageEntity changeSource(SourceEntity source, long id) {
         return repository.findById(id)
             .map(sp -> {
                 sp.setSource(source);

@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.ContentBlock;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.ContentBlockEntity;
+import bepicky.service.entity.SourcePageEntity;
 
 import java.util.Collection;
 import java.util.List;
@@ -9,17 +9,17 @@ import java.util.Optional;
 
 public interface IContentBlockService {
 
-    List<ContentBlock> findAll();
+    List<ContentBlockEntity> findAll();
 
-    List<ContentBlock> findBySourcePage(SourcePage page);
+    List<ContentBlockEntity> findBySourcePage(SourcePageEntity page);
 
-    Optional<ContentBlock> findById(Long id);
+    Optional<ContentBlockEntity> findById(Long id);
 
-    ContentBlock save(ContentBlock block);
+    ContentBlockEntity save(ContentBlockEntity block);
 
-    List<ContentBlock> saveAll(Collection<ContentBlock> blocks);
+    List<ContentBlockEntity> saveAll(Collection<ContentBlockEntity> blocks);
 
     void delete(Long id);
 
-    void deleteAll(Collection<ContentBlock> blocks);
+    void deleteAll(Collection<ContentBlockEntity> blocks);
 }

@@ -1,24 +1,23 @@
 package bepicky.service.facade;
 
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.dto.ContentBlockDto;
-import bepicky.service.domain.dto.ContentTagDto;
-import bepicky.service.domain.dto.SourceDto;
-import bepicky.service.domain.dto.SourcePageDto;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.ContentBlock;
-import bepicky.service.entity.ContentTag;
-import bepicky.service.entity.Language;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.dto.ContentBlockDto;
+import bepicky.service.dto.ContentTagDto;
+import bepicky.service.dto.Ids;
+import bepicky.service.dto.SourceDto;
+import bepicky.service.dto.SourcePageDto;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.ContentBlockEntity;
+import bepicky.service.entity.ContentTagEntity;
+import bepicky.service.entity.LanguageEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.IContentBlockService;
 import bepicky.service.service.IContentTagService;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,12 +50,12 @@ public class IngestionSourceFacade {
     @Autowired
     private ICategoryService categoryService;
 
-    public Source ingest(SourceDto srcDto) {
-        Source source = getSource(srcDto);
+    public SourceEntity ingest(SourceDto srcDto) {
+        SourceEntity source = getSource(srcDto);
         Set<String> pages = new HashSet<>();
         for (SourcePageDto pageDto : srcDto.getPages()) {
-            SourcePage srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
-                SourcePage srcPg = new SourcePage();
+            SourcePageEntity srcPage = sourcePageService.findByUrl(pageDto.getUrl()).orElseGet(() -> {
+                SourcePageEntity srcPg = new SourcePageEntity();
                 srcPg.setUrl(pageDto.getUrl());
                 return srcPg;
             });
@@ -65,15 +64,15 @@ public class IngestionSourceFacade {
             srcPage.setSource(source);
             srcPage.setLanguages(findLanguages(pageDto));
             srcPage.setCategories(findCategories(pageDto));
-            SourcePage savedSrcPage = sourcePageService.save(srcPage);
+            SourcePageEntity savedSrcPage = sourcePageService.save(srcPage);
 
-            List<ContentBlock> contentBlocks = pageDto.getBlocks()
+            List<ContentBlockEntity> contentBlocks = pageDto.getBlocks()
                 .stream()
                 .map(cb -> buildContentBlock(savedSrcPage, cb))
                 .collect(Collectors.toList());
-            Set<ContentBlock> set = new HashSet<>(contentBlocks);
+            Set<ContentBlockEntity> set = new HashSet<>(contentBlocks);
             if (savedSrcPage.getContentBlocks() != null) {
-                Set<ContentBlock> srcPageContentBlocks = savedSrcPage.getContentBlocks();
+                Set<ContentBlockEntity> srcPageContentBlocks = savedSrcPage.getContentBlocks();
                 savedSrcPage.setContentBlocks(null);
                 contentBlockService.deleteAll(srcPageContentBlocks);
             }
@@ -89,36 +88,36 @@ public class IngestionSourceFacade {
         return source;
     }
 
-    private Source getSource(SourceDto srcDto) {
-        Optional<Source> source = sourceService.findByName(srcDto.getName());
+    private SourceEntity getSource(SourceDto srcDto) {
+        Optional<SourceEntity> source = sourceService.findByName(srcDto.getName());
         if (source.isPresent()) {
             return source.get();
         }
-        Source newSrc = new Source();
+        SourceEntity newSrc = new SourceEntity();
         newSrc.setName(srcDto.getName());
         return sourceService.save(newSrc);
     }
 
-    private ContentBlock buildContentBlock(SourcePage page, ContentBlockDto dto) {
-        Set<ContentTag> contentTags = dto.getContentTags()
+    private ContentBlockEntity buildContentBlock(SourcePageEntity page, ContentBlockDto dto) {
+        Set<ContentTagEntity> contentTags = dto.getContentTags()
             .stream()
             .map(this::findContentTag)
             .collect(Collectors.toSet());
         contentTagService.saveAll(contentTags);
 
-        ContentBlock block = new ContentBlock();
+        ContentBlockEntity block = new ContentBlockEntity();
         block.setSourcePage(page);
         block.setTags(contentTags);
         return block;
     }
 
-    private ContentTag findContentTag(ContentTagDto tag) {
+    private ContentTagEntity findContentTag(ContentTagDto tag) {
         return contentTagService.findByValue(tag.getValue())
             .stream()
             .filter(t -> t.getType() == tag.getType() && t.getMatchStrategy() == tag.getMatchStrategy())
             .findFirst()
             .orElseGet(() -> {
-                ContentTag contentTag = new ContentTag();
+                ContentTagEntity contentTag = new ContentTagEntity();
                 contentTag.setType(tag.getType());
                 contentTag.setValue(tag.getValue());
                 contentTag.setMatchStrategy(tag.getMatchStrategy());
@@ -126,15 +125,15 @@ public class IngestionSourceFacade {
             });
     }
 
-    private Set<Language> findLanguages(SourcePageDto pageDto) {
+    private Set<LanguageEntity> findLanguages(SourcePageDto pageDto) {
         return pageDto.getLanguages().stream().map(this::findLanguage).collect(Collectors.toSet());
     }
 
-    private Language findLanguage(String l) {
+    private LanguageEntity findLanguage(String l) {
         return languageService.find(l).orElseThrow(() -> new ResourceNotFoundException(l + " language not found."));
     }
 
-    private List<Category> findCategories(SourcePageDto pageDto) {
+    private List<CategoryEntity> findCategories(SourcePageDto pageDto) {
         try {
             return pageDto.getCategories()
                 .stream()
@@ -145,7 +144,7 @@ public class IngestionSourceFacade {
         }
     }
 
-    private Category getCategory(String c) {
+    private CategoryEntity getCategory(String c) {
         return categoryService.findByName(c.trim())
             .orElseThrow(() -> new ResourceNotFoundException(c + " category not found."));
     }

@@ -1,8 +1,8 @@
 package bepicky.service.schedule;
 
-import bepicky.service.domain.mapper.NewsNoteDtoMapper;
-import bepicky.service.entity.NewsNoteNotification;
-import bepicky.service.entity.Reader;
+import bepicky.service.dto.mapper.NewsNoteDtoMapper;
+import bepicky.service.entity.NewsNoteNotificationEntity;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.nats.publisher.NewsNotificationPublisher;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
@@ -51,8 +51,8 @@ public class NewsNotifier {
         }
     }
 
-    private void notify(List<NewsNoteNotification> allNotifications) {
-        Reader r = allNotifications.get(0).getReader();
+    private void notify(List<NewsNoteNotificationEntity> allNotifications) {
+        ReaderEntity r = allNotifications.get(0).getReader();
         allNotifications.stream()
             .limit(5)
             .map(n -> newsNoteDtoMapper.toNotificationDto(n))

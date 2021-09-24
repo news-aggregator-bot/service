@@ -1,27 +1,21 @@
 package bepicky.service.service;
 
-import bepicky.service.domain.NewsSyncResult;
-import bepicky.service.domain.PageParsedData;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
-import bepicky.service.entity.Tag;
-import bepicky.service.exception.SourceNotFoundException;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.SourcePageEntity;
+import bepicky.service.entity.TagEntity;
 import bepicky.service.service.util.IValueNormalisationService;
-import bepicky.service.web.parser.WebContentParser;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import picky.data.reader.dto.ParsedSourcePageDto;
+import picky.data.reader.dto.ParsedNewsNoteDto;
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 @Transactional
@@ -30,60 +24,45 @@ public class NewsService implements INewsService {
 
     private static final int MAX_LINK_LENGTH = 251;
 
-    @Autowired
-    private ISourceService sourceService;
+    private final INewsNoteService newsNoteService;
 
-    @Autowired
-    private INewsNoteService newsNoteService;
+    private final ISourcePageService spService;
 
-    @Autowired
-    private WebContentParser defaultParser;
+    private final IValueNormalisationService normalisationService;
 
-    @Autowired
-    private IValueNormalisationService normalisationService;
-
-    @Autowired
-    private ITagService tagService;
+    private final ITagService tagService;
 
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
 
-    @Override
-    public NewsSyncResult sync(String name) {
-        Source source = sourceService.findByName(name).orElseThrow(SourceNotFoundException::new);
-        Set<NewsNote> freshNews = syncSource(source);
-        Set<NewsNote> savedNotes = freshNews.isEmpty() ? freshNews : new HashSet<>(newsNoteService.saveAll(freshNews));
-        return NewsSyncResult.builder().newsNotes(savedNotes).build();
+    public NewsService(
+        INewsNoteService newsNoteService,
+        ISourcePageService spService,
+        IValueNormalisationService normalisationService,
+        ITagService tagService
+    ) {
+        this.newsNoteService = newsNoteService;
+        this.spService = spService;
+        this.normalisationService = normalisationService;
+        this.tagService = tagService;
     }
 
     @Override
-    public NewsSyncResult read(SourcePage sourcePage) {
-        Set<NewsNote> freshNews = readFreshNews(sourcePage);
-        Set<NewsNote> savedNotes = freshNews.isEmpty() ? freshNews : new HashSet<>(newsNoteService.saveAll(freshNews));
-        return NewsSyncResult.builder().newsNotes(savedNotes).build();
-    }
-
-    @Override
-    public Set<NewsNote> readFreshNews(SourcePage sourcePage) {
-        return process(sourcePage)
-            .collect(Collectors.toSet());
-    }
-
-    private Set<NewsNote> syncSource(Source source) {
-        return source.getPages()
-            .parallelStream()
-            .flatMap(this::process)
-            .collect(Collectors.toSet());
-    }
-
-    private Stream<NewsNote> process(SourcePage page) {
-        return defaultParser.parse(page)
+    public void handleParsed(ParsedSourcePageDto sourcePage) {
+        SourcePageEntity sp = spService.findById(sourcePage.getId())
+            .orElseThrow(() -> new IllegalArgumentException("source page doesn't exist " + sourcePage.getId()));
+        Set<NewsNoteEntity> freshNews = sourcePage.getPages()
             .stream()
-            .filter(d -> validLink(page, d))
-            .map(d -> toNote(page, d));
+            .filter(d -> validLink(sp, d))
+            .map(d -> toNoteEntity(sp, d))
+            .collect(Collectors.toSet());
+        if (!freshNews.isEmpty()) {
+            log.info("news:parsed: {} : {}", sp.getUrl(), freshNews.size());
+            newsNoteService.saveAll(freshNews);
+        }
     }
 
-    private boolean validLink(SourcePage page, PageParsedData d) {
+    private boolean validLink(SourcePageEntity page, ParsedNewsNoteDto d) {
         if (StringUtils.isBlank(d.getLink())) {
             log.debug("news:skip:empty link:" + d.getLink());
             return false;
@@ -99,7 +78,7 @@ public class NewsService implements INewsService {
         return !newsNoteService.existsByUrl(d.getLink());
     }
 
-    private NewsNote toNote(SourcePage page, PageParsedData data) {
+    private NewsNoteEntity toNoteEntity(SourcePageEntity page, ParsedNewsNoteDto data) {
         String title = normalisationService.trimTitle(data.getTitle());
         String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
@@ -108,8 +87,8 @@ public class NewsService implements INewsService {
                 n.addSourcePage(page);
                 return n;
             }).orElseGet(() -> {
-                NewsNote note = new NewsNote();
-                Set<Tag> tagsTitle = tagService.findByTitle(title);
+                NewsNoteEntity note = new NewsNoteEntity();
+                Set<TagEntity> tagsTitle = tagService.findByTitle(title);
                 note.setTitle(title);
                 note.setNormalisedTitle(normTitle);
                 note.setUrl(data.getLink());

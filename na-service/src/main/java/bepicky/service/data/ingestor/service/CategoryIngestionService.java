@@ -1,8 +1,9 @@
 package bepicky.service.data.ingestor.service;
 
 import bepicky.service.data.ingestor.exception.DataIngestionException;
-import bepicky.service.domain.dto.CategoryDto;
-import bepicky.service.domain.dto.LocalisationDto;
+import bepicky.service.dto.CategoryDto;
+import bepicky.service.dto.Ids;
+import bepicky.service.dto.LocalisationDto;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.facade.IngestionCategoryFacade;
 import lombok.extern.slf4j.Slf4j;

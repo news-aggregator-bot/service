@@ -1,11 +1,11 @@
 package bepicky.service.service.func.mismatch;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 public class UrlValueAnalyser implements ValueAnalyzer {
 
     @Override
-    public String analyse(NewsNote expected, NewsNote actual) {
+    public String analyse(NewsNoteEntity expected, NewsNoteEntity actual) {
         return expected.getUrl().equals(actual.getUrl()) ? null : mismatchMsg(expected.getUrl(), actual.getUrl());
     }
 

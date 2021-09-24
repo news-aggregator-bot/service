@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Source;
+import bepicky.service.entity.SourceEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -9,25 +9,25 @@ import java.util.Optional;
 
 public interface ISourceService {
 
-    Source create(String name);
+    SourceEntity create(String name);
 
-    Source save(Source src);
+    SourceEntity save(SourceEntity src);
 
-    List<Source> findAll();
+    List<SourceEntity> findAll();
 
-    List<Source> findAllEnabledByFetchPeriod(Source.FetchPeriod fetchPeriod);
+    List<SourceEntity> findAllEnabledByFetchPeriod(SourceEntity.FetchPeriod fetchPeriod);
 
-    Page<Source> findAllEnabled(Pageable pageable);
+    Page<SourceEntity> findAllEnabled(Pageable pageable);
 
-    Optional<Source> find(Long id);
+    Optional<SourceEntity> find(Long id);
 
-    Optional<Source> findByName(String name);
+    Optional<SourceEntity> findByName(String name);
 
-    Optional<Source> findById(long id);
+    Optional<SourceEntity> findById(long id);
 
-    Source updateStatus(Long id, Source.Status status);
+    SourceEntity updateStatus(Long id, SourceEntity.Status status);
 
-    Source disable(Long id);
+    SourceEntity disable(Long id);
 
-    Source updateFetchPeriod(Long id, Source.FetchPeriod fetchPeriod);
+    SourceEntity updateFetchPeriod(Long id, SourceEntity.FetchPeriod fetchPeriod);
 }

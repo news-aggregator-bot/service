@@ -3,12 +3,10 @@ package bepicky.service.service.func;
 import bepicky.service.FuncSupport;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.service.INewsService;
 import bepicky.service.service.ISourceService;
 import bepicky.service.service.func.mismatch.Mismatch;
@@ -18,17 +16,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.util.Pair;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -81,10 +78,10 @@ public class NewsServiceFuncTest extends FuncSupport {
         log.info("ingest:source:start");
         dataIngestor.ingestSources();
         log.info("ingest:source:finish");
-        List<Source> ingestedSources = sourceService.findAll();
+        List<SourceEntity> ingestedSources = sourceService.findAll();
         assertFalse(ingestedSources.isEmpty());
 
-        List<Pair<Source, List<Pair<SourcePage, List<Mismatch>>>>> sourceMismatches = ingestedSources
+        List<Pair<SourceEntity, List<Pair<SourcePageEntity, List<Mismatch>>>>> sourceMismatches = ingestedSources
             .stream()
             .map(this::analyseSource)
             .filter(p -> !p.getValue().isEmpty())
@@ -95,7 +92,7 @@ public class NewsServiceFuncTest extends FuncSupport {
         }
     }
 
-    private String buildErrMsg(List<Pair<Source, List<Pair<SourcePage, List<Mismatch>>>>> sourceMismatches) {
+    private String buildErrMsg(List<Pair<SourceEntity, List<Pair<SourcePageEntity, List<Mismatch>>>>> sourceMismatches) {
         return sourceMismatches.stream()
             .map(s -> {
                 String sourcePageMismatchMsg = s.getValue().stream()
@@ -113,11 +110,11 @@ public class NewsServiceFuncTest extends FuncSupport {
             }).collect(Collectors.joining("\n-----------------NEXT-SOURCE-------------------\n"));
     }
 
-    private Pair<Source, List<Pair<SourcePage, List<Mismatch>>>> analyseSource(Source source) {
+    private Pair<SourceEntity, List<Pair<SourcePageEntity, List<Mismatch>>>> analyseSource(SourceEntity source) {
         log.info("func:source:start:{}", source.getName());
-        List<SourcePage> sourcePages = source.getPages();
+        List<SourcePageEntity> sourcePages = source.getPages();
         assertFalse(sourcePages.isEmpty());
-        List<Pair<SourcePage, List<Mismatch>>> sourcePagesMismatches = source.getPages()
+        List<Pair<SourcePageEntity, List<Mismatch>>> sourcePagesMismatches = source.getPages()
             .stream()
             .map(this::analyseSourcePage)
             .filter(Objects::nonNull)
@@ -127,18 +124,19 @@ public class NewsServiceFuncTest extends FuncSupport {
         return Pair.create(source, sourcePagesMismatches);
     }
 
-    private Pair<SourcePage, List<Mismatch>> analyseSourcePage(SourcePage sourcePage) {
-        Source source = sourcePage.getSource();
+    private Pair<SourcePageEntity, List<Mismatch>> analyseSourcePage(SourcePageEntity sourcePage) {
+        SourceEntity source = sourcePage.getSource();
         log.info("func:sourcepage:start:{}", sourcePage.getUrl());
         assertFalse(sourcePage.getContentBlocks().isEmpty());
 
         byte[] pageContent = pageContentContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
         String path = getPath(sourcePage);
         stub(path, pageContent);
-        Set<NewsNote> freshNews = newsService.readFreshNews(sourcePage);
+        Set<NewsNoteEntity> freshNews = new HashSet<>();
+//            newsService.readFreshNews(sourcePage);
         stubVerify(path);
 
-        Set<NewsNote> expectedNotes = newsContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
+        Set<NewsNoteEntity> expectedNotes = newsContext.get(source.getName().toLowerCase(), sourcePage.getUrl());
 
         List<Mismatch> mismatches = mismatchAnalyzer.analyse(expectedNotes, freshNews);
         log.info("func:sourcepage:finish:{}", sourcePage.getUrl());

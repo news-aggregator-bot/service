@@ -5,18 +5,18 @@ import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.dto.SourcePageDto;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.configuration.WebConfiguration;
-import bepicky.service.domain.mapper.CategoryDtoMapper;
-import bepicky.service.domain.mapper.NewsNoteDtoMapper;
-import bepicky.service.domain.mapper.SourcePageDtoMapper;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Localisation;
+import bepicky.service.dto.mapper.CategoryDtoMapper;
+import bepicky.service.dto.mapper.NewsNoteDtoMapper;
+import bepicky.service.dto.mapper.SourcePageDtoMapper;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.LocalisationEntity;
 import bepicky.service.entity.CategoryType;
-import bepicky.service.entity.Language;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.NewsNoteNotification;
-import bepicky.service.entity.Reader;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.LanguageEntity;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.NewsNoteNotificationEntity;
+import bepicky.service.entity.ReaderEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.nats.publisher.NewsNotificationPublisher;
 import bepicky.service.schedule.NewsNotifier;
 import bepicky.service.service.INewsNoteNotificationService;
@@ -62,17 +62,17 @@ public class NewsNotifierTest {
     @Test
     public void sync_FullNewsNote_ShouldSendCorrectNotifyNewsRequest() {
 
-        Language language = defaultLanguage();
-        Localisation usaLocalisation = defaultLocalisation(language);
-        Category regionUSA = regionCategory(usaLocalisation);
-        SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
+        LanguageEntity language = defaultLanguage();
+        LocalisationEntity usaLocalisation = defaultLocalisation(language);
+        CategoryEntity regionUSA = regionCategory(usaLocalisation);
+        SourcePageEntity sourcePage = sourcePage(Sets.newHashSet(language));
 
         sourcePage.setCategories(Arrays.asList(regionUSA));
         regionUSA.setSourcePages(Arrays.asList(sourcePage));
 
-        NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
-        Reader r = reader(1L, language);
-        NewsNoteNotification notification = newNoteNotification(note, r);
+        NewsNoteEntity note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
+        ReaderEntity r = reader(1L, language);
+        NewsNoteNotificationEntity notification = newNoteNotification(note, r);
 
         ArgumentCaptor<NewsNoteNotificationDto> notifyNewsAc = ArgumentCaptor.forClass(NewsNoteNotificationDto.class);
 
@@ -104,17 +104,17 @@ public class NewsNotifierTest {
     @Test
     public void sync_TagNewsNoteNotification_ShouldSendCorrectNotifyNewsRequest() {
 
-        Language language = defaultLanguage();
-        Localisation usaLocalisation = defaultLocalisation(language);
-        Category regionUSA = regionCategory(usaLocalisation);
-        SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
+        LanguageEntity language = defaultLanguage();
+        LocalisationEntity usaLocalisation = defaultLocalisation(language);
+        CategoryEntity regionUSA = regionCategory(usaLocalisation);
+        SourcePageEntity sourcePage = sourcePage(Sets.newHashSet(language));
 
         sourcePage.setCategories(Arrays.asList(regionUSA));
         regionUSA.setSourcePages(Arrays.asList(sourcePage));
 
-        NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
-        Reader r = reader(1L, language);
-        NewsNoteNotification notification = newNoteNotification(note, r, NewsNoteNotification.Link.TAG, "key");
+        NewsNoteEntity note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
+        ReaderEntity r = reader(1L, language);
+        NewsNoteNotificationEntity notification = newNoteNotification(note, r, NewsNoteNotificationEntity.Link.TAG, "key");
 
         ArgumentCaptor<NewsNoteNotificationDto> notifyNewsAc = ArgumentCaptor.forClass(NewsNoteNotificationDto.class);
 
@@ -144,30 +144,30 @@ public class NewsNotifierTest {
         assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
     }
 
-    private NewsNoteNotification newNoteNotification(NewsNote note, Reader r) {
-        NewsNoteNotification nnn = new NewsNoteNotification(r, note);
-        nnn.setLink(NewsNoteNotification.Link.CATEGORY);
+    private NewsNoteNotificationEntity newNoteNotification(NewsNoteEntity note, ReaderEntity r) {
+        NewsNoteNotificationEntity nnn = new NewsNoteNotificationEntity(r, note);
+        nnn.setLink(NewsNoteNotificationEntity.Link.CATEGORY);
         return nnn;
     }
 
-    private NewsNoteNotification newNoteNotification(NewsNote note, Reader r, NewsNoteNotification.Link link, String key) {
-        NewsNoteNotification nnn = new NewsNoteNotification(r, note);
+    private NewsNoteNotificationEntity newNoteNotification(NewsNoteEntity note, ReaderEntity r, NewsNoteNotificationEntity.Link link, String key) {
+        NewsNoteNotificationEntity nnn = new NewsNoteNotificationEntity(r, note);
         nnn.setLink(link);
         nnn.setLinkKey(key);
         return nnn;
     }
 
-    private Reader reader(Long id, Language language) {
-        Reader r = new Reader();
+    private ReaderEntity reader(Long id, LanguageEntity language) {
+        ReaderEntity r = new ReaderEntity();
         r.setId(System.currentTimeMillis());
-        r.setStatus(Reader.Status.ENABLED);
+        r.setStatus(ReaderEntity.Status.ENABLED);
         r.setChatId(id);
         r.setPrimaryLanguage(language);
         return r;
     }
 
-    private NewsNote newsNote(String title, String url, String author, SourcePage sourcePage) {
-        NewsNote note = new NewsNote();
+    private NewsNoteEntity newsNote(String title, String url, String author, SourcePageEntity sourcePage) {
+        NewsNoteEntity note = new NewsNoteEntity();
         note.setId(System.currentTimeMillis());
         note.setUrl(url);
         note.setTitle(title);
@@ -176,18 +176,18 @@ public class NewsNotifierTest {
         return note;
     }
 
-    private SourcePage sourcePage(Set<Language> languages) {
-        Source src = new Source();
+    private SourcePageEntity sourcePage(Set<LanguageEntity> languages) {
+        SourceEntity src = new SourceEntity();
         src.setName("name");
-        SourcePage sourcePage = new SourcePage();
+        SourcePageEntity sourcePage = new SourcePageEntity();
         sourcePage.setUrl(TEST_URL);
         sourcePage.setLanguages(languages);
         sourcePage.setSource(src);
         return sourcePage;
     }
 
-    private Category regionCategory(Localisation usaLocalisation) {
-        Category regionUSA = new Category();
+    private CategoryEntity regionCategory(LocalisationEntity usaLocalisation) {
+        CategoryEntity regionUSA = new CategoryEntity();
         regionUSA.setId(1L);
         regionUSA.setType(CategoryType.REGION);
         regionUSA.setName(TEST_USA);
@@ -195,15 +195,15 @@ public class NewsNotifierTest {
         return regionUSA;
     }
 
-    private Localisation defaultLocalisation(Language language) {
-        Localisation usaLocalisation = new Localisation();
+    private LocalisationEntity defaultLocalisation(LanguageEntity language) {
+        LocalisationEntity usaLocalisation = new LocalisationEntity();
         usaLocalisation.setValue(TEST_USA);
         usaLocalisation.setLanguage(language);
         return usaLocalisation;
     }
 
-    private Language defaultLanguage() {
-        Language language = new Language();
+    private LanguageEntity defaultLanguage() {
+        LanguageEntity language = new LanguageEntity();
         language.setLang("en");
         return language;
     }

@@ -9,11 +9,11 @@ import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.common.msg.CategoryCommandMsg;
 import bepicky.common.msg.CategoryListMsg;
 import bepicky.common.msg.ListCommand;
-import bepicky.service.domain.mapper.CategoryDtoMapper;
+import bepicky.service.dto.mapper.CategoryDtoMapper;
 import bepicky.service.domain.request.ListCategoryRequest;
-import bepicky.service.entity.Category;
+import bepicky.service.entity.CategoryEntity;
 import bepicky.service.entity.CategoryType;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -49,7 +49,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
     public CategoryListResponse listApplicable(Long chatId, String type) {
         return readerService.findByChatId(chatId).map(r -> {
             CategoryType cType = CategoryType.valueOf(type);
-            Set<Category> applicableReadersCategories = getApplicable(r, cType);
+            Set<CategoryEntity> applicableReadersCategories = getApplicable(r, cType);
             return new CategoryListResponse(
                 applicableReadersCategories.stream().map(c -> toDto(r, c)).collect(Collectors.toList()),
                 true,
@@ -124,22 +124,22 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
 
     @Override
     public CategoryResponse pickAll(CategoryCommandMsg m) {
-        return doAction(m, Reader::addAllCategories);
+        return doAction(m, ReaderEntity::addAllCategories);
     }
 
     @Override
     public CategoryResponse pick(CategoryCommandMsg m) {
-        return doAction(m, Reader::addCategory);
+        return doAction(m, ReaderEntity::addCategory);
     }
 
     @Override
     public CategoryResponse remove(CategoryCommandMsg m) {
-        return doAction(m, Reader::removeCategory);
+        return doAction(m, ReaderEntity::removeCategory);
     }
 
     @Override
     public CategoryResponse removeAll(CategoryCommandMsg m) {
-        return doAction(m, Reader::removeAllCategory);
+        return doAction(m, ReaderEntity::removeAllCategory);
     }
 
     @Override
@@ -160,13 +160,13 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         });
     }
 
-    private CategoryResponse doAction(CategoryCommandMsg m, BiConsumer<Reader, Category> action) {
-        Reader reader = readerService.findByChatId(m.getChatId()).orElse(null);
+    private CategoryResponse doAction(CategoryCommandMsg m, BiConsumer<ReaderEntity, CategoryEntity> action) {
+        ReaderEntity reader = readerService.findByChatId(m.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("category:{}:reader:{}:404", m.getCommand(), m.getChatId());
             return new CategoryResponse(ErrorUtil.readerNotFound());
         }
-        Category category = categoryService.find(m.getCategoryId()).orElse(null);
+        CategoryEntity category = categoryService.find(m.getCategoryId()).orElse(null);
         if (category == null) {
             log.warn("category:{}:{}:404", m.getCommand(), m.getCategoryId());
             return new CategoryResponse(ErrorUtil.categoryNotFound());
@@ -179,7 +179,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         );
     }
 
-    private CategoryListResponse getListCategoryResponse(Reader reader, Page<Category> categoryPage) {
+    private CategoryListResponse getListCategoryResponse(ReaderEntity reader, Page<CategoryEntity> categoryPage) {
         try {
             List<CategoryDto> dtos = categoryPage
                 .stream()
@@ -197,8 +197,8 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         }
     }
 
-    private Set<Category> getApplicable(Reader r, CategoryType cType) {
-        Set<Category> applicableReadersCategories = r.getSources().stream()
+    private Set<CategoryEntity> getApplicable(ReaderEntity r, CategoryType cType) {
+        Set<CategoryEntity> applicableReadersCategories = r.getSources().stream()
             .flatMap(s -> s.getPages().stream())
             .flatMap(sp -> sp.getCategories().stream())
             .filter(c -> c.getType().equals(cType))
@@ -206,7 +206,7 @@ public class CategoryFunctionalFacade implements ICategoryFunctionalFacade, Comm
         return applicableReadersCategories.isEmpty() ? categoryService.getAllByType(cType) : applicableReadersCategories;
     }
 
-    private CategoryDto toDto(Reader reader, Category c) {
+    private CategoryDto toDto(ReaderEntity reader, CategoryEntity c) {
         CategoryDto dto = categoryResponseMapper.toFullDto(c, reader.getPrimaryLanguage());
         dto.setPicked(reader.getCategories().contains(c));
         if (dto.getParent() != null) {

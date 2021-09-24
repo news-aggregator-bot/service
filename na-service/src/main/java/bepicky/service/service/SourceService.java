@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.entity.Source;
+import bepicky.service.entity.SourceEntity;
 import bepicky.service.repository.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,60 +22,60 @@ public class SourceService implements ISourceService {
     private SourceRepository repository;
 
     @Override
-    public Source create(String name) {
-        Source src = new Source();
+    public SourceEntity create(String name) {
+        SourceEntity src = new SourceEntity();
         src.setName(name);
         return save(src);
     }
 
     @Override
-    public Source save(Source src) {
+    public SourceEntity save(SourceEntity src) {
         log.info("source:save:{}", src);
         return repository.save(src);
     }
 
     @Override
-    public List<Source> findAll() {
+    public List<SourceEntity> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public List<Source> findAllEnabledByFetchPeriod(Source.FetchPeriod fetchPeriod) {
-        return repository.findByStatusNotAndFetchPeriod(Source.Status.DISABLED, fetchPeriod);
+    public List<SourceEntity> findAllEnabledByFetchPeriod(SourceEntity.FetchPeriod fetchPeriod) {
+        return repository.findByStatusNotAndFetchPeriod(SourceEntity.Status.DISABLED, fetchPeriod);
     }
 
     @Override
-    public Page<Source> findAllEnabled(Pageable pageable) {
-        return repository.findByStatusOrderByNameAsc(Source.Status.PRIMARY, pageable);
+    public Page<SourceEntity> findAllEnabled(Pageable pageable) {
+        return repository.findByStatusOrderByNameAsc(SourceEntity.Status.PRIMARY, pageable);
     }
 
     @Override
-    public Optional<Source> find(Long id) {
+    public Optional<SourceEntity> find(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public Optional<Source> findByName(String name) {
+    public Optional<SourceEntity> findByName(String name) {
         return repository.findByName(name);
     }
 
     @Override
-    public Optional<Source> findById(long id) {
+    public Optional<SourceEntity> findById(long id) {
         return repository.findById(id);
     }
 
     @Override
-    public Source updateStatus(Long id, Source.Status status) {
+    public SourceEntity updateStatus(Long id, SourceEntity.Status status) {
         return internalUpdateStatus(id, status);
     }
 
     @Override
-    public Source disable(Long id) {
-        return internalUpdateStatus(id, Source.Status.DISABLED);
+    public SourceEntity disable(Long id) {
+        return internalUpdateStatus(id, SourceEntity.Status.DISABLED);
     }
 
     @Override
-    public Source updateFetchPeriod(Long id, Source.FetchPeriod fetchPeriod) {
+    public SourceEntity updateFetchPeriod(Long id, SourceEntity.FetchPeriod fetchPeriod) {
         return find(id).map(s -> {
             s.setFetchPeriod(fetchPeriod);
             repository.save(s);
@@ -84,7 +84,7 @@ public class SourceService implements ISourceService {
         }).orElseThrow(() -> new ResourceNotFoundException("Source " + id + " not found."));
     }
 
-    private Source internalUpdateStatus(Long id, Source.Status status) {
+    private SourceEntity internalUpdateStatus(Long id, SourceEntity.Status status) {
         return find(id).map(s -> {
             s.setStatus(status);
             repository.save(s);

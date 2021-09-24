@@ -1,9 +1,9 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.NewsNoteNotification;
-import bepicky.service.entity.NewsNoteNotificationId;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.NewsNoteNotificationEntity;
+import bepicky.service.entity.NewsNoteNotificationIdEntity;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.repository.NewsNoteNotificationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +34,8 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     private INewsNoteService noteService;
 
     @Override
-    public NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key) {
-        NewsNoteNotification notification = new NewsNoteNotification(reader, note);
+    public NewsNoteNotificationEntity saveSingleNew(ReaderEntity reader, NewsNoteEntity note, NewsNoteNotificationEntity.Link link, String key) {
+        NewsNoteNotificationEntity notification = new NewsNoteNotificationEntity(reader, note);
         if (repository.existsById(notification.getId())) {
             return null;
         }
@@ -45,16 +45,16 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     }
 
     @Override
-    public List<NewsNoteNotification> saveNew(
-        Reader reader, Collection<NewsNote> notes
+    public List<NewsNoteNotificationEntity> saveNew(
+        ReaderEntity reader, Collection<NewsNoteEntity> notes
     ) {
-        List<NewsNoteNotification> newNoteNotifications = notes.stream()
+        List<NewsNoteNotificationEntity> newNoteNotifications = notes.stream()
             .map(n -> {
-                NewsNoteNotification notification = new NewsNoteNotification(reader, n);
+                NewsNoteNotificationEntity notification = new NewsNoteNotificationEntity(reader, n);
                 if (repository.existsById(notification.getId())) {
                     return null;
                 }
-                notification.setLink(NewsNoteNotification.Link.CATEGORY);
+                notification.setLink(NewsNoteNotificationEntity.Link.CATEGORY);
                 return notification;
             })
             .filter(Objects::nonNull)
@@ -63,38 +63,38 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     }
 
     @Override
-    public List<NewsNoteNotification> findAllNew(Reader reader) {
-        return repository.findAllByIdReaderIdAndState(reader.getId(), NewsNoteNotification.State.NEW);
+    public List<NewsNoteNotificationEntity> findAllNew(ReaderEntity reader) {
+        return repository.findAllByIdReaderIdAndState(reader.getId(), NewsNoteNotificationEntity.State.NEW);
     }
 
     @Override
-    public Optional<NewsNoteNotification> find(
-        Reader reader, NewsNote note
+    public Optional<NewsNoteNotificationEntity> find(
+        ReaderEntity reader, NewsNoteEntity note
     ) {
-        NewsNoteNotificationId id = id(reader, note);
+        NewsNoteNotificationIdEntity id = id(reader, note);
         return repository.findById(id);
     }
 
-    private NewsNoteNotificationId id(Reader reader, NewsNote note) {
-        return new NewsNoteNotificationId(reader.getId(), note.getId());
+    private NewsNoteNotificationIdEntity id(ReaderEntity reader, NewsNoteEntity note) {
+        return new NewsNoteNotificationIdEntity(reader.getId(), note.getId());
     }
 
     @Override
-    public boolean exists(Reader reader, NewsNote note) {
+    public boolean exists(ReaderEntity reader, NewsNoteEntity note) {
         return repository.existsById(id(reader, note));
     }
 
     @Override
-    public NewsNoteNotification sent(Long chatId, Long noteId) {
-        Reader r = readerService.findByChatId(chatId)
+    public NewsNoteNotificationEntity sent(Long chatId, Long noteId) {
+        ReaderEntity r = readerService.findByChatId(chatId)
             .orElseThrow(() -> new IllegalArgumentException("reader:404:" + chatId));
-        NewsNote n = noteService.find(noteId)
+        NewsNoteEntity n = noteService.find(noteId)
             .orElseThrow(() -> new IllegalArgumentException("newnote:404:" + noteId));
 
-        NewsNoteNotification notification = find(r, n)
+        NewsNoteNotificationEntity notification = find(r, n)
             .orElseThrow(() -> new IllegalArgumentException("newnote:notification:404: reader id " + r.getId() + ": note id " + n
             .getId()));
-        notification.setState(NewsNoteNotification.State.SENT);
+        notification.setState(NewsNoteNotificationEntity.State.SENT);
         return repository.save(notification);
     }
 
@@ -102,7 +102,7 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     public void archiveOld() {
         Calendar twoDaysAgo = new GregorianCalendar();
         twoDaysAgo.add(Calendar.DAY_OF_MONTH, -2);
-        Set<NewsNoteNotification> oldNotifications = repository.findByCreationDateBefore(twoDaysAgo.getTime());
+        Set<NewsNoteNotificationEntity> oldNotifications = repository.findByCreationDateBefore(twoDaysAgo.getTime());
         log.info("news_note_notification:archive:{}", oldNotifications.size());
         repository.deleteAll(oldNotifications);
     }

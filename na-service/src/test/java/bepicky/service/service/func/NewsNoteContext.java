@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 import org.apache.commons.io.FilenameUtils;
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 import bepicky.service.service.func.util.FuncUtil;
 
 import java.io.File;
@@ -24,7 +24,7 @@ public class NewsNoteContext {
 
     private Map<String, Map<String, Path>> newsNotes;
 
-    private final TypeReference<Set<NewsNote>> type = new TypeReference<Set<NewsNote>>() {};
+    private final TypeReference<Set<NewsNoteEntity>> type = new TypeReference<Set<NewsNoteEntity>>() {};
 
     private final ObjectMapper objectMapper;
 
@@ -47,7 +47,7 @@ public class NewsNoteContext {
         newsNotes = s.build();
     }
 
-    public Set<NewsNote> get(String sourceName, String sourcePageName) {
+    public Set<NewsNoteEntity> get(String sourceName, String sourcePageName) {
         try {
             sourceName = FuncUtil.normalizeName(sourceName);
             if (!newsNotes.containsKey(sourceName)) {
@@ -64,7 +64,7 @@ public class NewsNoteContext {
         }
     }
 
-    public void approve(String sourceName, String sourcePageName, Set<NewsNote> notes) {
+    public void approve(String sourceName, String sourcePageName, Set<NewsNoteEntity> notes) {
         try {
             sourceName = FuncUtil.normalizeName(sourceName);
             sourcePageName = FuncUtil.normalizeName(sourcePageName);

@@ -1,8 +1,8 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.NewsNoteNotification;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.NewsNoteNotificationEntity;
+import bepicky.service.entity.ReaderEntity;
 
 import java.util.Collection;
 import java.util.List;
@@ -10,17 +10,17 @@ import java.util.Optional;
 
 public interface INewsNoteNotificationService {
 
-    NewsNoteNotification saveSingleNew(Reader reader, NewsNote note, NewsNoteNotification.Link link, String key);
+    NewsNoteNotificationEntity saveSingleNew(ReaderEntity reader, NewsNoteEntity note, NewsNoteNotificationEntity.Link link, String key);
 
-    List<NewsNoteNotification> saveNew(Reader reader, Collection<NewsNote> notes);
+    List<NewsNoteNotificationEntity> saveNew(ReaderEntity reader, Collection<NewsNoteEntity> notes);
 
-    List<NewsNoteNotification> findAllNew(Reader reader);
+    List<NewsNoteNotificationEntity> findAllNew(ReaderEntity reader);
 
-    Optional<NewsNoteNotification> find(Reader reader, NewsNote note);
+    Optional<NewsNoteNotificationEntity> find(ReaderEntity reader, NewsNoteEntity note);
 
-    boolean exists(Reader reader, NewsNote note);
+    boolean exists(ReaderEntity reader, NewsNoteEntity note);
 
-    NewsNoteNotification sent(Long chatId, Long noteId);
+    NewsNoteNotificationEntity sent(Long chatId, Long noteId);
 
     void archiveOld();
 

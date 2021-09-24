@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 import bepicky.service.entity.TestEntityManager;
 import bepicky.service.repository.NewsNoteRepository;
 import bepicky.service.service.util.IValueNormalisationService;
@@ -37,12 +37,12 @@ public class NewsNoteServiceTest {
     @Test
     public void archiveEarlierThan_ExistingNotesEarlier_ShouldArchiveOldNotes() {
         Date fourMonthsAgo = TestEntityManager.before(4);
-        NewsNote created = newsNoteRepository.save(TestEntityManager.note(
+        NewsNoteEntity created = newsNoteRepository.save(TestEntityManager.note(
             "title",
             fourMonthsAgo
         ));
 
-        Set<NewsNote> newsNotes = newsNoteService.archiveEarlierThan(3);
+        Set<NewsNoteEntity> newsNotes = newsNoteService.archiveEarlierThan(3);
 
         assertTrue(newsNotes.contains(created));
         assertFalse(newsNoteRepository.existsById(created.getId()));
@@ -51,12 +51,12 @@ public class NewsNoteServiceTest {
     @Test
     public void archiveEarlierThan_NotExistingNotesEarlier_ShouldNotArchiveAnyNotes() {
         Date fourMonthsAgo = TestEntityManager.before(2);
-        NewsNote created = newsNoteRepository.save(TestEntityManager.note(
+        NewsNoteEntity created = newsNoteRepository.save(TestEntityManager.note(
             "title",
             fourMonthsAgo
         ));
 
-        Set<NewsNote> newsNotes = newsNoteService.archiveEarlierThan(3);
+        Set<NewsNoteEntity> newsNotes = newsNoteService.archiveEarlierThan(3);
 
         assertEquals(0, newsNotes.size());
         assertTrue(newsNoteRepository.existsById(created.getId()));

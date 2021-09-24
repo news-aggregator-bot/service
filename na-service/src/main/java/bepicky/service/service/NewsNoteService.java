@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 import bepicky.service.repository.NewsNoteNativeRepository;
 import bepicky.service.repository.NewsNoteRepository;
 import bepicky.service.service.util.IValueNormalisationService;
@@ -14,7 +14,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
@@ -40,44 +39,44 @@ public class NewsNoteService implements INewsNoteService {
     private IValueNormalisationService normalisationService;
 
     @Override
-    public NewsNote save(NewsNote note) {
+    public NewsNoteEntity save(NewsNoteEntity note) {
         log.info("news:save:{}", note);
         return repository.saveAndFlush(note);
     }
 
     @Override
-    public Collection<NewsNote> saveAll(Collection<NewsNote> notes) {
+    public Collection<NewsNoteEntity> saveAll(Collection<NewsNoteEntity> notes) {
         log.info("news:save:{}", notes);
         return repository.saveAll(notes);
     }
 
     @Override
-    public Optional<NewsNote> find(Long id) {
+    public Optional<NewsNoteEntity> find(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public List<NewsNote> findAllByNormalisedTitle(String title) {
+    public List<NewsNoteEntity> findAllByNormalisedTitle(String title) {
         return repository.findAllByNormalisedTitle(title);
     }
 
     @Override
-    public Optional<NewsNote> findByNormalisedTitle(String title) {
+    public Optional<NewsNoteEntity> findByNormalisedTitle(String title) {
         return repository.findTopByNormalisedTitleOrderByIdDesc(title);
     }
 
     @Override
-    public Set<NewsNote> getAllAfter(Long id) {
+    public Set<NewsNoteEntity> getAllAfter(Long id) {
         return repository.findByIdGreaterThan(id);
     }
 
     @Override
-    public Set<NewsNote> getNotesBetween(Date from, Date to) {
+    public Set<NewsNoteEntity> getNotesBetween(Date from, Date to) {
         return repository.findByCreationDateBetween(from, to);
     }
 
     @Override
-    public Set<NewsNote> getTodayNotes() {
+    public Set<NewsNoteEntity> getTodayNotes() {
         Calendar today = new GregorianCalendar();
         today.set(Calendar.HOUR_OF_DAY, 0);
         today.set(Calendar.MINUTE, 0);
@@ -91,10 +90,10 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
-    public Set<NewsNote> archiveEarlierThan(int months) {
+    public Set<NewsNoteEntity> archiveEarlierThan(int months) {
         Calendar fewMonthsAgo = new GregorianCalendar();
         fewMonthsAgo.add(Calendar.MONTH, -months);
-        Set<NewsNote> oldNews = repository.findByCreationDateBefore(fewMonthsAgo.getTime());
+        Set<NewsNoteEntity> oldNews = repository.findByCreationDateBefore(fewMonthsAgo.getTime());
         log.info("news_note:archive:{}", oldNews.size());
         repository.deleteAll(oldNews);
         return oldNews;
@@ -111,7 +110,7 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
-    public Page<NewsNote> searchByTitle(String key, Pageable pageable) {
+    public Page<NewsNoteEntity> searchByTitle(String key, Pageable pageable) {
         String normalisedKey = normalisationService.normaliseTitle(key);
         if (StringUtils.isBlank(normalisedKey) || normalisedKey.length() < 2) {
             return Page.empty();
@@ -127,12 +126,12 @@ public class NewsNoteService implements INewsNoteService {
 
         List<Long> pagedNoteIds = Lists.partition(noteIds, pageable.getPageSize())
             .get(pageable.getPageNumber());
-        List<NewsNote> notes = repository.findAllById(pagedNoteIds);
+        List<NewsNoteEntity> notes = repository.findAllById(pagedNoteIds);
         return new PageImpl<>(notes, pageable, noteIds.size());
     }
 
     @Override
-    public List<NewsNote> refresh(long from, long to) {
+    public List<NewsNoteEntity> refresh(long from, long to) {
         List<Long> ids = LongStream.rangeClosed(from, to).boxed().collect(Collectors.toList());
         log.info("news_note:refresh:id from {} to {}", from, to);
         return repository.saveAll(repository.findAllByIdIn(ids));

@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.nats.publisher.AdminMessagePublisher;
 import bepicky.service.repository.ReaderRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +30,7 @@ public class ReaderService implements IReaderService {
     private Long tagLimit;
 
     @Override
-    public Reader register(Reader reader) {
+    public ReaderEntity register(ReaderEntity reader) {
         if (reader.getChatId() == null) {
             adminMessagePublisher.publish(
                 "FAILED REGISTRATION:reader:no chat id ",
@@ -38,7 +38,7 @@ public class ReaderService implements IReaderService {
             );
             throw new IllegalArgumentException(reader.toString() + " no chat id");
         }
-        Reader repoReader = findByChatId(reader.getChatId()).map(r -> {
+        ReaderEntity repoReader = findByChatId(reader.getChatId()).map(r -> {
             r.setFirstName(reader.getFirstName());
             r.setLastName(reader.getLastName());
             r.setPrimaryLanguage(reader.getPrimaryLanguage());
@@ -46,12 +46,12 @@ public class ReaderService implements IReaderService {
             return r;
         }).orElseGet(() -> {
             reader.setTagsLimit(tagLimit);
-            reader.setStatus(Reader.Status.DISABLED);
+            reader.setStatus(ReaderEntity.Status.DISABLED);
             return reader;
         });
         log.info("reader:save:{}", reader);
         try {
-            Reader saved = readerRepository.save(repoReader);
+            ReaderEntity saved = readerRepository.save(repoReader);
             adminMessagePublisher.publish("SUCCESS REGISTRATION:reader", saved.toString());
             return saved;
         } catch (Exception e) {
@@ -66,28 +66,28 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public Reader update(Reader reader) {
+    public ReaderEntity update(ReaderEntity reader) {
         return readerRepository.save(reader);
     }
 
     @Override
-    public Optional<Reader> findById(long id) {
+    public Optional<ReaderEntity> findById(long id) {
         return readerRepository.findById(id);
     }
 
     @Override
-    public Optional<Reader> findByChatId(long chatId) {
+    public Optional<ReaderEntity> findByChatId(long chatId) {
         return readerRepository.findByChatId(chatId);
     }
 
     @Override
-    public List<Reader> findAll() {
+    public List<ReaderEntity> findAll() {
         return readerRepository.findAll();
     }
 
     @Override
-    public List<Reader> findAllEnabled() {
-        return readerRepository.findAllByStatus(Reader.Status.ENABLED);
+    public List<ReaderEntity> findAllEnabled() {
+        return readerRepository.findAllByStatus(ReaderEntity.Status.ENABLED);
     }
 
     @Override
@@ -96,18 +96,18 @@ public class ReaderService implements IReaderService {
         Calendar oneHourBefore = Calendar.getInstance();
         oneHourBefore.setTime(now);
         oneHourBefore.add(Calendar.HOUR, -1);
-        List<Reader> enabledSleepers = readerRepository.findAllByStatus(Reader.Status.IN_SETTINGS)
+        List<ReaderEntity> enabledSleepers = readerRepository.findAllByStatus(ReaderEntity.Status.IN_SETTINGS)
             .stream()
             .filter(r -> r.getUpdateDate().before(oneHourBefore.getTime()))
             .map(r -> {
-                r.setStatus(Reader.Status.ENABLED);
+                r.setStatus(ReaderEntity.Status.ENABLED);
                 return readerRepository.save(r);
             }).collect(Collectors.toList());
         log.info("reader:sleepers enabled " + enabledSleepers.size());
     }
 
     @Override
-    public Reader updateStatus(long chatId, Reader.Status status) {
+    public ReaderEntity updateStatus(long chatId, ReaderEntity.Status status) {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
@@ -121,7 +121,7 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
-    public Optional<Reader> delete(long id) {
+    public Optional<ReaderEntity> delete(long id) {
         return readerRepository.findById(id)
             .map(r -> {
                 readerRepository.delete(r);

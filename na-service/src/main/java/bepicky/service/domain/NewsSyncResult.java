@@ -3,7 +3,7 @@ package bepicky.service.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 import java.util.Set;
 
@@ -12,5 +12,5 @@ import java.util.Set;
 public class NewsSyncResult {
 
     @JsonProperty("news_notes")
-    private final Set<NewsNote> newsNotes;
+    private final Set<NewsNoteEntity> newsNotes;
 }

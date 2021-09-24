@@ -4,10 +4,10 @@ import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.NewsSearchRequest;
 import bepicky.common.domain.response.NewsSearchResponse;
 import bepicky.common.exception.ResourceNotFoundException;
-import bepicky.service.domain.mapper.NewsNoteDtoMapper;
+import bepicky.service.dto.mapper.NewsNoteDtoMapper;
 import bepicky.service.dto.Ids;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.service.INewsNoteService;
 import bepicky.service.service.IReaderService;
 import org.modelmapper.ModelMapper;
@@ -35,11 +35,11 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
     @Override
     public NewsSearchResponse search(NewsSearchRequest request) {
 
-        Page<NewsNote> notes = newsNoteService.searchByTitle(
+        Page<NewsNoteEntity> notes = newsNoteService.searchByTitle(
             request.getKey(),
             pageReq(request.getPage(), request.getPageSize())
         );
-        Reader reader = readerService.findByChatId(request.getChatId())
+        ReaderEntity reader = readerService.findByChatId(request.getChatId())
             .orElseThrow(() -> new ResourceNotFoundException("news_note:search:reader:" + request.getChatId()));
         NewsSearchResponse response = new NewsSearchResponse();
         response.setList(notes.stream()

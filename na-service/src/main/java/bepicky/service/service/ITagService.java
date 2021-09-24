@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Tag;
+import bepicky.service.entity.TagEntity;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,18 +8,18 @@ import java.util.Set;
 
 public interface ITagService {
 
-    Tag create(String value);
+    TagEntity create(String value);
 
-    Tag save(Tag tag);
+    TagEntity save(TagEntity tag);
 
-    Tag get(String value);
+    TagEntity get(String value);
 
-    List<Tag> findAllByValue(String value);
+    List<TagEntity> findAllByValue(String value);
 
-    Optional<Tag> findByValue(String value);
+    Optional<TagEntity> findByValue(String value);
 
-    Set<Tag> findByTitle(String title);
+    Set<TagEntity> findByTitle(String title);
 
-    Optional<Tag> findById(Long id);
+    Optional<TagEntity> findById(Long id);
 
 }

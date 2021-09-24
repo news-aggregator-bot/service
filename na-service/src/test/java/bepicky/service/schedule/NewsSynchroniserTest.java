@@ -1,12 +1,12 @@
 package bepicky.service.schedule;
 
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Language;
-import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Reader;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.LanguageEntity;
+import bepicky.service.entity.NewsNoteEntity;
+import bepicky.service.entity.ReaderEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
 import org.junit.jupiter.api.Test;
@@ -52,24 +52,24 @@ public class NewsSynchroniserTest {
     private INewsNoteNotificationService notificationService;
 
     @Captor
-    private ArgumentCaptor<Set<NewsNote>> notificationsAC;
+    private ArgumentCaptor<Set<NewsNoteEntity>> notificationsAC;
 
     @Test
     public void sync_ApplicableNotes_ShouldSaveAllNotes() {
-        Source src = source("name");
-        Language en = en();
-        Reader r1 = reader(en, Set.of(en), Set.of(src));
-        Category uk = region("UK", Set.of(r1));
-        Category c1 = common("c1", Set.of(r1));
-        List<Category> categories = List.of(uk, c1);
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        ReaderEntity r1 = reader(en, Set.of(en), Set.of(src));
+        CategoryEntity uk = region("UK", Set.of(r1));
+        CategoryEntity c1 = common("c1", Set.of(r1));
+        List<CategoryEntity> categories = List.of(uk, c1);
         r1.setCategories(Set.of(uk, c1));
 
-        SourcePage page = page(categories, Set.of(en), src);
+        SourcePageEntity page = page(categories, Set.of(en), src);
 
-        NewsNote note1 = note("t1", page);
-        NewsNote note2 = note("t2", page);
+        NewsNoteEntity note1 = note("t1", page);
+        NewsNoteEntity note2 = note("t2", page);
 
-        Set<NewsNote> notes = Set.of(note1, note2);
+        Set<NewsNoteEntity> notes = Set.of(note1, note2);
 
         mockServiceNotes(notes);
 
@@ -77,31 +77,31 @@ public class NewsSynchroniserTest {
 
         verify(notificationService, times(1)).saveNew(eq(r1), notificationsAC.capture());
 
-        Set<NewsNote> queue = notificationsAC.getValue();
+        Set<NewsNoteEntity> queue = notificationsAC.getValue();
         assertEquals(2, queue.size());
         assertEquals(notes, queue);
     }
 
     @Test
     public void sync_NotApplicableNotesByReaderLanguage_ShouldSaveOnlyForApplicableReaders() {
-        Source src = source("name");
-        Language en = en();
-        Language ua = ua();
-        Reader applicable = reader(en, Set.of(en), Set.of(src));
-        Reader notApplicable = reader(ua, Set.of(ua), Set.of(src));
-        Set<Reader> readers = Set.of(applicable, notApplicable);
-        Category uk = region("UK", readers);
-        Category c1 = common("c1", readers);
-        List<Category> categories = List.of(uk, c1);
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        LanguageEntity ua = ua();
+        ReaderEntity applicable = reader(en, Set.of(en), Set.of(src));
+        ReaderEntity notApplicable = reader(ua, Set.of(ua), Set.of(src));
+        Set<ReaderEntity> readers = Set.of(applicable, notApplicable);
+        CategoryEntity uk = region("UK", readers);
+        CategoryEntity c1 = common("c1", readers);
+        List<CategoryEntity> categories = List.of(uk, c1);
         applicable.setCategories(Set.of(uk, c1));
         notApplicable.setCategories(Set.of(uk, c1));
 
-        SourcePage page = page(categories, Set.of(en), src);
+        SourcePageEntity page = page(categories, Set.of(en), src);
 
-        NewsNote note1 = note("t1", page);
-        NewsNote note2 = note("t2", page);
+        NewsNoteEntity note1 = note("t1", page);
+        NewsNoteEntity note2 = note("t2", page);
 
-        Set<NewsNote> notes = Set.of(note1, note2);
+        Set<NewsNoteEntity> notes = Set.of(note1, note2);
 
         mockServiceNotes(notes);
 
@@ -110,28 +110,28 @@ public class NewsSynchroniserTest {
         verify(notificationService, times(1)).saveNew(eq(applicable), notificationsAC.capture());
         verify(notificationService, never()).saveNew(eq(notApplicable), anySet());
 
-        Set<NewsNote> queue = notificationsAC.getValue();
+        Set<NewsNoteEntity> queue = notificationsAC.getValue();
         assertEquals(2, queue.size());
         assertEquals(notes, queue);
     }
 
     @Test
     public void sync_NotApplicableNotesByReaderRegion_ShouldNotSaveAnyNotes() {
-        Source src = source("name");
-        Language en = en();
-        Reader notApplicable = reader(en, Set.of(en), Set.of(src));
-        Set<Reader> readers = Set.of(notApplicable);
-        Category uk = region("UK", Set.of());
-        Category c1 = common("c1", readers);
-        List<Category> categories = List.of(uk, c1);
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        ReaderEntity notApplicable = reader(en, Set.of(en), Set.of(src));
+        Set<ReaderEntity> readers = Set.of(notApplicable);
+        CategoryEntity uk = region("UK", Set.of());
+        CategoryEntity c1 = common("c1", readers);
+        List<CategoryEntity> categories = List.of(uk, c1);
         notApplicable.setCategories(Set.of(c1));
 
-        SourcePage page = page(categories, Set.of(en), src);
+        SourcePageEntity page = page(categories, Set.of(en), src);
 
-        NewsNote note1 = note("t1", page);
-        NewsNote note2 = note("t2", page);
+        NewsNoteEntity note1 = note("t1", page);
+        NewsNoteEntity note2 = note("t2", page);
 
-        Set<NewsNote> notes = Set.of(note1, note2);
+        Set<NewsNoteEntity> notes = Set.of(note1, note2);
 
         mockServiceNotes(notes);
 
@@ -142,21 +142,21 @@ public class NewsSynchroniserTest {
 
     @Test
     public void sync_NotApplicableNotesByReaderCategory_ShouldNotSaveAnyNotes() {
-        Source src = source("name");
-        Language en = en();
-        Reader notApplicable = reader(en, Set.of(en), Set.of(src));
-        Set<Reader> readers = Set.of(notApplicable);
-        Category uk = region("UK", readers);
-        Category c1 = common("c1", readers);
-        List<Category> categories = List.of(uk, c1);
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        ReaderEntity notApplicable = reader(en, Set.of(en), Set.of(src));
+        Set<ReaderEntity> readers = Set.of(notApplicable);
+        CategoryEntity uk = region("UK", readers);
+        CategoryEntity c1 = common("c1", readers);
+        List<CategoryEntity> categories = List.of(uk, c1);
         notApplicable.setCategories(Set.of(uk));
 
-        SourcePage page = page(categories, Set.of(en), src);
+        SourcePageEntity page = page(categories, Set.of(en), src);
 
-        NewsNote note1 = note("t1", page);
-        NewsNote note2 = note("t2", page);
+        NewsNoteEntity note1 = note("t1", page);
+        NewsNoteEntity note2 = note("t2", page);
 
-        Set<NewsNote> notes = Set.of(note1, note2);
+        Set<NewsNoteEntity> notes = Set.of(note1, note2);
 
         mockServiceNotes(notes);
 
@@ -167,19 +167,19 @@ public class NewsSynchroniserTest {
 
     @Test
     public void sync_EmptyCategoryReaders_ShouldNotSaveNotApplicableNewsNotes() {
-        Source src = source("name");
-        Language en = en();
-        Reader notApplicable = reader(en, Set.of(en), Set.of(src));
-        Category uk = region("UK", Set.of());
-        List<Category> categories = List.of(uk);
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        ReaderEntity notApplicable = reader(en, Set.of(en), Set.of(src));
+        CategoryEntity uk = region("UK", Set.of());
+        List<CategoryEntity> categories = List.of(uk);
         notApplicable.setCategories(Set.of(uk));
 
-        SourcePage page = page(categories, Set.of(en), src);
+        SourcePageEntity page = page(categories, Set.of(en), src);
 
-        NewsNote note1 = note("t1", page);
-        NewsNote note2 = note("t2", page);
+        NewsNoteEntity note1 = note("t1", page);
+        NewsNoteEntity note2 = note("t2", page);
 
-        Set<NewsNote> notes = Set.of(note1, note2);
+        Set<NewsNoteEntity> notes = Set.of(note1, note2);
 
         mockServiceNotes(notes);
 
@@ -190,10 +190,10 @@ public class NewsSynchroniserTest {
 
     @Test
     public void sync_EmptyActualNotes_ShouldNotSaveNotApplicableNewsNotes() {
-        Source src = source("name");
-        Language en = en();
-        Reader notApplicable = reader(en, Set.of(en), Set.of(src));
-        Category uk = region("UK", Set.of());
+        SourceEntity src = source("name");
+        LanguageEntity en = en();
+        ReaderEntity notApplicable = reader(en, Set.of(en), Set.of(src));
+        CategoryEntity uk = region("UK", Set.of());
         notApplicable.setCategories(Set.of(uk));
 
         mockServiceNotes(Set.of());
@@ -203,7 +203,7 @@ public class NewsSynchroniserTest {
         verify(notificationService, never()).saveNew(eq(notApplicable), any());
     }
 
-    private void mockServiceNotes(Set<NewsNote> notes) {
+    private void mockServiceNotes(Set<NewsNoteEntity> notes) {
         when(newsNoteService.getTodayNotes()).thenReturn(notes);
         when(newsNoteService.getAllAfter(any())).thenReturn(notes);
     }

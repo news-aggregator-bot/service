@@ -1,6 +1,6 @@
 package bepicky.service.repository;
 
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.ReaderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface ReaderRepository extends JpaRepository<Reader, Long> {
+public interface ReaderRepository extends JpaRepository<ReaderEntity, Long> {
 
-    Optional<Reader> findByChatId(long chatId);
+    Optional<ReaderEntity> findByChatId(long chatId);
 
-    List<Reader> findAllByStatus(Reader.Status status);
+    List<ReaderEntity> findAllByStatus(ReaderEntity.Status status);
 
 }

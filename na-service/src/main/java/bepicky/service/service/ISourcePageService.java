@@ -1,9 +1,9 @@
 package bepicky.service.service;
 
 import org.springframework.data.domain.Pageable;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Source;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.SourceEntity;
+import bepicky.service.entity.SourcePageEntity;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,27 +11,29 @@ import java.util.Optional;
 
 public interface ISourcePageService {
 
-    List<SourcePage> findAll();
+    Optional<SourcePageEntity> findById(Long id);
 
-    List<SourcePage> findBySource(Source source);
+    List<SourcePageEntity> findAll();
 
-    List<SourcePage> findByCategory(Category category);
+    List<SourcePageEntity> findBySource(SourceEntity source);
 
-    Optional<SourcePage> findFirstBySource(Source source, Pageable pageable);
+    List<SourcePageEntity> findByCategory(CategoryEntity category);
 
-    Optional<SourcePage> findByUrl(String url);
+    Optional<SourcePageEntity> findFirstBySource(SourceEntity source, Pageable pageable);
 
-    SourcePage save(SourcePage page);
+    Optional<SourcePageEntity> findByUrl(String url);
 
-    Collection<SourcePage> save(Collection<SourcePage> pages);
+    SourcePageEntity save(SourcePageEntity page);
+
+    Collection<SourcePageEntity> save(Collection<SourcePageEntity> pages);
 
     long countAll();
 
-    long countBySource(Source source);
+    long countBySource(SourceEntity source);
 
     void delete(long id);
 
-    SourcePage changeSource(Source source, long sourcePage);
+    SourcePageEntity changeSource(SourceEntity source, long sourcePage);
 
     void enable(long pageId);
 

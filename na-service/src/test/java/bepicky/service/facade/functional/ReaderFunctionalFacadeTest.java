@@ -5,7 +5,7 @@ import bepicky.common.domain.request.ReaderRequest;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.entity.Platform;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.ReaderEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -45,7 +45,7 @@ public class ReaderFunctionalFacadeTest {
         assertEquals(readerDto.getLastName(), rr.getLastName());
         assertEquals(readerDto.getUsername(), rr.getUsername());
         assertEquals(readerDto.getLang(), rr.getPrimaryLanguage());
-        assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
+        assertEquals(readerDto.getStatus(), ReaderEntity.Status.DISABLED.name());
     }
 
     @Test
@@ -62,7 +62,7 @@ public class ReaderFunctionalFacadeTest {
         assertNull(readerDto.getUsername());
         assertEquals(readerDto.getChatId(), rr.getChatId());
         assertEquals(readerDto.getLang(), rr.getPrimaryLanguage());
-        assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
+        assertEquals(readerDto.getStatus(), ReaderEntity.Status.DISABLED.name());
     }
 
     @Test
@@ -80,7 +80,7 @@ public class ReaderFunctionalFacadeTest {
         assertNull(readerDto.getUsername());
         assertEquals(readerDto.getChatId(), rr.getChatId());
         assertEquals(readerDto.getPrimaryLanguage().getLang(), "ukr");
-        assertEquals(readerDto.getStatus(), Reader.Status.DISABLED.name());
+        assertEquals(readerDto.getStatus(), ReaderEntity.Status.DISABLED.name());
     }
 
     @Test

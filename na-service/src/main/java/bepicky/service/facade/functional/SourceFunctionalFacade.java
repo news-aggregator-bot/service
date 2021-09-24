@@ -8,8 +8,8 @@ import bepicky.common.domain.response.SourceResponse;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.common.msg.SourceCommandMsg;
 import bepicky.service.domain.request.ListRequest;
-import bepicky.service.entity.Reader;
-import bepicky.service.entity.Source;
+import bepicky.service.entity.ReaderEntity;
+import bepicky.service.entity.SourceEntity;
 import bepicky.service.service.IReaderService;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
@@ -42,13 +42,13 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
 
     @Override
     public SourceListResponse listAll(ListRequest request) {
-        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
+        ReaderEntity reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:source:reader {} not found", request.getChatId());
             return new SourceListResponse(ErrorUtil.readerNotFound());
         }
 
-        Page<Source> srcPage = sourceService.findAllEnabled(pageReq(request.getPage(), request.getSize()));
+        Page<SourceEntity> srcPage = sourceService.findAllEnabled(pageReq(request.getPage(), request.getSize()));
         return new SourceListResponse(
             srcPage.stream().map(s -> {
                 SourceDto dto = modelMapper.map(s, SourceDto.class);
@@ -63,12 +63,12 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
 
     @Override
     public SourceResponse pick(SourceCommandMsg msg) {
-        return doAction(msg, Reader::addSource);
+        return doAction(msg, ReaderEntity::addSource);
     }
 
     @Override
     public SourceResponse remove(SourceCommandMsg msg) {
-        return doAction(msg, Reader::removeSource);
+        return doAction(msg, ReaderEntity::removeSource);
     }
 
     @Override
@@ -78,13 +78,13 @@ public class SourceFunctionalFacade implements ISourceFunctionalFacade, CommonFu
             .orElseThrow(() -> new ResourceNotFoundException("Change source failed."));
     }
 
-    private SourceResponse doAction(SourceCommandMsg msg, BiConsumer<Reader, Source> action) {
-        Reader reader = readerService.findByChatId(msg.getChatId()).orElse(null);
+    private SourceResponse doAction(SourceCommandMsg msg, BiConsumer<ReaderEntity, SourceEntity> action) {
+        ReaderEntity reader = readerService.findByChatId(msg.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("update:source:reader {} not found", msg.getChatId());
             return new SourceResponse(ErrorUtil.readerNotFound());
         }
-        Source source = sourceService.find(msg.getSourceId()).orElse(null);
+        SourceEntity source = sourceService.find(msg.getSourceId()).orElse(null);
         if (source == null) {
             log.error("update:source:{} not found:reader:{}", msg.getSourceId(), msg.getChatId());
             return new SourceResponse(ErrorUtil.sourceNotFound());

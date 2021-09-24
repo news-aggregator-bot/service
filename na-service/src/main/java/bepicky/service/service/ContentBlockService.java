@@ -4,8 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import bepicky.service.entity.ContentBlock;
-import bepicky.service.entity.SourcePage;
+import bepicky.service.entity.ContentBlockEntity;
+import bepicky.service.entity.SourcePageEntity;
 import bepicky.service.repository.ContentBlockRepository;
 
 import java.util.Collection;
@@ -21,28 +21,28 @@ public class ContentBlockService implements IContentBlockService {
     private ContentBlockRepository repository;
 
     @Override
-    public List<ContentBlock> findAll() {
+    public List<ContentBlockEntity> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public List<ContentBlock> findBySourcePage(SourcePage page) {
+    public List<ContentBlockEntity> findBySourcePage(SourcePageEntity page) {
         return repository.findBySourcePage(page);
     }
 
     @Override
-    public Optional<ContentBlock> findById(Long id) {
+    public Optional<ContentBlockEntity> findById(Long id) {
         return repository.findById(id);
     }
 
     @Override
-    public ContentBlock save(ContentBlock block) {
+    public ContentBlockEntity save(ContentBlockEntity block) {
         log.info("contentblock:save:{}", block);
         return repository.save(block);
     }
 
     @Override
-    public List<ContentBlock> saveAll(Collection<ContentBlock> blocks) {
+    public List<ContentBlockEntity> saveAll(Collection<ContentBlockEntity> blocks) {
         log.info("contentblock:save:{}", blocks);
         return repository.saveAll(blocks);
     }
@@ -53,7 +53,7 @@ public class ContentBlockService implements IContentBlockService {
     }
 
     @Override
-    public void deleteAll(Collection<ContentBlock> blocks) {
+    public void deleteAll(Collection<ContentBlockEntity> blocks) {
         repository.deleteAll(blocks);
     }
 }

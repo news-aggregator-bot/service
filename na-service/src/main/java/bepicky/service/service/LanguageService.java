@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Language;
+import bepicky.service.entity.LanguageEntity;
 import bepicky.service.repository.LanguageRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,34 +22,34 @@ public class LanguageService implements ILanguageService {
     private LanguageRepository repository;
 
     @Override
-    public Page<Language> listAll(Pageable pageable) {
+    public Page<LanguageEntity> listAll(Pageable pageable) {
         return repository.findAll(pageable);
     }
 
     @Override
-    public List<Language> getAll() {
+    public List<LanguageEntity> getAll() {
         return repository.findAll();
     }
 
     @Override
-    public Language save(Language language) {
+    public LanguageEntity save(LanguageEntity language) {
         log.info("language:save:{}", language);
         return repository.save(language);
     }
 
     @Override
-    public List<Language> saveAll(Collection<Language> languages) {
+    public List<LanguageEntity> saveAll(Collection<LanguageEntity> languages) {
         log.info("language:save:{}", languages);
         return repository.saveAll(languages);
     }
 
     @Override
-    public Optional<Language> find(String name) {
+    public Optional<LanguageEntity> find(String name) {
         return repository.findById(name);
     }
 
     @Override
-    public Language getDefault() {
+    public LanguageEntity getDefault() {
         return repository.findById("ukr").get();
     }
 

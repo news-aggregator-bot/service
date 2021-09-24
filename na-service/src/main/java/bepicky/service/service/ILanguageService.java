@@ -1,6 +1,6 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Language;
+import bepicky.service.entity.LanguageEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -10,17 +10,17 @@ import java.util.Optional;
 
 public interface ILanguageService {
 
-    Page<Language> listAll(Pageable pageable);
+    Page<LanguageEntity> listAll(Pageable pageable);
 
-    List<Language> getAll();
+    List<LanguageEntity> getAll();
 
-    Language save(Language language);
+    LanguageEntity save(LanguageEntity language);
 
-    List<Language> saveAll(Collection<Language> languages);
+    List<LanguageEntity> saveAll(Collection<LanguageEntity> languages);
 
-    Optional<Language> find(String name);
+    Optional<LanguageEntity> find(String name);
 
-    Language getDefault();
+    LanguageEntity getDefault();
 
     long countAll();
 }

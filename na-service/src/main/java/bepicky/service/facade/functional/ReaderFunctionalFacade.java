@@ -4,11 +4,11 @@ import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.StatusReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
-import bepicky.service.domain.mapper.CategoryDtoMapper;
-import bepicky.service.entity.Language;
+import bepicky.service.dto.mapper.CategoryDtoMapper;
+import bepicky.service.entity.LanguageEntity;
 import bepicky.service.entity.Platform;
-import bepicky.service.entity.Reader;
-import bepicky.service.entity.Tag;
+import bepicky.service.entity.ReaderEntity;
+import bepicky.service.entity.TagEntity;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
@@ -43,11 +43,11 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
     @Override
     public ReaderDto create(ReaderRequest request) {
         log.info("reader:registration:{}", request.toString());
-        Language language = Optional.ofNullable(request.getPrimaryLanguage())
+        LanguageEntity language = Optional.ofNullable(request.getPrimaryLanguage())
             .flatMap(languageService::find)
             .orElse(languageService.getDefault());
         Platform platform = Platform.valueOf(request.getPlatform());
-        Reader reader = modelMapper.map(request, Reader.class);
+        ReaderEntity reader = modelMapper.map(request, ReaderEntity.class);
         reader.setPlatform(platform);
         reader.setPrimaryLanguage(language);
         reader.setLanguages(Sets.newHashSet(language));
@@ -56,27 +56,27 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
 
     @Override
     public ReaderDto enable(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.ENABLED), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, ReaderEntity.Status.ENABLED), ReaderDto.class);
     }
 
     @Override
     public ReaderDto disable(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.DISABLED), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, ReaderEntity.Status.DISABLED), ReaderDto.class);
     }
 
     @Override
     public ReaderDto settings(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.IN_SETTINGS), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, ReaderEntity.Status.IN_SETTINGS), ReaderDto.class);
     }
 
     @Override
     public ReaderDto block(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.BLOCKED), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, ReaderEntity.Status.BLOCKED), ReaderDto.class);
     }
 
     @Override
     public ReaderDto pause(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.PAUSED), ReaderDto.class);
+        return modelMapper.map(readerService.updateStatus(chatId, ReaderEntity.Status.PAUSED), ReaderDto.class);
     }
 
     @Override
@@ -99,7 +99,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
                 .collect(Collectors.toSet());
             Set<String> tags = r.getTags()
                 .stream()
-                .map(Tag::getValue)
+                .map(TagEntity::getValue)
                 .collect(Collectors.toSet());
             StatusReaderDto status = modelMapper.map(r, StatusReaderDto.class);
             status.setCategories(categories);

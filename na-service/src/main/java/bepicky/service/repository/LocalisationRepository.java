@@ -2,13 +2,13 @@ package bepicky.service.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import bepicky.service.entity.Localisation;
+import bepicky.service.entity.LocalisationEntity;
 
 import java.util.List;
 
 @Repository
-public interface LocalisationRepository extends JpaRepository<Localisation, Long> {
+public interface LocalisationRepository extends JpaRepository<LocalisationEntity, Long> {
 
-    List<Localisation> findByValue(String value);
+    List<LocalisationEntity> findByValue(String value);
 
 }

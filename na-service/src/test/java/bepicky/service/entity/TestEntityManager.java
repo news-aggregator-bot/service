@@ -9,71 +9,71 @@ import java.util.Set;
 public class TestEntityManager {
     private static final String URL = "url";
 
-    public static Source source(String name) {
-        Source src = new Source();
+    public static SourceEntity source(String name) {
+        SourceEntity src = new SourceEntity();
         src.setName(name);
-        src.setStatus(Source.Status.PRIMARY);
+        src.setStatus(SourceEntity.Status.PRIMARY);
         return src;
     }
 
-    public static SourcePage page(List<Category> categories, Set<Language> languages, Source source) {
-        SourcePage sp = new SourcePage();
+    public static SourcePageEntity page(List<CategoryEntity> categories, Set<LanguageEntity> languages, SourceEntity source) {
+        SourcePageEntity sp = new SourcePageEntity();
         sp.setCategories(categories);
         sp.setLanguages(languages);
         sp.setSource(source);
         return sp;
     }
 
-    public static Category region(String name, Set<Reader> readers) {
+    public static CategoryEntity region(String name, Set<ReaderEntity> readers) {
         return category(CategoryType.REGION, name, readers);
     }
 
-    public static Category common(String name, Set<Reader> readers) {
+    public static CategoryEntity common(String name, Set<ReaderEntity> readers) {
         return category(CategoryType.COMMON, name, readers);
     }
 
-    public static Category category(CategoryType type, String name, Set<Reader> readers) {
-        Category c = new Category();
+    public static CategoryEntity category(CategoryType type, String name, Set<ReaderEntity> readers) {
+        CategoryEntity c = new CategoryEntity();
         c.setType(type);
         c.setName(name);
         c.setReaders(readers);
         return c;
     }
 
-    public static Reader reader(Language l, Set<Language> languages, Set<Source> sources) {
-        Reader r = new Reader();
+    public static ReaderEntity reader(LanguageEntity l, Set<LanguageEntity> languages, Set<SourceEntity> sources) {
+        ReaderEntity r = new ReaderEntity();
         r.setId(System.currentTimeMillis());
         r.setPrimaryLanguage(l);
         r.setLanguages(languages);
         r.setSources(sources);
-        r.setStatus(Reader.Status.ENABLED);
+        r.setStatus(ReaderEntity.Status.ENABLED);
         return r;
     }
 
-    public static Language en() {
+    public static LanguageEntity en() {
         return language("en");
     }
 
-    public static Language ua() {
+    public static LanguageEntity ua() {
         return language("ua");
     }
 
-    public static Language language(String lang) {
-        Language l = new Language();
+    public static LanguageEntity language(String lang) {
+        LanguageEntity l = new LanguageEntity();
         l.setLang(lang);
         return l;
     }
 
-    public static NewsNote note(String title, SourcePage sp) {
+    public static NewsNoteEntity note(String title, SourcePageEntity sp) {
         return note(title, URL, sp, new Date());
     }
 
-    public static NewsNote note(String title, Date creation) {
+    public static NewsNoteEntity note(String title, Date creation) {
         return note(title, URL, null, creation);
     }
 
-    public static NewsNote note(String title, String url, SourcePage sp, Date creation) {
-        NewsNote n = new NewsNote();
+    public static NewsNoteEntity note(String title, String url, SourcePageEntity sp, Date creation) {
+        NewsNoteEntity n = new NewsNoteEntity();
         n.setId(System.currentTimeMillis());
         n.setTitle(title);
         n.setNormalisedTitle(title);

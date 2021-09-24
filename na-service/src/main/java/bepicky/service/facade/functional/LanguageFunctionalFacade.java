@@ -7,8 +7,8 @@ import bepicky.common.domain.response.LanguageListResponse;
 import bepicky.common.domain.response.LanguageResponse;
 import bepicky.common.msg.LanguageCommandMsg;
 import bepicky.service.domain.request.ListRequest;
-import bepicky.service.entity.Language;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.LanguageEntity;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.service.ILanguageService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
@@ -39,13 +39,13 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Override
     public LanguageListResponse listAll(ListRequest request) {
-        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
+        ReaderEntity reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("list:language:reader {} not found", request.getChatId());
             return new LanguageListResponse(ErrorUtil.readerNotFound());
         }
         PageRequest pageReq = PageRequest.of(request.getPage() - 1, request.getSize());
-        Page<Language> langPage = languageService.listAll(pageReq);
+        Page<LanguageEntity> langPage = languageService.listAll(pageReq);
         List<LanguageDto> languages = langPage.stream()
             .map(l -> modelMapper.map(l, LanguageDto.class))
             .collect(Collectors.toList());
@@ -59,21 +59,21 @@ public class LanguageFunctionalFacade implements ILanguageFunctionalFacade {
 
     @Override
     public LanguageResponse pick(LanguageCommandMsg msg) {
-        return handleLangAction(msg, Reader::addLanguage);
+        return handleLangAction(msg, ReaderEntity::addLanguage);
     }
 
     @Override
     public LanguageResponse remove(LanguageCommandMsg request) {
-        return handleLangAction(request, Reader::removeLanguage);
+        return handleLangAction(request, ReaderEntity::removeLanguage);
     }
 
-    private LanguageResponse handleLangAction(LanguageCommandMsg request, BiConsumer<Reader, Language> langAction) {
-        Language language = languageService.find(request.getLang()).orElse(null);
+    private LanguageResponse handleLangAction(LanguageCommandMsg request, BiConsumer<ReaderEntity, LanguageEntity> langAction) {
+        LanguageEntity language = languageService.find(request.getLang()).orElse(null);
         if (language == null) {
             log.warn("update:language:language {} not found", request.getLang());
             return new LanguageResponse(ErrorUtil.languageNotFound());
         }
-        Reader reader = readerService.findByChatId(request.getChatId()).orElse(null);
+        ReaderEntity reader = readerService.findByChatId(request.getChatId()).orElse(null);
         if (reader == null) {
             log.warn("update:language:reader {} not found", request.getChatId());
             return new LanguageResponse(ErrorUtil.readerNotFound());

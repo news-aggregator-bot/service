@@ -1,7 +1,7 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Language;
-import bepicky.service.entity.Reader;
+import bepicky.service.entity.LanguageEntity;
+import bepicky.service.entity.ReaderEntity;
 import bepicky.service.nats.publisher.ReaderTextNotificationMsgPublisher;
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
@@ -30,12 +30,12 @@ public class CommunicationService implements ICommunicationService {
         Map<String, String> messages = parseMessages(data);
 
         messages.forEach((l, v) -> {
-            Language language = languageService.find(l)
+            LanguageEntity language = languageService.find(l)
                 .orElseThrow(() -> new IllegalArgumentException(l + " language doesn't exist"));
             language.getReaders()
                 .stream()
-                .filter(Reader::isActive)
-                .map(Reader::getChatId)
+                .filter(ReaderEntity::isActive)
+                .map(ReaderEntity::getChatId)
                 .forEach(id -> readerMsgPublisher.publish(id, v));
         });
     }

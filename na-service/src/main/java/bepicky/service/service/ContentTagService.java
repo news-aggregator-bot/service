@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import bepicky.service.entity.ContentTag;
+import bepicky.service.entity.ContentTagEntity;
 import bepicky.service.repository.ContentTagRepository;
 
 import java.util.Collection;
@@ -20,34 +20,34 @@ public class ContentTagService implements IContentTagService {
     private ContentTagRepository repository;
 
     @Override
-    public List<ContentTag> findAll() {
+    public List<ContentTagEntity> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public List<ContentTag> findByIds(Collection<Long> ids) {
+    public List<ContentTagEntity> findByIds(Collection<Long> ids) {
         return repository.findAllById(ids);
     }
 
     @Override
-    public List<ContentTag> findByValue(String value) {
+    public List<ContentTagEntity> findByValue(String value) {
         return repository.findByValue(value);
     }
 
     @Override
-    public Optional<ContentTag> findById(Long id) {
+    public Optional<ContentTagEntity> findById(Long id) {
         return repository.findById(id);
     }
 
     @Override
     @Transactional
-    public ContentTag save(ContentTag tag) {
+    public ContentTagEntity save(ContentTagEntity tag) {
         return repository.save(tag);
     }
 
     @Override
     @Transactional
-    public List<ContentTag> saveAll(Collection<ContentTag> tags) {
+    public List<ContentTagEntity> saveAll(Collection<ContentTagEntity> tags) {
         return repository.saveAll(tags);
     }
 

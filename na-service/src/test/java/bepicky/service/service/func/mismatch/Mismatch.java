@@ -2,7 +2,7 @@ package bepicky.service.service.func.mismatch;
 
 import lombok.Builder;
 import lombok.Data;
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.List;
 @Data
 public class Mismatch {
 
-    private NewsNote expected;
+    private NewsNoteEntity expected;
 
-    private NewsNote actual;
+    private NewsNoteEntity actual;
 
     @Builder.Default
     private List<String> messages = new ArrayList<>();

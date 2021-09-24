@@ -3,8 +3,8 @@ package bepicky.service.service.func;
 import bepicky.service.FuncSupport;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.entity.Category;
-import bepicky.service.entity.Language;
+import bepicky.service.entity.CategoryEntity;
+import bepicky.service.entity.LanguageEntity;
 import bepicky.service.service.ICategoryService;
 import bepicky.service.service.ILanguageService;
 import lombok.extern.slf4j.Slf4j;
@@ -36,8 +36,8 @@ public class CategoriesLocalisationFuncTest extends FuncSupport {
     @Test
     @Transactional
     public void getAllCategoriesAndLocalisations_EachCategoryShouldHaveAllLanguagesTranslations() {
-        List<Language> languages = languageService.getAll();
-        List<Category> notAllLocalisationCategories = categoryService.getAll().stream()
+        List<LanguageEntity> languages = languageService.getAll();
+        List<CategoryEntity> notAllLocalisationCategories = categoryService.getAll().stream()
             .filter(c -> c.getLocalisations().size() != languages.size())
             .collect(Collectors.toList());
 

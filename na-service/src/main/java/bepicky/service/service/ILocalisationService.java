@@ -1,18 +1,18 @@
 package bepicky.service.service;
 
-import bepicky.service.entity.Localisation;
+import bepicky.service.entity.LocalisationEntity;
 
 import java.util.Collection;
 import java.util.List;
 
 public interface ILocalisationService {
-    List<Localisation> saveAll(Collection<Localisation> categories);
+    List<LocalisationEntity> saveAll(Collection<LocalisationEntity> categories);
 
-    List<Localisation> findByValue(String value);
+    List<LocalisationEntity> findByValue(String value);
 
-    List<Localisation> getAll();
+    List<LocalisationEntity> getAll();
 
-    void deleteAll(Collection<Localisation> localisations);
+    void deleteAll(Collection<LocalisationEntity> localisations);
 
-    void delete(Localisation categoryLocalisation);
+    void delete(LocalisationEntity categoryLocalisation);
 }

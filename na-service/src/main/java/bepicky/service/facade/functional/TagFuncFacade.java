@@ -5,20 +5,15 @@ import bepicky.common.domain.dto.NewsNoteDto;
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.dto.TagDto;
 import bepicky.common.domain.request.NewsSearchRequest;
-import bepicky.common.domain.response.NewsSearchResponse;
 import bepicky.common.domain.response.TagListResponse;
 import bepicky.common.domain.response.TagResponse;
-import bepicky.service.entity.Reader;
-import bepicky.service.entity.Tag;
-import bepicky.service.service.INewsNoteService;
+import bepicky.service.entity.ReaderEntity;
+import bepicky.service.entity.TagEntity;
 import bepicky.service.service.IReaderService;
 import bepicky.service.service.ITagService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -42,12 +37,12 @@ public class TagFuncFacade implements ITagFuncFacade {
 
     @Override
     public TagResponse subscribe(Long chatId, String value) {
-        Reader r = readerService.findByChatId(chatId).orElse(null);
+        ReaderEntity r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
             log.error("tag:subscribe:failed:reader:404:" + chatId);
             return new TagResponse(ErrorUtil.readerNotFound());
         }
-        Tag tag = tagService.get(value);
+        TagEntity tag = tagService.get(value);
         ReaderDto rdto = modelMapper.map(r, ReaderDto.class);
         if (r.getTagsLimit() != -1 && r.getTags().size() >= r.getTagsLimit()) {
             log.warn("tag:subscribe:failed:reader:tag limit:" + chatId);
@@ -55,7 +50,7 @@ public class TagFuncFacade implements ITagFuncFacade {
         }
         tag.addReader(r);
         log.info("tag:subscribe:{}:reader:{}", value, r.getChatId());
-        Tag saved = tagService.save(tag);
+        TagEntity saved = tagService.save(tag);
         List<NewsNoteDto> news = newsNoteService.search(new NewsSearchRequest(
             chatId,
             saved.getValue(),
@@ -71,12 +66,12 @@ public class TagFuncFacade implements ITagFuncFacade {
 
     @Override
     public TagResponse unsubscribe(Long chatId, String value) {
-        Reader r = readerService.findByChatId(chatId).orElse(null);
+        ReaderEntity r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
             log.error("tag:unsubscribe:failed:reader:404:{}", chatId);
             return new TagResponse(ErrorUtil.readerNotFound());
         }
-        Tag tag = tagService.findByValue(value).orElse(null);
+        TagEntity tag = tagService.findByValue(value).orElse(null);
         ReaderDto rDto = modelMapper.map(r, ReaderDto.class);
         if (tag == null) {
             log.error("tag:unsubscribe:failed:tag:404:{}", value);
@@ -85,7 +80,7 @@ public class TagFuncFacade implements ITagFuncFacade {
 
         tag.rmReader(r);
         log.info("tag:unsubscribe:{}:reader:{}", tag, r.getChatId());
-        Tag saved = tagService.save(tag);
+        TagEntity saved = tagService.save(tag);
         return new TagResponse(rDto, modelMapper.map(saved, TagDto.class));
 
     }
@@ -102,7 +97,7 @@ public class TagFuncFacade implements ITagFuncFacade {
 
     @Override
     public TagListResponse getAll(Long chatId) {
-        Reader r = readerService.findByChatId(chatId).orElse(null);
+        ReaderEntity r = readerService.findByChatId(chatId).orElse(null);
         if (r == null) {
             log.error("tag:list:reader:failed:reader:404:{}", chatId);
             return new TagListResponse(ErrorUtil.readerNotFound());

@@ -1,12 +1,12 @@
 package bepicky.service.service.func.mismatch;
 
-import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.NewsNoteEntity;
 
 public interface ValueAnalyzer {
 
     String MISMATCH_PATTERN = "%s:expected: %s is different from actual: %s";
 
-    String analyse(NewsNote expected, NewsNote actual);
+    String analyse(NewsNoteEntity expected, NewsNoteEntity actual);
 
     String key();
 

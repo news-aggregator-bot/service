@@ -1,6 +1,7 @@
 package bepicky.service.data.ingestor.service;
 
 import bepicky.service.data.ingestor.exception.DataIngestionException;
+import bepicky.service.dto.LanguageDto;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -8,7 +9,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import bepicky.service.domain.dto.LanguageDto;
 import bepicky.service.facade.IngestionLanguageFacade;
 
 import java.io.IOException;
