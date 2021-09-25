@@ -107,4 +107,9 @@ public class SourcePageService implements ISourcePageService {
                 log.info("sourcepage:disable:" + pageId);
             });
     }
+
+    @Override
+    public Optional<SourcePage> findById(Long id) {
+        return repository.findById(id);
+    }
 }

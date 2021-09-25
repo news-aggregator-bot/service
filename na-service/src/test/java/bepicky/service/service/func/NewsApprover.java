@@ -13,6 +13,7 @@ import bepicky.service.service.INewsService;
 import bepicky.service.service.ISourcePageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -34,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @SpringBootTest(classes = {NAService.class, NewsApprover.NewsApproverConfiguration.class})
 @Slf4j
 @ActiveProfiles("it")
-//@Ignore
+@Disabled
 public class NewsApprover extends FuncSupport {
 
     @Autowired

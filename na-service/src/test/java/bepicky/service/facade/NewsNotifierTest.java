@@ -23,13 +23,19 @@ import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Spy;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.Arrays;
 import java.util.Set;
@@ -40,6 +46,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 public class NewsNotifierTest {
 
     private static final String TEST_URL = "url";
@@ -47,17 +54,22 @@ public class NewsNotifierTest {
     private static final String TEST_AUTHOR = "author";
     private static final String TEST_USA = "USA";
 
-    @Autowired
+    @InjectMocks
     private NewsNotifier newsNotifier;
 
-    @MockBean
+    @Mock
     private IReaderService readerService;
 
-    @MockBean
+    @Mock
     private INewsNoteNotificationService notificationService;
 
-    @MockBean
+    @Mock
     private NewsNotificationPublisher publisher;
+
+//    @Spy
+//    private NewsNoteDtoMapper mapper = new NewsNoteDtoMapper();
+
+
 
     @Test
     public void sync_FullNewsNote_ShouldSendCorrectNotifyNewsRequest() {
@@ -78,6 +90,8 @@ public class NewsNotifierTest {
 
         when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
         when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
+
+        ReflectionTestUtils.setField(newsNotifier, "notifyEnabled", true);
 
         newsNotifier.sync();
 
@@ -208,16 +222,4 @@ public class NewsNotifierTest {
         return language;
     }
 
-
-    @TestConfiguration
-    @Import({WebConfiguration.class, SourcePageDtoMapper.class, NewsNoteDtoMapper.class, CategoryDtoMapper.class})
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
-    static class NewsNotifierTestConfiguration {
-
-        @Bean
-        public NewsNotifier newsNotifier() {
-            return new NewsNotifier();
-        }
-
-    }
 }

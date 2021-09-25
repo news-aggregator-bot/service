@@ -75,6 +75,8 @@ topics:
     notification:
       new: newsnote.notification
       success: newsnote.notification.success
+source_page:
+  read_fail_limit: 10
 #logging:
 #  level:
 #    org:

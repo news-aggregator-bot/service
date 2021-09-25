@@ -40,9 +40,6 @@ public class DefaultWebContentParser implements WebContentParser {
     @Autowired
     private UrlNormalisationContext urlNormalisationContext;
 
-    @Autowired
-    private AdminMessagePublisher adminPublisher;
-
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
@@ -65,7 +62,6 @@ public class DefaultWebContentParser implements WebContentParser {
             }
         }
         log.warn("webpagereader:read:empty:{}", page.getUrl());
-        adminPublisher.publish("PAGE EMPTY", String.valueOf(page.getId()), page.getUrl());
         return Collections.emptySet();
     }
 

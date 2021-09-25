@@ -16,11 +16,17 @@ import java.util.stream.Collectors;
 @Component
 public class SourcePageDtoMapper {
 
-    @Autowired
-    private CategoryDtoMapper categoryDtoMapper;
+    private final CategoryDtoMapper categoryDtoMapper;
 
-    @Autowired
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
+
+    public SourcePageDtoMapper(
+        CategoryDtoMapper categoryDtoMapper,
+        ModelMapper modelMapper
+    ) {
+        this.categoryDtoMapper = categoryDtoMapper;
+        this.modelMapper = modelMapper;
+    }
 
     public List<SourcePageDto> toDto(Collection<SourcePage> sourcePages, Language language) {
         return sourcePages.stream().map(d -> toDto(d, language)).collect(Collectors.toList());

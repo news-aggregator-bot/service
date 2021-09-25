@@ -36,4 +36,6 @@ public interface ISourcePageService {
     void enable(long pageId);
 
     void disable(long pageId);
+
+    Optional<SourcePage> findById(Long id);
 }

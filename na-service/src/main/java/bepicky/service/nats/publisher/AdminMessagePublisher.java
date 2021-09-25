@@ -17,6 +17,6 @@ public class AdminMessagePublisher {
     private String adminSubject;
 
     public void publish(String... text) {
-        natsConnection.publish(adminSubject, String.join(" ", text).getBytes(StandardCharsets.UTF_8));
+        natsConnection.publish(adminSubject, String.join("\n", text).getBytes(StandardCharsets.UTF_8));
     }
 }

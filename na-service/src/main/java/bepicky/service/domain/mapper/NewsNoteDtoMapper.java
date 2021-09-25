@@ -11,8 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewsNoteDtoMapper {
 
-    @Autowired
-    private SourcePageDtoMapper sourcePageDtoMapper;
+    private final SourcePageDtoMapper sourcePageDtoMapper;
+
+    public NewsNoteDtoMapper(SourcePageDtoMapper sourcePageDtoMapper) {
+        this.sourcePageDtoMapper = sourcePageDtoMapper;
+    }
 
     public NewsNoteDto toDto(NewsNote note, Language language) {
         NewsNoteDto dto = new NewsNoteDto();
@@ -41,7 +44,10 @@ public class NewsNoteDtoMapper {
         dto.setTitle(note.getTitle());
         dto.setAuthor(note.getAuthor());
         dto.setDate(note.getCreationDate());
-        dto.setSourcePages(sourcePageDtoMapper.toDto(note.getSourcePages(), notification.getReader().getPrimaryLanguage()));
+        dto.setSourcePages(sourcePageDtoMapper.toDto(
+            note.getSourcePages(),
+            notification.getReader().getPrimaryLanguage()
+        ));
         dto.setLink(NewsNoteNotificationDto.LinkDto.valueOf(notification.getLink().name()));
         dto.setLinkKey(notification.getLinkKey());
         return dto;
