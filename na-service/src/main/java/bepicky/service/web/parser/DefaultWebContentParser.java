@@ -40,6 +40,9 @@ public class DefaultWebContentParser implements WebContentParser {
     @Autowired
     private UrlNormalisationContext urlNormalisationContext;
 
+    @Autowired
+    private SourcePageParserTracker spParserTracker;
+
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
@@ -57,10 +60,12 @@ public class DefaultWebContentParser implements WebContentParser {
                     .filter(Objects::nonNull)
                     .collect(Collectors.toSet());
                 if (parsedData.size() > 1) {
+                    spParserTracker.track(page.getId());
                     return parsedData;
                 }
             }
         }
+        spParserTracker.failed(page.getId());
         log.warn("webpagereader:read:empty:{}", page.getUrl());
         return Collections.emptySet();
     }
@@ -70,7 +75,7 @@ public class DefaultWebContentParser implements WebContentParser {
             return Optional.ofNullable(webPageReader.read(page.getUrl()));
         } catch (RuntimeException e) {
             if (!(e.getCause() instanceof org.jsoup.HttpStatusException)) {
-                log.error("webpagereader:read:failed:{}:{}", page.getUrl(), e.getMessage());
+                log.error("webpagereader:read:failed: {} : {}", page.getUrl(), e.getMessage());
             }
             return Optional.empty();
         }
