@@ -10,6 +10,7 @@ import bepicky.service.web.parser.doc.DocumentTagParser;
 import bepicky.service.web.reader.WebPageReader;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -26,31 +27,23 @@ import java.util.stream.Collectors;
 
 @Component
 @Slf4j
+@AllArgsConstructor
 public class DefaultWebContentParser implements WebContentParser {
 
-    @Autowired
-    private List<WebPageReader> webPageReaders;
-
-    @Autowired
-    private List<DocumentTagParser> tagParsers;
-
-    @Autowired
-    private JsoupEvaluatorFactory evaluatorFactory;
-
-    @Autowired
-    private UrlNormalisationContext urlNormalisationContext;
-
-    @Autowired
-    private SourcePageParserTracker spParserTracker;
+    private final List<WebPageReader> webPageReaders;
+    private final List<DocumentTagParser> tagParsers;
+    private final JsoupEvaluatorFactory evaluatorFactory;
+    private final UrlNormalisationContext urlNormalisationContext;
+    private final SourcePageParserTracker spParserTracker;
 
     @Override
     public Set<PageParsedData> parse(SourcePage page) {
         for (WebPageReader webPageReader : webPageReaders) {
-//            log.info(
-//                "webcontentparser:{} :{}",
-//                page.getUrl(),
-//                webPageReader.getClass().getSimpleName()
-//            );
+            log.info(
+                "webcontentparser:{} :{}",
+                page.getUrl(),
+                webPageReader.getClass().getSimpleName()
+            );
             Optional<Document> doc = readDocument(page, webPageReader);
             if (doc.isPresent()) {
                 Set<PageParsedData> parsedData = page.getContentBlocks()

@@ -14,9 +14,6 @@ na:
       enabled: true
       limit: 3
       cron: '* */2 * * * *'
-    webpagereader:
-      cron: '0 0 */12 * * *'
-      timeout: 10
     archive:
       cron: '0 0 0 */1 * *'
       months: 18

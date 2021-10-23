@@ -2,7 +2,6 @@ package bepicky.service.service.func;
 
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.configuration.WebPageReaderConfiguration;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.exception.SourceException;
@@ -100,7 +99,6 @@ public class PageApprover {
     @Configuration
     @PropertySource(factory = YamlPropertySourceFactory.class, value = {"classpath:application-it.yml", "classpath:application-browser.yml"})
     @EnableTransactionManagement
-    @Import(WebPageReaderConfiguration.class)
     static class PageApproverConfiguration {
     }
 

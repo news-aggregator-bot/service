@@ -97,11 +97,6 @@ public class DefaultWebContentParserTest {
     static class DefaultWebContentParserTestConfiguration {
 
         @Bean
-        public WebContentParser webContentParser() {
-            return new DefaultWebContentParser();
-        }
-
-        @Bean
         public ObjectMapper objectMapper() {
             ObjectMapper om = new ObjectMapper();
             om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);

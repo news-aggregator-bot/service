@@ -9,6 +9,7 @@ import bepicky.service.entity.Tag;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -30,23 +31,28 @@ public class NewsService implements INewsService {
 
     private static final int MAX_LINK_LENGTH = 251;
 
-    @Autowired
-    private ISourceService sourceService;
-
-    @Autowired
-    private INewsNoteService newsNoteService;
-
-    @Autowired
-    private WebContentParser defaultParser;
-
-    @Autowired
-    private IValueNormalisationService normalisationService;
-
-    @Autowired
-    private ITagService tagService;
+    private final ISourceService sourceService;
+    private final INewsNoteService newsNoteService;
+    private final WebContentParser defaultParser;
+    private final IValueNormalisationService normalisationService;
+    private final ITagService tagService;
 
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
+
+    public NewsService(
+        ISourceService sourceService,
+        INewsNoteService newsNoteService,
+        WebContentParser defaultParser,
+        IValueNormalisationService normalisationService,
+        ITagService tagService
+    ) {
+        this.sourceService = sourceService;
+        this.newsNoteService = newsNoteService;
+        this.defaultParser = defaultParser;
+        this.normalisationService = normalisationService;
+        this.tagService = tagService;
+    }
 
     @Override
     public NewsSyncResult sync(String name) {

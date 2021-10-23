@@ -3,9 +3,13 @@ package bepicky.service.web.reader;
 import bepicky.service.exception.SourceException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+@Component
+@Order(0)
 public class JsoupWebPageReader implements WebPageReader {
 
     @Override

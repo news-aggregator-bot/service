@@ -48,9 +48,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://na-registry:8761/eureka/
-logging:
-  level:
-    org.springframework.security: INFO
 hystrix:
   command:
     default:
@@ -77,8 +74,10 @@ topics:
       success: newsnote.notification.success
 source_page:
   read_fail_limit: 10
-#logging:
-#  level:
+logging:
+  level:
+    org.springframework.security: INFO
+    com.gargoylesoftware.htmlunit: OFF
 #    org:
 #      hibernate:
 #        SQL: debug
