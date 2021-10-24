@@ -2,21 +2,28 @@ version: 2.1
 workflows:
   build:
     jobs:
-      - build-deploy:
+      - trigger-build
+      - master-push:
+          filters:
+            branches:
+              only: master
           context: DEPLOY
+          requires:
+            - trigger-build
+      - master-deploy:
+          filters:
+            branches:
+              only: master
+          context: DEPLOY
+          requires:
+            - master-push
 jobs:
-  build-deploy:
-
-    working_directory: ~/na-service
-
+  trigger-build:
     docker:
       - image: circleci/openjdk:11.0.8
-
-    steps: # a collection of executable commands
-
-      - checkout # check out source code to working directory
-      - add_ssh_keys
+    steps:
       - setup_remote_docker
+      - checkout # check out source code to working directory
 
       - restore_cache:
           keys:
@@ -28,7 +35,13 @@ jobs:
             - ~/.m2
           key: na-service-{{ checksum "pom.xml" }}
 
-      - run: ./scripts/package.sh # package
+      - run: mvn -s .circleci/settings.xml package # package
+
+  master-push:
+    docker:
+      - image: circleci/openjdk:11.0.8
+    steps:
+      - setup_remote_docker
 
       - run:
           name: docker login
@@ -45,6 +58,13 @@ jobs:
       - run:
           name: docker push
           command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/bepicky.na-service:latest
+
+  master-deploy:
+    docker:
+      - image: circleci/openjdk:11.0.8
+    steps: # a collection of executable commands
+      - setup_remote_docker
+      - add_ssh_keys
 
       - run:
           name: create ssh config
