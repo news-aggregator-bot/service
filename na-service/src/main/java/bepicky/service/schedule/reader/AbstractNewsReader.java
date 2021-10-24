@@ -3,7 +3,7 @@ package bepicky.service.schedule.reader;
 import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.service.INewsService;
+import bepicky.service.service.INewsAggregationService;
 import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PreDestroy;
 import java.util.Collection;
 
 @Slf4j
@@ -21,7 +20,7 @@ public abstract class AbstractNewsReader {
     protected ISourceService sourceService;
 
     @Autowired
-    private INewsService newsService;
+    private INewsAggregationService newsService;
 
     @Value("${na.schedule.read.enabled}")
     private boolean enabled;

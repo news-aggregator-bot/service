@@ -3,13 +3,11 @@ package bepicky.service.service.func;
 import bepicky.service.FuncSupport;
 import bepicky.service.NAService;
 import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.data.ingestor.service.CategoryIngestionService;
-import bepicky.service.data.ingestor.service.LanguageIngestionService;
 import bepicky.service.data.ingestor.service.SourceIngestionService;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.service.INewsService;
+import bepicky.service.service.INewsAggregationService;
 import bepicky.service.service.ISourceService;
 import bepicky.service.service.func.mismatch.Mismatch;
 import bepicky.service.service.func.mismatch.ResultMismatchAnalyzer;
@@ -18,14 +16,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.util.Pair;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
@@ -46,7 +42,7 @@ public class NewsServiceFuncTest extends FuncSupport {
     private static final String SOURCEPAGE_MISMATCH_PATTERN = "Source page: %s\n%s";
 
     @Autowired
-    private INewsService newsService;
+    private INewsAggregationService newsService;
 
     @Autowired
     private SourceIngestionService sourceIS;

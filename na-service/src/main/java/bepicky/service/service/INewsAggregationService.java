@@ -6,9 +6,7 @@ import bepicky.service.entity.SourcePage;
 
 import java.util.Set;
 
-public interface INewsService {
-
-    NewsSyncResult sync(String name);
+public interface INewsAggregationService {
 
     NewsSyncResult read(SourcePage sourcePage);
 

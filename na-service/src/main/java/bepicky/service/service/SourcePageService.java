@@ -1,6 +1,7 @@
 package bepicky.service.service;
 
 import bepicky.common.exception.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -18,11 +19,10 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional
+@AllArgsConstructor
 public class SourcePageService implements ISourcePageService {
 
-    @Autowired
-    private SourcePageRepository repository;
-
+    private final SourcePageRepository repository;
 
     @Override
     public List<SourcePage> findAll() {
@@ -111,5 +111,19 @@ public class SourcePageService implements ISourcePageService {
     @Override
     public Optional<SourcePage> findById(Long id) {
         return repository.findById(id);
+    }
+
+    @Override
+    public void updateWebReader(SourcePage sp, String webReader) {
+        if (sp.getWebReader() == null || !sp.getWebReader().equals(webReader)) {
+            log.info(
+                "sourcepage: {} :update: {} -> {}",
+                sp.getUrl(),
+                sp.getWebReader(),
+                webReader
+            );
+            sp.setWebReader(webReader);
+            repository.save(sp);
+        }
     }
 }

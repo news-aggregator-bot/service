@@ -24,4 +24,9 @@ public class JsoupWebPageReader implements WebPageReader {
             throw new SourceException(e);
         }
     }
+
+    @Override
+    public String name() {
+        return "JSOUP";
+    }
 }

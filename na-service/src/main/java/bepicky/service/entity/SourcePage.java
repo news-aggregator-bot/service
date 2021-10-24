@@ -42,6 +42,9 @@ public class SourcePage extends DatedEntity {
     @Column(nullable = false)
     private String url;
 
+    @Column(name = "web_reader")
+    private String webReader;
+
     @Transient
     @EqualsAndHashCode.Exclude
     private String host;

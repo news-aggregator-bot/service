@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class PageParsedData{
+public class RawNewsNote {
 
     private String title;
 

@@ -1,6 +1,7 @@
 package bepicky.service.web.parser;
 
-import bepicky.service.domain.PageParsedData;
+import bepicky.service.domain.RawNews;
+import bepicky.service.domain.RawNewsNote;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.web.reader.WebPageReader;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -54,15 +55,15 @@ public class DefaultWebContentParserTest {
     public void parse_ProvidedHtmlPag_WithProvidedSourcePage_ShouldReturnExpectedData(String name)
         throws JsonProcessingException {
         SourcePage sp = readSourcePage(name);
-        Set<PageParsedData> expected = readExpected(name);
+        Set<RawNewsNote> expected = readExpected(name);
 
         Document doc = toDoc(readPage(name), sp.getUrl());
 
         Mockito.when(webPageReader.read(sp.getUrl())).thenReturn(doc);
 
-        Set<PageParsedData> parsed = webContentParser.parse(sp);
+        RawNews parsed = webContentParser.parse(sp);
 
-        Assertions.assertEquals(expected, parsed);
+        Assertions.assertEquals(expected, parsed.getNotes());
     }
 
     private Document toDoc(String content, String path) {
@@ -73,10 +74,10 @@ public class DefaultWebContentParserTest {
         return om.readValue(readData("source-page/" + sp + ".json"), SourcePage.class);
     }
 
-    private Set<PageParsedData> readExpected(String name) throws JsonProcessingException {
+    private Set<RawNewsNote> readExpected(String name) throws JsonProcessingException {
         return om.readValue(
             readData("expected/" + name + ".json"),
-            om.getTypeFactory().constructCollectionType(Set.class, PageParsedData.class)
+            om.getTypeFactory().constructCollectionType(Set.class, RawNewsNote.class)
         );
     }
 

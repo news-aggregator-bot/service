@@ -1,19 +1,17 @@
 package bepicky.service.service;
 
 import bepicky.service.domain.NewsSyncResult;
-import bepicky.service.domain.PageParsedData;
+import bepicky.service.domain.RawNews;
+import bepicky.service.domain.RawNewsNote;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.Tag;
-import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
 import bepicky.service.web.parser.WebContentParser;
-import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,11 +25,11 @@ import java.util.stream.Stream;
 @Service
 @Transactional
 @Slf4j
-public class NewsService implements INewsService {
+public class NewsAggregationService implements INewsAggregationService {
 
     private static final int MAX_LINK_LENGTH = 251;
 
-    private final ISourceService sourceService;
+    private final ISourcePageService sourcePageService;
     private final INewsNoteService newsNoteService;
     private final WebContentParser defaultParser;
     private final IValueNormalisationService normalisationService;
@@ -40,26 +38,18 @@ public class NewsService implements INewsService {
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
 
-    public NewsService(
-        ISourceService sourceService,
+    public NewsAggregationService(
+        ISourcePageService sourcePageService,
         INewsNoteService newsNoteService,
         WebContentParser defaultParser,
         IValueNormalisationService normalisationService,
         ITagService tagService
     ) {
-        this.sourceService = sourceService;
+        this.sourcePageService = sourcePageService;
         this.newsNoteService = newsNoteService;
         this.defaultParser = defaultParser;
         this.normalisationService = normalisationService;
         this.tagService = tagService;
-    }
-
-    @Override
-    public NewsSyncResult sync(String name) {
-        Source source = sourceService.findByName(name).orElseThrow(SourceNotFoundException::new);
-        Set<NewsNote> freshNews = syncSource(source);
-        Set<NewsNote> savedNotes = freshNews.isEmpty() ? freshNews : new HashSet<>(newsNoteService.saveAll(freshNews));
-        return NewsSyncResult.builder().newsNotes(savedNotes).build();
     }
 
     @Override
@@ -75,21 +65,19 @@ public class NewsService implements INewsService {
             .collect(Collectors.toSet());
     }
 
-    private Set<NewsNote> syncSource(Source source) {
-        return source.getPages()
-            .parallelStream()
-            .flatMap(this::process)
-            .collect(Collectors.toSet());
-    }
-
     private Stream<NewsNote> process(SourcePage page) {
-        return defaultParser.parse(page)
+        RawNews rawNews = defaultParser.parse(page);
+        if (rawNews.getNotes().isEmpty()) {
+            return Stream.empty();
+        }
+        sourcePageService.updateWebReader(page, rawNews.getWebReader());
+        return rawNews.getNotes()
             .stream()
             .filter(d -> validLink(page, d))
             .map(d -> toNote(page, d));
     }
 
-    private boolean validLink(SourcePage page, PageParsedData d) {
+    private boolean validLink(SourcePage page, RawNewsNote d) {
         if (StringUtils.isBlank(d.getLink())) {
             log.debug("news:skip:empty link:" + d.getLink());
             return false;
@@ -105,7 +93,7 @@ public class NewsService implements INewsService {
         return !newsNoteService.existsByUrl(d.getLink());
     }
 
-    private NewsNote toNote(SourcePage page, PageParsedData data) {
+    private NewsNote toNote(SourcePage page, RawNewsNote data) {
         String title = normalisationService.trimTitle(data.getTitle());
         String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByNormalisedTitle(normTitle)
