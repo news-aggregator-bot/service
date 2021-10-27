@@ -16,8 +16,8 @@ import javax.annotation.PreDestroy;
 import java.io.IOException;
 
 @Slf4j
-@Component
-@Order(1)
+//@Component
+//@Order(1)
 public class HtmlUnitWebPageReader implements WebPageReader {
 
     private final WebClient client;
