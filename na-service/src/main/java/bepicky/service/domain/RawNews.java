@@ -9,6 +9,4 @@ import java.util.Set;
 @AllArgsConstructor
 public class RawNews {
     private final Set<RawNewsNote> notes;
-
-    private final String webReader;
 }

@@ -113,17 +113,4 @@ public class SourcePageService implements ISourcePageService {
         return repository.findById(id);
     }
 
-    @Override
-    public void updateWebReader(SourcePage sp, String webReader) {
-        if (sp.getWebReader() == null || !sp.getWebReader().equals(webReader)) {
-            log.info(
-                "sourcepage: {} :update: {} -> {}",
-                sp.getUrl(),
-                sp.getWebReader(),
-                webReader
-            );
-            sp.setWebReader(webReader);
-            repository.save(sp);
-        }
-    }
 }

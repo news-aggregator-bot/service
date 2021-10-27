@@ -48,12 +48,6 @@
             <version>2.11.5</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.htmlunit</groupId>
-            <artifactId>htmlunit</artifactId>
-            <version>2.53.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -165,6 +159,11 @@
             <groupId>bepicky</groupId>
             <artifactId>common-communication</artifactId>
             <version>1.2-29-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>bepicky</groupId>
+            <artifactId>data-reader-communication</artifactId>
+            <version>0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

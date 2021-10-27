@@ -1,10 +1,8 @@
 package bepicky.service.service;
 
-import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.domain.RawNews;
 import bepicky.service.domain.RawNewsNote;
 import bepicky.service.entity.NewsNote;
-import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.Tag;
 import bepicky.service.service.util.IValueNormalisationService;
@@ -17,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -53,24 +51,18 @@ public class NewsAggregationService implements INewsAggregationService {
     }
 
     @Override
-    public NewsSyncResult read(SourcePage sourcePage) {
-        Set<NewsNote> freshNews = readFreshNews(sourcePage);
-        Set<NewsNote> savedNotes = freshNews.isEmpty() ? freshNews : new HashSet<>(newsNoteService.saveAll(freshNews));
-        return NewsSyncResult.builder().newsNotes(savedNotes).build();
+    public Set<NewsNote> aggregate(String url, List<String> content) {
+        return sourcePageService.findByUrl(url)
+            .map(sp -> process(sp, content))
+
+            .orElse(Set.of());
     }
 
-    @Override
-    public Set<NewsNote> readFreshNews(SourcePage sourcePage) {
-        return process(sourcePage)
-            .collect(Collectors.toSet());
-    }
-
-    private Stream<NewsNote> process(SourcePage page) {
-        RawNews rawNews = defaultParser.parse(page);
+    private Stream<NewsNote> process(SourcePage page, List<String> content) {
+        RawNews rawNews = defaultParser.parse(page, content);
         if (rawNews.getNotes().isEmpty()) {
             return Stream.empty();
         }
-        sourcePageService.updateWebReader(page, rawNews.getWebReader());
         return rawNews.getNotes()
             .stream()
             .filter(d -> validLink(page, d))

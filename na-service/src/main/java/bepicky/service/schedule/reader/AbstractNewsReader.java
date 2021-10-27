@@ -1,14 +1,12 @@
 package bepicky.service.schedule.reader;
 
-import bepicky.service.domain.NewsSyncResult;
 import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
-import bepicky.service.service.INewsAggregationService;
+import bepicky.service.nats.publisher.ReadSourcePageMsgPublisher;
 import bepicky.service.service.ISourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
@@ -20,7 +18,7 @@ public abstract class AbstractNewsReader {
     protected ISourceService sourceService;
 
     @Autowired
-    private INewsAggregationService newsService;
+    private ReadSourcePageMsgPublisher readSourcePageMsgPublisher;
 
     @Value("${na.schedule.read.enabled}")
     private boolean enabled;
@@ -39,11 +37,9 @@ public abstract class AbstractNewsReader {
         source.getPages().stream().filter(SourcePage::isEnabled).forEach(this::readPage);
     }
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void readPage(SourcePage page) {
         try {
-            NewsSyncResult freshNotes = newsService.read(page);
-            log.debug("news:read:{}", freshNotes.getNewsNotes().size());
+            readSourcePageMsgPublisher.publish(page);
         } catch (RuntimeException e) {
             log.warn("news:read:page:failed:{}", page.getUrl(), e);
         }
