@@ -30,14 +30,12 @@ jobs:
           keys:
             - na-service-{{ checksum "pom.xml" }}
 
-      - run: mvn -s .circleci/settings.xml dependency:go-offline # gets the project dependencies
+      - run: mvn -s .circleci/settings.xml dependency:go-offline package # gets the project dependencies
 
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
           key: na-service-{{ checksum "pom.xml" }}
-
-      - run: mvn -s .circleci/settings.xml package # package
 
   master-push:
     docker:
