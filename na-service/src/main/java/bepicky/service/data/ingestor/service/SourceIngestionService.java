@@ -71,7 +71,7 @@ public class SourceIngestionService implements IngestionService {
             .put(6, INGESTION_CONSUMER)
             .build();
 
-    private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 8);
+    private final List<Integer> sourcePageCols = ImmutableList.of(0, 1, 2, 7);
 
     @Autowired
     private IngestionSourceFacade sourceFacade;
