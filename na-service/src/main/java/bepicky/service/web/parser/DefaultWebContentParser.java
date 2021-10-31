@@ -60,7 +60,7 @@ public class DefaultWebContentParser implements WebContentParser {
 
     @Override
     public RawNews parse(SourcePage page) {
-        if (page.getWebReader() != null) {
+        if (page.getWebReader() != null && webPageReaderMap.containsKey(page.getWebReader())) {
             WebPageReader spReader = webPageReaderMap.get(page.getWebReader());
             RawNews rawNewsNotes = getRawNews(page, spReader);
             if (rawNewsNotes != null) {
