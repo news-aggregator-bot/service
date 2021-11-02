@@ -2,7 +2,8 @@ version: 2.1
 workflows:
   build:
     jobs:
-      - trigger-build
+      - trigger-build:
+          context: DEPLOY
       - master-push:
           filters:
             branches:
@@ -30,14 +31,12 @@ jobs:
           keys:
             - na-service-{{ checksum "pom.xml" }}
 
-      - run: mvn -s .circleci/settings.xml dependency:go-offline # gets the project dependencies
+      - run: mvn -s .circleci/settings.xml dependency:go-offline package # gets the project dependencies
 
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
           key: na-service-{{ checksum "pom.xml" }}
-
-      - run: mvn -s .circleci/settings.xml package # package
 
   master-push:
     docker:
@@ -52,7 +51,7 @@ jobs:
       - run:
           name: docker login
           command:
-            echo "$GITHUB_TOKEN" | docker login https://docker.pkg.github.com --username $GITHUB_USER --password-stdin
+            echo "$GITHUB_TOKEN" | docker login ghcr.io -u $GITHUB_USER --password-stdin
 
       - run:
           name: docker-compose
@@ -63,7 +62,7 @@ jobs:
 
       - run:
           name: docker push
-          command: docker push docker.pkg.github.com/news-aggregator-bot/artifactory/bepicky.na-service:latest
+          command: docker push ghcr.io/news-aggregator-bot/bepicky.na-service:latest
 
   master-deploy:
     docker:

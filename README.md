@@ -1,0 +1,9 @@
+Update /etc/hosts
+127.0.0.1	na-kafka
+127.0.0.1	na-registry
+127.0.0.1	na-config-server
+127.0.0.1	na-database
+127.0.0.1	na-service
+127.0.0.1	na-client-bot
+127.0.0.1	na-ts
+127.0.0.1	na-tg-client

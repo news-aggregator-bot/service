@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   na-service:
-    image: docker.pkg.github.com/news-aggregator-bot/artifactory/bepicky.na-service
+    image: ghcr.io/news-aggregator-bot/bepicky.na-service
     environment:
       - MYSQL_NA_DB=${MYSQL_NA_DB}
       - MYSQL_NA_USER=${MYSQL_NA_USER}
