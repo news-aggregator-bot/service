@@ -35,7 +35,7 @@ public class Source extends DatedEntity {
 
     @Column(name = "fetch_period", nullable = false)
     @Enumerated(EnumType.STRING)
-    private FetchPeriod fetchPeriod = FetchPeriod.FOREVER;
+    private FetchPeriod fetchPeriod = FetchPeriod.HOURLY;
 
     @OneToMany(mappedBy = "source", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @EqualsAndHashCode.Exclude
@@ -66,6 +66,6 @@ public class Source extends DatedEntity {
     }
 
     public enum FetchPeriod {
-        FOREVER, HOURLY, FOURLY, EIGHTLY, DAILY
+        NINE_MIN, HOURLY, FOURLY, EIGHTLY, DAILY
     }
 }

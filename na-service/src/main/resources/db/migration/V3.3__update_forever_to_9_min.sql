@@ -1,0 +1,1 @@
+update source set fetch_period = 'NINE_MIN' where fetch_period = 'FOREVER';

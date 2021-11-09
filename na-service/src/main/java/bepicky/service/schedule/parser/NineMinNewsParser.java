@@ -1,4 +1,4 @@
-package bepicky.service.schedule.reader;
+package bepicky.service.schedule.parser;
 
 import bepicky.service.entity.Source;
 import lombok.extern.slf4j.Slf4j;
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 @RefreshScope
-public class ForeverNewsReader extends AbstractNewsReader {
+public class NineMinNewsParser extends AbstractNewsParser {
 
     @Override
-    @Scheduled(initialDelay = 5000, fixedDelay = 10 * 60000)
+    @Scheduled(initialDelay = 5000, fixedDelay = 9 * 60000)
     public void read() {
-        readSources(sourceService.findAllEnabledByFetchPeriod(Source.FetchPeriod.FOREVER));
+        parseSources(sourceService.findAllEnabledByFetchPeriod(Source.FetchPeriod.NINE_MIN));
     }
 }
