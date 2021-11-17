@@ -22,10 +22,13 @@ import java.time.Duration;
 @Slf4j
 public class NatsConfig {
 
+    @Value("${nats.address}")
+    private String natsAddress;
+
     @Bean
     public Connection natsConnection() throws IOException, InterruptedException {
         Options opt = new Options.Builder()
-            .server("nats://na-ts:4222")
+            .server("nats://" + natsAddress)
             .connectionName("na-ts")
             .connectionTimeout(Duration.ofSeconds(10))
             .build();

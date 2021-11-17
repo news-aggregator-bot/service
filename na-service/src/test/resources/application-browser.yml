@@ -1,6 +1,0 @@
-na:
-  reader:
-    tag:
-      limit: -1
-  webpagereader:
-    browser: true

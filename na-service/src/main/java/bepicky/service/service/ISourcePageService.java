@@ -38,4 +38,6 @@ public interface ISourcePageService {
     void disable(long pageId);
 
     Optional<SourcePage> findById(Long id);
+
+    void updateWebReader(SourcePage sp, String webReader);
 }

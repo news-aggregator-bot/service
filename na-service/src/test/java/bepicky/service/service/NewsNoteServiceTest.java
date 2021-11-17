@@ -1,19 +1,14 @@
 package bepicky.service.service;
 
-import bepicky.service.YamlPropertySourceFactory;
+import picky.test.SingletonMySQLContainerSupport;
+import picky.test.NatsContainerSupport;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.TestEntityManager;
 import bepicky.service.repository.NewsNoteRepository;
-import bepicky.service.service.util.IValueNormalisationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.util.Date;
 import java.util.Set;
@@ -22,17 +17,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DataJpaTest
-public class NewsNoteServiceTest {
+@SpringBootTest
+@Testcontainers
+public class NewsNoteServiceTest implements NatsContainerSupport, SingletonMySQLContainerSupport {
 
     @Autowired
     private INewsNoteService newsNoteService;
 
     @Autowired
     private NewsNoteRepository newsNoteRepository;
-
-    @MockBean
-    private IValueNormalisationService normalisationService;
 
     @Test
     public void archiveEarlierThan_ExistingNotesEarlier_ShouldArchiveOldNotes() {
@@ -62,15 +55,4 @@ public class NewsNoteServiceTest {
         assertTrue(newsNoteRepository.existsById(created.getId()));
     }
 
-    @TestConfiguration
-    @EntityScan("bepicky.service.entity")
-    @ComponentScan({"bepicky.service.repository"})
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application.yml")
-    static class NewsNoteServiceTestConfiguration{
-
-        @Bean
-        INewsNoteService newsNoteService() {
-            return new NewsNoteService();
-        }
-    }
 }

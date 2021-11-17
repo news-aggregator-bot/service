@@ -20,10 +20,10 @@ public class FuncSourceDataIngestor {
     private final SourceIngestionService sourceIS;
 
     public void ingestSources() {
-        listRealSourceFileNames().forEach(this::ingestSources);
+        listRealSourceFileNames().forEach(this::ingestSource);
     }
 
-    public void ingestSources(String sourceName) {
+    public void ingestSource(String sourceName) {
         sourceIS.ingest(openStream("real/" + sourceName + ".xlsx"));
     }
 

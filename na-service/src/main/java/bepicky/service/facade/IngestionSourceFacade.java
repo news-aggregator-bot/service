@@ -19,6 +19,7 @@ import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,25 +32,20 @@ import java.util.stream.Collectors;
 
 @Component
 @Transactional
+@AllArgsConstructor
 public class IngestionSourceFacade {
 
-    @Autowired
-    private ISourceService sourceService;
+    private final ISourceService sourceService;
 
-    @Autowired
-    private ISourcePageService sourcePageService;
+    private final ISourcePageService sourcePageService;
 
-    @Autowired
-    private IContentBlockService contentBlockService;
+    private final IContentBlockService contentBlockService;
 
-    @Autowired
-    private IContentTagService contentTagService;
+    private final IContentTagService contentTagService;
 
-    @Autowired
-    private ILanguageService languageService;
+    private final ILanguageService languageService;
 
-    @Autowired
-    private ICategoryService categoryService;
+    private final ICategoryService categoryService;
 
     public Source ingest(SourceDto srcDto) {
         Source source = getSource(srcDto);

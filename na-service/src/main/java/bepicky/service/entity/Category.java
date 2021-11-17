@@ -44,6 +44,7 @@ public class Category extends IdEntity {
     @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<Category> subcategories = new ArrayList<>();
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -65,6 +66,7 @@ public class Category extends IdEntity {
     )
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<SourcePage> sourcePages;
 
     @ManyToMany(fetch = FetchType.LAZY)

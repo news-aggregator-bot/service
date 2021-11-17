@@ -2,9 +2,11 @@ package bepicky.service.controller.god;
 
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
+import bepicky.service.entity.SourcePage;
 import bepicky.service.facade.functional.ISourceFunctionalFacade;
 import bepicky.service.service.ISourcePageService;
 import bepicky.service.service.ISourceService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,16 +20,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/god")
+@AllArgsConstructor
 public class GodSourceController {
 
-    @Autowired
-    private ISourceService sourceService;
-
-    @Autowired
-    private ISourceFunctionalFacade sourceFunctionalFacade;
-
-    @Autowired
-    private ISourcePageService sourcePageService;
+    private final ISourceService sourceService;
+    private final ISourceFunctionalFacade sourceFunctionalFacade;
+    private final ISourcePageService sourcePageService;
 
     @PutMapping("/source/{id}")
     public void enableSource(@PathVariable long id, @RequestParam String status) {
@@ -70,5 +68,24 @@ public class GodSourceController {
     @PutMapping("/source/page/{pageId}/disable")
     public void disablePage(@PathVariable("pageId") Long pageId) {
         sourcePageService.disable(pageId);
+    }
+
+    @GetMapping("/source/{id}/pages/{pageId}")
+    public SourcePage getSourcePage(@PathVariable("id") Long id, @PathVariable("pageId") Long pageId) {
+        Source source = sourceService.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("source not found"));
+        SourcePage sourcePage = sourcePageService.findById(pageId)
+            .orElseThrow(() -> new IllegalArgumentException("source page not found"));
+        if (source.getPages().contains(sourcePage)) {
+            return sourcePage;
+        }
+        throw new IllegalArgumentException("source page doesn't belong to the source");
+    }
+
+    @GetMapping("/source/{id}/pages")
+    public List<SourcePage> listSourcePages(@PathVariable("id") Long id) {
+        return sourceService.findById(id)
+            .map(sourcePageService::findBySource)
+            .orElseThrow(() -> new IllegalArgumentException("source not found"));
     }
 }

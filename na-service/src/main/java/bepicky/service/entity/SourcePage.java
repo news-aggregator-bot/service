@@ -42,6 +42,9 @@ public class SourcePage extends DatedEntity {
     @Column(nullable = false)
     private String url;
 
+    @Column(name = "web_reader")
+    private String webReader;
+
     @Transient
     @EqualsAndHashCode.Exclude
     private String host;
@@ -54,7 +57,7 @@ public class SourcePage extends DatedEntity {
     @Column(nullable = false, name = "enabled")
     private boolean enabled = true;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "source_page_language",
         joinColumns = {@JoinColumn(name = "id_source_page")},
@@ -78,6 +81,7 @@ public class SourcePage extends DatedEntity {
     @Fetch(value = FetchMode.SUBSELECT)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<Category> categories;
 
     @OneToMany(mappedBy = "sourcePage", cascade = ALL, fetch = FetchType.EAGER)
@@ -88,18 +92,22 @@ public class SourcePage extends DatedEntity {
     private Set<ContentBlock> contentBlocks;
 
     @Transient
+    @JsonIgnore
     private Multimap<CategoryType, Category> typedCategories;
 
+    @JsonIgnore
     public Collection<Category> getRegions() {
         initTypedCategories();
         return typedCategories.get(CategoryType.REGION);
     }
 
+    @JsonIgnore
     public Collection<Category> getCommon() {
         initTypedCategories();
         return typedCategories.get(CategoryType.COMMON);
     }
 
+    @JsonIgnore
     public String getHost() {
         if (host == null) {
             try {

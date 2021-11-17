@@ -1,24 +1,22 @@
 server:
   port: 8080
 spring:
-  profiles: it
   main:
     banner-mode: "off"
   datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    url: jdbc:tc:mysql:5.7.30:///na-db
     username: sa
     password: sa
   flyway:
-    enabled: false
+    enabled: true
     baselineOnMigrate: true
     locations: classpath:db/migration
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.MySQL57Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
 management:
   endpoints:
     web:
@@ -48,3 +46,26 @@ na:
     archive:
       cron: '0 0 0 */1 * *'
       months: 6
+topics:
+  category:
+    cmd: category.cmd.start
+    list: category.list.start
+  lang:
+    cmd: lang.cmd.start
+  src:
+    cmd: src.cmd.start
+  message:
+    admin: msg.admin
+  reader:
+    notification: reader.notification
+    language: reader.primary.lang
+  news:
+    notification:
+      new: newsnote.notification
+      success: newsnote.notification.success
+    parse: parse
+    aggr: news.aggregate
+source_page:
+  read_fail_limit: 10
+nats:
+  address: '127.0.0.1:4000'

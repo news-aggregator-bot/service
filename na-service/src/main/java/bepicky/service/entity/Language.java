@@ -1,5 +1,6 @@
 package bepicky.service.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -48,10 +49,12 @@ public class Language {
     )
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<SourcePage> sourcePages;
 
     @OneToMany(mappedBy = "primaryLanguage", cascade = CascadeType.ALL)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private List<Reader> readers = new ArrayList<>();
 }

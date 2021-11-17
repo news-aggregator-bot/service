@@ -2,28 +2,26 @@ package bepicky.service.facade.functional;
 
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
-import bepicky.service.NAService;
-import bepicky.service.YamlPropertySourceFactory;
+import picky.test.SingletonMySQLContainerSupport;
+import picky.test.NatsContainerSupport;
 import bepicky.service.entity.Platform;
 import bepicky.service.entity.Reader;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@SpringBootTest(classes = {NAService.class, ReaderFunctionalFacadeTest.FacadeTestConfiguration.class})
-@ActiveProfiles("it")
-@Slf4j
-public class ReaderFunctionalFacadeTest {
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@Testcontainers
+public class ReaderFunctionalFacadeTest implements SingletonMySQLContainerSupport, NatsContainerSupport {
 
     @Autowired
     private IReaderFunctionalFacade functionalFacade;
@@ -94,10 +92,4 @@ public class ReaderFunctionalFacadeTest {
         );
     }
 
-    @Configuration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value ="classpath:application-it.yml")
-    @EnableTransactionManagement
-    static class FacadeTestConfiguration {
-
-    }
 }

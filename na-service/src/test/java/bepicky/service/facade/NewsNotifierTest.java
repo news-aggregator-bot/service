@@ -3,15 +3,13 @@ package bepicky.service.facade;
 import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import bepicky.common.domain.dto.SourcePageDto;
-import bepicky.service.YamlPropertySourceFactory;
-import bepicky.service.configuration.WebConfiguration;
 import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
 import bepicky.service.domain.mapper.SourcePageDtoMapper;
 import bepicky.service.entity.Category;
-import bepicky.service.entity.Localisation;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Language;
+import bepicky.service.entity.Localisation;
 import bepicky.service.entity.NewsNote;
 import bepicky.service.entity.NewsNoteNotification;
 import bepicky.service.entity.Reader;
@@ -22,6 +20,7 @@ import bepicky.service.schedule.NewsNotifier;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import com.google.common.collect.Sets;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -29,15 +28,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
+import org.modelmapper.ModelMapper;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -66,10 +60,22 @@ public class NewsNotifierTest {
     @Mock
     private NewsNotificationPublisher publisher;
 
-//    @Spy
-//    private NewsNoteDtoMapper mapper = new NewsNoteDtoMapper();
+    @Spy
+    private final ModelMapper modelMapper = new ModelMapper();
 
+    @Spy
+    private final CategoryDtoMapper categoryDtoMapper = new CategoryDtoMapper();
+    @Spy
+    private final SourcePageDtoMapper sourcePageDtoMapper =
+        new SourcePageDtoMapper(categoryDtoMapper, modelMapper);
 
+    @Spy
+    private final NewsNoteDtoMapper mapper = new NewsNoteDtoMapper(sourcePageDtoMapper);
+
+    @BeforeEach
+    public void enableNotify() {
+        ReflectionTestUtils.setField(newsNotifier, "notifyEnabled", true);
+    }
 
     @Test
     public void sync_FullNewsNote_ShouldSendCorrectNotifyNewsRequest() {
@@ -79,8 +85,8 @@ public class NewsNotifierTest {
         Category regionUSA = regionCategory(usaLocalisation);
         SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
 
-        sourcePage.setCategories(Arrays.asList(regionUSA));
-        regionUSA.setSourcePages(Arrays.asList(sourcePage));
+        sourcePage.setCategories(List.of(regionUSA));
+        regionUSA.setSourcePages(List.of(sourcePage));
 
         NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
         Reader r = reader(1L, language);
@@ -88,10 +94,9 @@ public class NewsNotifierTest {
 
         ArgumentCaptor<NewsNoteNotificationDto> notifyNewsAc = ArgumentCaptor.forClass(NewsNoteNotificationDto.class);
 
-        when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
-        when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
+        when(readerService.findAllEnabled()).thenReturn(List.of(r));
+        when(notificationService.findAllNew(eq(r))).thenReturn(List.of(notification));
 
-        ReflectionTestUtils.setField(newsNotifier, "notifyEnabled", true);
 
         newsNotifier.sync();
 
@@ -123,8 +128,8 @@ public class NewsNotifierTest {
         Category regionUSA = regionCategory(usaLocalisation);
         SourcePage sourcePage = sourcePage(Sets.newHashSet(language));
 
-        sourcePage.setCategories(Arrays.asList(regionUSA));
-        regionUSA.setSourcePages(Arrays.asList(sourcePage));
+        sourcePage.setCategories(List.of(regionUSA));
+        regionUSA.setSourcePages(List.of(sourcePage));
 
         NewsNote note = newsNote(TEST_TITLE, TEST_URL, TEST_AUTHOR, sourcePage);
         Reader r = reader(1L, language);
@@ -132,9 +137,10 @@ public class NewsNotifierTest {
 
         ArgumentCaptor<NewsNoteNotificationDto> notifyNewsAc = ArgumentCaptor.forClass(NewsNoteNotificationDto.class);
 
-        when(readerService.findAllEnabled()).thenReturn(Arrays.asList(r));
-        when(notificationService.findAllNew(eq(r))).thenReturn(Arrays.asList(notification));
+        when(readerService.findAllEnabled()).thenReturn(List.of(r));
+        when(notificationService.findAllNew(eq(r))).thenReturn(List.of(notification));
 
+        
         newsNotifier.sync();
 
 
@@ -164,7 +170,12 @@ public class NewsNotifierTest {
         return nnn;
     }
 
-    private NewsNoteNotification newNoteNotification(NewsNote note, Reader r, NewsNoteNotification.Link link, String key) {
+    private NewsNoteNotification newNoteNotification(
+        NewsNote note,
+        Reader r,
+        NewsNoteNotification.Link link,
+        String key
+    ) {
         NewsNoteNotification nnn = new NewsNoteNotification(r, note);
         nnn.setLink(link);
         nnn.setLinkKey(key);
@@ -205,7 +216,7 @@ public class NewsNotifierTest {
         regionUSA.setId(1L);
         regionUSA.setType(CategoryType.REGION);
         regionUSA.setName(TEST_USA);
-        regionUSA.setLocalisations(Arrays.asList(usaLocalisation));
+        regionUSA.setLocalisations(List.of(usaLocalisation));
         return regionUSA;
     }
 

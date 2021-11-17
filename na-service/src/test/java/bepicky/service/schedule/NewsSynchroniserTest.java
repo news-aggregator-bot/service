@@ -1,6 +1,5 @@
 package bepicky.service.schedule;
 
-import bepicky.service.YamlPropertySourceFactory;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.Language;
 import bepicky.service.entity.NewsNote;
@@ -9,15 +8,17 @@ import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.INewsNoteService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.ActiveProfiles;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -39,20 +40,26 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@ActiveProfiles("it")
+@ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 public class NewsSynchroniserTest {
 
-    @Autowired
+    @InjectMocks
     private NewsSynchroniser newsSynchroniser;
 
-    @MockBean
+    @Mock
     private INewsNoteService newsNoteService;
 
-    @MockBean
+    @Mock
     private INewsNoteNotificationService notificationService;
 
     @Captor
     private ArgumentCaptor<Set<NewsNote>> notificationsAC;
+
+    @BeforeEach
+    public void enableSync() {
+        ReflectionTestUtils.setField(newsSynchroniser, "syncEnabled", true);
+    }
 
     @Test
     public void sync_ApplicableNotes_ShouldSaveAllNotes() {
@@ -71,7 +78,7 @@ public class NewsSynchroniserTest {
 
         Set<NewsNote> notes = Set.of(note1, note2);
 
-        mockServiceNotes(notes);
+        when(newsNoteService.getTodayNotes()).thenReturn(notes);
 
         newsSynchroniser.sync();
 
@@ -103,7 +110,7 @@ public class NewsSynchroniserTest {
 
         Set<NewsNote> notes = Set.of(note1, note2);
 
-        mockServiceNotes(notes);
+        when(newsNoteService.getTodayNotes()).thenReturn(notes);
 
         newsSynchroniser.sync();
 
@@ -133,7 +140,7 @@ public class NewsSynchroniserTest {
 
         Set<NewsNote> notes = Set.of(note1, note2);
 
-        mockServiceNotes(notes);
+        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
 
         newsSynchroniser.sync();
 
@@ -158,7 +165,7 @@ public class NewsSynchroniserTest {
 
         Set<NewsNote> notes = Set.of(note1, note2);
 
-        mockServiceNotes(notes);
+        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
 
         newsSynchroniser.sync();
 
@@ -181,7 +188,7 @@ public class NewsSynchroniserTest {
 
         Set<NewsNote> notes = Set.of(note1, note2);
 
-        mockServiceNotes(notes);
+        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
 
         newsSynchroniser.sync();
 
@@ -196,25 +203,11 @@ public class NewsSynchroniserTest {
         Category uk = region("UK", Set.of());
         notApplicable.setCategories(Set.of(uk));
 
-        mockServiceNotes(Set.of());
+        when(newsNoteService.getAllAfter(any())).thenReturn(Set.of());
 
         newsSynchroniser.sync();
 
         verify(notificationService, never()).saveNew(eq(notApplicable), any());
     }
 
-    private void mockServiceNotes(Set<NewsNote> notes) {
-        when(newsNoteService.getTodayNotes()).thenReturn(notes);
-        when(newsNoteService.getAllAfter(any())).thenReturn(notes);
-    }
-
-    @TestConfiguration
-    @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:application-it.yml")
-    static class NewsSynchroniserTestConfiguration {
-
-        @Bean
-        public NewsSynchroniser newsSynchroniser() {
-            return new NewsSynchroniser();
-        }
-    }
 }

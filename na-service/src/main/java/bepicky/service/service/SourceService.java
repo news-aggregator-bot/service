@@ -3,6 +3,7 @@ package bepicky.service.service;
 import bepicky.common.exception.ResourceNotFoundException;
 import bepicky.service.entity.Source;
 import bepicky.service.repository.SourceRepository;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,10 +17,10 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional
+@AllArgsConstructor
 public class SourceService implements ISourceService {
 
-    @Autowired
-    private SourceRepository repository;
+    private final SourceRepository repository;
 
     @Override
     public Source create(String name) {

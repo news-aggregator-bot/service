@@ -36,6 +36,16 @@ spring:
       ignoredInterfaces:
         - docker0
         - veth.*
+logging:
+  level:
+    org.springframework.security: INFO
+    com.gargoylesoftware.htmlunit: OFF
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace
 management:
   endpoints:
     web:
@@ -72,18 +82,9 @@ topics:
     notification:
       new: newsnote.notification
       success: newsnote.notification.success
-  page:
-    read: read
     parse: parse
+    aggr: news.aggregate
 source_page:
   read_fail_limit: 10
-logging:
-  level:
-    org.springframework.security: INFO
-    com.gargoylesoftware.htmlunit: OFF
-#    org:
-#      hibernate:
-#        SQL: debug
-#        type:
-#          descriptor:
-#            sql: trace
+nats:
+  address: 'na-ts:4222'
