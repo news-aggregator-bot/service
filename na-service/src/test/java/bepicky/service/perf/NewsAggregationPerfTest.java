@@ -7,6 +7,7 @@ import bepicky.service.service.NewsAggregationService;
 import bepicky.service.service.func.FuncSourceDataIngestor;
 import io.nats.client.Connection;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -26,6 +27,7 @@ import java.util.List;
 @Slf4j
 @Testcontainers
 @ExtendWith(MockitoExtension.class)
+@Disabled
 public class NewsAggregationPerfTest implements MySQLContainerSupport,
     NatsContainerSupport {
 

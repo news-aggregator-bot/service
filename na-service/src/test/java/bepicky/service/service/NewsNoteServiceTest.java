@@ -1,5 +1,6 @@
 package bepicky.service.service;
 
+import org.junit.jupiter.api.Disabled;
 import picky.test.SingletonMySQLContainerSupport;
 import picky.test.NatsContainerSupport;
 import bepicky.service.entity.NewsNote;
@@ -19,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @Testcontainers
+@Disabled
 public class NewsNoteServiceTest implements NatsContainerSupport, SingletonMySQLContainerSupport {
 
     @Autowired

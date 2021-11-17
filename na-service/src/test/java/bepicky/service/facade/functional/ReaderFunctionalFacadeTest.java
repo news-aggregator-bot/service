@@ -2,6 +2,7 @@ package bepicky.service.facade.functional;
 
 import bepicky.common.domain.dto.ReaderDto;
 import bepicky.common.domain.request.ReaderRequest;
+import org.junit.jupiter.api.Disabled;
 import picky.test.SingletonMySQLContainerSupport;
 import picky.test.NatsContainerSupport;
 import bepicky.service.entity.Platform;
@@ -21,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @Testcontainers
+@Disabled
 public class ReaderFunctionalFacadeTest implements SingletonMySQLContainerSupport, NatsContainerSupport {
 
     @Autowired
