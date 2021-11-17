@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -47,6 +48,9 @@ public class NewsNoteService implements INewsNoteService {
 
     @Override
     public Collection<NewsNote> saveAll(Collection<NewsNote> notes) {
+        if (notes.isEmpty()) {
+            return Collections.emptyList();
+        }
         log.info("news:save:{}", notes);
         return repository.saveAll(notes);
     }
