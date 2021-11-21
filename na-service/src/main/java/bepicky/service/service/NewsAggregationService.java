@@ -14,7 +14,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Comparator;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -53,9 +55,36 @@ public class NewsAggregationService implements INewsAggregationService {
         }
         SourcePage sp = sourcePageService.findByUrl(news.getUrl())
             .orElseThrow(() -> new SourceNotFoundException("source page not found " + news.getUrl()));
-        Set<NewsNote> freshArticles = news.getArticles()
+
+        Set<RawNewsArticle> filteredArticles = news.getArticles()
             .stream()
             .filter(d -> validLink(sp, d))
+            .collect(Collectors.groupingBy(RawNewsArticle::getLink))
+            .values()
+            .stream()
+            .map(sameLinkArticles -> {
+                if (sameLinkArticles.size() == 1) {
+                    return sameLinkArticles.get(0);
+                }
+                log.info("aggregation: same link articles: {}", sameLinkArticles);
+                return sameLinkArticles.stream()
+                    .min(Comparator.comparing(RawNewsArticle::getTitle))
+                    .orElse(null);
+            })
+            .filter(Objects::nonNull)
+            .collect(Collectors.groupingBy(RawNewsArticle::getTitle))
+            .values()
+            .stream()
+            .map(sameTitleArticles -> {
+                if (sameTitleArticles.size() == 1) {
+                    return sameTitleArticles.get(0);
+                }
+                log.info("aggregation: same title articles: {}", sameTitleArticles);
+                return sameTitleArticles.get(0);
+            }).collect(Collectors.toSet());
+
+        Set<NewsNote> freshArticles = filteredArticles
+            .stream()
             .map(d -> toNote(sp, d))
             .collect(Collectors.toSet());
         newsNoteService.saveAll(freshArticles);

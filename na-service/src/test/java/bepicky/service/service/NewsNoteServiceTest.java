@@ -31,7 +31,7 @@ public class NewsNoteServiceTest implements NatsContainerSupport, SingletonMySQL
 
     @Test
     public void archiveEarlierThan_ExistingNotesEarlier_ShouldArchiveOldNotes() {
-        Date fourMonthsAgo = TestEntityManager.before(4);
+        Date fourMonthsAgo = TestEntityManager.beforeM(4);
         NewsNote created = newsNoteRepository.save(TestEntityManager.note(
             "title",
             fourMonthsAgo
@@ -45,7 +45,7 @@ public class NewsNoteServiceTest implements NatsContainerSupport, SingletonMySQL
 
     @Test
     public void archiveEarlierThan_NotExistingNotesEarlier_ShouldNotArchiveAnyNotes() {
-        Date fourMonthsAgo = TestEntityManager.before(2);
+        Date fourMonthsAgo = TestEntityManager.beforeM(2);
         NewsNote created = newsNoteRepository.save(TestEntityManager.note(
             "title",
             fourMonthsAgo

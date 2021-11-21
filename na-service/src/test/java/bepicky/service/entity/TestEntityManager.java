@@ -1,5 +1,9 @@
 package bepicky.service.entity;
 
+import bepicky.service.domain.RawNews;
+import bepicky.service.domain.RawNewsArticle;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -7,13 +11,19 @@ import java.util.List;
 import java.util.Set;
 
 public class TestEntityManager {
-    private static final String URL = "url";
+    public static final String URL = "url";
 
     public static Source source(String name) {
         Source src = new Source();
         src.setName(name);
         src.setStatus(Source.Status.PRIMARY);
         return src;
+    }
+
+    public static SourcePage page(String url) {
+        SourcePage sp = new SourcePage();
+        sp.setUrl("https://" + url);
+        return sp;
     }
 
     public static SourcePage page(List<Category> categories, Set<Language> languages, Source source) {
@@ -84,9 +94,26 @@ public class TestEntityManager {
         return n;
     }
 
-    public static Date before(int months) {
+    public static Date beforeM(int months) {
         Calendar fewMonthsAgo = new GregorianCalendar();
         fewMonthsAgo.add(Calendar.MONTH, -months);
         return fewMonthsAgo.getTime();
+    }
+
+    public static Date beforeD(int days) {
+        Calendar fewDaysAgo = new GregorianCalendar();
+        fewDaysAgo.add(Calendar.DAY_OF_MONTH, -days);
+        return fewDaysAgo.getTime();
+    }
+
+    public static RawNewsArticle rawNewsArticle(String title, String link) {
+        if (StringUtils.isBlank(link)) {
+            return new RawNewsArticle(title, link, null);
+        }
+        return new RawNewsArticle(title, "https://" + link, null);
+    }
+
+    public static RawNews rawNews(String url, Set<RawNewsArticle> articles) {
+        return new RawNews(articles, url , "READER");
     }
 }

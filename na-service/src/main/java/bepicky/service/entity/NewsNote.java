@@ -61,7 +61,9 @@ public class NewsNote extends DatedEntity {
     private Set<Tag> tags = new HashSet<>();
 
     public void addSourcePage(SourcePage page) {
-        sourcePages.add(page);
+        if (page != null) {
+            sourcePages.add(page);
+        }
     }
 
     public Set<Language> getLanguages() {

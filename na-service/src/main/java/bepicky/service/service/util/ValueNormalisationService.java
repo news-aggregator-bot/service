@@ -32,7 +32,7 @@ public class ValueNormalisationService implements IValueNormalisationService {
         if (StringUtils.isBlank(title)) {
             return "";
         }
-        if (title.length() < 255) {
+        if (title.length() < 250) {
             return title.trim();
         }
         return title.substring(0, 250).trim();
