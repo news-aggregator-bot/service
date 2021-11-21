@@ -36,8 +36,11 @@ public class NewsNotifier {
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
 
+    @Value("${na.schedule.notify.limit}")
+    private int notifyLimit;
+
     @Transactional
-    @Scheduled(initialDelay = 5000, fixedDelay = 60000)
+    @Scheduled(cron = "${na.schedule.notify.cron}")
     public void sync() {
         if (notifyEnabled) {
             log.info("notify:started");
@@ -54,7 +57,7 @@ public class NewsNotifier {
     private void notify(List<NewsNoteNotification> allNotifications) {
         Reader r = allNotifications.get(0).getReader();
         allNotifications.stream()
-            .limit(5)
+            .limit(notifyLimit)
             .map(n -> newsNoteDtoMapper.toNotificationDto(n))
             .forEach(dto -> publisher.sendNotification(r.getChatId(), r.getPrimaryLanguage().getLang(), dto));
     }

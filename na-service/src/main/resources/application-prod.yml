@@ -10,8 +10,8 @@ na:
       cron: '0 */19 * * * *'
     notify:
       enabled: true
-      limit: 3
-      cron: '* */2 * * * *'
+      limit: 5
+      cron: '* */10 * * * *'
     archive:
       cron: '0 0 0 */1 * *'
       months: 18
