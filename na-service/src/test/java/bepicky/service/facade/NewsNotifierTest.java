@@ -75,6 +75,7 @@ public class NewsNotifierTest {
     @BeforeEach
     public void enableNotify() {
         ReflectionTestUtils.setField(newsNotifier, "notifyEnabled", true);
+        ReflectionTestUtils.setField(newsNotifier, "notifyLimit", 5);
     }
 
     @Test
