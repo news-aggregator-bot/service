@@ -5,10 +5,9 @@ na:
   schedule:
     parse:
       enabled: true
-      timeout: 30
     sync:
       enabled: true
-      cron: '*/10 * * * * *'
+      cron: '0 * * * * *'
     notify:
       enabled: true
       limit: 3

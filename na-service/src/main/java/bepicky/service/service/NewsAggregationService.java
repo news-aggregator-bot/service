@@ -2,7 +2,9 @@ package bepicky.service.service;
 
 import bepicky.service.domain.RawNews;
 import bepicky.service.domain.RawNewsArticle;
+import bepicky.service.entity.Category;
 import bepicky.service.entity.NewsNote;
+import bepicky.service.entity.Reader;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.Tag;
 import bepicky.service.exception.SourceNotFoundException;
@@ -14,11 +16,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static bepicky.service.entity.NewsNoteNotification.Link.TAG;
 
 @Service
 @Transactional
@@ -31,6 +37,7 @@ public class NewsAggregationService implements INewsAggregationService {
     private final INewsNoteService newsNoteService;
     private final IValueNormalisationService normalisationService;
     private final ITagService tagService;
+    private final INewsNoteNotificationService noteNotificationService;
 
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
@@ -39,12 +46,14 @@ public class NewsAggregationService implements INewsAggregationService {
         ISourcePageService sourcePageService,
         INewsNoteService newsNoteService,
         IValueNormalisationService normalisationService,
-        ITagService tagService
+        ITagService tagService,
+        INewsNoteNotificationService noteNotificationService
     ) {
         this.sourcePageService = sourcePageService;
         this.newsNoteService = newsNoteService;
         this.normalisationService = normalisationService;
         this.tagService = tagService;
+        this.noteNotificationService = noteNotificationService;
     }
 
     @Override
@@ -76,10 +85,9 @@ public class NewsAggregationService implements INewsAggregationService {
             .values()
             .stream()
             .map(sameTitleArticles -> {
-                if (sameTitleArticles.size() == 1) {
-                    return sameTitleArticles.get(0);
+                if (sameTitleArticles.size() > 1) {
+                    log.info("aggregation: same title articles: {}", sameTitleArticles);
                 }
-                log.info("aggregation: same title articles: {}", sameTitleArticles);
                 return sameTitleArticles.get(0);
             }).collect(Collectors.toSet());
 
@@ -89,6 +97,48 @@ public class NewsAggregationService implements INewsAggregationService {
             .collect(Collectors.toSet());
         newsNoteService.saveAll(freshArticles);
         return freshArticles;
+    }
+
+    @Override
+    public Set<NewsNote> aggregateExisting(long latestNoteId) {
+        Set<NewsNote> actualNotes = latestNoteId != 0 ?
+            newsNoteService.getAllAfter(latestNoteId) :
+            newsNoteService.getTodayNotes();
+
+        if (actualNotes.isEmpty()) {
+            log.debug("aggregation: existing {} :empty", latestNoteId);
+            return Set.of();
+        }
+        log.info("aggregation: {} articles: start id {} ", actualNotes.size(), latestNoteId);
+        actualNotes.stream()
+            .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
+            .forEach((key, value) -> unfoldSourcePages(key)
+                .forEach(r -> noteNotificationService.saveNew(r, value)));
+        actualNotes
+            .forEach(n -> n.getTags()
+                .forEach(t -> t.getReaders()
+                    .stream()
+                    .filter(r -> atLeastOneInCommon(n.getLanguages(), r.getLanguages()))
+                    .forEach(r -> noteNotificationService.saveSingleNew(r, n, TAG, t.getValue()))));
+        return actualNotes;
+    }
+
+    @Override
+    public Set<NewsNote> aggregateLatest(Reader reader) {
+//        Set<NewsNote> actualNotes = latestNoteId != 0 ?
+//            newsNoteService.getAllAfter(latestNoteId) :
+//            newsNoteService.getTodayNotes();
+//
+//        if (actualNotes.isEmpty()) {
+//            log.debug("aggregation: existing {} :empty", latestNoteId);
+//            return Set.of();
+//        }
+//        log.info("aggregation: {} articles: start id {} ", actualNotes.size(), latestNoteId);
+//        actualNotes.stream()
+//            .collect(Collectors.groupingBy(NewsNote::getSourcePages, Collectors.toSet()))
+//            .forEach((key, value) -> unfoldSourcePages(key)
+//                .forEach(r -> noteNotificationService.saveNew(r, value)));
+        return Set.of();
     }
 
     private boolean validLink(SourcePage page, RawNewsArticle d) {
@@ -126,5 +176,34 @@ public class NewsAggregationService implements INewsAggregationService {
                 note.setTags(tagsTitle);
                 return note;
             });
+    }
+
+    private Stream<Reader> unfoldSourcePages(Collection<SourcePage> sps) {
+        return sps.stream().flatMap(this::findApplicableReaders);
+    }
+
+    private Stream<Reader> findApplicableReaders(SourcePage sp) {
+        if (sp.getRegions() == null || sp.getRegions().isEmpty()) {
+            return filterReaders(sp, sp.getCategories());
+        }
+        if (sp.getCategories().size() == 1 && sp.getRegions().size() == 1) {
+            return filterReaders(sp, sp.getRegions());
+        }
+        return filterReaders(sp, sp.getRegions())
+            .filter(r -> atLeastOneInCommon(sp.getCommon(), r.getCategories()));
+    }
+
+    private Stream<Reader> filterReaders(SourcePage sp, Collection<Category> categories) {
+        return categories
+            .stream()
+            .map(Category::getReaders)
+            .flatMap(Set::stream)
+            .filter(Reader::isActive)
+            .filter(r -> atLeastOneInCommon(sp.getLanguages(), r.getLanguages()))
+            .filter(r -> r.getSources().contains(sp.getSource()));
+    }
+
+    private <T> boolean atLeastOneInCommon(Collection<T> c1, Collection<T> c2) {
+        return c1.stream().anyMatch(c2::contains);
     }
 }

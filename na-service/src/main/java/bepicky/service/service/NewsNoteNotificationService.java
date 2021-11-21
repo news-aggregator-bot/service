@@ -87,12 +87,12 @@ public class NewsNoteNotificationService implements INewsNoteNotificationService
     @Override
     public NewsNoteNotification sent(Long chatId, Long noteId) {
         Reader r = readerService.findByChatId(chatId)
-            .orElseThrow(() -> new IllegalArgumentException("reader:404:" + chatId));
+            .orElseThrow(() -> new IllegalArgumentException("reader: not found:" + chatId));
         NewsNote n = noteService.find(noteId)
-            .orElseThrow(() -> new IllegalArgumentException("newnote:404:" + noteId));
+            .orElseThrow(() -> new IllegalArgumentException("newsnote: not found:" + noteId));
 
         NewsNoteNotification notification = find(r, n)
-            .orElseThrow(() -> new IllegalArgumentException("newnote:notification:404: reader id " + r.getId() + ": note id " + n
+            .orElseThrow(() -> new IllegalArgumentException("newsnote: notification:404: reader id " + r.getId() + ": note id " + n
             .getId()));
         notification.setState(NewsNoteNotification.State.SENT);
         return repository.save(notification);
