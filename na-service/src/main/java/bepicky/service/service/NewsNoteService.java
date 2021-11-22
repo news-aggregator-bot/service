@@ -4,17 +4,19 @@ import bepicky.service.entity.NewsNote;
 import bepicky.service.repository.NewsNoteNativeRepository;
 import bepicky.service.repository.NewsNoteRepository;
 import bepicky.service.service.util.IValueNormalisationService;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Multimaps;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
@@ -31,14 +33,22 @@ import java.util.stream.LongStream;
 @Transactional
 public class NewsNoteService implements INewsNoteService {
 
-    @Autowired
-    private NewsNoteRepository repository;
+    private final NewsNoteRepository repository;
+    private final NewsNoteNativeRepository newsNoteNativeRepository;
+    private final IValueNormalisationService normalisationService;
 
-    @Autowired
-    private NewsNoteNativeRepository newsNoteNativeRepository;
+    private final ListMultimap<String, NewsNote> inMemoryBucket =
+        Multimaps.synchronizedListMultimap(ArrayListMultimap.create());
 
-    @Autowired
-    private IValueNormalisationService normalisationService;
+    public NewsNoteService(
+        NewsNoteRepository repository,
+        NewsNoteNativeRepository newsNoteNativeRepository,
+        IValueNormalisationService normalisationService
+    ) {
+        this.repository = repository;
+        this.newsNoteNativeRepository = newsNoteNativeRepository;
+        this.normalisationService = normalisationService;
+    }
 
     @Override
     public NewsNote save(NewsNote note) {
@@ -51,8 +61,8 @@ public class NewsNoteService implements INewsNoteService {
         if (notes.isEmpty()) {
             return Collections.emptyList();
         }
-        log.info("news:save:{}", notes);
-        return repository.saveAll(notes);
+        notes.forEach(n -> inMemoryBucket.put(n.getUrl(), n));
+        return notes;
     }
 
     @Override
@@ -140,6 +150,25 @@ public class NewsNoteService implements INewsNoteService {
         List<Long> ids = LongStream.rangeClosed(from, to).boxed().collect(Collectors.toList());
         log.info("news_note:refresh:id from {} to {}", from, to);
         return repository.saveAll(repository.findAllByIdIn(ids));
+    }
+
+    @Override
+    public Collection<NewsNote> flush() {
+        List<NewsNote> freshArticles = inMemoryBucket.asMap().values()
+            .stream().map(notes -> notes.stream()
+                .reduce((n1, n2) -> {
+                    n2.getSourcePages().forEach(n1::addSourcePage);
+                    return n1;
+                })).map(Optional::get)
+            .collect(Collectors.toList());
+        log.info("news:save {} :{}", freshArticles.size(), freshArticles);
+        inMemoryBucket.clear();
+        return repository.saveAll(freshArticles);
+    }
+
+    @Scheduled(initialDelay = 30000, fixedDelay = 2 * 60 * 1000)
+    public void scheduleFlush() {
+        flush();
     }
 
 }

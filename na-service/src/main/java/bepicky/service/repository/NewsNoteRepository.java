@@ -19,6 +19,8 @@ public interface NewsNoteRepository extends JpaRepository<NewsNote, Long> {
 
     Optional<NewsNote> findTopByNormalisedTitleOrderByIdDesc(String normalisedTitle);
 
+    Optional<NewsNote> findByUrl(String url);
+
     boolean existsByUrl(String url);
 
     boolean existsByNormalisedTitle(String title);

@@ -37,4 +37,6 @@ public interface INewsNoteService {
     Page<NewsNote> searchByTitle(String key, Pageable pageable);
 
     List<NewsNote> refresh(long from, long to);
+
+    Collection<NewsNote> flush();
 }

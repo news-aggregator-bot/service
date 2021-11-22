@@ -70,6 +70,7 @@ public class SourcePage extends DatedEntity {
     @JoinColumn(name = "id_source")
     @JsonIgnore
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Source source;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -79,9 +80,9 @@ public class SourcePage extends DatedEntity {
         inverseJoinColumns = {@JoinColumn(name = "id_category")}
     )
     @Fetch(value = FetchMode.SUBSELECT)
+    @JsonIgnore
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @JsonIgnore
     private List<Category> categories;
 
     @OneToMany(mappedBy = "sourcePage", cascade = ALL, fetch = FetchType.EAGER)
@@ -93,6 +94,7 @@ public class SourcePage extends DatedEntity {
 
     @Transient
     @JsonIgnore
+    @EqualsAndHashCode.Exclude
     private Multimap<CategoryType, Category> typedCategories;
 
     @JsonIgnore

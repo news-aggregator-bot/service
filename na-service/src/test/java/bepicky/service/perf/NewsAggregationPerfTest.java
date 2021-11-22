@@ -2,7 +2,7 @@ package bepicky.service.perf;
 
 import bepicky.service.data.ingestor.service.SourceIngestionService;
 import bepicky.service.domain.RawNews;
-import bepicky.service.repository.NewsNoteRepository;
+import bepicky.service.service.INewsNoteService;
 import bepicky.service.service.NewsAggregationService;
 import bepicky.service.service.func.FuncSourceDataIngestor;
 import io.nats.client.Connection;
@@ -36,7 +36,7 @@ public class NewsAggregationPerfTest implements MySQLContainerSupport,
     private NewsAggregationService newsAggregationService;
 
     @SpyBean
-    private NewsNoteRepository newsNoteRepository;
+    private INewsNoteService newsNoteService;
 
     @Autowired
     private Connection natsConnection;
@@ -64,7 +64,7 @@ public class NewsAggregationPerfTest implements MySQLContainerSupport,
         for (RawNews raw : rawNews) {
             natsConnection.publish(aggregationSubject, om.writeData(raw));
         }
-        Thread.sleep(40000);
-        Mockito.verify(newsNoteRepository, Mockito.times(rawNews.size() - 1)).saveAll(Mockito.any());
+        Thread.sleep(50000);
+        Mockito.verify(newsNoteService, Mockito.times(rawNews.size() - 1)).saveAll(Mockito.any());
     }
 }
