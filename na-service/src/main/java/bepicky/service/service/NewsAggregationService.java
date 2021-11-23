@@ -154,13 +154,13 @@ public class NewsAggregationService implements INewsAggregationService {
             log.debug("aggregation:skip:wrong host:" + d.getLink());
             return false;
         }
-        return !newsNoteService.existsByUrl(d.getLink());
+        return true;
     }
 
     private NewsNote toNote(SourcePage page, RawNewsArticle data) {
         String title = normalisationService.trimTitle(data.getTitle());
         String normTitle = normalisationService.normaliseTitle(title);
-        return newsNoteService.findByNormalisedTitle(normTitle)
+        return newsNoteService.findByUrl(data.getLink())
             .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {
                 n.addSourcePage(page);

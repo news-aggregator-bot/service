@@ -187,8 +187,8 @@ class NewsAggregationServiceTest {
         NewsNote actual = aggregated.stream().findFirst().get();
         Assertions.assertEquals("title", actual.getTitle());
         Assertions.assertEquals("title", actual.getNormalisedTitle());
-        Assertions.assertEquals("url", actual.getUrl());
-        Assertions.assertEquals(2, todayNote.getSourcePages().size());
+        Assertions.assertEquals("https://any.com", actual.getUrl());
+        Assertions.assertEquals(1, todayNote.getSourcePages().size());
     }
 
     @Test

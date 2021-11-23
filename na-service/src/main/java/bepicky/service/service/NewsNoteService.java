@@ -81,6 +81,11 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
+    public Optional<NewsNote> findByUrl(String url) {
+        return repository.findByUrl(url);
+    }
+
+    @Override
     public Set<NewsNote> getAllAfter(Long id) {
         return repository.findByIdGreaterThan(id);
     }

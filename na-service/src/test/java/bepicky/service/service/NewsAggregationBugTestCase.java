@@ -32,20 +32,29 @@ import java.util.Set;
 public class NewsAggregationBugTestCase implements MySQLContainerSupport,
     NatsContainerSupport {
 
-    @Autowired
-    private INewsNoteService newsNoteService;
+    private final INewsNoteService newsNoteService;
+    private final Connection natsConnection;
+    private final ISourceService sourceService;
+    private final ISourcePageService sourcePageService;
+    private final FuncSourceDataIngestor sourceDataIngestor;
 
     @Autowired
-    private Connection natsConnection;
-
-    @Autowired
-    private SourceIngestionService sourceIngestionService;
-
-    @Autowired
-    private ISourceService sourceService;
-
-    @Autowired
-    private ISourcePageService sourcePageService;
+    public NewsAggregationBugTestCase(
+        INewsNoteService newsNoteService,
+        Connection natsConnection,
+        SourceIngestionService sourceIngestionService,
+        ISourceService sourceService,
+        ISourcePageService sourcePageService
+    ) {
+        this.newsNoteService = newsNoteService;
+        this.natsConnection = natsConnection;
+        this.sourceService = sourceService;
+        this.sourcePageService = sourcePageService;
+        sourceDataIngestor = FuncSourceDataIngestor.builder()
+            .sourceIS(sourceIngestionService)
+            .build();
+        sourceDataIngestor.ingestSource("ITC-Source");
+    }
 
     @Value("${topics.news.aggr}")
     private String aggregationSubject;
@@ -54,12 +63,6 @@ public class NewsAggregationBugTestCase implements MySQLContainerSupport,
 
     @Test
     public void aggregate_WhenTheSameArticleComesFromDifferentSourcePages_ShouldStoreOnlySingleArticle() throws InterruptedException {
-        FuncSourceDataIngestor dataIngestor = FuncSourceDataIngestor.builder()
-            .sourceIS(sourceIngestionService)
-            .build();
-
-        dataIngestor.ingestSource("ITC-Source");
-
         Source itc = sourceService.findByName("ITC").get();
         List<SourcePage> itcPages = sourcePageService.findBySource(itc);
 
@@ -81,5 +84,42 @@ public class NewsAggregationBugTestCase implements MySQLContainerSupport,
 
         NewsNote article = flushed.stream().findFirst().get();
         Assertions.assertEquals(itcPages.size(), article.getSourcePages().size());
+    }
+
+    @Test
+    public void aggregate_SameArticleComesFromDifferentSourcePagesAndFlushedInTheMiddle_ShouldStoreOnlySingleArticle() throws InterruptedException {
+        Source itc = sourceService.findByName("ITC").get();
+        List<SourcePage> itcPages = sourcePageService.findBySource(itc);
+
+        Set<RawNewsArticle> rawNewsArticles = Set.of(
+            TestEntityManager.rawNewsArticle(
+                "SameArticleComesFromDifferentSourcePagesAndFlushedInTheMiddle",
+                "https://itc.ua/SameArticleComesFromDifferentSourcePagesAndFlushedInTheMiddle"
+            )
+        );
+
+        for (int i = 0; i < itcPages.size() / 2; i++) {
+            SourcePage anyPage = itcPages.get(i);
+            RawNews rawNews = TestEntityManager.rawNews(anyPage.getUrl(), rawNewsArticles);
+            natsConnection.publish(aggregationSubject, om.writeData(rawNews));
+        }
+        Thread.sleep(2000);
+        Collection<NewsNote> flushedOnce = newsNoteService.flush();
+
+        for (SourcePage anyPage : itcPages) {
+            RawNews rawNews = TestEntityManager.rawNews(anyPage.getUrl(), rawNewsArticles);
+            natsConnection.publish(aggregationSubject, om.writeData(rawNews));
+        }
+        Thread.sleep(2000);
+        Collection<NewsNote> flushedTwice = newsNoteService.flush();
+
+        Assertions.assertEquals(1, flushedOnce.size());
+        Assertions.assertEquals(1, flushedTwice.size());
+
+        NewsNote article1 = flushedOnce.stream().findFirst().get();
+        Assertions.assertEquals(itcPages.size() / 2, article1.getSourcePages().size());
+
+        NewsNote article2 = flushedTwice.stream().findFirst().get();
+        Assertions.assertEquals(itcPages.size(), article2.getSourcePages().size());
     }
 }
