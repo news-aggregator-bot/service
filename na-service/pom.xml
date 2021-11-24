@@ -99,7 +99,7 @@
         <dependency>
             <groupId>bepicky</groupId>
             <artifactId>common-communication</artifactId>
-            <version>1.2-29-SNAPSHOT</version>
+            <version>1.2-30-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>picky</groupId>

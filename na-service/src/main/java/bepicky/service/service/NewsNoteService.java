@@ -160,7 +160,8 @@ public class NewsNoteService implements INewsNoteService {
     @Override
     public Collection<NewsNote> flush() {
         List<NewsNote> freshArticles = inMemoryBucket.asMap().values()
-            .stream().map(notes -> notes.stream()
+            .stream()
+            .map(notes -> notes.stream()
                 .reduce((n1, n2) -> {
                     n2.getSourcePages().forEach(n1::addSourcePage);
                     return n1;

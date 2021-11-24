@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -93,6 +94,14 @@ public class NewsAggregationService implements INewsAggregationService {
 
         Set<NewsNote> freshArticles = filteredArticles
             .stream()
+            .filter(article -> {
+                Optional<NewsNote> noteOpt = newsNoteService.findByUrl(article.getLink());
+                if (noteOpt.isEmpty()) {
+                    return true;
+                }
+                NewsNote note = noteOpt.get();
+                return !note.getSourcePages().contains(sp);
+            })
             .map(d -> toNote(sp, d))
             .collect(Collectors.toSet());
         newsNoteService.saveAll(freshArticles);
@@ -158,14 +167,13 @@ public class NewsAggregationService implements INewsAggregationService {
     }
 
     private NewsNote toNote(SourcePage page, RawNewsArticle data) {
-        String title = normalisationService.trimTitle(data.getTitle());
-        String normTitle = normalisationService.normaliseTitle(title);
         return newsNoteService.findByUrl(data.getLink())
-            .filter(n -> DateUtils.isSameDay(new Date(), n.getCreationDate()))
             .map(n -> {
                 n.addSourcePage(page);
                 return n;
             }).orElseGet(() -> {
+                String title = normalisationService.trimTitle(data.getTitle());
+                String normTitle = normalisationService.normaliseTitle(title);
                 NewsNote note = new NewsNote();
                 Set<Tag> tagsTitle = tagService.findByTitle(title);
                 note.setTitle(title);

@@ -127,6 +127,57 @@ class NewsAggregationServiceTest {
         Assertions.assertEquals("https://any.com", actual.getUrl());
     }
 
+    @Test
+    public void aggregate_SameArticleAggregatesFromSameSourcePageMultipleTimes_ShouldSkipSecondAggregation() {
+        RawNewsArticle rawArticle = TestEntityManager.rawNewsArticle(
+            "title",
+            "SameArticleAggregatesFromSameSourcePageMultipleTimes.com"
+        );
+        Set<RawNewsArticle> rawNewsArticles = Set.of(rawArticle);
+        RawNews rawNews = TestEntityManager.rawNews("url", rawNewsArticles);
+
+        Set<NewsNote> aggregatedOnce = aggregationService.aggregate(rawNews);
+        Assertions.assertEquals(1, aggregatedOnce.size());
+        NewsNote actual = aggregatedOnce.stream().findFirst().get();
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actual));
+
+        Set<NewsNote> aggregatedTwice = aggregationService.aggregate(rawNews);
+        Assertions.assertEquals(0, aggregatedTwice.size());
+
+        Assertions.assertEquals("title", actual.getTitle());
+        Assertions.assertEquals("title", actual.getNormalisedTitle());
+        Assertions.assertEquals(rawArticle.getLink(), actual.getUrl());
+    }
+
+    @Test
+    public void aggregate_SameArticleAggregatesFromDifferentSourcePage_ShouldAggregateBoth() {
+        RawNewsArticle rawArticle = TestEntityManager.rawNewsArticle(
+            "SameArticleAggregatesFromDifferentSourcePage",
+            "SameArticleAggregatesFromDifferentSourcePage"
+        );
+        Set<RawNewsArticle> rawNewsArticles = Set.of(rawArticle);
+
+        RawNews rawNews = TestEntityManager.rawNews("url", rawNewsArticles);
+
+        SourcePage page = TestEntityManager.page("new_url");
+        Mockito.when(sourcePageService.findByUrl(page.getUrl())).thenReturn(Optional.of(page));
+        RawNews rawNews2 = TestEntityManager.rawNews(page.getUrl(), rawNewsArticles);
+
+        Set<NewsNote> aggregatedOnce = aggregationService.aggregate(rawNews);
+        Assertions.assertEquals(1, aggregatedOnce.size());
+        NewsNote actualOne = aggregatedOnce.stream().findFirst().get();
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actualOne));
+
+        Set<NewsNote> aggregatedTwice = aggregationService.aggregate(rawNews2);
+        Assertions.assertEquals(1, aggregatedTwice.size());
+        NewsNote actualTwo = aggregatedTwice.stream().findFirst().get();
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actualTwo));
+
+        Assertions.assertEquals("SameArticleAggregatesFromDifferentSourcePage", actualTwo.getTitle());
+        Assertions.assertEquals("samearticleaggregatesfromdifferentsourcepage", actualTwo.getNormalisedTitle());
+        Assertions.assertEquals(rawArticle.getLink(), actualTwo.getUrl());
+    }
+
 
     @Test
     public void aggregate_WhenArticlesWithSameTitleAndLinksAreProvided_ShouldAggregateOnlyUniqueArticle() {
