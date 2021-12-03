@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -95,12 +96,12 @@ public class NewsAggregationService implements INewsAggregationService {
         Set<NewsNote> freshArticles = filteredArticles
             .stream()
             .filter(article -> {
-                Optional<NewsNote> noteOpt = newsNoteService.findByUrl(article.getLink());
-                if (noteOpt.isEmpty()) {
+                if (!newsNoteService.existsByUrl(article.getLink())) {
                     return true;
                 }
-                NewsNote note = noteOpt.get();
-                return !note.getSourcePages().contains(sp);
+                return newsNoteService.findByUrl(article.getLink())
+                    .stream()
+                    .noneMatch(note -> note.getSourcePages().contains(sp));
             })
             .map(d -> toNote(sp, d))
             .collect(Collectors.toSet());
@@ -168,6 +169,8 @@ public class NewsAggregationService implements INewsAggregationService {
 
     private NewsNote toNote(SourcePage page, RawNewsArticle data) {
         return newsNoteService.findByUrl(data.getLink())
+            .stream()
+            .findAny()
             .map(n -> {
                 n.addSourcePage(page);
                 return n;

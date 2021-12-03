@@ -22,7 +22,7 @@ public interface INewsNoteService {
 
     Optional<NewsNote> findByNormalisedTitle(String title);
 
-    Optional<NewsNote> findByUrl(String url);
+    List<NewsNote> findByUrl(String url);
 
     Set<NewsNote> getAllAfter(Long id);
 

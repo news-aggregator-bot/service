@@ -81,7 +81,7 @@ public class NewsNoteService implements INewsNoteService {
     }
 
     @Override
-    public Optional<NewsNote> findByUrl(String url) {
+    public List<NewsNote> findByUrl(String url) {
         return repository.findByUrl(url);
     }
 

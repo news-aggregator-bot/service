@@ -139,7 +139,8 @@ class NewsAggregationServiceTest {
         Set<NewsNote> aggregatedOnce = aggregationService.aggregate(rawNews);
         Assertions.assertEquals(1, aggregatedOnce.size());
         NewsNote actual = aggregatedOnce.stream().findFirst().get();
-        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actual));
+        when(newsNoteService.existsByUrl(rawArticle.getLink())).thenReturn(true);
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(List.of(actual));
 
         Set<NewsNote> aggregatedTwice = aggregationService.aggregate(rawNews);
         Assertions.assertEquals(0, aggregatedTwice.size());
@@ -166,12 +167,12 @@ class NewsAggregationServiceTest {
         Set<NewsNote> aggregatedOnce = aggregationService.aggregate(rawNews);
         Assertions.assertEquals(1, aggregatedOnce.size());
         NewsNote actualOne = aggregatedOnce.stream().findFirst().get();
-        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actualOne));
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(List.of(actualOne));
 
         Set<NewsNote> aggregatedTwice = aggregationService.aggregate(rawNews2);
         Assertions.assertEquals(1, aggregatedTwice.size());
         NewsNote actualTwo = aggregatedTwice.stream().findFirst().get();
-        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(Optional.of(actualTwo));
+        when(newsNoteService.findByUrl(rawArticle.getLink())).thenReturn(List.of(actualTwo));
 
         Assertions.assertEquals("SameArticleAggregatesFromDifferentSourcePage", actualTwo.getTitle());
         Assertions.assertEquals("samearticleaggregatesfromdifferentsourcepage", actualTwo.getNormalisedTitle());
