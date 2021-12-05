@@ -77,7 +77,7 @@ public class NewsAggregationService implements INewsAggregationService {
                 if (sameLinkArticles.size() == 1) {
                     return sameLinkArticles.get(0);
                 }
-                log.info("aggregation: same link articles: {}", sameLinkArticles);
+                log.debug("aggregation: same link articles: {}", sameLinkArticles);
                 return sameLinkArticles.stream()
                     .min(Comparator.comparing(RawNewsArticle::getTitle))
                     .orElse(null);
@@ -88,7 +88,7 @@ public class NewsAggregationService implements INewsAggregationService {
             .stream()
             .map(sameTitleArticles -> {
                 if (sameTitleArticles.size() > 1) {
-                    log.info("aggregation: same title articles: {}", sameTitleArticles);
+                    log.debug("aggregation: same title articles: {}", sameTitleArticles);
                 }
                 return sameTitleArticles.get(0);
             }).collect(Collectors.toSet());

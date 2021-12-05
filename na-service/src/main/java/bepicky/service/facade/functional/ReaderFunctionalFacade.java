@@ -51,32 +51,32 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
         reader.setPlatform(platform);
         reader.setPrimaryLanguage(language);
         reader.setLanguages(Sets.newHashSet(language));
-        return modelMapper.map(readerService.register(reader), ReaderDto.class);
+        return toDto(readerService.register(reader));
     }
 
     @Override
     public ReaderDto enable(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.ENABLED), ReaderDto.class);
+        return toDto(readerService.updateStatus(chatId, Reader.Status.ENABLED));
     }
 
     @Override
     public ReaderDto disable(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.DISABLED), ReaderDto.class);
+        return toDto(readerService.updateStatus(chatId, Reader.Status.DISABLED));
     }
 
     @Override
     public ReaderDto settings(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.IN_SETTINGS), ReaderDto.class);
+        return toDto(readerService.updateStatus(chatId, Reader.Status.IN_SETTINGS));
     }
 
     @Override
     public ReaderDto block(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.BLOCKED), ReaderDto.class);
+        return toDto(readerService.updateStatus(chatId, Reader.Status.BLOCKED));
     }
 
     @Override
     public ReaderDto pause(long chatId) {
-        return modelMapper.map(readerService.updateStatus(chatId, Reader.Status.PAUSED), ReaderDto.class);
+        return toDto(readerService.updateStatus(chatId, Reader.Status.PAUSED));
     }
 
     @Override
@@ -87,7 +87,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
 
     @Override
     public ReaderDto find(long chatId) {
-        return readerService.findByChatId(chatId).map(r -> modelMapper.map(r, ReaderDto.class)).orElse(null);
+        return readerService.findByChatId(chatId).map(this::toDto).orElse(null);
     }
 
     @Override
@@ -112,7 +112,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
     public List<ReaderDto> findAll() {
         return readerService.findAll()
             .stream()
-            .map(r -> modelMapper.map(r, ReaderDto.class))
+            .map(this::toDto)
             .collect(Collectors.toList());
     }
 
@@ -124,7 +124,7 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
                     r.setPrimaryLanguage(l);
                     readerService.update(r);
                     log.info("reader:primary lang:" + lang);
-                    return modelMapper.map(r, ReaderDto.class);
+                    return toDto(r);
                 }).orElseGet(() -> {
                     log.warn("reader:{}:404", chatId);
                     return null;
@@ -133,5 +133,11 @@ public class ReaderFunctionalFacade implements IReaderFunctionalFacade {
                 log.warn("reader:{}:primary lang:{}:404", chatId, lang);
                 return null;
             });
+    }
+
+    private ReaderDto toDto(Reader reader) {
+        return Optional.ofNullable(reader)
+            .map(r -> modelMapper.map(r, ReaderDto.class))
+            .orElse(null);
     }
 }
