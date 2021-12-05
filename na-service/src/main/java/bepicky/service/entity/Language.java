@@ -39,6 +39,7 @@ public class Language {
     @Column(nullable = false)
     @NotBlank
     @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private String localized;
 
     @ManyToMany(fetch = FetchType.LAZY)

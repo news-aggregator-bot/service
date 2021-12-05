@@ -26,6 +26,7 @@ public class Tag extends DatedEntity {
     private String value;
 
     @Column(nullable = false, length = 50)
+    @ToString.Exclude
     private String normalisedValue;
 
     @ManyToMany(fetch = FetchType.LAZY)

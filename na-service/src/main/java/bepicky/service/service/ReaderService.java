@@ -99,10 +99,8 @@ public class ReaderService implements IReaderService {
         List<Reader> enabledSleepers = readerRepository.findAllByStatus(Reader.Status.IN_SETTINGS)
             .stream()
             .filter(r -> r.getUpdateDate().before(oneHourBefore.getTime()))
-            .map(r -> {
-                r.setStatus(Reader.Status.ENABLED);
-                return readerRepository.save(r);
-            }).collect(Collectors.toList());
+            .map(r -> updateStatus(r.getChatId(), Reader.Status.ENABLED))
+            .collect(Collectors.toList());
         log.info("reader:sleepers enabled " + enabledSleepers.size());
     }
 
@@ -111,9 +109,9 @@ public class ReaderService implements IReaderService {
         return findByChatId(chatId).map(r -> {
             r.setStatus(status);
             log.info("reader:{}:update:status:{}", chatId, status);
-            adminMessagePublisher.publish(
-                "UPDATE STATUS:reader:",
-                String.valueOf(r.getChatId()),
+            adminMessagePublisher.publishInline(
+                "UPDATE STATUS reader ",
+                r.getUsername(),
                 r.getStatus().toString()
             );
             return readerRepository.save(r);
@@ -125,6 +123,12 @@ public class ReaderService implements IReaderService {
         return readerRepository.findById(id)
             .map(r -> {
                 readerRepository.delete(r);
+                adminMessagePublisher.publishInline(
+                    "DELETE reader ",
+                    String.valueOf(r.getChatId()),
+                    r.getUsername(),
+                    r.getStatus().toString()
+                );
                 return r;
             });
     }

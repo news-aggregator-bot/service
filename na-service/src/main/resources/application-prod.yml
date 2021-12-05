@@ -15,3 +15,5 @@ na:
     archive:
       cron: '0 0 0 */1 * *'
       months: 18
+    enable-sleepers:
+      cron: '0 0 */1 * * *'

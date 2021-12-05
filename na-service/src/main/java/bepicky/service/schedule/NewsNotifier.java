@@ -7,9 +7,7 @@ import bepicky.service.nats.publisher.NewsNotificationPublisher;
 import bepicky.service.service.INewsNoteNotificationService;
 import bepicky.service.service.IReaderService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,26 +16,30 @@ import java.util.List;
 
 @Component
 @Slf4j
-@RefreshScope
 public class NewsNotifier {
 
-    @Autowired
-    private NewsNotificationPublisher publisher;
-
-    @Autowired
-    private IReaderService readerService;
-
-    @Autowired
-    private INewsNoteNotificationService notificationService;
-
-    @Autowired
-    private NewsNoteDtoMapper newsNoteDtoMapper;
+    private final NewsNotificationPublisher publisher;
+    private final IReaderService readerService;
+    private final INewsNoteNotificationService notificationService;
+    private final NewsNoteDtoMapper newsNoteDtoMapper;
 
     @Value("${na.schedule.notify.enabled}")
     private boolean notifyEnabled;
 
     @Value("${na.schedule.notify.limit}")
     private int notifyLimit;
+
+    public NewsNotifier(
+        NewsNotificationPublisher publisher,
+        IReaderService readerService,
+        INewsNoteNotificationService notificationService,
+        NewsNoteDtoMapper newsNoteDtoMapper
+    ) {
+        this.publisher = publisher;
+        this.readerService = readerService;
+        this.notificationService = notificationService;
+        this.newsNoteDtoMapper = newsNoteDtoMapper;
+    }
 
     @Transactional
     @Scheduled(cron = "${na.schedule.notify.cron}")
@@ -58,7 +60,7 @@ public class NewsNotifier {
         Reader r = allNotifications.get(0).getReader();
         allNotifications.stream()
             .limit(notifyLimit)
-            .map(n -> newsNoteDtoMapper.toNotificationDto(n))
+            .map(newsNoteDtoMapper::toNotificationDto)
             .forEach(dto -> publisher.sendNotification(r.getChatId(), r.getPrimaryLanguage().getLang(), dto));
     }
 }

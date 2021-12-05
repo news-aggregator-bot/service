@@ -39,13 +39,14 @@ na:
       cron: '* * 0 * * *'
     notify:
       enabled: false
-      limit: 1
       cron: '0 0 0 0/1 * *'
     read:
       enabled: false
     archive:
       cron: '0 0 0 */1 * *'
       months: 6
+    enable-sleepers:
+      cron: '0 0 */1 * * *'
 topics:
   category:
     cmd: category.cmd.start

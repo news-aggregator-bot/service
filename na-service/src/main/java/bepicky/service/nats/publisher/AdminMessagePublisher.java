@@ -10,13 +10,29 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class AdminMessagePublisher {
 
-    @Autowired
-    private Connection natsConnection;
+    private static final String ID = "aggregation-service";
+
+    private final Connection natsConnection;
 
     @Value("${topics.message.admin}")
     private String adminSubject;
 
+    public AdminMessagePublisher(Connection natsConnection) {
+        this.natsConnection = natsConnection;
+    }
+
     public void publish(String... text) {
-        natsConnection.publish(adminSubject, String.join("\n", text).getBytes(StandardCharsets.UTF_8));
+        _publish(String.join("\n", text));
+    }
+
+    public void publishInline(String... text) {
+        _publish(String.join(" ", text));
+    }
+
+    private void _publish(String text) {
+        natsConnection.publish(
+            adminSubject,
+            String.join(ID, text).getBytes(StandardCharsets.UTF_8)
+        );
     }
 }
