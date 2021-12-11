@@ -9,6 +9,7 @@ import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.Tag;
 import bepicky.service.exception.SourceNotFoundException;
 import bepicky.service.service.util.IValueNormalisationService;
+import bepicky.service.service.util.SourcePageParserTracker;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -40,6 +41,7 @@ public class NewsAggregationService implements INewsAggregationService {
     private final IValueNormalisationService normalisationService;
     private final ITagService tagService;
     private final INewsNoteNotificationService noteNotificationService;
+    private final SourcePageParserTracker sourcePageParserTracker;
 
     @Value("${na.news.domain-check:true}")
     private boolean checkDomain;
@@ -49,24 +51,27 @@ public class NewsAggregationService implements INewsAggregationService {
         INewsNoteService newsNoteService,
         IValueNormalisationService normalisationService,
         ITagService tagService,
-        INewsNoteNotificationService noteNotificationService
+        INewsNoteNotificationService noteNotificationService,
+        SourcePageParserTracker sourcePageParserTracker
     ) {
         this.sourcePageService = sourcePageService;
         this.newsNoteService = newsNoteService;
         this.normalisationService = normalisationService;
         this.tagService = tagService;
         this.noteNotificationService = noteNotificationService;
+        this.sourcePageParserTracker = sourcePageParserTracker;
     }
 
     @Override
     public Set<NewsNote> aggregate(RawNews news) {
-        if (news.getArticles().isEmpty()) {
-            log.info("aggregation:empty news : " + news.getUrl());
-            return Set.of();
-        }
         SourcePage sp = sourcePageService.findByUrl(news.getUrl())
             .orElseThrow(() -> new SourceNotFoundException("source page not found " + news.getUrl()));
-
+        if (news.getArticles().isEmpty()) {
+            log.info("aggregation:empty news : " + news.getUrl());
+            sourcePageParserTracker.failed(sp.getId());
+            return Set.of();
+        }
+        sourcePageParserTracker.track(sp.getId());
         Set<RawNewsArticle> filteredArticles = news.getArticles()
             .stream()
             .filter(d -> validLink(sp, d))

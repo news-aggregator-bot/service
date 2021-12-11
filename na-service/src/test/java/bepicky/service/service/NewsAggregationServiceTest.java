@@ -10,6 +10,7 @@ import bepicky.service.entity.Source;
 import bepicky.service.entity.SourcePage;
 import bepicky.service.entity.TestEntityManager;
 import bepicky.service.exception.SourceNotFoundException;
+import bepicky.service.service.util.SourcePageParserTracker;
 import bepicky.service.service.util.ValueNormalisationService;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
@@ -56,6 +57,7 @@ class NewsAggregationServiceTest {
     private static ITagService tagService;
     private static INewsNoteService newsNoteService;
     private static INewsNoteNotificationService notificationService;
+    private static SourcePageParserTracker sourcePageParserTracker;
 
     @Captor
     private ArgumentCaptor<Set<NewsNote>> notificationsAC;
@@ -66,13 +68,15 @@ class NewsAggregationServiceTest {
         tagService = Mockito.mock(ITagService.class);
         newsNoteService = Mockito.mock(INewsNoteService.class);
         notificationService = Mockito.mock(INewsNoteNotificationService.class);
+        sourcePageParserTracker = Mockito.mock(SourcePageParserTracker.class);
 
         aggregationService = new NewsAggregationService(
             sourcePageService,
             newsNoteService,
             new ValueNormalisationService(),
             tagService,
-            notificationService
+            notificationService,
+            sourcePageParserTracker
         );
     }
 

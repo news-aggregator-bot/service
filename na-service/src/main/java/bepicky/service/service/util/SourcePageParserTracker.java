@@ -36,14 +36,12 @@ public class SourcePageParserTracker {
         failedTicker.computeIfPresent(id, (aLong, times) -> {
             int oneMoreTime = times + 1;
             if (oneMoreTime > sourcePageReadFailLimit) {
-                spService.findById(id).ifPresent(sp -> {
-                    adminPublisher.publish(
-                        "PAGE EMPTY",
-                        String.valueOf(sp.getId()),
-                        sp.getUrl(),
-                        String.valueOf(oneMoreTime)
-                    );
-                });
+                spService.findById(id).ifPresent(sp -> adminPublisher.publish(
+                    "PAGE EMPTY",
+                    String.valueOf(sp.getId()),
+                    sp.getUrl(),
+                    String.valueOf(oneMoreTime)
+                ));
             }
             return oneMoreTime;
         });
