@@ -43,7 +43,7 @@ public class NewsNoteFunctionalFacade implements INewsNoteFunctionalFacade, Comm
             .orElseThrow(() -> new ResourceNotFoundException("news_note:search:reader:" + request.getChatId()));
         NewsSearchResponse response = new NewsSearchResponse();
         response.setList(notes.stream()
-            .map(n -> newsNoteDtoMapper.toDto(n, reader.getPrimaryLanguage()))
+            .map(n -> newsNoteDtoMapper.toDto(n))
             .collect(Collectors.toList()));
         response.setFirst(notes.isFirst());
         response.setLast(notes.isLast());

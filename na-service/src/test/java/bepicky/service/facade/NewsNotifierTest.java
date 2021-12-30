@@ -60,18 +60,6 @@ public class NewsNotifierTest {
     @Mock
     private NewsNotificationPublisher publisher;
 
-    @Spy
-    private final ModelMapper modelMapper = new ModelMapper();
-
-    @Spy
-    private final CategoryDtoMapper categoryDtoMapper = new CategoryDtoMapper();
-    @Spy
-    private final SourcePageDtoMapper sourcePageDtoMapper =
-        new SourcePageDtoMapper(categoryDtoMapper, modelMapper);
-
-    @Spy
-    private final NewsNoteDtoMapper mapper = new NewsNoteDtoMapper(sourcePageDtoMapper);
-
     @BeforeEach
     public void enableNotify() {
         ReflectionTestUtils.setField(newsNotifier, "notifyEnabled", true);
