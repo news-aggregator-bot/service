@@ -1,11 +1,7 @@
 package bepicky.service.facade;
 
-import bepicky.common.domain.dto.CategoryDto;
 import bepicky.common.domain.dto.NewsNoteNotificationDto;
-import bepicky.common.domain.dto.SourcePageDto;
-import bepicky.service.domain.mapper.CategoryDtoMapper;
 import bepicky.service.domain.mapper.NewsNoteDtoMapper;
-import bepicky.service.domain.mapper.SourcePageDtoMapper;
 import bepicky.service.entity.Category;
 import bepicky.service.entity.CategoryType;
 import bepicky.service.entity.Language;
@@ -28,7 +24,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.modelmapper.ModelMapper;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.List;
@@ -59,6 +54,9 @@ public class NewsNotifierTest {
 
     @Mock
     private NewsNotificationPublisher publisher;
+
+    @Spy
+    private final NewsNoteDtoMapper mapper = new NewsNoteDtoMapper();
 
     @BeforeEach
     public void enableNotify() {
@@ -97,16 +95,6 @@ public class NewsNotifierTest {
         assertEquals(note.getAuthor(), actualNotification.getAuthor());
         assertEquals(NewsNoteNotificationDto.LinkDto.CATEGORY, actualNotification.getLink());
         assertNull(actualNotification.getLinkKey());
-
-        SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
-        assertEquals(sourcePage.getUrl(), actualSp.getUrl());
-
-        assertEquals(1, actualSp.getCategories().size());
-        CategoryDto actualSpCategory = actualSp.getCategories().get(0);
-
-        assertEquals(regionUSA.getName(), actualSpCategory.getName());
-        assertEquals(regionUSA.getType().name(), actualSpCategory.getType());
-        assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
     }
 
     @Test
@@ -141,16 +129,6 @@ public class NewsNotifierTest {
         assertEquals(note.getAuthor(), actualNotification.getAuthor());
         assertEquals(NewsNoteNotificationDto.LinkDto.TAG, actualNotification.getLink());
         assertEquals("key", actualNotification.getLinkKey());
-
-        SourcePageDto actualSp = actualNotification.getSourcePages().get(0);
-        assertEquals(sourcePage.getUrl(), actualSp.getUrl());
-
-        assertEquals(1, actualSp.getCategories().size());
-        CategoryDto actualSpCategory = actualSp.getCategories().get(0);
-
-        assertEquals(regionUSA.getName(), actualSpCategory.getName());
-        assertEquals(regionUSA.getType().name(), actualSpCategory.getType());
-        assertEquals(usaLocalisation.getValue(), actualSpCategory.getLocalised());
     }
 
     private NewsNoteNotification newNoteNotification(NewsNote note, Reader r) {
